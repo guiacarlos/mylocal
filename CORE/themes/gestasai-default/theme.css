@@ -1,0 +1,236 @@
+/**
+ * 🏛️ GESTAS AI - TEMA SOBERANO (Minimalismo Intelectual)
+ * v8.2 - Sovereign Sophistication
+ * Enfoque: Mobile-First | Transiciones Líquidas | Tipografía Light
+ */
+
+/* LIBRERIA SOBERANA: @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Inter:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap'); */
+
+:root {
+    --color-primary: #000000;
+    --color-bg: #FFFFFF;
+    --color-text: #111111;
+    --color-text-secondary: #444444;
+    --color-text-muted: #888888;
+    --color-border: rgba(0, 0, 0, 0.05);
+
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-serif: 'Lora', serif;
+
+    --transition-premium: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #000000;
+        --color-text: #FAFAFA;
+        --color-text-secondary: #BBBBBB;
+        --color-border: rgba(255, 255, 255, 0.06);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+    padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* 🔝 HEADER MOBILE-FIRST */
+.header-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(25px);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content .container {
+    display: flex;
+    flex-direction: column;
+    /* Mobile Default: Stacked or centered */
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.node-label {
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-static {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.6rem;
+    font-weight: 500;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex-wrap: wrap;
+    /* Permite envolver en pantallas muy pequeñas */
+    justify-content: center;
+}
+
+/* 🏔️ SECCIONES */
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: var(--transition-premium);
+}
+
+.hero-technical {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    padding: 40px 0;
+}
+
+/* 🖋️ TIPOGRAFÍA MOBILE-FIRST */
+.main-titular {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    animation: reveal 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.intellectual-p {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* 🧊 INDICADORES */
+.indicators-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.indicator-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-text-muted);
+}
+
+.indicator-value {
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: block;
+}
+
+/* 📦 SOLUCIONES */
+.technical-h2 {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--color-text-muted);
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.solutions-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.solution-item h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.solution-item p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+/* 🖥️ DESKTOP ADAPTATION (Media Queries) */
+@media (min-width: 768px) {
+    .header-content .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+    }
+
+    .nav-static {
+        font-size: 0.7rem;
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 140px 0;
+    }
+
+    .hero-technical {
+        min-height: 85vh;
+    }
+
+    .main-titular {
+        font-size: 3.8rem;
+    }
+
+    .intellectual-p {
+        font-size: 1.1rem;
+        max-width: 720px;
+    }
+
+    .indicators-grid {
+        flex-direction: row;
+        gap: 5rem;
+        padding-top: 4rem;
+    }
+
+    .solutions-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}

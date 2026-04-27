@@ -1,0 +1,81 @@
+{
+    "key": "socola",
+    "name": "Socolá Premium",
+    "version": "1.0.0",
+    "description": "Tema artesanal para Socolá - Slow café and bakery. Diseño cálido, elegante y minimalista.",
+    "author": "Antigravity AI",
+    "screenshot": "/themes/socola/screenshot.png",
+    "tags": [
+        "bakery",
+        "cafe",
+        "artisanal",
+        "premium",
+        "warm"
+    ],
+    "features": {
+        "fullSiteEditing": true,
+        "blockEditor": true,
+        "customColors": true,
+        "customFonts": true,
+        "responsive": true,
+        "darkMode": false,
+        "rtl": false
+    },
+    "templates": [
+        {
+            "name": "home",
+            "title": "Inicio",
+            "description": "Plantilla para la página de inicio de Socolá"
+        },
+        {
+            "name": "carta",
+            "title": "Carta Online",
+            "description": "Plantilla para mostrar el menú de productos de Socolá"
+        }
+    ],
+    "customization": {
+        "colors": {
+            "palette": [
+                {
+                    "name": "Sage Green",
+                    "slug": "primary",
+                    "color": "#89BDAC"
+                },
+                {
+                    "name": "Coffee Brown",
+                    "slug": "secondary",
+                    "color": "#5D4037"
+                },
+                {
+                    "name": "Cream",
+                    "slug": "background",
+                    "color": "#F9F7F2"
+                },
+                {
+                    "name": "Deep Mocha",
+                    "slug": "text",
+                    "color": "#2C1E1A"
+                },
+                {
+                    "name": "Honey gold",
+                    "slug": "accent",
+                    "color": "#D4AF37"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "name": "Outfit",
+                    "slug": "outfit",
+                    "fontFamily": "'Outfit', sans-serif"
+                },
+                {
+                    "name": "Playfair Display",
+                    "slug": "serif",
+                    "fontFamily": "'Playfair Display', serif"
+                }
+            ]
+        }
+    }
+}

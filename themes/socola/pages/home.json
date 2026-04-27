@@ -1,0 +1,114 @@
+{
+    "id": "home",
+    "title": "Socolá | Slow café and bakery Murcia",
+    "slug": "home",
+    "theme": "socola",
+    "template": "home",
+    "page": {
+        "sections": [
+            {
+                "section": "header"
+            },
+            {
+                "section": "content",
+                "content": [
+                    {
+                        "element": "section",
+                        "id": "hero",
+                        "class": "welcome-section",
+                        "settings": {
+                            "background": {
+                                "type": "image",
+                                "image": "/themes/socola/assets/hero.png",
+                                "overlay": {
+                                    "enabled": true,
+                                    "color": "#000000",
+                                    "opacity": 0.4
+                                }
+                            }
+                        },
+                        "content": [
+                            {
+                                "element": "container",
+                                "class": "container animate-fade",
+                                "content": [
+                                    {
+                                        "element": "heading",
+                                        "tag": "h2",
+                                        "class": "welcome-title",
+                                        "text": "Slow Café & Bakery",
+                                        "style": "color: #ffffff; text-shadow: 0 4px 12px rgba(0,0,0,0.3);"
+                                    },
+                                    {
+                                        "element": "text",
+                                        "text": "Artesanal · Con alma · Hecho para ti",
+                                        "class": "welcome-subtitle",
+                                        "style": "color: #ffffff; opacity: 0.9;"
+                                    },
+                                    {
+                                        "element": "button",
+                                        "text": "Ver nuestra Carta",
+                                        "link": "carta.html",
+                                        "class": "btn btn-primary",
+                                        "style": "margin-top: 2rem;"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "element": "section",
+                        "id": "about",
+                        "class": "section-padding",
+                        "style": "background: #ffffff; padding: 5rem 0;",
+                        "content": [
+                            {
+                                "element": "container",
+                                "class": "container",
+                                "content": [
+                                    {
+                                        "element": "columns",
+                                        "style": "display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;",
+                                        "content": [
+                                            {
+                                                "element": "column",
+                                                "style": "flex: 1; min-width: 300px;",
+                                                "content": [
+                                                    {
+                                                        "element": "image",
+                                                        "src": "/themes/socola/assets/about_cookies.png",
+                                                        "style": "width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "element": "column",
+                                                "style": "flex: 1; min-width: 300px;",
+                                                "content": [
+                                                    {
+                                                        "element": "heading",
+                                                        "text": "Sobre nosotros",
+                                                        "class": "section-title",
+                                                        "style": "margin-bottom: 2rem;"
+                                                    },
+                                                    {
+                                                        "element": "text",
+                                                        "text": "De la unión de nuestras dos pasiones, la repostería y el diseño, nació Socolá. Creamos este proyecto en Murcia con mucho cariño para ofrecer una experiencia única basada en el respeto por los ingredientes y el tiempo.",
+                                                        "style": "font-size: 1.1rem; line-height: 1.8; color: #555;"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "footer"
+            }
+        ]
+    }
+}

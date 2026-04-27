@@ -1,0 +1,62 @@
+# 🏛️ ACIDE SOBERANO - REGLAS DE ORQUESTACIÓN v14.0
+Options -Indexes
+Options +FollowSymLinks
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. API SOBERANA — prioridad absoluta, debe ir ANTES del bloqueo de seguridad
+    # [END] previene que Apache reinicie las reglas con la URL reescrita (CORE/index.php)
+    RewriteRule ^acide/(.*)$ CORE/$1 [END,QSA]
+
+    # 🛡️ BLOQUEO DE ACCESO DIRECTO A DIRECTORIOS SENSIBLES
+    # Solo aplica a peticiones externas (REDIRECT_STATUS vacío = petición inicial)
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteRule ^(CORE|STORAGE|CAPABILITIES|STORE)(/.*)?$ - [F,L]
+    RewriteRule ^login$ login.html [L]
+    RewriteRule ^index\.html$ / [R=301,L]
+
+    # 1.05 PANEL ADMIN STANDALONE (protegido por gateway.php)
+    RewriteRule ^admin/?$ gateway.php [L]
+
+    # 1.06 CARTA QR (pública, sin auth — sirve carta-tpv.html con contexto de mesa en la URL)
+    RewriteRule ^carta(/.*)?$ carta-tpv.html [L]
+
+    # 1.07 MEDIA — normaliza /media/ (lowercase) → /MEDIA/ (uppercase, Linux case-sensitive)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^media(/.*)?$ MEDIA$1 [L]
+
+    # 1.1 URLS AMIGABLES (Soberanía Estática)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+
+    # 2. ACTIVOS TÉCNICOS (Silent Tunnel)
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^(dashboard|academy|sistema|editor)/(.+)$ $1/$2 [L]
+
+    # 3. FALLBACK DE ACTIVOS & API (Búnker Raíz)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} \.(js|css|gif|jpg|jpeg|png|webp|svg|ico|ttf|woff|woff2|otf|map|json)$ [NC]
+    RewriteRule ^(dashboard|academy|sistema|editor)/(.+)$ $2 [L]
+
+    # 4. RUTA SOBERANA (SPA Routing Total — Zonas Privadas)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(dashboard|academy|sistema|editor)(/.*)?$ gateway.php [L]
+
+    # 5. FALLBACK Web Pública (WordPress Style)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.html [L]
+</IfModule>
+
+# SECURITY & MIME TYPES
+AddType application/javascript .js
+AddType text/css .css
+AddType font/woff2 .woff2
+AddType font/ttf .ttf
+AddType image/webp .webp
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/gif .gif

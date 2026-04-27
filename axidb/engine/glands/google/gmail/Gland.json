@@ -1,0 +1,16 @@
+{
+    "key": "google-gmail",
+    "name": "Google Gmail (Atomic)",
+    "version": "1.1.0",
+    "type": "VIRTUAL",
+    "capabilities": [
+        "send",
+        "list",
+        "archive",
+        "draft"
+    ],
+    "endpoints": {
+        "list": "/api/google/gmail/messages",
+        "send": "/api/google/gmail/send"
+    }
+}

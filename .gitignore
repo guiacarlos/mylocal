@@ -1,0 +1,40 @@
+# Datos de usuario y sesiones
+STORAGE/.vault/users/
+STORAGE/sessions/
+STORAGE/logs/
+STORAGE/.versions/
+
+# Secretos del sistema
+vault/
+CORE/auth/data/
+CORE/auth/users/
+CORE/auth/organizations/
+CORE/data/
+
+# Configuracion con credenciales
+CORE/config.json
+
+# Archivos de entorno
+.env
+.env.local
+*.env
+
+# Datos de demostracion y backups
+*.zip
+funcional/
+release/
+
+# Dependencias PHP
+CORE/core/vendor/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs de aplicacion
+*.log
+error_log
+
+# Cache de AxiDB
+axidb/tests/output/

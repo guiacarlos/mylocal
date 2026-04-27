@@ -1,0 +1,71 @@
+name: Deploy AxiDB docs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'axidb/docs/**'
+      - 'axidb/README.md'
+      - 'axidb/CHANGELOG.md'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+# Required permissions for the deploy-pages action.
+permissions:
+  contents: read
+  pages:    write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage docs into _site/
+        run: |
+          mkdir -p _site
+          # README como entry point
+          cp axidb/README.md       _site/index.md
+          cp axidb/CHANGELOG.md    _site/CHANGELOG.md
+          cp -r axidb/docs/guide   _site/guide
+          cp -r axidb/docs/standard _site/standard
+          cp -r axidb/docs/api     _site/api
+          cp -r axidb/docs/demos   _site/demos || true
+
+          # Convierte rutas relativas al layout aplanado.
+          # docs/guide/X.md → guide/X.md (sin cambios), pero los ../api/... y
+          # ../standard/... apuntan ahora a /api/ /standard/ respectivamente.
+          find _site -name "*.md" -exec sed -i 's|\.\./api/|/api/|g; s|\.\./standard/|/standard/|g; s|\.\./guide/|/guide/|g' {} +
+
+          # Jekyll config minimo
+          cat > _site/_config.yml <<'YAML'
+          title: AxiDB v1.0
+          description: File-based database engine for PHP 8.1+
+          theme: minima
+          markdown: GFM
+          plugins:
+            - jekyll-relative-links
+          relative_links:
+            enabled: true
+            collections: true
+          YAML
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

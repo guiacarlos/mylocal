@@ -1,0 +1,41 @@
+name: AxiDB tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'axidb/**'
+      - '.github/workflows/axidb-tests.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'axidb/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.1', '8.2', '8.3']
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: openssl, zip, curl, mbstring, json
+          tools: none
+          coverage: none
+
+      - name: Show PHP version
+        run: php -v
+
+      - name: Run AxiDB suite
+        run: php axidb/tests/run.php
+
+      - name: Verify docs/api regeneration is idempotent
+        run: |
+          php axidb/cli/main.php docs build > /dev/null
+          php axidb/cli/main.php docs check

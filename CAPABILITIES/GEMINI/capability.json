@@ -1,0 +1,9 @@
+{
+    "key": "gemini",
+    "name": "Gemini AI Chat",
+    "category": "IA",
+    "simil": "IA Engine",
+    "description": "Asistente inteligente integrado con el conocimiento de tu negocio.",
+    "icon": "🧠",
+    "version": "1.2.0"
+}

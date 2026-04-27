@@ -1,0 +1,5 @@
+# 🏛️ ACIDE SOBERANO - MOTORES DE CAPACIDADES
+# Prohibir acceso directo a los motores profesionales.
+
+Order Deny,Allow
+Deny from all

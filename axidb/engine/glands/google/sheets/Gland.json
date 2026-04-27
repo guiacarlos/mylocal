@@ -1,0 +1,16 @@
+{
+    "key": "google-sheets",
+    "name": "Google Sheets (Atomic)",
+    "version": "1.2.0",
+    "type": "HYBRID",
+    "capabilities": [
+        "getValues",
+        "updateValues",
+        "appendValues",
+        "createSpreadsheet",
+        "batchUpdate"
+    ],
+    "endpoints": {
+        "read": "/api/google/sheets/v4/spreadsheets"
+    }
+}

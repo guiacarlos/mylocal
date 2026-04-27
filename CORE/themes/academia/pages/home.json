@@ -1,0 +1,647 @@
+{
+    "id": "home",
+    "title": "Academia Gestas AI - Formación Digital para Empresas",
+    "slug": "home",
+    "page": {
+        "sections": [
+            {
+                "section": "content",
+                "id": "hero-cover",
+                "class": "hero-academia-cover",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h1",
+                                "id": "hero-main-title",
+                                "class": "heading-1 text-center",
+                                "text": "Academy Gestas AI",
+                                "customStyles": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "content",
+                "id": "hero-description",
+                "class": "hero-academia-text",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "text",
+                                "tag": "p",
+                                "id": "hero-philosophy-text",
+                                "class": "text-lead text-center philosophy-text",
+                                "text": "Formación especializada en digitalización y nuevas tecnologías para empleados de empresas. Capacitamos a los profesionales del futuro con las herramientas que transformarán su entorno laboral, optimizando procesos productivos y fomentando la innovación tecnológica desde dentro de las organizaciones.",
+                                "customStyles": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "content",
+                "id": "roadmap-gratuitos",
+                "class": "section",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h2",
+                                "class": "heading-2 text-center",
+                                "text": "Próximamente: Cursos Gratuitos 2025",
+                                "customStyles": {}
+                            },
+                            {
+                                "element": "container",
+                                "class": "grid grid-3",
+                                "content": [
+                                    {
+                                        "element": "container",
+                                        "class": "card card-roadmap",
+                                        "customStyles": {
+                                            "--card-accent": "#FFC067"
+                                        },
+                                        "content": [
+                                            {
+                                                "element": "image",
+                                                "src": "/media/academia/digitalizacionsistemas.webp",
+                                                "alt": "Digitalización Sistemas",
+                                                "class": "card-image",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "container",
+                                                "class": "roadmap-content",
+                                                "content": [
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "span",
+                                                        "text": "FEBRERO 2025",
+                                                        "class": "badge-date",
+                                                        "customStyles": {
+                                                            "display": "inline-block",
+                                                            "margin-bottom": "0.75rem",
+                                                            "padding": "0.35rem 0.85rem",
+                                                            "background-color": "var(--card-accent)",
+                                                            "color": "#fff",
+                                                            "font-size": "0.75rem",
+                                                            "font-weight": "700",
+                                                            "border-radius": "6px",
+                                                            "letter-spacing": "0.05em"
+                                                        }
+                                                    },
+                                                    {
+                                                        "element": "heading",
+                                                        "tag": "h3",
+                                                        "class": "card-title",
+                                                        "text": "Digitalización Orientada al Sistema Productivo",
+                                                        "customStyles": {}
+                                                    },
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "p",
+                                                        "class": "card-text",
+                                                        "text": "Descubre cómo las nuevas tecnologías están transformando los puestos de trabajo. Aprende a identificar oportunidades de mejora en procesos empresariales y producción mediante la adopción estratégica de herramientas digitales.",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "element": "container",
+                                        "class": "card card-roadmap",
+                                        "customStyles": {
+                                            "--card-accent": "#00CEC8"
+                                        },
+                                        "content": [
+                                            {
+                                                "element": "image",
+                                                "src": "/media/academia/iniciativaemprendedora.webp",
+                                                "alt": "Iniciativa Emprendedora",
+                                                "class": "card-image",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "container",
+                                                "class": "roadmap-content",
+                                                "content": [
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "span",
+                                                        "text": "MARZO 2025",
+                                                        "class": "badge-date",
+                                                        "customStyles": {
+                                                            "display": "inline-block",
+                                                            "margin-bottom": "0.75rem",
+                                                            "padding": "0.35rem 0.85rem",
+                                                            "background-color": "var(--card-accent)",
+                                                            "color": "#fff",
+                                                            "font-size": "0.75rem",
+                                                            "font-weight": "700",
+                                                            "border-radius": "6px",
+                                                            "letter-spacing": "0.05em"
+                                                        }
+                                                    },
+                                                    {
+                                                        "element": "heading",
+                                                        "tag": "h3",
+                                                        "class": "card-title",
+                                                        "text": "Iniciativa Emprendedora y Mejora Productiva",
+                                                        "customStyles": {}
+                                                    },
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "p",
+                                                        "class": "card-text",
+                                                        "text": "Domina herramientas tecnológicas clave y comprende la jerarquía organizacional. Aplica sistemas innovadores para mejorar tu rendimiento y el de tu equipo dentro de la estructura empresarial.",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "element": "container",
+                                        "class": "card card-roadmap",
+                                        "customStyles": {
+                                            "--card-accent": "#417dc1"
+                                        },
+                                        "content": [
+                                            {
+                                                "element": "image",
+                                                "src": "/media/academia/geminichatgpt.webp",
+                                                "alt": "Gemini y ChatGPT",
+                                                "class": "card-image",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "container",
+                                                "class": "roadmap-content",
+                                                "content": [
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "span",
+                                                        "text": "ABRIL 2025",
+                                                        "class": "badge-date",
+                                                        "customStyles": {
+                                                            "display": "inline-block",
+                                                            "margin-bottom": "0.75rem",
+                                                            "padding": "0.35rem 0.85rem",
+                                                            "background-color": "var(--card-accent)",
+                                                            "color": "#fff",
+                                                            "font-size": "0.75rem",
+                                                            "font-weight": "700",
+                                                            "border-radius": "6px",
+                                                            "letter-spacing": "0.05em"
+                                                        }
+                                                    },
+                                                    {
+                                                        "element": "heading",
+                                                        "tag": "h3",
+                                                        "class": "card-title",
+                                                        "text": "Manejo de Gemini y ChatGPT",
+                                                        "customStyles": {}
+                                                    },
+                                                    {
+                                                        "element": "text",
+                                                        "tag": "p",
+                                                        "class": "card-text",
+                                                        "text": "Aprende a utilizar estas potentes herramientas de IA para ser más efectivo en tu trabajo diario. Filosofía de prompt engineering y automatizaciones simples que multiplicarán tu productividad.",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "content",
+                "id": "roadmap-premium",
+                "class": "section section-premium",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h2",
+                                "class": "heading-2 text-center",
+                                "text": "Próximos Cursos Premium",
+                                "customStyles": {}
+                            },
+                            {
+                                "element": "container",
+                                "id": "premium-carousel",
+                                "class": "premium-carousel",
+                                "content": [
+                                    {
+                                        "element": "container",
+                                        "class": "carousel-track",
+                                        "content": [
+                                            {
+                                                "element": "container",
+                                                "id": "slide1",
+                                                "class": "carousel-slide",
+                                                "content": [
+                                                    {
+                                                        "element": "container",
+                                                        "class": "slide-content",
+                                                        "content": [
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "span",
+                                                                "class": "slide-badge",
+                                                                "text": "FEBRERO 2025",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "heading",
+                                                                "tag": "h3",
+                                                                "class": "slide-title",
+                                                                "text": "El futuro del Prompt Engineering",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "p",
+                                                                "class": "slide-description",
+                                                                "text": "Con la evolución de los modelos multimodales, el Prompt Engineering se orienta hacia la orquestación de texto, imagen, audio y datos estructurados, convirtiéndose en una competencia esencial para empresas que buscan aprovechar al máximo la IA generativa de forma controlada y responsable.",
+                                                                "customStyles": {}
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "element": "image",
+                                                        "src": "/media/academia/promptengineering.jpg",
+                                                        "alt": "Prompt Engineering",
+                                                        "class": "slide-image",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "element": "container",
+                                                "id": "slide2",
+                                                "class": "carousel-slide",
+                                                "content": [
+                                                    {
+                                                        "element": "container",
+                                                        "class": "slide-content",
+                                                        "content": [
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "span",
+                                                                "class": "slide-badge",
+                                                                "text": "MARZO 2025",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "heading",
+                                                                "tag": "h3",
+                                                                "class": "slide-title",
+                                                                "text": "El futuro de los LLM y la ética de la IA",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "p",
+                                                                "class": "slide-description",
+                                                                "text": "La evolución de los LLM exige un enfoque continuo de ética por diseño, combinando innovación tecnológica con regulación, transparencia y responsabilidad. Las organizaciones que adopten estos principios estarán mejor preparadas para un uso sostenible de la IA.",
+                                                                "customStyles": {}
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "element": "image",
+                                                        "src": "/media/academia/eticallm.jpg",
+                                                        "alt": "Ética IA",
+                                                        "class": "slide-image",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "element": "container",
+                                                "id": "slide3",
+                                                "class": "carousel-slide",
+                                                "content": [
+                                                    {
+                                                        "element": "container",
+                                                        "class": "slide-content",
+                                                        "content": [
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "span",
+                                                                "class": "slide-badge",
+                                                                "text": "ABRIL 2025",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "heading",
+                                                                "tag": "h3",
+                                                                "class": "slide-title",
+                                                                "text": "Tendencias IA en los negocios",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "p",
+                                                                "class": "slide-description",
+                                                                "text": "La convergencia entre IA generativa, analítica avanzada y modelos multimodales permitirá experiencias empresariales más inteligentes. Las organizaciones que adopten estas tecnologías liderarán mercados cada vez más visuales y automatizados.",
+                                                                "customStyles": {}
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "element": "image",
+                                                        "src": "/media/academia/iaaplicadanegocios.jpg",
+                                                        "alt": "IA Negocios",
+                                                        "class": "slide-image",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "element": "container",
+                                                "id": "slide4",
+                                                "class": "carousel-slide",
+                                                "content": [
+                                                    {
+                                                        "element": "container",
+                                                        "class": "slide-content",
+                                                        "content": [
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "span",
+                                                                "class": "slide-badge",
+                                                                "text": "MAYO 2025",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "heading",
+                                                                "tag": "h3",
+                                                                "class": "slide-title",
+                                                                "text": "IA en el Entorno Empresarial",
+                                                                "customStyles": {}
+                                                            },
+                                                            {
+                                                                "element": "text",
+                                                                "tag": "p",
+                                                                "class": "slide-description",
+                                                                "text": "La evolución de la IA multimodal permitirá combinar imágenes, texto y datos estructurados, impulsando modelos de negocio más inteligentes y adaptativos. Las organizaciones que integren estas tecnologías de forma estratégica estarán mejor posicionadas para competir en mercados digitales altamente visuales.",
+                                                                "customStyles": {}
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "element": "image",
+                                                        "src": "/media/academia/entornoempresarial.jpg",
+                                                        "alt": "Imagen IA",
+                                                        "class": "slide-image",
+                                                        "customStyles": {}
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "element": "container",
+                                        "class": "carousel-nav",
+                                        "content": [
+                                            {
+                                                "element": "link",
+                                                "url": "#slide1",
+                                                "class": "nav-dot",
+                                                "text": "",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "link",
+                                                "url": "#slide2",
+                                                "class": "nav-dot",
+                                                "text": "",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "link",
+                                                "url": "#slide3",
+                                                "class": "nav-dot",
+                                                "text": "",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "link",
+                                                "url": "#slide4",
+                                                "class": "nav-dot",
+                                                "text": "",
+                                                "customStyles": {}
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "content",
+                "id": "etica-tecnologia",
+                "class": "section",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h2",
+                                "class": "heading-2 text-center",
+                                "text": "Ética y Responsabilidad Tecnológica",
+                                "customStyles": {}
+                            },
+                            {
+                                "element": "text",
+                                "tag": "p",
+                                "class": "text-body text-center ethics-text",
+                                "text": "En la era de la transformación digital, es fundamental aprender no solo a utilizar las nuevas tecnologías, sino a hacerlo con responsabilidad y criterio ético. La inteligencia artificial tendrá un impacto sin precedentes en nuestras vidas profesionales y personales. Por ello, en Academia Gestas AI promovemos buenas prácticas en el uso de estas herramientas, fomentando un enfoque consciente que equilibre la innovación con la responsabilidad social, la privacidad de datos y el respeto por la dignidad humana en el entorno digital.",
+                                "customStyles": {}
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "section": "content",
+                "id": "precios",
+                "class": "section section-pricing",
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h2",
+                                "class": "heading-2 text-center",
+                                "text": "Suscripciones",
+                                "customStyles": {}
+                            },
+                            {
+                                "element": "container",
+                                "class": "text-center",
+                                "customStyles": {
+                                    "max-width": "800px",
+                                    "margin": "0 auto 3rem auto"
+                                },
+                                "content": [
+                                    {
+                                        "element": "text",
+                                        "tag": "p",
+                                        "class": "text-lead",
+                                        "text": "Acceso completo a la formación en digitalización, IA y nuevas tecnologías para profesionales y empresas. Elige el plan que mejor se adapte a tu ritmo y empieza hoy con 15 días de prueba sin riesgo.",
+                                        "customStyles": {
+                                            "margin-bottom": "0"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "element": "grid",
+                                "class": "grid grid-3 pricing-grid",
+                                "content": [
+                                    {
+                                        "element": "card",
+                                        "class": "card card-pricing",
+                                        "content": [
+                                            {
+                                                "element": "heading",
+                                                "tag": "h3",
+                                                "class": "pricing-title",
+                                                "text": "Estándar",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "html",
+                                                "content": "<div class='pricing-amount' style='font-size: 2.5rem'>27 € <span style='font-size:0.5em; font-weight:400'>/ mes + IVA</span></div>"
+                                            },
+                                            {
+                                                "element": "button",
+                                                "class": "btn btn-primary",
+                                                "text": "Comenzar ahora",
+                                                "link": "checkout?plan=standard",
+                                                "customStyles": {
+                                                    "margin-top": "2rem",
+                                                    "width": "100%"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "element": "card",
+                                        "class": "card card-pricing",
+                                        "content": [
+                                            {
+                                                "element": "heading",
+                                                "tag": "h3",
+                                                "class": "pricing-title",
+                                                "text": "Pro",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "html",
+                                                "content": "<div class='pricing-amount' style='font-size: 2.5rem'>54 € <span style='font-size:0.5em; font-weight:400'>/ trimestre + IVA</span></div>"
+                                            },
+                                            {
+                                                "element": "button",
+                                                "class": "btn btn-primary",
+                                                "text": "Elegir plan",
+                                                "link": "checkout?plan=pro",
+                                                "customStyles": {
+                                                    "margin-top": "2rem",
+                                                    "width": "100%"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "element": "card",
+                                        "class": "card card-pricing card-pricing-featured",
+                                        "content": [
+                                            {
+                                                "element": "heading",
+                                                "tag": "h3",
+                                                "class": "pricing-title",
+                                                "text": "Premium",
+                                                "customStyles": {}
+                                            },
+                                            {
+                                                "element": "html",
+                                                "content": "<div class='pricing-amount' style='font-size: 2.5rem'>243 € <span style='font-size:0.5em; font-weight:400'>/ año + IVA</span></div>"
+                                            },
+                                            {
+                                                "element": "button",
+                                                "class": "btn btn-primary",
+                                                "text": "Acceso anual",
+                                                "link": "checkout?plan=premium",
+                                                "customStyles": {
+                                                    "margin-top": "2rem",
+                                                    "width": "100%"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "element": "container",
+                                "class": "features-list-container",
+                                "customStyles": {
+                                    "max-width": "800px",
+                                    "margin": "4rem auto 0 auto",
+                                    "padding": "2rem",
+                                    "background": "rgba(255,255,255,0.03)",
+                                    "border-radius": "1rem"
+                                },
+                                "content": [
+                                    {
+                                        "element": "heading",
+                                        "tag": "h4",
+                                        "class": "heading-3 text-center",
+                                        "text": "Todas las suscripciones incluyen",
+                                        "customStyles": {
+                                            "margin-bottom": "2rem"
+                                        }
+                                    },
+                                    {
+                                        "element": "html",
+                                        "content": "<ul class='check-list' style='list-style:none; padding:0; display:grid; grid-template-columns: 1fr; gap: 1rem;'><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Acceso ilimitado a toda la plataforma formativa</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Acceso a Agentes de IA aplicados al entorno empresarial</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Integración y vinculación con Google Drive</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Descarga de todos los recursos de los cursos</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Acceso a contenidos actuales y futuras actualizaciones</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> Formación alineada con ética y responsabilidad tecnológica</li><li style='display:flex; align-items:center; gap:0.8rem;'><span style='color:var(--card-accent,#3b82f6)'>✓</span> <strong>Prueba gratuita de 15 días con devolución del 100 % del importe</strong></li></ul>"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "updated_at": "2026-01-17T15:52:00.000Z"
+}

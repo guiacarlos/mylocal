@@ -1,0 +1,66 @@
+/*
+ * AxiDB - console.css: estilos especificos de la consola REPL.
+ * Hereda variables de app.css. Solo añade lo que difiere del dashboard.
+ */
+
+body.page-console { display: flex; flex-direction: column; height: 100vh; margin: 0; }
+body.page-console .topbar { flex: 0 0 auto; }
+body.page-console .repl-layout {
+    flex: 1; display: grid; grid-template-rows: 45% 55%; height: calc(100vh - 50px);
+}
+
+.repl-mode-tabs { display: flex; gap: 4px; }
+.repl-mode-tabs .mode-tab {
+    background: transparent; border: 1px solid #444; color: #aaa;
+    padding: 4px 12px; border-radius: 4px; cursor: pointer; font-family: monospace;
+}
+.repl-mode-tabs .mode-tab.active {
+    background: #2563eb; border-color: #2563eb; color: #fff;
+}
+
+.repl-input-pane, .repl-output-pane {
+    display: flex; flex-direction: column; min-height: 0;
+}
+.repl-input-pane { border-bottom: 1px solid #333; }
+
+.repl-toolbar {
+    display: flex; align-items: center; gap: 8px; padding: 6px 10px;
+    background: #1f1f1f; font-size: 11px;
+}
+.repl-toolbar .hint { flex: 1; color: #888; font-family: monospace; }
+
+.repl-input {
+    flex: 1; background: #0d0d0d; color: #eee; border: 0;
+    padding: 12px; font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 13px; resize: none; outline: none; tab-size: 4;
+}
+
+.repl-output {
+    flex: 1; overflow-y: auto; padding: 10px;
+    background: #0a0a0a; font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 12px;
+}
+.repl-entry { margin-bottom: 12px; padding: 8px; border-left: 3px solid #2563eb; background: #111; }
+.repl-entry.err { border-left-color: #dc2626; }
+.repl-entry .meta { color: #888; font-size: 11px; margin-bottom: 4px; }
+.repl-entry .input-echo { color: #67e8f9; white-space: pre-wrap; margin-bottom: 4px; }
+.repl-entry .output { color: #d1fae5; white-space: pre-wrap; }
+.repl-entry.err .output { color: #fca5a5; }
+
+/* Palette (Ctrl+P / Ctrl+Shift+A) */
+.palette-box {
+    background: #1a1a1a; border: 1px solid #444; border-radius: 6px;
+    width: min(560px, 90vw); margin: 80px auto 0; box-shadow: 0 10px 40px rgba(0,0,0,.6);
+}
+.palette-box input {
+    width: 100%; padding: 12px; background: transparent; border: 0;
+    border-bottom: 1px solid #333; color: #eee; font-size: 14px; outline: none;
+}
+.palette-list { list-style: none; padding: 0; margin: 0; max-height: 320px; overflow-y: auto; }
+.palette-list li {
+    padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #2a2a2a;
+    font-family: monospace;
+}
+.palette-list li:hover, .palette-list li.active { background: #2563eb; color: #fff; }
+.palette-list li .desc { color: #888; font-size: 11px; margin-left: 8px; }
+.palette-list li.active .desc { color: #cce5ff; }
