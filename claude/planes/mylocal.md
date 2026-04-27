@@ -148,23 +148,29 @@ Referencia de mercado: Last.app factura ~3,5-4M€/año con 1.800 locales.
 ### FASE 0 — Limpieza y repositorio base
 
 **Objetivo:** repo mylocal limpio, con solo lo que se va a construir.
-**Commit al terminar:** `feat: estructura base mylocal`
+**Commit:** `feat: estructura base mylocal` — 2026-04-27 — hash 4e93029
 **Push:** https://github.com/guiacarlos/mylocal
 
-- [ ] Crear repositorio mylocal en GitHub
-- [ ] Clonar synaxiscore como punto de partida
-- [ ] Eliminar modulos que no pertenecen al producto
-      - CRM general
-      - RRHH
-      - Proyectos y tareas genericas
-      - Academy y formacion
-      - E-commerce generico
-      - Blog y CMS
-      - Demos y modulos de prueba sin uso
-- [ ] Definir estructura de directorios (axia / socola / agentes / shared)
-- [ ] Verificar que AxiDB arranca de forma aislada
-- [ ] Crear README.md con descripcion del producto
-- [ ] Commit y push
+- [x] Crear repositorio mylocal en GitHub
+- [x] Construir desde synaxiscore como punto de partida
+- [x] Eliminar modulos que no pertenecen al producto
+      - ACADEMY eliminado
+      - FSE eliminado
+      - CAPABILITIES/STORE eliminado
+      - RESERVAS eliminado
+      - ACIDE eliminado
+      - funcional/ eliminado (snapshot antiguo)
+      - vault/ excluido via .gitignore (credenciales)
+      - STORE/ raiz eliminado
+      - release/ y archivos .zip eliminados
+      - archivos de test en raiz y dashboard eliminados
+      - scripts de build Python eliminados
+- [x] Definir estructura: axidb / CORE / CAPABILITIES / STORAGE / MEDIA
+- [x] Modulos activos verificados: QR, TPV, AGENTE_RESTAURANTE, PRODUCTS, GEMINI
+- [x] Crear README.md con descripcion del producto
+- [x] Crear CLAUDE.md con reglas de trabajo
+- [x] Crear .gitignore con exclusion de datos sensibles y credenciales
+- [x] Commit y push — 753 archivos
 
 ---
 
