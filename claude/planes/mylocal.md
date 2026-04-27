@@ -660,56 +660,210 @@ Ampliar con configuracion de Stripe y take rate visible.
 ### FASE 3 — Cumplimiento fiscal (Verifactu / TicketBAI)
 
 **Estado: Pendiente — obligatorio antes de campana comercial masiva**
-**Commit al terminar:** feat: cumplimiento-fiscal verifactu ticketbai
+**Precio:** incluido en plan 79€ y 149€. Es el lock-in mas potente del producto.
+**Commits por subfase** (ver al final de la fase).
 
-#### 3.1 Verifactu
+---
 
-El TicketEngine de Fase 2 genera el ticket. Verifactu añade firma electronica
-y envio automatico a la AEAT al cerrar cada sesion de mesa.
+#### Analisis tecnico y contexto legal
 
-Campos obligatorios Verifactu: NIF emisor, numero de factura, fecha, importe,
-IVA desglosado, hash encadenado con la factura anterior.
+Verifactu no es una opcion. Es una ley. A partir de 2026/2027 todo software
+de facturacion en Espana debe cumplir el Real Decreto 1007/2023 (Reglamento
+de sistemas informaticos de facturacion). Las multas por incumplimiento llegan
+a 50.000 euros por establecimiento.
 
-**VerifactuSigner.php**
-  Firma el registro de facturacion con hash SHA-256 encadenado.
-  Max 120 lineas.
+El mecanismo tecnico de Verifactu funciona asi:
+  Cada ticket/factura genera un registro de facturacion con estos campos:
+  - IDEmisor: NIF del local + NombreRazon
+  - IDFactura: serie + numero correlativo + fecha de expedicion
+  - TipoFactura: F2 (factura simplificada, que es lo que emite un restaurante)
+  - Importe total, base imponible e IVA desglosado por tipo
+  - Huella (hash SHA-256): calculada sobre campos especificos del registro
+  - EncadenamientoFacturaAnterior: huella del registro anterior (cadena)
 
-**VerifactuSender.php**
-  Envia el registro a la AEAT via API REST (endpoint oficial AEAT).
-  Reintenta en caso de fallo. Registra estado en STORAGE.
+El sistema es parecido a un blockchain simple: cada factura incluye el hash
+de la anterior. Si se intenta modificar un registro anterior, toda la cadena
+posterior queda invalida. Esto es lo que hace el sistema inalterable.
+
+Hay dos modalidades de envio a la AEAT:
+  - VERI*FACTU: envio en tiempo real con cada factura. Obligatorio para
+    software certificado bajo la modalidad verifactu.
+  - REGISTRO: envio en lote al cierre del dia. Solo para ciertos casos.
+  Para MyLocal se implementa VERI*FACTU (tiempo real) que es la via que
+  AEAT prefiere y la que genera el sello "Verifactu" en el ticket.
+
+TicketBAI es el equivalente en Pais Vasco y Navarra, anterior a Verifactu
+y mas estricto: requiere certificado digital cualificado y firma XML-DSIG
+en cada ticket. Los endpoints difieren por territorio:
+  - Bizkaia: api.batuz.eus
+  - Gipuzkoa: egoitza.gipuzkoa.eus
+  - Araba: arabatax.araba.eus
+  - Navarra: hacienda.navarra.es
+
+---
+
+#### Prerequisito de Fase 3: datos fiscales en modelo Local
+
+El modelo LocalModel.php de Fase 1 necesita estos campos adicionales
+antes de poder generar registros Verifactu:
+
+  nif, nombre_fiscal, domicilio_fiscal, cp, municipio, provincia,
+  regimen_iva (general/recargo_equivalencia/exento),
+  serie_factura (string, ej: "R"), ultimo_numero_factura (int, autoincremental),
+  ultima_huella_verifactu (hash del ultimo registro enviado, 64 chars),
+  modalidad_fiscal (verifactu/ticketbai/ninguna),
+  territorio_ticketbai (bizkaia/gipuzkoa/araba/navarra, solo si ticketbai).
+
+- [ ] Ampliar LocalModel.php con campos fiscales
+- [ ] Crear STORAGE/config/fiscal.json como almacen de config fiscal por local
+- [ ] El certificado digital se guarda en STORAGE/.vault/cert/ (excluido de git)
+
+---
+
+#### 3.0 FiscalConfigModel.php — configuracion fiscal por local
+
+  Campos: local_id, nif, nombre_fiscal, domicilio_fiscal, cp, municipio,
+  provincia, regimen_iva, serie_factura, modalidad_fiscal,
+  territorio_ticketbai, certificado_path (ruta relativa en .vault/).
+  Ubicacion: CAPABILITIES/FISCAL/models/FiscalConfigModel.php. Max 80 lineas.
+
+- [ ] Crear CAPABILITIES/FISCAL/models/FiscalConfigModel.php
+- [ ] Panel de configuracion fiscal en TPVAdmin (pestana Fiscal)
+
+---
+
+#### 3.1 Verifactu — modulo de facturacion electronica
+
+Ubicacion: CAPABILITIES/FISCAL/
+
+**VerifactuRecord.php** — construye el registro de facturacion
+  Recibe una SesionMesa cerrada de Fase 2.
+  Calcula todos los campos obligatorios del esquema AEAT.
+  Genera el XML del registro en el formato oficial (schema XSD de AEAT).
+  Calcula la huella SHA-256 encadenada con el registro anterior.
+  Actualiza ultimo_numero_factura y ultima_huella en FiscalConfigModel.
+  Max 200 lineas. Si supera: dividir en VerifactuRecord y VerifactuXmlBuilder.
+
+**VerifactuSigner.php** — firma del registro
+  Firma el XML con el certificado digital del local (PKCS#12 en .vault/).
+  Usa openssl_pkcs12_read() de PHP para cargar el certificado.
+  Produce el XML firmado listo para enviar.
   Max 100 lineas.
 
-**VerifactuQueue.php**
-  Cola de facturas pendientes de envio.
-  Procesa en background tras cada cierre de mesa.
+**VerifactuSender.php** — envio a AEAT
+  Endpoint sandbox: https://prewww10.aeat.es/wlpl/TGVG-JDIT/ws/VFVerifactu
+  Endpoint produccion: https://www7.aeat.es/wlpl/TGVG-JDIT/ws/VFVerifactu
+  Envia via HTTPS POST. Parsea respuesta de AEAT (CSV, estado, codigo).
+  Si falla: registra en cola de reintentos. Max 3 reintentos con backoff.
+  Max 100 lineas.
+
+**VerifactuQueue.php** — cola de reintentos
+  Almacena registros fallidos en STORAGE/fiscal/verifactu_queue.json.
+  Procesa la cola en cada cierre de mesa (no necesita cron).
   Max 80 lineas.
 
+**VerifactuLog.php** — registro de auditoria
+  Guarda cada envio con timestamp, estado AEAT, CSV de respuesta.
+  Almacen: STORAGE/fiscal/verifactu_log.json. Max 50 lineas.
+
+**Flujo de integracion con Fase 2:**
+  PaymentEngine.confirmPago() → VerifactuRecord.build() → VerifactuSigner.sign()
+  → VerifactuSender.send() → VerifactuLog.write()
+  Si VerifactuSender falla: VerifactuQueue.push() y sigue.
+  El ticket del cliente incluye el CSV y el QR de verificacion de AEAT.
+
+- [ ] Crear CAPABILITIES/FISCAL/models/VerifactuRegistroModel.php
+- [ ] Crear CAPABILITIES/FISCAL/VerifactuRecord.php
 - [ ] Crear CAPABILITIES/FISCAL/VerifactuSigner.php
 - [ ] Crear CAPABILITIES/FISCAL/VerifactuSender.php
 - [ ] Crear CAPABILITIES/FISCAL/VerifactuQueue.php
-- [ ] Integracion con TicketEngine: firmar al generar ticket
-- [ ] Integracion con PaymentEngine: encolar al confirmar pago
-- [ ] Test con entorno de pruebas AEAT antes de produccion
+- [ ] Crear CAPABILITIES/FISCAL/VerifactuLog.php
+- [ ] Integracion en PaymentEngine.confirmPago()
+- [ ] CSV y QR de verificacion AEAT en ticket del cliente
+- [ ] Prueba completa en entorno sandbox AEAT antes de produccion
 
-#### 3.2 TicketBAI
+---
 
-Especifico para Pais Vasco y Navarra. Activable por local segun provincia.
+#### 3.2 TicketBAI — Pais Vasco y Navarra
 
-**TicketBAIEngine.php**
-  Mismo concepto que Verifactu pero con el esquema TicketBAI.
-  Usa certificado digital del local (almacenado en STORAGE/.vault/).
+Activable por local segun campo territorio_ticketbai en FiscalConfigModel.
+
+TicketBAI es mas complejo que Verifactu porque exige:
+  - Certificado digital cualificado (no solo un hash SHA-256)
+  - XML firmado con XML-DSIG (firma enveloped)
+  - QR especifico TicketBAI impreso en cada ticket
+  - Numero TBAI correlativo por local y serie
+
+**TicketBAIRecord.php** — construye el XML TicketBAI
+  Schema: TBai.xsd de cada territorio (ligeramente distintos).
+  Campos: Emisor, Destinatario (opcional), DetallesFactura, TipoDesglose,
+  EncadenamientoFacturaAnterior, SoftwareFacturacion (nombre, version, NIF).
+  El campo SoftwareFacturacion debe identificar a MyLocal como proveedor.
+  Max 200 lineas.
+
+**TicketBAISigner.php** — firma XML-DSIG
+  Usa XMLSecLibs (libreria PHP) o implementacion propia.
+  Carga certificado PEM del local desde STORAGE/.vault/cert/.
+  Max 120 lineas.
+
+**TicketBAISender.php** — envio por territorio
+  Delega al endpoint correcto segun territorio_ticketbai.
+  Cada territorio tiene su propio endpoint y esquema de respuesta.
+  Max 80 lineas.
+
+- [ ] Crear CAPABILITIES/FISCAL/TicketBAIRecord.php
+- [ ] Crear CAPABILITIES/FISCAL/TicketBAISigner.php
+- [ ] Crear CAPABILITIES/FISCAL/TicketBAISender.php
+- [ ] Activacion por campo territorio_ticketbai en configuracion del local
+- [ ] QR TicketBAI en ticket fisico y digital
+
+---
+
+#### 3.3 Panel fiscal en TPVAdmin
+
+**FiscalAdmin.jsx** — gestion fiscal desde el panel
+  Pestana Fiscal en TPVAdmin.jsx.
+  Formulario: NIF, nombre fiscal, domicilio, modalidad (verifactu/ticketbai).
+  Subida de certificado digital (campo file, almacena en .vault/).
+  Estado del servicio: ultimo envio a AEAT, registros en cola, errores.
+  Boton "Reenviar cola pendiente" para resolver fallos manualmente.
   Max 150 lineas.
 
-- [ ] Crear CAPABILITIES/FISCAL/TicketBAIEngine.php
-- [ ] Activable por configuracion de local (campo provincia)
+- [ ] Crear CAPABILITIES/FISCAL/admin/FiscalAdmin.jsx
+- [ ] Integracion en TPVAdmin.jsx: pestana Fiscal
+- [ ] Estado de envios visible: ok / en_cola / error
+- [ ] Subida de certificado digital con validacion de formato PFX/PEM
 
-#### 3.3 Factura simplificada al cliente
+---
 
-- [ ] Generacion de factura simplificada desde TicketEngine
-- [ ] Envio por email si el cliente lo solicita (campo email opcional en pago)
-- [ ] QR en ticket para descargar la factura en PDF
+#### 3.4 Factura simplificada al cliente
 
-**Criterio de salida:** certificacion Verifactu validada en entorno real AEAT.
+El ticket digital de Fase 2 ya muestra el resumen. Aqui se añade:
+  - Numero de factura simplificada (serie + numero correlativo)
+  - NIF y nombre fiscal del local
+  - Desglose de IVA por tipo (10%, 21%)
+  - CSV de verificacion AEAT o QR TicketBAI segun modalidad
+  - Opcion: el cliente introduce su email para recibir el ticket en PDF
+
+- [ ] Ampliar TicketEngine.php con campos fiscales
+- [ ] Numero de factura correlativo visible en ticket
+- [ ] Desglose IVA por tipo en el ticket
+- [ ] Campo email opcional en pantalla de pago del cliente
+- [ ] Envio de PDF por email si el cliente lo solicita
+
+---
+
+**Criterio de salida Fase 3:**
+  Certificacion Verifactu validada con envio real a AEAT sin errores.
+  Al menos 3 locales piloto emitiendo facturas Verifactu en produccion.
+  El ticket del cliente incluye CSV de verificacion AEAT.
+
+**Commits por subfase:**
+  feat: modelo fiscal y configuracion por local
+  feat: VerifactuRecord signer sender queue y log
+  feat: TicketBAI para Pais Vasco y Navarra
+  feat: panel fiscal en TPVAdmin
+  feat: ticket digital con campos fiscales completos
 
 ---
 
@@ -717,64 +871,276 @@ Especifico para Pais Vasco y Navarra. Activable por local segun provincia.
 
 **Estado: Pendiente**
 **Precio:** 149€/mes + take rate.
-**Commit al terminar:** feat: nivel-3 tpv completo
+**Objetivo:** competir con Last.app y Qamarero. Ecosistema integral soberano.
+**Commits por subfase** (ver al final de la fase).
 
-TPVPos.jsx ya es una base muy solida. Esta fase lo convierte en producto completo.
+---
 
-#### 4.1 TPV tactil (barra y sala)
+#### Analisis del codigo existente para Fase 4
 
-TPVPos.jsx ya tiene vista de catalogo y vista de mesas.
-Lo que falta: interfaz optimizada para barra (sin plano, solo catalogo rapido).
+**TPVPos.jsx — base muy solida, ya tiene:**
+  - Vista de mesas con plano visual (blueprints) posicionado en canvas
+  - Vista de catalogo con filtro por categoria
+  - Carrito por mesa separado y persistido
+  - Polling 5 segundos para sincronizar pedidos QR externos
+  - tableRequests: lista de solicitudes "camarero" y "cuenta" del QR
+  - showCheckout: flujo de cobro con metodos de pago
+  - adminPanel: paneles admin embebidos sin salir del TPV
+  - BroadcastChannel para sincronizacion entre pestanas del mismo dispositivo
+  - manualChangeTag: evita sobrescribir cambios manuales del camarero con el polling
 
-**BarraView.jsx**
-  Vista de venta rapida: catalogo en grid grande, carrito lateral.
-  Sin plano de mesas. Para cafeteria y barra de bar.
+**TPVAdmin.jsx — ya tiene:**
+  - Gestion de usuarios permitidos en el TPV
+  - Metodos de pago habilitados (toggle por tipo)
+  - Turnos configurables (inicio/fin de turno)
+  - Informe de caja con rango de fechas personalizable
+  - Analitica por rango (30 dias)
+  - Cierres historicos expandibles con detalle de tickets
+  - Vista de tickets individuales con items y totales
+
+**GeminiEngine.php — COMPLETAMENTE ROTO:**
+  Lineas 22-25: require_once de cuatro archivos en acide/core/handlers/ai/
+  que no existen (ACIDE fue eliminado). Error fatal en cualquier uso.
+  Fix necesario en Fase 4 o 5 segun cuando se use el agente IA.
+
+**Agente_restauranteEngine.php — PARCIALMENTE ROTO:**
+  Linea 82: lee productos de crud->list('store/products') — ruta STORE
+  que fue eliminada. En Fase 4+ debe leer de CAPABILITIES/CARTA models.
+  Linea 164: fallback a academy_settings/current — ACADEMY eliminado.
+  Lineas 224, 392, 520: referencias hardcodeadas a "Socola" y "Murcia".
+  Estos se corrigen en Fase 5 cuando se construye el agente real.
+
+**Lo que NO existe y hay que construir en Fase 4:**
+
+FALTA 1 — BarraView.jsx:
+  Vista de venta rapida para barra y cafeteria. Sin plano de mesas.
+  TPVPos tiene viewMode pero no tiene una vista barra optimizada.
+
+FALTA 2 — ComanderoApp.jsx:
+  PWA para el camarero en su movil personal. Sin tablet compartida.
+  El camarero ve sus mesas, toma comanda y la envia a cocina.
+
+FALTA 3 — KitchenDisplay.jsx:
+  Pantalla de cocina (KDS). Muestra items pendientes por ronda y mesa.
+  El cocinero marca cada plato como listo, lo que notifica al camarero.
+
+FALTA 4 — Multi-local:
+  El STORAGE actual es de tenant unico. Para multi-local hay que aislar
+  los datos de cada local en su propio subdirectorio.
+  Este es el cambio de mayor impacto en la arquitectura.
+
+FALTA 5 — Analitica expandida:
+  TPVAdmin tiene informe de caja pero no ticket medio, rotacion de mesas
+  ni comparativa entre locales. Necesita AnalyticsPanel.jsx nuevo.
+
+---
+
+#### 4.0 Prerequisito critico: arquitectura multi-tenant
+
+Actualmente STORAGE es single-tenant. Todos los datos van a una ruta plana.
+Para que un hostelero gestione varios locales, cada local necesita
+sus propios datos completamente aislados.
+
+**Arquitectura STORAGE multi-tenant:**
+```
+STORAGE/
+  locales/
+    {slug-local}/
+      config/         configuracion del local (carta, zonas, pagos, fiscal)
+      sessions/       sesiones de mesa activas
+      logs/           logs del sistema del local
+      fiscal/         registros Verifactu y TicketBAI
+  _system/            datos globales de la plataforma (usuarios, planes)
+  .vault/             certificados y secretos (por local en subdirectorio)
+```
+
+**LocalContext.php** — servicio de contexto de local activo
+  Determina el local activo a partir de la sesion del usuario autenticado.
+  Devuelve la ruta base de STORAGE para ese local.
+  Todos los modelos reciben el LocalContext como dependencia.
+  Sin LocalContext, los modelos leen del directorio legacy (compatibilidad).
+  Max 80 lineas. Ubicacion: CORE/core/LocalContext.php.
+
+**Impacto en modulos existentes:**
+  QREngine.php: restaurant_zones se lee desde LocalContext.storagePath()
+  TPVPos.jsx: al cargar, envia local_id para que el backend filtre
+  CartaAdminApi.php: todas las operaciones van al directorio del local
+  PaymentEngine.php: SesionMesa y PagoModel usan LocalContext
+
+- [ ] Crear CORE/core/LocalContext.php
+- [ ] Crear estructura STORAGE/locales/{slug}/ con gitkeep
+- [ ] Adaptar QREngine.php para usar LocalContext
+- [ ] Adaptar CartaAdminApi.php para usar LocalContext
+- [ ] Adaptar PaymentEngine.php para usar LocalContext
+- [ ] Compatibilidad hacia atras: si no hay multi-local, usa STORAGE raiz
+
+---
+
+#### 4.1 BarraView — vista de barra y cafeteria
+
+TPVPos.jsx tiene viewMode = 'tables' | 'catalog'. Añadir 'barra'.
+El modo barra no tiene plano visual. Solo catalogo rapido y carrito lateral.
+Diseñado para: cafeteria, barra de bar, mostrador de comida rapida.
+
+**BarraView.jsx** — componente de vista barra
+  Grid de productos con foto grande, precio visible, añadir con un tap.
+  Carrito fijo en lateral derecho (desktop) o panel inferior (movil).
+  Busqueda rapida por texto en tiempo real.
+  Sin mesa asociada: el cobro es inmediato, no hay "dejar mesa abierta".
   Max 200 lineas.
+
+**Activacion:** campo modo_tpv en FiscalConfigModel o LocalModel.
+  Valores: 'sala' (mesas + barra), 'barra' (solo barra), 'carta' (solo QR).
 
 - [ ] Crear CAPABILITIES/TPV/pos/BarraView.jsx
-- [ ] Modo barra activable desde configuracion del local
-- [ ] Compatible con tablet, movil y PC sin hardware nuevo
+- [ ] Añadir viewMode 'barra' en TPVPos.jsx
+- [ ] Campo modo_tpv en LocalModel.php
+- [ ] Cobro inmediato en modo barra (sin sesion de mesa)
 
-#### 4.2 Comandero digital (camarero en movil)
+---
 
-**ComanderoApp.jsx**
-  App PWA para el camarero. Muestra mesas asignadas.
-  Permite tomar comanda y enviarla a cocina.
-  Recibe notificacion cuando plato esta listo.
+#### 4.2 ComanderoApp — PWA para camarero
+
+El camarero usa su propio movil. No necesita tablet compartida ni hardware.
+La app es una PWA (Progressive Web App) instalable desde el navegador.
+
+**ComanderoApp.jsx** — raiz de la PWA del camarero
+  Vista de mesas asignadas al camarero en turno.
+  Vista de comanda: añadir productos con buscador rapido, notas por item.
+  Enviar comanda a cocina con un tap.
+  Panel de notificaciones: "Mesa 5 — Risotto listo".
+  Sin acceso al panel de administracion ni al cierre de caja.
   Max 200 lineas.
 
+**manifest.comandero.json** — manifiesto PWA
+  name: "MyLocal Camarero", start_url: /comandero, display: standalone.
+  Iconos en 192px y 512px. Max 30 lineas.
+
+**sw.comandero.js** — service worker
+  Cache de assets para funcionamiento offline basico.
+  Push notifications via Web Push API para avisos de platos listos.
+  Max 80 lineas.
+
+**ComanderoNotifications.php** — envio de push al camarero
+  Cuando el cocinero marca un plato como listo en KDS,
+  este engine envia una Web Push notification al service worker
+  del camarero asignado a esa mesa.
+  Usa VAPID keys almacenadas en STORAGE/.vault/. Max 80 lineas.
+
 - [ ] Crear CAPABILITIES/TPV/pos/ComanderoApp.jsx
-- [ ] PWA instalable en movil del camarero (sin App Store)
-- [ ] Notificacion push cuando plato listo en cocina
+- [ ] Crear dashboard/comandero.html: punto de entrada de la PWA
+- [ ] Crear manifest.comandero.json
+- [ ] Crear js/sw.comandero.js: service worker con push
+- [ ] Crear CAPABILITIES/TPV/ComanderoNotifications.php
+- [ ] Flujo completo: camarero toma comanda → cocina la ve → cocinero marca listo → camarero recibe push
 
-#### 4.3 KDS — Pantalla de cocina
+---
 
-**KitchenDisplay.jsx**
-  Pantalla de cocina: lista de items en orden de llegada.
-  Columnas por ronda o por mesa.
-  Boton "Listo" por item: dispara notificacion al camarero.
-  Max 150 lineas.
+#### 4.3 KitchenDisplay — pantalla de cocina KDS
+
+Pantalla dedicada para cocina. No es una app de camarero, es una vista
+de solo lectura para el cocinero, optimizada para pantalla grande en cocina.
+
+**KitchenDisplay.jsx** — componente de pantalla de cocina
+  Columnas: una por mesa con pedidos activos.
+  Cada item muestra: nombre, cantidad, nota, tiempo desde que llego.
+  Color por antiguedad: neutral → amarillo → rojo (configurable en minutos).
+  Boton "Listo" por item. Al pulsar: el item desaparece de cocina,
+  su estado_cocina pasa a 'listo', y ComanderoNotifications envia push.
+  Sin login de usuario: la pantalla de cocina es accesible con PIN simple.
+  Autorecarga cada 5 segundos (mismo patron que TPVPos polling).
+  Max 200 lineas.
+
+**KdsConfig.jsx** — configuracion del KDS
+  Tiempo de alerta amarillo (default: 10 minutos).
+  Tiempo de alerta rojo (default: 20 minutos).
+  PIN de acceso a cocina. Max 60 lineas.
+
+**KDSEngine.php** — backend del KDS
+  get_kitchen_orders: devuelve items con estado 'en_cocina' o 'pendiente'.
+  mark_item_ready: actualiza estado_cocina a 'listo', dispara notificacion.
+  Max 80 lineas.
 
 - [ ] Crear CAPABILITIES/TPV/pos/KitchenDisplay.jsx
-- [ ] Flujo: QR/TPV → cocina (KDS) → camarero (notificacion) → servido
+- [ ] Crear dashboard/cocina.html: punto de entrada del KDS
+- [ ] Crear CAPABILITIES/TPV/pos/KdsConfig.jsx
+- [ ] Crear CAPABILITIES/TPV/KDSEngine.php
+- [ ] Flujo completo: QR/TPV envia pedido → KDS lo muestra → cocinero marca listo → camarero recibe notificacion → item marcado como servido
 
-#### 4.4 Multi-local
+---
 
-- [ ] Un usuario admin con varios locales
-- [ ] Selector de local al iniciar sesion
-- [ ] Estadisticas comparativas entre locales en TPVAdmin
+#### 4.4 Multi-local — gestion centralizada
 
-#### 4.5 Analitica de negocio
+Permite a un hostelero con varios locales gestionarlos desde una cuenta.
 
-TPVAdmin ya tiene analitica basica. Ampliar con:
+**LocalSwitcher.jsx** — selector de local en TPVPos
+  Si el usuario tiene mas de un local asignado, muestra un selector
+  en la cabecera del TPV. Cambio de local sin cerrar sesion.
+  Al cambiar: recarga zonas, carta, pedidos del local seleccionado.
+  Max 80 lineas.
 
-- [ ] Ticket medio diario, semanal, mensual
-- [ ] Productos mas y menos vendidos con margen estimado
-- [ ] Franjas horarias de mayor ocupacion
-- [ ] Rotacion de mesas (tiempo medio ocupacion)
-- [ ] Informe exportable en CSV
+**MultiLocalDashboard.jsx** — panel comparativo
+  Tabla de todos los locales del usuario con KPIs en tiempo real:
+  mesas ocupadas, total dia, ticket medio, incidencias activas.
+  Max 150 lineas.
 
-**Criterio de salida:** 50 locales usando TPV completo.
+**CORE/auth/UserModel.php — ampliar**
+  Añadir campo locales_asignados[] al modelo de usuario existente.
+  Un usuario puede tener acceso a uno o varios locales.
+  Un superadmin tiene acceso a todos.
+
+- [ ] Crear CAPABILITIES/CARTA/admin/LocalSwitcher.jsx
+- [ ] Crear CAPABILITIES/TPV/admin/MultiLocalDashboard.jsx
+- [ ] Ampliar UserModel.php: campo locales_asignados[]
+- [ ] Integracion LocalContext en todos los engines afectados (ver 4.0)
+
+---
+
+#### 4.5 Analitica expandida
+
+TPVAdmin.jsx tiene informe de caja y analitica basica de 30 dias.
+Esta fase añade metricas especificas de negocio hostelero.
+
+**AnalyticsEngine.php** — calculo de metricas
+  ticket_medio(local_id, rango): promedio de sesiones cobradas en el periodo.
+  rotacion_mesas(local_id, rango): tiempo medio de ocupacion de mesa.
+  productos_ranking(local_id, rango): productos por unidades y por importe.
+  franjas_ocupacion(local_id): distribucion de aperturas por hora del dia.
+  Max 200 lineas.
+
+**AnalyticsPanel.jsx** — panel de analitica en TPVAdmin
+  Pestana Analitica con selector de rango (dia/semana/mes/custom).
+  Tarjetas: ticket medio, mesas rotadas, producto top, franja pico.
+  Tabla de productos con unidades vendidas y % del total.
+  Sin graficas de libreria externa: tablas y valores numericos simples.
+  Max 200 lineas.
+
+**ExportEngine.php** — exportacion de datos
+  Genera CSV de ventas, productos y pagos para el rango seleccionado.
+  El hostelero puede importarlo en Excel sin formateo especial.
+  Max 80 lineas.
+
+- [ ] Crear CAPABILITIES/TPV/AnalyticsEngine.php
+- [ ] Crear CAPABILITIES/TPV/admin/AnalyticsPanel.jsx
+- [ ] Crear CAPABILITIES/TPV/ExportEngine.php
+- [ ] Integracion en TPVAdmin.jsx: pestana Analitica
+- [ ] Informe exportable en CSV con un boton
+
+---
+
+**Criterio de salida Fase 4:**
+  50 locales activos usando TPV completo.
+  Al menos 5 locales usando KDS en cocina.
+  Al menos 3 locales con multi-local configurado.
+  El comandero PWA instalado en al menos 10 moviles de camareros reales.
+
+**Commits por subfase:**
+  feat: LocalContext y arquitectura multi-tenant STORAGE
+  feat: BarraView vista rapida sin mesas
+  feat: ComanderoApp PWA con push notifications
+  feat: KitchenDisplay KDS con alertas y notificaciones
+  feat: MultiLocal selector y dashboard comparativo
+  feat: AnalyticsEngine panel y exportacion CSV
 
 ---
 
