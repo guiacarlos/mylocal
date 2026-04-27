@@ -1148,53 +1148,329 @@ Esta fase añade metricas especificas de negocio hostelero.
 
 ### FASE 5 — Agentes IA de decision
 
-**Estado: Pendiente**
+**Estado: Pendiente — inicia tras criterio de salida Nivel 3 (Fase 4)**
 **No se vende como IA. Se vende como resultado en euros y horas.**
-**Commit al terminar:** feat: agentes-ia decision-negocio
+**Commits por subfase** (ver mensajes al final de la fase).
 
-CAPABILITIES/AGENTE_RESTAURANTE/ ya existe como base.
-CAPABILITIES/GEMINI/ ya existe como conector.
+**Prerequisitos de Fase 5:**
+- Fase 4 completa: LocalContext, AnalyticsEngine, datos historicos acumulados
+- Sin datos reales de minimo 30 dias operativos los agentes no tienen base
+- FiscalConfigModel con datos del local activo (sin hardcodear nombre/ciudad)
+
+**ROTO a corregir antes de construir cualquier agente:**
+
+GeminiEngine.php COMPLETAMENTE ROTO (detectado en analisis Fase 4):
+```php
+// Estas 4 lineas son fatales — los archivos no existen en mylocal:
+require_once '.../acide/core/handlers/ai/AIOrchestrator.php';
+require_once '.../acide/core/handlers/ai/PromptSanitizer.php';
+require_once '.../acide/core/handlers/ai/ResponseProcessor.php';
+require_once '.../acide/core/handlers/ai/ConversationManager.php';
+```
+Fix: reescribir GeminiEngine.php sin dependencias ACIDE. Solo curl a
+la API de Gemini con la API key del local activa en STORAGE.
+Maximo 80 lineas. Sin hardcodear modelo — leer de configuracion.
+
+Agente_restauranteEngine.php PARCIALMENTE ROTO:
+- Linea 82: lee crud->list('store/products') — STORE eliminado
+  Fix: leer desde coleccion 'carta_productos'
+- Linea 164: fallback a 'academy_settings/current' — ACADEMY eliminado
+  Fix: leer configuracion del agente desde 'config/agente_settings'
+- Lineas 224, 392, 520: branding hardcodeado "Socola" y "Murcia"
+  Fix: leer nombre_local y ciudad desde LocalModel del local activo
+
+**Regla de datos reales:** ningun agente puede devolver sugerencias
+si el local tiene menos de 100 pedidos cerrados en STORAGE.
+Umbral configurable por local, no hardcodeado.
+
+---
+
+#### 5.0 Reparacion de la capa IA
+
+- [ ] GeminiEngine.php: reescribir sin dependencias ACIDE
+      Leer API key desde STORAGE/config/gemini_settings.json
+      Leer modelo desde configuracion (default: gemini-1.5-flash)
+      Metodo unico: query($prompt, $context = []) devuelve string
+      Sin historial en GeminiEngine — el historial lo gestiona el agente
+- [ ] Agente_restauranteEngine.php: corregir ruta de productos
+      Cambiar crud->list('store/products') por crud->list('carta_productos')
+- [ ] Agente_restauranteEngine.php: corregir fallback configuracion
+      Cambiar 'academy_settings/current' por 'config/agente_settings'
+- [ ] Agente_restauranteEngine.php: eliminar branding hardcodeado
+      Todas las referencias a "Socola", "Murcia" y nombre fijo
+      sustituidas por $localModel->getNombre() y $localModel->getCiudad()
+- [ ] Test de integracion: GeminiEngine responde sin errores fatales
+
+---
 
 #### 5.1 Agente upselling inteligente
 
 Evoluciona las reglas simples de Fase 2 con aprendizaje real del historial.
+Datos de entrada: historial de pedidos cerrados del local en STORAGE.
+Sin datos suficientes (< 100 pedidos) retorna array vacio, no sugerencia generica.
 
-- [ ] Analiza combinaciones de productos con mayor ticket en el local
-- [ ] Sugerencias basadas en patrones del propio local (no genericas)
-- [ ] Metrica: incremento de ticket medio en % medible
+**Archivos:**
+- CAPABILITIES/AGENTE_RESTAURANTE/UpsellLearner.php
+  Lee pedidos cerrados desde STORAGE/locales/{slug}/orders/
+  Calcula frecuencia de combinacion por pares de productos
+  Almacena modelo aprendido en STORAGE/locales/{slug}/agente/upsell_model.json
+  Maximo 150 lineas.
+- CAPABILITIES/AGENTE_RESTAURANTE/UpsellAdvisor.php
+  Consulta UpsellLearner para sugerencias dado un carrito actual
+  Si confianza < 0.6 no sugiere nada (no inventar)
+  Maximo 80 lineas.
+
+**Integracion:**
+  CartaPublicaApi.php llama UpsellAdvisor al anadir producto
+  TPVPos.jsx muestra sugerencia inline bajo el carrito si existe
+
+- [ ] UpsellLearner.php: calcular pares frecuentes desde historial real
+- [ ] UpsellAdvisor.php: sugerencia con umbral de confianza configurable
+- [ ] Integracion en CartaPublicaApi y TPVPos
+- [ ] Metrica visible en AnalyticsPanel: incremento ticket medio en %
+
+---
 
 #### 5.2 Agente ingenieria de menu
 
-- [ ] Identifica que platos generan mas margen bruto
-- [ ] Sugiere reordenacion de carta para maximizar venta
-- [ ] Detecta platos con bajo pedido y alto coste de preparacion
+Analiza la carta para maximizar margen. Datos de entrada: productos con
+precio, coste (si el hostelero lo ha introducido) y frecuencia de pedido.
+Sin coste introducido el agente trabaja solo con frecuencia y precio.
+
+**Archivos:**
+- CAPABILITIES/AGENTE_RESTAURANTE/MenuEngineer.php
+  Lee carta desde CartaProductoModel y pedidos desde historial
+  Clasifica cada plato: estrella (alta demanda, alto margen),
+  perro (baja demanda, bajo margen), vaca (baja demanda, alto margen),
+  interrogante (alta demanda, bajo margen)
+  Sugiere 3 acciones concretas (subir precio, eliminar, reposicionar)
+  Maximo 180 lineas.
+- CAPABILITIES/AGENTE_RESTAURANTE/MenuEngineerApi.php
+  Accion: analyze_menu llama MenuEngineer y devuelve informe
+  Sin llamada a Gemini para esta analisis — es matematica pura
+  Maximo 60 lineas.
+
+**Integracion:**
+  Nueva pestana "Analisis" en CartaAdmin.jsx
+  Muestra tabla de clasificacion BCG por plato con acciones sugeridas
+
+- [ ] MenuEngineer.php: clasificacion BCG con datos reales de la carta
+- [ ] MenuEngineerApi.php: accion expose
+- [ ] Panel "Analisis de carta" en CartaAdmin.jsx
+
+---
 
 #### 5.3 Agente alertas operativas
 
-- [ ] Mesa sin atender mas de X minutos (configurable)
-- [ ] Pedido en cocina sin confirmar mas de X minutos
-- [ ] Patron de baja demanda detectado en franja horaria
+Detecta situaciones anormales en tiempo real durante el servicio.
+Datos de entrada: estado de mesas desde STORAGE en tiempo real.
 
-#### 5.4 Interfaz conversacional
+**Archivos:**
+- CAPABILITIES/AGENTE_RESTAURANTE/AlertEngine.php
+  Comprueba mesas activas contra umbrales configurados por local
+  Alertas soportadas:
+    mesa_sin_atencion: mesa con pedido activo sin movimiento > N minutos
+    pedido_en_cocina_bloqueado: pedido enviado a cocina sin confirmar > N min
+    franja_baja_demanda: demanda actual < media historica de esa franja - 30%
+  Umbrales en STORAGE/locales/{slug}/config/alert_settings.json
+  Sin hardcodear tiempos — siempre desde configuracion
+  Maximo 150 lineas.
+- CAPABILITIES/AGENTE_RESTAURANTE/AlertApi.php
+  Accion: check_alerts devuelve lista de alertas activas con severidad
+  Maximo 60 lineas.
 
-- [ ] Consultas en lenguaje natural desde el panel del hostelero
-- [ ] Ejemplos: "cuanto vendimos el sabado", "que plato vendo menos"
-- [ ] Respuesta en texto plano, sin graficas innecesarias
+**Integracion:**
+  TPVPos.jsx hace polling cada 60s a check_alerts
+  Alerta visible como badge en la mesa afectada en la vista de mesas
 
-**Criterio de salida:** 3 metricas de negocio mejorables demostradas con datos reales.
+- [ ] AlertEngine.php: deteccion de los 3 tipos de alerta con datos reales
+- [ ] AlertApi.php: accion expose
+- [ ] Badge de alerta en vista de mesas de TPVPos
+
+---
+
+#### 5.4 Interfaz conversacional con el hostelero
+
+El hostelero pregunta en texto libre. El agente responde con datos del
+propio local. Sin inventar, sin datos genericos, sin branding hardcodeado.
+
+**Archivos:**
+- CAPABILITIES/AGENTE_RESTAURANTE/ConversationAgent.php
+  Recibe pregunta en texto libre
+  Construye contexto: datos reales del local (ventas, carta, mesas)
+  Llama GeminiEngine.query() con el contexto y la pregunta
+  Guarda historial en STORAGE/locales/{slug}/agente/conversation_log.json
+  Maximo 200 lineas.
+- CAPABILITIES/AGENTE_RESTAURANTE/ConversationApi.php
+  Accion: chat_hostelero llama ConversationAgent
+  Accion: get_conversation_history devuelve ultimos N turnos
+  Maximo 80 lineas.
+
+**Integracion:**
+  Panel lateral "Asistente" en TPVAdmin.jsx
+  Input texto + historial de conversacion
+  Boton "Limpiar historial"
+
+Ejemplos de preguntas soportadas (con datos reales, no inventados):
+  "cuanto vendimos el sabado pasado" — lee historial de pedidos
+  "que plato vendo menos este mes" — cruza carta con historial
+  "cuantas mesas tuve ocupadas ayer a las 14:00" — lee log de mesas
+  "que me sugiere hacer con el menu" — llama MenuEngineer
+
+- [ ] ConversationAgent.php: contexto real + llamada Gemini
+- [ ] ConversationApi.php: acciones expose
+- [ ] Panel "Asistente" en TPVAdmin con historial
+
+**Criterio de salida Fase 5:**
+  3 metricas de negocio demostrablemente mejoradas con datos de clientes piloto reales.
+  Ninguna sugerencia del agente es inventada o generica.
+  GeminiEngine.php sin errores fatales en produccion.
+  Commits por subfase:
+    fix: gemini-engine sin dependencias acide
+    fix: agente-restaurante productos-ruta y branding-real
+    feat: upsell-learner historial-real confianza-umbral
+    feat: menu-engineer analisis-bcg carta
+    feat: alert-engine mesas-tiempo-real
+    feat: conversacion-hostelero contexto-local gemini
 
 ---
 
 ### FASE 6 — Escala y canal
 
-**Estado: Pendiente**
-**Commit al terminar:** feat: escala canal-distribucion
+**Estado: Pendiente — inicia tras criterio de salida Fase 5**
+**Prerequisito:** Minimo 20 locales activos en produccion con datos reales.
 
-- [ ] API publica documentada para integraciones de terceros
-- [ ] Integracion con Glovo, Uber Eats y Just Eat (agregador de pedidos)
-- [ ] Programa de canal: acuerdo con 1 distribuidora de bebidas o asociacion hostelera
-- [ ] Portal de onboarding para partners
-- [ ] SLA de soporte definido y documentado
+---
+
+#### 6.0 API publica para integraciones
+
+El hostelero o su proveedor puede integrarse sin modificar mylocal.
+Autenticacion por API key generada por local, no por usuario.
+Sin hardcodear URLs de terceros — cada integracion configurable por local.
+
+**Archivos:**
+- CAPABILITIES/API/ApiKeyManager.php
+  Genera, revoca y valida API keys por local
+  Almacena en STORAGE/locales/{slug}/config/api_keys.json
+  Maximo 100 lineas.
+- CAPABILITIES/API/PublicApi.php
+  Endpoint publico: /api/v1/{slug}/{accion}
+  Acciones expuestas: get_carta, get_table_status, create_order, get_order_status
+  Requiere API key valida del local en cabecera X-Api-Key
+  Rate limiting: 100 req/min por key, configurable
+  Sin exponer datos de otros locales
+  Maximo 200 lineas.
+- CAPABILITIES/API/ApiLog.php
+  Registro de llamadas en STORAGE/locales/{slug}/api_log/
+  Maximo 80 lineas.
+
+- [ ] ApiKeyManager.php: generacion y validacion de keys por local
+- [ ] PublicApi.php: endpoint /api/v1/ con 4 acciones y rate limiting
+- [ ] ApiLog.php: registro de uso por key
+- [ ] Documentacion API en formato OpenAPI 3.0 (api-docs.html estatico)
+
+---
+
+#### 6.1 Agregador de pedidos de delivery
+
+Glovo, Uber Eats y Just Eat no tienen API publica estandarizada.
+La integracion se hace via webhook que ellos llaman cuando llega un pedido.
+Sin hardcodear nombres de plataformas — cada plataforma es un driver.
+
+**Archivos:**
+- CAPABILITIES/DELIVERY/DeliveryWebhook.php
+  Endpoint: /delivery/webhook/{plataforma}/{slug}
+  Valida firma HMAC del webhook (cada plataforma tiene su esquema)
+  Normaliza el pedido al formato interno de mylocal
+  Inyecta el pedido como pedido externo via QREngine.process_external_order
+  Maximo 150 lineas.
+- CAPABILITIES/DELIVERY/drivers/GlovoDriver.php
+  Parseo del payload de Glovo + validacion de firma
+  Maximo 80 lineas.
+- CAPABILITIES/DELIVERY/drivers/UberEatsDriver.php
+  Parseo del payload de Uber Eats + validacion de firma
+  Maximo 80 lineas.
+- CAPABILITIES/DELIVERY/drivers/JustEatDriver.php
+  Parseo del payload de Just Eat + validacion de firma
+  Maximo 80 lineas.
+- CAPABILITIES/DELIVERY/DeliveryAdmin.jsx
+  Panel para configurar cada plataforma por local:
+    webhook URL a dar a la plataforma (generada automaticamente)
+    secret HMAC del local en esa plataforma
+    toggle activo/inactivo por plataforma
+  Maximo 200 lineas.
+
+**Integracion:**
+  KitchenDisplay muestra pedidos delivery con origen marcado
+  AnalyticsEngine agrega ventas delivery vs presencial por local
+
+- [ ] DeliveryWebhook.php: recepcion y normalizacion de pedidos
+- [ ] GlovoDriver.php: parseo payload Glovo
+- [ ] UberEatsDriver.php: parseo payload Uber Eats
+- [ ] JustEatDriver.php: parseo payload Just Eat
+- [ ] DeliveryAdmin.jsx: configuracion por local sin hardcodear secrets
+- [ ] KDS distingue pedidos delivery vs presencial visualmente
+
+---
+
+#### 6.2 Programa de canal
+
+El canal no es codigo, es negocio. Pero el sistema debe soportarlo.
+
+**Archivos:**
+- CAPABILITIES/CANAL/PartnerModel.php
+  id, nombre_empresa, contacto, locales_asignados[], comision_%,
+  fecha_acuerdo, activo
+  Almacena en STORAGE/canal/partners/
+  Maximo 80 lineas.
+- CAPABILITIES/CANAL/PartnerAdmin.jsx
+  Panel superadmin para gestionar partners y ver sus locales
+  Maximo 200 lineas.
+- CAPABILITIES/CANAL/OnboardingPortal.jsx
+  Formulario publico de alta de local para partners
+  Rellena datos del local, crea slug, genera credenciales iniciales
+  Sin hardcodear datos de ejemplo — campos vacios con placeholder real
+  Maximo 200 lineas.
+
+**Acciones comerciales (fuera del codigo):**
+  - Acuerdo con 1 distribuidora de bebidas (Mahou, Coca-Cola, o equivalente)
+    Condicion: distribucion a cambio de revenue share en locales captados
+  - Acuerdo con 1 asociacion hostelera (FEHR o autonomica)
+    Condicion: mencion en newsletter + descuento socio
+  - Material: video 90 segundos demostrando carta QR en uso real
+    Sin texto narrado — solo imagen real de uso en un bar
+
+- [ ] PartnerModel.php: modelo datos partner
+- [ ] PartnerAdmin.jsx: gestion superadmin de partners
+- [ ] OnboardingPortal.jsx: alta de local por partner
+- [ ] SLA de soporte: 4h respuesta en horario hostelero (8-24h)
+- [ ] Contrato partner digital: firma via link, sin papel
+
+---
+
+#### 6.3 Infraestructura para escala
+
+- [ ] CDN para imagenes de carta (MEDIA/): configurar subdomain o bucket S3
+      Sin hardcodear endpoint del CDN — configurable en CORE/config.json
+- [ ] Backup automatico de STORAGE via cron: script PHP + rclone
+      Sin hardcodear credenciales — leer de variables de entorno
+- [ ] Health check endpoint: /health.php
+      Devuelve {status: ok, version, timestamp} sin datos sensibles
+- [ ] Monitor de errores PHP: registrar en STORAGE/logs/php_errors/
+      Sin enviar a servicios externos si no esta configurado
+- [ ] Documentacion de despliegue multi-instancia en INSTALL.md
+
+**Criterio de salida Fase 6:**
+  20 locales activos en produccion.
+  API publica con al menos 1 integracion de terceros real.
+  1 partner de canal activo con locales captados via su portal.
+  Delivery funcionando en al menos 1 local piloto.
+  Sin datos hardcodeados en ningun driver ni configuracion.
+  Commits por subfase:
+    feat: api-publica keys-por-local rate-limiting
+    feat: delivery-webhook glovo-ubereats-justeat
+    feat: canal-partners onboarding-portal
+    feat: infraestructura-escala cdn-backup-health
 
 ---
 
@@ -1211,6 +1487,16 @@ Evoluciona las reglas simples de Fase 2 con aprendizaje real del historial.
 9. Sin permanencias en el contrato
 10. AxiDB es la unica fuente de verdad
 11. 5 clientes piloto reales antes de escalar marketing
+12. Sin hardcodeos: ningun archivo puede contener nombres de local, ciudad,
+    URL de API externa, credencial, o dato de negocio especifico del cliente.
+    Todo lo que cambia por local va en STORAGE/locales/{slug}/config/.
+    Todo lo que cambia por instalacion va en CORE/config.json (en .gitignore).
+13. Datos reales: ningun agente IA ni motor de analitica puede devolver
+    resultados si el local no tiene datos reales suficientes en STORAGE.
+    Umbral minimo por funcion: definido en configuracion, nunca hardcodeado.
+    Antes de cada inferencia: verificar conteo de datos disponibles.
+    Si conteo < umbral: devolver {success: false, reason: 'datos_insuficientes'}
+    no devolver datos ficticios ni ejemplos de demostracion como si fueran reales.
 
 ---
 
