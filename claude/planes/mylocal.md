@@ -180,48 +180,308 @@ Referencia de mercado: Last.app factura ~3,5-4M€/año con 1.800 locales.
 **Precio de lanzamiento:** 29€/mes, sin permanencia.
 **Commit al terminar:** `feat: nivel-1 carta digital qr completa`
 
-#### 1.1 AxiDB — esquema de carta
-- [ ] Modelo: local, sala, categoria, producto
-- [ ] Modelo: imagen de producto (url + alt)
-- [ ] Modelo: disponibilidad y precio por franja horaria
-- [ ] API interna de lectura de carta (sin autenticacion de cliente)
-- [ ] Maximo 1 archivo por modelo, maximo 250 lineas
+---
+
+#### Analisis del codigo existente (hallazgos criticos)
+
+Antes de construir hay que entender lo que ya existe y lo que esta roto.
+
+**Lo que ya existe y es util:**
+
+`CAPABILITIES/QR/QREngine.php` — motor PHP completo con:
+  - generate_qr_list: genera URLs QR por zona y mesa desde restaurant_zones
+  - get_table_order: obtiene pedido activo de una mesa (ID real o slug)
+  - process_external_order: recibe pedido del cliente QR y lo inyecta en TPV
+  - update_table_cart: actualiza comanda con soft-delete de items cancelados
+  - clear_table: libera mesa al cobrar
+  - handle_table_request: cliente llama al camarero o pide la cuenta
+  - get_table_requests / acknowledge_request: gestion de solicitudes de mesa
+  - create_revolut_payment / check_revolut_payment: integracion Revolut (ROTA)
+
+`CAPABILITIES/PRODUCTS/admin/ProductsAdmin.jsx` — panel React con CRUD completo de
+  productos, inventario e historial. Tiene campos de e-commerce (SKU, stock)
+  que no son relevantes para carta de restaurante.
+
+`CAPABILITIES/PRODUCTS/admin/components/ProductForm.jsx` — formulario de producto
+  con IVA espanol correcto (21%, 10%, 4%, 0%). Util, pero mezcla campos
+  de tienda (SKU, stock inicial) con campos de carta.
+
+`CAPABILITIES/QR/admin/QRAdmin.jsx` — panel React que lista QRs por mesa
+  y permite imprimir. Genera URLs pero no genera imagenes QR reales.
+
+`js/socola-carta.js` — frontend JavaScript de la carta publica: carga productos,
+  navegacion por categorias, carrito, pedidos desde mesa, config de pagos.
+  Funcional y bien estructurado.
+
+`carta.html` y `carta-tpv.html` — paginas estaticas de la carta publica y TPV.
+
+**Dependencias rotas que hay que corregir antes de cualquier otra cosa:**
+
+ROTO 1 — QREngine.php lineas 699-706 y 728:
+  Referencias a CAPABILITIES/STORE/settings/RevolutGateway.php.
+  STORE fue eliminado. Esto causa error fatal al intentar cobrar.
+  Solucion: extraer pago a modulo propio PaymentEngine.php o desactivar
+  provisionalmente con retorno de error controlado hasta Fase 2.
+
+ROTO 2 — QREngine.php linea 341-347:
+  generate_qr_list depende de $this->services['restaurant_organizer'].
+  RESTAURANT_ORGANIZER fue eliminado.
+  Solucion: leer restaurant_zones directamente desde STORAGE sin depender
+  del servicio eliminado. El fallback ya existe en el propio codigo (lineas 57-61).
+
+ROTO 3 — ProductsAdmin.jsx, QRAdmin.jsx y todos los JSX del dashboard:
+  Importan de @/acide/acideService (el sistema ACIDE eliminado).
+  Solucion: crear js/mylocal-service.js propio que reemplaza acideService.
+  Mismo contrato de API, distinto endpoint apuntando a gateway.php.
+
+ROTO 4 — socola-carta.js linea 9:
+  var EP = '/acide/index.php' — endpoint hardcodeado al sistema ACIDE.
+  Solucion: cambiar a /gateway.php o a una constante configurable.
+
+ROTO 5 — gateway.php:
+  Referencia a PROJECTS/ y a active_project.json del sistema ACIDE.
+  Solucion: simplificar gateway.php para mylocal sin proyectos multiples.
+
+ROTO 6 — ProductForm.jsx:
+  Campos SKU, stock inicial e historial de inventario son de e-commerce.
+  Para carta de restaurante necesitamos: alergenos, disponibilidad, categoria.
+  Solucion: crear CartaProductForm.jsx especifico para hosteleria.
+
+---
+
+#### 1.0 Correcciones previas (bloqueantes, deben ir primero)
+
+Estos archivos estan rotos y bloquean todo lo demas. Se corrigen antes de
+construir nada nuevo.
+
+- [ ] gateway.php — eliminar logica ACIDE/PROJECTS, simplificar para mylocal
+      Entrada: REQUEST_URI. Salida: routear a CORE o CAPABILITIES segun accion.
+      Sin referencias a active_project, sin tunel ACIDE.
+      Archivo resultante: maximo 120 lineas.
+
+- [ ] QREngine.php — desacoplar de restaurant_organizer y de RevolutGateway
+      generate_qr_list: leer restaurant_zones desde STORAGE directamente
+      (el fallback ya existe, solo hay que hacerlo el camino principal).
+      create_revolut_payment y check_revolut_payment: retornar error controlado
+      con mensaje "Modulo de pago no disponible en este plan" hasta Fase 2.
+      No borrar los metodos, solo protegerlos con require_once condicional.
+
+- [ ] Crear js/mylocal-service.js — reemplaza acideService para los JSX
+      Mismo contrato: mylocal.call(action, data) devuelve Promise con {success, data, error}.
+      Endpoint: /gateway.php en lugar de /acide/index.php.
+      Maximo 60 lineas.
+
+- [ ] socola-carta.js linea 9 — cambiar EP a /gateway.php
+
+---
+
+#### 1.1 AxiDB — modelos de carta para hosteleria
+
+Los modelos actuales son genericos (e-commerce). Hay que definir los
+modelos especificos de carta de restaurante en AxiDB.
+
+Cada modelo es un archivo PHP independiente. Maximo 250 lineas por archivo.
+
+**Modelo: Local**
+  Campos: id, slug (unico, URL-safe), nombre, descripcion_corta,
+  logo_url, idioma_defecto, idiomas_activos[], timezone, activo.
+  Archivo: CAPABILITIES/CARTA/models/LocalModel.php
+
+**Modelo: Categoria de carta**
+  Campos: id, local_id, nombre, nombre_i18n{es,en,fr,de},
+  icono_texto (maximo 2 chars), orden, disponible, created_at.
+  Sin emojis en datos, solo texto plano.
+  Archivo: CAPABILITIES/CARTA/models/CategoriaModel.php
+
+**Modelo: Producto de carta**
+  Campos: id, local_id, categoria_id, nombre, nombre_i18n{es,en,fr,de},
+  descripcion, descripcion_i18n{es,en,fr,de}, precio, precio_por_franja[],
+  imagen_url, alergenos[] (lista de IDs del catalogo oficial EU),
+  iva_tipo (reducido_10/superreducido_4/general_21/exento),
+  disponible, orden, created_at, updated_at.
+  Archivo: CAPABILITIES/CARTA/models/ProductoCartaModel.php
+
+**Modelo: Mesa**
+  Campos: id, local_id, zona_nombre, numero, capacidad, qr_url, activa.
+  Archivo: CAPABILITIES/CARTA/models/MesaModel.php
+
+**API publica de carta (sin autenticacion)**
+  GET /carta/{slug-local} — devuelve carta completa del local
+  GET /carta/{slug-local}/{zona}-{numero} — carta con contexto de mesa
+  Archivo: CAPABILITIES/CARTA/CartaPublicaApi.php
+
+- [ ] Crear CAPABILITIES/CARTA/ como nuevo modulo de carta hostelera
+- [ ] Crear LocalModel.php — modelo de local
+- [ ] Crear CategoriaModel.php — modelo de categoria
+- [ ] Crear ProductoCartaModel.php — modelo de producto de carta
+- [ ] Crear MesaModel.php — modelo de mesa
+- [ ] Crear CartaPublicaApi.php — endpoint publico sin autenticacion
+- [ ] Crear CartaAdminApi.php — endpoint autenticado para gestion
+- [ ] Verificar que cada archivo esta por debajo de 250 lineas
+
+---
 
 #### 1.2 Gestion de carta (panel hostelero)
-- [ ] Autenticacion de hostelero (email + contrasena)
-- [ ] CRUD de categorias
-- [ ] CRUD de productos (nombre, descripcion, precio, foto, disponible)
-- [ ] Reordenacion de categorias y productos
-- [ ] Actualizacion en tiempo real (sin recargar pagina del cliente)
+
+Usar ProductsAdmin.jsx como base pero crear version hostelera especifica.
+No modificar ProductsAdmin.jsx original (mantener compatibilidad).
+Crear componentes nuevos en CAPABILITIES/CARTA/admin/.
+
+**CartaAdmin.jsx** — componente raiz del panel de carta
+  Pestanas: Categorias | Productos | Mesas | Vista previa
+  Maximo 200 lineas.
+
+**CategoriaForm.jsx** — formulario de categoria
+  Campos: nombre (ES requerido, EN/FR/DE opcionales), icono_texto, orden, disponible.
+  Sin MediaPicker (las categorias no tienen imagen, solo texto).
+  Maximo 80 lineas.
+
+**ProductoCartaForm.jsx** — formulario de producto de carta
+  Campos: nombre (multidioma), descripcion (multidioma), precio,
+  categoria (selector), imagen (MediaPicker existente), alergenos
+  (checkboxes con los 14 alergenos obligatorios EU), iva_tipo,
+  disponible, precio_desayuno / precio_almuerzo / precio_cena (opcionales).
+  No hay SKU, no hay stock, no hay historial de inventario.
+  Maximo 150 lineas.
+
+**AlergensSelector.jsx** — selector de los 14 alergenos EU
+  Gluten, crustaceos, huevos, pescado, cacahuetes, soja, lacteos,
+  frutos_cascara, apio, mostaza, sesamo, sulfitos, altramuces, moluscos.
+  Checkboxes con texto, sin iconos. Maximo 60 lineas.
+
+**MesasAdmin.jsx** — gestion de mesas y zonas
+  Tabla: zona, numero, capacidad, estado, QR (boton ver/descargar).
+  Formulario: crear/editar zona y mesa. Maximo 150 lineas.
+
+- [ ] Crear CAPABILITIES/CARTA/admin/CartaAdmin.jsx
+- [ ] Crear CAPABILITIES/CARTA/admin/CategoriaForm.jsx
+- [ ] Crear CAPABILITIES/CARTA/admin/ProductoCartaForm.jsx
+- [ ] Crear CAPABILITIES/CARTA/admin/AlergensSelector.jsx
+- [ ] Crear CAPABILITIES/CARTA/admin/MesasAdmin.jsx
 - [ ] Panel sin emojis, texto claro, una accion por pantalla
+- [ ] Autenticacion via CORE/auth (ya existe y funciona)
+
+---
 
 #### 1.3 Carta QR publica (vista del cliente)
-- [ ] URL unica por local: mylocal.app/[slug-local]
-- [ ] Web-app: funciona en movil sin descarga
-- [ ] Diseno limpio: foto, nombre, descripcion, precio, alergenos
-- [ ] Filtro por categoria
-- [ ] Multiidioma: ES, EN, FR, DE (selector visible)
-- [ ] Tiempo de carga: menos de 2 segundos en 4G
+
+La base es carta.html + socola-carta.js. Hay que adaptarlos y completarlos.
+
+**carta.html** — pagina publica de la carta
+  Titulo dinamico desde API (no hardcodeado "Socola").
+  Meta tags con nombre del local y descripcion real.
+  Schema.org: Restaurant + Menu.
+  Sin referencias a ACIDE ni a sinaxiscore en el HTML.
+
+**socola-carta.js** — frontend de la carta
+  Correccion del endpoint (ya en 1.0).
+  Anadir selector de idioma: boton ES/EN/FR/DE, guarda en localStorage.
+  Las traducciones vienen del API (campos _i18n del modelo).
+  Filtro por categoria con scroll suave.
+  Vista de producto con alergenos (iconos de texto, no emojis).
+  Tiempo de carga objetivo: menos de 2 segundos en 4G.
+  Maximo 250 lineas — si se supera, dividir en modulos.
+
+**Multiidioma**
+  El cliente selecciona idioma una vez, se guarda en localStorage.
+  El API devuelve siempre todos los idiomas.
+  El JS muestra el campo correcto segun idioma activo.
+  Idiomas Nivel 1: ES (requerido), EN, FR, DE (opcionales).
+  Sin libreria i18n externa — logica simple en el propio JS.
+
+- [ ] Adaptar carta.html: titulo dinamico, sin hardcoded "Socola"
+- [ ] Corregir EP en socola-carta.js (ver 1.0)
+- [ ] Añadir selector de idioma en carta publica
+- [ ] Implementar renderizado multiidioma desde campos _i18n
+- [ ] Mostrar alergenos en ficha de producto (texto, sin emojis)
+- [ ] Verificar carga en menos de 2 segundos (medir con DevTools)
 - [ ] Sin registro del cliente para ver la carta
 
+---
+
 #### 1.4 Generacion de QR
-- [ ] QR unico por mesa y por local
-- [ ] Descarga en PDF listo para imprimir
-- [ ] QR de carta general y QR por mesa
+
+QREngine.php ya genera las URLs. Lo que falta es generar las imagenes QR
+y el PDF para imprimir.
+
+**QrImageGenerator.php** — genera imagen QR como PNG/SVG
+  Usar libreria PHP QR Code (sin dependencias externas si es posible).
+  Entrada: URL. Salida: imagen base64 o archivo temporal.
+  Maximo 80 lineas.
+
+**QrPdfExport.php** — genera PDF de etiquetas para imprimir
+  Una pagina por zona con todas sus mesas.
+  Formato: 4x4 por pagina o A5 individual.
+  Nombre de zona y numero de mesa visibles bajo el QR.
+  Maximo 100 lineas.
+
+**QRAdmin.jsx** — ya existe, anadir boton de descarga de imagen
+  Boton "Descargar PNG" por QR individual.
+  Boton "Imprimir todas" que llama a QrPdfExport.
+  No crear nuevo componente, modificar el existente.
+
+- [ ] Crear CAPABILITIES/QR/QrImageGenerator.php
+- [ ] Crear CAPABILITIES/QR/QrPdfExport.php
+- [ ] Adaptar QRAdmin.jsx: boton de descarga PNG por mesa
+- [ ] QR de carta general (sin mesa) y QR por mesa
+- [ ] PDF listo para imprimir con nombre de zona y numero visible
+
+---
 
 #### 1.5 Onboarding
-- [ ] Alta de local en menos de 10 pasos
-- [ ] Importacion de carta desde PDF o CSV (opcional)
-- [ ] Guia de primer uso integrada en el panel
-- [ ] Soporte WhatsApp configurado desde el primer cliente
 
-#### 1.6 Infraestructura
-- [ ] Dominio mylocal.app configurado
-- [ ] SSL activo
-- [ ] Despliegue reproducible (sin dependencia de entorno local)
+El hostelero debe poder dar de alta su local y tener la carta funcionando
+en menos de 30 minutos desde cero.
 
-**Criterio de salida del Nivel 1:** 5 clientes piloto usando la carta QR en produccion.
-**Commit y push al terminar.**
+**Flujo de alta (10 pasos max):**
+  1. Registro: nombre, email, contrasena, nombre del local
+  2. Slug del local (auto-generado, editable)
+  3. Logo del local (opcional, saltar disponible)
+  4. Crear primera categoria
+  5. Crear primer producto
+  6. Vista previa de la carta en movil
+  7. Configurar mesas (zona + numero)
+  8. Descargar QR de primera mesa
+  9. Escanear QR de prueba
+  10. Activar y compartir enlace
+
+**OnboardingWizard.jsx** — wizard de alta
+  Un paso por pantalla. Progreso visible (1 de 10).
+  Sin modal, ocupa toda la pantalla en movil.
+  Maximo 200 lineas — dividir en pasos si se supera.
+
+- [ ] Crear CAPABILITIES/CARTA/admin/OnboardingWizard.jsx
+- [ ] Alta completa en menos de 30 minutos (medir con usuario real)
+- [ ] Cada paso tiene un solo objetivo claro
+- [ ] Soporte WhatsApp enlace directo desde el panel (no boton flotante)
+
+---
+
+#### 1.6 Infraestructura y despliegue
+
+- [ ] Crear INSTALL.md: pasos para desplegar en hosting compartido Apache
+- [ ] Crear config.example.json: plantilla de configuracion sin credenciales
+- [ ] Verificar .htaccess funciona en Apache y LiteSpeed
+- [ ] Verificar SSL (redireccion http → https en .htaccess)
+- [ ] Despliegue reproducible: un zip + subir + configurar = funciona
+- [ ] Dominio mylocal.app (o subdominio de prueba) configurado
+
+---
+
+**Criterio de salida del Nivel 1:**
+  5 clientes piloto con carta QR funcionando en produccion.
+  El hostelero puede actualizar su carta sin ayuda.
+  Tiempo de carga de carta < 2 segundos en 4G.
+  QR descargable e imprimible.
+
+**Commit y push al terminar cada subfase.**
+Mensajes de commit:
+  fix: corregir dependencias rotas gateway y QREngine
+  feat: modelos de carta hostelera en AxiDB
+  feat: panel de gestion de carta hostelero
+  feat: carta publica multiidioma
+  feat: generacion QR con imagen y PDF
+  feat: wizard onboarding alta de local
 
 ---
 
