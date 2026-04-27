@@ -1497,6 +1497,26 @@ El canal no es codigo, es negocio. Pero el sistema debe soportarlo.
     Antes de cada inferencia: verificar conteo de datos disponibles.
     Si conteo < umbral: devolver {success: false, reason: 'datos_insuficientes'}
     no devolver datos ficticios ni ejemplos de demostracion como si fueran reales.
+14. Sistema agnostico de infraestructura: mylocal debe desplegarse sin
+    modificaciones en cualquier servidor Apache/LiteSpeed con PHP 8.1+.
+    Reglas concretas:
+    - Cero rutas absolutas en el codigo. Solo __DIR__, STORAGE_ROOT y
+      constantes definidas en el punto de entrada (gateway.php o index.php).
+    - Cero dependencias de extension PHP no estandar. Solo: json, mbstring,
+      curl, openssl. Si se necesita otra, documentar en INSTALL.md.
+    - Cero llamadas a comandos del sistema operativo (exec, shell_exec, proc_open)
+      sin fallback. Si se usan para QR o PDF, el modulo es opcional y el
+      sistema funciona sin el.
+    - La URL base se detecta siempre en tiempo de ejecucion desde $_SERVER.
+      Nunca hardcodeada en ningun archivo de codigo ni configuracion en repo.
+    - STORAGE puede estar en cualquier ruta fuera del webroot.
+      Su ubicacion se define en CORE/config.json (excluido de git).
+    - El sistema debe poder ejecutarse en contenedor Docker con un
+      Dockerfile de menos de 30 lineas: imagen php:8.1-apache,
+      COPY del repo, VOLUME para STORAGE, EXPOSE 80. Sin build steps.
+    - Ningun modulo tiene acoplamiento a otro modulo de CAPABILITIES.
+      Las dependencias entre modulos se resuelven via interfaces,
+      no via require_once entre CAPABILITIES.
 
 ---
 
