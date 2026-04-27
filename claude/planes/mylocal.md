@@ -186,16 +186,18 @@ Referencia de mercado: Last.app factura ~3,5-4M€/año con 1.800 locales.
 
 #### 1.0 Correcciones previas (bloqueantes)
 
-- [ ] gateway.php: eliminar logica ACIDE/PROJECTS, simplificar para mylocal
-      Sin referencias a active_project. Maximo 120 lineas.
-- [ ] QREngine.php: desacoplar restaurant_organizer en generate_qr_list
-      Leer restaurant_zones desde STORAGE directamente (fallback ya existe).
-- [ ] QREngine.php: proteger create_revolut_payment y check_revolut_payment
-      Retornar error controlado "Modulo de pago no disponible" hasta Fase 2.
-- [ ] Crear js/mylocal-service.js: reemplaza acideService
-      Contrato: mylocal.call(action, data) → Promise {success, data, error}
-      Endpoint: /gateway.php. Maximo 60 lineas.
-- [ ] socola-carta.js linea 9: cambiar EP a /gateway.php
+- [x] gateway.php: eliminar logica ACIDE/PROJECTS, simplificar para mylocal
+      Sin referencias a active_project. Maximo 120 lineas. (76 lineas)
+- [x] QREngine.php: desacoplar restaurant_organizer en generate_qr_list
+      Leer restaurant_zones desde STORAGE directamente.
+- [x] QREngine.php: proteger create_revolut_payment y check_revolut_payment
+      Retornar error controlado "Modulo de pago no disponible hasta Fase 2".
+- [x] Crear js/mylocal-service.js: reemplaza acideService
+      Contrato: mylocalService.call(action, data) → Promise {success, data, error}
+      Endpoint: /gateway.php. (58 lineas)
+- [x] socola-carta.js + admin.js + acide-auth.js + tpv-admin-link.js
+      + tpv-media-injector.js + bundle acideService.CW8Ivamt.js:
+      EP / endpoint cambiado de /acide/index.php a /gateway.php
 
 ---
 

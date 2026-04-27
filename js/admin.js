@@ -7,7 +7,7 @@
     'use strict';
 
     // ---------- Helpers API ----------
-    const API = '/acide/index.php';
+    const API = '/gateway.php';
 
     async function call(action, data) {
         const res = await fetch(API, {

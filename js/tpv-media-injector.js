@@ -10,7 +10,7 @@
 (function () {
     'use strict';
 
-    const API = '/acide/index.php';
+    const API = '/gateway.php';
     const LABEL_PATTERN = /^IMAGEN DEL PRODUCTO$/i;
 
     // Estado del modal activo — se resetea en cada apertura
@@ -108,7 +108,7 @@
         const origFetch = window.fetch.bind(window);
         window.fetch = function (input, init) {
             const url = typeof input === 'string' ? input : (input && input.url) || '';
-            if (url.indexOf('/acide/index.php') !== -1 && init && typeof init.body === 'string') {
+            if (url.indexOf('/gateway.php') !== -1 && init && typeof init.body === 'string') {
                 const patched = patchBody(init.body);
                 if (patched !== init.body) init = Object.assign({}, init, { body: patched });
 
@@ -134,7 +134,7 @@
         };
 
         XMLHttpRequest.prototype.send = function (body) {
-            if (this._tpvmiUrl && this._tpvmiUrl.indexOf('/acide/index.php') !== -1) {
+            if (this._tpvmiUrl && this._tpvmiUrl.indexOf('/gateway.php') !== -1) {
                 const patched = patchBody(body);
                 if (patched !== body) body = patched;
 

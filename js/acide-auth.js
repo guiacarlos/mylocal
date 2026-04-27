@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 🚀 LLAMADA AL TÚNEL ACIDE (Ruta absoluta desde la raíz)
-            const response = await fetch('/acide/index.php', {
+            const response = await fetch('/gateway.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -337,19 +337,17 @@ class QREngine
 
         $baseUrl = rtrim($siteUrl, '/') . '/' . $cartaSlug;
 
-        // Recuperamos zonas y mesas del Restaurant Organizer
-        $organizer = $this->services['restaurant_organizer'] ?? null;
-        if (!$organizer) {
-            return ['success' => false, 'error' => 'Restaurant Organizer no disponible para generar QRs.'];
-        }
+        $zonesPath = STORAGE_ROOT . '/restaurant_zones/current.json';
+        $zones = file_exists($zonesPath)
+            ? (json_decode(file_get_contents($zonesPath), true) ?: [])
+            : [];
 
-        $zonesRes = $organizer->executeAction('get_restaurant_zones', []);
-        if (!$zonesRes['success']) {
-            return $zonesRes;
+        if (empty($zones)) {
+            return ['success' => false, 'error' => 'No hay zonas de mesas configuradas.'];
         }
 
         $qrList = [];
-        foreach ($zonesRes['data'] as $zone) {
+        foreach ($zones as $zone) {
             $zoneSlug = strtolower($this->cleanSlug($zone['name'] ?? 'mesa'));
             foreach ($zone['tables'] as $table) {
                 $tableNum = $table['number'] ?? $table['id'];
@@ -673,94 +671,15 @@ class QREngine
             : ['success' => false, 'error' => 'Petición no encontrada.'];
     }
 
-    /**
-     * 💳 Crea una orden de pago en Revolut
-     */
+    // PaymentEngine se implementa en Fase 2. Hasta entonces estos metodos
+    // devuelven error controlado para no bloquear el arranque del sistema.
     private function createRevolutPayment($data)
     {
-        $amount = $data['amount'] ?? 0;
-        $currency = $data['currency'] ?? 'EUR';
-        $desc = $data['description'] ?? 'Pedido Socolá';
-
-        if ($amount <= 0) {
-            return ['success' => false, 'error' => 'Importe de pago debe ser mayor a 0.'];
-        }
-
-        try {
-            // Cargar configuración de Revolut
-            $crud = $this->services['crud'];
-            $config = $crud->read('store/payment_methods', 'revolut');
-            if (!$config || empty($config['active'])) {
-                return ['success' => false, 'error' => 'El pago con Revolut no está activo en este local.'];
-            }
-
-            // Cargar Gateway
-            $gatewayPath = CAPABILITIES_ROOT . '/STORE/settings/RevolutGateway.php';
-            if (!file_exists($gatewayPath)) {
-                return ['success' => false, 'error' => 'Revolut Gateway no encontrado en el búnker.'];
-            }
-            require_once $gatewayPath;
-
-            $gateway = new \STORE\Settings\RevolutGateway($config['config']);
-            return $gateway->createOrder($amount, $currency, ['description' => $desc]);
-        } catch (\Exception $e) {
-            return ['success' => false, 'error' => $e->getMessage()];
-        }
+        return ['success' => false, 'error' => 'Modulo de pago no disponible. Se implementara en Fase 2.'];
     }
 
-    /**
-     * 🔍 Verifica el estado de un pago en Revolut (Polling)
-     */
     private function checkRevolutPayment($data)
     {
-        $orderId = $data['order_id'] ?? null;
-        if (!$orderId) {
-            return ['success' => false, 'error' => 'Order ID requerido para verificación.'];
-        }
-
-        try {
-            // Cargar configuración de Revolut
-            $crud = $this->services['crud'];
-            $config = $crud->read('store/payment_methods', 'revolut');
-
-            // Cargar Gateway
-            $gatewayPath = CAPABILITIES_ROOT . '/STORE/settings/RevolutGateway.php';
-            require_once $gatewayPath;
-
-            $gateway = new \STORE\Settings\RevolutGateway($config['config']);
-
-            $url = ($config['config']['mode'] === 'live')
-                ? "https://merchant.revolut.com/api/orders/{$orderId}"
-                : "https://sandbox-merchant.revolut.com/api/orders/{$orderId}";
-
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Authorization: Bearer ' . $config['config']['api_key'],
-                'Accept: application/json',
-                'Revolut-Api-Version: 2025-12-04'
-            ]);
-
-            if ($config['config']['mode'] === 'sandbox' || strpos($_SERVER['HTTP_HOST'] ?? 'localhost', 'localhost') !== false) {
-                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-            }
-
-            $response = curl_exec($ch);
-            curl_close($ch);
-            $resData = json_decode($response, true);
-
-            if (isset($resData['state'])) {
-                return [
-                    'success' => true,
-                    'state' => strtoupper($resData['state']),
-                    'order_id' => $orderId
-                ];
-            }
-
-            return ['success' => false, 'error' => 'No se pudo obtener el estado del pago.'];
-        } catch (\Exception $e) {
-            return ['success' => false, 'error' => $e->getMessage()];
-        }
+        return ['success' => false, 'error' => 'Modulo de pago no disponible. Se implementara en Fase 2.'];
     }
 }

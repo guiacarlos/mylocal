@@ -6,7 +6,7 @@
     var products = [];
     var aiHistory = [];
     var chatReady = false;
-    var EP = '/acide/index.php';
+    var EP = '/gateway.php';
 
     // Helper defensivo: parsea JSON verificando primero el content-type.
     // Evita el clásico "Unexpected token '<'" cuando el servidor responde

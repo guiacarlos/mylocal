@@ -5,7 +5,7 @@
 
     async function getRole() {
         try {
-            const res = await fetch('/acide/index.php', {
+            const res = await fetch('/gateway.php', {
                 method: 'POST',
                 credentials: 'include',
                 headers: { 'Content-Type': 'application/json' },
