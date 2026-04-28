@@ -19,6 +19,24 @@ require_once __DIR__ . '/Utils.php';
 class Axi
 {
     private array $services = [];
+    private ?array $currentUser = null;
+
+    /**
+     * Catálogo de operaciones que no requieren autenticación.
+     */
+    private array $publicOps = [
+        'auth.login',
+        'ping',
+        'help',
+        'describe'
+    ];
+
+    /**
+     * Catálogo de acciones legacy que no requieren autenticación.
+     */
+    private array $publicActions = [
+        'health_check'
+    ];
 
     public function __construct(array $config = [])
     {
@@ -36,11 +54,10 @@ class Axi
         $this->services['query']   = new \QueryEngine($this->services['storage']);
         $this->services['meta']    = new Schema\MetaStore(STORAGE_ROOT);
         $this->services['driver']  = new Storage\FsJsonDriver(STORAGE_ROOT);
-        $this->services['vault']   = new Vault\Vault(\dirname(STORAGE_ROOT) . '/vault');
+        // $this->services['vault']   = new Vault\Vault(\dirname(STORAGE_ROOT) . '/vault');
         $this->services['backup']  = new Backup\SnapshotStore(STORAGE_ROOT, \dirname(STORAGE_ROOT) . '/backups');
         $this->services['axi']     = $this;
-        // Agents (Fase 6): se inicializa lazy a traves de getService('agents')
-        // para evitar dependencia circular Manager <-> Axi en el constructor.
+        
         $this->services['agents']  = null;
 
         $this->loadModules();
@@ -48,11 +65,16 @@ class Axi
 
     private function loadModules(): void
     {
-        // Legacy VaultManager queda como servicio aparte ('legacy_vault') para
-        // no chocar con Vault\Vault (Fase 3) que ya esta registrado en 'vault'.
+        // Legacy VaultManager
         if (file_exists(__DIR__ . '/VaultManager.php')) {
             require_once __DIR__ . '/VaultManager.php';
             $this->services['legacy_vault'] = new \VaultManager(DATA_ROOT);
+        }
+
+        // Auth Service (Fase 2)
+        if (file_exists(AXI_ROOT . '/auth/Auth.php')) {
+            require_once AXI_ROOT . '/auth/Auth.php';
+            $this->services['auth'] = new \Auth();
         }
     }
 
@@ -64,19 +86,48 @@ class Axi
         return $this->services[$name] ?? null;
     }
 
+    public function getCurrentUser(): ?array
+    {
+        return $this->currentUser;
+    }
+
     public function execute(array|Op\Operation $request): array
     {
-        // Entrada 1: Operation PHP directa (embebido tipado)
+        // --- ESCUDO DE AUTENTICACIÓN (Middleware Fase 2) ---
+        $isPublic = false;
+
+        if ($request instanceof Op\Operation) {
+            $isPublic = true;
+        } elseif (isset($request['op'])) {
+            $isPublic = in_array((string)$request['op'], $this->publicOps);
+        } elseif (isset($request['action'])) {
+            $isPublic = in_array((string)$request['action'], $this->publicActions);
+        }
+
+        if (!$isPublic) {
+            /** @var \Auth $auth */
+            $auth = $this->getService('auth');
+            if ($auth) {
+                $user = $auth->validateRequest();
+                if (!$user) {
+                    return Result::fail(
+                        "No autorizado: Se requiere una sesión válida para realizar esta operación.",
+                        AxiException::UNAUTHORIZED
+                    )->toArray();
+                }
+                $this->currentUser = $user;
+            }
+        }
+        // ----------------------------------------------------
+
         if ($request instanceof Op\Operation) {
             return $this->runOp($request)->toArray();
         }
 
-        // Entrada 2: array con clave 'op' = Op model (via HTTP o construccion manual)
         if (isset($request['op'])) {
             return $this->dispatchOpByName((string) $request['op'], $request)->toArray();
         }
 
-        // Entrada 3: contrato legacy {action, ...} = retrocompat ACIDE
         return $this->legacyExecute($request);
     }
 
@@ -105,10 +156,6 @@ class Axi
         return $this->runOp($op);
     }
 
-    /**
-     * Catalogo canonico de Ops (Fase 1.3). Fase 1.8 anade validacion de coverage.
-     * Publico para que el CLI, docs builder y Op\System\Help lo consuman.
-     */
     public static function opRegistry(): array
     {
         return [
@@ -137,7 +184,7 @@ class Axi
             'explain'  => Op\System\Explain::class,
             'help'     => Op\System\Help::class,
             'sql'      => Op\System\Sql::class,
-            // Migracion Socola (Fase 5): formaliza el bridge action legacy.
+            // Migracion Socola (Fase 5)
             'legacy.action' => Op\System\LegacyAction::class,
             // Vault (Fase 3)
             'vault.unlock' => Op\Vault\Unlock::class,
@@ -154,7 +201,7 @@ class Axi
             'auth.create_user' => Op\Auth\CreateUser::class,
             'auth.grant_role'  => Op\Auth\GrantRole::class,
             'auth.revoke_role' => Op\Auth\RevokeRole::class,
-            // AI (stubs Fase 1, implementacion Fase 6)
+            // AI (Fase 6)
             'ai.ask'             => Op\Ai\Ask::class,
             'ai.new_agent'       => Op\Ai\NewAgent::class,
             'ai.new_micro_agent' => Op\Ai\NewMicroAgent::class,
@@ -164,8 +211,6 @@ class Axi
             'ai.broadcast'       => Op\Ai\Broadcast::class,
             'ai.attach'          => Op\Ai\Attach::class,
             'ai.audit'           => Op\Ai\Audit::class,
-            // Join (sugar/stub): el Op pertenece al namespace root Axi\ pero se registra
-            // aqui para que el dispatcher lo reconozca. Implementacion real en Fase 2.
             'join'               => \Axi\Join::class,
         ];
     }
