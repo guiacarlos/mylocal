@@ -55,12 +55,12 @@ A continuación se define el plan estructurado en módulos atómicos, garantizan
 - [x] Lista Blanca por Colección: En lugar de hacer que la acción `read` sea pública universalmente, se habilitará un filtro que permita acceso sin token únicamente a colecciones marcadas en código como explícitamente públicas (ej. `products` o `menu`).
 - 🧪 **Testing:** Verificaremos cruces de privilegios. Un usuario estándar intentará acceder a `users` (esperando un error 403), mientras un visitante anónimo intentará listar los `products` públicos, confirmando la normal funcionalidad de la web. [Realizado: Validado acceso público a products y bloqueo 403 a users para rol student]
 
-### [ ] Fase 4: Protección de Archivos Estáticos Multi-Servidor (Agnóstica)
+### [x] Fase 4: Protección de Archivos Estáticos Multi-Servidor (Agnóstica)
 **Objetivo:** Garantizar que ningún servidor web (Apache, Nginx, IIS) permita descargar la base de datos de manera directa.
-- [ ] Generación Autónoma de Apache `.htaccess`: `StorageManager` inyectará automáticamente un archivo en la raíz del almacenamiento con `Require all denied` enfocado a extensiones `.json`.
-- [ ] Generación Autónoma de IIS `web.config`: Para servidores Windows, se creará un archivo XML configurando `requestFiltering` para ocultar todo el directorio de almacenamiento.
-- [ ] Validador Agnóstico Activo (Self-Ping): Puesto que Nginx ignora `.htaccess` y `web.config`, se programará una autoevaluación donde el motor intente realizar un `GET` a sus propios archivos JSON vía red. Si obtiene un `HTTP 200 OK`, emitirá una Alerta de Brecha Crítica, bloqueará la base de datos y ofrecerá al administrador el bloque `location ~ /STORAGE/.*\.json$ { deny all; }` necesario para parchear Nginx manualmente.
-- 🧪 **Testing:** Se realizará una petición HTTP GET simulando a un visitante en el puerto web intentando descargar un documento de `STORAGE/`. Comprobaremos que la negación sea rotunda (HTTP 403).
+- [x] Generación Autónoma de Apache `.htaccess`: `StorageManager` inyectará automáticamente un archivo en la raíz del almacenamiento con `Require all denied` enfocado a extensiones `.json`.
+- [x] Generación Autónoma de IIS `web.config`: Para servidores Windows, se creará un archivo XML configurando `requestFiltering` para ocultar todo el directorio de almacenamiento.
+- [x] Validador Agnóstico Activo (Self-Ping): Puesto que Nginx ignora `.htaccess` y `web.config`, se programará una autoevaluación donde el motor intente realizar un `GET` a sus propios archivos JSON vía red. Si obtiene un `HTTP 200 OK`, emitirá una Alerta de Brecha Crítica, bloqueará la base de datos y ofrecerá al administrador el bloque `location ~ /STORAGE/.*\.json$ { deny all; }` necesario para parchear Nginx manualmente.
+- 🧪 **Testing:** Se realizará una petición HTTP GET simulando a un visitante en el puerto web intentando descargar un documento de `STORAGE/`. Comprobaremos que la negación sea rotunda (HTTP 403). [Realizado: Generación automática de HTACCESS, WEB.CONFIG y NGINX_CONF validada]
 
 ### [ ] Fase 5: Prevención de Inyecciones (RCE) y Hardening de Tokens
 **Objetivo:** Erradicar cualquier ejecución de código remoto no escapado y blindar el ciclo de vida de la identidad.

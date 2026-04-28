@@ -15,7 +15,7 @@ use Exception;
 
 class StorageManager
 {
-    private $masterCollections = ['users', 'roles', 'projects', 'system_logs', 'vault'];
+    private $masterCollections = ['users', 'roles', 'projects', 'system_logs', 'vault', 'system'];
     private $dataRoot;
     private $storageRoot;
 
@@ -26,19 +26,68 @@ class StorageManager
         
         if (!is_dir($this->dataRoot)) mkdir($this->dataRoot, 0777, true);
         if (!is_dir($this->storageRoot)) mkdir($this->storageRoot, 0777, true);
+
+        // Fase 4: Refuerzo de Seguridad Estática
+        $this->enforceStaticProtection();
+    }
+
+    /**
+     * Genera automáticamente archivos de configuración para denegar el acceso HTTP
+     * directo a los archivos JSON en Apache e IIS.
+     */
+    private function enforceStaticProtection()
+    {
+        $roots = array_unique([$this->dataRoot, $this->storageRoot]);
+        foreach ($roots as $root) {
+            $absRoot = realpath($root);
+            if (!$absRoot) continue;
+
+            // 1. Apache (.htaccess)
+            $htaccessPath = $absRoot . '/.htaccess';
+            if (!file_exists($htaccessPath)) {
+                $content = "# AxiDB: Denegar acceso directo a la base de datos\n";
+                $content .= "Require all denied\n";
+                $content .= "<Files ~ \"\.(json|lock|bak)$\">\n    Order allow,deny\n    Deny from all\n</Files>\n";
+                file_put_contents($htaccessPath, $content);
+            }
+
+            // 2. IIS (web.config)
+            $webConfigPath = $absRoot . '/web.config';
+            if (!file_exists($webConfigPath)) {
+                $content = '<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <security>
+            <requestFiltering>
+                <fileExtensions>
+                    <add fileExtension=".json" allowed="false" />
+                </fileExtensions>
+            </requestFiltering>
+        </security>
+    </system.webServer>
+</configuration>';
+                file_put_contents($webConfigPath, $content);
+            }
+
+            // 3. Archivo de aviso para Nginx
+            $nginxPath = $absRoot . '/nginx_protection.conf';
+            if (!file_exists($nginxPath)) {
+                $content = "# AxiDB: Configuración para Nginx\n";
+                $content .= "# Copie esto en su bloque 'server':\n\n";
+                $content .= "location ~ /STORAGE/.*\.json$ {\n    deny all;\n    return 403;\n}\n";
+                file_put_contents($nginxPath, $content);
+            }
+        }
     }
 
     /**
      * Valida que un identificador sea alfanumérico y seguro.
-     * Previene Path Traversal y caracteres maliciosos.
      */
     private function sanitizeIdentifier($identifier)
     {
         if (!is_string($identifier) || empty($identifier)) {
             throw new Exception("Seguridad: Identificador inválido.");
         }
-        // Permitir solo alfanuméricos, guiones, puntos y guiones bajos.
-        // Prohibir explícitamente ".." para evitar saltos de directorio.
         if (preg_match('/[^a-zA-Z0-9_\-\.]/', $identifier) || strpos($identifier, '..') !== false) {
             throw new Exception("Seguridad: Identificador malicioso detectado: $identifier");
         }
@@ -72,14 +121,12 @@ class StorageManager
 
     private function getCollectionPath($collection)
     {
-        // Ya viene sanitizado desde el método público
         $base = in_array($collection, $this->masterCollections) ? $this->dataRoot : $this->storageRoot;
         return $base . '/' . $collection;
     }
 
     private function getVersionsPath($collection, $id)
     {
-        // Ya viene sanitizado desde el método público
         $base = in_array($collection, $this->masterCollections) ? $this->dataRoot : $this->storageRoot;
         return $base . '/.versions/' . $collection . '/' . $id;
     }
