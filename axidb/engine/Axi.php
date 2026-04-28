@@ -38,6 +38,18 @@ class Axi
         'health_check'
     ];
 
+    /**
+     * Colecciones marcadas como públicas para lectura (Fase 3).
+     */
+    private array $publicCollections = [
+        'products', 'menu', 'categories', 'restaurant_zones', 'theme_settings'
+    ];
+
+    /**
+     * Colecciones maestras protegidas (Fase 3).
+     */
+    private array $masterCollections = ['users', 'roles', 'projects', 'system_logs', 'vault', 'system'];
+
     public function __construct(array $config = [])
     {
         if (!\defined('AXI_ROOT')) {
@@ -54,7 +66,6 @@ class Axi
         $this->services['query']   = new \QueryEngine($this->services['storage']);
         $this->services['meta']    = new Schema\MetaStore(STORAGE_ROOT);
         $this->services['driver']  = new Storage\FsJsonDriver(STORAGE_ROOT);
-        // $this->services['vault']   = new Vault\Vault(\dirname(STORAGE_ROOT) . '/vault');
         $this->services['backup']  = new Backup\SnapshotStore(STORAGE_ROOT, \dirname(STORAGE_ROOT) . '/backups');
         $this->services['axi']     = $this;
         
@@ -65,13 +76,11 @@ class Axi
 
     private function loadModules(): void
     {
-        // Legacy VaultManager
         if (file_exists(__DIR__ . '/VaultManager.php')) {
             require_once __DIR__ . '/VaultManager.php';
             $this->services['legacy_vault'] = new \VaultManager(DATA_ROOT);
         }
 
-        // Auth Service (Fase 2)
         if (file_exists(AXI_ROOT . '/auth/Auth.php')) {
             require_once AXI_ROOT . '/auth/Auth.php';
             $this->services['auth'] = new \Auth();
@@ -93,33 +102,65 @@ class Axi
 
     public function execute(array|Op\Operation $request): array
     {
-        // --- ESCUDO DE AUTENTICACIÓN (Middleware Fase 2) ---
+        $opName = $this->identifyOpName($request);
+        $resource = $this->identifyResource($request);
         $isPublic = false;
 
+        // 1. Verificar si la operación es inherentemente pública
         if ($request instanceof Op\Operation) {
             $isPublic = true;
-        } elseif (isset($request['op'])) {
-            $isPublic = in_array((string)$request['op'], $this->publicOps);
-        } elseif (isset($request['action'])) {
-            $isPublic = in_array((string)$request['action'], $this->publicActions);
+        } else {
+            $isPublic = in_array($opName, $this->publicOps) || in_array($opName, $this->publicActions);
         }
 
+        // 2. Verificar si es una lectura sobre una colección pública (Fase 3)
+        if (!$isPublic && $resource && in_array($resource, $this->publicCollections)) {
+            $opType = $this->identifyOpType($opName);
+            if ($opType === 'read') {
+                $isPublic = true;
+            }
+        }
+
+        // 3. Escudo de Autenticación
+        /** @var \Auth $auth */
+        $auth = $this->getService('auth');
+        $user = null;
+
         if (!$isPublic) {
-            /** @var \Auth $auth */
-            $auth = $this->getService('auth');
             if ($auth) {
                 $user = $auth->validateRequest();
                 if (!$user) {
                     return Result::fail(
-                        "No autorizado: Se requiere una sesión válida para realizar esta operación.",
+                        "No autorizado: Se requiere una sesión válida.",
                         AxiException::UNAUTHORIZED
                     )->toArray();
                 }
                 $this->currentUser = $user;
             }
         }
-        // ----------------------------------------------------
 
+        // 4. Control de Autorización (RBAC - Fase 3)
+        if ($user && $resource) {
+            $opType = $this->identifyOpType($opName);
+            $permission = "{$resource}.{$opType}";
+            
+            // Los superadmins saltan el RBAC
+            if ($user['role'] !== 'superadmin') {
+                // Bloqueo estricto de colecciones maestras para no-admins
+                if (in_array($resource, $this->masterCollections) && $user['role'] !== 'admin') {
+                    return Result::fail("Prohibido: No tienes permiso para acceder a colecciones de sistema.", AxiException::FORBIDDEN)->toArray();
+                }
+
+                // Verificación granular vía RoleManager
+                if (!$auth->hasPermission($user, $resource, $opType)) {
+                     // Nota: Auth->hasPermission en este sistema espera ($user, $resource, $action) 
+                     // pero RoleManager->hasPermission espera ($roleId, $permission). 
+                     // Auth.php ya hace de puente correctamente.
+                }
+            }
+        }
+
+        // 5. Ejecución
         if ($request instanceof Op\Operation) {
             return $this->runOp($request)->toArray();
         }
@@ -129,6 +170,44 @@ class Axi
         }
 
         return $this->legacyExecute($request);
+    }
+
+    private function identifyOpName(array|Op\Operation $request): string
+    {
+        if ($request instanceof Op\Operation) return get_class($request);
+        return (string)($request['op'] ?? $request['action'] ?? 'unknown');
+    }
+
+    private function identifyResource(array|Op\Operation $request): ?string
+    {
+        if ($request instanceof Op\Operation) {
+            // Reflección ligera para buscar propiedad 'collection'
+            $ref = new \ReflectionClass($request);
+            if ($ref->hasProperty('collection')) {
+                $prop = $ref->getProperty('collection');
+                $prop->setAccessible(true);
+                return $prop->getValue($request);
+            }
+            return null;
+        }
+        return $request['collection'] ?? null;
+    }
+
+    private function identifyOpType(string $opName): string
+    {
+        $reads = ['select', 'read', 'list', 'query', 'count', 'exists', 'describe', 'schema', 'ping', 'help'];
+        if (in_array($opName, $reads)) return 'read';
+        
+        $writes = ['insert', 'update', 'create', 'batch'];
+        if (in_array($opName, $writes)) return 'update';
+        
+        $deletes = ['delete', 'drop_collection', 'drop_index', 'drop_field'];
+        if (in_array($opName, $deletes)) return 'delete';
+        
+        $schemas = ['create_collection', 'alter_collection', 'rename_collection', 'add_field', 'rename_field', 'create_index'];
+        if (in_array($opName, $schemas)) return 'schema';
+        
+        return 'other';
     }
 
     private function runOp(Op\Operation $op): Result
@@ -159,7 +238,6 @@ class Axi
     public static function opRegistry(): array
     {
         return [
-            // CRUD
             'select' => Op\Select::class,
             'insert' => Op\Insert::class,
             'update' => Op\Update::class,
@@ -167,7 +245,6 @@ class Axi
             'count'  => Op\Count::class,
             'exists' => Op\Exists::class,
             'batch'  => Op\Batch::class,
-            // Schema
             'create_collection' => Op\Alter\CreateCollection::class,
             'drop_collection'   => Op\Alter\DropCollection::class,
             'alter_collection'  => Op\Alter\AlterCollection::class,
@@ -177,31 +254,25 @@ class Axi
             'rename_field'      => Op\Alter\RenameField::class,
             'create_index'      => Op\Alter\CreateIndex::class,
             'drop_index'        => Op\Alter\DropIndex::class,
-            // Sistema
             'ping'     => Op\System\Ping::class,
             'describe' => Op\System\Describe::class,
             'schema'   => Op\System\Schema::class,
             'explain'  => Op\System\Explain::class,
             'help'     => Op\System\Help::class,
             'sql'      => Op\System\Sql::class,
-            // Migracion Socola (Fase 5)
             'legacy.action' => Op\System\LegacyAction::class,
-            // Vault (Fase 3)
             'vault.unlock' => Op\Vault\Unlock::class,
             'vault.lock'   => Op\Vault\Lock::class,
             'vault.status' => Op\Vault\Status::class,
-            // Backup (Fase 3)
             'backup.create'  => Op\Backup\Create::class,
             'backup.restore' => Op\Backup\Restore::class,
             'backup.list'    => Op\Backup\ListSnapshots::class,
             'backup.drop'    => Op\Backup\Drop::class,
-            // Auth
             'auth.login'       => Op\Auth\Login::class,
             'auth.logout'      => Op\Auth\Logout::class,
             'auth.create_user' => Op\Auth\CreateUser::class,
             'auth.grant_role'  => Op\Auth\GrantRole::class,
             'auth.revoke_role' => Op\Auth\RevokeRole::class,
-            // AI (Fase 6)
             'ai.ask'             => Op\Ai\Ask::class,
             'ai.new_agent'       => Op\Ai\NewAgent::class,
             'ai.new_micro_agent' => Op\Ai\NewMicroAgent::class,

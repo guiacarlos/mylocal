@@ -144,9 +144,9 @@ class ACIDE
             'auth_login',
             'auth_resolve_tenant',
             'public_register', // Permitir registro público
-            'read', // Lectura básica (se puede filtrar por colección luego)
-            'list', // Listar colecciones
-            'query', // Consultar con filtros
+            // 'read', // SE PURGA EN FASE 3
+            // 'list', // SE PURGA EN FASE 3
+            // 'query', // SE PURGA EN FASE 3
             'chat', // Chat con IA
             'load_conversation', // Cargar historial
             'save_conversation', // Guardar historial
@@ -155,7 +155,7 @@ class ACIDE
             'revolut_webhook', // Recepción de señales de pago
             'get_payment_settings', // Consultar métodos de pago activos
             'list_products', // Permitir listado público de productos para la carta
-            'upload', // Permitir subida de medios al búnker
+            // 'upload', // SE PURGA EN FASE 3
             'chat_restaurant', // Chat público de la carta
             'process_external_order', // Pedidos desde QR cliente
             'generate_qr_list', // Listado de QRs para imprimir (Dashboard)
@@ -168,8 +168,23 @@ class ACIDE
             'check_revolut_payment' // Verificar estado de pago QR
         ];
 
+        // Colecciones explícitamente públicas (Fase 3)
+        $publicCollections = ['products', 'menu', 'categories', 'restaurant_zones', 'theme_settings'];
+
         $normalizedAction = strtolower($action);
-        if (!in_array($normalizedAction, $publicActions) && php_sapi_name() !== 'cli') {
+        $requiresAuth = !in_array($normalizedAction, $publicActions);
+
+        // Si la acción es de lectura legacy, permitir si la colección es pública
+        if (in_array($normalizedAction, ['read', 'list', 'query'])) {
+            $collection = $request['collection'] ?? '';
+            if (!in_array($collection, $publicCollections)) {
+                $requiresAuth = true;
+            } else {
+                $requiresAuth = false;
+            }
+        }
+
+        if ($requiresAuth && php_sapi_name() !== 'cli') {
             $user = $this->services['auth']->validateRequest();
             if (!$user) {
                 error_log("ACIDE_AUTH_FAIL: Action '$action' rejected (401).");
