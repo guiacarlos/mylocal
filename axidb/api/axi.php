@@ -125,6 +125,7 @@ try {
                 'expires'  => time() + 86400,
                 'path'     => '/',
                 'httponly' => true,
+                'secure'   => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
                 'samesite' => 'Strict',
             ]);
         }

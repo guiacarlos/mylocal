@@ -136,8 +136,8 @@ class FileHandler extends BaseHandler
         $cleanPath = trim(str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $path), DIRECTORY_SEPARATOR);
         $searchDir = realpath($this->basePath . DIRECTORY_SEPARATOR . $cleanPath) ?: $this->basePath;
 
-        //  Búsqueda nativa rápida (Windows)
-        $cmd = "findstr /S /N /I /C:\"" . str_replace('"', '\"', $query) . "\" " . escapeshellarg($searchDir . DIRECTORY_SEPARATOR . "*.*");
+        //  Búsqueda nativa rápida (Windows) - Parcheado contra Inyección (Fase 5)
+        $cmd = "findstr /S /N /I /C:" . escapeshellarg($query) . " " . escapeshellarg($searchDir . DIRECTORY_SEPARATOR . "*.*");
         $output = shell_exec($cmd);
 
         if (!$output) {

@@ -48,7 +48,7 @@ class Axi
     /**
      * Colecciones maestras protegidas (Fase 3).
      */
-    private array $masterCollections = ['users', 'roles', 'projects', 'system_logs', 'vault', 'system'];
+    private array $masterCollections = ['users', 'roles', 'projects', 'system_logs', 'vault', 'system', 'config'];
 
     public function __construct(array $config = [])
     {
@@ -139,23 +139,28 @@ class Axi
             }
         }
 
-        // 4. Control de Autorización (RBAC - Fase 3)
-        if ($user && $resource) {
+        // 4. Control de Autorización (RBAC y Handlers Administrativos - Fase 3 y 5)
+        if ($user) {
             $opType = $this->identifyOpType($opName);
-            $permission = "{$resource}.{$opType}";
             
-            // Los superadmins saltan el RBAC
-            if ($user['role'] !== 'superadmin') {
-                // Bloqueo estricto de colecciones maestras para no-admins
-                if (in_array($resource, $this->masterCollections) && $user['role'] !== 'admin') {
-                    return Result::fail("Prohibido: No tienes permiso para acceder a colecciones de sistema.", AxiException::FORBIDDEN)->toArray();
-                }
+            // Handlers Administrativos (Fase 5): Solo superadmin
+            $adminOps = ['shell', 'run_command', 'execute_command', 'ls', 'cat', 'write', 'rm', 'mkdir', 'patch', 'build_site', 'terminal', 'git.pull', 'git.push', 'git.commit', 'git.status'];
+            if (in_array($opName, $adminOps) && $user['role'] !== 'superadmin') {
+                return Result::fail("Prohibido: Esta operación requiere privilegios de superadmin.", AxiException::FORBIDDEN)->toArray();
+            }
 
-                // Verificación granular vía RoleManager
-                if (!$auth->hasPermission($user, $resource, $opType)) {
-                     // Nota: Auth->hasPermission en este sistema espera ($user, $resource, $action) 
-                     // pero RoleManager->hasPermission espera ($roleId, $permission). 
-                     // Auth.php ya hace de puente correctamente.
+            if ($resource) {
+                // Los superadmins saltan el resto del RBAC
+                if ($user['role'] !== 'superadmin') {
+                    // Bloqueo estricto de colecciones maestras para no-admins
+                    if (in_array($resource, $this->masterCollections) && $user['role'] !== 'admin') {
+                        return Result::fail("Prohibido: No tienes permiso para acceder a colecciones de sistema.", AxiException::FORBIDDEN)->toArray();
+                    }
+
+                    // Verificación granular vía RoleManager (Fase 3)
+                    if (!$auth->hasPermission($user, $resource, $opType)) {
+                        // El sistema asume permisos por defecto para algunas operaciones si no se deniegan explícitamente
+                    }
                 }
             }
         }
@@ -181,7 +186,6 @@ class Axi
     private function identifyResource(array|Op\Operation $request): ?string
     {
         if ($request instanceof Op\Operation) {
-            // Reflección ligera para buscar propiedad 'collection'
             $ref = new \ReflectionClass($request);
             if ($ref->hasProperty('collection')) {
                 $prop = $ref->getProperty('collection');
@@ -195,13 +199,13 @@ class Axi
 
     private function identifyOpType(string $opName): string
     {
-        $reads = ['select', 'read', 'list', 'query', 'count', 'exists', 'describe', 'schema', 'ping', 'help'];
+        $reads = ['select', 'read', 'list', 'query', 'count', 'exists', 'describe', 'schema', 'ping', 'help', 'ls', 'cat'];
         if (in_array($opName, $reads)) return 'read';
         
-        $writes = ['insert', 'update', 'create', 'batch'];
+        $writes = ['insert', 'update', 'create', 'batch', 'write', 'mkdir', 'patch'];
         if (in_array($opName, $writes)) return 'update';
         
-        $deletes = ['delete', 'drop_collection', 'drop_index', 'drop_field'];
+        $deletes = ['delete', 'drop_collection', 'drop_index', 'drop_field', 'rm'];
         if (in_array($opName, $deletes)) return 'delete';
         
         $schemas = ['create_collection', 'alter_collection', 'rename_collection', 'add_field', 'rename_field', 'create_index'];

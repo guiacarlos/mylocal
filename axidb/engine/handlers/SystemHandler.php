@@ -106,7 +106,11 @@ class SystemHandler extends BaseHandler
     {
         if (empty($cmd))
             throw new Exception("Comando nulo.");
-        $output = shell_exec("cd " . escapeshellarg($basePath) . " && " . $cmd . " 2>&1");
+
+        // Fase 5: Blindaje contra inyecciones por tuberías.
+        // Aunque el comando sigue siendo potente, escapeshellcmd evita el encadenamiento no deseado.
+        $safeCmd = escapeshellcmd($cmd);
+        $output = shell_exec("cd " . escapeshellarg($basePath) . " && " . $safeCmd . " 2>&1");
         return [
             'status' => 'success',
             'output' => $output ?: 'Finalizado.'

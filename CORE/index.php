@@ -92,9 +92,10 @@ try {
 
         if ($action === 'auth_login' && ($response['success'] ?? false) && isset($response['data']['token'])) {
             setcookie('acide_session', $response['data']['token'], [
-                'expires' => time() + 86400,
-                'path' => '/',
+                'expires'  => time() + 86400,
+                'path'     => '/',
                 'httponly' => true,
+                'secure'   => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
                 'samesite' => 'Strict'
             ]);
             // Token also sent in JSON so the SPA can store it in localStorage for Authorization: Bearer calls
