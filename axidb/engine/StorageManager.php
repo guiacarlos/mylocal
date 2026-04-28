@@ -28,27 +28,74 @@ class StorageManager
         if (!is_dir($this->storageRoot)) mkdir($this->storageRoot, 0777, true);
     }
 
+    /**
+     * Valida que un identificador sea alfanumérico y seguro.
+     * Previene Path Traversal y caracteres maliciosos.
+     */
+    private function sanitizeIdentifier($identifier)
+    {
+        if (!is_string($identifier) || empty($identifier)) {
+            throw new Exception("Seguridad: Identificador inválido.");
+        }
+        // Permitir solo alfanuméricos, guiones, puntos y guiones bajos.
+        // Prohibir explícitamente ".." para evitar saltos de directorio.
+        if (preg_match('/[^a-zA-Z0-9_\-\.]/', $identifier) || strpos($identifier, '..') !== false) {
+            throw new Exception("Seguridad: Identificador malicioso detectado: $identifier");
+        }
+        return $identifier;
+    }
+
+    /**
+     * Verifica que una ruta esté dentro de los límites permitidos (Jailing).
+     */
+    private function validatePath($path)
+    {
+        $absDataRoot = realpath($this->dataRoot);
+        $absStorageRoot = realpath($this->storageRoot);
+
+        if (file_exists($path)) {
+            $realPath = realpath($path);
+            if (strpos($realPath, $absDataRoot) !== 0 && strpos($realPath, $absStorageRoot) !== 0) {
+                throw new Exception("Seguridad: Intento de acceso fuera del área de almacenamiento.");
+            }
+        } else {
+            $parentDir = dirname($path);
+            if (is_dir($parentDir)) {
+                $realParent = realpath($parentDir);
+                if (strpos($realParent, $absDataRoot) !== 0 && strpos($realParent, $absStorageRoot) !== 0) {
+                    throw new Exception("Seguridad: Directorio de destino no autorizado.");
+                }
+            }
+        }
+        return $path;
+    }
+
     private function getCollectionPath($collection)
     {
+        // Ya viene sanitizado desde el método público
         $base = in_array($collection, $this->masterCollections) ? $this->dataRoot : $this->storageRoot;
         return $base . '/' . $collection;
     }
 
     private function getVersionsPath($collection, $id)
     {
+        // Ya viene sanitizado desde el método público
         $base = in_array($collection, $this->masterCollections) ? $this->dataRoot : $this->storageRoot;
         return $base . '/.versions/' . $collection . '/' . $id;
     }
 
     public function update($collection, $id, $data)
     {
+        $collection = $this->sanitizeIdentifier($collection);
+        $id = $this->sanitizeIdentifier($id);
+
         $collectionPath = $this->getCollectionPath($collection);
         $versionsPath = $this->getVersionsPath($collection, $id);
 
         if (!is_dir($collectionPath)) mkdir($collectionPath, 0777, true);
         if (!is_dir($versionsPath)) mkdir($versionsPath, 0777, true);
 
-        $filePath = $collectionPath . '/' . $id . '.json';
+        $filePath = $this->validatePath($collectionPath . '/' . $id . '.json');
 
         $fp = fopen($filePath, 'c+');
         if (!$fp) throw new Exception("No se pudo abrir el archivo: $filePath");
@@ -59,10 +106,14 @@ class StorageManager
 
             if ($existingData) {
                 $versionFile = $versionsPath . '/' . time() . '.json';
+                $this->validatePath($versionFile);
                 file_put_contents($versionFile, $content);
                 
                 $versions = glob($versionsPath . '/*.json');
-                if (count($versions) > 5) unlink($versions[0]);
+                if (count($versions) > 5) {
+                    $toDelete = $this->validatePath($versions[0]);
+                    unlink($toDelete);
+                }
             }
 
             if (is_array($existingData) && !isset($data['_REPLACE_'])) {
@@ -95,15 +146,19 @@ class StorageManager
 
     public function read($collection, $id)
     {
-        $filePath = $this->getCollectionPath($collection) . '/' . $id . '.json';
+        $collection = $this->sanitizeIdentifier($collection);
+        $id = $this->sanitizeIdentifier($id);
+
+        $filePath = $this->validatePath($this->getCollectionPath($collection) . '/' . $id . '.json');
         if (!file_exists($filePath)) return null;
         return json_decode(file_get_contents($filePath), true);
     }
 
     public function list($collection)
     {
+        $collection = $this->sanitizeIdentifier($collection);
         $collectionPath = $this->getCollectionPath($collection);
-        $indexPath = $collectionPath . '/_index.json';
+        $indexPath = $this->validatePath($collectionPath . '/_index.json');
         
         if (file_exists($indexPath)) {
             $data = json_decode(file_get_contents($indexPath), true);
@@ -114,6 +169,7 @@ class StorageManager
         if (is_dir($collectionPath)) {
             $files = glob($collectionPath . '/*.json');
             foreach ($files as $file) {
+                $file = $this->validatePath($file);
                 if (basename($file) === '_index.json' || strpos(basename($file), '_') === 0) continue;
                 $data = json_decode(file_get_contents($file), true);
                 if ($data) {
@@ -127,7 +183,10 @@ class StorageManager
 
     public function delete($collection, $id)
     {
-        $filePath = $this->getCollectionPath($collection) . '/' . $id . '.json';
+        $collection = $this->sanitizeIdentifier($collection);
+        $id = $this->sanitizeIdentifier($id);
+
+        $filePath = $this->validatePath($this->getCollectionPath($collection) . '/' . $id . '.json');
         if (file_exists($filePath)) {
             $result = unlink($filePath);
             $this->rebuildIndex($collection);
@@ -138,13 +197,13 @@ class StorageManager
 
     public function rebuildIndex($collection)
     {
-        // Fix critico: escanear SIEMPRE el filesystem, nunca pasar por list().
-        // list() lee de _index.json si existe -> bucle que congelaba el indice.
+        $collection = $this->sanitizeIdentifier($collection);
         $collectionPath = $this->getCollectionPath($collection);
         $items = [];
         if (is_dir($collectionPath)) {
             $files = glob($collectionPath . '/*.json');
             foreach ($files as $file) {
+                $file = $this->validatePath($file);
                 $base = basename($file);
                 if ($base === '_index.json' || $base[0] === '_') {
                     continue;
@@ -156,8 +215,9 @@ class StorageManager
                 }
             }
         }
+        $indexPath = $this->validatePath($collectionPath . '/_index.json');
         file_put_contents(
-            $collectionPath . '/_index.json',
+            $indexPath,
             json_encode($items, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
         );
     }

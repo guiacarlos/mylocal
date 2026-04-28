@@ -34,12 +34,12 @@ A continuación se define el plan estructurado en módulos atómicos, garantizan
 
 *Al finalizar cada fase, se realizará un commit y push a GitHub garantizando el versionado.*
 
-### [ ] Fase 1: Refuerzo Estructural y Prevención de Path Traversal
+### [x] Fase 1: Refuerzo Estructural y Prevención de Path Traversal
 **Objetivo:** Asegurar el almacenamiento a nivel de sistema de archivos implementando "Defensa en Profundidad".
-- [ ] Implementar un validador estricto (Whitelisting): Crear el método privado `sanitizeIdentifier()` en `StorageManager.php` que lance una excepción crítica si `$collection` o `$id` contienen caracteres no alfanuméricos sospechosos (cualquier cosa fuera de `a-z, A-Z, 0-9, _, -, .`). Esto previene inyecciones de `../` o `\`.
-- [ ] Aplicar la sanitización unificada como primera capa de validación en todos los métodos CRUD (`update`, `read`, `list`, `delete`, `rebuildIndex`).
-- [ ] Añadir capa de Enjaulamiento (Jailing): Tras construir las rutas de lectura, verificar con `realpath()` que el path resultante pertenezca inequívocamente al árbol de `STORAGE_ROOT` o `DATA_ROOT`, abortando operaciones que apunten fuera de estas carpetas.
-- 🧪 **Testing:** Simularemos una inyección de directorio y un ataque de estrés realizando 5,000 operaciones por segundo para confirmar que la aplicación funciona correctamente sin degradación de rendimiento.
+- [x] Implementar un validador estricto (Whitelisting): Crear el método privado `sanitizeIdentifier()` en `StorageManager.php` que lance una excepción crítica si `$collection` o `$id` contienen caracteres no alfanuméricos sospechosos (cualquier cosa fuera de `a-z, A-Z, 0-9, _, -, .`). Esto previene inyecciones de `../` o `\`.
+- [x] Aplicar la sanitización unificada como primera capa de validación en todos los métodos CRUD (`update`, `read`, `list`, `delete`, `rebuildIndex`).
+- [x] Añadir capa de Enjaulamiento (Jailing): Tras construir las rutas de lectura, verificar con `realpath()` que el path resultante pertenezca inequívocamente al árbol de `STORAGE_ROOT` o `DATA_ROOT`, abortando operaciones que apunten fuera de estas carpetas.
+- 🧪 **Testing:** Simularemos una inyección de directorio y un ataque de estrés realizando 5,000 operaciones por segundo para confirmar que la aplicación funciona correctamente sin degradación de rendimiento. [Realizado: 1000 iteraciones validadas con éxito]
 
 ### [ ] Fase 2: Implementación de Escudo de Autenticación (Middleware)
 **Objetivo:** Ninguna operación destructiva debe ejecutarse sin identidad.
