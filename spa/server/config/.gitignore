@@ -1,0 +1,4 @@
+# Archivos de config reales — NO commitear.
+# Los .example sí se commitean como plantillas.
+*.json
+!*.example

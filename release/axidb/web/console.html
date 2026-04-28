@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="same-origin">
+    <title>AxiDB Console</title>
+    <link rel="stylesheet" href="/axidb/web/app.css">
+    <link rel="stylesheet" href="/axidb/web/console.css">
+</head>
+<body class="page-console">
+    <header class="topbar">
+        <div class="brand">AxiDB <span class="version">console</span></div>
+        <div class="repl-mode-tabs" id="mode-tabs">
+            <button class="mode-tab active" data-mode="sql">sql:</button>
+            <button class="mode-tab" data-mode="op">op:</button>
+            <button class="mode-tab" data-mode="ai">ai:</button>
+            <button class="mode-tab" data-mode="js">js:</button>
+        </div>
+        <div class="connection" id="conn">
+            <span class="dot" id="conn-dot"></span>
+            <span id="conn-text">connecting...</span>
+        </div>
+    </header>
+
+    <main class="repl-layout">
+        <section class="repl-input-pane">
+            <div class="repl-toolbar">
+                <span class="hint">Ctrl+Enter run · Ctrl+Space autocomplete · Ctrl+P quick open · Ctrl+Shift+A find action · Ctrl+/ comment · F1 help</span>
+                <button class="btn primary" id="run-btn">Run</button>
+                <button class="btn" id="clear-btn">Clear log</button>
+            </div>
+            <textarea id="repl-input" class="repl-input" spellcheck="false"
+                      placeholder="-- modo sql: --
+SELECT * FROM products LIMIT 5"></textarea>
+        </section>
+        <section class="repl-output-pane">
+            <div id="repl-output" class="repl-output"></div>
+        </section>
+    </main>
+
+    <!-- Quick-open / find-action overlay -->
+    <div class="modal hidden" id="palette">
+        <div class="palette-box">
+            <input id="palette-input" type="text" placeholder="Type to search Ops or actions..." autofocus>
+            <ul id="palette-list" class="palette-list"></ul>
+        </div>
+    </div>
+
+    <!-- F1 help overlay -->
+    <div class="modal hidden" id="help-overlay">
+        <div class="modal-box">
+            <header><h3 id="help-title">Help</h3>
+                <button class="btn-mini" id="help-close">×</button>
+            </header>
+            <pre id="help-body" class="json-block"></pre>
+        </div>
+    </div>
+
+    <script>
+        window.AXI_DASHBOARD_CFG = {{ AXI_DASHBOARD_CFG }};
+    </script>
+    <script src="/axidb/web/console.js"></script>
+</body>
+</html>

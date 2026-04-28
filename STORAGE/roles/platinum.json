@@ -1,0 +1,19 @@
+{
+    "name": "Platinum",
+    "level": 400,
+    "permissions": [
+        "courses.access.all",
+        "courses.download",
+        "support.priority",
+        "features.advanced",
+        "storage.unlimited"
+    ],
+    "subscription_tier": "platinum",
+    "price_monthly": 99.99,
+    "price_annual": 999.99,
+    "id": "platinum",
+    "created_at": "2026-04-28T17:22:39+00:00",
+    "_updatedAt": "2026-04-28T17:22:39+00:00",
+    "_version": 1,
+    "_createdAt": "2026-04-28T17:22:39+00:00"
+}

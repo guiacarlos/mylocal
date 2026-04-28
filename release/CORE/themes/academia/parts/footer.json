@@ -1,0 +1,23 @@
+{
+    "blocks": [
+        {
+            "element": "footer",
+            "id": "footer-academy",
+            "class": "site-footer",
+            "content": [
+                {
+                    "element": "container",
+                    "class": "container",
+                    "content": [
+                        {
+                            "element": "text",
+                            "tag": "p",
+                            "text": "© 2025 Gestas Academy. Formación tecnológica premium para el bienestar empresarial.",
+                            "class": "site-footer-text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1150 @@
+{
+  "products": [
+    {
+      "id": "bebida_batido",
+      "slug": "batido-temporada",
+      "name": "Batido de Temporada",
+      "sku": "BEB-BAT",
+      "price": 5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "BEBIDAS",
+      "description": "Batido con fruta de temporada, leche de avena y un toque de miel de romero. Sin aditivos ni conservantes.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Frutos secos"
+      ],
+      "badges": [
+        "Temporada"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "bebida_kombucha",
+      "slug": "kombucha-jengibre",
+      "name": "Kombucha de Jengibre",
+      "sku": "BEB-KOM",
+      "price": 4,
+      "currency": "EUR",
+      "stock": 30,
+      "status": "publish",
+      "category": "BEBIDAS",
+      "description": "Kombucha artesanal fermentada 21 días con jengibre fresco y limón. Probiótica, ligeramente efervescente.",
+      "image": "",
+      "allergens": [],
+      "badges": [
+        "Sin alcohol",
+        "Probiótico"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "bebida_limonada",
+      "slug": "limonada-autor",
+      "name": "Limonada de Autor",
+      "sku": "BEB-LIM",
+      "price": 4.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "BEBIDAS",
+      "description": "Limonada prensada en frío con hierbabuena fresca, jengibre y sirope de agave. Refrescante sin artificios.",
+      "image": "",
+      "allergens": [],
+      "badges": [
+        "Vegano",
+        "Sin gluten"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "bebida_zumo_naranja",
+      "slug": "zumo-naranja",
+      "name": "Zumo Natural de Naranja",
+      "sku": "BEB-ZUN",
+      "price": 3.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "BEBIDAS",
+      "description": "Naranjas de Murcia exprimidas al momento. Sin azúcar añadido. Estacionalidad garantizada.",
+      "image": "",
+      "allergens": [],
+      "badges": [
+        "Km 0",
+        "Vegano"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "cafe_americano",
+      "slug": "americano",
+      "name": "Americano",
+      "sku": "CAF-AME",
+      "price": 1.9,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Espresso largo con agua caliente. Intenso, sin amargura. Perfecto para tomarlo despacio.",
+      "image": "",
+      "allergens": [],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "cafe_cappuccino",
+      "slug": "cappuccino",
+      "name": "Cappuccino",
+      "sku": "CAF-CAP",
+      "price": 2.2,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Espresso doble con leche vaporizada y microespuma sedosa. Arte latte incluido.",
+      "image": "",
+      "allergens": [
+        "Lácteos"
+      ],
+      "badges": [
+        "Con arte latte"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "cafe_cold_brew",
+      "slug": "cold-brew",
+      "name": "Cold Brew 24h",
+      "sku": "CAF-CBR",
+      "price": 3.5,
+      "currency": "EUR",
+      "stock": 50,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Macerado en frío durante 24 horas. Dulce, sin amargura, con notas afrutadas. Solo disponible en temporada.",
+      "image": "",
+      "allergens": [],
+      "badges": [
+        "Temporada"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "cafe_con_leche",
+      "slug": "cafe-con-leche",
+      "name": "Café con Leche",
+      "sku": "CAF-COL",
+      "price": 2,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "El clásico de siempre. Espresso con leche a partes iguales, a la temperatura perfecta.",
+      "image": "",
+      "allergens": [
+        "Lácteos"
+      ],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "cafe_cortado",
+      "slug": "cortado",
+      "name": "Cortado",
+      "sku": "CAF-COR",
+      "price": 1.9,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Espresso cortado con leche cremosa en dosis perfecta. Equilibrio entre intensidad y suavidad.",
+      "image": "",
+      "allergens": [
+        "Lácteos"
+      ],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "cafe_espresso",
+      "slug": "espresso",
+      "name": "Espresso",
+      "sku": "CAF-ESP",
+      "price": 1.7,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Espresso clásico de origen único, tostado en casa. Notas de chocolate negro y almendra.",
+      "image": "",
+      "allergens": [],
+      "badges": [
+        "Popular"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "cafe_flat_white",
+      "slug": "flat-white",
+      "name": "Flat White",
+      "sku": "CAF-FLW",
+      "price": 2.6,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Doble ristretto con leche texturizada muy fina. Más intenso que el cappuccino, más cremoso que el americano.",
+      "image": "",
+      "allergens": [
+        "Lácteos"
+      ],
+      "badges": [
+        "Chef recomienda"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "cafe_latte",
+      "slug": "latte",
+      "name": "Latte",
+      "sku": "CAF-LAT",
+      "price": 2.4,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "CAFÉ",
+      "description": "Espresso suave con abundante leche texturizada. Ideal para quienes buscan un café más suave.",
+      "image": "",
+      "allergens": [
+        "Lácteos"
+      ],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "dulce_brownie",
+      "slug": "brownie-chocolate",
+      "name": "Brownie Chocolate 70%",
+      "sku": "DUL-BRW",
+      "price": 3.2,
+      "currency": "EUR",
+      "stock": 20,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Brownie denso de chocolate negro 70% con nueces de California. Fudgy por dentro, crujiente por fuera.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Huevos",
+        "Frutos secos"
+      ],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "dulce_croissant",
+      "slug": "croissant-mantequilla",
+      "name": "Croissant de Mantequilla",
+      "sku": "DUL-CRO",
+      "price": 2.5,
+      "currency": "EUR",
+      "stock": 30,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Hojaldrado, dorado, con mantequilla AOP. Elaboración propia de 3 días. Crujiente por fuera, esponjoso por dentro.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Huevos"
+      ],
+      "badges": [
+        "Elaboración propia"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "dulce_granola_bowl",
+      "slug": "granola-bowl",
+      "name": "Granola Bowl con Yogur",
+      "sku": "DUL-GRN",
+      "price": 5.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Granola artesanal tostada en horno con miel, frutos secos y semillas. Con yogur griego ecológico y fruta de temporada.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Frutos secos"
+      ],
+      "badges": [
+        "Saludable",
+        "Vegetariano"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "dulce_pain_chocolat",
+      "slug": "pain-au-chocolat",
+      "name": "Pain au Chocolat",
+      "sku": "DUL-PAC",
+      "price": 2.8,
+      "currency": "EUR",
+      "stock": 25,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Croissant de chocolate con dos barritas de chocolate negro 70%. La versión más golosa de nuestra bollería.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Huevos",
+        "Soja"
+      ],
+      "badges": [],
+      "_version": 1
+    },
+    {
+      "id": "dulce_tarta_queso",
+      "slug": "tarta-queso-vasca",
+      "name": "Tarta de Queso Vasca",
+      "sku": "DUL-TQV",
+      "price": 4.5,
+      "currency": "EUR",
+      "stock": 15,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Burnt basque cheesecake con base de galleta. Textura cremosa perfecta, ligeramente caramelizada por fuera.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Huevos"
+      ],
+      "badges": [
+        "⭐ Más vendido"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "dulce_tortel",
+      "slug": "tortel-nata",
+      "name": "Tortel de Nata Casero",
+      "sku": "DUL-TRT",
+      "price": 3.8,
+      "currency": "EUR",
+      "stock": 12,
+      "status": "publish",
+      "category": "DULCE",
+      "description": "Masa hojaldrada rellena de nata montada. Receta de la abuela, sin artificios. Solo para valientes.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Lácteos",
+        "Huevos"
+      ],
+      "badges": [
+        "Receta tradicional"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "prod_cafe_0",
+      "slug": "espresso-blend-ecol-gico",
+      "name": "Espresso blend Ecológico",
+      "sku": "CAF-001",
+      "price": 1.7,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Café espresso estándar.",
+      "ai_description": "Producto de calidad premium para Socola. Café espresso estándar.",
+      "allergens": [],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_1",
+      "slug": "espresso-doble-specialty-coffee",
+      "name": "Espresso doble SPECIALTY COFFEE",
+      "sku": "CAF-002",
+      "price": 2.4,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Doble espresso de 40/50 ml.",
+      "ai_description": "Producto de calidad premium para Socola. Doble espresso de 40/50 ml.",
+      "allergens": [],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_2",
+      "slug": "americano-blend-ecol-gico",
+      "name": "Americano blend Ecológico",
+      "sku": "CAF-003",
+      "price": 1.8,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Café espresso con agua caliente.",
+      "ai_description": "Producto de calidad premium para Socola. Café espresso con agua caliente.",
+      "allergens": [],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_3",
+      "slug": "bomb-n-blend-ecol-gico",
+      "name": "Bombón blend ecológico",
+      "sku": "CAF-004",
+      "price": 1.8,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Espresso con leche condensada.",
+      "ai_description": "Producto de calidad premium para Socola. Espresso con leche condensada.",
+      "allergens": [
+        "leche"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_4",
+      "slug": "pumpkin-spice-latte",
+      "name": "PUMPKIN SPICE LATTE",
+      "sku": "CAF-005",
+      "price": 3.9,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Latte con especias y calabaza.",
+      "ai_description": "Producto de calidad premium para Socola. Latte con especias y calabaza.",
+      "allergens": [
+        "leche"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_5",
+      "slug": "frappe-latte",
+      "name": "FRAPPE LATTE",
+      "sku": "CAF-006",
+      "price": 4.3,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Café helado batido.",
+      "ai_description": "Producto de calidad premium para Socola. Café helado batido.",
+      "allergens": [
+        "leche"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_cafe_espresso",
+      "slug": "cafe-espresso",
+      "name": "Café Espresso",
+      "sku": "CAF-001",
+      "price": 1.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "cafeteria",
+      "description": "Café espresso de extracción perfecta. Granos de origen único tostados artesanalmente. Intenso, equilibrado y con una cremosa capa de crema natural.",
+      "images": [],
+      "attributes": [
+        {
+          "name": "Tamaño",
+          "values": [
+            "Solo",
+            "Doble"
+          ]
+        },
+        {
+          "name": "Leche",
+          "values": [
+            "Sin leche",
+            "Leche de vaca",
+            "Leche de avena",
+            "Leche de soja"
+          ]
+        }
+      ],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-08T00:00:00+00:00",
+      "updated_at": "2026-03-08T00:00:00+00:00",
+      "_updatedAt": "2026-03-08T00:00:00+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-08T00:00:00+00:00"
+    },
+    {
+      "id": "prod_comida_0",
+      "slug": "solomillo-de-ternera",
+      "name": "Solomillo de ternera",
+      "sku": "COM-001",
+      "price": 19,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "comida",
+      "description": "Jugosa pieza de carne tierna cocinada a la perfección, acompañada de una cremosa salsa de champiñones frescos.",
+      "ai_description": "Producto de calidad premium para Socola. Jugosa pieza de carne tierna cocinada a la perfección, acompañada de una cremosa salsa de champiñones frescos.",
+      "allergens": [
+        "leche"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_comida_1",
+      "slug": "risotto-de-marisco",
+      "name": "Risotto de marisco",
+      "sku": "COM-002",
+      "price": 16,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "comida",
+      "description": "Mezcla de mariscos frescos como camarones, mejillones y calamares.",
+      "ai_description": "Producto de calidad premium para Socola. Mezcla de mariscos frescos como camarones, mejillones y calamares.",
+      "allergens": [
+        "crustaceos",
+        "moluscos",
+        "pescado"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_croissant",
+      "slug": "croissant-mantequilla",
+      "name": "Croissant de Mantequilla",
+      "sku": "BAK-001",
+      "price": 2.8,
+      "currency": "EUR",
+      "stock": 30,
+      "status": "publish",
+      "category": "reposteria",
+      "description": "Elaborado con mantequilla AOC francesa. Hojaldrado, crujiente por fuera y tierno por dentro. Horneado cada mañana a las 7:00 para máxima frescura.",
+      "images": [],
+      "attributes": [
+        {
+          "name": "Variedad",
+          "values": [
+            "Natural",
+            "Con almendra",
+            "Con chocolate"
+          ]
+        }
+      ],
+      "metadata": {
+        "weight": 0.08,
+        "dimensions": []
+      },
+      "created_at": "2026-03-08T00:00:00+00:00",
+      "updated_at": "2026-03-08T00:00:00+00:00",
+      "_updatedAt": "2026-03-08T00:00:00+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-08T00:00:00+00:00"
+    },
+    {
+      "id": "prod_salado_0",
+      "slug": "brioche-de-pastrami",
+      "name": "BRIOCHE DE PASTRAMI",
+      "sku": "SAL-001",
+      "price": 8.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "salado",
+      "description": "Brioche relleno de Pastrami, pepinillos laminados, crema de queso cheddar, mayonesa de miel y mostaza.",
+      "ai_description": "Producto de calidad premium para Socola. Brioche relleno de Pastrami, pepinillos laminados, crema de queso cheddar, mayonesa de miel y mostaza.",
+      "allergens": [
+        "gluten",
+        "leche",
+        "mostaza"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_salado_1",
+      "slug": "huevos-benedictine",
+      "name": "HUEVOS BENEDICTINE",
+      "sku": "SAL-002",
+      "price": 8.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "salado",
+      "description": "Dos huevos poché sobre pan brioche, bañados en salsa holandesa.",
+      "ai_description": "Producto de calidad premium para Socola. Dos huevos poché sobre pan brioche, bañados en salsa holandesa.",
+      "allergens": [
+        "gluten",
+        "huevos",
+        "leche"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_tostada",
+      "slug": "tostada-artesanal",
+      "name": "Tostada Artesanal",
+      "sku": "BAK-002",
+      "price": 3.2,
+      "currency": "EUR",
+      "stock": 50,
+      "status": "publish",
+      "category": "reposteria",
+      "description": "Pan de masa madre con aceite virgen extra y tomate natural rallado. Desayuno saludable, sostenible y delicioso. Disponible también con aguacate o jamón ibérico.",
+      "images": [],
+      "attributes": [
+        {
+          "name": "Complemento",
+          "values": [
+            "Tomate y aceite",
+            "Aguacate",
+            "Jamón ibérico",
+            "Mantequilla y mermelada"
+          ]
+        }
+      ],
+      "metadata": {
+        "weight": 0.12,
+        "dimensions": []
+      },
+      "created_at": "2026-03-08T00:00:00+00:00",
+      "updated_at": "2026-03-08T00:00:00+00:00",
+      "_updatedAt": "2026-03-08T00:00:00+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-08T00:00:00+00:00"
+    },
+    {
+      "id": "prod_vegan_0",
+      "slug": "tosta-deli-capri-vegan",
+      "name": "TOSTA DELI CAPRI (Vegan)",
+      "sku": "VEG-001",
+      "price": 6.7,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "veganos",
+      "description": "Aguacate con limón machacado, tomates cherrys, AOVE y orégano.",
+      "ai_description": "Producto de calidad premium para Socola. Aguacate con limón machacado, tomates cherrys, AOVE y orégano.",
+      "allergens": [
+        "gluten"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "prod_vegan_1",
+      "slug": "bagel-pesto-vegan",
+      "name": "BAGEL PESTO (Vegan)",
+      "sku": "VEG-002",
+      "price": 6.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "veganos",
+      "description": "Pesto rojo de tomate seco, calabacín a la plancha, tomate natural y brotes tiernos.",
+      "ai_description": "Producto de calidad premium para Socola. Pesto rojo de tomate seco, calabacín a la plancha, tomate natural y brotes tiernos.",
+      "allergens": [
+        "gluten"
+      ],
+      "images": [],
+      "attributes": [],
+      "metadata": {
+        "weight": 0,
+        "dimensions": []
+      },
+      "created_at": "2026-03-11T20:41:41+00:00",
+      "updated_at": "2026-03-11T20:41:41+00:00",
+      "_updatedAt": "2026-03-11T20:41:41+00:00",
+      "_version": 1,
+      "_createdAt": "2026-03-11T20:41:41+00:00"
+    },
+    {
+      "id": "salado_avocado_toast",
+      "slug": "avocado-toast",
+      "name": "Avocado Toast",
+      "sku": "SAL-AVO",
+      "price": 6.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Aguacate Hass machacado con lima, sal en escamas y chile. Sobre pan de centeno con semillas. Con huevo poché opcional (+1€).",
+      "image": "",
+      "allergens": [
+        "Gluten"
+      ],
+      "badges": [
+        "Popular",
+        "Vegano"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "salado_bol_hummus",
+      "slug": "bol-hummus",
+      "name": "Bol de Hummus",
+      "sku": "SAL-HUM",
+      "price": 6,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Hummus cremoso de garbanzos con pimentón ahumado, EVOO y crudités de temporada. Pan de pita casero incluido.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Sésamo"
+      ],
+      "badges": [
+        "Vegano",
+        "Sin lactosa"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "salado_huevos_revueltos",
+      "slug": "huevos-revueltos",
+      "name": "Huevos Revueltos de Temporada",
+      "sku": "SAL-HUE",
+      "price": 7,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Huevos de corral revueltos a baja temperatura con ingredientes de temporada. Pregunta por la opción del día.",
+      "image": "",
+      "allergens": [
+        "Huevos",
+        "Lácteos"
+      ],
+      "badges": [
+        "Km 0"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "salado_quiche",
+      "slug": "quiche-del-dia",
+      "name": "Quiche del Día",
+      "sku": "SAL-QUI",
+      "price": 5.5,
+      "currency": "EUR",
+      "stock": 15,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Elaborada cada mañana con ingredientes de mercado. Relleno y guarnición cambian según temporada y disponibilidad.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Huevos",
+        "Lácteos"
+      ],
+      "badges": [
+        "Elaboración propia"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "salado_sandwich_club",
+      "slug": "sandwich-club",
+      "name": "Sándwich Club Socolá",
+      "sku": "SAL-SCL",
+      "price": 7.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Triple de pan brioche tostado con pollo asado, bacon crujiente, huevo cocido, tomate, lechuga y alioli de ajo negro.",
+      "image": "",
+      "allergens": [
+        "Gluten",
+        "Huevos",
+        "Mostaza"
+      ],
+      "badges": [
+        "Chef recomienda"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "salado_tostada_evoo",
+      "slug": "tostada-evoo-tomate",
+      "name": "Tostada EVOO + Tomate",
+      "sku": "SAL-TOS",
+      "price": 3.5,
+      "currency": "EUR",
+      "stock": 999,
+      "status": "publish",
+      "category": "SALADO",
+      "description": "Pan de masa madre, aceite de oliva virgen extra Picual y tomate rallado ecológico. Simple, honesto, delicioso.",
+      "image": "",
+      "allergens": [
+        "Gluten"
+      ],
+      "badges": [
+        "Vegano"
+      ],
+      "_version": 1
+    },
+    {
+      "id": "sub_premium_annual",
+      "name": "Suscripción Premium Anual",
+      "sku": "SUB-PREM-A",
+      "price": 243,
+      "stock": 9999,
+      "category": "subscription",
+      "tax_id": "iva_general",
+      "role_activation": "premium",
+      "image": null,
+      "description": "Acceso anual completo a Academy Gestas AI con todas las funciones premium. Incluye todos los cursos, soporte prioritario y almacenamiento ilimitado.",
+      "ai_description": "",
+      "ingredients": [],
+      "recipe": "",
+      "allergens": [],
+      "vault_producto": [],
+      "status": "active",
+      "created_at": "2026-03-13T21:06:38+00:00",
+      "updated_at": "2026-03-13T21:06:38+00:00",
+      "_updatedAt": "2026-03-13T21:06:38+00:00",
+      "_version": 48,
+      "_createdAt": "2026-03-11T08:15:18+00:00"
+    },
+    {
+      "id": "sub_pro_quarterly",
+      "name": "Suscripción Pro Trimestral",
+      "sku": "SUB-PRO-Q",
+      "price": 54,
+      "stock": 9999,
+      "category": "subscription",
+      "tax_id": "iva_general",
+      "role_activation": "pro",
+      "image": null,
+      "description": "Acceso trimestral a la plataforma Academy Gestas AI con funciones avanzadas. Incluye cursos Pro, soporte estándar y 10GB de almacenamiento.",
+      "ai_description": "",
+      "ingredients": [],
+      "recipe": "",
+      "allergens": [],
+      "vault_producto": [],
+      "status": "active",
+      "created_at": "2026-03-13T21:06:38+00:00",
+      "updated_at": "2026-03-13T21:06:38+00:00",
+      "_updatedAt": "2026-03-13T21:06:38+00:00",
+      "_version": 48,
+      "_createdAt": "2026-03-11T08:15:18+00:00"
+    },
+    {
+      "id": "sub_standard_monthly",
+      "name": "Suscripción Estándar Mensual",
+      "sku": "SUB-STD-M",
+      "price": 27,
+      "stock": 9999,
+      "category": "subscription",
+      "tax_id": "iva_general",
+      "role_activation": "standard",
+      "image": null,
+      "description": "Acceso mensual completo a la plataforma Academy Gestas AI. Incluye todos los cursos básicos, soporte comunitario y 5GB de almacenamiento.",
+      "ai_description": "",
+      "ingredients": [],
+      "recipe": "",
+      "allergens": [],
+      "vault_producto": [],
+      "status": "active",
+      "created_at": "2026-03-13T21:06:38+00:00",
+      "updated_at": "2026-03-13T21:06:38+00:00",
+      "_updatedAt": "2026-03-13T21:06:38+00:00",
+      "_version": 48,
+      "_createdAt": "2026-03-11T08:15:18+00:00"
+    }
+  ],
+  "config": [
+    {
+      "id": "tpv_settings",
+      "allowedUsers": [],
+      "enabledPaymentMethods": [
+        "transfer",
+        "cash",
+        "revolut"
+      ],
+      "hiddenCategories": [],
+      "mesaPayment": true,
+      "bizumPhone": "",
+      "shifts": [
+        {
+          "id": "shift_morning",
+          "name": "Mañana",
+          "start": "08:00",
+          "end": "16:00"
+        },
+        {
+          "id": "shift_night",
+          "name": "Noche",
+          "start": "21:00",
+          "end": "01:00"
+        }
+      ],
+      "_updatedAt": "2026-03-12T15:10:16+00:00",
+      "_version": 3,
+      "_createdAt": "2026-03-12T12:50:44+00:00"
+    }
+  ],
+  "agente_restaurante": [
+    {
+      "id": "settings",
+      "agents": [
+        {
+          "id": "default",
+          "name": "Maître Socolá",
+          "category": "SALA",
+          "tone": "Cordial, elegante y conciso",
+          "context": "Eres el Maître de Socolá, cafetería de especialidad en Murcia. Conoces todos los productos a la perfección y recomiendas con pasión los cafés de especialidad y la repostería artesanal."
+        },
+        {
+          "id": "camarero-sala",
+          "name": "Camarero de Sala",
+          "category": "SALA",
+          "tone": "Cercano, resolutivo y rápido",
+          "context": "Eres el camarero de sala de Socolá. Tu misión es atender a los clientes con amabilidad y agilidad: responder preguntas sobre la carta, gestionar peticiones de mesa, informar sobre alérgenos y sugerir maridajes sencillos. Hablas siempre en español. Eres conciso, no te extiendes más de 2-3 frases por respuesta.",
+          "persona": {
+            "greeting": "¡Buenos días! ¿En qué le puedo ayudar?",
+            "farewell": "¡Hasta pronto! Ha sido un placer atenderle.",
+            "suggestions": [
+              "¿Qué recomiendas hoy?",
+              "¿Qué lleva gluten en la carta?",
+              "¿Cuál es el café del día?"
+            ]
+          }
+        }
+      ],
+      "_updatedAt": "2026-03-11T09:00:00+00:00",
+      "_version": 2,
+      "_createdAt": "2026-03-11T08:15:18+00:00"
+    },
+    {
+      "id": "vault_carta",
+      "entries": [
+        {
+          "id": "v0",
+          "query": "qué me recomiendas",
+          "answer": "Nuestro Espresso Blend Ecológico o las Lotus French Toasts son una elección excelente.",
+          "auto": false,
+          "created_at": "2026-03-11T08:15:18+00:00"
+        },
+        {
+          "id": "v1",
+          "query": "hacéis café con leche",
+          "answer": "Sí, tenemos Café con Leche con leche cremosa de primera calidad, por 2,00 €.",
+          "auto": false,
+          "created_at": "2026-03-11T08:15:18+00:00"
+        },
+        {
+          "id": "vault_1773265905306",
+          "query": "que me recomiendas hoy",
+          "answer": "¡Buenas tardes! Para esta hora de la merienda, le recomendaría nuestro Espresso doble SPECIALTY COFFEE, con su perfil único y tostado artesanal. Maridaje Sugerido: Acompáñelo con nuestro Croissant de Mantequilla, recién horneado y elaborado con mantequilla AOC francesa, una delicia crujiente y tierna.",
+          "created_at": "2026-03-11T21:51:45+00:00",
+          "auto": true
+        }
+      ],
+      "_updatedAt": "2026-03-11T21:51:45+00:00",
+      "_version": 2,
+      "_createdAt": "2026-03-11T08:15:18+00:00"
+    },
+    {
+      "id": "internal_notes",
+      "notes": [
+        "Potenciar la venta de repostería propia (croissant, tarta de queso, brownie).",
+        "Recomendar café de especialidad de grano del día cuando haya.",
+        "Avisar siempre de alérgenos antes de confirmar comanda."
+      ],
+      "_version": 1,
+      "_createdAt": "2026-04-17T11:35:24.156Z",
+      "_updatedAt": "2026-04-17T11:35:24.158Z"
+    }
+  ],
+  "restaurant_zones": [
+    {
+      "id": "z_1773449176187",
+      "name": "Salon",
+      "tables": [
+        {
+          "id": "t_1773449179923",
+          "number": "1",
+          "capacity": 2,
+          "x": 50,
+          "y": 50,
+          "width": 70,
+          "height": 70,
+          "shape": "square",
+          "type": "table",
+          "status": "free"
+        },
+        {
+          "id": "t_1773449180045",
+          "number": "2",
+          "capacity": 2,
+          "x": 185,
+          "y": 150,
+          "width": 70,
+          "height": 70,
+          "shape": "square",
+          "type": "table",
+          "status": "free"
+        },
+        {
+          "id": "t_1773449180245",
+          "number": "3",
+          "capacity": 2,
+          "x": 240,
+          "y": 45,
+          "width": 70,
+          "height": 70,
+          "shape": "square",
+          "type": "table",
+          "status": "free"
+        }
+      ]
+    }
+  ],
+  "payment_settings": [
+    {
+      "id": "payment_settings",
+      "enabled": [
+        "cash",
+        "card",
+        "revolut",
+        "bizum"
+      ],
+      "bizumPhone": "",
+      "revolut": {
+        "active": false,
+        "mode": "sandbox"
+      },
+      "_version": 1
+    }
+  ]
+}

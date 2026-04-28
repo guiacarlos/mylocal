@@ -1,0 +1,15 @@
+{
+    "key": "google-contacts",
+    "name": "Google Contacts (Atomic)",
+    "version": "1.2.0",
+    "type": "HYBRID",
+    "capabilities": [
+        "list",
+        "search",
+        "create",
+        "delete"
+    ],
+    "endpoints": {
+        "list": "/api/google/people/v1/people/me/connections"
+    }
+}

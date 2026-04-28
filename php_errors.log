@@ -1,0 +1,47 @@
+[28-Apr-2026 17:15:35 UTC] PHP Warning:  require_once(C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php): Failed to open stream: No such file or directory in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:15:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php' (include_path='.;C:\php\pear') in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php:10
+Stack trace:
+#0 C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\Auth.php(11): require_once()
+#1 C:\Users\infoj\Documents\DriveAsir\mylocal\gateway.php(6): require_once('...')
+#2 {main}
+  thrown in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:15:35 UTC] PHP Warning:  require_once(C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php): Failed to open stream: No such file or directory in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:15:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php' (include_path='.;C:\php\pear') in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php:10
+Stack trace:
+#0 C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\Auth.php(11): require_once()
+#1 C:\Users\infoj\Documents\DriveAsir\mylocal\gateway.php(6): require_once('...')
+#2 {main}
+  thrown in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:15:57 UTC] PHP Warning:  require_once(C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php): Failed to open stream: No such file or directory in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:15:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php' (include_path='.;C:\php\pear') in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php:10
+Stack trace:
+#0 C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\Auth.php(11): require_once()
+#1 C:\Users\infoj\Documents\DriveAsir\mylocal\gateway.php(6): require_once('...')
+#2 {main}
+  thrown in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:16:10 UTC] PHP Warning:  require_once(C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php): Failed to open stream: No such file or directory in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 17:16:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth/users/UserTools.php' (include_path='.;C:\php\pear') in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php:10
+Stack trace:
+#0 C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\Auth.php(11): require_once()
+#1 C:\Users\infoj\Documents\DriveAsir\mylocal\gateway.php(6): require_once('...')
+#2 C:\Users\infoj\Documents\DriveAsir\mylocal\router.php(20): include('...')
+#3 {main}
+  thrown in C:\Users\infoj\Documents\DriveAsir\mylocal\CORE\auth\UserManager.php on line 10
+[28-Apr-2026 18:59:09 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:09 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:09 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:21 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:21 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:21 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:29 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:29 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 18:59:29 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:02:49 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:02:49 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:02:49 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:03:09 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:03:09 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:03:09 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
+[28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.

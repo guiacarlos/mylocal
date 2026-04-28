@@ -1,0 +1,14 @@
+{
+    "_doc": "Config Revolut Merchant. Copia a revolut.json y rellena con la API key de tu cuenta Business. Referencia: https://developer.revolut.com/docs/merchant/",
+    "api_key": "",
+    "mode": "sandbox",
+    "api_version": "2025-12-04",
+    "endpoints": {
+        "sandbox": "https://sandbox-merchant.revolut.com/api",
+        "live": "https://merchant.revolut.com/api"
+    },
+    "webhook_secret": "",
+    "currency_default": "EUR",
+    "capture_mode": "automatic",
+    "timeout_seconds": 15
+}

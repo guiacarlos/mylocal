@@ -1,0 +1,28 @@
+{
+    "key": "google-gmail",
+    "name": "Google Gmail Gland",
+    "version": "1.0.0",
+    "type": "VIRTUAL",
+    "provider": "Google",
+    "capabilities": [
+        "email-read",
+        "email-send",
+        "drafting"
+    ],
+    "endpoints": {
+        "list": "/api/gmail/list",
+        "send": "/api/gmail/send",
+        "draft": "/api/gmail/draft"
+    },
+    "schema": {
+        "threads": "array",
+        "labels": "array"
+    },
+    "ai_hints": {
+        "context": "Permite al Cerebro automatizar respuestas o redactar borradores basados en la actividad del CMS.",
+        "operations": {
+            "notify_admin": "Envía un correo cuando hay una nueva reserva en Calendar.",
+            "summarize_inbox": "Gemini lee los correos y crea un resumen en el Dashboard."
+        }
+    }
+}

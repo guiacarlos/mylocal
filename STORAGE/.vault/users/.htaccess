@@ -1,0 +1,3 @@
+# ACIDE SOBERANO - PROTECCIÓN DE IDENTIDAD
+Order Deny,Allow
+Deny from all
