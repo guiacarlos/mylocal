@@ -64,7 +64,7 @@ export function App() {
                                     <FiPhone style={{color: 'var(--accent)'}} /> <a href="tel:+34611677577">611 677 577</a>
                                 </li>
                                 <li style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                    <FiBookOpen style={{color: 'var(--accent)'}} /> <a href="mailto:wiki@mylocal.es">Documentación Wiki</a>
+                                    <FiBookOpen style={{color: 'var(--accent)'}} /> <a href="https://wiki.mylocal.es" target="_blank" rel="noopener noreferrer">Documentación Wiki</a>
                                 </li>
                             </div>
                         </div>
