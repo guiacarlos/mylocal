@@ -68,4 +68,15 @@ A continuación se define el plan estructurado en módulos atómicos, garantizan
 - [ ] Refuerzo de Handlers Administrativos: Modificar el orquestador para garantizar que NINGÚN usuario sin rol `superadmin` pueda alcanzar las rutas que invocan `SystemHandler`, `FileHandler` o `GitHandler`. 
 - [ ] Hardening de Tokens y Cookies: Revisar el generador en `Auth.php` y la entrega en `api/axi.php` para asegurar que el token se entrega exclusivamente bajo cookies `HttpOnly`, `Secure` (si hay HTTPS) y `SameSite=Strict`. Revisar que los roles sean validados del lado del servidor contra el disco, no confiando en el payload en memoria.
 - [ ] Limpieza Final: Purgar hardcodeos y revisar que CORS no acepte el wildcard `*` para métodos protegidos.
-- 🧪 **Testing:** Inyección deliberada del payload `test" & echo vulnerable > vuln.txt"` en el `FileHandler`. Comprobaremos que el archivo no se ha escrito en disco y que el flujo legal de tokens mantiene viva la sesión.
+- **TESTING:** Inyección deliberada del payload `test" & echo vulnerable > vuln.txt"` en el `FileHandler`. Comprobaremos que el archivo no se ha escrito en disco y que el flujo legal de tokens mantiene viva la sesión.
+
+### [ ] Fase 6: Estabilidad Transaccional y Mitigación de Abusos (Capa Aplicación)
+**Objetivo:** Prevenir corrupción de datos por concurrencia y blindar el sistema contra fuerza bruta y manipulación de parámetros (Mass Assignment).
+- [ ] Escrituras Atómicas (Anti-Race Conditions): Auditar `StorageManager.php` y todo el ecosistema ACIDE para sustituir llamadas directas a `file_put_contents` por un patrón de escritura atómica (escribir el contenido en un archivo `.tmp` único y luego aplicar un `rename()` al destino final).
+- [ ] Prevención de Asignación Masiva: Programar un filtro dinámico en las operaciones `create` y `update` que purgue automáticamente del payload json campos críticos de sistema (como `role`, `encrypted`, `_meta`) a menos que el validador confirme que quien ejecuta la acción es un `superadmin`.
+- [ ] Sistema de Rate Limiting y Anti-Fuerza Bruta: Implementar en el middleware un registro de intentos de autenticación. Tras 5 intentos fallidos a `auth.login` desde la misma IP o cuenta, se bloqueará el acceso devolviendo `HTTP 429 Too Many Requests` durante 15 minutos.
+- [ ] Securización de Cabeceras de Respuesta: Asegurar que el orquestador (`Axi.php`) siempre inyecte explícitamente `Content-Type: application/json; charset=utf-8` y `X-Content-Type-Options: nosniff` para anular ataques de XSS por inferencia de tipos mime.
+- **TESTING:** 
+  - *Estrés de Concurrencia:* Lanzaremos 15 operaciones de guardado sobre el mismo archivo JSON en paralelo, asegurando que el archivo nunca quede truncado, vacío ni con JSON malformado.
+  - *Seguridad (Rate Limiter):* Bombardeo de 20 inicios de sesión incorrectos en un segundo. Validaremos que el sistema corte el grifo y bloquee temporalmente a partir del 5º intento.
+  - *Seguridad (Privilegios):* Actualizaremos un perfil de usuario intentando inyectar `{"role": "superadmin"}` de forma camuflada, verificando que el motor de almacenamiento ignora o descarta la propiedad.
