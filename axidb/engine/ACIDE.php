@@ -82,7 +82,7 @@ class ACIDE
     {
         $root = realpath(__DIR__ . '/../../');
         $capabilitiesRoot = $root . '/CAPABILITIES';
-        $capacities = ['STORE', 'ACADEMY', 'RESERVAS', 'GEMINI', 'AGENTE_RESTAURANTE', 'RESTAURANT_ORGANIZER', 'QR', 'FSE', 'CARTA'];
+        $capacities = ['STORE', 'ACADEMY', 'RESERVAS', 'GEMINI', 'AGENTE_RESTAURANTE', 'RESTAURANT_ORGANIZER', 'QR', 'FSE', 'CARTA', 'PAYMENT'];
 
         //  RESOLUCIÓN DE ESTADO SOBERANO: Solo cargamos lo que está ACTIVO
         $activeDoc = $this->services['crud']->read('system', 'active_plugins');

@@ -1,6 +1,6 @@
 {
     "id": "active_plugins",
-    "keys": ["qr", "gemini", "agente_restaurante", "carta", "tpv"],
+    "keys": ["qr", "gemini", "agente_restaurante", "carta", "tpv", "payment"],
     "created_at": "2026-04-29T00:00:00+00:00",
     "_version": 1
 }

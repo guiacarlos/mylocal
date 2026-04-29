@@ -371,7 +371,7 @@ Flujo de 10 pasos:
 
 ### FASE 2 — Nivel 2: Pedido y Pago desde Mesa
 
-**Estado: Pendiente — inicia tras criterio de salida Nivel 1**
+**Estado: COMPLETADA — 2026-04-29**
 **Precio:** 79€/mes + take rate segun volumen.
 **Objetivo:** superar a Honei y MONEI Pay. Take rate activo desde el primer pago.
 
@@ -477,11 +477,11 @@ Un archivo PHP por modelo. Max 250 lineas. Ubicacion: CAPABILITIES/PAYMENT/model
   volumen_total, take_rate_porcentaje, take_rate_importe,
   facturado (bool), created_at.
 
-- [ ] Crear CAPABILITIES/PAYMENT/models/SesionMesaModel.php
-- [ ] Crear CAPABILITIES/PAYMENT/models/LineaPedidoModel.php
-- [ ] Crear CAPABILITIES/PAYMENT/models/PagoModel.php
-- [ ] Crear CAPABILITIES/PAYMENT/models/TakeRateRegistroModel.php
-- [ ] Verificar que ningun archivo supera 250 lineas
+- [x] Crear CAPABILITIES/PAYMENT/models/SesionMesaModel.php
+- [x] Crear CAPABILITIES/PAYMENT/models/LineaPedidoModel.php
+- [x] Crear CAPABILITIES/PAYMENT/models/PagoModel.php
+- [x] Crear CAPABILITIES/PAYMENT/models/TakeRateRegistroModel.php
+- [x] Verificar que ningun archivo supera 250 lineas
 
 ---
 
@@ -523,12 +523,12 @@ Ubicacion: CAPABILITIES/PAYMENT/
   Compatible con impresora termica (80mm) via CSS.
   Max 120 lineas.
 
-- [ ] Crear CAPABILITIES/PAYMENT/PaymentEngine.php
-- [ ] Crear CAPABILITIES/PAYMENT/drivers/BizumDriver.php
-- [ ] Crear CAPABILITIES/PAYMENT/drivers/CashDriver.php
-- [ ] Crear CAPABILITIES/PAYMENT/drivers/StripeDriver.php
-- [ ] Crear CAPABILITIES/PAYMENT/TakeRateManager.php
-- [ ] Crear CAPABILITIES/PAYMENT/TicketEngine.php
+- [x] Crear CAPABILITIES/PAYMENT/PaymentEngine.php
+- [x] Crear CAPABILITIES/PAYMENT/drivers/BizumDriver.php
+- [x] Crear CAPABILITIES/PAYMENT/drivers/CashDriver.php
+- [x] Crear CAPABILITIES/PAYMENT/drivers/StripeDriver.php
+- [x] Crear CAPABILITIES/PAYMENT/TakeRateManager.php
+- [x] Crear CAPABILITIES/PAYMENT/TicketEngine.php
 
 ---
 
@@ -557,12 +557,12 @@ La base en socola-carta.js ya existe. Ampliar con el flujo completo.
   Ticket digital: mostrar respuesta de TicketEngine al completar.
   Si supera 250 lineas: dividir en socola-carta-ui.js y socola-carta-pay.js.
 
-- [ ] Ampliar socola-carta.js: estado de items en carrito
-- [ ] Pantalla de pago con metodos habilitados por local
-- [ ] Flujo Bizum: enlace con importe precargado
-- [ ] Flujo tarjeta: integracion con PaymentEngine
-- [ ] Ticket digital en pantalla tras pago completado
-- [ ] Flujo "pedir la cuenta" visible solo cuando hay items en carrito
+- [x] Ampliar socola-carta.js: estado de items en carrito
+- [x] Pantalla de pago con metodos habilitados por local
+- [x] Flujo Bizum: enlace con importe precargado
+- [x] Flujo tarjeta: integracion con PaymentEngine
+- [x] Ticket digital en pantalla tras pago completado
+- [x] Flujo "pedir la cuenta" visible solo cuando hay items en carrito
 
 ---
 
@@ -590,10 +590,10 @@ TPVPos.jsx ya tiene plano de mesas y polling. Ampliar con panel de alertas.
   Si es efectivo: registra pago, llama a clear_table, muestra ticket.
   Si es Bizum o tarjeta: espera confirmacion antes de liberar mesa.
 
-- [ ] Ampliar TPVPos.jsx: indicadores de estado por mesa
-- [ ] Panel de solicitudes con sonido de notificacion
-- [ ] Total del dia visible en barra superior
-- [ ] Flujo de cobro completo: PaymentEngine + clear_table + ticket
+- [x] Ampliar TPVPos.jsx: indicadores de estado por mesa
+- [x] Panel de solicitudes con sonido de notificacion
+- [x] Total del dia visible en barra superior
+- [x] Flujo de cobro completo: PaymentEngine + clear_table + ticket
 
 ---
 
@@ -618,9 +618,9 @@ Si el cliente anade X al carrito, sugerir Y.
   Si hay sugerencia: mostrar bajo el carrito "Tambien te recomendamos X".
   Un solo tap para anadir la sugerencia al carrito.
 
-- [ ] Crear CAPABILITIES/PAYMENT/UpsellEngine.php
-- [ ] Crear CAPABILITIES/TPV/admin/UpsellAdmin.jsx
-- [ ] Integrar evaluate_upsell en socola-carta.js al anadir producto
+- [x] Crear CAPABILITIES/PAYMENT/UpsellEngine.php
+- [x] Crear CAPABILITIES/TPV/admin/UpsellAdmin.jsx
+- [x] Integrar evaluate_upsell en socola-carta.js al anadir producto
 
 ---
 
@@ -637,9 +637,9 @@ Ampliar con configuracion de Stripe y take rate visible.
   Take rate actual visible: "Tu take rate este mes: X€".
   Max 120 lineas.
 
-- [ ] Crear CAPABILITIES/PAYMENT/admin/PaymentSettingsPanel.jsx
-- [ ] Integracion en TPVAdmin.jsx: pestana Pagos
-- [ ] Take rate del mes visible en panel
+- [x] Crear CAPABILITIES/PAYMENT/admin/PaymentSettingsPanel.jsx
+- [x] Integracion en TPVAdmin.jsx: pestana Pagos
+- [x] Take rate del mes visible en panel
 
 ---
 

@@ -539,6 +539,18 @@ class ActionDispatcher
                             ]
                         ];
 
+                    case 'create_payment':
+                    case 'confirm_payment':
+                    case 'refund_payment':
+                    case 'get_session_total':
+                    case 'get_take_rate':
+                    case 'generate_ticket':
+                    case 'evaluate_upsell':
+                        if (!isset($this->services['payment'])) {
+                            throw new Exception("Capacidad PAYMENT no activada.");
+                        }
+                        return $this->services['payment']->executeAction($action, $data);
+
                     case 'get_carta':
                     case 'get_carta_mesa':
                     case 'get_producto':
