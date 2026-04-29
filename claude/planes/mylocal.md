@@ -661,7 +661,7 @@ Ampliar con configuracion de Stripe y take rate visible.
 
 ### FASE 3 — Cumplimiento fiscal (Verifactu / TicketBAI)
 
-**Estado: Pendiente — obligatorio antes de campana comercial masiva**
+**Estado: COMPLETADA — 2026-04-29**
 **Precio:** incluido en plan 79€ y 149€. Es el lock-in mas potente del producto.
 **Commits por subfase** (ver al final de la fase).
 
@@ -716,9 +716,9 @@ antes de poder generar registros Verifactu:
   modalidad_fiscal (verifactu/ticketbai/ninguna),
   territorio_ticketbai (bizkaia/gipuzkoa/araba/navarra, solo si ticketbai).
 
-- [ ] Ampliar LocalModel.php con campos fiscales
-- [ ] Crear STORAGE/config/fiscal.json como almacen de config fiscal por local
-- [ ] El certificado digital se guarda en STORAGE/.vault/cert/ (excluido de git)
+- [x] Ampliar LocalModel.php con campos fiscales
+- [x] Crear STORAGE/config/fiscal.json como almacen de config fiscal por local
+- [x] El certificado digital se guarda en STORAGE/.vault/cert/ (excluido de git)
 
 ---
 
@@ -729,8 +729,8 @@ antes de poder generar registros Verifactu:
   territorio_ticketbai, certificado_path (ruta relativa en .vault/).
   Ubicacion: CAPABILITIES/FISCAL/models/FiscalConfigModel.php. Max 80 lineas.
 
-- [ ] Crear CAPABILITIES/FISCAL/models/FiscalConfigModel.php
-- [ ] Panel de configuracion fiscal en TPVAdmin (pestana Fiscal)
+- [x] Crear CAPABILITIES/FISCAL/models/FiscalConfigModel.php
+- [x] Panel de configuracion fiscal en TPVAdmin (pestana Fiscal)
 
 ---
 
@@ -774,15 +774,15 @@ Ubicacion: CAPABILITIES/FISCAL/
   Si VerifactuSender falla: VerifactuQueue.push() y sigue.
   El ticket del cliente incluye el CSV y el QR de verificacion de AEAT.
 
-- [ ] Crear CAPABILITIES/FISCAL/models/VerifactuRegistroModel.php
-- [ ] Crear CAPABILITIES/FISCAL/VerifactuRecord.php
-- [ ] Crear CAPABILITIES/FISCAL/VerifactuSigner.php
-- [ ] Crear CAPABILITIES/FISCAL/VerifactuSender.php
-- [ ] Crear CAPABILITIES/FISCAL/VerifactuQueue.php
-- [ ] Crear CAPABILITIES/FISCAL/VerifactuLog.php
-- [ ] Integracion en PaymentEngine.confirmPago()
-- [ ] CSV y QR de verificacion AEAT en ticket del cliente
-- [ ] Prueba completa en entorno sandbox AEAT antes de produccion
+- [x] Crear CAPABILITIES/FISCAL/models/VerifactuRegistroModel.php
+- [x] Crear CAPABILITIES/FISCAL/VerifactuRecord.php
+- [x] Crear CAPABILITIES/FISCAL/VerifactuSigner.php
+- [x] Crear CAPABILITIES/FISCAL/VerifactuSender.php
+- [x] Crear CAPABILITIES/FISCAL/VerifactuQueue.php
+- [x] Crear CAPABILITIES/FISCAL/VerifactuLog.php
+- [x] Integracion en PaymentEngine.confirmPago()
+- [x] CSV y QR de verificacion AEAT en ticket del cliente
+- [x] Prueba completa en entorno sandbox AEAT antes de produccion
 
 ---
 
@@ -813,11 +813,11 @@ TicketBAI es mas complejo que Verifactu porque exige:
   Cada territorio tiene su propio endpoint y esquema de respuesta.
   Max 80 lineas.
 
-- [ ] Crear CAPABILITIES/FISCAL/TicketBAIRecord.php
-- [ ] Crear CAPABILITIES/FISCAL/TicketBAISigner.php
-- [ ] Crear CAPABILITIES/FISCAL/TicketBAISender.php
-- [ ] Activacion por campo territorio_ticketbai en configuracion del local
-- [ ] QR TicketBAI en ticket fisico y digital
+- [x] Crear CAPABILITIES/FISCAL/TicketBAIRecord.php
+- [x] Crear CAPABILITIES/FISCAL/TicketBAISigner.php
+- [x] Crear CAPABILITIES/FISCAL/TicketBAISender.php
+- [x] Activacion por campo territorio_ticketbai en configuracion del local
+- [x] QR TicketBAI en ticket fisico y digital
 
 ---
 
@@ -831,10 +831,10 @@ TicketBAI es mas complejo que Verifactu porque exige:
   Boton "Reenviar cola pendiente" para resolver fallos manualmente.
   Max 150 lineas.
 
-- [ ] Crear CAPABILITIES/FISCAL/admin/FiscalAdmin.jsx
-- [ ] Integracion en TPVAdmin.jsx: pestana Fiscal
-- [ ] Estado de envios visible: ok / en_cola / error
-- [ ] Subida de certificado digital con validacion de formato PFX/PEM
+- [x] Crear CAPABILITIES/FISCAL/admin/FiscalAdmin.jsx
+- [x] Integracion en TPVAdmin.jsx: pestana Fiscal
+- [x] Estado de envios visible: ok / en_cola / error
+- [x] Subida de certificado digital con validacion de formato PFX/PEM
 
 ---
 
@@ -847,11 +847,11 @@ El ticket digital de Fase 2 ya muestra el resumen. Aqui se añade:
   - CSV de verificacion AEAT o QR TicketBAI segun modalidad
   - Opcion: el cliente introduce su email para recibir el ticket en PDF
 
-- [ ] Ampliar TicketEngine.php con campos fiscales
-- [ ] Numero de factura correlativo visible en ticket
-- [ ] Desglose IVA por tipo en el ticket
-- [ ] Campo email opcional en pantalla de pago del cliente
-- [ ] Envio de PDF por email si el cliente lo solicita
+- [x] Ampliar TicketEngine.php con campos fiscales
+- [x] Numero de factura correlativo visible en ticket
+- [x] Desglose IVA por tipo en el ticket
+- [x] Campo email opcional en pantalla de pago del cliente
+- [x] Envio de PDF por email si el cliente lo solicita
 
 ---
 
