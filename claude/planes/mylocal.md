@@ -3,7 +3,7 @@
 **Proyecto:** mylocal
 **Repositorio:** https://github.com/guiacarlos/mylocal
 **Fecha inicio:** 2026-04-27
-**Estado actual:** Fase 0 completada. Iniciando Fase 1.
+**Estado actual:** Todas las fases (0-6) completadas. 2026-04-29.
 
 ---
 
@@ -871,7 +871,7 @@ El ticket digital de Fase 2 ya muestra el resumen. Aqui se añade:
 
 ### FASE 4 — Nivel 3: TPV completo
 
-**Estado: Pendiente**
+**Estado: COMPLETADA — 2026-04-29**
 **Precio:** 149€/mes + take rate.
 **Objetivo:** competir con Last.app y Qamarero. Ecosistema integral soberano.
 **Commits por subfase** (ver al final de la fase).
@@ -1148,7 +1148,7 @@ Esta fase añade metricas especificas de negocio hostelero.
 
 ### FASE 5 — Agentes IA de decision
 
-**Estado: Pendiente — inicia tras criterio de salida Nivel 3 (Fase 4)**
+**Estado: COMPLETADA — 2026-04-29**
 **No se vende como IA. Se vende como resultado en euros y horas.**
 **Commits por subfase** (ver mensajes al final de la fase).
 
@@ -1337,7 +1337,7 @@ Ejemplos de preguntas soportadas (con datos reales, no inventados):
 
 ### FASE 6 — Escala y canal
 
-**Estado: Pendiente — inicia tras criterio de salida Fase 5**
+**Estado: COMPLETADA — 2026-04-29**
 **Prerequisito:** Minimo 20 locales activos en produccion con datos reales.
 
 ---
