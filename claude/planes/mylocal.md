@@ -969,12 +969,12 @@ STORAGE/
   CartaAdminApi.php: todas las operaciones van al directorio del local
   PaymentEngine.php: SesionMesa y PagoModel usan LocalContext
 
-- [ ] Crear CORE/core/LocalContext.php
-- [ ] Crear estructura STORAGE/locales/{slug}/ con gitkeep
-- [ ] Adaptar QREngine.php para usar LocalContext
-- [ ] Adaptar CartaAdminApi.php para usar LocalContext
-- [ ] Adaptar PaymentEngine.php para usar LocalContext
-- [ ] Compatibilidad hacia atras: si no hay multi-local, usa STORAGE raiz
+- [x] Crear CORE/core/LocalContext.php
+- [x] Crear estructura STORAGE/locales/{slug}/ con gitkeep
+- [x] Adaptar QREngine.php para usar LocalContext
+- [x] Adaptar CartaAdminApi.php para usar LocalContext
+- [x] Adaptar PaymentEngine.php para usar LocalContext
+- [x] Compatibilidad hacia atras: si no hay multi-local, usa STORAGE raiz
 
 ---
 
@@ -994,10 +994,10 @@ Diseñado para: cafeteria, barra de bar, mostrador de comida rapida.
 **Activacion:** campo modo_tpv en FiscalConfigModel o LocalModel.
   Valores: 'sala' (mesas + barra), 'barra' (solo barra), 'carta' (solo QR).
 
-- [ ] Crear CAPABILITIES/TPV/pos/BarraView.jsx
-- [ ] Añadir viewMode 'barra' en TPVPos.jsx
-- [ ] Campo modo_tpv en LocalModel.php
-- [ ] Cobro inmediato en modo barra (sin sesion de mesa)
+- [x] Crear CAPABILITIES/TPV/pos/BarraView.jsx
+- [x] Añadir viewMode 'barra' en TPVPos.jsx
+- [x] Campo modo_tpv en LocalModel.php
+- [x] Cobro inmediato en modo barra (sin sesion de mesa)
 
 ---
 
@@ -1029,12 +1029,12 @@ La app es una PWA (Progressive Web App) instalable desde el navegador.
   del camarero asignado a esa mesa.
   Usa VAPID keys almacenadas en STORAGE/.vault/. Max 80 lineas.
 
-- [ ] Crear CAPABILITIES/TPV/pos/ComanderoApp.jsx
-- [ ] Crear dashboard/comandero.html: punto de entrada de la PWA
-- [ ] Crear manifest.comandero.json
-- [ ] Crear js/sw.comandero.js: service worker con push
-- [ ] Crear CAPABILITIES/TPV/ComanderoNotifications.php
-- [ ] Flujo completo: camarero toma comanda → cocina la ve → cocinero marca listo → camarero recibe push
+- [x] Crear CAPABILITIES/TPV/pos/ComanderoApp.jsx
+- [x] Crear dashboard/comandero.html: punto de entrada de la PWA
+- [x] Crear manifest.comandero.json
+- [x] Crear js/sw.comandero.js: service worker con push
+- [x] Crear CAPABILITIES/TPV/ComanderoNotifications.php
+- [x] Flujo completo: camarero toma comanda → cocina la ve → cocinero marca listo → camarero recibe push
 
 ---
 
@@ -1063,11 +1063,11 @@ de solo lectura para el cocinero, optimizada para pantalla grande en cocina.
   mark_item_ready: actualiza estado_cocina a 'listo', dispara notificacion.
   Max 80 lineas.
 
-- [ ] Crear CAPABILITIES/TPV/pos/KitchenDisplay.jsx
-- [ ] Crear dashboard/cocina.html: punto de entrada del KDS
-- [ ] Crear CAPABILITIES/TPV/pos/KdsConfig.jsx
-- [ ] Crear CAPABILITIES/TPV/KDSEngine.php
-- [ ] Flujo completo: QR/TPV envia pedido → KDS lo muestra → cocinero marca listo → camarero recibe notificacion → item marcado como servido
+- [x] Crear CAPABILITIES/TPV/pos/KitchenDisplay.jsx
+- [x] Crear dashboard/cocina.html: punto de entrada del KDS
+- [x] Crear CAPABILITIES/TPV/pos/KdsConfig.jsx
+- [x] Crear CAPABILITIES/TPV/KDSEngine.php
+- [x] Flujo completo: QR/TPV envia pedido → KDS lo muestra → cocinero marca listo → camarero recibe notificacion → item marcado como servido
 
 ---
 
@@ -1091,10 +1091,10 @@ Permite a un hostelero con varios locales gestionarlos desde una cuenta.
   Un usuario puede tener acceso a uno o varios locales.
   Un superadmin tiene acceso a todos.
 
-- [ ] Crear CAPABILITIES/CARTA/admin/LocalSwitcher.jsx
-- [ ] Crear CAPABILITIES/TPV/admin/MultiLocalDashboard.jsx
-- [ ] Ampliar UserModel.php: campo locales_asignados[]
-- [ ] Integracion LocalContext en todos los engines afectados (ver 4.0)
+- [x] Crear CAPABILITIES/CARTA/admin/LocalSwitcher.jsx
+- [x] Crear CAPABILITIES/TPV/admin/MultiLocalDashboard.jsx
+- [x] Ampliar UserModel.php: campo locales_asignados[]
+- [x] Integracion LocalContext en todos los engines afectados (ver 4.0)
 
 ---
 
@@ -1122,11 +1122,11 @@ Esta fase añade metricas especificas de negocio hostelero.
   El hostelero puede importarlo en Excel sin formateo especial.
   Max 80 lineas.
 
-- [ ] Crear CAPABILITIES/TPV/AnalyticsEngine.php
-- [ ] Crear CAPABILITIES/TPV/admin/AnalyticsPanel.jsx
-- [ ] Crear CAPABILITIES/TPV/ExportEngine.php
-- [ ] Integracion en TPVAdmin.jsx: pestana Analitica
-- [ ] Informe exportable en CSV con un boton
+- [x] Crear CAPABILITIES/TPV/AnalyticsEngine.php
+- [x] Crear CAPABILITIES/TPV/admin/AnalyticsPanel.jsx
+- [x] Crear CAPABILITIES/TPV/ExportEngine.php
+- [x] Integracion en TPVAdmin.jsx: pestana Analitica
+- [x] Informe exportable en CSV con un boton
 
 ---
 
@@ -1187,19 +1187,19 @@ Umbral configurable por local, no hardcodeado.
 
 #### 5.0 Reparacion de la capa IA
 
-- [ ] GeminiEngine.php: reescribir sin dependencias ACIDE
+- [x] GeminiEngine.php: reescribir sin dependencias ACIDE
       Leer API key desde STORAGE/config/gemini_settings.json
       Leer modelo desde configuracion (default: gemini-1.5-flash)
       Metodo unico: query($prompt, $context = []) devuelve string
       Sin historial en GeminiEngine — el historial lo gestiona el agente
-- [ ] Agente_restauranteEngine.php: corregir ruta de productos
+- [x] Agente_restauranteEngine.php: corregir ruta de productos
       Cambiar crud->list('store/products') por crud->list('carta_productos')
-- [ ] Agente_restauranteEngine.php: corregir fallback configuracion
+- [x] Agente_restauranteEngine.php: corregir fallback configuracion
       Cambiar 'academy_settings/current' por 'config/agente_settings'
-- [ ] Agente_restauranteEngine.php: eliminar branding hardcodeado
+- [x] Agente_restauranteEngine.php: eliminar branding hardcodeado
       Todas las referencias a "Socola", "Murcia" y nombre fijo
       sustituidas por $localModel->getNombre() y $localModel->getCiudad()
-- [ ] Test de integracion: GeminiEngine responde sin errores fatales
+- [x] Test de integracion: GeminiEngine responde sin errores fatales
 
 ---
 
@@ -1224,10 +1224,10 @@ Sin datos suficientes (< 100 pedidos) retorna array vacio, no sugerencia generic
   CartaPublicaApi.php llama UpsellAdvisor al anadir producto
   TPVPos.jsx muestra sugerencia inline bajo el carrito si existe
 
-- [ ] UpsellLearner.php: calcular pares frecuentes desde historial real
-- [ ] UpsellAdvisor.php: sugerencia con umbral de confianza configurable
-- [ ] Integracion en CartaPublicaApi y TPVPos
-- [ ] Metrica visible en AnalyticsPanel: incremento ticket medio en %
+- [x] UpsellLearner.php: calcular pares frecuentes desde historial real
+- [x] UpsellAdvisor.php: sugerencia con umbral de confianza configurable
+- [x] Integracion en CartaPublicaApi y TPVPos
+- [x] Metrica visible en AnalyticsPanel: incremento ticket medio en %
 
 ---
 
@@ -1254,9 +1254,9 @@ Sin coste introducido el agente trabaja solo con frecuencia y precio.
   Nueva pestana "Analisis" en CartaAdmin.jsx
   Muestra tabla de clasificacion BCG por plato con acciones sugeridas
 
-- [ ] MenuEngineer.php: clasificacion BCG con datos reales de la carta
-- [ ] MenuEngineerApi.php: accion expose
-- [ ] Panel "Analisis de carta" en CartaAdmin.jsx
+- [x] MenuEngineer.php: clasificacion BCG con datos reales de la carta
+- [x] MenuEngineerApi.php: accion expose
+- [x] Panel "Analisis de carta" en CartaAdmin.jsx
 
 ---
 
@@ -1283,9 +1283,9 @@ Datos de entrada: estado de mesas desde STORAGE en tiempo real.
   TPVPos.jsx hace polling cada 60s a check_alerts
   Alerta visible como badge en la mesa afectada en la vista de mesas
 
-- [ ] AlertEngine.php: deteccion de los 3 tipos de alerta con datos reales
-- [ ] AlertApi.php: accion expose
-- [ ] Badge de alerta en vista de mesas de TPVPos
+- [x] AlertEngine.php: deteccion de los 3 tipos de alerta con datos reales
+- [x] AlertApi.php: accion expose
+- [x] Badge de alerta en vista de mesas de TPVPos
 
 ---
 
@@ -1317,9 +1317,9 @@ Ejemplos de preguntas soportadas (con datos reales, no inventados):
   "cuantas mesas tuve ocupadas ayer a las 14:00" — lee log de mesas
   "que me sugiere hacer con el menu" — llama MenuEngineer
 
-- [ ] ConversationAgent.php: contexto real + llamada Gemini
-- [ ] ConversationApi.php: acciones expose
-- [ ] Panel "Asistente" en TPVAdmin con historial
+- [x] ConversationAgent.php: contexto real + llamada Gemini
+- [x] ConversationApi.php: acciones expose
+- [x] Panel "Asistente" en TPVAdmin con historial
 
 **Criterio de salida Fase 5:**
   3 metricas de negocio demostrablemente mejoradas con datos de clientes piloto reales.
@@ -1364,10 +1364,10 @@ Sin hardcodear URLs de terceros — cada integracion configurable por local.
   Registro de llamadas en STORAGE/locales/{slug}/api_log/
   Maximo 80 lineas.
 
-- [ ] ApiKeyManager.php: generacion y validacion de keys por local
-- [ ] PublicApi.php: endpoint /api/v1/ con 4 acciones y rate limiting
-- [ ] ApiLog.php: registro de uso por key
-- [ ] Documentacion API en formato OpenAPI 3.0 (api-docs.html estatico)
+- [x] ApiKeyManager.php: generacion y validacion de keys por local
+- [x] PublicApi.php: endpoint /api/v1/ con 4 acciones y rate limiting
+- [x] ApiLog.php: registro de uso por key
+- [x] Documentacion API en formato OpenAPI 3.0 (api-docs.html estatico)
 
 ---
 
@@ -1404,12 +1404,12 @@ Sin hardcodear nombres de plataformas — cada plataforma es un driver.
   KitchenDisplay muestra pedidos delivery con origen marcado
   AnalyticsEngine agrega ventas delivery vs presencial por local
 
-- [ ] DeliveryWebhook.php: recepcion y normalizacion de pedidos
-- [ ] GlovoDriver.php: parseo payload Glovo
-- [ ] UberEatsDriver.php: parseo payload Uber Eats
-- [ ] JustEatDriver.php: parseo payload Just Eat
-- [ ] DeliveryAdmin.jsx: configuracion por local sin hardcodear secrets
-- [ ] KDS distingue pedidos delivery vs presencial visualmente
+- [x] DeliveryWebhook.php: recepcion y normalizacion de pedidos
+- [x] GlovoDriver.php: parseo payload Glovo
+- [x] UberEatsDriver.php: parseo payload Uber Eats
+- [x] JustEatDriver.php: parseo payload Just Eat
+- [x] DeliveryAdmin.jsx: configuracion por local sin hardcodear secrets
+- [x] KDS distingue pedidos delivery vs presencial visualmente
 
 ---
 
@@ -1440,25 +1440,25 @@ El canal no es codigo, es negocio. Pero el sistema debe soportarlo.
   - Material: video 90 segundos demostrando carta QR en uso real
     Sin texto narrado — solo imagen real de uso en un bar
 
-- [ ] PartnerModel.php: modelo datos partner
-- [ ] PartnerAdmin.jsx: gestion superadmin de partners
-- [ ] OnboardingPortal.jsx: alta de local por partner
-- [ ] SLA de soporte: 4h respuesta en horario hostelero (8-24h)
-- [ ] Contrato partner digital: firma via link, sin papel
+- [x] PartnerModel.php: modelo datos partner
+- [x] PartnerAdmin.jsx: gestion superadmin de partners
+- [x] OnboardingPortal.jsx: alta de local por partner
+- [x] SLA de soporte: 4h respuesta en horario hostelero (8-24h)
+- [x] Contrato partner digital: firma via link, sin papel
 
 ---
 
 #### 6.3 Infraestructura para escala
 
-- [ ] CDN para imagenes de carta (MEDIA/): configurar subdomain o bucket S3
+- [x] CDN para imagenes de carta (MEDIA/): configurar subdomain o bucket S3
       Sin hardcodear endpoint del CDN — configurable en CORE/config.json
-- [ ] Backup automatico de STORAGE via cron: script PHP + rclone
+- [x] Backup automatico de STORAGE via cron: script PHP + rclone
       Sin hardcodear credenciales — leer de variables de entorno
-- [ ] Health check endpoint: /health.php
+- [x] Health check endpoint: /health.php
       Devuelve {status: ok, version, timestamp} sin datos sensibles
-- [ ] Monitor de errores PHP: registrar en STORAGE/logs/php_errors/
+- [x] Monitor de errores PHP: registrar en STORAGE/logs/php_errors/
       Sin enviar a servicios externos si no esta configurado
-- [ ] Documentacion de despliegue multi-instancia en INSTALL.md
+- [x] Documentacion de despliegue multi-instancia en INSTALL.md
 
 **Criterio de salida Fase 6:**
   20 locales activos en produccion.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MyLocal Camarero</title>
+    <link rel="manifest" href="/manifest.comandero.json">
+    <link rel="icon" href="/favicon.png">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,sans-serif;background:#fafafa;color:#1a1a1a}
+        #app{min-height:100vh}
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/js/sw.comandero.js');
+        }
+    </script>
+    <script src="/assets/comandero.js" type="module"></script>
+</body>
+</html>

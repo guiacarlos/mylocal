@@ -38,6 +38,10 @@ class LocalModel
             'idioma_defecto' => $data['idioma_defecto'] ?? 'es',
             'idiomas_activos' => $data['idiomas_activos'] ?? ['es'],
             'timezone' => $data['timezone'] ?? 'Europe/Madrid',
+            'modo_tpv' => $data['modo_tpv'] ?? 'sala',
+            'nif' => $data['nif'] ?? '',
+            'nombre_fiscal' => $data['nombre_fiscal'] ?? '',
+            'domicilio_fiscal' => $data['domicilio_fiscal'] ?? '',
             'activo' => true,
             'created_at' => date('c'),
             'updated_at' => date('c')

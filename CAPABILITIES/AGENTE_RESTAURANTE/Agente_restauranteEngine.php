@@ -22,6 +22,13 @@ class Agente_restauranteEngine
         $this->crud = $services['crud'] ?? null;
     }
 
+    private function getActiveLocalId()
+    {
+        $locales = $this->crud->list('carta_locales');
+        if (isset($locales['data'][0])) return $locales['data'][0]['id'];
+        return '';
+    }
+
     public function executeAction($action, $args = [])
     {
         switch ($action) {
@@ -79,7 +86,7 @@ class Agente_restauranteEngine
         }
 
         // ── Cargar catálogo publicado ─────────────────────────────────
-        $allProducts = $this->crud->list('store/products');
+        $allProducts = $this->crud->list('carta_productos');
         $catalog = [];
         foreach ($allProducts as $p) {
             if (($p['status'] ?? '') === 'publish') {
@@ -159,16 +166,15 @@ class Agente_restauranteEngine
         $model  = $sysConfig['ai_model'] ?? '';
 
         if (empty($apiKey)) {
-            // Fallback: academy_settings/current (donde viven las keys en proyectos)
-            $acadSettings = $this->crud->read('academy_settings', 'current') ?: [];
-            $apiKey = $acadSettings['gemini_api_key'] ?? '';
+            $agenteSettings = $this->crud->read('config', 'agente_settings') ?: [];
+            $apiKey = $agenteSettings['gemini_api_key'] ?? '';
             if (empty($model)) {
-                $model = $acadSettings['gemini_model'] ?? 'gemini-2.0-flash';
+                $model = $agenteSettings['gemini_model'] ?? 'gemini-2.0-flash';
             }
         }
 
         if (empty($apiKey) || empty($model)) {
-            error_log("[ACIDE] Error: Falta configuración IA (API Key o Modelo) en system/configs ni academy_settings/current");
+            error_log("[AGENTE] Error: Falta configuracion IA (API Key o Modelo) en system/configs ni config/agente_settings");
             return [
                 'success' => true,
                 'data' => [
@@ -221,7 +227,9 @@ class Agente_restauranteEngine
 
         // Personalidad del agente
         $settings = $this->crud->read('agente_restaurante', 'settings');
-        $persona = 'Eres el Maître de Socolá, cafetería de especialidad en Murcia. Eres elegante, experto y comercial.';
+        $localInfo = $this->crud->read('carta_locales', $this->getActiveLocalId()) ?: [];
+        $nombreLocal = $localInfo['nombre'] ?? 'el restaurante';
+        $persona = "Eres el asistente de $nombreLocal. Eres profesional, experto y comercial.";
         if (!empty($settings['agents'][0])) {
             $a = $settings['agents'][0];
             $persona = $a['context'] ?? $persona;
@@ -507,7 +515,7 @@ class Agente_restauranteEngine
                         'name' => 'Maître Socolá',
                         'category' => 'SALA',
                         'tone' => 'Cordial, elegante y conciso',
-                        'context' => 'Eres el Maître de Socolá, cafetería de especialidad en Murcia. Conoces todos los productos a la perfección y recomiendas con pasión los cafés de especialidad y la repostería artesanal.'
+                        'context' => 'Eres el asistente del restaurante. Conoces todos los productos a la perfeccion y recomiendas con profesionalidad.'
                     ]
                 ]
             ]);
