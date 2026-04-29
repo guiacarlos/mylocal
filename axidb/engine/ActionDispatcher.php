@@ -503,6 +503,10 @@ class ActionDispatcher
                     case 'acknowledge_request':
                     case 'create_revolut_payment':
                     case 'check_revolut_payment':
+                    case 'generate_qr_image':
+                    case 'generate_qr_carta':
+                    case 'export_qr_zona':
+                    case 'export_qr_all':
                         return $this->getQRHandler()->execute($action, $data);
 
                     case 'get_mesa_settings':
@@ -534,6 +538,37 @@ class ActionDispatcher
                                 'bizumPhone' => $settings['bizumPhone'] ?? '',
                             ]
                         ];
+
+                    case 'get_carta':
+                    case 'get_carta_mesa':
+                    case 'get_producto':
+                    case 'create_local':
+                    case 'update_local':
+                    case 'get_local':
+                    case 'list_locales':
+                    case 'delete_local':
+                    case 'create_categoria':
+                    case 'update_categoria':
+                    case 'get_categoria':
+                    case 'list_categorias':
+                    case 'delete_categoria':
+                    case 'create_producto':
+                    case 'update_producto':
+                    case 'get_producto_admin':
+                    case 'list_productos':
+                    case 'list_productos_categoria':
+                    case 'delete_producto':
+                    case 'create_mesa':
+                    case 'update_mesa':
+                    case 'get_mesa':
+                    case 'list_mesas':
+                    case 'list_mesas_zona':
+                    case 'get_zonas':
+                    case 'delete_mesa':
+                        if (!isset($this->services['carta'])) {
+                            throw new Exception("Capacidad CARTA no activada.");
+                        }
+                        return $this->services['carta']->executeAction($action, $data);
 
                     default:
                         throw new Exception("Acción no reconocida: $action");

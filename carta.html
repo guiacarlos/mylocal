@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta</title>
+    <meta name="description" content="Carta digital del restaurante">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <script type="application/ld+json" id="schema-org"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,sans-serif;background:#fafafa;color:#1a1a1a}
+        .carta-header{background:#fff;padding:1rem;text-align:center;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10}
+        .carta-header h1{font-size:1.5rem;margin-bottom:.25rem}
+        .carta-header p{color:#666;font-size:.9rem}
+        .carta-lang{display:flex;justify-content:center;gap:.5rem;margin-top:.5rem}
+        .carta-lang button{border:1px solid #ddd;background:#fff;padding:.25rem .75rem;border-radius:4px;cursor:pointer;font-size:.8rem}
+        .carta-lang button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+        .carta-cats{display:flex;gap:.5rem;padding:.75rem 1rem;overflow-x:auto;background:#fff;border-bottom:1px solid #eee}
+        .carta-cats button{border:1px solid #ddd;background:#fff;padding:.5rem 1rem;border-radius:20px;cursor:pointer;white-space:nowrap;font-size:.85rem}
+        .carta-cats button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+        .carta-body{max-width:600px;margin:0 auto;padding:1rem}
+        .cat-section{margin-bottom:1.5rem}
+        .cat-section h2{font-size:1.1rem;padding:.5rem 0;border-bottom:2px solid #1a1a1a;margin-bottom:.75rem}
+        .producto{display:flex;justify-content:space-between;align-items:flex-start;padding:.75rem 0;border-bottom:1px solid #f0f0f0}
+        .producto-info{flex:1}
+        .producto-nombre{font-weight:600;font-size:.95rem}
+        .producto-desc{color:#666;font-size:.85rem;margin-top:.2rem}
+        .producto-alergenos{color:#999;font-size:.75rem;margin-top:.2rem}
+        .producto-precio{font-weight:700;font-size:1rem;white-space:nowrap;margin-left:1rem}
+        .mesa-banner{background:#f0f4ff;padding:.75rem 1rem;text-align:center;font-size:.9rem;color:#334}
+        .carta-loading{text-align:center;padding:3rem;color:#666}
+        .carta-error{text-align:center;padding:3rem;color:#c00}
+    </style>
+</head>
+<body>
+    <div id="carta-app">
+        <div class="carta-loading">Cargando carta...</div>
+    </div>
+    <script src="/js/socola-carta.js"></script>
+</body>
+</html>

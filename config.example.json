@@ -1,0 +1,12 @@
+{
+    "storage_root": "",
+    "media_root": "",
+    "app_name": "MyLocal",
+    "app_url": "",
+    "timezone": "Europe/Madrid",
+    "debug": false,
+    "session_lifetime": 86400,
+    "cors_origins": [],
+    "gemini_api_key": "",
+    "gemini_model": "gemini-1.5-flash"
+}

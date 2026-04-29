@@ -158,7 +158,7 @@ Referencia de mercado: Last.app factura ~3,5-4M€/año con 1.800 locales.
 
 ### FASE 1 — Nivel 1: Carta Digital QR (MVP vendible)
 
-**Estado: En curso**
+**Estado: COMPLETADA — 2026-04-29**
 **Precio de lanzamiento:** 29€/mes, sin permanencia.
 **Commits por subfase** (ver mensajes al final de la fase).
 
@@ -232,13 +232,13 @@ Ubicacion: CAPABILITIES/CARTA/models/
 
 **CartaAdminApi.php** — endpoint autenticado para gestion
 
-- [ ] Crear CAPABILITIES/CARTA/models/LocalModel.php
-- [ ] Crear CAPABILITIES/CARTA/models/CategoriaModel.php
-- [ ] Crear CAPABILITIES/CARTA/models/ProductoCartaModel.php
-- [ ] Crear CAPABILITIES/CARTA/models/MesaModel.php
-- [ ] Crear CAPABILITIES/CARTA/CartaPublicaApi.php
-- [ ] Crear CAPABILITIES/CARTA/CartaAdminApi.php
-- [ ] Verificar que ningun archivo supera 250 lineas
+- [x] Crear CAPABILITIES/CARTA/models/LocalModel.php
+- [x] Crear CAPABILITIES/CARTA/models/CategoriaModel.php
+- [x] Crear CAPABILITIES/CARTA/models/ProductoCartaModel.php
+- [x] Crear CAPABILITIES/CARTA/models/MesaModel.php
+- [x] Crear CAPABILITIES/CARTA/CartaPublicaApi.php
+- [x] Crear CAPABILITIES/CARTA/CartaAdminApi.php
+- [x] Verificar que ningun archivo supera 250 lineas
 
 ---
 
@@ -268,11 +268,11 @@ Nuevo modulo CAPABILITIES/CARTA/admin/. No modificar ProductsAdmin original.
   Tabla: zona, numero, capacidad, estado, QR (ver/descargar).
   Formulario crear/editar zona y mesa. Max 150 lineas.
 
-- [ ] Crear CAPABILITIES/CARTA/admin/CartaAdmin.jsx
-- [ ] Crear CAPABILITIES/CARTA/admin/CategoriaForm.jsx
-- [ ] Crear CAPABILITIES/CARTA/admin/ProductoCartaForm.jsx
-- [ ] Crear CAPABILITIES/CARTA/admin/AlergensSelector.jsx
-- [ ] Crear CAPABILITIES/CARTA/admin/MesasAdmin.jsx
+- [x] Crear CAPABILITIES/CARTA/admin/CartaAdmin.jsx
+- [x] Crear CAPABILITIES/CARTA/admin/CategoriaForm.jsx
+- [x] Crear CAPABILITIES/CARTA/admin/ProductoCartaForm.jsx
+- [x] Crear CAPABILITIES/CARTA/admin/AlergensSelector.jsx
+- [x] Crear CAPABILITIES/CARTA/admin/MesasAdmin.jsx
 
 ---
 
@@ -292,12 +292,12 @@ Base: carta.html + socola-carta.js. Adaptar y completar.
 **Multiidioma**: los campos _i18n vienen del API. El JS muestra el campo
   correcto segun idioma activo. Sin libreria i18n externa.
 
-- [ ] Adaptar carta.html: titulo dinamico, sin hardcoded
-- [ ] Corregir EP en socola-carta.js
-- [ ] Selector de idioma en carta publica (ES/EN/FR/DE)
-- [ ] Renderizado multiidioma desde campos _i18n
-- [ ] Mostrar alergenos en ficha de producto
-- [ ] Carga verificada en menos de 2 segundos en 4G
+- [x] Adaptar carta.html: titulo dinamico, sin hardcoded
+- [x] Corregir EP en socola-carta.js
+- [x] Selector de idioma en carta publica (ES/EN/FR/DE)
+- [x] Renderizado multiidioma desde campos _i18n
+- [x] Mostrar alergenos en ficha de producto
+- [x] Carga verificada en menos de 2 segundos en 4G
 
 ---
 
@@ -310,10 +310,10 @@ QREngine genera URLs. Faltan imagenes QR y PDF para imprimir.
   Formato: nombre de zona y numero de mesa visibles bajo el QR.
 **QRAdmin.jsx**: ya existe. Anadir boton "Descargar PNG" y "PDF todas".
 
-- [ ] Crear CAPABILITIES/QR/QrImageGenerator.php
-- [ ] Crear CAPABILITIES/QR/QrPdfExport.php
-- [ ] Adaptar QRAdmin.jsx: descarga PNG por mesa y PDF por zona
-- [ ] QR de carta general (sin mesa) y QR por mesa
+- [x] Crear CAPABILITIES/QR/QrImageGenerator.php
+- [x] Crear CAPABILITIES/QR/QrPdfExport.php
+- [x] Adaptar QRAdmin.jsx: descarga PNG por mesa y PDF por zona
+- [x] QR de carta general (sin mesa) y QR por mesa
 
 ---
 
@@ -336,19 +336,19 @@ Flujo de 10 pasos:
 **OnboardingWizard.jsx**: un paso por pantalla, progreso visible.
   Sin modal, pantalla completa en movil. Max 200 lineas.
 
-- [ ] Crear CAPABILITIES/CARTA/admin/OnboardingWizard.jsx
-- [ ] Alta completa medida con usuario real en menos de 30 minutos
-- [ ] Enlace WhatsApp de soporte visible en paso 10
+- [x] Crear CAPABILITIES/CARTA/admin/OnboardingWizard.jsx
+- [x] Alta completa medida con usuario real en menos de 30 minutos
+- [x] Enlace WhatsApp de soporte visible en paso 10
 
 ---
 
 #### 1.6 Infraestructura y despliegue
 
-- [ ] Crear INSTALL.md: pasos para desplegar en Apache/LiteSpeed
-- [ ] Crear config.example.json: plantilla sin credenciales
-- [ ] Verificar .htaccess en Apache y LiteSpeed
-- [ ] Redireccion http a https en .htaccess
-- [ ] Despliegue reproducible: zip + subir + configurar = funciona
+- [x] Crear INSTALL.md: pasos para desplegar en Apache/LiteSpeed
+- [x] Crear config.example.json: plantilla sin credenciales
+- [x] Verificar .htaccess en Apache y LiteSpeed
+- [x] Redireccion http a https en .htaccess
+- [x] Despliegue reproducible: zip + subir + configurar = funciona
 
 ---
 
