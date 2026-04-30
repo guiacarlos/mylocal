@@ -38,6 +38,14 @@ class QREngine
                 return $this->createRevolutPayment($data);
             case 'check_revolut_payment':
                 return $this->checkRevolutPayment($data);
+            case 'generate_qr_image':
+                return $this->generateQrImage($data);
+            case 'generate_qr_carta':
+                return $this->generateQrCarta($data);
+            case 'export_qr_zona':
+                return $this->exportQrZona($data);
+            case 'export_qr_all':
+                return $this->exportQrAll($data);
             case 'bootstrap_qr':
                 return ['success' => true, 'message' => 'Cimientos de QR forjados con éxito.'];
             default:
@@ -681,5 +689,44 @@ class QREngine
     private function checkRevolutPayment($data)
     {
         return ['success' => false, 'error' => 'Modulo de pago no disponible. Se implementara en Fase 2.'];
+    }
+
+    private function generateQrImage($data)
+    {
+        require_once __DIR__ . '/QrImageGenerator.php';
+        $gen = new QrImageGenerator(intval($data['size'] ?? 300));
+        $baseUrl = $data['base_url'] ?? $this->detectBaseUrl();
+        return $gen->generateForMesa($baseUrl, $data['local_slug'] ?? '', $data['zona'] ?? '', $data['numero'] ?? 1);
+    }
+
+    private function generateQrCarta($data)
+    {
+        require_once __DIR__ . '/QrImageGenerator.php';
+        $gen = new QrImageGenerator(intval($data['size'] ?? 300));
+        $baseUrl = $data['base_url'] ?? $this->detectBaseUrl();
+        return $gen->generateForCarta($baseUrl, $data['local_slug'] ?? '');
+    }
+
+    private function exportQrZona($data)
+    {
+        require_once __DIR__ . '/QrPdfExport.php';
+        $export = new QrPdfExport();
+        $baseUrl = $data['base_url'] ?? $this->detectBaseUrl();
+        return $export->exportZona($baseUrl, $data['local_slug'] ?? '', $data['local_nombre'] ?? '', $data['zona_nombre'] ?? '', $data['mesas'] ?? []);
+    }
+
+    private function exportQrAll($data)
+    {
+        require_once __DIR__ . '/QrPdfExport.php';
+        $export = new QrPdfExport();
+        $baseUrl = $data['base_url'] ?? $this->detectBaseUrl();
+        return $export->exportAll($baseUrl, $data['local_slug'] ?? '', $data['local_nombre'] ?? '', $data['mesas'] ?? []);
+    }
+
+    private function detectBaseUrl()
+    {
+        $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+        return $scheme . '://' . $host;
     }
 }

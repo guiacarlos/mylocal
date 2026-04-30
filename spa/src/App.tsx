@@ -1,21 +1,37 @@
+import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { FiUser, FiMail, FiPhone, FiBookOpen } from 'react-icons/fi';
 import { Home } from './pages/Home';
 import { Carta } from './pages/Carta';
+import { Login } from './pages/Login';
+import { LegalPage } from './pages/LegalPage';
+import { WikiIndex, WikiArticle } from './pages/WikiPage';
+import { LoginModal } from './components/LoginModal';
 
 export function App() {
+    const [loginOpen, setLoginOpen] = useState(false);
+
     return (
         <>
             <header className="sc-header">
-                <Link to="/" className="sc-logo">MyLocal</Link>
+                <Link to="/" className="sc-logo">
+                    <img src="./logo.jpg" alt="MyLocal" className="sc-logo__img" />
+                    <span className="sc-logo__text">MyLocal</span>
+                </Link>
                 <nav className="sc-nav">
                     <a href="#beneficios">Beneficios</a>
                     <a href="#experiencias">Demos</a>
                     <a href="#precios">Precios</a>
                     <a href="#contacto">Contacto</a>
-                    <Link to="/login" className="user-icon-link" title="Área Cliente">
+                    <button
+                        type="button"
+                        onClick={() => setLoginOpen(true)}
+                        className="user-icon-link"
+                        title="Area Cliente"
+                        aria-label="Abrir login"
+                    >
                         <FiUser />
-                    </Link>
+                    </button>
                 </nav>
             </header>
 
@@ -23,6 +39,20 @@ export function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/carta" element={<Carta />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/legal" element={<LegalPage />} />
+                    <Route path="/legal/:slug" element={<LegalPage />} />
+                    <Route path="/aviso-legal" element={<LegalPage />} />
+                    <Route path="/privacidad" element={<LegalPage />} />
+                    <Route path="/cookies" element={<LegalPage />} />
+                    <Route path="/uso" element={<LegalPage />} />
+                    <Route path="/terminos" element={<LegalPage />} />
+                    <Route path="/cuentas" element={<LegalPage />} />
+                    <Route path="/reembolso" element={<LegalPage />} />
+                    <Route path="/reembolsos" element={<LegalPage />} />
+                    <Route path="/wiki" element={<WikiIndex />} />
+                    <Route path="/wiki/:slug" element={<WikiArticle />} />
+                    <Route path="/docs/wiki" element={<WikiIndex />} />
                     <Route path="*" element={<Home />} />
                 </Routes>
             </main>
@@ -30,18 +60,17 @@ export function App() {
             <footer className="sc-footer">
                 <div className="master-container">
                     <div className="footer-grid">
-                        {/* 1. MyLocal */}
                         <div className="footer-brand">
+                            <img src="./logo.jpg" alt="MyLocal" className="footer-brand__img" />
                             <h2 className="font-heading" style={{color: 'var(--accent)', marginBottom: '1rem'}}>MyLocal</h2>
                             <ul className="footer-links" style={{listStyle: 'none', padding: 0}}>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>✓ 0% Comisiones</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>✓ Velocidad Local</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>✓ Privacidad Total</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)'}}>✓ Funciona Offline</li>
+                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>0% Comisiones</li>
+                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>Velocidad Local</li>
+                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>Privacidad Total</li>
+                                <li style={{color: 'rgba(252,252,252,0.8)'}}>Funciona Offline</li>
                             </ul>
                         </div>
 
-                        {/* 2. Herramientas */}
                         <div className="footer-links">
                             <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Herramientas</h4>
                             <ul>
@@ -53,7 +82,6 @@ export function App() {
                             </ul>
                         </div>
 
-                        {/* 3. Soporte */}
                         <div className="footer-links">
                             <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Soporte</h4>
                             <div className="footer-contact-info">
@@ -64,21 +92,20 @@ export function App() {
                                     <FiPhone style={{color: 'var(--accent)'}} /> <a href="tel:+34611677577">611 677 577</a>
                                 </li>
                                 <li style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                    <FiBookOpen style={{color: 'var(--accent)'}} /> <Link to="/docs/wiki">Documentación Wiki</Link>
+                                    <FiBookOpen style={{color: 'var(--accent)'}} /> <Link to="/wiki">Centro de Ayuda</Link>
                                 </li>
                             </div>
                         </div>
 
-                        {/* 4. Políticas */}
                         <div className="footer-links">
-                            <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Políticas</h4>
+                            <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Politicas</h4>
                             <ul>
-                                <li><Link to="/reembolso">Política de Reembolso</Link></li>
-                                <li><Link to="/cuentas">Política de Cuentas</Link></li>
-                                <li><Link to="/uso">Política de Uso</Link></li>
-                                <li><Link to="/cookies">Política de Cookies</Link></li>
-                                <li><Link to="/privacidad">Política de Privacidad</Link></li>
-                                <li><Link to="/legal">Aviso Legal</Link></li>
+                                <li><Link to="/legal/reembolsos">Politica de Reembolso</Link></li>
+                                <li><Link to="/legal/cuentas">Politica de Cuentas</Link></li>
+                                <li><Link to="/legal/terminos">Politica de Uso</Link></li>
+                                <li><Link to="/legal/cookies">Politica de Cookies</Link></li>
+                                <li><Link to="/legal/privacidad">Politica de Privacidad</Link></li>
+                                <li><Link to="/legal/aviso-legal">Aviso Legal</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -91,6 +118,8 @@ export function App() {
                     </div>
                 </div>
             </footer>
+
+            <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
         </>
     );
 }

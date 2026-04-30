@@ -6,6 +6,10 @@ DirectoryIndex index.html index.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # 0. REDIRECCION HTTP A HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # 1. API SOBERANA — prioridad absoluta, debe ir ANTES del bloqueo de seguridad
     # [END] previene que Apache reinicie las reglas con la URL reescrita (CORE/index.php)
     RewriteRule ^acide/(.*)$ CORE/$1 [END,QSA]
@@ -19,7 +23,10 @@ DirectoryIndex index.html index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^media(/.*)?$ MEDIA$1 [L]
 
-    # 5. FALLBACK Web Pública SPA
+    # 4. CARTA PUBLICA — /carta/{slug} y /carta/{slug}/{mesa}
+    RewriteRule ^carta/[a-z0-9\-]+(/[a-z0-9\-]+)?$ carta.html [L]
+
+    # 5. FALLBACK Web Publica SPA
     RewriteBase /mylocal/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

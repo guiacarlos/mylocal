@@ -1,0 +1,301 @@
+/* MyLocal - Login modal, paginas legales y wiki.
+   Importado desde index.css. Mobile-first. Sigue artifacts/skilldiseno.md */
+
+/* ============== Boton del header (icono usuario) ============== */
+.user-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid rgba(252, 252, 252, 0.25);
+    border-radius: 999px;
+    color: inherit;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    font-size: 16px;
+    padding: 0;
+}
+.user-icon-link:hover {
+    background: var(--accent, #ffd700);
+    border-color: var(--accent, #ffd700);
+    color: #111;
+}
+
+/* ============== Login modal ============== */
+.login-modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    animation: lm-fade 0.18s ease-out;
+}
+@keyframes lm-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.login-modal {
+    background: #fff;
+    color: #111;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px 16px 0 0;
+    padding: 28px 24px 24px;
+    position: relative;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.18);
+    animation: lm-up 0.22s ease-out;
+}
+@keyframes lm-up { from { transform: translateY(20px); } to { transform: translateY(0); } }
+
+.login-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #6B7280;
+    cursor: pointer;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.login-modal__close:hover { background: #F0F1F3; color: #111; }
+
+.login-modal__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+}
+.login-modal__sub {
+    font-size: 13px;
+    color: #6B7280;
+    margin: 0 0 20px;
+}
+
+.login-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.login-modal__form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+.login-modal__form input {
+    padding: 10px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-modal__form input:focus {
+    border-color: var(--accent, #ffd700);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.18);
+}
+.login-modal__form .btn {
+    margin-top: 6px;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.login-modal__err {
+    margin: 0;
+    padding: 8px 12px;
+    background: #FEF2F2;
+    color: #B91C1C;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.login-modal__foot {
+    margin: 18px 0 0;
+    text-align: center;
+    font-size: 13px;
+    color: #6B7280;
+}
+.login-modal__foot a {
+    color: #111;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+    .login-modal__overlay { align-items: center; padding: 16px; }
+    .login-modal { border-radius: 16px; padding: 32px 28px 28px; }
+}
+
+/* ============== Paginas legales ============== */
+.sc-legal {
+    background: #FAFAF8;
+    color: #111;
+    padding: 56px 0 80px;
+    min-height: 70vh;
+}
+.sc-legal .master-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.sc-legal__nav {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 4px;
+}
+.sc-legal__nav a { color: #6B7280; text-decoration: none; }
+.sc-legal__nav a:hover { color: #111; text-decoration: underline; }
+
+.sc-legal__side {
+    background: #fff;
+    border: 1px solid #E5E5E3;
+    border-radius: 12px;
+    padding: 18px 18px 22px;
+    height: fit-content;
+}
+.sc-legal__side h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6B7280;
+}
+.sc-legal__side ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sc-legal__side a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 6px;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.12s;
+}
+.sc-legal__side a:hover { background: #F0F1F3; }
+
+.sc-legal__article {
+    background: #fff;
+    border: 1px solid #E5E5E3;
+    border-radius: 12px;
+    padding: 28px 24px;
+}
+
+@media (min-width: 900px) {
+    .sc-legal .master-container {
+        grid-template-columns: 240px 1fr;
+        gap: 32px;
+    }
+    .sc-legal__nav { grid-column: 1 / -1; }
+    .sc-legal__article { padding: 36px 40px; }
+}
+
+/* ============== Wiki ============== */
+.sc-wiki {
+    background: #FAFAF8;
+    padding: 56px 0 80px;
+    min-height: 70vh;
+    color: #111;
+}
+.sc-wiki h1 { font-size: 32px; margin: 0 0 6px; letter-spacing: -0.01em; }
+.sc-wiki__sub { font-size: 15px; color: #6B7280; margin: 0 0 32px; max-width: 640px; }
+
+.sc-wiki__sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+.sc-wiki__section {
+    background: #fff;
+    border: 1px solid #E5E5E3;
+    border-radius: 12px;
+    padding: 20px 22px;
+}
+.sc-wiki__section h2 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6B7280;
+}
+.sc-wiki__section ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.sc-wiki__section a {
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.sc-wiki__section a:hover { color: var(--accent, #ffd700); text-decoration: underline; }
+
+@media (min-width: 768px) { .sc-wiki__sections { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .sc-wiki__sections { grid-template-columns: repeat(3, 1fr); } }
+
+/* ============== Render markdown comun ============== */
+.md-view { font-size: 15px; line-height: 1.65; color: #1F2937; }
+.md-view h1 { font-size: 28px; margin: 0 0 18px; letter-spacing: -0.01em; }
+.md-view h2 { font-size: 20px; margin: 28px 0 10px; color: #111; }
+.md-view h3 { font-size: 16px; margin: 22px 0 8px; color: #111; }
+.md-view p { margin: 10px 0; }
+.md-view ul, .md-view ol { margin: 10px 0 14px; padding-left: 22px; }
+.md-view li { margin: 4px 0; }
+.md-view a { color: #111; text-decoration: underline; }
+.md-view code {
+    background: #F3F4F6;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'Menlo', monospace;
+    font-size: 13px;
+}
+.md-view pre {
+    background: #111;
+    color: #F0F1F3;
+    padding: 14px 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13px;
+    margin: 14px 0;
+}
+.md-view pre code { background: transparent; color: inherit; padding: 0; }
+.md-view hr { border: none; border-top: 1px solid #E5E5E3; margin: 22px 0; }
+.md-view .md-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+}
+.md-view .md-table th,
+.md-view .md-table td {
+    padding: 8px 10px;
+    border: 1px solid #E5E5E3;
+    text-align: left;
+}
+.md-view .md-table th { background: #F8F8F6; font-weight: 600; }
+
+.sc-err { color: #B91C1C; font-size: 14px; }

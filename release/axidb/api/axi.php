@@ -75,6 +75,7 @@ $publicActions = [
     'process_external_order', 'table_request', 'get_table_order',
     'update_table_cart', 'get_table_requests', 'get_mesa_settings',
     'create_revolut_payment', 'check_revolut_payment',
+    'get_carta', 'get_carta_mesa', 'get_producto',
 ];
 
 if (in_array($actionCors, $publicActions, true) || $actionCors === '') {

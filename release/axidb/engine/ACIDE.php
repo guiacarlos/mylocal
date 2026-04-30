@@ -82,7 +82,7 @@ class ACIDE
     {
         $root = realpath(__DIR__ . '/../../');
         $capabilitiesRoot = $root . '/CAPABILITIES';
-        $capacities = ['STORE', 'ACADEMY', 'RESERVAS', 'GEMINI', 'AGENTE_RESTAURANTE', 'RESTAURANT_ORGANIZER', 'QR', 'FSE'];
+        $capacities = ['STORE', 'ACADEMY', 'RESERVAS', 'GEMINI', 'AGENTE_RESTAURANTE', 'RESTAURANT_ORGANIZER', 'QR', 'FSE', 'CARTA', 'PAYMENT'];
 
         //  RESOLUCIÓN DE ESTADO SOBERANO: Solo cargamos lo que está ACTIVO
         $activeDoc = $this->services['crud']->read('system', 'active_plugins');
@@ -165,7 +165,10 @@ class ACIDE
             'get_table_requests', // Ver solicitudes activas de mesa
             'get_mesa_settings', // Configuración pública de la mesa
             'create_revolut_payment', // Pago Revolut desde carta QR
-            'check_revolut_payment' // Verificar estado de pago QR
+            'check_revolut_payment', // Verificar estado de pago QR
+            'get_carta', // Carta publica por slug
+            'get_carta_mesa', // Carta publica con contexto de mesa
+            'get_producto' // Producto individual publico
         ];
 
         // Colecciones explícitamente públicas (Fase 3)

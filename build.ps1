@@ -34,6 +34,7 @@ $include = @(
     "gateway.php",
     "router.php",
     "favicon.png",
+    "favicon.jpg",
     "manifest.json",
     "robots.txt",
     "schema.json"

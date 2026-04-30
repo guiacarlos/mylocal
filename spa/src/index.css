@@ -1,3 +1,5 @@
+@import './styles/login-legal-wiki.css';
+
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/Inter-400.ttf') format('truetype');
@@ -242,12 +244,34 @@ h1, h2, h3, .font-heading {
 
 .sc-logo {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.2rem; /* Más pequeño */
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--primary);
   text-decoration: none;
   letter-spacing: -0.5px;
   margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.sc-logo__img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sc-logo__text { line-height: 1; }
+.footer-brand__img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  display: block;
+  margin-bottom: 14px;
+  border: 1px solid rgba(252, 252, 252, 0.15);
 }
 
 .sc-nav {
@@ -285,6 +309,7 @@ h1, h2, h3, .font-heading {
     margin-bottom: 0.5rem;
     font-size: 1.6rem;
   }
+  .sc-logo__img { width: 38px; height: 38px; }
   .sc-nav {
     width: auto;
     gap: 3rem;
