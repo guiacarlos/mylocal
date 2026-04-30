@@ -42,6 +42,18 @@ if (!defined('MEDIA_ROOT'))
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
 
+// 🚀 AUTO-BOOTSTRAP: si no hay usuarios todavia, crear los por defecto.
+// Garantiza que un despliegue limpio (release/ recien subido) tenga
+// credenciales operativas desde el primer arranque.
+$_vaultIndex = STORAGE_ROOT . '/.vault/users/index.json';
+$_needsBootstrap = !file_exists($_vaultIndex) || trim(@file_get_contents($_vaultIndex)) === '[]' || trim(@file_get_contents($_vaultIndex)) === '';
+if ($_needsBootstrap && file_exists(__DIR__ . '/bootstrap_users.php')) {
+    require_once __DIR__ . '/bootstrap_users.php';
+    if (function_exists('bootstrapDefaultUsers')) {
+        @bootstrapDefaultUsers();
+    }
+}
+
 // 🔑 Leer input UNA SOLA VEZ (php://input solo se puede leer una vez)
 $rawInput = file_get_contents('php://input');
 $input = json_decode($rawInput, true) ?: ($_POST ?: $_GET);

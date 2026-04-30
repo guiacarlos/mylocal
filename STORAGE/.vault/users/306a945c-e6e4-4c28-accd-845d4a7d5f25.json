@@ -1,0 +1,12 @@
+{
+    "id": "306a945c-e6e4-4c28-accd-845d4a7d5f25",
+    "email": "camarero@socola.es",
+    "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$QmxPc2ZwSUF1WUhoUkFDNQ$iS8ma8cyo8PT6WkQ66Ttw9eDpl2GP3Uky39XlS24bQ8",
+    "name": "Editor Camarero",
+    "role": "camarero",
+    "status": "active",
+    "metadata": {},
+    "created_at": "2026-04-30T11:29:16+00:00",
+    "updated_at": "2026-04-30T11:29:16+00:00",
+    "last_login": null
+}
