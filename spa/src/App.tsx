@@ -1,125 +1,149 @@
-import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import { FiUser, FiMail, FiPhone, FiBookOpen } from 'react-icons/fi';
+import { useEffect, useState } from 'react';
+import { Routes, Route, Outlet, useNavigate, useLocation } from 'react-router-dom';
+
 import { Home } from './pages/Home';
 import { Carta } from './pages/Carta';
-import { Login } from './pages/Login';
+import { Dashboard } from './pages/Dashboard';
+import { TPV } from './pages/TPV';
+import { MesaQR } from './pages/MesaQR';
 import { LegalPage } from './pages/LegalPage';
 import { WikiIndex, WikiArticle } from './pages/WikiPage';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { LoginModal } from './components/LoginModal';
+import { useSynaxis } from './hooks/useSynaxis';
+import { ensureCsrfToken, getCurrentUser } from './services/auth.service';
 
-export function App() {
+function PublicLayout() {
     const [loginOpen, setLoginOpen] = useState(false);
+    const location = useLocation();
+
+    // Si venimos redirigidos con ?login=1, abrimos el modal automáticamente
+    useEffect(() => {
+        if (location.search.includes('login=1')) {
+            setLoginOpen(true);
+        }
+    }, [location]);
 
     return (
-        <>
-            <header className="sc-header">
-                <Link to="/" className="sc-logo">
-                    <img src="./logo.jpg" alt="MyLocal" className="sc-logo__img" />
-                    <span className="sc-logo__text">MyLocal</span>
-                </Link>
-                <nav className="sc-nav">
-                    <a href="#beneficios">Beneficios</a>
-                    <a href="#experiencias">Demos</a>
-                    <a href="#precios">Precios</a>
-                    <a href="#contacto">Contacto</a>
-                    <button
-                        type="button"
-                        onClick={() => setLoginOpen(true)}
-                        className="user-icon-link"
-                        title="Area Cliente"
-                        aria-label="Abrir login"
-                    >
-                        <FiUser />
-                    </button>
-                </nav>
-            </header>
+        <div className="sp-page" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <Header onOpenLogin={() => setLoginOpen(true)} />
 
-            <main className="mt-header">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/carta" element={<Carta />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/legal" element={<LegalPage />} />
-                    <Route path="/legal/:slug" element={<LegalPage />} />
-                    <Route path="/aviso-legal" element={<LegalPage />} />
-                    <Route path="/privacidad" element={<LegalPage />} />
-                    <Route path="/cookies" element={<LegalPage />} />
-                    <Route path="/uso" element={<LegalPage />} />
-                    <Route path="/terminos" element={<LegalPage />} />
-                    <Route path="/cuentas" element={<LegalPage />} />
-                    <Route path="/reembolso" element={<LegalPage />} />
-                    <Route path="/reembolsos" element={<LegalPage />} />
-                    <Route path="/wiki" element={<WikiIndex />} />
-                    <Route path="/wiki/:slug" element={<WikiArticle />} />
-                    <Route path="/docs/wiki" element={<WikiIndex />} />
-                    <Route path="*" element={<Home />} />
-                </Routes>
+            <main style={{ flexGrow: 1 }}>
+                <Outlet />
             </main>
 
-            <footer className="sc-footer">
-                <div className="master-container">
-                    <div className="footer-grid">
-                        <div className="footer-brand">
-                            <img src="./logo.jpg" alt="MyLocal" className="footer-brand__img" />
-                            <h2 className="font-heading" style={{color: 'var(--accent)', marginBottom: '1rem'}}>MyLocal</h2>
-                            <ul className="footer-links" style={{listStyle: 'none', padding: 0}}>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>0% Comisiones</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>Velocidad Local</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)', marginBottom: '0.5rem'}}>Privacidad Total</li>
-                                <li style={{color: 'rgba(252,252,252,0.8)'}}>Funciona Offline</li>
-                            </ul>
-                        </div>
+            <Footer />
 
-                        <div className="footer-links">
-                            <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Herramientas</h4>
-                            <ul>
-                                <li>Sitio Web Incluido</li>
-                                <li>QR Personalizados</li>
-                                <li>Carta Digital Interactiva</li>
-                                <li>TPV Local Inteligente</li>
-                                <li>Conversor Carta PDF a Digital</li>
-                            </ul>
-                        </div>
+            {loginOpen && <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />}
+        </div>
+    );
+}
 
-                        <div className="footer-links">
-                            <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Soporte</h4>
-                            <div className="footer-contact-info">
-                                <li style={{display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.8rem'}}>
-                                    <FiMail style={{color: 'var(--accent)'}} /> <a href="mailto:soporte@mylocal.es">soporte@mylocal.es</a>
-                                </li>
-                                <li style={{display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.8rem'}}>
-                                    <FiPhone style={{color: 'var(--accent)'}} /> <a href="tel:+34611677577">611 677 577</a>
-                                </li>
-                                <li style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                    <FiBookOpen style={{color: 'var(--accent)'}} /> <Link to="/wiki">Centro de Ayuda</Link>
-                                </li>
-                            </div>
-                        </div>
+/**
+ * Layout para rutas que requieren sesion.
+ * Solo aqui disparamos las validaciones de token y usuario.
+ */
+function PrivateLayout() {
+    const { client, ready } = useSynaxis();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [checking, setChecking] = useState(true);
+    const [user, setUser] = useState<any>(null);
 
-                        <div className="footer-links">
-                            <h4 style={{color: '#fff', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase'}}>Politicas</h4>
-                            <ul>
-                                <li><Link to="/legal/reembolsos">Politica de Reembolso</Link></li>
-                                <li><Link to="/legal/cuentas">Politica de Cuentas</Link></li>
-                                <li><Link to="/legal/terminos">Politica de Uso</Link></li>
-                                <li><Link to="/legal/cookies">Politica de Cookies</Link></li>
-                                <li><Link to="/legal/privacidad">Politica de Privacidad</Link></li>
-                                <li><Link to="/legal/aviso-legal">Aviso Legal</Link></li>
-                            </ul>
-                        </div>
-                    </div>
+    useEffect(() => {
+        if (!ready) return;
+        (async () => {
+            try {
+                setChecking(true);
+                console.log('[PrivateLayout] Verificando sesión...');
+                await ensureCsrfToken(client);
+                console.log('[PrivateLayout] CSRF asegurado. Token en cliente:', !!client['token']);
+                const currentUser = await getCurrentUser(client);
+                console.log('[PrivateLayout] Resultado getCurrentUser:', currentUser ? 'Usuario encontrado' : 'NULO');
+                
+                if (!currentUser) {
+                    console.warn('[PrivateLayout] Sin sesión activa. Redirigiendo a login...');
+                    navigate('/?login=1', { replace: true });
+                } else {
+                    setUser(currentUser);
+                    console.log('[PrivateLayout] Sesión válida. Rol:', currentUser.role);
+                    const role = (currentUser.role || '').toLowerCase();
+                    if (['sala', 'cocina', 'camarero'].includes(role) && !location.pathname.startsWith('/sistema')) {
+                        console.log('[PrivateLayout] Rol staff detectado. Forzando TPV.');
+                        navigate('/sistema/tpv', { replace: true });
+                    } else if (!['sala', 'cocina', 'camarero'].includes(role) && location.pathname.startsWith('/sistema')) {
+                        console.log('[PrivateLayout] Rol admin en zona staff. Redirigiendo a Dashboard.');
+                        navigate('/dashboard', { replace: true });
+                    }
+                }
+            } catch (err) {
+                console.error('[PrivateLayout] Error crítico en verificación:', err);
+                navigate('/?login=1', { replace: true });
+            } finally {
+                setChecking(false);
+            }
+        })();
+    }, [client, ready, navigate, location.pathname]);
 
-                    <div className="footer-bottom" style={{borderTop: '1px solid rgba(252,252,252,0.1)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem'}}>
-                        <p>&copy; 2026 MyLocal. Sin comisiones. Sin nubes. Control total.</p>
-                        <p style={{opacity: 0.6}}>
-                            Hecho por <a href="https://gestasai.com" target="_blank" rel="noopener noreferrer" style={{color: 'var(--accent)', textDecoration: 'none'}}>gestasai.com</a> - Desarrollo de herramientas con Inteligencia Artificial
-                        </p>
-                    </div>
+    async function handleLogout() {
+        const { logout } = await import('./services/auth.service');
+        await logout(client);
+        navigate('/', { replace: true });
+    }
+
+    if (checking) return <div className="sc-loading">Validando sesión...</div>;
+
+    return (
+        <div className="sc-private-env">
+            <header className="sc-private-header">
+                <div className="sc-private-header__left">
+                    <span className="sc-badge">{user?.role}</span>
+                    <span className="sc-user-name">{user?.name || user?.email}</span>
                 </div>
-            </footer>
+                <button onClick={handleLogout} className="sc-btn sc-btn--ghost sc-btn--sm">
+                    Salir
+                </button>
+            </header>
+            <main className="sc-private-content">
+                <Outlet />
+            </main>
+        </div>
+    );
+}
 
-            <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
-        </>
+export function App() {
+    return (
+        <Routes>
+            {/* 1. Rutas privadas — prioritarias para evitar que el catch-all público las sombree */}
+            <Route element={<PrivateLayout />}>
+                <Route path="/dashboard/*" element={<Dashboard />} />
+                <Route path="/sistema/tpv/*" element={<TPV />} />
+            </Route>
+
+            {/* 2. Rutas con layout público (header + footer marketing) */}
+            <Route element={<PublicLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/carta" element={<Carta />} />
+                <Route path="/legal" element={<LegalPage />} />
+                <Route path="/legal/:slug" element={<LegalPage />} />
+                <Route path="/aviso-legal" element={<LegalPage />} />
+                <Route path="/privacidad" element={<LegalPage />} />
+                <Route path="/cookies" element={<LegalPage />} />
+                <Route path="/uso" element={<LegalPage />} />
+                <Route path="/terminos" element={<LegalPage />} />
+                <Route path="/cuentas" element={<LegalPage />} />
+                <Route path="/reembolso" element={<LegalPage />} />
+                <Route path="/reembolsos" element={<LegalPage />} />
+                <Route path="/wiki" element={<WikiIndex />} />
+                <Route path="/wiki/:slug" element={<WikiArticle />} />
+            </Route>
+
+            {/* 3. Rutas especiales */}
+            <Route path="/mesa/:slug" element={<MesaQR />} />
+
+            {/* 4. Catch-all global (redirigir a Home) */}
+            <Route path="*" element={<Home />} />
+        </Routes>
     );
 }

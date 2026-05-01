@@ -4,7 +4,12 @@
  * Usado por: php -S localhost:8080 -t release release/router.php
  */
 
+// 1. Debug logging para identificar al culpable del bucle
 $uri  = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
+$agent = $_SERVER['HTTP_USER_AGENT'] ?? 'no-agent';
+error_log("REQ: $method $uri (Agent: $agent)");
+
 $path = parse_url($uri, PHP_URL_PATH);
 $root = __DIR__;
 

@@ -24,6 +24,42 @@ Override the API target during dev: `SOCOLA_API=http://host:port npm run dev`.
 
 **There is no test runner wired up yet** — don't invent one. If tests become needed, add Vitest (Vite-native) for the client and PHPUnit for the server.
 
+## Imagenes y Medios — REGLA UNICA
+
+**La carpeta `/MEDIA/` (en la raiz del proyecto, NO dentro de `/spa/`) es la unica fuente de verdad para todas las imagenes, videos y archivos multimedia.**
+
+### Flujo de desarrollo (automatico, sin configuracion)
+
+El archivo `spa/vite.config.ts` incluye el plugin `serveMediaPlugin` que intercepta todas las peticiones `/MEDIA/*` en el servidor de desarrollo y las sirve directamente desde la carpeta raiz `../MEDIA/`.
+
+```
+Navegador pide /MEDIA/hero.png
+       ↓
+Vite (puerto 5173) → plugin serveMediaPlugin
+       ↓
+Lee directamente desde: mylocal/MEDIA/hero.png
+       ↓
+Responde con la imagen ✅
+```
+
+### Flujo de produccion
+
+El servidor PHP (`router.php`) sirve `/MEDIA/` directamente desde el sistema de archivos. No requiere ninguna configuracion adicional.
+
+### Reglas para trabajar con imagenes
+
+1. **Añadir una imagen**: colocarla en `/MEDIA/` y ya esta disponible en React como `/MEDIA/nombre.png`
+2. **NO copiar imagenes** a `spa/public/MEDIA/` — es redundante y genera deuda tecnica
+3. **NO crear symlinks** — Vite en Windows no los sigue de forma fiable
+4. **NO añadir proxies** en `vite.config.ts` para `/MEDIA/` — el plugin ya lo maneja
+5. **En React**, referenciar siempre con ruta absoluta: `src="/MEDIA/hero.png"`
+
+### Formatos soportados automaticamente
+
+`.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, `.svg`, `.ico`, `.mp4`, `.webm`
+
+---
+
 ## Architecture: the three layers
 
 ```
