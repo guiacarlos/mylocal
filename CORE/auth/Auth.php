@@ -174,6 +174,7 @@ class Auth
     {
         $headers = $this->getHeaders();
         $authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? null;
+
         $token = null;
 
         // 1. Intentar desde Header Bearer
@@ -196,12 +197,14 @@ class Auth
     /**
      * Verificar token local
      */
-    private function verifyTokenLocal($token)
+    public function verifyTokenLocal($token)
     {
+        if (empty($token))
+            return false;
+
         $sessionFile = $this->sessionDir . '/' . $token . '.json';
 
         if (!file_exists($sessionFile)) {
-            error_log("[AUTH] SesiÃ³n no encontrada en disco: $token");
             return false;
         }
 
@@ -216,18 +219,18 @@ class Auth
         }
 
         // Obtener usuario completo
-        $user = $this->userManager->getUserById($session['user_id']);
+        $user = $this->userManager->getUserById($session['user_id'] ?? null);
 
-        if (!$user || $user['status'] !== 'active') {
+        if (!$user || ($user['status'] ?? 'active') !== 'active') {
             return false;
         }
 
         return [
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'role' => $user['role'],
-            'name' => $user['name']
-        ];
+                    'id' => $user['id'] ?? $user['email'], // Fallback a email si no hay id
+                    'email' => $user['email'],
+                    'role' => $user['role'],
+                    'name' => $user['name'] ?? ''
+                ];
     }
 
     /**

@@ -32,11 +32,17 @@ export function SynaxisProvider({
     namespace = 'socola',
     project = null,
     apiUrl = '/acide/index.php',
-    seedUrls = ['/seed/bootstrap.json'],
+    seedUrls: propSeedUrls,
 }: ProviderProps) {
     const [ready, setReady] = useState(false);
     const [seedState, setSeedState] = useState<Ctx['seedState']>('idle');
     const [seedError, setSeedError] = useState<string | undefined>();
+
+    // Estabilizamos seedUrls para evitar bucles infinitos si se usa el default
+    const seedUrls = useMemo(
+        () => propSeedUrls || ['/seed/bootstrap.json'],
+        [propSeedUrls]
+    );
 
     const client = useMemo(
         () => new SynaxisClient({ namespace, project, apiUrl }),
@@ -59,8 +65,6 @@ export function SynaxisProvider({
                         const res = await client.seedIfEmpty(url);
                         imported = imported || res.imported;
                     } catch (e) {
-                        // Un seed que falle no rompe la app: en prod puede no
-                        // existir ese archivo todavía.
                         console.warn(`[Synaxis] seed ${url} no cargable:`, e);
                     }
                 }

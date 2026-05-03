@@ -36,7 +36,8 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'auth_login', scope: 'server', domain: 'auth', description: 'Hash bcrypt/Argon2 en el servidor' },
     { action: 'auth_refresh_session', scope: 'server', domain: 'auth' },
     { action: 'auth_resolve_tenant', scope: 'server', domain: 'auth' },
-    { action: 'get_current_user', scope: 'hybrid', domain: 'auth' },
+    { action: 'auth_me', scope: 'server', domain: 'auth' },
+    { action: 'get_current_user', scope: 'server', domain: 'auth' },
     { action: 'public_register', scope: 'server', domain: 'auth' },
 
     // ── Temas y FSE ──────────────────────────────────────────
@@ -109,6 +110,28 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'save_conversation', scope: 'local', domain: 'ai' },
     { action: 'list_conversations', scope: 'local', domain: 'ai' },
     { action: 'list_models', scope: 'server', domain: 'ai' },
+
+    // ── Carta hostelera (CRUD local + IA servidor) ───────────
+    // CRUD: usa las acciones genéricas (list/create/update/delete)
+    // con collection: 'carta_categorias' | 'carta_productos' | 'carta_mesas'
+
+    // IA invisible — obligatorio servidor (API keys, procesado binario)
+    { action: 'upload_carta_source', scope: 'server', domain: 'carta', description: 'Sube PDF/imagen para OCR' },
+    { action: 'ocr_extract', scope: 'server', domain: 'carta', description: 'OCR via Gemini Vision' },
+    { action: 'ocr_parse', scope: 'server', domain: 'carta', description: 'Estructura carta desde texto OCR' },
+    { action: 'enhance_image_sync', scope: 'server', domain: 'carta', description: 'Varita mágica Imagick/GD' },
+    { action: 'ai_sugerir_alergenos', scope: 'server', domain: 'carta', description: 'Alérgenos UE desde ingredientes' },
+    { action: 'ai_generar_descripcion', scope: 'server', domain: 'carta', description: 'Copywriting gastronómico' },
+    { action: 'ai_generar_promocion', scope: 'server', domain: 'carta', description: 'Micro-promo para especialidad' },
+    { action: 'ai_traducir', scope: 'server', domain: 'carta', description: 'Traducción culinaria' },
+    { action: 'importar_carta_estructurada', scope: 'server', domain: 'carta', description: 'Importa carta en lote desde OCR' },
+    { action: 'generate_pdf_carta', scope: 'server', domain: 'carta', description: 'Genera PDF físico con plantilla' },
+
+    // ── Suscripciones SaaS (Revolut) ─────────────────────────
+    { action: 'create_subscription',   scope: 'server', domain: 'billing', description: 'Crea orden Revolut + guarda pending' },
+    { action: 'activate_subscription', scope: 'server', domain: 'billing', description: 'Verifica pago Revolut + activa plan' },
+    { action: 'cancel_subscription',   scope: 'server', domain: 'billing', description: 'Desactiva auto-renovación' },
+    { action: 'get_subscription',      scope: 'server', domain: 'billing', description: 'Estado actual del plan' },
 
     // ── Sistema ──────────────────────────────────────────────
     { action: 'health_check', scope: 'local', domain: 'system' },

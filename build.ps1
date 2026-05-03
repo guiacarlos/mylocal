@@ -15,8 +15,22 @@ Write-Host "=== MyLocal Build ===" -ForegroundColor Cyan
 # 1. Compilar SPA React
 Write-Host "[1/3] Compilando SPA React..." -ForegroundColor Yellow
 Set-Location $SPA
-npm run build --silent
-if ($LASTEXITCODE -ne 0) { Write-Host "ERROR: npm run build fallo" -ForegroundColor Red; exit 1 }
+
+# Se envuelve en try/catch para manejar errores reales pero permitir warnings de npm/vite
+try {
+    # Usamos cmd /c para aislar a npm de la sensibilidad de PowerShell 5.1 con stderr
+    cmd /c "npm run build --silent"
+} catch {
+    Write-Host "ERROR: El proceso de build falló" -ForegroundColor Red
+    Set-Location $ROOT
+    exit 1
+}
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: npm run build fallo (exit $LASTEXITCODE)" -ForegroundColor Red
+    Set-Location $ROOT
+    exit 1
+}
 Set-Location $ROOT
 Write-Host "      OK -> release/ generada (JS + CSS)" -ForegroundColor Green
 

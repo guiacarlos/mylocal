@@ -59,23 +59,32 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
     exit;
 }
 
+/* ══════════════ Auto-bootstrap en primer arranque ══════════════ */
+$_usersDir = DATA_ROOT . '/users';
+if (!is_dir($_usersDir) || count(glob($_usersDir . '/*.json') ?: []) === 0) {
+    define('BOOTSTRAP_INTERNAL', true);
+    @include_once __DIR__ . '/bin/bootstrap-users.php';
+}
+
 /* ══════════════════════════ Parse input ══════════════════════════ */
 
 $raw = file_get_contents('php://input') ?: '';
-if (strlen($raw) > 2 * 1024 * 1024) {
+if (strlen($raw) > 10 * 1024 * 1024) {
     http_response_code(413);
     resp(false, null, 'Payload demasiado grande');
 }
 $req = json_decode($raw, true) ?: [];
 $action = is_string($req['action'] ?? null) ? $req['action'] : null;
 
+// Multipart (file uploads): leer action de $_POST
+if (!$action && !empty($_POST['action'])) $action = (string) $_POST['action'];
 if (!$action && !empty($_FILES)) $action = 'upload';
 
 /* ═════════════════════ Acciones permitidas ═════════════════════ */
 
 const ALLOWED_ACTIONS = [
-    // Auth / sesión
-    'auth_login', 'auth_refresh_session', 'get_current_user', 'public_register', 'auth_logout',
+    // Auth / sesión — NUNCA eliminar: son el núcleo del sistema de login
+    'auth_login', 'auth_logout', 'auth_me', 'auth_refresh_session', 'get_current_user', 'public_register',
     'csrf_token',
     // Pagos
     'create_payment_intent', 'check_revolut_payment', 'create_revolut_payment', 'revolut_webhook',
@@ -84,8 +93,17 @@ const ALLOWED_ACTIONS = [
     // QR / mesas
     'process_external_order', 'get_table_order', 'update_table_cart',
     'clear_table', 'table_request', 'get_table_requests', 'acknowledge_request',
-    // IA
+    // IA general
     'chat', 'chat_restaurant', 'ask', 'list_models',
+    // Carta — IA invisible
+    'upload_carta_source',
+    'ocr_extract', 'ocr_parse',
+    'enhance_image_sync',
+    'ai_sugerir_alergenos', 'ai_generar_descripcion', 'ai_generar_promocion', 'ai_traducir',
+    'importar_carta_estructurada',
+    'generate_pdf_carta',
+    // Suscripciones SaaS
+    'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
     // Sistema
     'upload', 'synaxis_sync', 'health_check',
     // Público (lectura mínima que el cliente puede cachear)
@@ -127,6 +145,8 @@ if (!$isPublic && !$user) {
 //   - table_request (igual)
 $csrfExempt = [
     'auth_login' => true,
+    'auth_me' => true,
+    'get_current_user' => true,
     'public_register' => true,
     'revolut_webhook' => true,
     'process_external_order' => true,
@@ -156,6 +176,7 @@ try {
             require __DIR__ . '/handlers/auth.php';
             resp(true, handle_auth_logout($user));
 
+        case 'auth_me':             // ← llamado por getCurrentUser() en auth.service.ts
         case 'auth_refresh_session':
         case 'get_current_user':
             require __DIR__ . '/handlers/auth.php';
@@ -207,6 +228,32 @@ try {
         case 'create_reserva':
             require __DIR__ . '/handlers/reservas.php';
             resp(true, handle_reserva($req));
+
+        case 'upload_carta_source':
+            require __DIR__ . '/handlers/carta.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, handle_carta('upload_carta_source', $req, $_FILES));
+
+        case 'ocr_extract':
+        case 'ocr_parse':
+        case 'enhance_image_sync':
+        case 'ai_sugerir_alergenos':
+        case 'ai_generar_descripcion':
+        case 'ai_generar_promocion':
+        case 'ai_traducir':
+        case 'importar_carta_estructurada':
+        case 'generate_pdf_carta':
+            require __DIR__ . '/handlers/carta.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, handle_carta($action, $req['data'] ?? $req));
+
+        case 'create_subscription':
+        case 'activate_subscription':
+        case 'cancel_subscription':
+        case 'get_subscription':
+            require __DIR__ . '/handlers/subscriptions.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_subscriptions($action, $req['data'] ?? $req, $user));
 
         case 'validate_coupon':
         case 'get_payment_settings':

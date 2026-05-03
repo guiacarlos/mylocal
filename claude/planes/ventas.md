@@ -58,18 +58,21 @@ Lo que NO se hace: lista tecnica larga, fechas vagas, promesas sin commit.
 ### Estructura de tres planes
 
 **DEMO (gancho de captacion)**
+
 - 21 dias gratis
 - Producto completo desbloqueado
 - Sin tarjeta de credito (critico para conversion)
 - Activacion automatica desde landing
 
 **PRO mensual — 27€ + IVA / mes**
+
 - Cancelable cualquier mes
 - Incluye todo el nivel actual del producto
 - Soporte estandar
 - Para el 96% de locales independientes que prefieren flujo mensual
 
 **PRO anual — 260€ + IVA / ano**
+
 - Equivale a 21,67€/mes (descuento 20% sobre mensual)
 - Bloqueo de precio mientras dure la suscripcion
 - Acceso prioritario a las funcionalidades del roadmap
@@ -144,21 +147,25 @@ simplicidad extrema y precio inferior. Construir base instalada.
 ### Diseno del producto terminado
 
 **Promesa al hostelero:**
+
 > Tu carta digital lista en menos de 30 minutos, sin ayuda, sin instalar nada.
 
 **Interfaz publica (cliente final):**
+
 - Web-app que carga en menos de 2 segundos
 - Diseno limpio, foto del plato como protagonista
 - Scroll vertical, categorias fijas arriba
 - Selector de idioma visible
 
 **Panel del hostelero:**
+
 - Login en una pantalla
 - Dashboard con tres metricas: visitas, escaneos, plato mas visto
 - Menu lateral: Carta / Diseno / QR / Idiomas / Ajustes
 - Boton permanente "Ver como cliente" (preview en vivo)
 
 **IA invisible (Copiloto de Carta):**
+
 - Generador de descripciones de platos a partir de ingredientes
 - Traduccion automatica contextual (ES/EN/FR/DE)
 - Sugerencia de categorias segun tipo de negocio
@@ -212,15 +219,18 @@ boton copiar, QR visible y CTA "Compartir con mi equipo".
 ### Estrategia de marketing
 
 **Canal principal:** Google Ads (busqueda)
+
 - Keywords: "carta QR barata", "alternativa a NordQR", "carta digital
   bar", "menu QR restaurante", "carta QR sin permanencia"
 - Landing dedicada por keyword
 
 **Canal secundario:** SEO organico
+
 - Blog: "Cuanto cuesta imprimir cartas en 2026", "Como hacer una carta QR
   en 30 minutos", "Multas por carta no actualizada"
 
 **Canal de prueba social:**
+
 - Capturas reales de cartas de clientes (con permiso)
 - Contador en landing: "+X locales digitalizados"
 
@@ -249,12 +259,14 @@ reimpresiones. El resto es ganancia.
 ### Checklist de lanzamiento Fase 1
 
 **Producto:**
+
 - [ ] Verificar que mylocal.md Fase 1 esta cerrada al 100%
 - [ ] QA completo del onboarding en 5 dispositivos distintos
 - [ ] Carga de landing y panel auditadas con Lighthouse (>90)
 - [ ] Tiempos de respuesta de la IA medidos y aceptables
 
 **Marketing:**
+
 - [ ] Logo y manual de marca cerrados
 - [ ] Landing principal publicada
 - [ ] 3 landings dedicadas a keywords prioritarias
@@ -265,6 +277,7 @@ reimpresiones. El resto es ganancia.
 - [ ] Pixel de seguimiento (Meta + Google) instalado
 
 **Ventas:**
+
 - [ ] Guion de demo en 5 minutos preparado
 - [ ] FAQ publica con las 20 objeciones mas frecuentes
 - [ ] Comparativa MyLocal vs NordQR vs Bakarta
@@ -272,6 +285,7 @@ reimpresiones. El resto es ganancia.
 - [ ] Email comercial frio para 50 contactos del sector
 
 **Soporte:**
+
 - [ ] Numero de WhatsApp Business activo
 - [ ] Plantillas de respuesta para 10 incidencias frecuentes
 - [ ] Manual de usuario en PDF descargable
@@ -292,10 +306,12 @@ mejor precio y soberania de datos. Aumentar el ARPU del cliente Fase 1.
 ### Diseno del producto terminado
 
 **Promesa al hostelero:**
+
 > Tus clientes piden y pagan desde el movil. Tu personal cobra el doble
 > de propinas y atiende mejor.
 
 **Interfaz publica (cliente final):**
+
 - Carrito de compra integrado en la carta
 - Sugerencias de venta cruzada en el carrito (IA visible)
 - Boton flotante "Pedir la cuenta"
@@ -303,12 +319,14 @@ mejor precio y soberania de datos. Aumentar el ARPU del cliente Fase 1.
 - Confirmacion visual + ticket digital descargable
 
 **Panel del hostelero:**
+
 - Vista de pedidos entrantes en tiempo real
 - Estado por mesa (libre / pidiendo / esperando / pagada)
 - Configuracion de Bizum (numero) y Stripe (cuenta conectada)
 - Reglas de upsell ("si pide hamburguesa -> sugerir patatas")
 
 **IA visible (Maitre Digital):**
+
 - Sugerencia de bebida/postre segun lo pedido
 - Mensaje en interfaz: "Aumenta tu ticket medio automaticamente"
 - Marcado automatico de los 14 alergenos UE
@@ -325,20 +343,24 @@ La comision transaccional es la palanca de monetizacion sobre el ticket.
 ### Estrategia de marketing
 
 **Canal principal:** Instagram y Facebook Ads
+
 - Video corto (15s) de cliente real pagando con Bizum en 10 segundos
 - Testimonios de hosteleros con cifras concretas
 
 **Canal secundario:** Casos de exito en blog
+
 - "Como el bar X aumento sus propinas un 150%"
 - "Por que cerrar la mesa antes ahorra 3 horas al dia"
 
 **Canal de retencion:**
+
 - Notificacion push al hostelero: "La mesa 5 acepto tu sugerencia de
   postre. Has ganado 4,50€ extra hoy"
 
 ### Argumento de venta principal
 
 Aumento de ingresos medible. Datos del sector:
+
 - Ticket medio: +21% por upselling automatico
 - Propinas: +150% por sugerencia digital amable
 - Rotacion de mesas: +18% por cierre rapido
@@ -359,18 +381,21 @@ El plan se paga solo en la primera semana.
 ### Checklist de lanzamiento Fase 2
 
 **Producto:**
+
 - [ ] Verificar que mylocal.md Fase 2 esta cerrada al 100%
 - [ ] Test de carga: 50 pedidos simultaneos sin degradacion
 - [ ] QA del flujo Bizum en 3 entidades bancarias distintas
 - [ ] QA del flujo Stripe con tarjetas de 3 paises
 
 **Marketing:**
+
 - [ ] 3 videos de caso real de cliente (15-30s)
 - [ ] Landing dedicada "Cobra desde la mesa"
 - [ ] Campana Meta Ads configurada (presupuesto inicial 500€/mes)
 - [ ] Email a base de Fase 1 anunciando activacion
 
 **Ventas:**
+
 - [ ] Comparativa MyLocal vs Honei vs MONEI Pay
 - [ ] Calculadora online "Cuanto puedes ganar al mes"
 - [ ] Webinar de 30 minutos para clientes Fase 1
@@ -391,10 +416,12 @@ venta mas potente del producto en 2026-2027.
 ### Diseno del producto terminado
 
 **Promesa al hostelero:**
+
 > Tu sistema de facturacion cumple la ley antifraude. Sin comprar
 > hardware. Sin pagar a tu gestoria una integracion aparte.
 
 **Interfaz del panel:**
+
 - Sello visible "Software certificado Verifactu"
 - Pie de tickets con QR de verificacion AEAT
 - Estado de envio en tiempo real (enviado / pendiente / error)
@@ -402,10 +429,12 @@ venta mas potente del producto en 2026-2027.
 - Historico de facturas con consulta por NIF
 
 **Para Pais Vasco:**
+
 - Modulo TicketBAI activo segun provincia (Alava/Bizkaia/Gipuzkoa)
 - XML firmado con certificado del cliente
 
 **IA Analista (primera version):**
+
 - Informe diario en lenguaje natural: "Hoy facturaste X. Comparado con
   ayer, has subido un Y%. Tu plato estrella fue Z."
 - Sin graficos complejos. Solo lectura clara.
@@ -421,20 +450,24 @@ Para clientes nuevos: argumento de cierre principal.
 ### Estrategia de marketing
 
 **Canal principal:** Email marketing y gestorias
+
 - Lista de gestorias en Espana (10.000+ contactos)
 - Webinar mensual: "Verifactu 2026 explicado para hosteleros"
 
 **Canal secundario:** SEO miedo
+
 - Articulos: "Multas Verifactu 2026: lo que tu bar debe saber",
   "TicketBAI Pais Vasco: como cumplir sin comprar hardware"
 
 **Canal de cierre:**
+
 - Calculadora "Tu riesgo de multa": estima la sancion segun ticketing
   del local y muestra MyLocal como solucion.
 
 ### Argumento de venta principal
 
 Miedo fundado. Multas reales documentadas. Comparativa de coste:
+
 - MyLocal anual: 260€
 - Multa Verifactu minima: 1.000-3.000€
 - Multa Verifactu maxima: 50.000€
@@ -454,17 +487,21 @@ homologado. Su tablet o movil actual sirve.
 ### Checklist de lanzamiento Fase 3
 
 **Producto:**
+
 - [ ] Verificar mylocal.md Fase 3 cerrada
 - [ ] Auditoria fiscal externa pasada
 - [ ] Certificado tecnico publicado en panel publico
 
 **Marketing:**
+
 - [ ] Pagina dedicada "Software Verifactu"
 - [ ] 5 articulos SEO publicados
 - [ ] Calculadora de riesgo de multa online
-- [ ] Webinar grabado y disponible bajo demanda
+- [ ] Webinar grabado y
+- [ ]  disponible bajo demanda
 
 **Ventas:**
+
 - [ ] Plantilla de carta a gestorias
 - [ ] Programa de afiliacion para gestorias (10% recurrente)
 - [ ] Material de cierre: "Garantia juridica MyLocal"
@@ -484,26 +521,31 @@ y locales medianos/grandes. Subir el ARPU. Ganar volumen transaccional.
 ### Diseno del producto terminado
 
 **Promesa al hostelero:**
+
 > Todo tu restaurante en tu bolsillo. De la cocina a la contabilidad,
 > desde un solo panel.
 
 **TPV de sala:**
+
 - Mapa de mesas interactivo
 - Comandero PWA para movil del camarero
 - Division de cuenta y cambio de mesa
 - Turnos y arqueo de caja
 
 **Cocina (KDS):**
+
 - Pantalla con tickets en columnas (entrantes / principales / postres)
 - Tiempo de preparacion por plato
 - Marcado "listo para servir" -> notifica al camarero
 
 **Multi-local:**
+
 - Panel maestro que consolida 1 a 50 locales
 - Comparativas entre locales
 - Permisos por rol y por ubicacion
 
 **IA decisora (segunda version):**
+
 - Recomendacion de stock segun previsiones de venta
 - Identificacion de platos "perro" y "estrella" (matriz BCG)
 - Sugerencia de horarios optimos de personal
@@ -511,12 +553,14 @@ y locales medianos/grandes. Subir el ARPU. Ganar volumen transaccional.
 ### Oferta comercial
 
 **Plan Pro Plus — 79€/mes + IVA por local**
+
 - Todo lo anterior
 - TPV sala + comandero + KDS + multi-local
 - IA decisora
 - Soporte 24/7 via WhatsApp
 
 **Plan Cadena**
+
 - A partir de 5 locales
 - Precio negociado segun volumen
 - Onboarding asistido in situ
@@ -524,20 +568,24 @@ y locales medianos/grandes. Subir el ARPU. Ganar volumen transaccional.
 ### Estrategia de marketing
 
 **Canal principal:** Visita comercial / puerta fria
+
 - Equipo comercial en zonas de alta densidad hostelera (Madrid,
   Barcelona, Valencia, Bilbao, Sevilla)
 - Demo en local con tablet propia
 
 **Canal secundario:** LinkedIn y prensa sectorial
+
 - Articulos en revistas: Hosteltur, Restauracion News
 - Casos de exito de cadenas de 3-10 locales
 
 **Canal de upgrade:**
+
 - Email a clientes Pro: "Has crecido. Es hora de pasar a Pro Plus."
 
 ### Argumento de venta principal
 
 Eficiencia operativa medible. Datos sectoriales:
+
 - Eficacia del personal: +55%
 - Ahorro de horas operativas: 3 horas/dia/local
 - Reduccion de errores en comandas: -90%
@@ -555,16 +603,19 @@ exportar todo. No queda atrapado.
 ### Checklist de lanzamiento Fase 4
 
 **Producto:**
+
 - [ ] Verificar mylocal.md Fase 4 cerrada
 - [ ] Pruebas de stress en local con 200 mesas/dia
 - [ ] Backup automatico verificado
 
 **Marketing:**
+
 - [ ] Comparativa MyLocal vs Last.app vs Qamarero
 - [ ] 5 casos de exito documentados con cifras
 - [ ] Pagina dedicada "Para grupos de restauracion"
 
 **Ventas:**
+
 - [ ] Equipo comercial formado (al menos 2 personas)
 - [ ] CRM operativo con pipeline de leads
 - [ ] Material impreso para visita comercial
@@ -586,20 +637,24 @@ nuevos y blinda a los existentes.
 ### Diseno del producto terminado
 
 **Promesa al hostelero:**
+
 > Tu negocio te habla y te dice que hacer. No solo registramos datos,
 > te decimos que hacer con ellos.
 
 **Asistente conversacional:**
+
 - Chat de lenguaje natural en panel
 - Preguntas tipo: "Cual es mi plato con mas margen que casi no se pide?"
 - Respuesta con dato + explicacion + accion sugerida
 
 **Predictor de demanda:**
+
 - Aviso 7 dias antes: "El proximo martes lloveria, hay evento local
   cerca, deberias comprar 20% menos de fresco y reforzar delivery"
 - Cruza datos del local + meteo + agenda local + festividades
 
 **Ingenieria de menu automatica:**
+
 - Matriz BCG actualizada cada semana
 - Sugerencia concreta: "Sube el precio del plato X 1,50€. Margen +18%."
 - Aprobacion en un clic
@@ -607,6 +662,7 @@ nuevos y blinda a los existentes.
 ### Oferta comercial
 
 **Plan IA Premium — 99€/mes + IVA por local**
+
 - Todo lo del Pro Plus
 - Asistente IA conversacional
 - Predictor de demanda
@@ -616,10 +672,12 @@ nuevos y blinda a los existentes.
 ### Estrategia de marketing
 
 **Canal principal:** LinkedIn y prensa sectorial
+
 - Articulos de fondo en revistas economicas
 - Demos en ferias del sector (HIP, Hostelco)
 
 **Canal secundario:** Eventos propios
+
 - Webinar mensual "MyLocal IA: la decision correcta cada semana"
 - Showroom virtual con demo en directo
 
@@ -635,21 +693,24 @@ El plan se paga 11-19 veces.
 - [ ] Asistente responde en menos de 8s a preguntas en lenguaje natural
 - [ ] Predictor entrenado con minimo 30 dias de datos del local
 - [ ] Primera sugerencia de cambio de menu validada como util por
-      el hostelero (encuesta interna)
+  el hostelero (encuesta interna)
 
 ### Checklist de lanzamiento Fase 5
 
 **Producto:**
+
 - [ ] Verificar mylocal.md Fase 5 cerrada
 - [ ] Tests de calidad de respuesta IA (precision >85%)
 - [ ] Salvaguarda contra alucinaciones documentada
 
 **Marketing:**
+
 - [ ] Video demo de 90s en pagina principal
 - [ ] Articulo en al menos 1 revista sectorial
 - [ ] 3 casos de exito con sugerencias IA aplicadas
 
 **Ventas:**
+
 - [ ] Material para presentacion ejecutiva (slides)
 - [ ] Speech de 10 minutos para feria/evento
 - [ ] Programa de prueba premium (15 dias) para Pro Plus existentes
@@ -670,16 +731,19 @@ unificar canales.
 ### Diseno del producto terminado
 
 **Integracion delivery:**
+
 - Conector con Glovo, Uber Eats y Just Eat
 - Pedidos de los 3 canales en una sola pantalla
 - Sincronizacion bidireccional de menu y stock
 
 **Programa partners:**
+
 - Portal para gestorias y consultoras
 - Comision recurrente 15% mientras dure el cliente
 - Material co-branded
 
 **Soberania reforzada:**
+
 - Exportacion total de datos en JSON y CSV
 - Migracion asistida desde Last.app, Qamarero, Glop, Camarero
 
@@ -687,6 +751,7 @@ unificar canales.
 
 Sin nuevo plan. Las funcionalidades se integran en los planes
 existentes segun nivel:
+
 - Pro: exportacion datos
 - Pro Plus: delivery hub
 - Premium IA: todo + onboarding asistido
@@ -694,10 +759,12 @@ existentes segun nivel:
 ### Estrategia de marketing
 
 **Canal principal:** Programa de afiliacion
+
 - Gestorias, asociaciones de hostelerias, consultoras
 - Web propia para partners con material descargable
 
 **Canal secundario:** Casos de migracion
+
 - "Asi pasamos de Last.app a MyLocal en 48 horas"
 - Comparativa de costes a 3 anos
 
@@ -717,43 +784,49 @@ existentes segun nivel:
 
 ## Resumen de ejecucion sincronizada
 
-| Fase | Producto vendible | Argumento de venta | Canal marketing principal |
-|------|-------------------|--------------------|---------------------------|
-| 1 | Carta QR + Copiloto IA | Ahorro de imprenta | Google Ads (busqueda) |
-| 2 | Pedidos + Pagos + Maitre IA | Mas ticket medio y propinas | Instagram/Facebook Ads |
-| 3 | Verifactu + TicketBAI + Analista IA | Cero multas | Email a gestorias |
-| 4 | TPV + KDS + Multi-local | Eficiencia operativa | Visita comercial |
-| 5 | Agente IA decisor | Optimizacion margen | LinkedIn/prensa sectorial |
-| 6 | Delivery + Partners | Soberania y migracion | Afiliacion |
+| Fase | Producto vendible                   | Argumento de venta          | Canal marketing principal |
+| ---- | ----------------------------------- | --------------------------- | ------------------------- |
+| 1    | Carta QR + Copiloto IA              | Ahorro de imprenta          | Google Ads (busqueda)     |
+| 2    | Pedidos + Pagos + Maitre IA         | Mas ticket medio y propinas | Instagram/Facebook Ads    |
+| 3    | Verifactu + TicketBAI + Analista IA | Cero multas                 | Email a gestorias         |
+| 4    | TPV + KDS + Multi-local             | Eficiencia operativa        | Visita comercial          |
+| 5    | Agente IA decisor                   | Optimizacion margen         | LinkedIn/prensa sectorial |
+| 6    | Delivery + Partners                 | Soberania y migracion       | Afiliacion                |
 
 ---
 
 ## Indicadores clave (KPI) por fase
 
 ### Fase 1
+
 - Coste de adquisicion (CAC) objetivo: < 60€
 - Conversion landing -> demo: > 8%
 - Conversion demo -> pago: > 25%
 - Activacion (descarga QR): > 70% de los registrados
 
 ### Fase 2
+
 - ARPU medio: 27€ + 0,5% take rate
 - Tickets QR/local/mes: > 100
 - Aumento ticket medio observado: > 15%
 
 ### Fase 3
+
 - Tasa de retencion 12 meses: > 85%
 - Conversion plan mensual -> anual: > 30%
 
 ### Fase 4
+
 - ARPU medio: 79€/local
 - Locales por cuenta media: > 1,4
 
 ### Fase 5
+
 - Adopcion del asistente IA: > 60% de Pro Plus
 - Sugerencias IA aplicadas/mes/local: > 4
 
 ### Fase 6
+
 - Partners activos: > 20 al cierre primer ano
 - Locales via partner: > 30% del total
 

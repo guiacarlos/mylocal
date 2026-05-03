@@ -302,6 +302,9 @@ class ActionDispatcher
                             return ['success' => true, 'data' => []];
                         return $this->services['glandManager']->listGlands();
 
+                    case 'csrf_token':
+                        return ['success' => true, 'data' => ['status' => 'ready']];
+
                     case 'health_check':
                         if (!isset($this->services['acide']))
                             return ['success' => true, 'data' => ['status' => 'ok']];

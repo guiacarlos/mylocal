@@ -42,7 +42,7 @@ class UserHandler extends BaseHandler
                 $user = $this->userManager->getUserById($userId);
                 if ($user)
                     unset($user['password_hash']);
-                return ['success' => true, 'user' => $user];
+                return ['success' => true, 'data' => $user];
 
             case 'update_user':
                 $userId = $args['id'] ?? null;
@@ -73,11 +73,12 @@ class UserHandler extends BaseHandler
                 $fullUser = $this->userManager->getUserById($currentUser['id']);
                 if ($fullUser)
                     unset($fullUser['password_hash']);
-                return ['success' => true, 'user' => $fullUser];
+                return ['success' => true, 'data' => $fullUser];
 
             case 'update_profile':
                 $userId = $currentUser['id'] ?? null;
-                return $this->userManager->updateUser($userId, $args);
+                $res = $this->userManager->updateUser($userId, $args);
+                return ['success' => $res['success'] ?? true, 'data' => $res];
 
             case 'change_password':
                 $userId = $currentUser['id'] ?? null;

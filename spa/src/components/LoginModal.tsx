@@ -1,5 +1,4 @@
 import { useEffect, useState, type FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { FiX } from 'react-icons/fi';
 import { useSynaxisClient } from '../hooks/useSynaxis';
 import { login } from '../services/auth.service';
@@ -11,7 +10,6 @@ interface Props {
 
 export function LoginModal({ open, onClose }: Props) {
     const client = useSynaxisClient();
-    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [busy, setBusy] = useState(false);
@@ -33,16 +31,24 @@ export function LoginModal({ open, onClose }: Props) {
     async function onSubmit(e: FormEvent) {
         e.preventDefault();
         setBusy(true); setError(null);
+        console.log('[LoginModal] Intentando login...', email);
         const res = await login(client, email, password);
         setBusy(false);
         if (!res.success) {
+            console.error('[LoginModal] Login fallido:', res.error);
             setError(res.error ?? 'No se pudo iniciar sesion');
             return;
         }
+        console.log('[LoginModal] Login exitoso para:', res.user?.email, 'Rol:', res.user?.role);
         const role = (res.user?.role ?? '').toLowerCase();
+        if (['sala', 'cocina', 'camarero'].includes(role)) {
+            console.log('[LoginModal] Redirigiendo a TPV via hash');
+            window.location.hash = '#/sistema/tpv';
+        } else {
+            console.log('[LoginModal] Redirigiendo a Dashboard via hash');
+            window.location.hash = '#/dashboard';
+        }
         onClose();
-        if (['sala', 'cocina', 'camarero'].includes(role)) navigate('/sistema/tpv');
-        else navigate('/dashboard');
     }
 
     return (
@@ -57,17 +63,19 @@ export function LoginModal({ open, onClose }: Props) {
                     <label>
                         <span>Email</span>
                         <input
-                            type="email" value={email} required autoFocus
+                            type="email" name="email" value={email} required autoFocus
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="tucorreo@local.es"
+                            autoComplete="username"
                         />
                     </label>
                     <label>
                         <span>Contrasena</span>
                         <input
-                            type="password" value={password} required
+                            type="password" name="password" value={password} required
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="********"
+                            autoComplete="current-password"
                         />
                     </label>
                     {error && <p className="login-modal__err">{error}</p>}

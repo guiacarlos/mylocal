@@ -51,7 +51,7 @@ function bootstrapDefaultUsers() {
 
         // Si el usuario ya existe, saltamos
         if (isset($index[$emailKey])) {
-            echo "   [USERS] ⏩ {$userData['email']} ya existe\n";
+            if (PHP_SAPI === 'cli') echo "   [USERS] ⏩ {$userData['email']} ya existe\n";
             continue;
         }
 
@@ -85,7 +85,7 @@ function bootstrapDefaultUsers() {
         // Actualizar índice
         $index[$emailKey] = $uuid;
 
-        echo "   [USERS] ✅ Creado: {$userData['email']} ({$userData['role']})\n";
+        if (PHP_SAPI === 'cli') echo "   [USERS] ✅ Creado: {$userData['email']} ({$userData['role']})\n";
         $created++;
     }
 

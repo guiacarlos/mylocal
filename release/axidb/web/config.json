@@ -1,6 +1,0 @@
-{
-    "_doc": "Configuracion del dashboard web vanilla (Fase 4). Cambia enabled a true en local\/staging para servir la UI. En produccion considera mantener false y exponer solo el API.",
-    "enabled": false,
-    "require_auth": false,
-    "default_collection": null
-}

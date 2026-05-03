@@ -13,14 +13,14 @@ error_log("REQ: $method $uri (Agent: $agent)");
 $path = parse_url($uri, PHP_URL_PATH);
 $root = __DIR__;
 
-// 1. API soberana
+// 1. API soberana — SPA server (spa/server/index.php)
 if (strpos($path, '/acide/') === 0) {
-    $script = $root . '/CORE/' . substr($path, strlen('/acide/'));
-    if (file_exists($script)) {
-        require $script;
+    $spaServer = $root . '/spa/server/index.php';
+    if (file_exists($spaServer)) {
+        require $spaServer;
     } else {
         http_response_code(404);
-        echo json_encode(['success' => false, 'error' => 'endpoint no encontrado']);
+        echo json_encode(['success' => false, 'error' => 'SPA server no encontrado']);
     }
     exit;
 }

@@ -3,6 +3,7 @@ import { Routes, Route, Outlet, useNavigate, useLocation } from 'react-router-do
 
 import { Home } from './pages/Home';
 import { Carta } from './pages/Carta';
+import { Checkout } from './pages/Checkout';
 import { Dashboard } from './pages/Dashboard';
 import { TPV } from './pages/TPV';
 import { MesaQR } from './pages/MesaQR';
@@ -118,6 +119,7 @@ export function App() {
             {/* 1. Rutas privadas — prioritarias para evitar que el catch-all público las sombree */}
             <Route element={<PrivateLayout />}>
                 <Route path="/dashboard/*" element={<Dashboard />} />
+                <Route path="/checkout" element={<Checkout />} />
                 <Route path="/sistema/tpv/*" element={<TPV />} />
             </Route>
 

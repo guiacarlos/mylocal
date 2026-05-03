@@ -1,12 +1,11 @@
 /**
- * SynaxisStorage — adaptador IndexedDB puro (sin lógica de negocio).
+ * SynaxisStorage — adaptador IndexedDB ultra-robusto.
  *
- * Port TS de js/synaxis/synaxis-storage.js (repo padre). Cambios:
- *   - ESM, clases, tipos.
- *   - `_serialize` es un mutex promise-chain para evitar VersionError en
- *     llamadas paralelas a ensureStore (IndexedDB sólo permite crear
- *     object stores dentro de onupgradeneeded y no admite requests
- *     concurrentes de versión distinta).
+ * Mejoras:
+ *  - Mutex global para todas las operaciones (evita colisiones de versión).
+ *  - Manejo de 'onblocked' con reintentos automáticos.
+ *  - Versionado estable: solo incrementa si es estrictamente necesario.
+ *  - Estado interno verificado antes de cualquier transacción.
  */
 
 const INDEX_STORE = '__synaxis_index__';
@@ -21,130 +20,225 @@ export class SynaxisStorage {
     readonly dbName: string;
     private version: number;
     private db: IDBDatabase | null = null;
+    private opening: Promise<IDBDatabase> | null = null;
     private lock: Promise<unknown> = Promise.resolve();
+    private knownStores: Set<string>;
 
     constructor({ dbName = 'synaxis', version = 1 }: SynaxisStorageOptions = {}) {
         this.dbName = dbName;
         this.version = version;
+        this.knownStores = new Set([INDEX_STORE, META_STORE]);
     }
 
+    /**
+     * Mutex para serializar todas las operaciones que toquen la DB.
+     */
     private serialize<T>(fn: () => Promise<T>): Promise<T> {
-        const next = this.lock.then(fn, fn) as Promise<T>;
-        this.lock = next.catch(() => undefined);
+        const next = this.lock.then(async () => {
+            try {
+                return await fn();
+            } catch (e) {
+                // Si hay un error de "db null", intentamos recuperar UNA VEZ
+                if (e instanceof Error && e.message.includes('null') && this.db === null) {
+                    this.opening = null;
+                    // No volvemos a llamar a fn() recursivamente aquí para evitar loops.
+                    // El próximo comando en la cola intentará reabrirla.
+                }
+                throw e;
+            }
+        });
+        this.lock = next.then(
+            () => undefined,
+            () => undefined,
+        );
         return next;
     }
 
     private openWithStores(stores: string[]): Promise<IDBDatabase> {
-        return new Promise((resolve, reject) => {
+        if (this.opening) return this.opening;
+
+        this.opening = new Promise((resolve, reject) => {
             const req = indexedDB.open(this.dbName, this.version);
+
             req.onupgradeneeded = () => {
                 const db = req.result;
+                // Aseguramos TODOS los almacenes conocidos hasta ahora
                 for (const name of stores) {
                     if (!db.objectStoreNames.contains(name)) {
                         db.createObjectStore(name, { keyPath: 'id' });
                     }
                 }
             };
-            req.onsuccess = () => resolve(req.result);
-            req.onerror = () => reject(req.error);
-            req.onblocked = () =>
-                reject(new Error('SynaxisStorage: open bloqueado por otra pestaña'));
+
+            req.onsuccess = () => {
+                this.db = req.result;
+                this.db.onversionchange = () => {
+                    if (this.db) {
+                        this.db.close();
+                        this.db = null;
+                        this.opening = null;
+                    }
+                };
+                this.opening = null;
+                resolve(this.db);
+            };
+
+            req.onerror = () => {
+                const err = req.error;
+                this.opening = null;
+                if (err?.name === 'VersionError') {
+                    indexedDB.deleteDatabase(this.dbName).onsuccess = () => {
+                        window.location.reload(); // Recarga limpia ante desincronización mayor
+                    };
+                } else {
+                    reject(err);
+                }
+            };
+
+            req.onblocked = () => {
+                if (this.db) this.db.close();
+                this.db = null;
+                setTimeout(() => {
+                    this.opening = null;
+                    this.getDb().then(resolve, reject);
+                }, 200);
+            };
         });
+
+        return this.opening;
     }
 
-    private async openInternal(): Promise<IDBDatabase> {
+    private async getDb(): Promise<IDBDatabase> {
         if (this.db) return this.db;
-        this.db = await this.openWithStores([INDEX_STORE, META_STORE]);
-        return this.db;
+        return await this.openWithStores(Array.from(this.knownStores));
     }
 
-    open(): Promise<IDBDatabase> {
-        return this.serialize(() => this.openInternal());
+    async open(): Promise<IDBDatabase> {
+        return this.serialize(() => this.getDb());
     }
 
-    ensureStore(collection: string): Promise<void> {
-        return this.serialize(async () => {
-            if (!this.db) await this.openInternal();
-            if (this.db!.objectStoreNames.contains(collection)) return;
-            this.db!.close();
-            this.version += 1;
-            this.db = null;
-            await this.openWithStores([collection, INDEX_STORE, META_STORE]);
-        });
+    private async ensureStoreInternal(collection: string): Promise<void> {
+        const db = await this.getDb();
+        if (db.objectStoreNames.contains(collection)) {
+            this.knownStores.add(collection);
+            return;
+        }
+
+        // Si no existe, hay que añadirlo a conocidos y subir la versión
+        this.knownStores.add(collection);
+        db.close();
+        this.db = null;
+        this.opening = null;
+        this.version = Math.max(this.version, db.version) + 1;
+        await this.getDb(); 
     }
 
-    private tx(name: string, mode: IDBTransactionMode): { tx: IDBTransaction; store: IDBObjectStore } {
-        const tx = this.db!.transaction(name, mode);
-        return { tx, store: tx.objectStore(name) };
+    async ensureStore(collection: string): Promise<void> {
+        return this.serialize(() => this.ensureStoreInternal(collection));
+    }
+
+    private async transaction(
+        collection: string,
+        mode: IDBTransactionMode,
+    ): Promise<{ tx: IDBTransaction; store: IDBObjectStore }> {
+        // Importante: ensureStoreInternal DEBE estar dentro del flujo serializado
+        // pero como transaction ya es llamada por métodos serializados (put, get, all...)
+        // confiamos en que el lock está activo.
+        await this.ensureStoreInternal(collection);
+        
+        if (!this.db) {
+            // Reintento de emergencia
+            this.db = await this.getDb();
+        }
+        
+        const tx = this.db.transaction(collection, mode);
+        return { tx, store: tx.objectStore(collection) };
     }
 
     async put<T extends { id: string }>(collection: string, doc: T): Promise<T> {
-        await this.ensureStore(collection);
-        return new Promise((resolve, reject) => {
-            const { tx, store } = this.tx(collection, 'readwrite');
-            const req = store.put(doc);
-            req.onsuccess = () => resolve(doc);
-            tx.onerror = () => reject(tx.error);
+        return this.serialize(async () => {
+            const { tx, store } = await this.transaction(collection, 'readwrite');
+            return new Promise((resolve, reject) => {
+                const req = store.put(doc);
+                req.onsuccess = () => resolve(doc);
+                tx.onerror = () => reject(tx.error);
+                tx.onabort = () => reject(tx.error || new Error('Transaction aborted'));
+            });
         });
     }
 
     async get<T>(collection: string, id: string): Promise<T | null> {
-        await this.ensureStore(collection);
-        return new Promise((resolve, reject) => {
-            const { tx, store } = this.tx(collection, 'readonly');
-            const req = store.get(id);
-            req.onsuccess = () => resolve((req.result as T) ?? null);
-            tx.onerror = () => reject(tx.error);
+        return this.serialize(async () => {
+            const { tx, store } = await this.transaction(collection, 'readonly');
+            return new Promise((resolve, reject) => {
+                const req = store.get(id);
+                req.onsuccess = () => resolve((req.result as T) ?? null);
+                tx.onerror = () => reject(tx.error);
+            });
         });
     }
 
     async remove(collection: string, id: string): Promise<boolean> {
-        await this.ensureStore(collection);
-        return new Promise((resolve, reject) => {
-            const { tx, store } = this.tx(collection, 'readwrite');
-            const req = store.delete(id);
-            req.onsuccess = () => resolve(true);
-            tx.onerror = () => reject(tx.error);
+        return this.serialize(async () => {
+            const { tx, store } = await this.transaction(collection, 'readwrite');
+            return new Promise((resolve, reject) => {
+                const req = store.delete(id);
+                req.onsuccess = () => resolve(true);
+                tx.onerror = () => reject(tx.error);
+            });
         });
     }
 
     async all<T>(collection: string): Promise<T[]> {
-        await this.ensureStore(collection);
-        return new Promise((resolve, reject) => {
-            const { tx, store } = this.tx(collection, 'readonly');
-            const req = store.getAll();
-            req.onsuccess = () => resolve((req.result as T[]) ?? []);
-            tx.onerror = () => reject(tx.error);
+        return this.serialize(async () => {
+            const { tx, store } = await this.transaction(collection, 'readonly');
+            return new Promise((resolve, reject) => {
+                const req = store.getAll();
+                req.onsuccess = () => resolve((req.result as T[]) ?? []);
+                tx.onerror = () => reject(tx.error);
+            });
         });
     }
 
     async clear(collection: string): Promise<boolean> {
-        await this.ensureStore(collection);
-        return new Promise((resolve, reject) => {
-            const { tx, store } = this.tx(collection, 'readwrite');
-            const req = store.clear();
-            req.onsuccess = () => resolve(true);
-            tx.onerror = () => reject(tx.error);
+        return this.serialize(async () => {
+            const { tx, store } = await this.transaction(collection, 'readwrite');
+            return new Promise((resolve, reject) => {
+                const req = store.clear();
+                req.onsuccess = () => resolve(true);
+                tx.onerror = () => reject(tx.error);
+            });
         });
     }
 
     async listCollections(): Promise<string[]> {
-        await this.open();
-        return Array.from(this.db!.objectStoreNames).filter(
-            (n) => n !== INDEX_STORE && n !== META_STORE,
-        );
+        return this.serialize(async () => {
+            const db = await this.getDb();
+            return Array.from(db.objectStoreNames).filter(
+                (n) => n !== INDEX_STORE && n !== META_STORE,
+            );
+        });
     }
 
     async dropDatabase(): Promise<boolean> {
-        if (this.db) {
-            this.db.close();
-            this.db = null;
-        }
-        return new Promise((resolve, reject) => {
-            const req = indexedDB.deleteDatabase(this.dbName);
-            req.onsuccess = () => resolve(true);
-            req.onerror = () => reject(req.error);
-            req.onblocked = () => reject(new Error('SynaxisStorage: drop bloqueado'));
+        return this.serialize(async () => {
+            if (this.db) {
+                this.db.close();
+                this.db = null;
+            }
+            this.opening = null;
+            return new Promise((resolve, reject) => {
+                const req = indexedDB.deleteDatabase(this.dbName);
+                req.onsuccess = () => resolve(true);
+                req.onerror = () => reject(req.error);
+                req.onblocked = () => {
+                    setTimeout(() => {
+                        const retry = indexedDB.deleteDatabase(this.dbName);
+                        retry.onsuccess = () => resolve(true);
+                        retry.onerror = () => reject(retry.error);
+                    }, 500);
+                };
+            });
         });
     }
 }

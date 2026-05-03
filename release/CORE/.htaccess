@@ -1,9 +1,0 @@
-# 🏛️ ACIDE SOBERANO - BÚNKER DE SEGURIDAD
-# Prohibir acceso directo a las entrañas del sistema.
-
-Order Deny,Allow
-Deny from all
-
-<Files "index.php">
-    Allow from all
-</Files>

@@ -24,7 +24,7 @@ export interface SynaxisClientOptions {
      * `socola_csrf`; el cliente la lee y la inyecta en el header
      * `X-CSRF-Token` de cada POST state-changing.
      */
-    csrfToken?: string | null;
+    token?: string | null;
     /** Map opcional para forzar un scope concreto en acciones específicas. */
     overrides?: Record<string, 'local' | 'server' | 'hybrid'>;
 }
@@ -32,8 +32,9 @@ export interface SynaxisClientOptions {
 export class SynaxisClient {
     readonly core: SynaxisCore;
     apiUrl: string;
-    private csrfToken: string | null;
+    private token: string | null;
     private overrides: Map<string, 'local' | 'server' | 'hybrid'>;
+    private unauthorized = false;
 
     constructor(opts: SynaxisClientOptions = {}) {
         this.core = new SynaxisCore({
@@ -41,12 +42,13 @@ export class SynaxisClient {
             project: opts.project ?? null,
         });
         this.apiUrl = opts.apiUrl ?? '/acide/index.php';
-        this.csrfToken = opts.csrfToken ?? null;
+        this.token = opts.token ?? null;
         this.overrides = new Map(Object.entries(opts.overrides ?? {}));
     }
 
-    setCsrfToken(token: string | null): void {
-        this.csrfToken = token;
+    setToken(token: string | null): void {
+        this.token = token;
+        this.unauthorized = false;
     }
 
     private scopeFor(action: string) {
@@ -57,11 +59,20 @@ export class SynaxisClient {
         const scope = this.scopeFor(req.action);
 
         if (scope === 'local') return this.core.execute<T>(req);
+        
+        const isPublicAction = req.action.startsWith('public_') || req.action === 'csrf_token' || req.action === 'health_check';
+        const isAuthAction = req.action.startsWith('auth_');
+        
+        if (this.unauthorized && !isPublicAction && !isAuthAction) {
+            return { success: false, data: null, error: 'Unauthorized (silenced)', code: 401 };
+        }
+
         if (scope === 'server') return this.http<T>(req);
 
-        // hybrid: intenta local, si hay "nada" va al server y cachea.
         const local = await this.core.execute<T>(req);
         if (this.isMeaningful(local)) return local;
+
+        if (this.unauthorized && !isPublicAction) return local;
 
         const remote = await this.http<T>(req);
         await this.cacheRemote(req, remote);
@@ -70,21 +81,16 @@ export class SynaxisClient {
 
     private isMeaningful<T>(res: SynaxisResponse<T>): boolean {
         if (!res.success) return false;
-        const d = res.data as unknown;
-        if (d === null || d === undefined) return false;
+        const d = res.data as any;
+        if (!d) return false;
         if (Array.isArray(d) && d.length === 0) return false;
-        if (typeof d === 'object' && d !== null) {
-            // QueryResult vacío
-            const maybe = d as { items?: unknown[] };
-            if (Array.isArray(maybe.items) && maybe.items.length === 0) return false;
-        }
+        if (d.items && Array.isArray(d.items) && d.items.length === 0) return false;
         return true;
     }
 
     private async cacheRemote<T>(req: SynaxisRequest, res: SynaxisResponse<T>): Promise<void> {
         if (!res.success || !res.data || !req.collection) return;
 
-        // Si es list → poblar colección. Si es read/get → put único.
         try {
             if (req.action === 'list' || req.action === 'list_products') {
                 const arr = res.data as unknown as SynaxisDoc[];
@@ -100,41 +106,55 @@ export class SynaxisClient {
                 if (doc?.id) await this.core.update(req.collection, doc.id, doc as Partial<SynaxisDoc>);
             }
         } catch {
-            // Cachear es best-effort; nunca rompe la respuesta al caller.
+            // Ignorar errores de cache
         }
     }
 
     private async http<T>(req: SynaxisRequest): Promise<SynaxisResponse<T>> {
+        if (this.unauthorized && !req.action.startsWith('auth_') && req.action !== 'csrf_token') {
+            return { success: false, data: null, error: 'Unauthorized (silenced)', code: 401 };
+        }
+
         const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-        if (this.csrfToken) headers['X-CSRF-Token'] = this.csrfToken;
+        if (this.token) {
+            headers['X-CSRF-Token'] = this.token;
+            headers['Authorization'] = `Bearer ${this.token}`;
+        }
 
         try {
             const res = await fetch(this.apiUrl, {
                 method: 'POST',
                 headers,
                 body: JSON.stringify(req),
-                credentials: 'include',  // la cookie socola_session (httponly) viaja aquí
+                credentials: 'include',
             });
-            if (res.status === 419) {
-                // CSRF expirado: la SPA debe re-obtener token y reintentar.
-                this.csrfToken = null;
+
+            if (res.status === 401) {
+                this.unauthorized = true; 
+                return { success: false, data: null, error: 'Unauthorized', code: 401 };
             }
+            if (res.status === 419) {
+                this.token = null;
+                return { success: false, data: null, error: 'CSRF Expired', code: 419 };
+            }
+            if (!res.ok) {
+                const text = await res.text();
+                return { success: false, data: null, error: `HTTP ${res.status}: ${text.slice(0, 100)}`, code: res.status };
+            }
+
             const json = (await res.json()) as SynaxisResponse<T>;
+            if (json.success) this.unauthorized = false;
             return json;
         } catch (e) {
             return {
                 success: false,
                 data: null,
                 error: e instanceof Error ? e.message : String(e),
+                code: 500
             };
         }
     }
 
-    /**
-     * Carga un snapshot (típicamente `/seed/<file>.json`) y lo importa.
-     * Solo ejecuta la importación si la colección está vacía, para no
-     * pisar datos ya sincronizados.
-     */
     async seedIfEmpty(url: string): Promise<{ imported: boolean; collections: string[] }> {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Seed HTTP ${res.status}`);
@@ -154,3 +174,5 @@ export class SynaxisClient {
         return { imported: true, collections: Object.keys(snapshot) };
     }
 }
+
+

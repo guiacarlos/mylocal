@@ -56,7 +56,24 @@ Modulos eliminados por no pertenecer al producto:
 
 ---
 
-## Proceso de build y despliegue
+---
+
+## Flujo de Desarrollo Ultra-Rápido
+
+Para trabajar en el proyecto con cambios instantáneos (HMR):
+
+1. **Ejecuta `run.bat`** en la raíz.
+   - Levanta el Backend PHP (puerto 8090).
+   - Levanta el Frontend Vite (puerto 5173).
+   - Abre el navegador automáticamente.
+2. **Edita el código** en `spa/src/`.
+3. **Ver cambios**: El navegador se actualiza solo al guardar.
+
+**IMPORTANTE**: No es necesario hacer `build.ps1` durante el desarrollo. Solo se hace al finalizar el proyecto o para despliegues reales.
+
+---
+
+## Proceso de Build (Producción Final)
 
 ### Carpeta de trabajo (desarrollo)
 
@@ -143,11 +160,10 @@ MEDIA/                 imagenes de productos
 
 ## Flujo de trabajo
 
-1. Implementar tarea
-2. Verificar que ningun archivo supera 250 lineas
-3. Actualizar checklist en claude/planes/mylocal.md
-4. Commit con mensaje descriptivo de la fase
-5. Push a github.com/guiacarlos/mylocal
+1. **Desarrollo**: Usar `run.bat` para ver cambios instantáneos.
+2. **Implementar**: Seguir el plan en `claude/planes/mylocal.md`.
+3. **Calidad**: Verificar que ningún archivo supera las 250 líneas.
+4. **Finalizar**: Solo al terminar el proyecto o fase crítica, ejecutar `build.ps1` para generar la carpeta `release/`.
 
 ---
 

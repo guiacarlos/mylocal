@@ -1,0 +1,37 @@
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+php_errors.log
+
+# ── Datos de sesión / usuarios (sensibles) ─────────────────────
+spa/server/data/sessions/
+spa/server/data/users/
+spa/server/data/_rl/
+spa/server/data/ocr_uploads/
+STORAGE/sessions/
+STORAGE/revisions/
+
+# ── Configuración local (API keys, etc.) ───────────────────────
+spa/server/config/gemini_settings.json
+spa/server/config/revolut.json
+spa/server/config/auth.json
+config.json
+
+# ── Dependencias ───────────────────────────────────────────────
+node_modules/
+vendor/
+
+# ── Build / Release generado ───────────────────────────────────
+release_new/
+
+# ── Archivos del sistema ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── TypeScript build cache ─────────────────────────────────────
+spa/tsconfig.tsbuildinfo
+spa/tsconfig.node.tsbuildinfo
+spa/vite.config.d.ts
+spa/vite.config.js
+
+# ── Scripts de prueba temporales ───────────────────────────────
+test_*.php

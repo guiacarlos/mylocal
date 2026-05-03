@@ -36,12 +36,12 @@ export interface LoginResult {
 export async function ensureCsrfToken(client: SynaxisClient): Promise<string | null> {
     const fromCookie = readCookie('socola_csrf');
     if (fromCookie) {
-        client.setCsrfToken(fromCookie);
+        client.setToken(fromCookie);
         return fromCookie;
     }
     const res = await client.execute<{ token: string }>({ action: 'csrf_token' });
     const token = res.success && res.data ? res.data.token : null;
-    if (token) client.setCsrfToken(token);
+    if (token) client.setToken(token);
     return token;
 }
 
@@ -50,14 +50,14 @@ export async function login(
     email: string,
     password: string,
 ): Promise<LoginResult> {
-    const res = await client.execute<{ user: AppUser; csrfToken?: string }>({
+    const res = await client.execute<{ user: AppUser; token?: string }>({
         action: 'auth_login',
         data: { email, password },
     });
     if (!res.success || !res.data) {
         return { success: false, error: res.error ?? 'Credenciales inválidas' };
     }
-    if (res.data.csrfToken) client.setCsrfToken(res.data.csrfToken);
+    if (res.data.token) client.setToken(res.data.token);
     cacheUser(res.data.user);
     return { success: true, user: res.data.user };
 }
@@ -82,13 +82,13 @@ export async function logout(client: SynaxisClient): Promise<void> {
     try {
         await client.execute({ action: 'auth_logout' });
     } finally {
-        client.setCsrfToken(null);
+        client.setToken(null);
         sessionStorage.removeItem(USER_CACHE_KEY);
     }
 }
 
 export async function getCurrentUser(client: SynaxisClient): Promise<AppUser | null> {
-    const res = await client.execute<AppUser>({ action: 'get_current_user' });
+    const res = await client.execute<AppUser>({ action: 'auth_me' });
     if (!res.success || !res.data) return null;
     cacheUser(res.data);
     return res.data;

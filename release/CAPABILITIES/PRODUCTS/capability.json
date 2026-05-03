@@ -1,8 +1,0 @@
-{
-    "key": "products",
-    "name": "Gestión de Productos",
-    "category": "INVENTARIO",
-    "description": "Capability soberana para la administración de productos, categorías e inventario granular.",
-    "icon": "📦",
-    "version": "1.0.0"
-}
