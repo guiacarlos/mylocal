@@ -4,6 +4,22 @@ Guia de trabajo para agentes de IA en este proyecto.
 
 ---
 
+## LECTURA OBLIGATORIA antes de tocar datos, auth, build o despliegue
+
+**`claude/AXIDB_SYSTEM.md`** — documento canonico del motor de datos.
+Si vas a modificar cualquier cosa relacionada con `STORAGE/`, `.vault`,
+login, auth, scopes de SynaxisClient, build o despliegue, **leelo
+completo primero**. No interpretes, no asumas, no inventes. Existe
+porque hemos perdido tiempo varias veces volviendo atras por no
+entender como funciona AxiDB.
+
+Resumen: los usuarios viven en `STORAGE/.vault/users/`. La build deja
+STORAGE vacio a proposito. `CORE/index.php` auto-bootstrapea usuarios
+en cada peticion si la vault esta vacia. `auth_login` es scope
+`server` SIEMPRE. Default admin: `socola@socola.es` / `socola2026`.
+
+---
+
 ## Que es este proyecto
 
 Plataforma SaaS de hosteleria espanola. Carta digital QR + TPV + agentes IA.
@@ -136,6 +152,11 @@ Funciona en cualquier servidor con Apache o LiteSpeed y PHP >= 7.4.
 Toda lectura y escritura de datos pasa por AxiDB.
 No se accede directamente a STORAGE sin pasar por la capa AxiDB.
 No se usa SQL externo. No se instala MySQL ni ninguna base de datos.
+
+**Documento de referencia obligatorio:** `claude/AXIDB_SYSTEM.md`.
+Cubre: estructura de STORAGE/, vault de usuarios, auto-bootstrap,
+scopes de SynaxisClient, flujo completo de login, source vs release,
+diagnostico rapido cuando algo falla.
 
 ---
 
