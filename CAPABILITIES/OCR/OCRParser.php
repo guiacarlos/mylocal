@@ -97,20 +97,40 @@ class OCRParser
 
         $payload = ['contents' => [['parts' => [['text' => $instr]]]]];
         $url = "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$key}";
+        $body = json_encode($payload);
 
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => json_encode($payload),
-            CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
-            CURLOPT_TIMEOUT => 60
-        ]);
-        $resp = curl_exec($ch);
-        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        if (function_exists('curl_init')) {
+            $ch = curl_init($url);
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => $body,
+                CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+                CURLOPT_TIMEOUT => 60,
+                CURLOPT_SSL_VERIFYPEER => false,
+            ]);
+            $resp = curl_exec($ch);
+            $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+        } else {
+            $ctx = stream_context_create([
+                'http' => [
+                    'method' => 'POST',
+                    'header' => "Content-Type: application/json\r\n",
+                    'content' => $body,
+                    'timeout' => 60,
+                    'ignore_errors' => true,
+                ],
+                'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+            ]);
+            $resp = @file_get_contents($url, false, $ctx);
+            $code = 0;
+            foreach (($http_response_header ?? []) as $h) {
+                if (preg_match('#^HTTP/\\S+\\s+(\\d{3})#', $h, $m)) $code = (int) $m[1];
+            }
+        }
 
         if ($code !== 200) return ['success' => false, 'error' => "HTTP $code"];
-        $data = json_decode($resp, true);
+        $data = json_decode((string) $resp, true);
         $jsonText = $data['candidates'][0]['content']['parts'][0]['text'] ?? '';
         $jsonText = preg_replace('/^```json\s*|\s*```$/s', '', trim($jsonText));
         $parsed = json_decode($jsonText, true);
@@ -131,20 +151,10 @@ class OCRParser
 
     private function loadConfig()
     {
-        $candidates = [
-            $this->configPath,
-            __DIR__ . '/../../spa/server/config/gemini.json',
-            __DIR__ . '/../../STORAGE/config/gemini_settings.json',
-        ];
-        foreach ($candidates as $path) {
-            if ($path && file_exists($path)) {
-                $cfg = json_decode(@file_get_contents($path), true) ?: [];
-                if (!isset($cfg['model']) && isset($cfg['default_model'])) {
-                    $cfg['model'] = $cfg['default_model'];
-                }
-                if (!empty($cfg['api_key'])) return $cfg;
-            }
-        }
-        return [];
+        require_once __DIR__ . '/../OPTIONS/optiosconect.php';
+        $opt = mylocal_options();
+        $apiKey = $opt->get('ai.api_key', '');
+        if (!$apiKey) return [];
+        return ['api_key' => $apiKey, 'model' => $opt->get('ai.default_model', 'gemini-2.5-flash')];
     }
 }

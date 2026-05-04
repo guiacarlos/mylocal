@@ -1,0 +1,10 @@
+{
+    "id": "agente_settings",
+    "gemini_api_key": "AIzaSyDza7VLBVnJNg9rBwU3tQcTIjUAxG0A04U",
+    "gemini_model": "gemini-2.5-flash",
+    "vision_model": "gemini-2.5-flash",
+    "default_system_prompt": "Eres un asistente util, conciso y experto en hosteleria espanola.",
+    "_version": 1,
+    "_createdAt": "2026-05-04T13:00:00+00:00",
+    "_updatedAt": "2026-05-04T13:00:00+00:00"
+}

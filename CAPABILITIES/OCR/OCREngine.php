@@ -44,7 +44,12 @@ class OCREngine
         $key = $cfg['api_key'] ?? '';
         if (!$key) return ['success' => false, 'error' => 'API key de Gemini no configurada. Edita spa/server/config/gemini.json y anade tu api_key. Ver: https://makersuite.google.com/app/apikey'];
 
-        $mime = mime_content_type($path) ?: 'image/jpeg';
+        // mime_content_type requiere ext-fileinfo. Fallback a extension.
+        $mime = function_exists('mime_content_type') ? @mime_content_type($path) : false;
+        if (!$mime) {
+            $extMap = ['jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'webp' => 'image/webp'];
+            $mime = $extMap[strtolower(pathinfo($path, PATHINFO_EXTENSION))] ?? 'image/jpeg';
+        }
         $b64 = base64_encode(file_get_contents($path));
         $model = $cfg['vision_model'] ?? $cfg['model'] ?? 'gemini-1.5-flash';
 
@@ -100,47 +105,60 @@ class OCREngine
     private function callGemini($model, $key, $payload)
     {
         $url = "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$key}";
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => json_encode($payload),
-            CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
-            CURLOPT_TIMEOUT => 60
-        ]);
-        $resp = curl_exec($ch);
-        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $err = curl_error($ch);
-        curl_close($ch);
-        if ($code !== 200) return ['success' => false, 'error' => "HTTP $code $err: " . substr($resp, 0, 200)];
-        $data = json_decode($resp, true);
+        $body = json_encode($payload);
+        // Soporta tanto curl (preferido) como streams (fallback sin ext-curl).
+        if (function_exists('curl_init')) {
+            $ch = curl_init($url);
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => $body,
+                CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+                CURLOPT_TIMEOUT => 60,
+                CURLOPT_SSL_VERIFYPEER => false,
+            ]);
+            $resp = curl_exec($ch);
+            $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $err = curl_error($ch);
+            curl_close($ch);
+        } else {
+            $ctx = stream_context_create([
+                'http' => [
+                    'method' => 'POST',
+                    'header' => "Content-Type: application/json\r\n",
+                    'content' => $body,
+                    'timeout' => 60,
+                    'ignore_errors' => true,
+                ],
+                'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+            ]);
+            $resp = @file_get_contents($url, false, $ctx);
+            $code = 0;
+            $err = '';
+            foreach (($http_response_header ?? []) as $h) {
+                if (preg_match('#^HTTP/\\S+\\s+(\\d{3})#', $h, $m)) $code = (int) $m[1];
+            }
+            if ($resp === false) $err = 'stream error';
+        }
+        if ($code !== 200) return ['success' => false, 'error' => "HTTP $code $err: " . substr((string)$resp, 0, 200)];
+        $data = json_decode((string)$resp, true);
         $text = $data['candidates'][0]['content']['parts'][0]['text'] ?? null;
-        if (!$text) return ['success' => false, 'error' => 'Respuesta Gemini vacia'];
+        if (!$text) return ['success' => false, 'error' => 'Respuesta Gemini vacia: ' . substr((string)$resp, 0, 200)];
         return ['success' => true, 'text' => $text];
     }
 
     private function loadConfig()
     {
-        // Busca el config en multiples ubicaciones por compatibilidad:
-        //   1. La que se paso explicitamente al constructor.
-        //   2. spa/server/config/gemini.json (flujo SPA activo).
-        //   3. STORAGE/config/gemini_settings.json (legacy CORE).
-        $candidates = [
-            $this->configPath,
-            __DIR__ . '/../../spa/server/config/gemini.json',
-            __DIR__ . '/../../STORAGE/config/gemini_settings.json',
+        // Source of truth: CAPABILITIES/OPTIONS (el unico sitio de config).
+        require_once __DIR__ . '/../OPTIONS/optiosconect.php';
+        $opt = mylocal_options();
+        $apiKey = $opt->get('ai.api_key', '');
+        if (!$apiKey) return [];
+        $model = $opt->get('ai.default_model', 'gemini-2.5-flash');
+        return [
+            'api_key' => $apiKey,
+            'model' => $model,
+            'vision_model' => $opt->get('ai.vision_model', $model),
         ];
-        foreach ($candidates as $path) {
-            if ($path && file_exists($path)) {
-                $cfg = json_decode(@file_get_contents($path), true) ?: [];
-                // Normalizar: spa/server/config/gemini.json usa default_model;
-                // legacy usa model. Mapear ambos.
-                if (!isset($cfg['model']) && isset($cfg['default_model'])) {
-                    $cfg['model'] = $cfg['default_model'];
-                }
-                if (!empty($cfg['api_key'])) return $cfg;
-            }
-        }
-        return [];
     }
 }

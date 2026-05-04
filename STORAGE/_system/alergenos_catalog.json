@@ -1,0 +1,192 @@
+{
+    "harina": [
+        "gluten"
+    ],
+    "harina de trigo": [
+        "gluten"
+    ],
+    "pan": [
+        "gluten"
+    ],
+    "pan rallado": [
+        "gluten"
+    ],
+    "pasta": [
+        "gluten"
+    ],
+    "fideos": [
+        "gluten"
+    ],
+    "cuscus": [
+        "gluten"
+    ],
+    "cebada": [
+        "gluten"
+    ],
+    "centeno": [
+        "gluten"
+    ],
+    "avena": [
+        "gluten"
+    ],
+    "cerveza": [
+        "gluten"
+    ],
+    "soja": [
+        "soja"
+    ],
+    "salsa de soja": [
+        "soja",
+        "gluten"
+    ],
+    "tofu": [
+        "soja"
+    ],
+    "leche": [
+        "lacteos"
+    ],
+    "mantequilla": [
+        "lacteos"
+    ],
+    "queso": [
+        "lacteos"
+    ],
+    "nata": [
+        "lacteos"
+    ],
+    "yogur": [
+        "lacteos"
+    ],
+    "requeson": [
+        "lacteos"
+    ],
+    "huevo": [
+        "huevos"
+    ],
+    "huevos": [
+        "huevos"
+    ],
+    "mayonesa": [
+        "huevos"
+    ],
+    "pescado": [
+        "pescado"
+    ],
+    "salmon": [
+        "pescado"
+    ],
+    "atun": [
+        "pescado"
+    ],
+    "merluza": [
+        "pescado"
+    ],
+    "bacalao": [
+        "pescado"
+    ],
+    "anchoas": [
+        "pescado"
+    ],
+    "gambas": [
+        "crustaceos"
+    ],
+    "langostinos": [
+        "crustaceos"
+    ],
+    "cigalas": [
+        "crustaceos"
+    ],
+    "bogavante": [
+        "crustaceos"
+    ],
+    "cangrejo": [
+        "crustaceos"
+    ],
+    "centollo": [
+        "crustaceos"
+    ],
+    "mejillon": [
+        "moluscos"
+    ],
+    "mejillones": [
+        "moluscos"
+    ],
+    "almeja": [
+        "moluscos"
+    ],
+    "almejas": [
+        "moluscos"
+    ],
+    "pulpo": [
+        "moluscos"
+    ],
+    "calamar": [
+        "moluscos"
+    ],
+    "sepia": [
+        "moluscos"
+    ],
+    "cacahuete": [
+        "cacahuetes"
+    ],
+    "cacahuetes": [
+        "cacahuetes"
+    ],
+    "almendra": [
+        "frutos_cascara"
+    ],
+    "almendras": [
+        "frutos_cascara"
+    ],
+    "nuez": [
+        "frutos_cascara"
+    ],
+    "nueces": [
+        "frutos_cascara"
+    ],
+    "avellana": [
+        "frutos_cascara"
+    ],
+    "avellanas": [
+        "frutos_cascara"
+    ],
+    "pistacho": [
+        "frutos_cascara"
+    ],
+    "pistachos": [
+        "frutos_cascara"
+    ],
+    "anacardo": [
+        "frutos_cascara"
+    ],
+    "pinones": [
+        "frutos_cascara"
+    ],
+    "apio": [
+        "apio"
+    ],
+    "mostaza": [
+        "mostaza"
+    ],
+    "sesamo": [
+        "sesamo"
+    ],
+    "tahini": [
+        "sesamo"
+    ],
+    "altramuz": [
+        "altramuces"
+    ],
+    "altramuces": [
+        "altramuces"
+    ],
+    "vino": [
+        "sulfitos"
+    ],
+    "vinagre": [
+        "sulfitos"
+    ],
+    "frutos secos": [
+        "frutos_cascara"
+    ]
+}
