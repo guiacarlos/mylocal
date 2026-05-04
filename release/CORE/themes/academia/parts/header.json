@@ -1,0 +1,36 @@
+{
+    "blocks": [
+        {
+            "element": "container",
+            "id": "header-academy",
+            "class": "site-header",
+            "content": [
+                {
+                    "element": "container",
+                    "class": "container",
+                    "content": [
+                        {
+                            "element": "text",
+                            "tag": "span",
+                            "text": "Academy Gestas AI",
+                            "class": "site-logo"
+                        },
+                        {
+                            "element": "container",
+                            "id": "header-nav",
+                            "class": "main-nav",
+                            "content": [
+                                {
+                                    "element": "link",
+                                    "text": "Entrar",
+                                    "link": "/login",
+                                    "class": "nav-link"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

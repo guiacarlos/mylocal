@@ -1,3 +1,10 @@
+/* ╔══════════════════════════════════════════════════════════════════╗
+   ║ MYLOCAL AUTH LOCK - load-bearing                                 ║
+   ║ Cliente HTTP. Bearer en header Authorization, credentials:'omit'.║
+   ║ Lee body JSON aunque res.ok=false (errores de negocio en HTTP 200).║
+   ║ Antes de modificar, leer claude/AUTH_LOCK.md y verificar que     ║
+   ║ spa/server/tests/test_login.php sigue pasando despues del cambio.║
+   ╚══════════════════════════════════════════════════════════════════╝ */
 /**
  * SynaxisClient — fachada única para la SPA.
  *
@@ -116,8 +123,16 @@ export class SynaxisClient {
         }
 
         const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        // Auth bearer-only: leemos el token de sessionStorage si no esta cacheado.
+        // Sin cookies httponly. Sin CSRF. Sin riesgo de cross-site (sessionStorage
+        // no es accesible para origenes ajenos).
+        if (!this.token) {
+            try {
+                const saved = sessionStorage.getItem('mylocal_token');
+                if (saved) this.token = saved;
+            } catch (_) { /* incognito o storage bloqueado */ }
+        }
         if (this.token) {
-            headers['X-CSRF-Token'] = this.token;
             headers['Authorization'] = `Bearer ${this.token}`;
         }
 
@@ -126,7 +141,7 @@ export class SynaxisClient {
                 method: 'POST',
                 headers,
                 body: JSON.stringify(req),
-                credentials: 'include',
+                credentials: 'omit',
             });
 
             if (res.status === 401) {
@@ -137,14 +152,22 @@ export class SynaxisClient {
                 this.token = null;
                 return { success: false, data: null, error: 'CSRF Expired', code: 419 };
             }
+            // Si el body es JSON valido con envelope (success/error), lo usamos
+            // aunque res.ok sea false. Asi mensajes de negocio del servidor
+            // llegan al usuario sin envoltorios "HTTP 500: ..." opacos.
+            const text = await res.text();
+            try {
+                const json = JSON.parse(text) as SynaxisResponse<T>;
+                if (typeof json === 'object' && json !== null && 'success' in json) {
+                    if (json.success) this.unauthorized = false;
+                    return json;
+                }
+            } catch (_) { /* respuesta no es JSON */ }
+
             if (!res.ok) {
-                const text = await res.text();
                 return { success: false, data: null, error: `HTTP ${res.status}: ${text.slice(0, 100)}`, code: res.status };
             }
-
-            const json = (await res.json()) as SynaxisResponse<T>;
-            if (json.success) this.unauthorized = false;
-            return json;
+            return { success: false, data: null, error: 'Respuesta no JSON', code: res.status };
         } catch (e) {
             return {
                 success: false,

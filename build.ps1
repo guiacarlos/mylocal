@@ -1,3 +1,9 @@
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║ MYLOCAL AUTH LOCK - load-bearing                                 ║
+# ║ Build pipeline. DEBE copiar spa/server, materializar configs y   ║
+# ║ ejecutar test_login.php (gate). Si falla, exit 1.                ║
+# ║ Antes de modificar, leer claude/AUTH_LOCK.md.                    ║
+# ╚══════════════════════════════════════════════════════════════════╝
 # build.ps1 — MyLocal
 # Genera /release/ completa y autosuficiente para subir a cualquier servidor Apache+PHP.
 # Uso: .\build.ps1
@@ -49,6 +55,7 @@ $include = @(
     "router.php",
     "favicon.png",
     "favicon.jpg",
+    "spa\server",
     "manifest.json",
     "robots.txt",
     "schema.json"
@@ -59,7 +66,16 @@ foreach ($item in $include) {
     $dst = Join-Path $RELEASE $item
     if (Test-Path $src) {
         if ((Get-Item $src).PSIsContainer) {
-            Copy-Item -Path $src -Destination $dst -Recurse -Force
+            # robocopy /E (sin /MIR) copia todo y crea subdirs nuevos
+            # sin borrar nada en destino. Crucial: data/ con users
+            # bootstrapeados se conserva.
+            robocopy $src $dst /E /NFL /NDL /NJH /NJS /NC /NS /NP > $null
+            # robocopy: 0-7 OK, 8+ es fallo. ResetEEXITCODE despues.
+            if ($LASTEXITCODE -ge 8) {
+                Write-Host "ERROR: robocopy fallo para $item (exit $LASTEXITCODE)" -ForegroundColor Red
+                exit 1
+            }
+            $global:LASTEXITCODE = 0
         } else {
             Copy-Item -Path $src -Destination $dst -Force
         }
@@ -74,9 +90,50 @@ foreach ($item in $include) {
 
 Write-Host "      OK -> backend copiado" -ForegroundColor Green
 
-# 2.1 Limpieza de archivos de seguridad/debug
+# 2.1 Limpieza de archivos de debug del CORE legacy.
+# IMPORTANTE: el patron NO incluye "test_*.php" porque eso borraria
+# spa/server/tests/test_login.php que es el gate del paso 2.3.
 Write-Host "      Limpiando archivos de debug..." -ForegroundColor Gray
-Get-ChildItem -Path $RELEASE -Include "debug_*.php", "diag.php", "test_*.php", "*.log" -Recurse | Remove-Item -Force -ErrorAction SilentlyContinue
+Get-ChildItem -Path $RELEASE -Include "debug_*.php", "diag.php", "*.log" -Recurse |
+    Where-Object { $_.FullName -notmatch '\\tests\\' } |
+    Remove-Item -Force -ErrorAction SilentlyContinue
+
+# 2.2 Materializar configs spa/server: cada *.json.example sin .json equivalente
+# se copia a .json. Asi el server arranca con valores por defecto y no falla
+# por config inexistente. Los secretos reales se editan tras el despliegue.
+Write-Host "      Materializando configs spa/server..." -ForegroundColor Gray
+$configDir = Join-Path $RELEASE "spa\server\config"
+if (Test-Path $configDir) {
+    Get-ChildItem -Path $configDir -Filter "*.json.example" | ForEach-Object {
+        $real = $_.FullName -replace '\.example$', ''
+        if (-not (Test-Path $real)) {
+            Copy-Item -Path $_.FullName -Destination $real -Force
+            Write-Host "        $($_.Name) -> $(Split-Path $real -Leaf)" -ForegroundColor DarkGray
+        }
+    }
+}
+
+# 2.3 GATE DE LOGIN: ejecutar el test de integracion contra el release/.
+# Si CUALQUIER assertion falla, la build aborta. Esto impide que regresiones
+# en el flujo de auth pasen a produccion. Ver claude/AUTH_LOCK.md.
+Write-Host "      Ejecutando test de integracion del login..." -ForegroundColor Gray
+$testScript = Join-Path $RELEASE "spa\server\tests\test_login.php"
+if (Test-Path $testScript) {
+    $testOut = & php $testScript "--root=$RELEASE" "--port=8766" 2>&1
+    $testExit = $LASTEXITCODE
+    if ($testExit -ne 0) {
+        Write-Host ""
+        Write-Host "ERROR: el test de login fallo. La build NO continua." -ForegroundColor Red
+        Write-Host "Salida del test:" -ForegroundColor Yellow
+        $testOut | ForEach-Object { Write-Host "  $_" }
+        Write-Host ""
+        Write-Host "Lee claude/AUTH_LOCK.md y arregla la regresion antes de re-buildear." -ForegroundColor Yellow
+        exit 1
+    }
+    Write-Host "      OK -> 31/31 tests de login pasan" -ForegroundColor Green
+} else {
+    Write-Host "AVISO: test_login.php no encontrado en release. Saltando gate." -ForegroundColor Yellow
+}
 
 # 3. Crear STORAGE/ vacio con .gitkeep para que Apache pueda escribir datos
 Write-Host "[3/3] Preparando estructura de datos vacia..." -ForegroundColor Yellow

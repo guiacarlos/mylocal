@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# AxiDB CLI - wrapper Unix.
+# Delega a php cli/main.php con los argumentos originales.
+set -e
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec php "$DIR/../cli/main.php" "$@"

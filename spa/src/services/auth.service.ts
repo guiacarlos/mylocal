@@ -1,8 +1,19 @@
+/* ╔══════════════════════════════════════════════════════════════════╗
+   ║ MYLOCAL AUTH LOCK - load-bearing                                 ║
+   ║ Wrapper login/logout. Token bearer en sessionStorage('mylocal_token').║
+   ║ Antes de modificar, leer claude/AUTH_LOCK.md y verificar que     ║
+   ║ spa/server/tests/test_login.php sigue pasando despues del cambio.║
+   ╚══════════════════════════════════════════════════════════════════╝ */
 /**
- * Servicio de autenticación — el login y la gestión de sesión SIEMPRE
- * pasan por servidor. El cliente NO almacena el token de sesión:
- *   - La cookie `socola_session` es httponly + SameSite=Strict. No es
- *     legible por JS, por lo que ni XSS puede robarla.
+ * Servicio de autenticación. Auth bearer-only (sin cookies):
+ *   - El password se manda al server, que lo verifica con Argon2id.
+ *   - El server devuelve {user, token} en el body.
+ *   - El cliente guarda el token en sessionStorage('mylocal_token').
+ *   - Cada peticion lleva Authorization: Bearer <token>.
+ * Antes (deprecated):
+ *   - Cookie `socola_session` httponly + SameSite=Strict.
+ *   - CSRF double-submit con cookie `socola_csrf`.
+ *   ESO YA NO APLICA. Ver claude/AUTH_LOCK.md.
  *   - La cookie `socola_csrf` no es httponly y el cliente la lee para
  *     enviarla en el header `X-CSRF-Token` en peticiones state-changing
  *     (patrón double-submit).
@@ -30,19 +41,19 @@ export interface LoginResult {
 }
 
 /**
- * Lee la cookie socola_csrf. Si no existe, pide una al server.
- * Llamar una sola vez al arrancar la SPA (useSynaxis lo hace por nosotros).
+ * No-op. Compatibilidad con codigo viejo. La auth ahora usa Bearer token
+ * en sessionStorage, no cookies httponly + CSRF double-submit.
+ * Si hay token guardado, lo carga al cliente para futuras peticiones.
  */
 export async function ensureCsrfToken(client: SynaxisClient): Promise<string | null> {
-    const fromCookie = readCookie('socola_csrf');
-    if (fromCookie) {
-        client.setToken(fromCookie);
-        return fromCookie;
-    }
-    const res = await client.execute<{ token: string }>({ action: 'csrf_token' });
-    const token = res.success && res.data ? res.data.token : null;
-    if (token) client.setToken(token);
-    return token;
+    try {
+        const saved = sessionStorage.getItem('mylocal_token');
+        if (saved) {
+            client.setToken(saved);
+            return saved;
+        }
+    } catch (_) { /* incognito */ }
+    return null;
 }
 
 export async function login(
@@ -57,7 +68,10 @@ export async function login(
     if (!res.success || !res.data) {
         return { success: false, error: res.error ?? 'Credenciales inválidas' };
     }
-    if (res.data.token) client.setToken(res.data.token);
+    if (res.data.token) {
+        client.setToken(res.data.token);
+        try { sessionStorage.setItem('mylocal_token', res.data.token); } catch (_) { /* incognito */ }
+    }
     cacheUser(res.data.user);
     return { success: true, user: res.data.user };
 }
@@ -84,6 +98,7 @@ export async function logout(client: SynaxisClient): Promise<void> {
     } finally {
         client.setToken(null);
         sessionStorage.removeItem(USER_CACHE_KEY);
+        sessionStorage.removeItem('mylocal_token');
     }
 }
 
@@ -111,8 +126,3 @@ function cacheUser(user: AppUser): void {
     }
 }
 
-function readCookie(name: string): string | null {
-    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const m = document.cookie.match(new RegExp('(?:^|;\\s*)' + escaped + '=([^;]+)'));
-    return m ? decodeURIComponent(m[1]) : null;
-}

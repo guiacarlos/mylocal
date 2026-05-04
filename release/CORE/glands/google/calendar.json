@@ -1,0 +1,30 @@
+{
+    "key": "google-calendar",
+    "name": "Google Calendar Gland",
+    "version": "1.0.0",
+    "type": "HYBRID",
+    "provider": "Google",
+    "capabilities": [
+        "read",
+        "write",
+        "sync",
+        "availability"
+    ],
+    "endpoints": {
+        "list": "/api/calendar/admin/calendars",
+        "create": "/api/calendar/admin/calendars",
+        "sync": "/api/calendar/sync/google"
+    },
+    "schema": {
+        "items": "array",
+        "lastSync": "timestamp",
+        "google_refresh_token": "secret"
+    },
+    "ai_hints": {
+        "context": "Esta glándula permite gestionar calendarios reales de Google. Requiere ClientID y Secret.",
+        "operations": {
+            "get_events": "Lista eventos de un calendario específico.",
+            "book_slot": "Crea una reserva analizando disponibilidad en tiempo real."
+        }
+    }
+}

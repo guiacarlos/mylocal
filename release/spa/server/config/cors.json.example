@@ -1,0 +1,24 @@
+{
+    "_doc": "Whitelist de orígenes permitidos. Copia a cors.json. En dev puedes añadir http://localhost:5173. En prod, SOLO los dominios propios.",
+    "allowed_origins": [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173"
+    ],
+    "allow_credentials": true,
+    "public_actions": [
+        "health_check",
+        "auth_login",
+        "auth_register",
+        "public_register",
+        "chat_restaurant",
+        "validate_coupon",
+        "get_payment_settings",
+        "get_mesa_settings",
+        "list_products",
+        "process_external_order",
+        "get_table_order",
+        "table_request",
+        "revolut_webhook",
+        "csrf_token"
+    ]
+}

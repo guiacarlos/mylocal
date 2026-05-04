@@ -4,19 +4,41 @@ Guia de trabajo para agentes de IA en este proyecto.
 
 ---
 
-## LECTURA OBLIGATORIA antes de tocar datos, auth, build o despliegue
+## LECTURA OBLIGATORIA antes de tocar nada
 
-**`claude/AXIDB_SYSTEM.md`** — documento canonico del motor de datos.
-Si vas a modificar cualquier cosa relacionada con `STORAGE/`, `.vault`,
-login, auth, scopes de SynaxisClient, build o despliegue, **leelo
-completo primero**. No interpretes, no asumas, no inventes. Existe
-porque hemos perdido tiempo varias veces volviendo atras por no
-entender como funciona AxiDB.
+### 1. `claude/AUTH_LOCK.md` — contrato bloqueado del login
 
-Resumen: los usuarios viven en `STORAGE/.vault/users/`. La build deja
-STORAGE vacio a proposito. `CORE/index.php` auto-bootstrapea usuarios
-en cada peticion si la vault esta vacia. `auth_login` es scope
-`server` SIEMPRE. Default admin: `socola@socola.es` / `socola2026`.
+**Si vas a tocar auth, login, sesiones, cookies, headers HTTP, fetch,
+SynaxisClient, build, router o cualquier cosa que toque `/acide/*`:
+LEELO COMPLETO PRIMERO.**
+
+El login esta blindado con un test (`spa/server/tests/test_login.php`)
+de 31 assertions que el `build.ps1` ejecuta como gate. Si tu cambio
+hace que el test falle, la build aborta y nadie sube nada hasta que
+arregles la regresion. El documento explica:
+- Que decisiones estan bloqueadas y por que.
+- Que archivos son load-bearing (llevan header AUTH LOCK).
+- Los 9 modos de fallo historicos para no repetirlos.
+- Como anadir features sin romper el login.
+
+Resumen ultra-breve: bearer-only, sin cookies, errores de negocio en
+HTTP 200, dispatcher con `require_once`, configs `.json` materializados,
+auto-bootstrap de usuarios, default `socola@socola.es` / `socola2026`.
+
+### 2. `claude/AXIDB_SYSTEM.md` — documento del motor de datos
+
+Para todo lo demas relacionado con `STORAGE/`, `spa/server/data/`,
+plugins de axidb, scopes de SynaxisClient. Tiene su propio resumen
+arriba.
+
+### 3. NO ROMPER lo que ya funciona
+
+> "Estamos implementando y mejorando, haciendo mas grande la aplicacion.
+> No estamos cambiando las cosas." - el dueno del proyecto
+
+Cualquier feature nueva debe sumar, no romper. Si necesitas modificar
+uno de los archivos load-bearing del cuadro en `AUTH_LOCK.md` seccion 3,
+el test de login DEBE seguir pasando despues. Es la red de seguridad.
 
 ---
 

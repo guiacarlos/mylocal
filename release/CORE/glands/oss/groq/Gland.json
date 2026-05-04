@@ -1,0 +1,10 @@
+{
+    "key": "oss-groq",
+    "name": "Groq LPU",
+    "version": "1.0.0",
+    "type": "ai",
+    "capabilities": [
+        "generate",
+        "listModels"
+    ]
+}

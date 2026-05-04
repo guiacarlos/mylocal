@@ -1,0 +1,3 @@
+# Denegar todo acceso directo a los handlers. Solo son invocables
+# internamente desde server/index.php via require_once.
+Require all denied

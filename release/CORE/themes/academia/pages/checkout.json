@@ -1,0 +1,57 @@
+{
+    "id": "checkout",
+    "title": "Checkout - Academy Gestas AI",
+    "slug": "checkout",
+    "page": {
+        "sections": [
+            {
+                "section": "content",
+                "id": "checkout-section",
+                "class": "section section-checkout",
+                "customStyles": {
+                    "padding": "4rem 0",
+                    "min-height": "80vh"
+                },
+                "content": [
+                    {
+                        "element": "container",
+                        "class": "container",
+                        "customStyles": {
+                            "max-width": "1200px"
+                        },
+                        "content": [
+                            {
+                                "element": "heading",
+                                "tag": "h1",
+                                "class": "heading-1 text-center",
+                                "text": "Completa tu Suscripción",
+                                "customStyles": {
+                                    "margin-bottom": "1rem"
+                                }
+                            },
+                            {
+                                "element": "text",
+                                "tag": "p",
+                                "class": "text-lead text-center",
+                                "text": "Únete a Academy Gestas AI y comienza tu formación hoy",
+                                "customStyles": {
+                                    "margin-bottom": "3rem",
+                                    "color": "var(--text-secondary, #64748b)"
+                                }
+                            },
+                            {
+                                "element": "html",
+                                "content": "<div id='checkout-root'></div><link rel='stylesheet' href='/dashboard/assets/checkout.css?v=20260121v2'><script src='/dashboard/assets/checkout.js?v=20260121v2' type='module' defer></script>"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "seo": {
+        "meta_title": "Completa tu Suscripción - Academy Gestas AI",
+        "meta_description": "Únete a Academy Gestas AI y accede a formación en digitalización, IA y nuevas tecnologías. Prueba gratuita de 15 días."
+    },
+    "updated_at": "2026-01-18T21:40:00.000Z"
+}

@@ -1,0 +1,16 @@
+{
+    "key": "google-tasks",
+    "name": "Google Tasks (Atomic)",
+    "version": "1.2.0",
+    "type": "HYBRID",
+    "capabilities": [
+        "listTaskLists",
+        "listTasks",
+        "insertTask",
+        "updateTask",
+        "clearCompleted"
+    ],
+    "endpoints": {
+        "list": "/api/google/tasks/v1/users/@me/lists"
+    }
+}

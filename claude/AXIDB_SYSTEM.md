@@ -1,94 +1,123 @@
-# AxiDB - Documento canonico del sistema de datos de MyLocal
+# AxiDB y arquitectura de datos de MyLocal
 
-**Para todas las IAs que trabajen en este proyecto: leer este documento ANTES de tocar
-cualquier cosa relacionada con datos, autenticacion, STORAGE/, build, o despliegue.**
+**Para todas las IAs que trabajen en este proyecto: leer este documento ANTES
+de tocar cualquier cosa relacionada con datos, autenticacion, login, build,
+spa/server, CORE/ o despliegue.**
 
-Este documento existe porque hemos perdido tiempo varias veces volviendo atras
-por no entender como funciona AxiDB en MyLocal. Aqui queda fijado.
+> **NOTA**: para el flujo de auth/login en concreto, el documento canonico
+> es `claude/AUTH_LOCK.md`. Este AXIDB_SYSTEM.md cubre la arquitectura
+> general de datos. Si vas a tocar auth, lee AUTH_LOCK primero.
 
----
-
-## 1. Que es AxiDB y que no es
-
-AxiDB es un **motor de datos file-based** propio. NO es MySQL, NO es PostgreSQL,
-NO es SQLite, NO es MongoDB. NO se instala. NO requiere servicios externos.
-
-- Toda la data vive como **archivos JSON** dentro de `STORAGE/`.
-- Las "tablas" son colecciones, cada coleccion es un directorio.
-- Cada documento es un archivo `<id>.json`.
-- Indices secundarios son archivos JSON (`index.json`, etc).
-- No hay queries SQL. Las consultas pasan por la API PHP (`CRUDOperations.php`,
-  `QueryEngine.php` en `axidb/engine/`).
-
-**Regla absoluta**: ningun modulo accede a archivos de `STORAGE/` directamente.
-Todos pasan por la capa AxiDB (los modelos en `CAPABILITIES/*/models/*.php`
-o el motor en `axidb/engine/`).
+Este documento existe porque hemos perdido sesiones enteras volviendo atras
+por no entender que hay DOS backends en este repo y solo uno esta activo.
+Aqui queda fijado.
 
 ---
 
-## 2. Donde vive cada cosa (mapa fisico)
+## 1. Hay dos backends. Solo uno esta activo.
 
 ```
-STORAGE/                         <- raiz de datos en runtime (NO va al repo en limpio)
-├── .vault/                      <- credenciales y secretos (NUNCA al cliente)
-│   └── users/                   <- aqui viven los usuarios autenticables
-│       ├── index.json           <- mapa email -> uuid
-│       ├── <uuid>.json          <- un archivo por usuario con password_hash
-│       └── .htaccess            <- bloquea acceso HTTP directo
-├── _system/                     <- datos internos (jobs, alergenos, sessions)
-│   ├── alergenos_catalog.json
-│   └── jobs/{pending,running,done,failed}/
-├── locales/                     <- locales del hostelero
-├── carta_productos/             <- productos de la carta
-├── carta_categorias/
-├── recetas/
-├── sessions/                    <- sesiones activas
-├── logs/
-└── system/
-    └── active_project.json      <- proyecto activo (multi-tenant)
+mylocal/
+├── CORE/                  <- LEGACY ARCHIVADO. NO TOCAR. NO USAR.
+│   ├── auth/
+│   ├── bootstrap_users.php
+│   └── index.php
+└── spa/server/            <- BACKEND ACTIVO. Es lo unico que se usa.
+    ├── handlers/
+    │   └── auth.php       <- handle_auth_login, find_user_by_email...
+    ├── bin/
+    │   └── bootstrap-users.php
+    ├── config/
+    ├── data/              <- aqui vive la data del SPA
+    ├── lib.php
+    └── index.php          <- el dispatcher real
 ```
 
-`MEDIA/` esta separado: contiene imagenes, fotos de plato, logos. Tambien es
-runtime, tambien es persistente, NO se borra en builds.
+**`CORE/` es codigo arqueologico**. Lo dice [spa/CLAUDE.md](../spa/CLAUDE.md):
+> "Don't add features to the legacy `../CORE/` — it's archived."
+
+Si ves que un fix toca `CORE/auth/` o `CORE/bootstrap_users.php`, **es un fix
+inutil**. Esa ruta no se ejecuta. La SPA hace POST a `/acide/index.php` y
+`router.php` lo enruta a `spa/server/index.php`, no a `CORE/`.
 
 ---
 
-## 3. La regla mas importante: STORAGE NO es codigo
+## 2. Como llega una peticion del SPA al backend
 
-`STORAGE/` contiene **datos de runtime del restaurante**. Una build limpia
-(`build.ps1`) **NO copia STORAGE**. Crea una vacia. Esto es intencional.
-
-Consecuencia practica:
-
-- En desarrollo, `STORAGE/` (raiz del repo) tiene tus datos de prueba.
-- En `release/STORAGE/` siempre estara vacia despues de un build.
-- En produccion, `STORAGE/` es el unico directorio que el cliente NO debe
-  borrar al actualizar (sus datos viven ahi).
-
-Si despliegas el `release/` a un servidor nuevo, `STORAGE/` esta vacio.
-**Esto incluye los usuarios**. Sin usuarios no hay login.
+```
+Navegador (LoginModal.tsx)
+   |
+   | POST /acide/index.php  (action: auth_login)
+   v
+router.php (raiz del proyecto, o release/router.php)
+   |
+   | strpos($path, '/acide/') === 0
+   | -> require __DIR__ . '/spa/server/index.php'
+   v
+spa/server/index.php
+   |
+   | 1. CORS (cors.json)
+   | 2. Auto-bootstrap si data/users vacio
+   | 3. ALLOWED_ACTIONS check
+   | 4. publicActions check (cors.json public_actions)
+   | 5. Dispatcher: require_once handlers/auth.php
+   v
+spa/server/handlers/auth.php :: handle_auth_login()
+   |
+   | 1. rl_check (rate limit)
+   | 2. find_user_by_email()
+   | 3. password_verify()
+   | 4. issue_session() -> setcookie + csrf
+   v
+JSON: {success: true, data: {user, csrfToken}}
+```
 
 ---
 
-## 4. Bootstrap automatico de usuarios (auto-heal)
+## 3. Donde viven los usuarios (REALMENTE)
 
-Para que un despliegue limpio nunca quede sin acceso, en `CORE/index.php` hay
-un **auto-bootstrap** que se ejecuta en CADA peticion al inicio:
+```
+spa/server/data/users/
+├── u_<hex>.json     <- un archivo por usuario
+└── ...
+```
 
-```php
-$_vaultIndex = STORAGE_ROOT . '/.vault/users/index.json';
-$_needsBootstrap = !file_exists($_vaultIndex)
-    || trim(@file_get_contents($_vaultIndex)) === '[]'
-    || trim(@file_get_contents($_vaultIndex)) === '';
-if ($_needsBootstrap && file_exists(__DIR__ . '/bootstrap_users.php')) {
-    require_once __DIR__ . '/bootstrap_users.php';
-    if (function_exists('bootstrapDefaultUsers')) {
-        @bootstrapDefaultUsers();
-    }
+Cada `u_<hex>.json` contiene:
+```json
+{
+  "id": "u_1a0685a0f10bb67d",
+  "email": "socola@socola.es",
+  "name": "Socola Admin",
+  "role": "admin",
+  "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$...",
+  "_version": 1,
+  "_createdAt": "2026-05-04T06:09:31+00:00",
+  "_updatedAt": "2026-05-04T06:09:31+00:00"
 }
 ```
 
-Crea cuatro usuarios por defecto definidos en `CORE/bootstrap_users.php`:
+No hay `index.json` aqui. `find_user_by_email` recorre todos los archivos
+linealmente (es O(n) y para <1000 usuarios da igual).
+
+**No confundir con `STORAGE/.vault/users/`**: ese es del CORE legacy. Si
+veo a alguien bootstrapear ahi, esta perdiendo el tiempo: el SPA no lo lee.
+
+---
+
+## 4. Auto-bootstrap de usuarios (auto-heal)
+
+`spa/server/index.php` lineas 62-67:
+
+```php
+$_usersDir = DATA_ROOT . '/users';
+if (!is_dir($_usersDir) || count(glob($_usersDir . '/*.json') ?: []) === 0) {
+    define('BOOTSTRAP_INTERNAL', true);
+    @include_once __DIR__ . '/bin/bootstrap-users.php';
+}
+```
+
+`bin/bootstrap-users.php` carga `lib.php` Y `handlers/auth.php` (porque
+necesita `find_user_by_email`), luego crea cuatro usuarios:
 
 | Email | Password | Rol |
 |-------|----------|-----|
@@ -97,216 +126,231 @@ Crea cuatro usuarios por defecto definidos en `CORE/bootstrap_users.php`:
 | `cocina@socola.es` | `socola2026` | cocina |
 | `camarero@socola.es` | `socola2026` | camarero |
 
-**Reglas alrededor del bootstrap:**
+Idempotente: si ya existen, salta. Hashes con Argon2id (memory_cost 64MB,
+time 4, threads 1).
 
-- Solo se ejecuta cuando `index.json` esta vacio (`[]`) o no existe.
-- Es idempotente: si vuelves a llamar, no duplica usuarios.
-- Usa `password_hash` con `PASSWORD_ARGON2ID`. NUNCA escribas contrasenas en claro.
-- Si tocas `bootstrap_users.php`, los cambios solo aplican a despliegues nuevos.
-  Los STORAGE existentes no se rebootstrapean salvo que vacies su `index.json`.
-
-**Como crear los usuarios manualmente (CLI):**
-
+**Como invocar manualmente desde CLI:**
 ```bash
-# Para STORAGE de desarrollo (raiz):
-php -r "define('STORAGE_ROOT','./STORAGE'); define('GLOBAL_STORAGE','./STORAGE'); require 'CORE/bootstrap_users.php'; bootstrapDefaultUsers();"
-
-# Para release/STORAGE:
-cd release && php -r "require 'CORE/index.php';" >/dev/null
-# Esto dispara el auto-bootstrap y la primera peticion deja STORAGE listo.
+php spa/server/bin/bootstrap-users.php
 ```
+
+**Como forzar rebootstrap**: borrar `spa/server/data/users/` y hacer una
+peticion HTTP cualquiera al `/acide/index.php`.
 
 ---
 
-## 5. Como funciona el login (de punta a punta)
+## 5. Config files: el .example no es la verdad
 
-El login es la operacion donde mas hemos tropezado. Esta es la cadena completa:
+`spa/server/config/` contiene cuatro archivos `.json.example`:
+
+- `auth.json.example` - parametros Argon2id, TTL de sesion, roles permitidos.
+- `cors.json.example` - origenes permitidos y `public_actions` (las que NO
+  requieren sesion previa, como `auth_login`).
+- `gemini.json.example` - API key de Gemini.
+- `revolut.json.example` - API key Revolut.
+
+`load_config('auth')` LANZA EXCEPCION si `auth.json` no existe. Eso provoca
+HTTP 500 en login. **Siempre tiene que existir el .json real**.
+
+`build.ps1` materializa los .example a .json automaticamente como parte del
+build (paso 2.2). En source, basta con copiar `*.json.example` a `*.json`
+una vez.
+
+`cors.json` define `public_actions`. Si el archivo no existe, el codigo cae
+a un fallback hardcoded en `index.php` que ya incluye `auth_login`. Esto
+ya esta resuelto y tolera la ausencia del fichero.
+
+---
+
+## 6. Dos entornos, dos rutas, mismas reglas
+
+### Desarrollo (run.bat)
 
 ```
-[Usuario en LoginModal.tsx]
-       |
-       | submit form { email, password }
-       v
-[services/auth.service.ts: login()]
-       |
-       | client.execute({ action: 'auth_login', data: {...} })
-       v
-[SynaxisClient.ts]
-       |
-       | scope de 'auth_login' = 'server' -> SIEMPRE va al servidor
-       | POST /acide/index.php  con cookie y X-CSRF-Token
-       v
-[CORE/index.php]
-       |
-       | 1. Auto-bootstrap si vault vacia (paso 4)
-       | 2. CORS
-       | 3. ActionDispatcher resuelve 'auth_login'
-       v
-[CORE/auth/Auth.php::login()]
-       |
-       v
-[UserManager::verifyPassword()]
-       |
-       v
-[UserAuthenticator::verify()]
-       |
-       | 1. UserFinder::getUserByEmail() lee index.json + <uuid>.json
-       | 2. password_verify(password, password_hash)
-       | 3. Si OK -> setea cookie de sesion + devuelve user
-       v
-[Respuesta JSON {success, user}]
-       |
-       v
-[LoginModal redirige por rol via window.location.hash]
+PHP server: php -S 127.0.0.1:8090 -t . router.php
+SPA dev:    npm run dev (vite) en :5173, proxifica /acide -> :8090
+Datos:      spa/server/data/
 ```
 
-**Puntos donde tipicamente falla y como reconocerlo:**
+El user trabaja en :5173, las peticiones van a :8090, que es el PHP en la
+RAIZ del proyecto. Ese PHP carga `router.php` (el de la raiz), que rutea a
+`spa/server/index.php`.
+
+### Produccion (build.ps1 + release)
+
+```
+PHP server: cualquier PHP-capable (Apache, LiteSpeed, php -S, etc.)
+Datos:      release/spa/server/data/
+```
+
+El SPA compilado vive en `release/`. Las peticiones a `/acide/*` las maneja
+`release/router.php` que enruta a `release/spa/server/index.php`.
+
+`build.ps1` copia `spa/server/` entero a `release/spa/server/` y materializa
+los configs. Por eso fue clave anadirlo a la lista `$include` del script.
+
+### Por que dos directorios `data/`?
+
+Porque son entornos distintos. Tu sesion de dev no comparte usuarios con
+release. Cada uno tiene sus propios usuarios, sesiones, pedidos. Se rebootstrapean
+independientemente.
+
+---
+
+## 7. Scopes en SynaxisClient (que va al server, que se queda local)
+
+`spa/src/synaxis/actions.ts` define el scope de cada accion:
+
+- **local**: SynaxisCore (IndexedDB del navegador). Sin red.
+- **server**: POST a `/acide/index.php`. Usa cookie httponly + CSRF.
+- **hybrid**: prueba local; si vacio, va al server y cachea el resultado.
+
+`auth_login` es **`server` SIEMPRE**. Cambiarlo a `local` rompe la
+seguridad (Argon2id no puede vivir en navegador). Si una IA lo cambia,
+revertir.
+
+Acciones siempre `server`: `auth_login`, `auth_logout`, `auth_refresh_session`,
+`get_current_user`, `public_register`, todo lo de `payments`, `upload`,
+`synaxis_sync`, `chat`/`ai`.
+
+---
+
+## 8. AxiDB: que es, donde encaja
+
+AxiDB (`axidb/engine/`) es el motor de datos file-based del legacy CORE.
+**El SPA no lo usa directamente**. La SPA usa `data_put` / `data_get` /
+`data_all` en `spa/server/lib.php` que son funciones JSON+flock mas simples.
+
+AxiDB sigue presente porque algunas capabilities legacy lo usan (CARTA,
+TPV, FISCAL, QR antes del rewrite). Pero el FLUJO PRINCIPAL del SPA pasa
+por `spa/server/`, no por `axidb/engine/`.
+
+`axidb/plugins/` (alergenos, jobs) son plugins que escriben a `STORAGE/`,
+y ESO si lo lee algun handler nuevo (CARTA OCR, etc).
+
+**Resumen**:
+- Login y sesiones -> spa/server/data/users/
+- Carta y productos legacy -> STORAGE/ via AxiDB
+- Plugins (jobs, alergenos) -> STORAGE/_system/
+
+---
+
+## 9. Errores tipicos y su causa raiz
 
 | Sintoma | Causa raiz | Fix |
-|--------|-----------|-----|
-| `Usuario no encontrado` | `STORAGE/.vault/users/index.json` esta vacio o no existe | Ejecutar el auto-bootstrap (basta una peticion HTTP) o llamar `bootstrapDefaultUsers()` por CLI |
-| `Contrasena incorrecta` | El usuario existe pero la pass no es `socola2026` | Cambiarla via panel o regenerar el `<uuid>.json` |
-| Respuesta HTML en vez de JSON | El servidor no procesa PHP, sirve estatico (npx serve, http.server) | Arrancar PHP: `php -S localhost:3000 -t release release/router.php` |
-| HTTP 419 | CSRF token expirado | El cliente ya lo maneja: limpia el token y reintenta |
-| HTTP 404 en `/acide/index.php` | `.htaccess` no esta enrutando a `CORE/index.php` | Verificar `RewriteRule ^acide/(.*)$ CORE/$1` en `.htaccess` |
-| Cuenta inactiva | `status != 'active'` en el `<uuid>.json` | Editar el archivo del usuario |
+|---------|-----------|-----|
+| `Usuario no encontrado` (string del CORE) | Algun codigo quedo apuntando a `CORE/auth/`. NO debe pasar en flujo SPA | Confirmar que router.php apunta a `spa/server/`, no a `CORE/` |
+| `HTTP 500` + `Call to undefined function find_user_by_email` | bootstrap-users.php no carga handlers/auth.php | Asegurar `require_once __DIR__ . '/../handlers/auth.php'` en `bin/bootstrap-users.php` |
+| `HTTP 500` + `Cannot redeclare handle_auth_login` | El dispatcher usa `require` en lugar de `require_once` | Cambiar `require __DIR__ . '/handlers/'` -> `require_once` en `index.php` |
+| `Unauthorized: accion 'auth_login' requiere sesion` | `cors.json` no existe y el fallback no incluye auth_login en public_actions | `index.php` ya tiene fallback con auth_login. Si falla aun, copiar `cors.json.example` a `cors.json` |
+| `Config 'auth.json' no existe` | Falta materializar el config | Copiar `auth.json.example` a `auth.json`. Build lo hace automaticamente |
+| `SPA server no encontrado` | `release/spa/server/` no existe | `build.ps1` debe copiar `spa\server` a release. Verificar que esta en `$include` |
+| `Credenciales invalidas` con la pass correcta | Usuario no fue bootstrapeado o `data/users/` esta vacio | Hacer una peticion HTTP cualquiera para disparar auto-bootstrap, o `php spa/server/bin/bootstrap-users.php` |
+| Respuesta HTML en vez de JSON | El servidor no procesa PHP (sirviendo estatico) | Usar `php -S host:port -t release release/router.php` |
+| HTTP 419 | CSRF token expirado | Cliente lo limpia y reintenta. Si persiste, revisar que cors.json tiene allow_credentials true |
 
 ---
 
-## 6. Scopes en SynaxisClient (local / server / hybrid)
+## 10. Diagnostico rapido cuando falla el login (60 segundos)
 
-`spa/src/synaxis/actions.ts` define el scope de cada accion. El cliente
-elige transporte segun el scope:
+1. **Hay PHP procesando?** `curl -X POST http://localhost:8765/acide/index.php -H 'Content-Type: application/json' -d '{"action":"health_check"}'`
+   - Debe devolver `{"success":true,...}`. Si devuelve HTML, no hay PHP.
 
-- **local**: lo resuelve el SynaxisCore en IndexedDB del navegador. Sin red.
-- **server**: SIEMPRE va al backend PHP. Operaciones que requieren secretos
-  (Argon2id), webhooks, AI proxy, multi-dispositivo.
-- **hybrid**: prueba local primero, si no encuentra cae al servidor y cachea.
+2. **El error log dice algo?** Mira `error_log` de PHP o el archivo apuntado con `-d error_log=/tmp/...`.
 
-**Rule of thumb**: si la operacion involucra password, API key, transaccion
-de pago o estado compartido entre dispositivos -> es `server`.
+3. **Existe `spa/server/data/users/`?** Si no, es la primera peticion - hara auto-bootstrap. Si existe pero vacio, borrar la carpeta y reintentar.
 
-`auth_login`, `auth_refresh_session`, `public_register`, `auth_resolve_tenant`
-son TODAS `server`. Cambiarlas a `local` rompe la seguridad.
+4. **Existe `spa/server/config/auth.json`?** Si solo esta el .example, copialo o ejecuta build.ps1.
 
----
+5. **El user que pruebas existe?** `ls spa/server/data/users/` y graba un user_id, luego `cat spa/server/data/users/<id>.json | grep email`.
 
-## 7. Source vs release: dos STORAGE distintos
-
-Hay dos `STORAGE/` independientes en este repo:
-
-```
-mylocal/
-├── STORAGE/             <- usado por desarrollo (run.bat / npm run dev)
-└── release/
-    └── STORAGE/         <- usado cuando sirves directamente release/
-```
-
-Cada uno tiene sus propios usuarios, sus propios pedidos, sus propias sesiones.
-Si haces login en desarrollo no vale para release y viceversa.
-
-Cuando ejecutas `build.ps1`:
-
-1. Compila SPA y copia codigo a `release/`.
-2. NO toca `release/STORAGE/` si ya existe (la `New-Item` solo crea si no esta).
-3. Resultado: si bootstrapaste antes en `release/STORAGE/`, los usuarios se conservan.
-   Si la borraste, el primer hit a `/acide/index.php` la rebootstrapea.
+6. **Status del usuario es activo?** `cat <archivo>.json | grep status` - si no aparece, no hay status field y se asume activo.
 
 ---
 
-## 8. La cola de jobs y otros plugins de AxiDB
-
-`axidb/plugins/` contiene extensiones que NO son parte del core de AxiDB pero
-que viven dentro de su carpeta porque comparten el mismo principio file-based.
-
-- `axidb/plugins/alergenos/` - catalogo de los 14 alergenos UE + ingredientes
-  comunes. Persiste en `STORAGE/_system/alergenos_catalog.json`.
-- `axidb/plugins/jobs/` - cola JSON con estados pending/running/done/failed.
-  Cada job es un archivo en `STORAGE/_system/jobs/<estado>/<id>.json`.
-  Worker en `axidb/plugins/jobs/worker_run.php`, ejecutable via cron.
-
-**Cualquier funcionalidad que necesite procesamiento async va por jobs.**
-No bloquees el frontend con OCR, IA pesada, generacion de PDFs masivos.
-
----
-
-## 9. Lo que SI se hace y lo que NO se hace
+## 11. Lo que SI se hace y lo que NO se hace
 
 ### SI
 
-- Leer/escribir datos via los modelos en `CAPABILITIES/*/models/*.php`.
-- Usar el motor `axidb/engine/` para CRUD generico.
-- Encolar trabajo pesado en jobs.
-- Comprobar `STORAGE/.vault/users/index.json` cuando un login falla.
-- Ejecutar `build.ps1` solo al cerrar fase / desplegar.
+- Tocar `spa/server/handlers/*.php` para anadir o modificar acciones server.
+- Tocar `spa/server/lib.php` para utilidades comunes.
+- Anadir nuevas acciones a `ALLOWED_ACTIONS` en `index.php`.
+- Anadir nuevas acciones publicas (sin sesion previa) a
+  `cors.json.public_actions` y al fallback hardcoded de `index.php`.
+- Anadir el archivo de la accion a `spa/src/synaxis/actions.ts` con su scope.
+- Bootstrapear usuarios via CLI: `php spa/server/bin/bootstrap-users.php`.
+- Verificar primero con `curl` antes de ir al SPA real (mas rapido).
 
 ### NO
 
-- Acceder directamente a archivos de `STORAGE/` desde un controlador o handler.
-- Subir `STORAGE/.vault/` al repo publico (contiene hashes de passwords).
-- Borrar manualmente `STORAGE/.vault/users/index.json` salvo para forzar
-  rebootstrap.
-- Cambiar el scope de `auth_login` a `local`.
-- Confiar en que `release/STORAGE/` tenga datos despues de un deploy limpio
-  (siempre delegar al auto-bootstrap o seed manual).
-- Usar emojis en codigo o documentacion.
-- Crear archivos de mas de 250 lineas.
+- Anadir features a `CORE/` (es legacy archivado).
+- Bootstrapear usuarios en `STORAGE/.vault/users/` (es legacy).
+- Cambiar `auth_login` a scope `local`.
+- Usar `require` en lugar de `require_once` en `spa/server/index.php`.
+- Asumir que `release/spa/server/` existe sin haber corrido `build.ps1`.
+- Subir `spa/server/data/users/*.json` al repo publico (contienen hashes).
+- Subir `spa/server/config/*.json` con secretos reales al repo publico.
 
 ---
 
-## 10. Diagnostico rapido (60 segundos)
+## 12. Resumen ejecutivo (lo minimo)
 
-Cuando el login falla, sigue este arbol en orden:
-
-1. **El servidor procesa PHP?**
-   - `curl -X POST http://localhost:PORT/acide/index.php -d 'action=health_check'`
-   - Si responde HTML, no hay PHP. Arranca con `php -S ... router.php`.
-
-2. **Existe `STORAGE/.vault/users/index.json` y no esta vacio?**
-   - `cat STORAGE/.vault/users/index.json`
-   - Si no, dispara una peticion (auto-bootstrap) o ejecuta `bootstrapDefaultUsers()` por CLI.
-
-3. **El usuario que pruebas existe en el index?**
-   - El index mapea `email -> uuid`. Si tu email no esta, no fue creado.
-
-4. **El `<uuid>.json` tiene `status: 'active'`?**
-   - `cat STORAGE/.vault/users/<uuid>.json | grep status`
-
-5. **La password es la correcta?**
-   - Bootstrap default: `socola2026`. Si la cambiaste en el panel, recuperala
-     desde el panel admin o regenera el archivo.
-
-6. **CSRF / cookies?**
-   - El navegador debe permitir cookies. En `localhost` con HTTPS auto-firmado
-     a veces falla. Probar con HTTP plano para depurar.
+1. Hay dos backends: `CORE/` (LEGACY, no tocar) y `spa/server/` (ACTIVO).
+2. La SPA hace POST a `/acide/index.php` -> `router.php` -> `spa/server/index.php`.
+3. Usuarios viven en `spa/server/data/users/<id>.json` (no en STORAGE/.vault).
+4. Auto-bootstrap en `spa/server/index.php` crea los 4 users default si vacio.
+5. Default admin: `socola@socola.es` / `socola2026`.
+6. `auth_login` es `server` SIEMPRE.
+7. Configs viven en `spa/server/config/*.json`. Build.ps1 los materializa
+   desde `.example` automaticamente.
+8. `release/` necesita `spa/server/` copiado (build.ps1 lo hace).
+9. Dev (8090) y release (cualquier puerto) tienen `data/` independientes.
+10. Si el login falla, sigue el arbol de diagnostico de 60s seccion 10.
 
 ---
 
-## 11. Glosario
+## 13. Cambio importante: bearer-only desde 2026-05-04
 
-- **STORAGE_ROOT**: constante PHP. Apunta al `STORAGE/` activo (puede ser
-  global o el del proyecto activo en multi-tenant).
-- **GLOBAL_STORAGE**: STORAGE compartido entre proyectos. Usado por auth.
-- **DATA_ROOT**: alias historico de STORAGE_ROOT, todavia presente.
-- **vault**: subcarpeta protegida `STORAGE/.vault/`. Contiene users y otros
-  secretos. `.htaccess` interno bloquea acceso HTTP directo.
-- **bootstrap**: proceso de poblado inicial. NO confundir con `seed/`
-  (que tiene productos de demo, no usuarios).
-- **scope**: nivel de la accion (local/server/hybrid) en SynaxisClient.
-- **acide**: alias historico del API endpoint. La SPA hace POST a
-  `/acide/index.php` y `.htaccess` lo redirige a `CORE/index.php`.
+La auth ya **no usa cookies httponly + CSRF double-submit**. Ahora es:
+
+- Login devuelve `{user, token}` en el body de la respuesta.
+- Cliente guarda token en `sessionStorage('mylocal_token')`.
+- Cada peticion lleva `Authorization: Bearer <token>`.
+- `current_user()` solo lee `HTTP_AUTHORIZATION`, no `$_COOKIE`.
+- Sin CSRF (no aplica sin cookies).
+- Errores de negocio devuelven HTTP 200 con `{success:false, error:"..."}`.
+
+Ver `claude/AUTH_LOCK.md` para el contrato completo y los modos de fallo
+historicos. Cualquier intento de volver a cookies romperia el test
+`spa/server/tests/test_login.php`.
 
 ---
 
-## 12. Resumen ejecutivo (lo minimo que debes saber)
+## 14. Historial de bugs resueltos (no repetir)
 
-1. AxiDB = JSON files en `STORAGE/`. Sin SQL. Sin instalaciones.
-2. Los usuarios viven en `STORAGE/.vault/users/{index.json + uuid.json}`.
-3. Una build limpia deja STORAGE vacio. **Esto es correcto.**
-4. `CORE/index.php` auto-bootstrapea usuarios si la vault esta vacia.
-5. Default: `socola@socola.es` / `socola2026` (admin).
-6. `auth_login` SIEMPRE es scope `server`. Nunca cambies eso.
-7. Si el login falla -> revisa los 6 pasos del diagnostico.
-8. STORAGE de desarrollo y de release son independientes.
-9. Nunca subas `.vault/` al repo publico.
-10. Nunca toques archivos directamente. Pasa por modelos.
+Bugs que ya hemos pisado en este proyecto. No volver a caer:
+
+1. **"Usuario no encontrado" en login**: alguien creo usuarios en
+   `STORAGE/.vault/users/` pensando que era el sitio. Era el legacy CORE.
+   El SPA usa `spa/server/data/users/`.
+
+2. **HTTP 500 con `Call to undefined function find_user_by_email`**:
+   `bin/bootstrap-users.php` solo cargaba `lib.php`, no `handlers/auth.php`.
+
+3. **HTTP 500 con `Cannot redeclare handle_auth_login`**: el dispatcher
+   en `index.php` usaba `require` en vez de `require_once`. Al cargarse
+   antes desde bootstrap, se intentaba redeclarar.
+
+4. **`Unauthorized: accion 'auth_login' requiere sesion`**: el fallback
+   de `corsCfg` cuando `cors.json` no existia tenia `public_actions => []`,
+   tratando `auth_login` como privada.
+
+5. **`Config 'auth.json' no existe`**: dev tenia solo `.example`. Build
+   ahora materializa los `.json` automaticamente.
+
+6. **`release/` quedaba sin backend tras `npm run build`**: `vite build
+   --emptyOutDir` borra release/. `build.ps1` debe ejecutarse SIEMPRE
+   despues, nunca solo `npm run build`.
+
+7. **`SPA server no encontrado`**: `build.ps1` no copiaba `spa\server`.
+   Anadido a `$include`.

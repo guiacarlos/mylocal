@@ -1,0 +1,15 @@
+{
+    "key": "google-calendar",
+    "name": "Google Calendar (Atomic)",
+    "version": "1.1.0",
+    "type": "HYBRID",
+    "capabilities": [
+        "sync",
+        "createEvent",
+        "deleteEvent",
+        "checkAvailability"
+    ],
+    "endpoints": {
+        "sync": "/api/google/calendar/events"
+    }
+}
