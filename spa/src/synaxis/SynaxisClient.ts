@@ -76,24 +76,44 @@ export class SynaxisClient {
 
         if (scope === 'server') return this.http<T>(req);
 
+        // hybrid: prueba local. Si local exito (incluso con datos vacios) ESA
+        // es la respuesta - el SPA usa IndexedDB como fuente de verdad para
+        // CRUD (carta_categorias, carta_productos, etc). Solo cae al server
+        // si local fallo (e.g. coleccion no existe).
+        // Excepciones: list_products + acciones donde el server tiene seed
+        // canonico, identificadas por la action concreta.
+        const SERVER_SEED_ACTIONS = new Set(['list_products']);
         const local = await this.core.execute<T>(req);
-        if (this.isMeaningful(local)) return local;
+        if (local.success) {
+            // local respondio bien. Si es una accion semilla server y local
+            // esta vacio, intenta poblar desde server. Si no, devuelve local.
+            if (SERVER_SEED_ACTIONS.has(req.action) && this.localIsEmpty(local)) {
+                if (this.unauthorized && !isPublicAction) return local;
+                const remote = await this.http<T>(req);
+                if (remote.success) {
+                    await this.cacheRemote(req, remote);
+                    return remote;
+                }
+                return local;
+            }
+            return local;
+        }
 
+        // local fallo. Cae al server como ultimo recurso.
         if (this.unauthorized && !isPublicAction) return local;
-
         const remote = await this.http<T>(req);
         await this.cacheRemote(req, remote);
         return remote;
     }
 
-    private isMeaningful<T>(res: SynaxisResponse<T>): boolean {
-        if (!res.success) return false;
+    private localIsEmpty<T>(res: SynaxisResponse<T>): boolean {
         const d = res.data as any;
-        if (!d) return false;
-        if (Array.isArray(d) && d.length === 0) return false;
-        if (d.items && Array.isArray(d.items) && d.items.length === 0) return false;
-        return true;
+        if (!d) return true;
+        if (Array.isArray(d) && d.length === 0) return true;
+        if (d.items && Array.isArray(d.items) && d.items.length === 0) return true;
+        return false;
     }
+
 
     private async cacheRemote<T>(req: SynaxisRequest, res: SynaxisResponse<T>): Promise<void> {
         if (!res.success || !res.data || !req.collection) return;

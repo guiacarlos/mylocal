@@ -130,7 +130,7 @@ if (Test-Path $testScript) {
         Write-Host "Lee claude/AUTH_LOCK.md y arregla la regresion antes de re-buildear." -ForegroundColor Yellow
         exit 1
     }
-    Write-Host "      OK -> 31/31 tests de login pasan" -ForegroundColor Green
+    Write-Host "      OK -> tests de login + OCR pasan" -ForegroundColor Green
 } else {
     Write-Host "AVISO: test_login.php no encontrado en release. Saltando gate." -ForegroundColor Yellow
 }

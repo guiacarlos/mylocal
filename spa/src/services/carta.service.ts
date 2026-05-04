@@ -123,18 +123,28 @@ export async function deleteProducto(client: SynaxisClient, id: string) {
 // ── IA — Upload para OCR (multipart, fuera de SynaxisClient) ─────────────
 
 export async function uploadCartaSource(file: File): Promise<{ file_path: string; filename: string; ext: string }> {
-    const csrf = document.cookie.match(/socola_csrf=([^;]+)/)?.[1] ?? '';
+    // Bearer token desde sessionStorage. Sin cookies (AUTH_LOCK).
+    let token = '';
+    try { token = sessionStorage.getItem('mylocal_token') ?? ''; } catch (_) { /* incognito */ }
+    if (!token) throw new Error('No hay sesion activa. Inicia sesion primero.');
+
     const form = new FormData();
     form.append('action', 'upload_carta_source');
     form.append('file', file);
     const res = await fetch('/acide/index.php', {
         method: 'POST',
-        credentials: 'include',
-        headers: csrf ? { 'X-CSRF-Token': csrf } : {},
+        credentials: 'omit',
+        headers: { 'Authorization': `Bearer ${token}` },
         body: form,
     });
-    const json = await res.json();
-    if (!json.success) throw new Error(json.error ?? 'Error subiendo archivo');
+
+    // Lee el body como texto y parsea: el backend devuelve HTTP 200 incluso
+    // en errores de negocio (AUTH_LOCK), asi que res.ok no basta.
+    const text = await res.text();
+    let json: { success: boolean; data?: { file_path: string; filename: string; ext: string }; error?: string };
+    try { json = JSON.parse(text); }
+    catch { throw new Error(`Respuesta no JSON del servidor (HTTP ${res.status})`); }
+    if (!json.success || !json.data) throw new Error(json.error ?? 'Error subiendo archivo');
     return json.data;
 }
 

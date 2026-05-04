@@ -155,7 +155,20 @@ class MenuEngineer
 
     private function loadConfig()
     {
-        if (!file_exists($this->configPath)) return [];
-        return json_decode(@file_get_contents($this->configPath), true) ?: [];
+        $candidates = [
+            $this->configPath,
+            __DIR__ . '/../../spa/server/config/gemini.json',
+            __DIR__ . '/../../STORAGE/config/gemini_settings.json',
+        ];
+        foreach ($candidates as $path) {
+            if ($path && file_exists($path)) {
+                $cfg = json_decode(@file_get_contents($path), true) ?: [];
+                if (!isset($cfg['model']) && isset($cfg['default_model'])) {
+                    $cfg['model'] = $cfg['default_model'];
+                }
+                if (!empty($cfg['api_key'])) return $cfg;
+            }
+        }
+        return [];
     }
 }

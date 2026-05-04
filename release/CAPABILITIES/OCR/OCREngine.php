@@ -42,7 +42,7 @@ class OCREngine
     {
         $cfg = $this->loadConfig();
         $key = $cfg['api_key'] ?? '';
-        if (!$key) return ['success' => false, 'error' => 'API key Gemini no configurada'];
+        if (!$key) return ['success' => false, 'error' => 'API key de Gemini no configurada. Edita spa/server/config/gemini.json y anade tu api_key. Ver: https://makersuite.google.com/app/apikey'];
 
         $mime = mime_content_type($path) ?: 'image/jpeg';
         $b64 = base64_encode(file_get_contents($path));
@@ -121,7 +121,26 @@ class OCREngine
 
     private function loadConfig()
     {
-        if (!file_exists($this->configPath)) return [];
-        return json_decode(@file_get_contents($this->configPath), true) ?: [];
+        // Busca el config en multiples ubicaciones por compatibilidad:
+        //   1. La que se paso explicitamente al constructor.
+        //   2. spa/server/config/gemini.json (flujo SPA activo).
+        //   3. STORAGE/config/gemini_settings.json (legacy CORE).
+        $candidates = [
+            $this->configPath,
+            __DIR__ . '/../../spa/server/config/gemini.json',
+            __DIR__ . '/../../STORAGE/config/gemini_settings.json',
+        ];
+        foreach ($candidates as $path) {
+            if ($path && file_exists($path)) {
+                $cfg = json_decode(@file_get_contents($path), true) ?: [];
+                // Normalizar: spa/server/config/gemini.json usa default_model;
+                // legacy usa model. Mapear ambos.
+                if (!isset($cfg['model']) && isset($cfg['default_model'])) {
+                    $cfg['model'] = $cfg['default_model'];
+                }
+                if (!empty($cfg['api_key'])) return $cfg;
+            }
+        }
+        return [];
     }
 }

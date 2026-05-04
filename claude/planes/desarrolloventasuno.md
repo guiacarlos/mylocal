@@ -251,3 +251,84 @@ Implementacion: completa. Lo unico pendiente es operacional:
 - Conectar Stripe en modo live para los planes 27 EUR / 260 EUR.
 
 Con eso, el producto pasa a estado vendible.
+
+---
+
+## 9. Iteracion 2026-05-04: blindar el flujo de subida de carta
+
+Despues del primer cierre (seccion 8) descubrimos en pruebas reales que
+el flujo OCR no era operativo end-to-end por varios motivos no
+contemplados originalmente. Cambios aplicados, todos blindados con
+test gate en `build.ps1`:
+
+### 9.1 Auth bearer-only (sin cookies, sin CSRF)
+
+Antes: el upload usaba CSRF cookie + double-submit. Eso traia stale
+sessions cross-port (Vite 5173 vs PHP 8090) y bloqueaba el upload con
+HTTP 401.
+
+Ahora: el cliente envia `Authorization: Bearer <token>` desde
+sessionStorage. El server lee solo ese header. Sin cookies. Documentado
+en `claude/AUTH_LOCK.md`.
+
+- [x] `uploadCartaSource` en `spa/src/services/carta.service.ts` lee
+      el token de sessionStorage y manda Authorization Bearer.
+- [x] `current_user()` en `spa/server/lib.php` solo lee Bearer.
+- [x] Eliminada validacion de CSRF en `spa/server/index.php`.
+- [x] Errores de negocio devuelven HTTP 200 con `{success:false, error}`
+      para que el cliente muestre el mensaje real (antes "HTTP 500: ").
+
+### 9.2 Hybrid CRUD: SynaxisClient deja de pedir al server
+
+Antes: cuando el dashboard cargaba con `carta_categorias`/`carta_productos`
+vacios en IndexedDB, el cliente caia al server (por la logica hybrid)
+y el server respondia 400 "resolver en cliente". Ruido constante en
+consola.
+
+Ahora: si el local responde con exito (incluso con datos vacios), esa
+es la respuesta. Solo cae al server si local fallo. Excepcion explicita
+para `list_products` que tiene seed canonico.
+
+- [x] `SynaxisClient.execute()` actualizado con `localIsEmpty()`.
+
+### 9.3 OCR config tolerante
+
+Antes: `OCREngine` y `MenuEngineer` solo leian
+`STORAGE/config/gemini_settings.json` (legacy CORE). El flujo SPA tiene
+su config en `spa/server/config/gemini.json`. Mismatch -> sin api_key
+nunca encontrada -> error opaco "API key Gemini no configurada".
+
+Ahora: ambos motores buscan en cascada en tres ubicaciones y normalizan
+`default_model` -> `model`. Mensaje accionable cuando no hay key:
+> "API key de Gemini no configurada. Edita spa/server/config/gemini.json
+> y anade tu api_key. Ver: https://makersuite.google.com/app/apikey"
+
+- [x] `CAPABILITIES/OCR/OCREngine.php` con loadConfig() multipath.
+- [x] `CAPABILITIES/OCR/OCRParser.php` igual.
+- [x] `CAPABILITIES/CARTA/MenuEngineer.php` igual.
+
+### 9.4 Test gate del flujo OCR (37/37 PASS)
+
+`spa/server/tests/test_login.php` ampliado con seccion 9b:
+
+- Upload sin Bearer -> 401.
+- Upload con Bearer admin -> 200 + file_path en data.
+- Upload `.exe` -> rechazado con mensaje claro.
+- OCR sin api key -> error accionable mencionando Gemini/Imagick.
+
+Si cualquiera falla, `build.ps1` aborta con exit 1.
+
+- [x] 37 assertions cubren auth + login + upload + OCR-stub.
+- [x] `build.ps1` ejecuta el test contra release/. Build aborta si rompe.
+
+### 9.5 Lo unico que sigue pendiendo del usuario
+
+Para que el OCR genere texto REAL (y no solo un error claro):
+
+1. Conseguir api key gratuita en https://makersuite.google.com/app/apikey
+2. Pegarla en `spa/server/config/gemini.json` campo `api_key`
+3. Sin reiniciar nada. El siguiente upload ya extrae texto.
+
+Para PDFs multipagina hace falta `php-imagick` instalado en el sistema.
+Sin Imagick, los PDFs no se pueden trocear en imagenes. Imagenes
+sueltas (JPG/PNG/WEBP) funcionan sin Imagick.
