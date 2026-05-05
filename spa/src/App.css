@@ -151,6 +151,41 @@ h3 {
 .sc-carta__head {
     margin-bottom: 1.5rem;
 }
+.sc-carta__head h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+}
+.sc-carta__sub {
+    margin: .25rem 0 0;
+    font-size: .85rem;
+    color: var(--sc-text-muted, #717171);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.sc-carta--empty {
+    padding: 2rem 0;
+    text-align: center;
+}
+.sc-carta__empty-card {
+    max-width: 520px;
+    margin: 2rem auto 0;
+    padding: 2rem 1.5rem;
+    border: 1px dashed var(--sc-border, #E5E5E3);
+    border-radius: 12px;
+    background: var(--sc-bg-soft, #F8F8F6);
+}
+.sc-carta__empty-card h2 {
+    margin: 0 0 .75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.sc-carta__empty-card p {
+    margin: 0;
+    color: var(--sc-text-muted, #717171);
+    line-height: 1.5;
+}
 
 .sc-carta__cats {
     display: flex;

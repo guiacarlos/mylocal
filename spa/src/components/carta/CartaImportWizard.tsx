@@ -52,9 +52,33 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
             setCarta(structured);
             setStep('review');
         } catch (e: unknown) {
-            setStatusMsg(e instanceof Error ? e.message : 'Error desconocido');
+            setStatusMsg(humanizeError(e));
             setStep('error');
         }
+    }
+
+    /**
+     * Convierte errores tecnicos (Gemini quota, fetch failed, etc) en mensajes
+     * accionables para el hostelero.
+     */
+    function humanizeError(e: unknown): string {
+        const raw = e instanceof Error ? e.message : String(e);
+        const lower = raw.toLowerCase();
+        if (lower.includes('429') || lower.includes('quota') || lower.includes('exceeded')) {
+            return 'La IA esta saturada por exceso de uso. Espera unos minutos e intentalo de nuevo, o contacta con soporte si el limite se mantiene.';
+        }
+        if (lower.includes('network') || lower.includes('failed to fetch') || lower.includes('econnrefused')) {
+            return 'No se pudo conectar con el servidor. Comprueba tu conexion e intentalo de nuevo.';
+        }
+        if (lower.includes('timeout') || lower.includes('timed out')) {
+            return 'La IA tardo demasiado en responder. Vuelve a intentarlo con una imagen mas pequena o un PDF mas corto.';
+        }
+        if (lower.includes('500') || lower.includes('internal server')) {
+            return 'El servidor tuvo un fallo procesando tu carta. Intenta con otra imagen o PDF; si persiste, contacta con soporte.';
+        }
+        // Mensaje crudo solo si es informativo (corto). Si es JSON gigante, recortar.
+        if (raw.length > 200) return raw.slice(0, 200) + '…';
+        return raw;
     }
 
     async function handleImport() {
@@ -86,7 +110,7 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
             setStep('done');
             onDone?.();
         } catch (e: unknown) {
-            setStatusMsg(e instanceof Error ? e.message : 'Error guardando');
+            setStatusMsg(humanizeError(e));
             setStep('error');
         }
     }
