@@ -25,6 +25,7 @@ import {
     type Mesa,
     type SalaResumen,
 } from '../../services/sala.service';
+import { SalaQrSheet } from './SalaQrSheet';
 
 interface Props {
     localId: string;
@@ -38,6 +39,7 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
     const [loading, setLoading] = useState(true);
     const [selected, setSelected] = useState<Mesa | null>(null);
     const [busy, setBusy] = useState(false);
+    const [showSheet, setShowSheet] = useState(false);
 
     async function reload() {
         setLoading(true);
@@ -102,11 +104,33 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         await reload();
     }
 
+    if (showSheet) {
+        return (
+            <SalaQrSheet
+                localNombre={localId}
+                zonas={resumen.zonas}
+                mesas={mesas}
+                onClose={() => setShowSheet(false)}
+            />
+        );
+    }
+
     return (
         <div>
-            <div className="db-card-title">Tu sala</div>
-            <div className="db-card-sub">
-                {resumen.zonas.length} zonas · {resumen.mesas_total} mesas
+            <div className="sm-zona-header" style={{ marginBottom: 0 }}>
+                <div>
+                    <div className="db-card-title">Tu sala</div>
+                    <div className="db-card-sub">
+                        {resumen.zonas.length} zonas · {resumen.mesas_total} mesas
+                    </div>
+                </div>
+                {resumen.mesas_total > 0 && (
+                    <button
+                        className="db-btn db-btn--ghost"
+                        onClick={() => setShowSheet(true)}
+                        disabled={loading}
+                    >Imprimir QRs</button>
+                )}
             </div>
 
             {loading && <div className="db-ia-status"><div className="db-ia-dot" />Cargando…</div>}

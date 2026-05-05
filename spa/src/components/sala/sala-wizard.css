@@ -276,3 +276,158 @@
     word-break: break-all;
     display: inline-block;
 }
+
+/* SalaQrSheet - hoja imprimible A4 */
+
+.qrsheet-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--sp-bg-soft, #F8F8F6);
+    z-index: 9000;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.qrsheet-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--sp-bg, #fff);
+    border-bottom: 1px solid var(--sp-border, #E5E5E3);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.qrsheet-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+}
+.qrsheet-title span {
+    color: var(--sp-text-muted, #717171);
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+.qrsheet-paper {
+    max-width: 210mm;
+    margin: 16px auto;
+    padding: 12mm 14mm;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.qrsheet-zona { margin-bottom: 18mm; page-break-after: always; }
+.qrsheet-zona:last-child { page-break-after: auto; margin-bottom: 0; }
+
+.qrsheet-zona-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--sp-border, #E5E5E3);
+    padding-bottom: 6px;
+    margin-bottom: 10mm;
+}
+.qrsheet-zona-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+}
+.qrsheet-zona-header span {
+    color: var(--sp-text-muted, #717171);
+    font-size: 12px;
+}
+
+.qrsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8mm;
+}
+
+.qrsheet-card {
+    border: 1px dashed var(--sp-border, #E5E5E3);
+    border-radius: 6px;
+    padding: 10mm 6mm 8mm;
+    text-align: center;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6mm;
+}
+.qrsheet-card-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+.qrsheet-local {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.qrsheet-zona-name {
+    font-size: 11px;
+    color: var(--sp-text-muted, #717171);
+}
+
+.qrsheet-qr {
+    display: flex;
+    justify-content: center;
+    padding: 4mm;
+    background: #fff;
+}
+
+.qrsheet-card-foot {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+.qrsheet-mesa-label {
+    font-size: 13px;
+    color: var(--sp-text-muted, #717171);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.qrsheet-mesa-numero {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sp-text, #0F0F0F);
+    line-height: 1;
+}
+
+.qrsheet-instr {
+    font-size: 10px;
+    color: var(--sp-text-muted, #717171);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.qrsheet-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--sp-text-muted, #717171);
+    font-size: 14px;
+}
+
+/* Print: oculta toolbar, imprime solo el papel a A4 */
+@media print {
+    @page { size: A4; margin: 10mm; }
+    body { background: #fff !important; }
+    .qrsheet-toolbar { display: none !important; }
+    .qrsheet-overlay { position: static; background: #fff; overflow: visible; }
+    .qrsheet-paper {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+    .qrsheet-card { border-style: solid; border-color: #ccc; }
+}
