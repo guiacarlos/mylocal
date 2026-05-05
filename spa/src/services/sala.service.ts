@@ -111,16 +111,29 @@ export async function regenerateMesaQr(client: SynaxisClient, id: string): Promi
     return call<Mesa>(client, 'regenerate_mesa_qr', { id });
 }
 
-// ── Helper: URL publica de la mesa (agnostica de dominio) ────────────
+// ── URLs publicas: friendly + agnosticas de dominio ──────────────────
 
 /**
- * Genera la URL pública para escanear el QR de una mesa.
- * Si estamos en `<slug>.dominio.tld`, usa ese host.
- * Si no, devuelve ruta relativa `/m/<token>` (deploy local o subdir).
+ * URL del QR default del local (caso "publicar carta online").
+ * Lleva al cliente a la carta digital del local. Misma para todas las mesas.
+ *   /carta/<localSlug>
+ */
+export function buildLocalCartaUrl(localId: string): string {
+    const slug = encodeURIComponent(localId);
+    if (typeof window === 'undefined') return `/carta/${slug}`;
+    return `${window.location.protocol}//${window.location.host}/carta/${slug}`;
+}
+
+/**
+ * URL especifica de una mesa (caso avanzado "pedidos por mesa").
+ * Mantiene el mismo destino - la carta - pero con el numero como contexto
+ * de pedido.
+ *   /carta/<localSlug>/<numero>
  */
 export function buildMesaUrl(mesa: Mesa): string {
-    if (typeof window === 'undefined') return `/m/${mesa.qr_token}`;
-    const host = window.location.host;
-    const protocol = window.location.protocol;
-    return `${protocol}//${host}/m/${mesa.qr_token}`;
+    const slug = encodeURIComponent(mesa.local_id || 'default');
+    const numero = encodeURIComponent(mesa.numero);
+    const path = `/carta/${slug}/${numero}`;
+    if (typeof window === 'undefined') return path;
+    return `${window.location.protocol}//${window.location.host}${path}`;
 }

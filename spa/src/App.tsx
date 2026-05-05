@@ -127,6 +127,8 @@ export function App() {
             <Route element={<PublicLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/carta" element={<Carta />} />
+                <Route path="/carta/:localSlug" element={<Carta />} />
+                <Route path="/carta/:localSlug/:mesaNumero" element={<Carta />} />
                 <Route path="/legal" element={<LegalPage />} />
                 <Route path="/legal/:slug" element={<LegalPage />} />
                 <Route path="/aviso-legal" element={<LegalPage />} />

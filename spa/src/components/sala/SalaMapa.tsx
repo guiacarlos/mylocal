@@ -1,16 +1,15 @@
 /**
- * SalaMapa - vista de gestion de zonas y mesas (post-wizard).
+ * SalaMapa - vista de gestion de zonas y mesas.
  *
- * Muestra cada zona con sus mesas en grid. Permite:
- *   - Ver el QR de una mesa (link copiable).
- *   - Regenerar el QR (cambiar token, invalida el anterior).
- *   - Anadir mesa a una zona.
- *   - Cambiar capacidad de una mesa.
- *   - Borrar mesa (soft).
+ * Modelo simple:
+ *   - Header con URL del QR default del local (todos los clientes ven la
+ *     misma carta) + botones "Anadir estancia" / "Imprimir QRs".
+ *   - Cada zona: nombre editable inline, contador de mesas, boton borrar.
+ *     Mesas en grid: numero + capacidad. Click abre modal para editar.
+ *   - Modal mesa: numero, capacidad, URL especifica (modo avanzado), borrar.
  *
- * Diseno: cada zona es un bloque, las mesas dentro son tarjetas
- * cuadradas pequeñas. Al hacer click en una mesa se abre un modal
- * con detalle.
+ * El QR default del local se imprime UNA vez y vale para todas las mesas
+ * cuando el hostelero solo quiere publicar la carta online.
  */
 
 import { useEffect, useState } from 'react';
@@ -20,10 +19,14 @@ import {
     createMesa,
     updateMesa,
     deleteMesa,
-    regenerateMesaQr,
+    createZona,
+    updateZona,
+    deleteZona,
     buildMesaUrl,
+    buildLocalCartaUrl,
     type Mesa,
     type SalaResumen,
+    type Zona,
 } from '../../services/sala.service';
 import { SalaQrSheet } from './SalaQrSheet';
 
@@ -40,6 +43,8 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
     const [selected, setSelected] = useState<Mesa | null>(null);
     const [busy, setBusy] = useState(false);
     const [showSheet, setShowSheet] = useState(false);
+    const [editingZonaId, setEditingZonaId] = useState<string | null>(null);
+    const [editingZonaName, setEditingZonaName] = useState('');
 
     async function reload() {
         setLoading(true);
@@ -50,8 +55,51 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
             setLoading(false);
         }
     }
-
     useEffect(() => { reload(); }, [localId]);
+
+    async function handleAddZona() {
+        const nombre = prompt('Nombre de la nueva estancia:', 'Nueva zona');
+        if (!nombre || !nombre.trim()) return;
+        setBusy(true);
+        try {
+            await createZona(client, { local_id: localId, nombre: nombre.trim(), icono: 'utensils' });
+            onChange();
+        } finally {
+            setBusy(false);
+        }
+    }
+
+    async function handleRenameZona(z: Zona) {
+        if (!editingZonaName.trim() || editingZonaName === z.nombre) {
+            setEditingZonaId(null);
+            return;
+        }
+        setBusy(true);
+        try {
+            await updateZona(client, z.id, { nombre: editingZonaName.trim() });
+            setEditingZonaId(null);
+            onChange();
+        } finally {
+            setBusy(false);
+        }
+    }
+
+    async function handleDeleteZona(z: Zona) {
+        const mesasZona = mesas.filter(m => m.zone_id === z.id);
+        const msg = mesasZona.length > 0
+            ? `Borrar "${z.nombre}" y sus ${mesasZona.length} mesas?`
+            : `Borrar "${z.nombre}"?`;
+        if (!confirm(msg)) return;
+        setBusy(true);
+        try {
+            for (const m of mesasZona) await deleteMesa(client, m.id);
+            await deleteZona(client, z.id);
+            await reload();
+            onChange();
+        } finally {
+            setBusy(false);
+        }
+    }
 
     async function handleAddMesa(zoneId: string) {
         setBusy(true);
@@ -71,21 +119,9 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         }
     }
 
-    async function handleRegenerate() {
-        if (!selected) return;
-        setBusy(true);
-        try {
-            const updated = await regenerateMesaQr(client, selected.id);
-            setSelected(updated);
-            await reload();
-        } finally {
-            setBusy(false);
-        }
-    }
-
     async function handleDelete() {
         if (!selected) return;
-        if (!confirm(`¿Borrar Mesa ${selected.numero}? Sus QRs dejarán de funcionar.`)) return;
+        if (!confirm(`Borrar Mesa ${selected.numero}?`)) return;
         setBusy(true);
         try {
             await deleteMesa(client, selected.id);
@@ -104,6 +140,13 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         await reload();
     }
 
+    async function handleNumero(nuevo: string) {
+        if (!selected || !nuevo.trim()) return;
+        const updated = await updateMesa(client, selected.id, { numero: nuevo.trim() });
+        setSelected(updated);
+        await reload();
+    }
+
     if (showSheet) {
         return (
             <SalaQrSheet
@@ -115,33 +158,74 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         );
     }
 
+    const cartaUrl = buildLocalCartaUrl(localId);
+
     return (
         <div>
-            <div className="sm-zona-header" style={{ marginBottom: 0 }}>
+            <div className="sm-header">
                 <div>
                     <div className="db-card-title">Tu sala</div>
                     <div className="db-card-sub">
-                        {resumen.zonas.length} zonas · {resumen.mesas_total} mesas
+                        {resumen.zonas.length} estancias · {resumen.mesas_total} mesas
                     </div>
                 </div>
-                {resumen.mesas_total > 0 && (
-                    <button
-                        className="db-btn db-btn--ghost"
-                        onClick={() => setShowSheet(true)}
-                        disabled={loading}
-                    >Imprimir QRs</button>
-                )}
+                <div className="sm-header-actions">
+                    <button className="db-btn db-btn--ghost" onClick={handleAddZona} disabled={busy}>
+                        + Estancia
+                    </button>
+                    {resumen.mesas_total > 0 && (
+                        <button className="db-btn db-btn--ghost" onClick={() => setShowSheet(true)}>
+                            Imprimir QRs
+                        </button>
+                    )}
+                </div>
+            </div>
+
+            <div className="sm-default-qr">
+                <div className="sm-default-qr-label">URL publica de la carta</div>
+                <code className="sm-url">{cartaUrl}</code>
+                <button
+                    className="db-btn db-btn--ghost db-btn--sm"
+                    onClick={() => navigator.clipboard?.writeText(cartaUrl)}
+                >Copiar</button>
             </div>
 
             {loading && <div className="db-ia-status"><div className="db-ia-dot" />Cargando…</div>}
 
             {!loading && resumen.zonas.map(z => {
                 const mesasZona = mesas.filter(m => m.zone_id === z.id);
+                const isEditing = editingZonaId === z.id;
                 return (
                     <div key={z.id} className="sm-zona-block">
                         <div className="sm-zona-header">
-                            <h3 className="sm-zona-title">{z.nombre}</h3>
-                            <span className="sm-zona-count">{mesasZona.length} mesas</span>
+                            {isEditing ? (
+                                <input
+                                    className="sm-zona-input"
+                                    value={editingZonaName}
+                                    autoFocus
+                                    onChange={e => setEditingZonaName(e.target.value)}
+                                    onBlur={() => handleRenameZona(z)}
+                                    onKeyDown={e => {
+                                        if (e.key === 'Enter') handleRenameZona(z);
+                                        if (e.key === 'Escape') setEditingZonaId(null);
+                                    }}
+                                />
+                            ) : (
+                                <h3
+                                    className="sm-zona-title"
+                                    onClick={() => { setEditingZonaId(z.id); setEditingZonaName(z.nombre); }}
+                                    title="Click para renombrar"
+                                >{z.nombre}</h3>
+                            )}
+                            <div className="sm-zona-meta">
+                                <span className="sm-zona-count">{mesasZona.length} mesas</span>
+                                <button
+                                    className="sm-zona-del"
+                                    onClick={() => handleDeleteZona(z)}
+                                    disabled={busy}
+                                    title="Borrar estancia"
+                                >×</button>
+                            </div>
                         </div>
                         <div className="sm-mesas-grid">
                             {mesasZona.map(m => (
@@ -154,7 +238,7 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
                                 className="sm-mesa-card sm-mesa-card--add"
                                 onClick={() => handleAddMesa(z.id)}
                                 disabled={busy}
-                                aria-label="Añadir mesa"
+                                aria-label="Anadir mesa"
                             >
                                 <div className="sm-mesa-add">+</div>
                             </button>
@@ -172,6 +256,14 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
                         </div>
                         <div className="sm-modal-body">
                             <div className="sm-field">
+                                <label>Numero</label>
+                                <input
+                                    type="text"
+                                    defaultValue={selected.numero}
+                                    onBlur={e => handleNumero(e.target.value)}
+                                />
+                            </div>
+                            <div className="sm-field">
                                 <label>Capacidad</label>
                                 <input
                                     type="number" min={1} max={20}
@@ -180,18 +272,15 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
                                 />
                             </div>
                             <div className="sm-field">
-                                <label>URL del QR</label>
+                                <label>URL especifica (modo pedidos por mesa)</label>
                                 <code className="sm-url">{buildMesaUrl(selected)}</code>
                                 <button
-                                    className="db-btn db-btn--ghost"
+                                    className="db-btn db-btn--ghost db-btn--sm"
                                     onClick={() => navigator.clipboard?.writeText(buildMesaUrl(selected))}
                                     style={{ marginTop: 6 }}
                                 >Copiar</button>
                             </div>
                             <div className="db-btn-group" style={{ marginTop: 18 }}>
-                                <button className="db-btn db-btn--ghost" onClick={handleRegenerate} disabled={busy}>
-                                    Regenerar QR
-                                </button>
                                 <button className="db-btn db-btn--danger" onClick={handleDelete} disabled={busy}>
                                     Borrar mesa
                                 </button>

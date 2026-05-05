@@ -429,66 +429,74 @@ if ($token) {
 echo "\n[9c] Sala: zonas, mesas y tokens QR\n";
 
 if ($token) {
+    // sala_resumen es idempotente: si no hay zonas crea "Sala" + 1 mesa "1"
     $rs0 = $post(['action' => 'sala_resumen', 'data' => ['local_id' => 'test_sala']], $token);
+    $resumen0 = $rs0['json']['data'] ?? [];
     check(
         "sala_resumen devuelve estructura {zonas, mesas_total, mesas_por_zona}",
-        isset($rs0['json']['data']['zonas']) && isset($rs0['json']['data']['mesas_total'])
+        isset($resumen0['zonas']) && isset($resumen0['mesas_total'])
+    );
+    check(
+        "sala_resumen bootstrapea 1 zona 'Sala' + 1 mesa cuando local vacio",
+        count($resumen0['zonas'] ?? []) === 1
+            && ($resumen0['zonas'][0]['nombre'] ?? '') === 'Sala'
+            && ($resumen0['mesas_total'] ?? 0) === 1
     );
 
-    $preset = $post(
-        ['action' => 'create_zonas_preset', 'data' => ['local_id' => 'test_sala', 'preset' => 'salon_terraza']],
+    $zonas = $resumen0['zonas'] ?? [];
+    $zoneId = $zonas[0]['id'] ?? '';
+
+    // Anadir mesas adicionales con create_mesa (la wizard ya no se usa, pero
+    // create_mesas_batch sigue disponible para "anadir N de golpe")
+    $batch = $post(
+        ['action' => 'create_mesas_batch', 'data' => [
+            'local_id' => 'test_sala', 'zone_id' => $zoneId,
+            'cantidad' => 4, 'start_numero' => 2, 'capacidad' => 4,
+        ]],
         $token
     );
-    $zonasCreadas = $preset['json']['data'] ?? [];
-    check("Preset 'salon_terraza' crea 2 zonas", count($zonasCreadas) === 2);
+    $mesasNuevas = $batch['json']['data'] ?? [];
+    check("create_mesas_batch crea 4 mesas adicionales", count($mesasNuevas) === 4);
+    check(
+        "Cada mesa tiene qr_token de 16 chars hex (reservado para modo avanzado)",
+        !empty($mesasNuevas[0]['qr_token']) && (bool) preg_match('/^[a-f0-9]{16}$/', $mesasNuevas[0]['qr_token'])
+    );
 
-    $lst = $post(['action' => 'list_zonas', 'data' => ['local_id' => 'test_sala']], $token);
-    $zonas = $lst['json']['data'] ?? [];
-    check("list_zonas devuelve las creadas", count($zonas) >= 2);
-
-    if (count($zonas) > 0) {
-        $zoneId = $zonas[0]['id'];
-        $batch = $post(
-            ['action' => 'create_mesas_batch', 'data' => [
-                'local_id' => 'test_sala', 'zone_id' => $zoneId,
-                'cantidad' => 5, 'capacidad' => 4,
-            ]],
+    // Test regenerate_mesa_qr (sigue siendo util en modo avanzado pedidos por mesa)
+    if (!empty($mesasNuevas[0]['id'])) {
+        $oldToken = $mesasNuevas[0]['qr_token'];
+        $regen = $post(
+            ['action' => 'regenerate_mesa_qr', 'data' => ['id' => $mesasNuevas[0]['id']]],
             $token
         );
-        $mesas = $batch['json']['data'] ?? [];
-        check("create_mesas_batch crea 5 mesas", count($mesas) === 5);
-        check(
-            "Cada mesa tiene qr_token de 16 chars hex",
-            !empty($mesas[0]['qr_token']) && (bool) preg_match('/^[a-f0-9]{16}$/', $mesas[0]['qr_token'])
-        );
-        check(
-            "Mesas se numeran 1..5",
-            count($mesas) === 5 && $mesas[0]['numero'] === '1' && $mesas[4]['numero'] === '5'
-        );
+        $newToken = $regen['json']['data']['qr_token'] ?? '';
+        check("regenerate_mesa_qr cambia el token", $oldToken !== $newToken && strlen($newToken) === 16);
+    }
 
-        if (!empty($mesas[0]['id'])) {
-            $oldToken = $mesas[0]['qr_token'];
-            $regen = $post(
-                ['action' => 'regenerate_mesa_qr', 'data' => ['id' => $mesas[0]['id']]],
-                $token
-            );
-            $newToken = $regen['json']['data']['qr_token'] ?? '';
-            check("regenerate_mesa_qr cambia el token", $oldToken !== $newToken && strlen($newToken) === 16);
-        }
+    // Test crear estancia adicional (caso multi-zona)
+    $zonaExtra = $post(
+        ['action' => 'create_zona', 'data' => ['local_id' => 'test_sala', 'nombre' => 'Terraza', 'icono' => 'sun']],
+        $token
+    );
+    check(
+        "create_zona anade estancia 'Terraza'",
+        ($zonaExtra['json']['data']['nombre'] ?? '') === 'Terraza'
+    );
 
-        $rs = $post(['action' => 'sala_resumen', 'data' => ['local_id' => 'test_sala']], $token);
-        check(
-            "sala_resumen final: 2 zonas, 5 mesas",
-            count($rs['json']['data']['zonas'] ?? []) === 2
-                && ($rs['json']['data']['mesas_total'] ?? 0) === 5
-        );
+    $rsFinal = $post(['action' => 'sala_resumen', 'data' => ['local_id' => 'test_sala']], $token);
+    check(
+        "sala_resumen final: 2 zonas, 5 mesas (1 bootstrap + 4 batch)",
+        count($rsFinal['json']['data']['zonas'] ?? []) === 2
+            && ($rsFinal['json']['data']['mesas_total'] ?? 0) === 5
+    );
 
-        foreach ($mesas as $m) {
-            if (!empty($m['id'])) $post(['action' => 'delete_mesa', 'data' => ['id' => $m['id']]], $token);
-        }
-        foreach ($zonas as $z) {
-            if (!empty($z['id'])) $post(['action' => 'delete_zona', 'data' => ['id' => $z['id']]], $token);
-        }
+    // Cleanup
+    $allMesas = $post(['action' => 'list_mesas', 'data' => ['local_id' => 'test_sala']], $token);
+    foreach (($allMesas['json']['data'] ?? []) as $m) {
+        if (!empty($m['id'])) $post(['action' => 'delete_mesa', 'data' => ['id' => $m['id']]], $token);
+    }
+    foreach (($rsFinal['json']['data']['zonas'] ?? []) as $z) {
+        if (!empty($z['id'])) $post(['action' => 'delete_zona', 'data' => ['id' => $z['id']]], $token);
     }
 }
 

@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { App } from './App';
 import { SynaxisProvider } from './hooks/useSynaxis';
 import './index.css';
 
-// HashRouter en lugar de BrowserRouter: agnosticismo total de servidor.
-// URLs tipo /#/legal/privacidad funcionan en cualquier subdirectorio sin
-// reglas Apache de fallback. Si se cambia de servidor, las rutas no se rompen.
+// BrowserRouter para URLs limpias (/dashboard en vez de /#/dashboard).
+// El fallback a index.html lo resuelve release/.htaccess (RewriteRule ^ index.html [L]).
+// En dev, Vite hace history fallback nativo.
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <SynaxisProvider namespace="socola" project="socola">
-            <HashRouter>
+            <BrowserRouter>
                 <App />
-            </HashRouter>
+            </BrowserRouter>
         </SynaxisProvider>
     </React.StrictMode>,
 );

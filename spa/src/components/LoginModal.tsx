@@ -41,14 +41,10 @@ export function LoginModal({ open, onClose }: Props) {
         }
         console.log('[LoginModal] Login exitoso para:', res.user?.email, 'Rol:', res.user?.role);
         const role = (res.user?.role ?? '').toLowerCase();
-        if (['sala', 'cocina', 'camarero'].includes(role)) {
-            console.log('[LoginModal] Redirigiendo a TPV via hash');
-            window.location.hash = '#/sistema/tpv';
-        } else {
-            console.log('[LoginModal] Redirigiendo a Dashboard via hash');
-            window.location.hash = '#/dashboard';
-        }
+        const target = ['sala', 'cocina', 'camarero'].includes(role) ? '/sistema/tpv' : '/dashboard';
+        console.log('[LoginModal] Redirigiendo a', target);
         onClose();
+        window.location.assign(target);
     }
 
     return (

@@ -134,6 +134,40 @@
 
 /* SalaMapa */
 
+.sm-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--sp-border, #E5E5E3);
+}
+.sm-header-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.sm-default-qr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--sp-bg-soft, #F8F8F6);
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 8px;
+}
+.sm-default-qr-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sp-text-muted, #717171);
+    margin-right: auto;
+}
+
 .sm-zona-block {
     margin-top: 20px;
     padding: 16px;
@@ -143,8 +177,9 @@
 }
 .sm-zona-header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+    gap: 12px;
     margin-bottom: 12px;
 }
 .sm-zona-title {
@@ -152,10 +187,51 @@
     font-weight: 600;
     margin: 0;
     color: var(--sp-text, #0F0F0F);
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background 0.12s;
+}
+.sm-zona-title:hover {
+    background: var(--sp-bg-soft, #F8F8F6);
+}
+.sm-zona-input {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    border: 1px solid var(--sp-accent-alt, #C8A96E);
+    border-radius: 4px;
+    padding: 2px 6px;
+    background: var(--sp-bg, #fff);
+    outline: none;
+    width: auto;
+    min-width: 140px;
+}
+.sm-zona-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .sm-zona-count {
     font-size: 12px;
     color: var(--sp-text-muted, #717171);
+}
+.sm-zona-del {
+    border: none;
+    background: transparent;
+    color: var(--sp-text-muted, #717171);
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sm-zona-del:hover:not(:disabled) {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
 }
 
 .sm-mesas-grid {

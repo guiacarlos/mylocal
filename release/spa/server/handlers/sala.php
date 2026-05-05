@@ -169,6 +169,8 @@ function handle_sala(string $action, array $req, ?array $user): array
 
 function sala_resumen(string $localId): array
 {
+    sala_bootstrap_if_empty($localId);
+
     $zonas = sala_zona_model()->listByLocal($localId);
     $mesas = sala_mesa_model()->listByLocal($localId);
     $byZone = [];
@@ -181,4 +183,29 @@ function sala_resumen(string $localId): array
         'mesas_total' => count($mesas['data'] ?? []),
         'mesas_por_zona' => (object) $byZone,
     ];
+}
+
+/**
+ * Si el local no tiene zonas, crea "Sala" con 1 mesa "1". Idempotente.
+ * Punto de partida minimo para que el hostelero arranque sin friccion.
+ */
+function sala_bootstrap_if_empty(string $localId): void
+{
+    $existing = sala_zona_model()->listByLocal($localId);
+    if (!empty($existing['data'] ?? [])) return;
+
+    $zona = sala_zona_model()->create([
+        'local_id' => $localId,
+        'nombre'   => 'Sala',
+        'icono'    => 'utensils',
+        'orden'    => 1,
+    ]);
+    if (!($zona['success'] ?? false)) return;
+
+    sala_mesa_model()->create([
+        'local_id'  => $localId,
+        'zone_id'   => $zona['data']['id'],
+        'numero'    => '1',
+        'capacidad' => 4,
+    ]);
 }

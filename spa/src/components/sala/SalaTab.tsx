@@ -1,14 +1,14 @@
 /**
  * SalaTab - tab "Mesas" del dashboard.
  *
- * Si el local NO tiene zonas configuradas, muestra el wizard.
- * Si ya tiene, muestra la vista de gestion (mapa de sala).
+ * Muestra siempre SalaMapa. El backend bootstrapea 1 zona "Sala" + 1 mesa
+ * la primera vez que se llama a sala_resumen para un local sin zonas, asi
+ * que no hace falta el wizard previo.
  */
 
 import { useEffect, useState } from 'react';
 import { useSynaxisClient } from '../../hooks/useSynaxis';
 import { getSalaResumen, type SalaResumen } from '../../services/sala.service';
-import { SalaWizard } from './SalaWizard';
 import { SalaMapa } from './SalaMapa';
 
 interface Props {
@@ -53,13 +53,7 @@ export function SalaTab({ localId = 'default' }: Props) {
         );
     }
 
-    if (!resumen || resumen.zonas.length === 0) {
-        return (
-            <div className="db-card">
-                <SalaWizard localId={localId} onDone={reload} />
-            </div>
-        );
-    }
+    if (!resumen) return null;
 
     return <SalaMapa localId={localId} resumen={resumen} onChange={reload} />;
 }
