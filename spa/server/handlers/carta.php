@@ -94,8 +94,9 @@ function carta_ocr_parse(array $req): array
     require_once CAP_ROOT . '/OCR/OCRParser.php';
     $r = (new \OCR\OCRParser(STORAGE_ROOT_CARTA))->parse($rawText);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error parsing');
-    // r['data'] = { categorias: [...] }
-    return $r['data'];
+    // Devolvemos categorias + engine usado (gemini_parser | heuristic_v2)
+    // util para diagnostico desde el cliente.
+    return array_merge($r['data'], ['_engine' => $r['engine'] ?? 'unknown']);
 }
 
 /* ─────────────────────────────────────────────────────────

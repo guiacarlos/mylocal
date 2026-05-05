@@ -1,23 +1,31 @@
 <?php
 namespace OCR;
 
+require_once __DIR__ . '/OCRHeuristicParser.php';
+
 /**
  * OCRParser - Convierte texto plano OCR en estructura JSON de carta.
  *
  * Estrategia hibrida:
- *   1. Primer paso heuristico: detecta lineas con precio y agrupa por
- *      bloques (categoria = linea sin precio precedida de hueco).
- *   2. Si Gemini esta disponible, hace una segunda pasada para refinar
- *      y devolver la estructura final.
+ *   1. Si Gemini esta disponible (api_key en OPTIONS), parser IA con
+ *      generationConfig estricto y prompt que pide carta completa.
+ *   2. Si Gemini falla o no esta configurado, fallback al heuristico
+ *      (OCRHeuristicParser) que maneja layouts comunes de cartas reales.
+ *
+ * El campo "engine" en la respuesta indica que motor proceso:
+ *   - "gemini_parser" : Gemini estructuro la carta
+ *   - "heuristic_v2"  : fallback heuristico
  */
 class OCRParser
 {
     private $configPath;
+    private $heuristic;
 
     public function __construct($storageRoot = null)
     {
         $root = $storageRoot ?: (defined('STORAGE_ROOT') ? STORAGE_ROOT : __DIR__ . '/../../STORAGE');
         $this->configPath = $root . '/config/gemini_settings.json';
+        $this->heuristic = new OCRHeuristicParser();
     }
 
     public function parse($rawText)
@@ -30,123 +38,84 @@ class OCRParser
             $smart = $this->parseWithGemini($rawText, $cfg);
             if ($smart['success']) return $smart;
         }
-        return $this->parseHeuristic($rawText);
-    }
-
-    private function parseHeuristic($text)
-    {
-        $lines = preg_split('/\r?\n/', $text);
-        $categorias = [];
-        $current = null;
-        $priceRegex = '/(\d{1,3}(?:[\.,]\d{1,2})?)\s*(?:€|eur|EUR)?\s*$/u';
-
-        foreach ($lines as $raw) {
-            $line = trim($raw);
-            if ($line === '' || preg_match('/^---/', $line)) continue;
-
-            if (preg_match($priceRegex, $line, $m)) {
-                $precio = floatval(str_replace(',', '.', $m[1]));
-                $nombre = trim(preg_replace($priceRegex, '', $line));
-                $nombre = trim($nombre, " .-:_\t");
-                if ($nombre === '') continue;
-                if ($current === null) {
-                    $current = ['nombre' => 'Carta', 'productos' => []];
-                    $categorias[] =& $current;
-                }
-                $current['productos'][] = [
-                    'nombre' => $nombre,
-                    'precio' => $precio,
-                    'descripcion' => ''
-                ];
-            } else {
-                if (mb_strlen($line) <= 60 && !preg_match('/[.!?]$/', $line)) {
-                    unset($current);
-                    $current = ['nombre' => $this->cleanCategoryName($line), 'productos' => []];
-                    $categorias[] =& $current;
-                } elseif ($current !== null && !empty($current['productos'])) {
-                    $idx = count($current['productos']) - 1;
-                    $current['productos'][$idx]['descripcion'] = trim(
-                        ($current['productos'][$idx]['descripcion'] . ' ' . $line)
-                    );
-                }
-            }
-        }
-        unset($current);
-
-        $categorias = array_values(array_filter($categorias, function ($c) {
-            return !empty($c['productos']);
-        }));
-
-        return ['success' => true, 'data' => ['categorias' => $categorias], 'engine' => 'heuristic'];
+        return $this->heuristic->parse($rawText);
     }
 
     private function parseWithGemini($text, $cfg)
     {
-        $model = $cfg['model'] ?? 'gemini-1.5-flash';
+        $model = $cfg['model'] ?? 'gemini-2.5-flash';
         $key = $cfg['api_key'];
 
         $instr = "Eres un parser de cartas de restaurante. Recibes texto OCR de una carta "
             . "y devuelves UNICAMENTE un JSON valido con esta forma exacta:\n"
             . '{"categorias":[{"nombre":"...","productos":[{"nombre":"...","descripcion":"...","precio":0.00}]}]}'
-            . "\n\nReglas:\n"
-            . "- precio: numero decimal, sin simbolo. Si no hay precio, usa 0.\n"
-            . "- descripcion: cadena vacia si no hay descripcion clara.\n"
-            . "- categorias: agrupa por las cabeceras visibles (ENTRANTES, CARNES, etc).\n"
-            . "- Sin texto fuera del JSON. Sin markdown. Solo JSON puro.\n\n"
+            . "\n\nReglas IMPORTANTES:\n"
+            . "- Devuelve TODAS las categorias y TODOS los productos. NO resumas. NO omitas nada.\n"
+            . "- precio: numero decimal, sin simbolo. Si hay varios precios (ej. copa/botella), usa el menor.\n"
+            . "- descripcion: si el plato lleva ingredientes o explicacion debajo, ponla aqui. Vacia si no hay.\n"
+            . "- categorias: agrupa por cabeceras visibles (ENTRANTES, CARNES, BEBIDAS, etc.) que suelen aparecer en MAYUSCULAS.\n"
+            . "- Si un producto tiene precio en linea separada del nombre, parea ambas lineas.\n"
+            . "- Ignora pies de pagina, suplementos generales y notas.\n"
+            . "- Sin texto fuera del JSON. Sin markdown. Sin ```. Solo JSON puro.\n\n"
             . "Texto OCR:\n" . $text;
 
-        $payload = ['contents' => [['parts' => [['text' => $instr]]]]];
-        $url = "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$key}";
+        $payload = [
+            'contents' => [['parts' => [['text' => $instr]]]],
+            'generationConfig' => [
+                'temperature' => 0.1,
+                'maxOutputTokens' => 16384,
+                'responseMimeType' => 'application/json',
+            ],
+        ];
         $body = json_encode($payload);
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$key}";
 
+        $resp = $this->postJson($url, $body);
+        if ($resp['code'] !== 200) {
+            return ['success' => false, 'error' => "HTTP {$resp['code']}: " . substr($resp['body'], 0, 200)];
+        }
+        $data = json_decode($resp['body'], true);
+        $jsonText = $data['candidates'][0]['content']['parts'][0]['text'] ?? '';
+        $jsonText = preg_replace('/^```json\s*|\s*```$/s', '', trim($jsonText));
+        $parsed = json_decode($jsonText, true);
+        if (!is_array($parsed) || !isset($parsed['categorias'])) {
+            return ['success' => false, 'error' => 'JSON invalido de Gemini: ' . substr($jsonText, 0, 200)];
+        }
+        return ['success' => true, 'data' => $parsed, 'engine' => 'gemini_parser'];
+    }
+
+    private function postJson(string $url, string $body): array
+    {
         if (function_exists('curl_init')) {
             $ch = curl_init($url);
             curl_setopt_array($ch, [
                 CURLOPT_RETURNTRANSFER => true, CURLOPT_POST => true,
                 CURLOPT_POSTFIELDS => $body,
                 CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
-                CURLOPT_TIMEOUT => 60,
+                CURLOPT_TIMEOUT => 120,
                 CURLOPT_SSL_VERIFYPEER => false,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
-        } else {
-            $ctx = stream_context_create([
-                'http' => [
-                    'method' => 'POST',
-                    'header' => "Content-Type: application/json\r\n",
-                    'content' => $body,
-                    'timeout' => 60,
-                    'ignore_errors' => true,
-                ],
-                'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
-            ]);
-            $resp = @file_get_contents($url, false, $ctx);
-            $code = 0;
-            foreach (($http_response_header ?? []) as $h) {
-                if (preg_match('#^HTTP/\\S+\\s+(\\d{3})#', $h, $m)) $code = (int) $m[1];
-            }
+            return ['code' => $code, 'body' => (string) $resp];
         }
-
-        if ($code !== 200) return ['success' => false, 'error' => "HTTP $code"];
-        $data = json_decode((string) $resp, true);
-        $jsonText = $data['candidates'][0]['content']['parts'][0]['text'] ?? '';
-        $jsonText = preg_replace('/^```json\s*|\s*```$/s', '', trim($jsonText));
-        $parsed = json_decode($jsonText, true);
-        if (!is_array($parsed) || !isset($parsed['categorias'])) {
-            return ['success' => false, 'error' => 'JSON invalido de Gemini'];
+        $ctx = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/json\r\n",
+                'content' => $body,
+                'timeout' => 120,
+                'ignore_errors' => true,
+            ],
+            'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+        ]);
+        $resp = @file_get_contents($url, false, $ctx);
+        $code = 0;
+        foreach (($http_response_header ?? []) as $h) {
+            if (preg_match('#^HTTP/\\S+\\s+(\\d{3})#', $h, $m)) $code = (int) $m[1];
         }
-        return ['success' => true, 'data' => $parsed, 'engine' => 'gemini_parser'];
-    }
-
-    private function cleanCategoryName($s)
-    {
-        $s = trim($s, " .-:_\t");
-        if (mb_strtoupper($s, 'UTF-8') === $s) {
-            return mb_convert_case(mb_strtolower($s, 'UTF-8'), MB_CASE_TITLE, 'UTF-8');
-        }
-        return $s;
+        return ['code' => $code, 'body' => (string) $resp];
     }
 
     private function loadConfig()
