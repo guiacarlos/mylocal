@@ -3,6 +3,8 @@
    Extiende las variables CSS de sp-styles.css
    ══════════════════════════════════════════════════════════════════ */
 
+@import url('../components/sala/sala-wizard.css');
+
 /* Layout */
 .db-layout        { display: flex; flex-direction: column; min-height: 100vh; background: var(--sp-bg-soft); }
 .db-topbar        { display: flex; align-items: center; justify-content: space-between; height: 52px; padding: 0 var(--sp-gap-md); background: var(--sp-bg-dark); border-bottom: 1px solid #222; }

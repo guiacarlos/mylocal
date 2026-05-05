@@ -5,6 +5,7 @@ import '../styles/checkout.css';
 import { useSynaxisClient } from '../hooks/useSynaxis';
 import { CartaImportWizard } from '../components/carta/CartaImportWizard';
 import { CartaProductosPanel } from '../components/carta/CartaProductosPanel';
+import { SalaTab } from '../components/sala/SalaTab';
 import {
     listCategorias,
     listProductos,
@@ -151,10 +152,7 @@ export function Dashboard() {
                 )}
 
                 {mainTab === 'mesas' && (
-                    <div className="db-card">
-                        <div className="db-card-title">Mesas</div>
-                        <div className="db-card-sub">Gestion de zonas, mesas y codigos QR. Disponible en la siguiente fase.</div>
-                    </div>
+                    <SalaTab localId={LOCAL_ID} />
                 )}
 
                 {mainTab === 'facturacion' && (

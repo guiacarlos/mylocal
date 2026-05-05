@@ -119,6 +119,12 @@ const ALLOWED_ACTIONS = [
     'ai_sugerir_alergenos', 'ai_generar_descripcion', 'ai_generar_promocion', 'ai_traducir',
     'importar_carta_estructurada',
     'generate_pdf_carta',
+    // Sala — zonas + mesas + QRs (Ola 1)
+    'list_zonas', 'create_zona', 'update_zona', 'delete_zona',
+    'create_zonas_preset', 'reorder_zonas',
+    'list_mesas', 'create_mesa', 'update_mesa', 'delete_mesa',
+    'create_mesas_batch', 'regenerate_mesa_qr',
+    'sala_resumen',
     // Suscripciones SaaS
     'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
     // Sistema
@@ -243,6 +249,23 @@ try {
             require_once __DIR__ . '/handlers/carta.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
             resp(true, handle_carta($action, $req['data'] ?? $req));
+
+        case 'list_zonas':
+        case 'create_zona':
+        case 'update_zona':
+        case 'delete_zona':
+        case 'create_zonas_preset':
+        case 'reorder_zonas':
+        case 'list_mesas':
+        case 'create_mesa':
+        case 'update_mesa':
+        case 'delete_mesa':
+        case 'create_mesas_batch':
+        case 'regenerate_mesa_qr':
+        case 'sala_resumen':
+            require_once __DIR__ . '/handlers/sala.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, handle_sala($action, $req, $user));
 
         case 'create_subscription':
         case 'activate_subscription':

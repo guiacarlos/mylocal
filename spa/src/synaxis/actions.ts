@@ -127,6 +127,21 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'importar_carta_estructurada', scope: 'server', domain: 'carta', description: 'Importa carta en lote desde OCR' },
     { action: 'generate_pdf_carta', scope: 'server', domain: 'carta', description: 'Genera PDF físico con plantilla' },
 
+    // ── Sala: zonas + mesas + QRs (Ola 1) ──────────────────────
+    { action: 'sala_resumen',         scope: 'server', domain: 'sala', description: 'Resumen de zonas y mesas del local' },
+    { action: 'list_zonas',           scope: 'server', domain: 'sala' },
+    { action: 'create_zona',          scope: 'server', domain: 'sala' },
+    { action: 'update_zona',          scope: 'server', domain: 'sala' },
+    { action: 'delete_zona',          scope: 'server', domain: 'sala' },
+    { action: 'create_zonas_preset',  scope: 'server', domain: 'sala', description: 'Wizard paso 1: presets rápidos' },
+    { action: 'reorder_zonas',        scope: 'server', domain: 'sala' },
+    { action: 'list_mesas',           scope: 'server', domain: 'sala' },
+    { action: 'create_mesa',          scope: 'server', domain: 'sala' },
+    { action: 'update_mesa',          scope: 'server', domain: 'sala' },
+    { action: 'delete_mesa',          scope: 'server', domain: 'sala' },
+    { action: 'create_mesas_batch',   scope: 'server', domain: 'sala', description: 'Wizard paso 2: N mesas en una zona' },
+    { action: 'regenerate_mesa_qr',   scope: 'server', domain: 'sala', description: 'Cambia el token QR de la mesa' },
+
     // ── Suscripciones SaaS (Revolut) ─────────────────────────
     { action: 'create_subscription',   scope: 'server', domain: 'billing', description: 'Crea orden Revolut + guarda pending' },
     { action: 'activate_subscription', scope: 'server', domain: 'billing', description: 'Verifica pago Revolut + activa plan' },

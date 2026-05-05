@@ -1,0 +1,278 @@
+/* SalaWizard - estilos especificos. Importado desde db-styles.css. */
+
+.sw-preset-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+@media (min-width: 640px) {
+    .sw-preset-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.sw-preset-card {
+    text-align: left;
+    padding: 18px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    background: var(--sp-bg, #fff);
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 110px;
+    font: inherit;
+    color: inherit;
+}
+.sw-preset-card:hover:not(:disabled) {
+    border-color: var(--sp-accent-alt, #C8A96E);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+.sw-preset-card:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sw-preset-emoji {
+    font-size: 28px;
+    line-height: 1;
+}
+.sw-preset-titulo {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+}
+.sw-preset-desc {
+    font-size: 13px;
+    color: var(--sp-text-muted, #717171);
+    line-height: 1.4;
+}
+
+/* Paso 2 - mesas por zona */
+
+.sw-zonas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+.sw-zona-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 8px;
+    background: var(--sp-bg, #fff);
+}
+.sw-zona-nombre {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    flex: 0 0 auto;
+    min-width: 110px;
+}
+.sw-zona-controls {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.sw-control {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--sp-text-muted, #717171);
+}
+.sw-control input {
+    width: 80px;
+    padding: 6px 8px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sp-text, #0F0F0F);
+    background: var(--sp-bg, #fff);
+    text-align: center;
+}
+.sw-control input:focus {
+    outline: none;
+    border-color: var(--sp-accent-alt, #C8A96E);
+}
+
+/* Paso 3 - resumen */
+
+.sw-resumen {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 12px;
+}
+@media (min-width: 640px) {
+    .sw-resumen { grid-template-columns: 1fr 1fr 1fr; }
+}
+.sw-resumen-zona {
+    padding: 14px 16px;
+    background: var(--sp-bg-soft, #F8F8F6);
+    border-radius: 8px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+}
+.sw-resumen-titulo {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    margin-bottom: 2px;
+}
+.sw-resumen-meta {
+    font-size: 12px;
+    color: var(--sp-text-muted, #717171);
+}
+
+/* SalaMapa */
+
+.sm-zona-block {
+    margin-top: 20px;
+    padding: 16px;
+    background: var(--sp-bg, #fff);
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 10px;
+}
+.sm-zona-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.sm-zona-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--sp-text, #0F0F0F);
+}
+.sm-zona-count {
+    font-size: 12px;
+    color: var(--sp-text-muted, #717171);
+}
+
+.sm-mesas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    gap: 8px;
+}
+.sm-mesa-card {
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 8px;
+    background: var(--sp-bg-soft, #F8F8F6);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: border-color 0.12s, transform 0.1s;
+    font: inherit;
+    color: inherit;
+}
+.sm-mesa-card:hover {
+    border-color: var(--sp-accent-alt, #C8A96E);
+    transform: translateY(-1px);
+}
+.sm-mesa-numero {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+}
+.sm-mesa-cap {
+    font-size: 10px;
+    color: var(--sp-text-muted, #717171);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.sm-mesa-card--add {
+    background: transparent;
+    border-style: dashed;
+    color: var(--sp-text-muted, #717171);
+}
+.sm-mesa-card--add:hover {
+    color: var(--sp-text, #0F0F0F);
+}
+.sm-mesa-add {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+/* Modal mesa */
+
+.sm-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+}
+.sm-modal {
+    width: 100%;
+    max-width: 440px;
+    background: var(--sp-bg, #fff);
+    border-radius: 14px 14px 0 0;
+    padding: 18px 18px 22px;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
+}
+@media (min-width: 640px) {
+    .sm-modal-overlay { align-items: center; padding: 16px; }
+    .sm-modal { border-radius: 14px; }
+}
+.sm-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.sm-modal-header h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.sm-modal-close {
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--sp-text-muted, #717171);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+}
+.sm-modal-close:hover { background: var(--sp-bg-soft, #F8F8F6); }
+
+.sm-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+.sm-field label {
+    font-size: 12px;
+    color: var(--sp-text-muted, #717171);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.sm-field input[type="number"] {
+    width: 100px;
+    padding: 8px 10px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 6px;
+    font-size: 14px;
+}
+.sm-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: var(--sp-bg-soft, #F8F8F6);
+    padding: 6px 8px;
+    border-radius: 4px;
+    word-break: break-all;
+    display: inline-block;
+}
