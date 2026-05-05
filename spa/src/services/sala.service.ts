@@ -114,26 +114,37 @@ export async function regenerateMesaQr(client: SynaxisClient, id: string): Promi
 // ── URLs publicas: friendly + agnosticas de dominio ──────────────────
 
 /**
- * URL del QR default del local (caso "publicar carta online").
- * Lleva al cliente a la carta digital del local. Misma para todas las mesas.
- *   /carta/<localSlug>
+ * Convierte un nombre humano en slug seguro para URL.
+ * "Terraza Sur" -> "terraza-sur", "Sala VIP" -> "sala-vip"
+ * Quita acentos, baja a minusculas, sustituye no-alfanumerico por '-'.
  */
-export function buildLocalCartaUrl(localId: string): string {
-    const slug = encodeURIComponent(localId);
-    if (typeof window === 'undefined') return `/carta/${slug}`;
-    return `${window.location.protocol}//${window.location.host}/carta/${slug}`;
+export function slugify(s: string): string {
+    return (s ?? '')
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '') || 'sin-nombre';
 }
 
 /**
- * URL especifica de una mesa (caso avanzado "pedidos por mesa").
- * Mantiene el mismo destino - la carta - pero con el numero como contexto
- * de pedido.
- *   /carta/<localSlug>/<numero>
+ * URL del QR default del local (caso "publicar carta online").
+ * Misma para todas las mesas: lleva a la carta digital del local.
  */
-export function buildMesaUrl(mesa: Mesa): string {
-    const slug = encodeURIComponent(mesa.local_id || 'default');
-    const numero = encodeURIComponent(mesa.numero);
-    const path = `/carta/${slug}/${numero}`;
+export function buildLocalCartaUrl(): string {
+    if (typeof window === 'undefined') return '/carta';
+    return `${window.location.protocol}//${window.location.host}/carta`;
+}
+
+/**
+ * URL especifica de una mesa: /carta/<zona-slug>/mesa-<numero>
+ * Identificativa y amigable. Si no se pasa zona, cae en "sin-zona" como
+ * placeholder seguro (no deberia ocurrir en flujos normales).
+ */
+export function buildMesaUrl(mesa: Mesa, zonaNombre?: string): string {
+    const zonaSlug = slugify(zonaNombre || 'sin-zona');
+    const mesaSlug = `mesa-${slugify(mesa.numero)}`;
+    const path = `/carta/${zonaSlug}/${mesaSlug}`;
     if (typeof window === 'undefined') return path;
     return `${window.location.protocol}//${window.location.host}${path}`;
 }

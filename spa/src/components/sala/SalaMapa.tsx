@@ -158,7 +158,9 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         );
     }
 
-    const cartaUrl = buildLocalCartaUrl(localId);
+    const cartaUrl = buildLocalCartaUrl();
+    const zonaPorId = new Map(resumen.zonas.map(z => [z.id, z]));
+    const zonaDeSelected = selected ? zonaPorId.get(selected.zone_id) : null;
 
     return (
         <div>
@@ -273,10 +275,10 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
                             </div>
                             <div className="sm-field">
                                 <label>URL especifica (modo pedidos por mesa)</label>
-                                <code className="sm-url">{buildMesaUrl(selected)}</code>
+                                <code className="sm-url">{buildMesaUrl(selected, zonaDeSelected?.nombre)}</code>
                                 <button
                                     className="db-btn db-btn--ghost db-btn--sm"
-                                    onClick={() => navigator.clipboard?.writeText(buildMesaUrl(selected))}
+                                    onClick={() => navigator.clipboard?.writeText(buildMesaUrl(selected, zonaDeSelected?.nombre))}
                                     style={{ marginTop: 6 }}
                                 >Copiar</button>
                             </div>

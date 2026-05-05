@@ -56,10 +56,10 @@ export function SalaQrSheet({ localNombre, zonas, mesas, onClose }: Props) {
                                     </div>
                                     <div className="qrsheet-qr">
                                         <QRCodeSVG
-                                            value={buildMesaUrl(m)}
+                                            value={buildMesaUrl(m, zona.nombre)}
                                             size={180}
                                             level="M"
-                                            includeMargin={false}
+                                            marginSize={0}
                                         />
                                     </div>
                                     <div className="qrsheet-card-foot">
