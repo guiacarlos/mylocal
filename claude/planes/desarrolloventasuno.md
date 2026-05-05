@@ -55,20 +55,25 @@ La Fase 1 se redefine. Ya no es solo un creador de cartas digitales, es un **"Di
 
 ---
 
-## 3. Flujo de Onboarding (La Experiencia WOW)
+## 3.1. Flujo de Onboarding (La Experiencia WOW)
 
-Este flujo minimiza los pasos manuales y delega el trabajo pesado a la IA en segundo plano.
+Este flujo minimiza los pasos manuales y delega el trabajo pesado a la IA en segundo plano. Es el **corazón vendible** de la Fase 1: en menos de 10 minutos el hostelero pasa de "no tengo nada" a "carta digital + QRs imprimidos + sala configurada".
 
-- **Paso 1 - Registro Rápido:** Email, Contraseña y Tipo de Negocio.
-- **Paso 2 - Identidad Visual:** Nombre del local y subida de logo. La IA extrae automáticamente la paleta de colores del logo.
-- **Paso 3 - La Magia (Importación):** 
-  - *Opción A (Recomendada):* "Sube una foto de tu carta actual o un PDF y nosotros la montamos por ti". (Inicia proceso OCR en background).
-  - *Opción B:* "Empezar desde cero con ayuda de nuestro asistente".
-- **Paso 4 - Revisión de Platos (Momento WOW 1):** Si usó la Opción A, ve su carta estructurada. Aquí puede aplicar la **"Varita Mágica"** a las fotos subidas, generar descripciones con un clic y ver cómo se **asignan los alérgenos automáticamente**.
-- **Paso 5 - Toque de Venta:** Marca 2 o 3 platos como "Especialidades" para que la IA genere textos persuasivos de micro-promoción.
-- **Paso 6 - Idiomas:** Activa traducciones automáticas (ES/EN/FR/DE) con un solo clic.
-- **Paso 7 - Vista Previa (Momento WOW 2):** Simulación interactiva de móvil. El diseño aplica la paleta de colores extraída en el Paso 2.
-- **Paso 8 - Activación y Material Físico:** Pantalla de éxito donde no solo descarga su QR (en formato display de mesa o pegatina), sino que puede **generar su carta física completa en PDF** eligiendo entre 3 plantillas de impresión profesionales (Minimalista, Clásica o Moderna).
+- **Paso 1 - Registro Rápido:** Email, contraseña, nombre del local y `slug` (validado en vivo). Al confirmar, ya es accesible en `<slug>.mylocal.es`.
+- **Paso 2 - Identidad Visual:** Subida de logo. La IA extrae automáticamente la paleta de colores y la propone como acento del tema.
+- **Paso 3 - Configura tu sala:** Wizard de estancias y mesas (sección 5.4). Presets rápidos: "Solo barra", "Salón + Terraza"... En 30 segundos quedan creadas Z zonas y M mesas con QRs únicos.
+- **Paso 4 - La Magia (Importación de carta):**
+  - *Opción A (Recomendada):* "Sube una foto de tu carta actual o un PDF y nosotros la montamos por ti". (OCR + parse vía Gemini Vision).
+  - *Opción B:* "Empezar desde cero con ayuda del asistente".
+- **Paso 5 - Revisión de Platos (Momento WOW 1):** Carta estructurada con categorías y precios. Aquí aplica la **Varita Mágica** a las fotos, genera descripciones con un clic y ve cómo se **asignan los alérgenos automáticamente**.
+- **Paso 6 - Toque de Venta:** Marca 2-3 platos como "Especialidades" para que la IA genere micro-promociones persuasivas.
+- **Paso 7 - Idiomas:** Activa traducciones automáticas (ES/EN/FR/DE) con un solo clic.
+- **Paso 8 - Tema Visual (Momento WOW 2):** Elige entre 4 temas profesionales (Minimal, Dark, Classic, Premium). Preview en vivo con su propia carta. Botón "Ver como cliente".
+- **Paso 9 - Centro de Impresión:** Pantalla final que genera 3 PDFs:
+  1. Carta física en plantilla Minimalista, Clásica o Moderna.
+  2. Hoja A4 con todos los QRs de las mesas.
+  3. Display de mesa A6 plegable, uno por cada mesa.
+- **Paso 10 - Activación:** "Tu carta digital ya está online en `<slug>.mylocal.es`. Comparte con tu equipo." Botón copiar enlace + WhatsApp share.
 
 ---
 
@@ -107,6 +112,255 @@ Estructura clara orientada al auto-servicio:
 - **Descargas y Códigos QR:** Cómo descargar el QR, generar QRs por mesa, opciones de impresión.
 - **Tu Cuenta y Suscripción:** Gestión de facturación, upgrade a Pro Anual, cancelación.
 - **Glosario Hostelero:** Explicación técnica y sencilla (Qué es Verifactu, Normativa de Alérgenos UE, etc.).
+
+### 5.3. Despliegue Profesional: Hostinger + Cloudflare + Subdominios
+
+Stack productivo: **Hostinger** como hosting (PHP + disco para STORAGE) y
+**Cloudflare** como capa DNS/SSL/cache delante. La razón de tener
+Cloudflare encima de Hostinger no es por velocidad solamente: es para
+poder dar a cada cliente su subdominio (`elbar.mylocal.es`,
+`cafedora.mylocal.es`) sin tocar nada en Hostinger por cada cliente
+nuevo.
+
+#### Arquitectura
+
+```
+Cliente final (móvil escanea QR)
+         │
+         ▼
+elbar.mylocal.es              ←  el subdominio del hostelero
+         │
+         ▼ (DNS y SSL)
+Cloudflare (Wildcard *.mylocal.es)
+         │
+         ▼ (Origin)
+Hostinger (un solo hosting con 1 dominio: mylocal.es)
+         │
+         ▼ (.htaccess + router.php detectan el host)
+PHP carga `local_id = elbar` desde STORAGE/locales/elbar.json
+```
+
+#### Flujo cuando un hostelero contrata el plan
+
+1. Hostelero rellena el formulario de alta y elige `slug` (`elbar`).
+2. Backend valida que `elbar` no choque con palabras reservadas
+   (`admin`, `dashboard`, `api`, `app`, `www`, `mail`, etc.) ni con
+   otro local existente.
+3. Se crea `STORAGE/locales/elbar.json` con sus datos.
+4. Sin tocar Cloudflare ni Hostinger: el wildcard ya cubre el nuevo
+   subdominio. **Es operativo en menos de 1 segundo desde el alta.**
+5. El primer acceso a `elbar.mylocal.es` dispara el bootstrap de su
+   carta vacía y el wizard de onboarding.
+
+#### Configuración de Cloudflare (una sola vez)
+
+1. Añadir `mylocal.es` a Cloudflare como sitio.
+2. Cambiar los nameservers en el registrador (Hostinger panel) a los
+   que indique Cloudflare.
+3. En Cloudflare → DNS:
+   - Registro `A` con nombre `@` apuntando a la IP de Hostinger.
+   - Registro `A` con nombre `*` apuntando a la misma IP. **Proxied (naranja)**.
+4. SSL/TLS → modo **Full (strict)**. Certificado wildcard
+   `*.mylocal.es` automático en el borde de Cloudflare.
+5. Reglas de página:
+   - `*.mylocal.es/*` → cache estática para `/MEDIA/*` y `/assets/*`.
+   - `*.mylocal.es/acide/*` → bypass cache (siempre fresco al backend).
+
+#### Configuración de Hostinger (una sola vez)
+
+1. Subir la carpeta `release/` al `public_html` del dominio raíz.
+2. En el panel: añadir el certificado SSL "Cloudflare Origin Certificate"
+   en el dominio (no Let's Encrypt — entra en conflicto con Cloudflare
+   Full strict).
+3. PHP version ≥ 8.2 con extensiones `openssl`, `curl`, `fileinfo`,
+   `gd`, `mbstring` activas (panel → Advanced → PHP Configuration).
+4. Cron del worker IA a 1 minuto:
+   `php /home/<user>/public_html/axidb/plugins/jobs/worker_run.php`
+
+#### Detección de subdominio en el backend
+
+`router.php` y `spa/server/index.php` extraen el host:
+
+```php
+$host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+if (preg_match('/^([a-z0-9\-]+)\.mylocal\.es$/i', $host, $m)) {
+    define('CURRENT_LOCAL_SLUG', $m[1]);
+}
+// CURRENT_LOCAL_SLUG queda disponible para todo el flujo PHP.
+```
+
+`STORAGE/locales/<slug>.json` se carga al inicio de cada request y se
+añade al objeto `services` que reciben todas las capabilities.
+
+#### Por qué Cloudflare encima de Hostinger (y no solo Hostinger)
+
+- **Wildcard SSL gratis** (Hostinger lo cobra como add-on por dominio).
+- **Onboarding instantáneo de cliente nuevo** sin tocar el panel.
+- **Cache global**: cuando un cliente final escanea el QR en Marbella,
+  los assets le llegan desde el edge más cercano, no de Madrid.
+- **Protección DDoS** sin coste adicional.
+- **Page Rules** para bypass de cache en `/acide/*` (la API debe ir
+  siempre al origen).
+
+---
+
+### 5.4. Gestión de Estancias y Mesas (UX simple, complejo por dentro)
+
+El hostelero verá una pantalla simple: arrastrar mesas dentro de
+"estancias" (Salón, Terraza, Barra, Reservados...). Por dentro
+mantenemos el grafo `local → zonas → mesas` con QR único por mesa.
+
+#### Modelo de datos
+
+```
+STORAGE/locales/<slug>.json
+  └─ información del local
+
+STORAGE/restaurant_zones/<zone_id>.json
+  ├─ id            uuid
+  ├─ local_id      slug del local
+  ├─ nombre        "Salón principal"
+  ├─ orden         entero
+  ├─ icono         emoji o nombre lucide ("door", "tree", etc.)
+  └─ activa        boolean
+
+STORAGE/mesas/<mesa_id>.json
+  ├─ id            uuid
+  ├─ local_id      slug
+  ├─ zone_id       referencia
+  ├─ numero        "1", "T2", "Reservado A"
+  ├─ capacidad     entero
+  ├─ qr_url        URL pública (ej. elbar.mylocal.es/m/abc123)
+  ├─ qr_token      hash único (no adivinable)
+  └─ activa        boolean
+```
+
+#### Flujo del wizard "Configura tu sala"
+
+**Paso 1 - ¿Cuántas estancias tienes?**
+- Botón rápido: "Solo barra", "Solo salón", "Salón + Terraza", "Personalizado".
+- Las primeras 3 opciones crean las zonas en un clic.
+
+**Paso 2 - ¿Cuántas mesas en <Zona>?**
+- Slider visual de 1 a 30 mesas por zona, por defecto 8.
+- Al confirmar, las crea numeradas automáticamente (1, 2, 3...).
+
+**Paso 3 - Personaliza (opcional)**
+- El usuario puede renombrar mesas (por ejemplo `T1`, `T2` para terraza)
+  o cambiar capacidades (mesa familiar de 8 vs barra de 1).
+- Drag & drop para mover mesas entre zonas.
+
+**Paso 4 - Generar QRs**
+- Botón único: "Generar QRs de todas las mesas" → produce un PDF A4
+  con grid 3x4 (12 QRs por hoja) listo para imprimir.
+- Opción adicional: "Display de mesa" (table tent A6 plegable) por
+  cada mesa.
+
+#### Componentes a construir
+
+- `CAPABILITIES/QR/admin/MesasWizard.jsx` - wizard 4 pasos.
+- `CAPABILITIES/QR/admin/MesaCanvas.jsx` - vista canvas con drag&drop.
+- `CAPABILITIES/QR/MesaModel.php` - CRUD de mesas con validación slug.
+- `CAPABILITIES/QR/QrTokenGenerator.php` - genera token no adivinable
+  (`bin2hex(random_bytes(8))`) para cada mesa.
+- `CAPABILITIES/QR/admin/qr-mesas.css` - estilos del canvas.
+
+---
+
+### 5.5. Selector de Temas Visuales (4 estilos profesionales)
+
+El hostelero elige el tema visual de SU carta pública (la que ve el
+cliente final al escanear el QR). Cuatro temas cuidados, no cien
+mediocres.
+
+#### Los 4 temas
+
+| Tema | Identidad | Tipografía | Paleta base |
+|------|-----------|------------|-------------|
+| **Minimal** | Limpio, mucho blanco, foto protagonista | Inter / sans-serif | Blanco + negro + acento del logo |
+| **Dark** | Premium, fondo oscuro, fotos brillan | Outfit / Inter | Negro + dorado + acento |
+| **Classic** | Editorial, taberna, tipografía serif | Playfair / Georgia | Crema + marrón + acento |
+| **Premium** | Lujo, mucho aire, jerarquía tipográfica | Editorial New + Geist | Negro + dorado claro + acento |
+
+Cada tema es un set de variables CSS aplicadas con `[data-theme="..."]`.
+La paleta principal viene del logo del hostelero (extracción automática
+con `PaletteExtractor.php` ya implementado).
+
+#### Almacenamiento
+
+```
+STORAGE/locales/<slug>.json
+  └─ theme_settings:
+      ├─ id           "minimal" | "dark" | "classic" | "premium"
+      ├─ accent       "#C8A96E"  ← extraido del logo o personalizado
+      ├─ font_pair    "default" | "elegant" | "modern"
+      └─ logo_position "header" | "hero"
+```
+
+#### Flujo de selección
+
+1. Pantalla **"Elige el aspecto de tu carta"** con 4 tarjetas grandes,
+   cada una mostrando una preview real de la carta del usuario con ese
+   tema aplicado.
+2. Click → tema activo. Se aplica al instante en `<slug>.mylocal.es`.
+3. Botón "Ver como cliente" abre la carta pública en una pestaña nueva.
+
+#### Componentes a construir
+
+- `CAPABILITIES/CARTA/Themes.php` - definición de los 4 temas con
+  variables CSS por defecto y la lógica para mezclarlas con la paleta
+  del logo.
+- `CAPABILITIES/CARTA/themes/minimal.css`, `dark.css`, `classic.css`,
+  `premium.css` - cada tema en su archivo (≤250 líneas).
+- `CAPABILITIES/CARTA/admin/ThemeSelector.jsx` - UI con previews.
+- `CAPABILITIES/CARTA/admin/ThemePreview.jsx` - mini iframe con la
+  carta pública del usuario aplicando el tema.
+
+---
+
+### 5.6. Impresión Masiva: Carta + QRs en un solo flujo
+
+El hostelero llega al final del onboarding y necesita **material
+físico** para abrir mañana. Una sola pantalla genera:
+
+1. **Carta física en PDF** - 1 plantilla a elegir entre Minimalista,
+   Clásica, Moderna. Incluye foto, descripción, alérgenos, precio.
+   Lista para imprenta.
+2. **QRs por mesa en PDF** - hoja A4 con grid 3x4 (12 QRs), repetida
+   tantas veces como haga falta para cubrir todas las mesas.
+3. **Display de mesa (table tent)** - A6 plegable con QR central y
+   reclamo "Pide y paga desde tu móvil". Uno por cada mesa.
+
+#### Por qué importa para el negocio
+
+Los hosteleros de la competencia (NordQR, Bakarta) hacen que el
+hostelero se busque la vida con la imprenta. Nosotros generamos los
+PDFs listos para llevar a una papelería o imprimir en casa. Eso es
+**activación en 24 horas** vs. semanas.
+
+#### UI de salida
+
+Pantalla `Imprimir material` con tres tarjetas:
+
+```
+┌───────────────────────────┐  ┌───────────────────────────┐  ┌───────────────────────────┐
+│  📋 Carta física          │  │  🔲 QRs por mesa          │  │  🪑 Displays de mesa      │
+│  PDF A4, 4 páginas        │  │  PDF A4, 12 QRs por hoja  │  │  PDF A6 plegable          │
+│  Plantilla: [Minimal ▼]   │  │  24 mesas → 2 hojas       │  │  24 displays              │
+│  [Descargar PDF]          │  │  [Descargar PDF]          │  │  [Descargar PDF]          │
+└───────────────────────────┘  └───────────────────────────┘  └───────────────────────────┘
+```
+
+#### Componentes a construir
+
+- `CAPABILITIES/PDFGEN/admin/PrintCenterPanel.jsx` - las 3 tarjetas.
+- Acción server `generate_qr_sheet` - usa la plantilla
+  `pegatinas_qr.php` ya creada y la rellena con todas las mesas
+  del local actual.
+- Acción server `generate_table_tents` - itera mesas y produce un
+  PDF multi-página con un display por hoja.
+
+---
 
 ---
 
@@ -165,6 +419,131 @@ Estructura clara orientada al auto-servicio:
 - [x] Verificación de tiempos de respuesta: la UI debe responder instantáneamente aunque la IA siga procesando.
 - [x] Cierre definitivo de Fase 1 para proceder a ventas.
 
+### H. Despliegue Hostinger + Cloudflare (operacional)
+
+**H.1 Cloudflare (DNS + SSL + cache)**
+- [ ] Añadir `mylocal.es` a Cloudflare como sitio.
+- [ ] Cambiar nameservers en Hostinger para apuntar a los de Cloudflare.
+- [ ] Esperar a que el cambio propague (status "Active" en Cloudflare).
+- [ ] Crear registro `A @` apuntando a la IP de Hostinger (proxied).
+- [ ] Crear registro `A *` apuntando a la misma IP (proxied) - wildcard.
+- [ ] SSL/TLS modo **Full (strict)**.
+- [ ] Generar Origin Certificate desde Cloudflare → SSL/TLS → Origin Server.
+- [ ] Page Rule: `*.mylocal.es/MEDIA/*` → cache 1 mes.
+- [ ] Page Rule: `*.mylocal.es/assets/*` → cache 1 año (assets versionados).
+- [ ] Page Rule: `*.mylocal.es/acide/*` → bypass cache (siempre origen).
+
+**H.2 Hostinger (origen)**
+- [ ] Subir `release/` al `public_html` del hosting.
+- [ ] Instalar el Origin Certificate de Cloudflare en el dominio.
+- [ ] PHP ≥ 8.2 con extensiones: `openssl`, `curl`, `fileinfo`, `gd`, `mbstring`, `intl`.
+- [ ] Verificar `STORAGE/` y `MEDIA/` con permisos 755 y propiedad del usuario PHP.
+- [ ] Cron a 1 minuto: `php /home/<user>/public_html/axidb/plugins/jobs/worker_run.php`.
+- [ ] Verificar que `health_check` responde 200 desde `https://mylocal.es/acide/index.php`.
+
+**H.3 Detección de subdominio en backend**
+- [ ] Añadir extractor de slug en `router.php` que define `CURRENT_LOCAL_SLUG`.
+- [ ] Replicar la misma lógica en `spa/server/index.php`.
+- [ ] Cargar `STORAGE/locales/<slug>.json` automáticamente en cada request.
+- [ ] Si el slug no existe, redirigir a la landing pública `mylocal.es`.
+- [ ] Test: `curl -H "Host: elbar.mylocal.es" http://localhost:8090/` debe cargar el contexto del local `elbar`.
+
+**H.4 Validador de slugs**
+- [ ] Lista de palabras reservadas: `admin`, `dashboard`, `api`, `app`, `www`, `mail`, `ftp`, `cpanel`, `cdn`, `static`, `assets`, `acide`, `mylocal`, `demo`, `test`, `staging`, `dev`, `panel`, `support`, `help`, `docs`, `blog`, `shop`, `store`.
+- [ ] Regex: `^[a-z][a-z0-9-]{2,30}$` (no empieza por número/guión, longitud 3-31).
+- [ ] Endpoint `validate_slug` que devuelve `{available: bool, reason: string}`.
+- [ ] UI del registro con feedback en vivo: verde/rojo según disponibilidad.
+
+### I. Configuración de Sala (Estancias y Mesas)
+
+**I.1 Modelo de datos**
+- [ ] Crear `CAPABILITIES/QR/MesaModel.php` (CRUD mesa + validaciones).
+- [ ] Crear `CAPABILITIES/QR/ZonaModel.php` (CRUD zona/estancia).
+- [ ] Crear `CAPABILITIES/QR/QrTokenGenerator.php` (`bin2hex(random_bytes(8))` por mesa).
+- [ ] Generar URL pública por mesa: `<slug>.mylocal.es/m/<token>` (más corto que `/mesa/<id>`).
+
+**I.2 Wizard "Configura tu sala"**
+- [ ] Componente `CAPABILITIES/QR/admin/SalaWizard.jsx` (4 pasos).
+- [ ] Paso 1: presets rápidos (Solo barra / Solo salón / Salón+Terraza / Personalizado).
+- [ ] Paso 2: slider de mesas por zona, autonumeración.
+- [ ] Paso 3: drag & drop entre zonas + renombre + capacidad.
+- [ ] Paso 4: confirmación con resumen ("3 zonas, 24 mesas, 24 QRs listos").
+
+**I.3 Vista de gestión continua**
+- [ ] Componente `CAPABILITIES/QR/admin/MesaCanvas.jsx` con vista tipo "mapa de sala".
+- [ ] Acciones por mesa: renombrar, capacidad, mover de zona, regenerar QR, archivar.
+- [ ] Estado en tiempo real: libre / pidiendo / esperando / pagada (cuando exista TPV).
+- [ ] Importar/exportar mesas en CSV (útil para grupos con 50+ mesas).
+
+**I.4 Acciones server**
+- [ ] `create_zona`, `update_zona`, `delete_zona`, `list_zonas`.
+- [ ] `create_mesa_batch` para crear N mesas de una zona en una sola llamada.
+- [ ] `regenerate_mesa_qr` (cambia el token, útil si alguien copió un QR).
+
+### J. Selector de Temas Visuales
+
+**J.1 Definición de temas**
+- [ ] `CAPABILITIES/CARTA/Themes.php` con la definición de los 4 temas
+      (id, nombre, descripción, vars CSS por defecto, fonts cargadas).
+- [ ] `CAPABILITIES/CARTA/themes/minimal.css` (Inter, blanco/negro/acento).
+- [ ] `CAPABILITIES/CARTA/themes/dark.css` (Outfit, negro/dorado/acento).
+- [ ] `CAPABILITIES/CARTA/themes/classic.css` (Playfair, crema/marrón/acento).
+- [ ] `CAPABILITIES/CARTA/themes/premium.css` (Editorial New, lujo).
+
+**J.2 Selector en el dashboard**
+- [ ] `CAPABILITIES/CARTA/admin/ThemeSelector.jsx` con 4 tarjetas grandes.
+- [ ] `CAPABILITIES/CARTA/admin/ThemePreview.jsx` que renderiza un mini
+      iframe con la carta pública del usuario aplicando el tema.
+- [ ] Aplicación del tema activo al instante (sin recarga del backend).
+- [ ] Botón "Ver como cliente" → abre `<slug>.mylocal.es/carta` en nueva pestaña.
+
+**J.3 Carta pública lee tema desde backend**
+- [ ] `CartaPublicaApi.php` devuelve `theme_settings` junto con la carta.
+- [ ] `socola-carta.js` (frontend público) inyecta `<link rel="stylesheet">`
+      al CSS correcto según `theme_settings.id`.
+- [ ] El acento (`--accent`) se sobrescribe con el color extraído del logo
+      del hostelero.
+
+### K. Centro de Impresión (Carta + QRs + Displays)
+
+**K.1 UI agrupada**
+- [ ] `CAPABILITIES/PDFGEN/admin/PrintCenterPanel.jsx` con 3 tarjetas
+      (Carta física / QRs por mesa / Displays de mesa).
+- [ ] Selector de plantilla en cada tarjeta (Minimal/Clásica/Moderna).
+- [ ] Botón "Descargar PDF" que llama al server y baja el archivo.
+- [ ] Indicador de progreso para PDFs grandes (>2 MB).
+
+**K.2 Acciones server nuevas**
+- [ ] `generate_qr_sheet` - PDF A4 con grid 3x4 de TODAS las mesas activas
+      del local actual. Reusa `pegatinas_qr.php` y rellena con la lista
+      real de mesas.
+- [ ] `generate_table_tents` - PDF multi-página, un display A6 por mesa.
+      Reusa `display_mesa.php`.
+- [ ] `generate_full_carta` - ya existe `generate_pdf_carta`. Verificar
+      que respeta el tema activo del local (paleta del logo).
+
+**K.3 Calidad imprenta**
+- [ ] Sangrado de 3mm en todos los PDFs imprimibles.
+- [ ] CMYK opcional vía conversión Imagick (cuando esté disponible).
+- [ ] Marcas de corte en hojas multi-elemento (pegatinas).
+- [ ] Densidad de QR mínima: 38mm para escanear cómodo a distancia.
+
+### L. Multi-tenancy en datos
+
+**L.1 Aislamiento por local**
+- [ ] Cada doc en `STORAGE/carta_categorias/` y `carta_productos/`
+      DEBE tener `local_id`. Filtrar siempre por él en lecturas.
+- [ ] Función `get_current_local_id()` global que combina:
+      a) Subdominio del request (CURRENT_LOCAL_SLUG).
+      b) Selector explícito en el dashboard (`X-Local-Id` header).
+- [ ] Bloquear que un user de un local lea/escriba datos de otro.
+
+**L.2 Switcher de local (para hosteleros con varios)**
+- [ ] `LocalSwitcher.jsx` ya existe — extender para mostrar avatar y
+      enlace directo a `<slug>.mylocal.es`.
+- [ ] Endpoint `list_my_locales` filtrado por usuario autenticado.
+- [ ] Permisos por local (admin del local A no puede tocar local B).
+
 ---
 
 ## 8. Notas de Implementacion
@@ -196,6 +575,11 @@ Estructura clara orientada al auto-servicio:
 - `CAPABILITIES/RECETAS/models/RecetaModel.php` - modelo completo.
 - `CAPABILITIES/RECETAS/public/blog.css` + `BlogFeed.jsx` - feed estilo Instagram.
 - `CAPABILITIES/WEBSCRAPER/RecetaScraper.php` - lectura JSON-LD Schema.org/Recipe.
+
+**Gestión de Identidad y Temas:**
+- `CAPABILITIES/CARTA/Themes.php` - Definición de los 4 temas (Minimal, Dark, Classic, Premium) con sus variables CSS.
+- `CAPABILITIES/CARTA/admin/ThemeSelector.jsx` - UI para previsualizar y guardar el tema.
+- `CORE/core/SubdomainManager.php` - Lógica de detección de `slug` desde la URL para cargar el contexto del local.
 
 **Legales y wiki:**
 - `CAPABILITIES/LEGAL/pages/*.md` - aviso legal, privacidad, cookies, terminos, cuentas, reembolsos.
@@ -332,3 +716,75 @@ Para que el OCR genere texto REAL (y no solo un error claro):
 Para PDFs multipagina hace falta `php-imagick` instalado en el sistema.
 Sin Imagick, los PDFs no se pueden trocear en imagenes. Imagenes
 sueltas (JPG/PNG/WEBP) funcionan sin Imagick.
+
+---
+
+## 10. Ruta Crítica de la Fase 1 (orden de ejecución)
+
+Hay 3 olas de trabajo. Cada ola se cierra por completo antes de pasar a
+la siguiente. Cada ola termina con build verde + commit + push.
+
+### 🌊 OLA 1 — Sala configurable (estancias + mesas + QRs reales)
+
+**Objetivo de negocio:** el hostelero termina el onboarding con TODOS
+sus QRs ya generados, no con uno solo.
+
+Trabajo:
+- Bloque **I** completo (Configuración de Sala).
+- Sub-tareas K.1 y K.2: centro de impresión que genera la hoja de QRs
+  por mesa de verdad.
+
+Resultado vendible: el hostelero puede entrar al dashboard y ver "Mi
+sala: 3 zonas, 24 mesas. Descargar 2 hojas de QRs". Imprime, pone los
+QRs en sus mesas, y ya está operativo en una mañana.
+
+### 🌊 OLA 2 — Tema visual
+
+**Objetivo de negocio:** la carta pública del hostelero tiene
+identidad propia desde el día uno (no parece "una más"). Esto es
+fundamental para el WOW.
+
+Trabajo:
+- Bloque **J** completo (Selector de Temas).
+- Aplicar el tema activo al PDF de la carta (K.3).
+
+Resultado vendible: el hostelero ve su propia carta con 4 estéticas
+distintas y elige la que cuadra con su local. Le quita la barrera de
+"tengo que contratar a un diseñador".
+
+### 🌊 OLA 3 — Despliegue producción Hostinger + Cloudflare
+
+**Objetivo de negocio:** un hostelero real puede contratar y empezar a
+usar el producto en producción.
+
+Trabajo:
+- Bloque **H** completo (Cloudflare + Hostinger + subdominios).
+- Bloque **L** completo (multi-tenancy seguro).
+- Pasos operacionales 8.5 (api key Gemini, Stripe live, datos fiscales
+  reales en legales).
+
+Resultado vendible: la primera venta real. Carta digital del cliente
+en `<slug>.mylocal.es` operativa públicamente.
+
+---
+
+## 11. Reglas de oro de esta Fase 1
+
+Mientras tanto, NO se hace:
+
+- **No se toca** el sistema de auth (`AUTH_LOCK.md` lo blinda con test gate).
+- **No se toca** el flujo OCR (sección 9, blindado con tests).
+- **No se commitean secretos** en `STORAGE/options/` (ya en `.gitignore`).
+- **No se rompe** el límite de 250 líneas por archivo.
+- **No se añade** una capability nueva que no esté en este plan sin
+  consenso explícito.
+
+Cada nueva feature pasa por:
+1. Diseño en este plan con checklist [].
+2. Implementación atomic-by-atomic.
+3. Test gate ampliado si toca auth/OCR/datos.
+4. Build verde antes de commit.
+5. Marcar [x] en el checklist.
+
+Esa disciplina es la que evita que volvamos a perder días depurando
+regresiones.
