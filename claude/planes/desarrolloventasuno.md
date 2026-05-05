@@ -544,6 +544,212 @@ Pantalla `Imprimir material` con tres tarjetas:
 - [ ] Endpoint `list_my_locales` filtrado por usuario autenticado.
 - [ ] Permisos por local (admin del local A no puede tocar local B).
 
+### M. Dashboard completo (zona de gestión del hostelero)
+
+**M.1 Layout y navegación**
+- [ ] `spa/src/pages/Dashboard.tsx` con sidebar fijo + header sticky.
+- [ ] Tabs principales: **Carta** / **Mesas** / **Pedidos** / **Configuración** / **Facturación** / **Cuenta**.
+- [ ] Breadcrumbs en cada subpágina.
+- [ ] Indicador de plan activo (Demo / Pro mensual / Pro anual) siempre visible.
+- [ ] Botón "Ver mi carta pública" → abre `<slug>.mylocal.es/carta` en nueva pestaña.
+
+**M.2 Configuración del local**
+- [ ] Pantalla `Configuración → General`: nombre, logo, slug, tipo de negocio, descripción corta.
+- [ ] Pantalla `Configuración → Identidad`: paleta auto + tema (delegado a bloque J).
+- [ ] Pantalla `Configuración → Idiomas`: switches ES/EN/FR/DE + autotraduce existente.
+- [ ] Pantalla `Configuración → Horarios`: rangos por día de semana (desayuno/almuerzo/cena).
+- [ ] Pantalla `Configuración → Datos fiscales`: NIF, razón social, dirección (necesario para Stripe live).
+- [ ] Pantalla `Configuración → Equipo`: lista de usuarios con roles (admin/editor/sala/cocina/camarero) e invitar nuevos.
+
+**M.3 Vista pedidos en tiempo real (sin TPV completo aún)**
+- [ ] Pantalla `Pedidos`: lista de mesas con estado actual (libre/pidiendo/esperando/pagada).
+- [ ] Filtros por zona y estado.
+- [ ] Click en mesa → detalle del pedido con líneas y totales.
+- [ ] Polling cada 3s o WebSocket si está disponible (futuro).
+
+**M.4 Notificaciones internas**
+- [ ] Componente `NotificationBell.jsx` en el header del dashboard.
+- [ ] Tipos: pedido nuevo, pago recibido, alerta IA (stock bajo, plato sin foto).
+- [ ] Persisten en `STORAGE/notifications/<user_id>/<id>.json`.
+- [ ] Badge con contador de no leídas.
+
+### N. Suscripción, Facturación y Mi Cuenta
+
+**N.1 Mi cuenta**
+- [ ] Pantalla `Cuenta → Perfil`: cambiar email, nombre, foto.
+- [ ] Pantalla `Cuenta → Contraseña`: cambio con verificación de la actual.
+- [ ] Pantalla `Cuenta → Sesiones activas`: dispositivos conectados, botón cerrar sesión remota.
+- [ ] Pantalla `Cuenta → Cerrar cuenta` con doble confirmación (ya documentado en wiki art. 10).
+
+**N.2 Suscripción**
+- [ ] Pantalla `Facturación → Mi plan`: muestra plan actual, próxima renovación, botón cambiar plan.
+- [ ] Comparativa visual Mensual (27€) vs Anual (260€, ahorra 20%).
+- [ ] Acción "Cambiar a anual" con cálculo de prorrateo.
+- [ ] Acción "Cancelar plan" con flujo de retención (motivo de cancelación, oferta de descuento, confirmar).
+- [ ] Cuenta atrás visible para usuarios en demo (días restantes).
+
+**N.3 Facturas**
+- [ ] Pantalla `Facturación → Histórico`: tabla con todas las facturas emitidas.
+- [ ] Botón descargar factura individual en PDF.
+- [ ] Botón descargar año completo en ZIP.
+- [ ] Email automático cuando se emite una factura nueva.
+
+**N.4 Métodos de pago**
+- [ ] Pantalla `Facturación → Métodos de pago`: tarjetas guardadas via Stripe.
+- [ ] Añadir/quitar tarjeta sin pasar por el flujo de checkout completo.
+- [ ] Tarjeta por defecto marcada con badge.
+
+**N.5 Stripe (mock local en esta ola)**
+- [ ] `CAPABILITIES/PAYMENT/StripeAdapter.php` con sandbox keys.
+- [ ] Webhooks recibidos en `/acide/index.php` action `stripe_webhook`.
+- [ ] Persistencia en `STORAGE/billing/<local_id>/...` con factura, plan, método.
+- [ ] **NO live keys hasta la Ola 8**.
+
+### O. Diseño profesional y UX
+
+**O.1 Auditoría pantalla por pantalla**
+- [ ] Hacer captura de cada pantalla del dashboard y compararla con
+      Last.app, Qamarero y Honei. Marcar lo que estamos peor.
+- [ ] Lista de mejoras priorizada por impacto (alto/medio/bajo).
+- [ ] Aplicar las de impacto alto. Documentar las medias para Fase 2.
+
+**O.2 Microcopys revisados**
+- [ ] Ningún botón dice "Submit", "OK" o "Guardar" genérico — usar verbo + objeto ("Crear plato", "Confirmar pago").
+- [ ] Mensajes de error en castellano humano (sin "Error 500"). Si es técnico, esconder detalle y ofrecer "Reintentar" o "Contactar soporte".
+- [ ] Mensajes de éxito breves y celebrativos ("Tu carta está online" en vez de "Operación exitosa").
+
+**O.3 Estados de carga**
+- [ ] Reemplazar spinners genéricos por **skeleton screens** en listas (categorías, productos, pedidos).
+- [ ] Botones con loading inline (texto del botón cambia + spinner pequeño).
+- [ ] Optimistic updates en CRUD: si el usuario crea un plato, aparece inmediatamente en la lista mientras se guarda en background.
+
+**O.4 Consistencia visual**
+- [ ] Auditoría de uso de variables CSS: ningún color literal `#XXXXXX` en componentes.
+- [ ] Auditoría de tipografía: 4 tamaños máximo, 3 weights máximo en todo el dashboard.
+- [ ] Auditoría de espaciado: solo valores del sistema (`--db-gap-*`).
+
+**O.5 Animaciones y micro-interacciones**
+- [ ] Transiciones en tabs, modales, dropdowns (max 150ms, ease-out).
+- [ ] Feedback táctil en clics importantes (botón se hunde 1px).
+- [ ] Sin animaciones decorativas (no parallax, no efectos llamativos).
+
+### P. Responsive (mobile + tablet + desktop)
+
+**P.1 Audit por breakpoint**
+- [ ] Cada pantalla del dashboard probada en **375px** (iPhone SE).
+- [ ] Cada pantalla probada en **768px** (iPad portrait).
+- [ ] Cada pantalla probada en **1280px** (laptop estándar).
+- [ ] Sin scroll horizontal en ningún tamaño.
+
+**P.2 Touch targets**
+- [ ] Botones e iconos clicables ≥ **44px** de altura en móvil.
+- [ ] Tap targets con padding suficiente (no botones pegados).
+- [ ] Inputs con altura ≥ 44px en móvil para evitar zoom auto de iOS.
+
+**P.3 Sidebar y navegación**
+- [ ] En móvil el sidebar se oculta detrás de un botón hamburguesa.
+- [ ] El header pasa a sticky con info crítica condensada.
+- [ ] Tabs internas se hacen scroll horizontal en pantallas estrechas.
+
+**P.4 Tablas y formularios**
+- [ ] Tablas largas → cards apiladas en móvil (no scroll horizontal).
+- [ ] Formularios → labels arriba (no a la izquierda) en móvil.
+- [ ] Modales → bottom-sheet en móvil, centrados en desktop.
+
+**P.5 Pruebas con clientes finales reales**
+- [ ] 3-4 testers (no técnicos) escanean QR de mesa con su móvil real.
+- [ ] Tiempo medio para añadir un plato al carrito y "pagar" (mock): < 60s.
+- [ ] Tiempo de carga de la carta pública (red 3G simulada): < 3s.
+
+### Q. SEO y carta pública optimizada
+
+**Q.1 Meta tags por subdominio**
+- [ ] `<title>` dinámico: "Carta de [Nombre del local] - MyLocal".
+- [ ] `<meta description>` con descripción del local + 3 platos destacados.
+- [ ] `<meta property="og:image">` con foto del logo o foto destacada.
+- [ ] `<link rel="canonical">` apuntando a `<slug>.mylocal.es/carta`.
+
+**Q.2 Schema.org structured data**
+- [ ] `Restaurant` schema con dirección, teléfono, horarios.
+- [ ] `Menu` schema con `MenuSection` por categoría y `MenuItem` por plato.
+- [ ] Validar con Google Rich Results Test (debe parsear sin errores).
+
+**Q.3 Sitemap y robots**
+- [ ] `sitemap.xml` dinámico que lista todos los subdominios activos
+      (uno por local).
+- [ ] `robots.txt` permite indexación de cartas públicas, prohíbe
+      `/dashboard`, `/sistema`, `/acide`.
+
+**Q.4 Performance (Web Vitals)**
+- [ ] **LCP** (Largest Contentful Paint) < 2.5s en mobile 3G.
+- [ ] **CLS** (Cumulative Layout Shift) < 0.1.
+- [ ] **INP** (Interaction to Next Paint) < 200ms.
+- [ ] Lighthouse mobile score ≥ 90 en una carta real.
+
+**Q.5 Pre-carga inteligente**
+- [ ] `<link rel="preload">` para fuentes locales.
+- [ ] Imágenes `loading="lazy"` excepto las del primer viewport.
+- [ ] WebP/AVIF cuando el navegador los soporta.
+
+### R. Agnosticismo del código (rutas relativas, no absolutas)
+
+**R.1 Auditoría de rutas absolutas**
+- [ ] grep `'/acide/` en todo `spa/src/` → todas via `SynaxisClient.apiUrl`
+      (configurable, no hardcoded).
+- [ ] grep `'/MEDIA/` en JSX → ninguna ruta absoluta directa, todas
+      relativas (`./MEDIA/`) o servidas vía router.
+- [ ] grep `http://` y `https://` → solo URLs externas explícitas
+      (apis de Gemini, Stripe).
+- [ ] No usar `window.location.origin + '/...'` para enlaces internos.
+
+**R.2 Vite base config**
+- [ ] `vite.config.ts` con `base: './'` (relativo) o configurable via
+      `VITE_BASE_PATH` env var.
+- [ ] Build genera `index.html` con `<script src="./assets/...">`
+      (no `/assets/...`).
+- [ ] Verificación: copiar `release/` a un subdirectorio aleatorio y
+      comprobar que carga sin tocar nada.
+
+**R.3 Router compatible con cualquier mount**
+- [ ] HashRouter actual mantiene URLs `/#/dashboard` que funcionan en
+      cualquier ruta.
+- [ ] Probar montar el SPA en `/app/`, `/cliente-x/`, raíz `/`. Tres
+      mounts distintos, mismo build.
+
+**R.4 PHP backend agnóstico**
+- [ ] `router.php` usa `__DIR__` en todos los includes (no rutas absolutas).
+- [ ] No hay paths hardcoded a `/home/<user>/...` en ningún sitio.
+- [ ] Probar mover el `release/` a otra carpeta y arrancar PHP — debe funcionar.
+
+### S. Pre-producción (test e2e local)
+
+**S.1 Test gate ampliado**
+- [ ] `spa/server/tests/test_login.php` cubre login + OCR (ya hecho).
+- [ ] Nuevo `test_dashboard.php` cubre: crear local, configurar mesas,
+      cambiar tema, generar PDFs, gestionar suscripción mock.
+- [ ] Total: > 80 assertions de gate.
+- [ ] Build aborta si cualquiera falla.
+
+**S.2 Pruebas con usuarios reales (en local)**
+- [ ] 3 hosteleros amigos hacen el onboarding completo en local sin ayuda.
+- [ ] Métrica: tiempo medio < 10 minutos del registro al QR descargado.
+- [ ] Métrica: 0 momentos de "no sé qué hacer aquí".
+- [ ] Recoger feedback y aplicar las 3 mejoras más impactantes.
+
+**S.3 Datos de prueba realistas**
+- [ ] Seed de un local "demo" con 30 productos, 5 categorías, 3 zonas, 12 mesas.
+- [ ] Datos limpios, sin Lorem Ipsum.
+
+**S.4 Documentación operativa**
+- [ ] `docs/DEPLOY.md` con el procedimiento exacto para Ola 8.
+- [ ] `docs/RUNBOOK.md` con incidencias frecuentes y cómo resolverlas.
+- [ ] `docs/BACKUP.md` con cómo hacer backup de `STORAGE/` en Hostinger.
+
+**S.5 Plan de rollback**
+- [ ] Si algo falla en producción, qué pasos seguir para volver atrás.
+- [ ] Versionado de releases (git tag por cada despliegue).
+- [ ] Backup automático de `STORAGE/` cada 24h en Hostinger.
+
 ---
 
 ## 8. Notas de Implementacion
@@ -721,50 +927,135 @@ sueltas (JPG/PNG/WEBP) funcionan sin Imagick.
 
 ## 10. Ruta Crítica de la Fase 1 (orden de ejecución)
 
-Hay 3 olas de trabajo. Cada ola se cierra por completo antes de pasar a
-la siguiente. Cada ola termina con build verde + commit + push.
+**Filosofía:** construir TODO en local hasta que el producto sea
+profesional, agnóstico, modular y pulido. Subir a producción es la
+ÚLTIMA ola. Subir antes nos retrasa porque cada bug descubierto en
+producción es 10x más caro de arreglar que en local.
 
-### 🌊 OLA 1 — Sala configurable (estancias + mesas + QRs reales)
+Hay **8 olas** de trabajo. Cada una se cierra completa con build
+verde + commit + push antes de pasar a la siguiente.
 
-**Objetivo de negocio:** el hostelero termina el onboarding con TODOS
-sus QRs ya generados, no con uno solo.
+### 🌊 OLA 1 — Sala configurable (estancias + mesas + QRs)
+
+**Objetivo:** el hostelero configura zonas y mesas en menos de 1 minuto.
 
 Trabajo:
-- Bloque **I** completo (Configuración de Sala).
-- Sub-tareas K.1 y K.2: centro de impresión que genera la hoja de QRs
-  por mesa de verdad.
+- Bloque **I** completo (Estancias + Mesas).
+- Sub-tareas K.1 y K.2 (centro de impresión QRs).
 
-Resultado vendible: el hostelero puede entrar al dashboard y ver "Mi
-sala: 3 zonas, 24 mesas. Descargar 2 hojas de QRs". Imprime, pone los
-QRs en sus mesas, y ya está operativo en una mañana.
+Estado al cerrar la ola: dashboard muestra "Mi sala: 3 zonas, 24 mesas",
+botón "Descargar 2 hojas de QRs" funciona en local.
 
 ### 🌊 OLA 2 — Tema visual
 
-**Objetivo de negocio:** la carta pública del hostelero tiene
-identidad propia desde el día uno (no parece "una más"). Esto es
-fundamental para el WOW.
+**Objetivo:** carta pública con identidad propia, 4 estéticas a elegir.
 
 Trabajo:
 - Bloque **J** completo (Selector de Temas).
 - Aplicar el tema activo al PDF de la carta (K.3).
 
-Resultado vendible: el hostelero ve su propia carta con 4 estéticas
-distintas y elige la que cuadra con su local. Le quita la barrera de
-"tengo que contratar a un diseñador".
+Estado al cerrar la ola: el hostelero previsualiza su carta en los 4
+temas y aplica uno con un clic.
 
-### 🌊 OLA 3 — Despliegue producción Hostinger + Cloudflare
+### 🌊 OLA 3 — Dashboard completo y zona del cliente
 
-**Objetivo de negocio:** un hostelero real puede contratar y empezar a
-usar el producto en producción.
+**Objetivo:** el hostelero gestiona TODO desde el dashboard. No
+necesita pedirnos nada por email.
+
+Trabajo:
+- Bloque **M** completo (Dashboard de configuración).
+- Bloque **N** completo (Suscripción + Facturas + Mi Cuenta).
+
+Estado al cerrar la ola: tabs Carta / Mesas / Configuración /
+Facturación funcionan a nivel UI y AxiDB. Sin Stripe live aún (mock
+local con Stripe test).
+
+### 🌊 OLA 4 — Diseño profesional y UX
+
+**Objetivo:** el producto se ve profesional y compite visualmente con
+Last.app y Qamarero.
+
+Trabajo:
+- Bloque **O** completo (auditoría de cada pantalla del dashboard).
+- Microcopys revisados, mensajes de error humanos, estados de carga
+  con esqueletos.
+- Cumplimiento estricto de `artifacts/skilldashboard.md` y
+  `artifacts/skilldiseno.md`.
+
+Estado al cerrar la ola: cada pantalla pasa la regla "si lo enseño en
+una demo a un cliente real, no me da vergüenza".
+
+### 🌊 OLA 5 — Responsive completo (mobile + tablet + desktop)
+
+**Objetivo:** funciona perfecto en móvil. No es un afterthought.
+
+Trabajo:
+- Bloque **P** completo (audit responsive de cada pantalla).
+- Tres breakpoints validados: 375px, 768px, 1280px.
+- Touch targets ≥ 44px en móvil.
+- Carta pública mobile-first verificada con clientes finales reales
+  (3-4 testers escaneando QR con móvil real).
+
+Estado al cerrar la ola: cualquier pantalla funciona y se ve bien en
+los 3 anchos.
+
+### 🌊 OLA 6 — SEO + carta pública optimizada
+
+**Objetivo:** las cartas públicas se indexan bien y cargan rápido. Es
+gratis tráfico orgánico.
+
+Trabajo:
+- Bloque **Q** completo (meta tags, Schema.org, sitemap, robots,
+  performance).
+- Lighthouse ≥ 90 en mobile para `<slug>.mylocal.es`.
+- Web Vitals: LCP < 2.5s, CLS < 0.1, INP < 200ms.
+
+Estado al cerrar la ola: una carta pública pasa el Lighthouse audit
+con score ≥ 90 en mobile.
+
+### 🌊 OLA 7 — Agnosticismo y pre-producción (verificación local)
+
+**Objetivo:** el código es agnóstico de servidor — funciona en cualquier
+subdominio, subdirectorio, IP, puerto. Sin rutas absolutas.
+
+Trabajo:
+- Bloque **R** completo (audit agnosticismo).
+- Bloque **S** completo (pre-producción local).
+
+Estado al cerrar la ola: 3 testers reales (no técnicos) hacen el
+onboarding completo en local sin ayuda. Tiempo medio < 10 minutos.
+Test gate ampliado: > 80 assertions cubren todo el dashboard.
+
+### 🌊 OLA 8 — Despliegue producción Hostinger + Cloudflare
+
+**Cuándo se hace:** SOLO cuando las olas 1-7 estén cerradas con [x].
 
 Trabajo:
 - Bloque **H** completo (Cloudflare + Hostinger + subdominios).
 - Bloque **L** completo (multi-tenancy seguro).
-- Pasos operacionales 8.5 (api key Gemini, Stripe live, datos fiscales
-  reales en legales).
+- Configuración de secretos en producción (api keys via panel admin,
+  no commiteadas).
+- Stripe live + datos fiscales reales en legales.
 
-Resultado vendible: la primera venta real. Carta digital del cliente
-en `<slug>.mylocal.es` operativa públicamente.
+Estado al cerrar la ola: la primera venta real. Carta digital del
+cliente operativa en `<slug>.mylocal.es` con todo lo de las olas 1-7
+funcionando en producción.
+
+---
+
+### Anti-patrón a evitar
+
+NO hacer despliegue prematuro a Hostinger por:
+- "Quiero ver cómo se ve en un dominio real"
+- "Quiero enseñárselo a alguien"
+- "Quiero probar Cloudflare"
+
+Eso son tentaciones. La forma de "verlo en un dominio real" es:
+1. Levantar `php -S 0.0.0.0:8090` en local.
+2. Editar `hosts` para mapear `elbar.mylocal.es` a `127.0.0.1`.
+3. Probar el comportamiento de subdominio sin tocar Cloudflare.
+
+Así desarrollamos contra el escenario real **sin desplegar**.
 
 ---
 
