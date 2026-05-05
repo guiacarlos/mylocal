@@ -153,40 +153,17 @@ function data_all(string $collection): array
 }
 
 /* ════════════════════════════ Sanitización ════════════════════════════ */
+/* AUTH LOCK — la logica canonica vive en CAPABILITIES/LOGIN/LoginSanitize.php */
+
+require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginSanitize.php';
 
 /** Normaliza un id: solo alfanumérico, guiones, subrayados. Previene path traversal. */
-function s_id(string $v): string
-{
-    $v = preg_replace('/[^a-zA-Z0-9_\-]/', '', $v) ?? '';
-    if ($v === '' || str_contains($v, '..')) {
-        throw new RuntimeException('Identificador inválido');
-    }
-    return $v;
-}
-
-function s_str(?string $v, int $max = 2000): string
-{
-    $v = (string) ($v ?? '');
-    $v = str_replace(["\0"], '', $v);
-    if (mb_strlen($v) > $max) $v = mb_substr($v, 0, $max);
-    return trim($v);
-}
-
-function s_email(?string $v): string
-{
-    $v = strtolower(trim((string) ($v ?? '')));
-    if (!filter_var($v, FILTER_VALIDATE_EMAIL)) {
-        throw new RuntimeException('Email inválido');
-    }
-    if (strlen($v) > 254) throw new RuntimeException('Email demasiado largo');
-    return $v;
-}
-
+function s_id(string $v): string                  { return \Login\LoginSanitize::id($v); }
+function s_str(?string $v, int $max = 2000): string { return \Login\LoginSanitize::str($v, $max); }
+function s_email(?string $v): string              { return \Login\LoginSanitize::email($v); }
 function s_int($v, int $min = PHP_INT_MIN, int $max = PHP_INT_MAX): int
 {
-    $i = (int) $v;
-    if ($i < $min || $i > $max) throw new RuntimeException('Número fuera de rango');
-    return $i;
+    return \Login\LoginSanitize::int($v, $min, $max);
 }
 
 /* ════════════════════════════ Sesión / Auth ════════════════════════════ */
@@ -202,53 +179,19 @@ function session_cookie_opts(int $ttl): array
     ];
 }
 
+/* AUTH LOCK — la logica canonica vive en CAPABILITIES/LOGIN/LoginSessions.php
+   y CAPABILITIES/LOGIN/LoginRoles.php. */
+require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginSessions.php';
+require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginRoles.php';
+
 function current_user(): ?array
 {
-    // Auth bearer-only: el token viaja en Authorization: Bearer <token>.
-    // No usamos cookies. El cliente guarda el token en sessionStorage.
-    $token = '';
-    $hdr = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
-    if (preg_match('/^Bearer\s+([A-Za-z0-9_\-]+)$/', $hdr, $m)) {
-        $token = $m[1];
-    }
-    if ($token === '') return null;
-
-    $session = data_get('sessions', $token);
-    if (!$session) return null;
-    if (!empty($session['expiresAt']) && strtotime($session['expiresAt']) < time()) {
-        // Limpieza perezosa.
-        data_delete('sessions', $token);
-        return null;
-    }
-
-    // Fingerprint básico: si el user-agent cambia drásticamente, invalida.
-    $uaStored = $session['ua_hash'] ?? null;
-    $uaNow = hash('sha256', (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''));
-    if ($uaStored && $uaStored !== $uaNow) {
-        data_delete('sessions', $token);
-        return null;
-    }
-
-    $user = data_get('users', (string) ($session['userId'] ?? ''));
-    if (!$user) return null;
-    unset($user['password_hash']);
-    return $user;
+    return \Login\LoginSessions::resolve();
 }
 
-/**
- * Exige rol autenticado. Si no hay usuario → 401. Si rol no permitido → 403.
- */
 function require_role(?array $user, array $allowed): void
 {
-    if (!$user) {
-        http_response_code(401);
-        resp(false, null, 'Unauthorized');
-    }
-    $role = strtolower((string) ($user['role'] ?? ''));
-    if (!in_array($role, array_map('strtolower', $allowed), true)) {
-        http_response_code(403);
-        resp(false, null, 'Forbidden: rol insuficiente');
-    }
+    \Login\LoginRoles::require($user, $allowed);
 }
 
 /* ════════════════════════════ CSRF ════════════════════════════ */
@@ -293,32 +236,14 @@ function validate_csrf_or_die(): void
 /**
  * Contador por minuto en archivo plano. `scope` permite tener buckets
  * distintos (login, ia, pagos).
+ *
+ * AUTH LOCK — la logica canonica vive en CAPABILITIES/LOGIN/LoginRateLimit.php
  */
+require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginRateLimit.php';
+
 function rl_check(string $scope, int $limitPerMinute): void
 {
-    if ($limitPerMinute <= 0) return;
-    $ip = preg_replace('/[^0-9a-fA-F:.]/', '_', (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0')) ?: 'unknown';
-    $dir = DATA_ROOT . '/_rl/' . s_id($scope);
-    if (!is_dir($dir)) mkdir($dir, 0755, true);
-    $file = $dir . '/' . $ip . '.json';
-
-    $now = time();
-    $window = $now - ($now % 60);
-    $state = ['window' => $window, 'count' => 0];
-    if (file_exists($file)) {
-        $raw = file_get_contents($file);
-        $parsed = json_decode($raw, true);
-        if (is_array($parsed)) {
-            $state = ($parsed['window'] ?? 0) === $window ? $parsed : $state;
-        }
-    }
-    $state['count'] = ((int) $state['count']) + 1;
-    file_put_contents($file, json_encode($state), LOCK_EX);
-
-    if ($state['count'] > $limitPerMinute) {
-        http_response_code(429);
-        resp(false, null, 'Rate limit: demasiadas peticiones');
-    }
+    \Login\LoginRateLimit::check($scope, $limitPerMinute);
 }
 
 /* ════════════════════════════ HTTP helper ════════════════════════════ */

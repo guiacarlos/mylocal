@@ -134,12 +134,38 @@ generaban HTTP 500 silenciosos.
 
 ## 3. Archivos load-bearing (los que tocas con MUCHO cuidado)
 
+> **Desde la migracion a `CAPABILITIES/LOGIN/` (2026-05-05)**: la logica de
+> autenticacion vive en una capability bloqueada. Los archivos de
+> `spa/server/` que aparecen abajo son ahora **dispatchers delgados** que
+> delegan en `\Login\LoginCapability` y sus clases internas. Esto reduce
+> drasticamente la superficie load-bearing en `spa/server/`. La fuente
+> canonica del flujo y su contrato publico estan en
+> [`CAPABILITIES/LOGIN/README.md`](../CAPABILITIES/LOGIN/README.md).
+
+### 3.a Capability LOGIN (logica canonica)
+
+| Archivo | Funcion | Que rompe si lo tocas mal |
+|---------|---------|---------------------------|
+| `CAPABILITIES/LOGIN/LoginCapability.php` | Fachada publica (login, logout, session, register, resolveUser, requireRole, rateLimit, safe*) | Toda la auth |
+| `CAPABILITIES/LOGIN/LoginPasswords.php` | Argon2id + dummy_hash + policy + needs_rehash | Verificacion de password |
+| `CAPABILITIES/LOGIN/LoginSessions.php` | issue / resolve / revoke bearer + UA fingerprint | Sesion entera |
+| `CAPABILITIES/LOGIN/LoginRoles.php` | requireRole + glob match contra optionsLoginPermissions | Permisos |
+| `CAPABILITIES/LOGIN/LoginRateLimit.php` | rl_check con buckets en STORAGE/data/_rl | Brute-force, abuso |
+| `CAPABILITIES/LOGIN/LoginVault.php` | findByEmail / findById / upsert / patch en data/users | Lookup de usuario |
+| `CAPABILITIES/LOGIN/LoginBootstrap.php` | Auto-seed de los 4 default users | Primer arranque sin users |
+| `CAPABILITIES/LOGIN/LoginSanitize.php` | s_id / s_email / s_str / s_int (path traversal!) | Validacion de input |
+| `CAPABILITIES/OPTIONS/optionsLogin.php` | Defaults no-secretos (TTL, argon2, policy) | Parametros de seguridad |
+| `CAPABILITIES/OPTIONS/optionsLoginRoles.php` | Whitelist de roles validos | Inyeccion de roles |
+| `CAPABILITIES/OPTIONS/optionsLoginPermissions.php` | Mapa role -> [acciones] (uso opcional, glob match) | Granularidad de permisos |
+
+### 3.b Dispatchers delgados en spa/server (delegan en la capability)
+
 | Archivo | Funcion | Que rompe si lo tocas mal |
 |---------|---------|---------------------------|
 | `spa/server/index.php` | Dispatcher | Validacion, CORS, dispatch |
-| `spa/server/handlers/auth.php` | Login/logout/session | El login mismo |
-| `spa/server/lib.php` | current_user, data_*, rl_check | Lectura de Bearer |
-| `spa/server/bin/bootstrap-users.php` | Crea users default | Sin users no entras |
+| `spa/server/handlers/auth.php` | 1-line wrappers a LoginCapability::* + 2 shims CLI | El login mismo |
+| `spa/server/lib.php` | data_*, resp, http_json + shims a Login* | Persistencia + envelope |
+| `spa/server/bin/bootstrap-users.php` | Wrapper de LoginBootstrap::run() (CLI + auto-bootstrap) | Sin users no entras |
 | `spa/src/synaxis/SynaxisClient.ts` | Cliente HTTP | Headers, body parsing |
 | `spa/src/services/auth.service.ts` | Wrapper login/logout | sessionStorage del token |
 | `router.php` (raiz y release/) | Enruta /acide/* | Si apunta mal -> 404 o backend equivocado |
@@ -148,6 +174,11 @@ generaban HTTP 500 silenciosos.
 Estos archivos llevan en su cabecera el bloque `MYLOCAL AUTH LOCK`
 (seccion 6 de este documento). Si lo eliminas o ignoras, te tocara
 volver a depurar el login.
+
+**Regla de oro tras la migracion**: cualquier feature nueva que necesite auth
+**importa `LoginCapability`**, NUNCA toca `spa/server/handlers/auth.php` ni
+`spa/server/lib.php`. Si te ves modificandolos, es signal de que estas
+saltandote la capability; reflexiona antes.
 
 ---
 
