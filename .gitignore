@@ -10,11 +10,31 @@ spa/server/data/ocr_uploads/
 STORAGE/sessions/
 STORAGE/revisions/
 
-# ── Configuración local (API keys, etc.) ───────────────────────
+# ── Configuración con SECRETOS — NO commitear NUNCA ────────────
+# Google escanea repos publicos y REVOCA cualquier key que aparezca
+# (lo aprendimos por las malas el 2026-05-05). Lo unico que se sube
+# son los .example sin valores reales.
+spa/server/config/gemini.json
 spa/server/config/gemini_settings.json
 spa/server/config/revolut.json
 spa/server/config/auth.json
+spa/server/config/cors.json
 config.json
+
+# OPTIONS - source of truth de configuracion (api keys, stripe, etc).
+# Solo se versiona el .example (sin secretos). El .json real queda local.
+STORAGE/options/*.json
+!STORAGE/options/*.example
+release/STORAGE/options/*.json
+!release/STORAGE/options/*.example
+STORAGE/config/agente_settings.json
+release/STORAGE/config/agente_settings.json
+STORAGE/config/gemini_settings.json
+release/STORAGE/config/gemini_settings.json
+release/spa/server/config/gemini.json
+release/spa/server/config/auth.json
+release/spa/server/config/cors.json
+release/spa/server/config/revolut.json
 
 # ── Dependencias ───────────────────────────────────────────────
 node_modules/

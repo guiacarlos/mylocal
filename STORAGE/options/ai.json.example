@@ -1,5 +1,5 @@
 {
-    "api_key": "AIzaSyDza7VLBVnJNg9rBwU3tQcTIjUAxG0A04U",
+    "api_key": "PEGA_TU_API_KEY_AQUI_OBTENLA_EN_https_aistudio_google_com_app_apikey",
     "default_model": "gemini-2.5-flash",
     "vision_model": "gemini-2.5-flash",
     "allowed_models": [
@@ -10,6 +10,6 @@
     "timeout_seconds": 60,
     "rate_limit_per_minute_per_ip": 30,
     "_createdAt": "2026-05-04T12:24:20+00:00",
-    "_updatedAt": "2026-05-04T12:24:20+00:00",
-    "_version": 3
+    "_updatedAt": "2026-05-05T07:30:00+00:00",
+    "_version": 1
 }

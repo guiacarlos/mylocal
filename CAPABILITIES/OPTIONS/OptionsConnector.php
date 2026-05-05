@@ -96,7 +96,20 @@ class OptionsConnector
         if (file_exists($path)) {
             $doc = json_decode((string) @file_get_contents($path), true) ?: [];
         } else {
+            // Si el .json no existe pero si el .example, lo materializa.
+            // El .example tiene placeholders, no secretos reales — es seguro
+            // partir de ahi y que el usuario lo edite.
+            $example = $path . '.example';
             $doc = [];
+            if (file_exists($example)) {
+                $exampleDoc = json_decode((string) @file_get_contents($example), true) ?: [];
+                // Limpiar placeholders del .example (api_key con texto largo no es
+                // una key real). Si el valor parece placeholder lo vacia.
+                if (isset($exampleDoc['api_key']) && stripos($exampleDoc['api_key'], 'PEGA_') !== false) {
+                    $exampleDoc['api_key'] = '';
+                }
+                $doc = $exampleDoc;
+            }
         }
         // Migracion: si el namespace no tiene api_key pero hay legacy, importar.
         if ($ns === 'ai' && empty($doc['api_key'])) {
