@@ -142,6 +142,10 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'create_mesas_batch',   scope: 'server', domain: 'sala', description: 'Wizard paso 2: N mesas en una zona' },
     { action: 'regenerate_mesa_qr',   scope: 'server', domain: 'sala', description: 'Cambia el token QR de la mesa' },
 
+    // ── Local: datos del establecimiento ─────────────────────
+    { action: 'get_local',            scope: 'server', domain: 'local', description: 'Lee datos del local (nombre, telefono, contacto)' },
+    { action: 'update_local',         scope: 'server', domain: 'local', description: 'Actualiza datos del establecimiento' },
+
     // ── Suscripciones SaaS (Revolut) ─────────────────────────
     { action: 'create_subscription',   scope: 'server', domain: 'billing', description: 'Crea orden Revolut + guarda pending' },
     { action: 'activate_subscription', scope: 'server', domain: 'billing', description: 'Verifica pago Revolut + activa plan' },

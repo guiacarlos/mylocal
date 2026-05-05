@@ -125,6 +125,8 @@ const ALLOWED_ACTIONS = [
     'list_mesas', 'create_mesa', 'update_mesa', 'delete_mesa',
     'create_mesas_batch', 'regenerate_mesa_qr',
     'sala_resumen',
+    // Local — datos del establecimiento (nombre, telefono, contacto)
+    'get_local', 'update_local',
     // Suscripciones SaaS
     'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
     // Sistema
@@ -266,6 +268,16 @@ try {
             require_once __DIR__ . '/handlers/sala.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
             resp(true, handle_sala($action, $req, $user));
+
+        case 'get_local':
+            require_once __DIR__ . '/handlers/local.php';
+            // get permitido a cualquier rol con sesion (lo necesita la SPA)
+            resp(true, handle_local($action, $req, $user));
+
+        case 'update_local':
+            require_once __DIR__ . '/handlers/local.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, handle_local($action, $req, $user));
 
         case 'create_subscription':
         case 'activate_subscription':

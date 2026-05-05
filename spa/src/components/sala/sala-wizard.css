@@ -132,6 +132,73 @@
     color: var(--sp-text-muted, #717171);
 }
 
+/* SalaMapa - tarjeta de configuracion del local */
+
+.sm-local-card {
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    background: var(--sp-bg, #fff);
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sm-local-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.sm-local-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sp-text-muted, #717171);
+    min-width: 130px;
+}
+.sm-local-value {
+    flex: 1;
+    text-align: left;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.12s;
+    min-width: 200px;
+}
+.sm-local-value:hover {
+    background: var(--sp-bg-soft, #F8F8F6);
+}
+.sm-local-placeholder {
+    color: var(--sp-text-muted, #717171);
+    font-weight: 400;
+    font-style: italic;
+}
+.sm-local-input {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    border: 1px solid var(--sp-accent-alt, #C8A96E);
+    border-radius: 6px;
+    padding: 6px 8px;
+    background: var(--sp-bg, #fff);
+    outline: none;
+    min-width: 200px;
+}
+.sm-local-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--sp-border, #E5E5E3);
+}
+
 /* SalaMapa */
 
 .sm-header {
@@ -506,4 +573,151 @@
         box-shadow: none;
     }
     .qrsheet-card { border-style: solid; border-color: #ccc; }
+}
+
+/* LocalQrPoster - poster A4 de marketing del QR principal */
+
+.poster-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--sp-bg-soft, #F8F8F6);
+    z-index: 9000;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--sp-bg, #fff);
+    border-bottom: 1px solid var(--sp-border, #E5E5E3);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.poster-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+}
+
+.poster-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 16px auto;
+    padding: 18mm 16mm;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.poster-head { margin-bottom: 14mm; width: 100%; }
+.poster-eyebrow {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--sp-accent-alt, #C8A96E);
+    font-weight: 600;
+    margin-bottom: 6mm;
+}
+.poster-nombre {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: #0F0F0F;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0;
+}
+.poster-tagline {
+    font-size: 18px;
+    color: #4A4A4A;
+    font-style: italic;
+    margin-top: 4mm;
+}
+
+.poster-qr-wrap {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10mm;
+    margin-bottom: 12mm;
+}
+.poster-qr-frame {
+    padding: 14mm;
+    border: 4px solid #0F0F0F;
+    border-radius: 12px;
+    background: #fff;
+}
+.poster-cta {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0F0F0F;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.poster-cta span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #717171;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.poster-foot {
+    width: 100%;
+    border-top: 2px solid #0F0F0F;
+    padding-top: 10mm;
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+}
+.poster-contact--big {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+}
+.poster-contact-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #717171;
+}
+.poster-contact-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0F0F0F;
+    letter-spacing: 0.02em;
+}
+.poster-contact-extras {
+    display: flex;
+    gap: 14mm;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+@media print {
+    @page { size: A4; margin: 0; }
+    body { background: #fff !important; }
+    .poster-toolbar { display: none !important; }
+    .poster-overlay { position: static; background: #fff; overflow: visible; }
+    .poster-page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: avoid;
+    }
 }
