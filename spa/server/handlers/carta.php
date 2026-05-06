@@ -67,7 +67,7 @@ function carta_upload_source(array $files): array
 }
 
 /* ─────────────────────────────────────────────────────────
-   OCR ALL-IN-ONE — upload + extract + parse en una sola llamada
+   OCR ALL-IN-ONE — proxy al AI server, todo el trabajo ocurre allí
 ───────────────────────────────────────────────────────── */
 
 function carta_ocr_import_carta(array $files): array
@@ -81,31 +81,45 @@ function carta_ocr_import_carta(array $files): array
     if (!in_array($ext, $allowed, true)) {
         throw new RuntimeException("Formato no permitido: $ext");
     }
-    $uploadDir = DATA_ROOT . '/ocr_uploads';
-    if (!is_dir($uploadDir)) @mkdir($uploadDir, 0775, true);
-    $dest = $uploadDir . '/' . bin2hex(random_bytes(8)) . '.' . $ext;
-    if (!move_uploaded_file($f['tmp_name'], $dest)) {
-        throw new RuntimeException('Error guardando archivo en servidor');
-    }
 
-    try {
-        require_once CAP_ROOT . '/OCR/OCREngine.php';
-        $extracted = (new \OCR\OCREngine(STORAGE_ROOT_CARTA))->extract($dest);
-        if (!($extracted['success'] ?? false)) {
-            throw new RuntimeException($extracted['error'] ?? 'Error OCR');
-        }
-        require_once CAP_ROOT . '/OCR/OCRParser.php';
-        $parsed = (new \OCR\OCRParser(STORAGE_ROOT_CARTA))->parse($extracted['text']);
-        if (!($parsed['success'] ?? false)) {
-            throw new RuntimeException($parsed['error'] ?? 'Error parsing');
-        }
-        return array_merge($parsed['data'], [
-            '_engine' => ($extracted['engine'] ?? '') . '+' . ($parsed['engine'] ?? ''),
-            '_pages'  => $extracted['pages'] ?? 1,
-        ]);
-    } finally {
-        @unlink($dest);
+    // Resolver endpoint del AI server desde OPTIONS
+    require_once CAP_ROOT . '/OPTIONS/optiosconect.php';
+    $opt      = mylocal_options();
+    $base     = rtrim((string) $opt->get('ai.local_endpoint', ''), '/');
+    $apiKey   = (string) $opt->get('ai.local_api_key', '');
+    if (!$base) throw new RuntimeException('ai.local_endpoint no configurado en OPTIONS');
+
+    // /v1/extract-menu en el mismo host que el endpoint, puerto 8001
+    $url = preg_replace('#(://[^/:]+).*#', '$1:8001/v1/extract-menu', $base);
+
+    // Reenvío multipart directo al AI server (sin guardar archivo en disco)
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => [
+            'file' => new \CURLFile($f['tmp_name'], $f['type'] ?? 'application/octet-stream', $f['name'] ?? 'upload.' . $ext),
+        ],
+        CURLOPT_HTTPHEADER     => ["Authorization: Bearer $apiKey"],
+        CURLOPT_TIMEOUT        => 300,
+        CURLOPT_SSL_VERIFYPEER => false,
+    ]);
+    $body = curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $err  = curl_error($ch);
+    curl_close($ch);
+
+    if ($code !== 200) {
+        throw new RuntimeException("AI server HTTP $code" . ($err ? ": $err" : '') . ' — ' . substr((string)$body, 0, 200));
     }
+    $data = json_decode((string) $body, true);
+    if (!is_array($data) || !($data['success'] ?? false)) {
+        throw new RuntimeException($data['detail'] ?? $data['error'] ?? 'Respuesta inválida del AI server');
+    }
+    return array_merge($data['data'], [
+        '_engine' => $data['engine'] ?? 'ai_server',
+        '_pages'  => $data['pages']  ?? 1,
+    ]);
 }
 
 /* ─────────────────────────────────────────────────────────
