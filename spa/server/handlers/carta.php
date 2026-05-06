@@ -84,13 +84,15 @@ function carta_ocr_import_carta(array $files): array
 
     // Resolver endpoint del AI server desde OPTIONS
     require_once CAP_ROOT . '/OPTIONS/optiosconect.php';
-    $opt      = mylocal_options();
-    $base     = rtrim((string) $opt->get('ai.local_endpoint', ''), '/');
-    $apiKey   = (string) $opt->get('ai.local_api_key', '');
+    $opt    = mylocal_options();
+    $apiKey = (string) $opt->get('ai.local_api_key', '');
+    $base   = rtrim((string) $opt->get('ai.local_endpoint', ''), '/');
     if (!$base) throw new RuntimeException('ai.local_endpoint no configurado en OPTIONS');
 
-    // /v1/extract-menu en el mismo host que el endpoint, puerto 8001
-    $url = preg_replace('#(://[^/:]+).*#', '$1:8001/v1/extract-menu', $base);
+    // local_extract_url permite conexión directa al AI server sin pasar por el proxy
+    // (evita timeouts de OpenResty en PDFs largos). Cae en base/extract-menu si no está.
+    $extractUrl = (string) $opt->get('ai.local_extract_url', '');
+    $url = $extractUrl ?: ($base . '/extract-menu');
 
     // Reenvío multipart directo al AI server (sin guardar archivo en disco)
     $ch = curl_init($url);
