@@ -1,17 +1,11 @@
 /**
- * CartaImportWizard — flujo OCR de 4 pasos:
- *   1. Subir PDF o foto de la carta actual
- *   2. Extraer texto (IA local → Gemini fallback)
- *   3. Estructurar en categorías + productos
- *   4. Revisar e importar
+ * CartaImportWizard — sube PDF o imagen, el servidor extrae y estructura la carta.
  */
 
 import React, { useRef, useState } from 'react';
 import { useSynaxisClient } from '../../hooks/useSynaxis';
 import {
-    uploadCartaSource,
-    ocrExtract,
-    ocrParse,
+    importCartaFromFile,
     type CartaStructured,
 } from '../../services/carta.service';
 
@@ -32,23 +26,9 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
 
     async function process(file: File) {
         try {
-            // Paso 1 — subir archivo
             setStep('extracting');
-            setStatusMsg('Subiendo archivo...');
-            const { file_path } = await uploadCartaSource(file);
-
-            // Paso 2 — OCR
-            setStatusMsg('Leyendo carta con IA...');
-            const extractRes = await ocrExtract(client, file_path);
-            if (!extractRes.success) throw new Error(extractRes.error ?? 'Error OCR');
-            const rawText = (extractRes.data as { text: string }).text;
-
-            // Paso 3 — parsear estructura
-            setStep('parsing');
-            setStatusMsg('Estructurando categorías y precios...');
-            const structured = await ocrParse(client, rawText);
-            if (!structured) throw new Error('No se pudo estructurar la carta');
-
+            setStatusMsg('Procesando carta con IA...');
+            const structured = await importCartaFromFile(file);
             setCarta(structured);
             setStep('review');
         } catch (e: unknown) {

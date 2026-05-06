@@ -148,7 +148,31 @@ export async function uploadCartaSource(file: File): Promise<{ file_path: string
     return json.data;
 }
 
-// ── IA — OCR ──────────────────────────────────────────────────────────────
+// ── IA — OCR all-in-one ───────────────────────────────────────────────────
+
+export async function importCartaFromFile(file: File): Promise<CartaStructured> {
+    let token = '';
+    try { token = sessionStorage.getItem('mylocal_token') ?? ''; } catch (_) { /* incognito */ }
+    if (!token) throw new Error('No hay sesion activa. Inicia sesion primero.');
+
+    const form = new FormData();
+    form.append('action', 'ocr_import_carta');
+    form.append('file', file);
+    const res = await fetch('/acide/index.php', {
+        method: 'POST',
+        credentials: 'omit',
+        headers: { 'Authorization': `Bearer ${token}` },
+        body: form,
+    });
+    const text = await res.text();
+    let json: { success: boolean; data?: CartaStructured; error?: string };
+    try { json = JSON.parse(text); }
+    catch { throw new Error(`Respuesta no JSON del servidor (HTTP ${res.status})`); }
+    if (!json.success || !json.data) throw new Error(json.error ?? 'Error procesando carta');
+    return json.data as CartaStructured;
+}
+
+// ── IA — OCR pasos individuales (uso interno / diagnóstico) ───────────────
 
 export async function ocrExtract(client: SynaxisClient, file_path: string) {
     return client.execute({ action: 'ocr_extract', data: { file_path } });

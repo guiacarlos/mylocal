@@ -36,6 +36,7 @@ function handle_carta(string $action, array $req, array $files = []): array
         case 'ai_traducir':               return carta_traducir($req);
         case 'importar_carta_estructurada': return carta_importar($req);
         case 'generate_pdf_carta':        return carta_generate_pdf($req);
+        case 'ocr_import_carta':          return carta_ocr_import_carta($files);
         default: throw new RuntimeException("Acción de carta no reconocida: $action");
     }
 }
@@ -63,6 +64,48 @@ function carta_upload_source(array $files): array
         throw new RuntimeException('Error guardando archivo en servidor');
     }
     return ['file_path' => $dest, 'filename' => $filename, 'ext' => $ext];
+}
+
+/* ─────────────────────────────────────────────────────────
+   OCR ALL-IN-ONE — upload + extract + parse en una sola llamada
+───────────────────────────────────────────────────────── */
+
+function carta_ocr_import_carta(array $files): array
+{
+    $f = $files['file'] ?? $files['source'] ?? null;
+    if (!$f || ($f['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+        throw new RuntimeException('No se recibió archivo o error de subida');
+    }
+    $allowed = ['jpg', 'jpeg', 'png', 'webp', 'pdf'];
+    $ext = strtolower(pathinfo($f['name'] ?? '', PATHINFO_EXTENSION));
+    if (!in_array($ext, $allowed, true)) {
+        throw new RuntimeException("Formato no permitido: $ext");
+    }
+    $uploadDir = DATA_ROOT . '/ocr_uploads';
+    if (!is_dir($uploadDir)) @mkdir($uploadDir, 0775, true);
+    $dest = $uploadDir . '/' . bin2hex(random_bytes(8)) . '.' . $ext;
+    if (!move_uploaded_file($f['tmp_name'], $dest)) {
+        throw new RuntimeException('Error guardando archivo en servidor');
+    }
+
+    try {
+        require_once CAP_ROOT . '/OCR/OCREngine.php';
+        $extracted = (new \OCR\OCREngine(STORAGE_ROOT_CARTA))->extract($dest);
+        if (!($extracted['success'] ?? false)) {
+            throw new RuntimeException($extracted['error'] ?? 'Error OCR');
+        }
+        require_once CAP_ROOT . '/OCR/OCRParser.php';
+        $parsed = (new \OCR\OCRParser(STORAGE_ROOT_CARTA))->parse($extracted['text']);
+        if (!($parsed['success'] ?? false)) {
+            throw new RuntimeException($parsed['error'] ?? 'Error parsing');
+        }
+        return array_merge($parsed['data'], [
+            '_engine' => ($extracted['engine'] ?? '') . '+' . ($parsed['engine'] ?? ''),
+            '_pages'  => $extracted['pages'] ?? 1,
+        ]);
+    } finally {
+        @unlink($dest);
+    }
 }
 
 /* ─────────────────────────────────────────────────────────
