@@ -23,7 +23,7 @@ function handle_carta(string $action, array $req, array $files = []): array
     // Las acciones IA llaman a Gemini. Pueden tardar mas de 30s con cartas
     // grandes (PDFs multipagina, textos largos). Subimos el limite a 180s
     // solo para este handler. PHP por defecto trae max_execution_time=30.
-    @set_time_limit(180);
+    @set_time_limit(360);
 
     switch ($action) {
         case 'upload_carta_source':        return carta_upload_source($files);
