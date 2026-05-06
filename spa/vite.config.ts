@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 // PHP backend para llamadas API (/acide/...)
-const API_TARGET = process.env.SOCOLA_API || 'http://127.0.0.1:8090';
+const API_TARGET = process.env.SOCOLA_API || 'http://127.0.0.1:8091';
 
 // Carpeta raiz de medios del proyecto (fuera de /spa)
 const MEDIA_ROOT = path.resolve(process.cwd(), '..', 'MEDIA');

@@ -1,7 +1,7 @@
 /**
  * CartaImportWizard — flujo OCR de 4 pasos:
  *   1. Subir PDF o foto de la carta actual
- *   2. Extraer texto (Gemini Vision)
+ *   2. Extraer texto (IA local → Gemini fallback)
  *   3. Estructurar en categorías + productos
  *   4. Revisar e importar
  */
@@ -57,26 +57,34 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
         }
     }
 
-    /**
-     * Convierte errores tecnicos (Gemini quota, fetch failed, etc) en mensajes
-     * accionables para el hostelero.
-     */
     function humanizeError(e: unknown): string {
         const raw = e instanceof Error ? e.message : String(e);
         const lower = raw.toLowerCase();
+
+        // Ambos motores fallaron: IA local + Gemini
+        if (lower.includes('ia local') && lower.includes('gemini')) {
+            const isQuota = lower.includes('429') || lower.includes('quota');
+            return isQuota
+                ? 'El servidor IA local no responde y Gemini tiene la cuota agotada. Comprueba que el servidor en ai.miaplic.com este en marcha.'
+                : 'El servidor IA local no responde y Gemini tampoco pudo procesar el archivo. Comprueba el estado del servidor o intentalo de nuevo.';
+        }
+        // Solo Gemini con rate limit (IA local no configurada)
         if (lower.includes('429') || lower.includes('quota') || lower.includes('exceeded')) {
-            return 'La IA esta saturada por exceso de uso. Espera unos minutos e intentalo de nuevo, o contacta con soporte si el limite se mantiene.';
+            return 'Gemini ha alcanzado su limite de uso. Comprueba que el servidor IA local (ai.miaplic.com) este en marcha, o espera unos minutos.';
+        }
+        // PDF sin conversor instalado
+        if (lower.includes('poppler') || lower.includes('imagick') || lower.includes('ghostscript')) {
+            return 'El servidor no tiene instalado el conversor de PDF. Instala poppler-utils o sube la carta como imagen (JPG/PNG).';
         }
         if (lower.includes('network') || lower.includes('failed to fetch') || lower.includes('econnrefused')) {
             return 'No se pudo conectar con el servidor. Comprueba tu conexion e intentalo de nuevo.';
         }
         if (lower.includes('timeout') || lower.includes('timed out')) {
-            return 'La IA tardo demasiado en responder. Vuelve a intentarlo con una imagen mas pequena o un PDF mas corto.';
+            return 'La IA tardo demasiado en responder. Prueba con una imagen mas pequena o un PDF mas corto.';
         }
         if (lower.includes('500') || lower.includes('internal server')) {
-            return 'El servidor tuvo un fallo procesando tu carta. Intenta con otra imagen o PDF; si persiste, contacta con soporte.';
+            return 'El servidor tuvo un fallo. Intenta con otra imagen o PDF; si persiste, contacta con soporte.';
         }
-        // Mensaje crudo solo si es informativo (corto). Si es JSON gigante, recortar.
         if (raw.length > 200) return raw.slice(0, 200) + '…';
         return raw;
     }

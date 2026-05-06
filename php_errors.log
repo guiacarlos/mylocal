@@ -45,3 +45,212 @@ Stack trace:
 [28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'GEMINI' detectada pero DESACTIVADA por el usuario.
 [28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'AGENTE_RESTAURANTE' detectada pero DESACTIVADA por el usuario.
 [28-Apr-2026 19:29:53 UTC] [ACIDE] Capacidad 'QR' detectada pero DESACTIVADA por el usuario.
+[05-May-2026 17:23:30 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:30 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:30 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] [synaxis-server] action=auth_login err=Credenciales invalidas
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] [synaxis-server] action=upload_carta_source err=Formato no permitido: exe
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] [synaxis-server] action=ocr_extract err=API key de Gemini no configurada. Edita CAPABILITIES/OPTIONS o pasa por el panel admin.
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:31 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] [auth] logout user=u_736f636f6c6161
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:32 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:23:53 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:23:53 UTC] ROUTER: Matched /acide/. path=/acide/index.php, server=C:\Users\infoj\Documents\DriveAsir\mylocal/spa/server/index.php
+[05-May-2026 17:28:48 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:48 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:49 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] [synaxis-server] action=auth_login err=Credenciales invalidas
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] [synaxis-server] action=upload_carta_source err=Formato no permitido: exe
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] [synaxis-server] action=ocr_extract err=API key de Gemini no configurada. Edita CAPABILITIES/OPTIONS o pasa por el panel admin.
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] [auth] logout user=u_736f636f6c6161
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:50 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:51 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:28:51 UTC] REQ: POST /acide/index.php (Agent: no-agent)
+[05-May-2026 17:31:12 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT; Windows NT 10.0; es-ES) WindowsPowerShell/5.1.26100.8115)
+[05-May-2026 17:32:00 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:32:01 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:32:29 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:32:29 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:32:29 UTC] [synaxis-server] action=ocr_extract err=API key de Gemini no configurada. Edita spa/server/config/gemini.json y anade tu api_key. Ver: https://makersuite.google.com/app/apikey
+[05-May-2026 17:43:01 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:01 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:06 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:06 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:26 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:41 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:41 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:42 UTC] [synaxis-server] action=ocr_extract err=HTTP 429 : {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:43:55 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:09 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:11 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:44:22 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:07 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 17:47:18 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 21:50:31 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 21:50:31 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 21:50:38 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 21:50:38 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 21:50:40 UTC] [synaxis-server] action=ocr_extract err=HTTP 503 : {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[05-May-2026 22:24:42 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:24:49 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:24:49 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:24:54 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:24:54 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:24:55 UTC] [synaxis-server] action=ocr_extract err=HTTP 429 : {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+[05-May-2026 22:27:25 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[05-May-2026 22:36:10 UTC] [OCREngine] IA local fallo (imagen): HTTP 0 OpenSSL/3.0.15: error:0A000458:SSL routines::tlsv1 unrecognized name: 
+[05-May-2026 22:39:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreatetruecolor() in Command line code:3
+Stack trace:
+#0 {main}
+  thrown in Command line code on line 3
+[06-May-2026 05:30:14 UTC] [OCREngine] IA local fallo (imagen): sin respuesta del modelo local
+[06-May-2026 06:14:45 UTC] [OCREngine] no se pudo convertir el PDF a imagenes (instala poppler-utils en el servidor)
+[06-May-2026 06:53:25 UTC] [OCRParser] local_ai fallo: HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 06:56:01 UTC] [OCREngine] IA local fallo (imagen): HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:02:49 UTC] [OCRParser] local_ai fallo: HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:06:10 UTC] [OCREngine] IA local fallo (imagen): HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:12:04 UTC] [OCRParser] local_ai fallo: HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:41:19 UTC] [OCRParser] local_ai fallo: HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:45:19 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:45:20 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:45:32 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:45:32 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:45:48 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:47:18 UTC] [OCRParser] local_ai fallo: HTTP 504 : <html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+[06-May-2026 07:48:49 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)
+[06-May-2026 07:48:49 UTC] REQ: POST /acide/index.php (Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36)

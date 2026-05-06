@@ -6,16 +6,18 @@ echo.
 echo  ---------------------------------------------------
 echo  - MyLocal ? Entorno de Desarrollo Real            -
 echo  - Frontend (Vite): http://localhost:5173         -
-echo  - Backend (PHP):   http://localhost:8090         -
-echo  ---------------------------------------------------
+echo  Backend  (PHP):  http://localhost:8091
+echo  ================================================
 echo.
-echo  [INFO] Los cambios en el c?digo se ver?n INSTANT?NEAMENTE.
-echo  [INFO] No es necesario hacer 'build' hasta el final.
+echo  Los cambios en el codigo se ven INSTANTANEAMENTE.
 echo.
 
-:: 1. Iniciar Backend PHP en segundo plano
-echo  [1/2] Iniciando Backend PHP (Puerto 8090)...
-start "MyLocal-Backend" /min php -S localhost:8090 router.php
+:: Matar procesos anteriores si existen
+taskkill /F /IM php.exe /T > nul 2>&1
+
+:: 1. Backend PHP en segundo plano
+echo  [1/3] Iniciando Backend PHP en puerto 8091...
+start "MyLocal-Backend" /min cmd /c "cd /d %~dp0 && php -S 127.0.0.1:8091 -t . router.php"
 
 :: 2. Iniciar Frontend Vite
 echo  [2/2] Iniciando Frontend React (Puerto 5173)...
