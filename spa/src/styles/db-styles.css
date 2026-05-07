@@ -43,6 +43,23 @@
 .db-ia-dot        { width: 8px; height: 8px; border-radius: 50%; background: var(--sp-accent-alt); animation: db-pulse 1.2s ease-in-out infinite; flex-shrink: 0; }
 @keyframes db-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
+/* Header de revision OCR: subtitulo + acciones a la derecha */
+.db-review-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--sp-border);
+}
+.db-review-actions {
+    flex-shrink: 0;
+    display: flex;
+    gap: 8px;
+}
+
 /* Tabla de resultados OCR */
 .db-result-table  { width: 100%; border-collapse: collapse; font-size: var(--sp-text-sm); }
 .db-result-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--sp-border); font-weight: 600; color: var(--sp-text-soft); font-size: var(--sp-text-xs); text-transform: uppercase; letter-spacing: 0.05em; }

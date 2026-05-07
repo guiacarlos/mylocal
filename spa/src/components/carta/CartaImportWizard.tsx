@@ -158,11 +158,17 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
     // Review
     return (
         <div>
-            <p className="db-card-sub">
-                Se han detectado <strong>{carta!.categorias.length} categorías</strong> y <strong>{totalProductos} productos</strong>.
-                Revisa y confirma la importación.
-            </p>
-            <div style={{ maxHeight: 360, overflowY: 'auto', border: '1px solid var(--sp-border)', borderRadius: 8, marginBottom: 16 }}>
+            <div className="db-review-head">
+                <p className="db-card-sub" style={{ margin: 0 }}>
+                    Se han detectado <strong>{carta!.categorias.length} categorías</strong> y <strong>{totalProductos} productos</strong>.
+                    Revisa y confirma la importación.
+                </p>
+                <div className="db-btn-group db-review-actions">
+                    <button className="db-btn db-btn--ghost" onClick={() => setStep('upload')}>Cancelar</button>
+                    <button className="db-btn db-btn--primary" onClick={handleImport}>Guardar</button>
+                </div>
+            </div>
+            <div style={{ maxHeight: 420, overflowY: 'auto', border: '1px solid var(--sp-border)', borderRadius: 8 }}>
                 <table className="db-result-table">
                     <thead>
                         <tr><th>Producto</th><th>Precio</th></tr>
@@ -183,10 +189,6 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
                         ))}
                     </tbody>
                 </table>
-            </div>
-            <div className="db-btn-group">
-                <button className="db-btn db-btn--primary" onClick={handleImport}>Importar carta</button>
-                <button className="db-btn db-btn--ghost" onClick={() => setStep('upload')}>Cancelar</button>
             </div>
         </div>
     );
