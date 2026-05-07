@@ -47,7 +47,11 @@ class OCREngine
         $text = $this->runTesseract($path);
         if ($text) return ['success' => true, 'text' => $text, 'engine' => 'tesseract'];
 
-        $prompt = 'Lee la imagen y transcribe todo el texto que ves, tal como aparece. Solo el texto.';
+        $prompt = 'Eres un lector de cartas de restaurante. Lee TODA la imagen y transcribe '
+            . 'TODOS los textos que aparecen: nombres de platos, precios, categorías y '
+            . 'descripciones, aunque estén entre imágenes decorativas o fondos de color. '
+            . 'Devuelve solo el texto tal como aparece, un elemento por línea. '
+            . 'No omitas ningún plato ni precio.';
 
         // Motor 2: IA local Gemma 4 vision (llama.cpp).
         $localError = null;

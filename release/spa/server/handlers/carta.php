@@ -68,9 +68,45 @@ function carta_upload_source(array $files): array
 
 /* ─────────────────────────────────────────────────────────
    OCR ALL-IN-ONE
-   Pipeline: Tesseract → Gemma 4 vision (ai.miaplic.com) → Gemini Vision
-   Parser:   Gemma 4 chat (ai.miaplic.com) → Gemini → heurístico
+   Imágenes : Gemma 4 vision → JSON directo (un solo paso)
+   PDFs     : Tesseract → Gemma/Gemini parser
+   Fallback : OCREngine + OCRParser en cascada
 ───────────────────────────────────────────────────────── */
+
+/** Prompt unificado para extracción y estructuración de carta en un solo paso. */
+function carta_menu_vision_prompt(): string
+{
+    return 'Eres un extractor de cartas de restaurante. Analiza esta imagen de menú y devuelve '
+        . 'ÚNICAMENTE un JSON válido con TODOS los platos y precios visibles, incluyendo '
+        . 'los que aparecen entre imágenes decorativas o fondos de color. '
+        . 'Formato exacto sin texto adicional ni markdown: '
+        . '{"categorias":[{"nombre":"NOMBRE_CATEGORIA","productos":'
+        . '[{"nombre":"...","descripcion":"...","precio":0.00}]}]} '
+        . 'Si no hay categorías visibles agrupa todos los platos en una categoría "Carta". '
+        . 'precio es un número decimal sin símbolo de moneda. '
+        . 'No omitas ningún plato ni precio.';
+}
+
+/** Envía imagen a Gemma vision y devuelve la carta como array o null si falla. */
+function carta_vision_direct(string $imagePath, string $ext): ?array
+{
+    require_once CAP_ROOT . '/AI/AIClient.php';
+    if (!\AI\AIClient::isConfigured()) return null;
+
+    $client = \AI\AIClient::fromOptions();
+    $resp   = $client->vision(carta_menu_vision_prompt(), $imagePath, 2000);
+    if (!($resp['success'] ?? false)) return null;
+
+    $text = $client->extractText($resp) ?? '';
+    $text = preg_replace('/^```json\s*|\s*```$/s', '', trim($text));
+    $data = json_decode($text, true);
+
+    if (!is_array($data) || empty($data['categorias'])) {
+        error_log('[carta_ocr] vision_direct: JSON inválido — ' . substr($text, 0, 200));
+        return null;
+    }
+    return array_merge($data, ['_engine' => 'gemma_vision_direct', '_pages' => 1]);
+}
 
 function carta_ocr_import_carta(array $files): array
 {
@@ -84,10 +120,26 @@ function carta_ocr_import_carta(array $files): array
         throw new RuntimeException("Formato no permitido: $ext");
     }
 
+    // Para imágenes: extracción directa Gemma vision → JSON en un solo paso.
+    // Evita la pérdida de información del pipeline OCR-texto → parser separado.
+    if (in_array($ext, ['jpg', 'jpeg', 'png', 'webp'], true)) {
+        $tmp = tempnam(sys_get_temp_dir(), 'ocr_') . '.' . $ext;
+        copy($f['tmp_name'], $tmp);
+        try {
+            $direct = carta_vision_direct($tmp, $ext);
+        } finally {
+            @unlink($tmp);
+        }
+        if ($direct !== null) return $direct;
+        // Si vision_direct falla, continúa al pipeline OCREngine+OCRParser.
+        error_log('[carta_ocr] vision_direct falló — usando OCREngine+OCRParser');
+    }
+
+    // Para PDFs (y fallback de imágenes): OCREngine + OCRParser en cascada.
+    // OCREngine determina el tipo por extensión; tmp_name no la tiene.
     require_once CAP_ROOT . '/OCR/OCREngine.php';
     require_once CAP_ROOT . '/OCR/OCRParser.php';
 
-    // OCREngine determina el tipo por extensión; tmp_name no la tiene.
     $tmp = tempnam(sys_get_temp_dir(), 'ocr_') . '.' . $ext;
     copy($f['tmp_name'], $tmp);
     try {
