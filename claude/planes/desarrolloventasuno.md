@@ -454,31 +454,37 @@ Pantalla `Imprimir material` con tres tarjetas:
 - [ ] Endpoint `validate_slug` que devuelve `{available: bool, reason: string}`.
 - [ ] UI del registro con feedback en vivo: verde/rojo según disponibilidad.
 
-### I. Configuración de Sala (Estancias y Mesas)
+### I. Configuración de Sala (Estancias y Mesas) ✅ OLA 1 CERRADA
 
 **I.1 Modelo de datos**
-- [ ] Crear `CAPABILITIES/QR/MesaModel.php` (CRUD mesa + validaciones).
-- [ ] Crear `CAPABILITIES/QR/ZonaModel.php` (CRUD zona/estancia).
-- [ ] Crear `CAPABILITIES/QR/QrTokenGenerator.php` (`bin2hex(random_bytes(8))` por mesa).
-- [ ] Generar URL pública por mesa: `<slug>.mylocal.es/m/<token>` (más corto que `/mesa/<id>`).
+- [x] Crear `CAPABILITIES/QR/MesaModel.php` (CRUD mesa + validaciones).
+- [x] Crear `CAPABILITIES/QR/ZonaModel.php` (CRUD zona/estancia).
+- [x] Crear `CAPABILITIES/QR/QrTokenGenerator.php` (`bin2hex(random_bytes(8))` por mesa).
+- [x] **Cambio post-feedback**: URL pública por mesa pasa a ser **`/carta/<zona-slug>/mesa-<numero>`** (identificativa y amigable, no token opaco). El token 16-hex se conserva en BD para futuro modo "pedidos por mesa".
 
-**I.2 Wizard "Configura tu sala"**
-- [ ] Componente `CAPABILITIES/QR/admin/SalaWizard.jsx` (4 pasos).
-- [ ] Paso 1: presets rápidos (Solo barra / Solo salón / Salón+Terraza / Personalizado).
-- [ ] Paso 2: slider de mesas por zona, autonumeración.
-- [ ] Paso 3: drag & drop entre zonas + renombre + capacidad.
-- [ ] Paso 4: confirmación con resumen ("3 zonas, 24 mesas, 24 QRs listos").
+**I.2 Bootstrap minimal en lugar de wizard de 4 pasos** (cambio de diseño)
+- [x] **Decision UX post-feedback usuario**: el wizard de presets se descartó porque añadía fricción. En lugar: el server bootstrapea **1 zona "Sala" + 1 mesa "1"** automáticamente la primera vez que se llama a `sala_resumen`.
+- [x] El usuario edita directo: añadir estancias, renombrar inline, borrar.
+- [x] `SalaWizard.tsx` original presets rápidos sigue en código como referencia pero no se monta en el flujo activo.
 
 **I.3 Vista de gestión continua**
-- [ ] Componente `CAPABILITIES/QR/admin/MesaCanvas.jsx` con vista tipo "mapa de sala".
-- [ ] Acciones por mesa: renombrar, capacidad, mover de zona, regenerar QR, archivar.
-- [ ] Estado en tiempo real: libre / pidiendo / esperando / pagada (cuando exista TPV).
-- [ ] Importar/exportar mesas en CSV (útil para grupos con 50+ mesas).
+- [x] Componente `spa/src/components/sala/SalaMapa.tsx` (renombrado de `MesaCanvas.jsx`) con vista por zonas.
+- [x] Acciones por mesa: renombrar, capacidad, regenerar QR, eliminar.
+- [x] Edición inline de zonas: click en nombre para renombrar (Enter/Escape), botón × para borrar (cascada en mesas).
+- [x] Botón "+ Estancia" siempre visible.
+- [ ] Estado en tiempo real (libre/pidiendo/esperando/pagada) — pendiente de TPV completo.
+- [ ] Importar/exportar mesas en CSV — pendiente, no es prioridad para Ola 1.
 
 **I.4 Acciones server**
-- [ ] `create_zona`, `update_zona`, `delete_zona`, `list_zonas`.
-- [ ] `create_mesa_batch` para crear N mesas de una zona en una sola llamada.
-- [ ] `regenerate_mesa_qr` (cambia el token, útil si alguien copió un QR).
+- [x] `create_zona`, `update_zona`, `delete_zona`, `list_zonas`, `reorder_zonas`, `create_zonas_preset`.
+- [x] `create_mesas_batch` para crear N mesas de una zona en una sola llamada.
+- [x] `regenerate_mesa_qr` (cambia el token, útil si alguien copió un QR).
+- [x] `sala_resumen` con bootstrap idempotente.
+
+**I.5 Configuración del establecimiento** (añadido al cerrar Ola 1)
+- [x] `spa/server/handlers/local.php` con CRUD del local (nombre, teléfono, dirección, web, instagram, tagline).
+- [x] Acciones `get_local`, `update_local` registradas en dispatcher.
+- [x] Tarjeta editable inline en `SalaMapa.tsx`: nombre + teléfono + URL pública con botón copiar.
 
 ### J. Selector de Temas Visuales
 
@@ -504,29 +510,27 @@ Pantalla `Imprimir material` con tres tarjetas:
 - [ ] El acento (`--accent`) se sobrescribe con el color extraído del logo
       del hostelero.
 
-### K. Centro de Impresión (Carta + QRs + Displays)
+### K. Centro de Impresión (Carta + QRs + Displays) — parcialmente hecho en Ola 1
 
-**K.1 UI agrupada**
+**K.1 UI agrupada** — pendiente como panel unificado
 - [ ] `CAPABILITIES/PDFGEN/admin/PrintCenterPanel.jsx` con 3 tarjetas
       (Carta física / QRs por mesa / Displays de mesa).
+- [x] **Por separado ya existe**: botón "Imprimir QRs" + "QR principal del local" en `SalaMapa.tsx`.
 - [ ] Selector de plantilla en cada tarjeta (Minimal/Clásica/Moderna).
 - [ ] Botón "Descargar PDF" que llama al server y baja el archivo.
 - [ ] Indicador de progreso para PDFs grandes (>2 MB).
 
-**K.2 Acciones server nuevas**
-- [ ] `generate_qr_sheet` - PDF A4 con grid 3x4 de TODAS las mesas activas
-      del local actual. Reusa `pegatinas_qr.php` y rellena con la lista
-      real de mesas.
-- [ ] `generate_table_tents` - PDF multi-página, un display A6 por mesa.
-      Reusa `display_mesa.php`.
-- [ ] `generate_full_carta` - ya existe `generate_pdf_carta`. Verificar
-      que respeta el tema activo del local (paleta del logo).
+**K.2 Acciones server / generación de QRs**
+- [x] **`generate_qr_sheet` resuelto client-side**: `SalaQrSheet.tsx` con `qrcode.react` genera A4 con grid 2 columnas, agrupado por zona, 1 página por zona. Imprime con `window.print()` (PDF nativo del navegador). **No hay leak de tokens** (vs. la versión antigua que mandaba a `api.qrserver.com`).
+- [x] **`LocalQrPoster.tsx` (extra al plan)**: poster A4 marketing con nombre del local enorme, QR central con frame negro, teléfono prominente, instagram/web si configurados. Pensado para escaparate/barra.
+- [ ] `generate_table_tents` - PDF multi-página, un display A6 por mesa. Reusa `display_mesa.php`.
+- [ ] `generate_full_carta` - ya existe `generate_pdf_carta`. Verificar que respeta el tema activo del local (paleta del logo).
 
 **K.3 Calidad imprenta**
 - [ ] Sangrado de 3mm en todos los PDFs imprimibles.
 - [ ] CMYK opcional vía conversión Imagick (cuando esté disponible).
 - [ ] Marcas de corte en hojas multi-elemento (pegatinas).
-- [ ] Densidad de QR mínima: 38mm para escanear cómodo a distancia.
+- [x] Densidad de QR adecuada: SalaQrSheet usa 180px, LocalQrPoster 420px (cómodo a distancia).
 
 ### L. Multi-tenancy en datos
 
@@ -925,6 +929,75 @@ sueltas (JPG/PNG/WEBP) funcionan sin Imagick.
 
 ---
 
+## 9.6 Iteración 2026-05-05: refactor LOGIN a CAPABILITIES/LOGIN
+
+Tras varias regresiones de auth durante el desarrollo de Ola 1, se
+extrae todo el flujo de login a una capability bloqueada para que las
+features futuras lo importen en lugar de tocar `handlers/auth.php`.
+
+**Estructura**: `CAPABILITIES/LOGIN/` con 8 archivos PHP + README +
+capability.json. Configuración en `CAPABILITIES/OPTIONS/optionsLogin.php`,
+`optionsLoginRoles.php`, `optionsLoginPermissions.php`.
+
+- [x] `LoginCapability` (fachada pública: authenticate, resolveUser, requireRole, logout, rateLimit, safe*).
+- [x] `LoginPasswords` (Argon2id + dummy hash + policy + needs_rehash).
+- [x] `LoginSessions` (issue / resolve / revoke bearer + UA fingerprint).
+- [x] `LoginRoles` (requireRole + glob match contra optionsLoginPermissions).
+- [x] `LoginRateLimit` (rl_check con buckets en STORAGE/data/_rl).
+- [x] `LoginVault` (findByEmail / findById / upsert / patch en data/users).
+- [x] `LoginBootstrap` (auto-seed de los 4 default users).
+- [x] `LoginSanitize` (s_id / s_email / s_str / s_int).
+- [x] `optionsLogin*.php` con defaults no-secretos (TTL, argon2, password policy, roles, permisos).
+- [x] `spa/server/handlers/auth.php` reducido a 4 wrappers de 1 línea + 2 shims CLI (165 → 50 líneas).
+- [x] `spa/server/lib.php` reducido a data/resp/http_json + shims (347 → 120 líneas).
+- [x] `spa/server/bin/bootstrap-users.php` reducido a wrapper de `LoginBootstrap::run()` (65 → 25 líneas).
+- [x] `claude/AUTH_LOCK.md` actualizado con tabla 3.a (capability) + 3.b (dispatchers delgados).
+- [x] Test gate ampliado: 50 → 64 assertions (chequeo de 11 archivos LOGIN/OPTIONS + denegación 403 por rol).
+
+Resultado: cualquier feature nueva importa `\Login\LoginCapability` y no
+toca `auth.php` ni `lib.php`. Las regresiones de login se cierran de raíz.
+
+## 9.7 Iteración 2026-05-05: URLs friendly + BrowserRouter
+
+Tras feedback de uso real, se cambian las URLs del SPA y de los QRs:
+
+- [x] `HashRouter` → `BrowserRouter` en `main.tsx`. URLs limpias (`/dashboard` en vez de `/#/dashboard`).
+- [x] `LoginModal.tsx`: redirección post-login con `window.location.assign` (sin hash).
+- [x] Routes nuevas en App.tsx: `/carta`, `/carta/:zonaSlug`, `/carta/:zonaSlug/:mesaSlug`.
+- [x] `buildLocalCartaUrl()` → `/carta` (QR default del local, todas las mesas comparten URL).
+- [x] `buildMesaUrl(mesa, zonaNombre)` → `/carta/<zona-slug>/mesa-<numero>` (modo avanzado por mesa).
+- [x] `slugify()` en `sala.service.ts` (quita acentos, baja a minúsculas, no-alfanumérico → `-`).
+- [x] `Carta.tsx` reescrita: lee `carta_productos` + `carta_categorias` (era `products` legacy vacío). Muestra nombre del local en header. Empty state amable con link al panel.
+
+## 9.8 Iteración 2026-05-06: pipeline OCR multi-engine + servidor IA propio
+
+GestasAI implementa cascada `Tesseract → Gemma 4 vision → Gemini` en el
+backend, con un servidor propio en `ai.miaplic.com` (llama.cpp + Gemma 4 E2B).
+
+**Arquitectura**:
+- [x] `CAPABILITIES/AI/AIClient.php` — cliente OpenAI-compatible (llama.cpp/vLLM/Ollama).
+- [x] `CAPABILITIES/OCR/OCREngine.php` reescrito con cascada: Tesseract local (≥50 chars) → IA local (`ai.miaplic.com` con Gemma 4) → Gemini cloud (fallback final).
+- [x] Acción server unificada `ocr_import_carta`: upload + OCR + parse en una sola llamada (antes era cadena de 3).
+- [x] `CartaImportWizard.tsx` simplificado: `importCartaFromFile(file)` → backend → JSON estructurado.
+- [x] `humanizeError()` ampliado: detecta "ambos motores fallan", "poppler/imagick falta", 429/quota, network, timeout, 500.
+- [x] `set_time_limit(360s)` en `carta.php` para PDFs largos multi-página.
+- [x] Conexión directa a `local_extract_url` (evita timeout del proxy intermedio).
+- [x] OPTIONS namespace `ai.*` con `local_endpoint`, `local_api_key`, `local_model` (gitignored, en `STORAGE/options/ai.json`).
+
+**Pruebas reales contra `ai.miaplic.com`**:
+- [x] Vision simple: 7-11s por imagen.
+- [x] Extracción JSON estructurada: 17-22s por página.
+- [x] Calidad: 9/9 platos extraídos correctamente con PDF a 1656×2342 px.
+- [x] Calidad imagen baja: 360×360 → modelo no lee (límite físico, no bug). Recomendación de validación frontend pendiente.
+
+## 9.9 Iteración 2026-05-07: UX del review tras OCR
+
+- [x] Botones "Guardar" / "Cancelar" movidos al header del paso review (siempre visibles, no escondidos tras scroll de la tabla).
+- [x] "Importar carta" renombrado a "Guardar" (más claro y consistente).
+- [x] Estilos `.db-review-head` + `.db-review-actions` en `db-styles.css`.
+
+---
+
 ## 10. Ruta Crítica de la Fase 1 (orden de ejecución)
 
 **Filosofía:** construir TODO en local hasta que el producto sea
@@ -1056,6 +1129,50 @@ Eso son tentaciones. La forma de "verlo en un dominio real" es:
 3. Probar el comportamiento de subdominio sin tocar Cloudflare.
 
 Así desarrollamos contra el escenario real **sin desplegar**.
+
+---
+
+## 10.1 Estado actual de las Olas (snapshot 2026-05-07)
+
+| Ola | Bloques | Estado | Notas |
+|---|---|---|---|
+| 🌊 1 — Sala configurable + QRs | I, K.1 (parcial), K.2 | ✅ **CERRADA** | Commits `958ac2b`, `bdcfb29`, `96c726a`, `9cd9e64`, `fa39b7c` en origin/main. Bootstrap minimal (1 zona "Sala" + 1 mesa) en lugar del wizard de presets. URLs friendly `/carta/<zona>/mesa-<n>`. QR sheet por mesas + póster de marca del local. |
+| 🌊 2 — Tema visual (4 estilos) | J | ⏳ **PRÓXIMA** | Pendiente arrancar. Ver bloque J completo. K.3 (tema activo en PDF) entra aquí. |
+| 🌊 3 — Dashboard completo | M, N | 🔴 PENDIENTE | M.2 Configuración del local: parcialmente cubierto por `local.php` (nombre, teléfono). Falta logo, slug, fiscales, equipo, idiomas, horarios. |
+| 🌊 4 — Diseño profesional + UX | O | 🔴 PENDIENTE | Auditoría pantalla por pantalla con captures contra Last.app/Qamarero. |
+| 🌊 5 — Responsive completo | P | 🔴 PENDIENTE | 3 breakpoints: 375 / 768 / 1280 px. |
+| 🌊 6 — SEO + carta pública | Q | 🔴 PENDIENTE | Lighthouse ≥ 90 mobile en `<slug>.mylocal.es`. |
+| 🌊 7 — Agnosticismo + pre-prod | R, S | 🔴 PENDIENTE | Test gate > 80 assertions, 3 testers reales. |
+| 🌊 8 — Despliegue Hostinger + CF | H, L | 🔴 PENDIENTE | El último, según anti-patrón documentado. |
+
+### Trabajo extra fuera del plan original (iteración 2026-05-05/07)
+
+Aparecieron mejoras importantes que no estaban en el roadmap inicial pero
+encajan en la filosofía del proyecto:
+
+- ✅ **Refactor LOGIN a `CAPABILITIES/LOGIN/`** (sección 9.6) — login bloqueado, futuras features no lo tocan.
+- ✅ **`LocalQrPoster`** (extra K.2) — póster A4 de marketing con nombre+teléfono del local.
+- ✅ **URLs friendly + BrowserRouter** (sección 9.7) — `/dashboard` limpio, `/carta/terraza/mesa-10` identificativo.
+- ✅ **Servidor IA propio `ai.miaplic.com`** (sección 9.8) — Gemma 4 E2B vía llama.cpp, eliminando dependencia y cuotas de Gemini.
+- ✅ **Pipeline OCR cascada** (sección 9.8) — Tesseract → Gemma 4 → Gemini fallback.
+- ✅ **UX review con botones en header** (sección 9.9).
+- ✅ **Test gate**: 31 → 50 → 64 assertions, build aborta si rompe.
+
+### Métricas de progreso
+
+- **Olas cerradas**: 1/8 (12.5%)
+- **Olas próximas (siguiente sprint)**: 1 (Ola 2 — Tema visual)
+- **Capabilities activas**: 21 (ver `CAPABILITIES/`)
+- **Test gate actual**: 64/64 PASS contra `release/` y `source/`
+- **Commits en origin/main desde reorganización del plan**: 14
+- **Líneas de código añadidas en última iteración**: ~3500 (LOGIN refactor + sala + IA pipeline + UX)
+
+### Próximas decisiones que necesitan al usuario
+
+1. ¿Arrancamos Ola 2 (4 temas visuales) o pausamos para probar Ola 1 en producción local con mock de hostelero real?
+2. Para Ola 2: ¿los 4 temas son los del plan (Minimal / Dark / Classic / Premium) o ajustamos a 3 más realistas?
+3. `php_errors.log` versionado por error sigue en `origin/main` (señalado a GestasAI). ¿Limpio con `git rm --cached`?
+4. Cuando arrancamos Ola 8 (despliegue), ¿plan i18n (`claude/planes/idiomas.md`) entra antes o después del despliegue?
 
 ---
 
