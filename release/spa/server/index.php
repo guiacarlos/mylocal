@@ -113,7 +113,7 @@ const ALLOWED_ACTIONS = [
     // IA general
     'chat', 'chat_restaurant', 'ask', 'list_models',
     // Carta — IA invisible
-    'upload_carta_source',
+    'upload_carta_source', 'ocr_import_carta',
     'ocr_extract', 'ocr_parse',
     'enhance_image_sync',
     'ai_sugerir_alergenos', 'ai_generar_descripcion', 'ai_generar_promocion', 'ai_traducir',
@@ -235,9 +235,10 @@ try {
             resp(true, handle_reserva($req));
 
         case 'upload_carta_source':
+        case 'ocr_import_carta':
             require_once __DIR__ . '/handlers/carta.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
-            resp(true, handle_carta('upload_carta_source', $req, $_FILES));
+            resp(true, handle_carta($action, $req, $_FILES));
 
         case 'ocr_extract':
         case 'ocr_parse':

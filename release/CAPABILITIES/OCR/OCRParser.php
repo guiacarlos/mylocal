@@ -33,12 +33,50 @@ class OCRParser
         if (!is_string($rawText) || trim($rawText) === '') {
             return ['success' => false, 'error' => 'Texto OCR vacio'];
         }
+
+        // Motor primario: IA local.
+        require_once __DIR__ . '/../AI/AIClient.php';
+        if (\AI\AIClient::isConfigured()) {
+            $r = $this->parseWithLocalAI($rawText, \AI\AIClient::fromOptions());
+            if ($r['success']) return $r;
+        }
+
+        // Fallback: Gemini.
         $cfg = $this->loadConfig();
         if (!empty($cfg['api_key'])) {
             $smart = $this->parseWithGemini($rawText, $cfg);
             if ($smart['success']) return $smart;
         }
+
         return $this->heuristic->parse($rawText);
+    }
+
+    private function parseWithLocalAI(string $text, \AI\AIClient $client): array
+    {
+        $instr = "Eres un parser de cartas de restaurante. Recibes texto OCR de una carta "
+            . "y devuelves UNICAMENTE un JSON valido con esta forma exacta:\n"
+            . '{"categorias":[{"nombre":"...","productos":[{"nombre":"...","descripcion":"...","precio":0.00}]}]}'
+            . "\n\nReglas IMPORTANTES:\n"
+            . "- Devuelve TODAS las categorias y TODOS los productos. NO resumas. NO omitas nada.\n"
+            . "- precio: numero decimal, sin simbolo. Si hay varios precios usa el menor.\n"
+            . "- descripcion: ingredientes o explicacion del plato. Vacia si no hay.\n"
+            . "- Sin texto fuera del JSON. Sin markdown. Sin ```. Solo JSON puro.\n\n"
+            . "Texto OCR:\n" . $text;
+
+        // max_tokens conservador: n_ctx(8192) - estimacion_entrada(~2500) = margen ~5500
+        $resp = $client->chat([['role' => 'user', 'content' => $instr]], 5000);
+        if (!($resp['success'] ?? false)) {
+            error_log('[OCRParser] local_ai fallo: ' . ($resp['error'] ?? ''));
+            return ['success' => false, 'error' => $resp['error'] ?? 'Error IA local'];
+        }
+        $jsonText = $client->extractText($resp) ?? '';
+        $jsonText = preg_replace('/^```json\s*|\s*```$/s', '', trim($jsonText));
+        $parsed   = json_decode($jsonText, true);
+        if (!is_array($parsed) || !isset($parsed['categorias'])) {
+            error_log('[OCRParser] JSON invalido: ' . substr($jsonText, 0, 300));
+            return ['success' => false, 'error' => 'JSON invalido de IA local: ' . substr($jsonText, 0, 200)];
+        }
+        return ['success' => true, 'data' => $parsed, 'engine' => 'local_ai_parser'];
     }
 
     private function parseWithGemini($text, $cfg)

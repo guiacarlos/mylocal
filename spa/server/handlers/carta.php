@@ -67,7 +67,9 @@ function carta_upload_source(array $files): array
 }
 
 /* ─────────────────────────────────────────────────────────
-   OCR ALL-IN-ONE — proxy al AI server, todo el trabajo ocurre allí
+   OCR ALL-IN-ONE
+   Pipeline: Tesseract → Gemma 4 vision (ai.miaplic.com) → Gemini Vision
+   Parser:   Gemma 4 chat (ai.miaplic.com) → Gemini → heurístico
 ───────────────────────────────────────────────────────── */
 
 function carta_ocr_import_carta(array $files): array
@@ -82,45 +84,27 @@ function carta_ocr_import_carta(array $files): array
         throw new RuntimeException("Formato no permitido: $ext");
     }
 
-    // Resolver endpoint del AI server desde OPTIONS
-    require_once CAP_ROOT . '/OPTIONS/optiosconect.php';
-    $opt    = mylocal_options();
-    $apiKey = (string) $opt->get('ai.local_api_key', '');
-    $base   = rtrim((string) $opt->get('ai.local_endpoint', ''), '/');
-    if (!$base) throw new RuntimeException('ai.local_endpoint no configurado en OPTIONS');
+    require_once CAP_ROOT . '/OCR/OCREngine.php';
+    require_once CAP_ROOT . '/OCR/OCRParser.php';
 
-    // local_extract_url permite conexión directa al AI server sin pasar por el proxy
-    // (evita timeouts de OpenResty en PDFs largos). Cae en base/extract-menu si no está.
-    $extractUrl = (string) $opt->get('ai.local_extract_url', '');
-    $url = $extractUrl ?: ($base . '/extract-menu');
-
-    // Reenvío multipart directo al AI server (sin guardar archivo en disco)
-    $ch = curl_init($url);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_POST           => true,
-        CURLOPT_POSTFIELDS     => [
-            'file' => new \CURLFile($f['tmp_name'], $f['type'] ?? 'application/octet-stream', $f['name'] ?? 'upload.' . $ext),
-        ],
-        CURLOPT_HTTPHEADER     => ["Authorization: Bearer $apiKey"],
-        CURLOPT_TIMEOUT        => 300,
-        CURLOPT_SSL_VERIFYPEER => false,
-    ]);
-    $body = curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $err  = curl_error($ch);
-    curl_close($ch);
-
-    if ($code !== 200) {
-        throw new RuntimeException("AI server HTTP $code" . ($err ? ": $err" : '') . ' — ' . substr((string)$body, 0, 200));
+    // OCREngine determina el tipo por extensión; tmp_name no la tiene.
+    $tmp = tempnam(sys_get_temp_dir(), 'ocr_') . '.' . $ext;
+    copy($f['tmp_name'], $tmp);
+    try {
+        $extracted = (new \OCR\OCREngine())->extract($tmp);
+    } finally {
+        @unlink($tmp);
     }
-    $data = json_decode((string) $body, true);
-    if (!is_array($data) || !($data['success'] ?? false)) {
-        throw new RuntimeException($data['detail'] ?? $data['error'] ?? 'Respuesta inválida del AI server');
+    if (!($extracted['success'] ?? false)) {
+        throw new RuntimeException($extracted['error'] ?? 'Error en extracción OCR');
     }
-    return array_merge($data['data'], [
-        '_engine' => $data['engine'] ?? 'ai_server',
-        '_pages'  => $data['pages']  ?? 1,
+    $parsed = (new \OCR\OCRParser())->parse($extracted['text']);
+    if (!($parsed['success'] ?? false)) {
+        throw new RuntimeException($parsed['error'] ?? 'Error parseando carta');
+    }
+    return array_merge($parsed['data'], [
+        '_engine' => $parsed['engine'] ?? 'gemini_fallback',
+        '_pages'  => $extracted['pages'] ?? 1,
     ]);
 }
 

@@ -23,7 +23,7 @@ function handle_carta(string $action, array $req, array $files = []): array
     // Las acciones IA llaman a Gemini. Pueden tardar mas de 30s con cartas
     // grandes (PDFs multipagina, textos largos). Subimos el limite a 180s
     // solo para este handler. PHP por defecto trae max_execution_time=30.
-    @set_time_limit(180);
+    @set_time_limit(360);
 
     switch ($action) {
         case 'upload_carta_source':        return carta_upload_source($files);
@@ -36,6 +36,7 @@ function handle_carta(string $action, array $req, array $files = []): array
         case 'ai_traducir':               return carta_traducir($req);
         case 'importar_carta_estructurada': return carta_importar($req);
         case 'generate_pdf_carta':        return carta_generate_pdf($req);
+        case 'ocr_import_carta':          return carta_ocr_import_carta($files);
         default: throw new RuntimeException("Acción de carta no reconocida: $action");
     }
 }
@@ -63,6 +64,48 @@ function carta_upload_source(array $files): array
         throw new RuntimeException('Error guardando archivo en servidor');
     }
     return ['file_path' => $dest, 'filename' => $filename, 'ext' => $ext];
+}
+
+/* ─────────────────────────────────────────────────────────
+   OCR ALL-IN-ONE
+   Pipeline: Tesseract → Gemma 4 vision (ai.miaplic.com) → Gemini Vision
+   Parser:   Gemma 4 chat (ai.miaplic.com) → Gemini → heurístico
+───────────────────────────────────────────────────────── */
+
+function carta_ocr_import_carta(array $files): array
+{
+    $f = $files['file'] ?? $files['source'] ?? null;
+    if (!$f || ($f['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+        throw new RuntimeException('No se recibió archivo o error de subida');
+    }
+    $allowed = ['jpg', 'jpeg', 'png', 'webp', 'pdf'];
+    $ext = strtolower(pathinfo($f['name'] ?? '', PATHINFO_EXTENSION));
+    if (!in_array($ext, $allowed, true)) {
+        throw new RuntimeException("Formato no permitido: $ext");
+    }
+
+    require_once CAP_ROOT . '/OCR/OCREngine.php';
+    require_once CAP_ROOT . '/OCR/OCRParser.php';
+
+    // OCREngine determina el tipo por extensión; tmp_name no la tiene.
+    $tmp = tempnam(sys_get_temp_dir(), 'ocr_') . '.' . $ext;
+    copy($f['tmp_name'], $tmp);
+    try {
+        $extracted = (new \OCR\OCREngine())->extract($tmp);
+    } finally {
+        @unlink($tmp);
+    }
+    if (!($extracted['success'] ?? false)) {
+        throw new RuntimeException($extracted['error'] ?? 'Error en extracción OCR');
+    }
+    $parsed = (new \OCR\OCRParser())->parse($extracted['text']);
+    if (!($parsed['success'] ?? false)) {
+        throw new RuntimeException($parsed['error'] ?? 'Error parseando carta');
+    }
+    return array_merge($parsed['data'], [
+        '_engine' => $parsed['engine'] ?? 'gemini_fallback',
+        '_pages'  => $extracted['pages'] ?? 1,
+    ]);
 }
 
 /* ─────────────────────────────────────────────────────────
