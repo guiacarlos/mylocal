@@ -17,11 +17,14 @@ interface Props {
 }
 
 type AiOp = 'desc' | 'alerg' | 'promo' | 'enhance';
+type Draft = { nombre: string; descripcion: string; precio: string };
 
 export function CartaProductosPanel({ client, categorias, productos, onProductoUpdated }: Props) {
     const [loading, setLoading] = useState<Record<string, AiOp | null>>({});
     const [msgs, setMsgs] = useState<Record<string, string>>({});
     const [activeEnhanceId, setActiveEnhanceId] = useState<string | null>(null);
+    const [editingId, setEditingId] = useState<string | null>(null);
+    const [editDraft, setEditDraft] = useState<Draft>({ nombre: '', descripcion: '', precio: '' });
     const enhanceRef = useRef<HTMLInputElement>(null);
 
     const getCatNombre = (id: string) => categorias.find(c => c.id === id)?.nombre ?? id;
@@ -37,6 +40,31 @@ export function CartaProductosPanel({ client, categorias, productos, onProductoU
     async function persist(p: CartaProducto, data: Partial<CartaProducto>) {
         await client.execute({ action: 'update', collection: 'carta_productos', id: p.id, data });
         onProductoUpdated({ ...p, ...data });
+    }
+
+    function startEdit(p: CartaProducto) {
+        setEditingId(p.id);
+        setEditDraft({ nombre: p.nombre, descripcion: p.descripcion ?? '', precio: String(p.precio) });
+    }
+
+    function cancelEdit() {
+        setEditingId(null);
+    }
+
+    async function saveEdit(p: CartaProducto) {
+        const precio = parseFloat(editDraft.precio);
+        const data = {
+            nombre: editDraft.nombre.trim(),
+            descripcion: editDraft.descripcion.trim(),
+            precio: isNaN(precio) ? p.precio : precio,
+        };
+        try {
+            await persist(p, data);
+            setEditingId(null);
+            setMsg(p.id, 'Guardado');
+        } catch (e: unknown) {
+            setMsg(p.id, e instanceof Error ? e.message : 'Error al guardar');
+        }
     }
 
     async function handleDesc(p: CartaProducto) {
@@ -118,30 +146,64 @@ export function CartaProductosPanel({ client, categorias, productos, onProductoU
     return (
         <>
             <input type="file" accept="image/*" style={{ display: 'none' }} ref={enhanceRef} onChange={handleEnhanceFile} />
-            {productos.map(p => (
-                <div key={p.id} className="db-list-item" style={{ flexWrap: 'wrap', gap: 8 }}>
-                    <div style={{ minWidth: 200, flex: 1 }}>
-                        <div className="db-list-label">{p.nombre}</div>
-                        <div className="db-list-meta">{getCatNombre(p.categoria_id)} — {p.precio.toFixed(2)} €</div>
-                        {p.descripcion && <div className="db-list-meta" style={{ marginTop: 2 }}>{p.descripcion}</div>}
-                        {msgs[p.id] && <div style={{ fontSize: 'var(--sp-text-xs)', color: '#92651a', marginTop: 4 }}>{msgs[p.id]}</div>}
+            {productos.map(p => {
+                const isEditing = editingId === p.id;
+                return (
+                    <div key={p.id} className="db-list-item" style={{ flexWrap: 'wrap', gap: 8 }}>
+                        {isEditing ? (
+                            <div style={{ flex: 1, minWidth: 200, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                                <input
+                                    className="db-input"
+                                    value={editDraft.nombre}
+                                    placeholder="Nombre"
+                                    onChange={e => setEditDraft(d => ({ ...d, nombre: e.target.value }))}
+                                />
+                                <input
+                                    className="db-input"
+                                    value={editDraft.descripcion}
+                                    placeholder="Descripcion"
+                                    onChange={e => setEditDraft(d => ({ ...d, descripcion: e.target.value }))}
+                                />
+                                <input
+                                    className="db-input"
+                                    value={editDraft.precio}
+                                    placeholder="Precio"
+                                    style={{ maxWidth: 120 }}
+                                    onChange={e => setEditDraft(d => ({ ...d, precio: e.target.value }))}
+                                />
+                                <div className="db-btn-group">
+                                    <button className="db-btn db-btn--primary" onClick={() => saveEdit(p)}>Guardar</button>
+                                    <button className="db-btn db-btn--ghost" onClick={cancelEdit}>Cancelar</button>
+                                </div>
+                            </div>
+                        ) : (
+                            <div style={{ minWidth: 200, flex: 1 }}>
+                                <div className="db-list-label">{p.nombre}</div>
+                                <div className="db-list-meta">{getCatNombre(p.categoria_id)} — {p.precio.toFixed(2)} €</div>
+                                {p.descripcion && <div className="db-list-meta" style={{ marginTop: 2 }}>{p.descripcion}</div>}
+                                {msgs[p.id] && <div style={{ fontSize: 'var(--sp-text-xs)', color: '#92651a', marginTop: 4 }}>{msgs[p.id]}</div>}
+                            </div>
+                        )}
+                        {!isEditing && (
+                            <div className="db-btn-group">
+                                <button className="db-btn db-btn--ghost" onClick={() => startEdit(p)}>Editar</button>
+                                <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handleDesc(p)}>
+                                    {loading[p.id] === 'desc' ? '...' : 'Descripcion'}
+                                </button>
+                                <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handleAlerg(p)}>
+                                    {loading[p.id] === 'alerg' ? '...' : 'Alergenos'}
+                                </button>
+                                <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handlePromo(p)}>
+                                    {loading[p.id] === 'promo' ? '...' : 'Promo'}
+                                </button>
+                                <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => { setActiveEnhanceId(p.id); enhanceRef.current?.click(); }}>
+                                    {loading[p.id] === 'enhance' ? '...' : 'Varita'}
+                                </button>
+                            </div>
+                        )}
                     </div>
-                    <div className="db-btn-group">
-                        <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handleDesc(p)}>
-                            {loading[p.id] === 'desc' ? '...' : 'Descripcion'}
-                        </button>
-                        <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handleAlerg(p)}>
-                            {loading[p.id] === 'alerg' ? '...' : 'Alergenos'}
-                        </button>
-                        <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => handlePromo(p)}>
-                            {loading[p.id] === 'promo' ? '...' : 'Promo'}
-                        </button>
-                        <button className="db-btn db-btn--ghost" disabled={!!loading[p.id]} onClick={() => { setActiveEnhanceId(p.id); enhanceRef.current?.click(); }}>
-                            {loading[p.id] === 'enhance' ? '...' : 'Varita'}
-                        </button>
-                    </div>
-                </div>
-            ))}
+                );
+            })}
         </>
     );
 }
