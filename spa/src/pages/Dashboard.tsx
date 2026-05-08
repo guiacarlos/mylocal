@@ -63,6 +63,14 @@ export function Dashboard() {
         }
     }, [mainTab]);
 
+    // Refresca el local cuando se entra al tab Mesas o al subtab PDF: si el
+    // hostelero cambia el nombre/telefono en otra pestana, el preview lo ve.
+    useEffect(() => {
+        if (mainTab === 'mesas' || (mainTab === 'carta' && cartaTab === 'pdf')) {
+            getLocal(client, LOCAL_ID).then(setLocal).catch(() => {});
+        }
+    }, [mainTab, cartaTab]);
+
     function handleProductoUpdated(updated: CartaProducto) {
         setProductos(prev => prev.map(p => p.id === updated.id ? updated : p));
     }
@@ -153,6 +161,7 @@ export function Dashboard() {
                                 categorias={categorias}
                                 productos={productos}
                                 downloading={pdfLoading}
+                                onLocalChanged={setLocal}
                                 onDownload={async (template, _bgColor) => {
                                     setPdfPlantilla(template);
                                     await handlePdf();

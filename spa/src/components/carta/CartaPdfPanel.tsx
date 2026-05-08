@@ -13,13 +13,14 @@
 import { useState } from 'react';
 import { CartaPreview, type PdfTemplate, type PdfBgColor } from './CartaPreview';
 import type { CartaCategoria, CartaProducto } from '../../services/carta.service';
-import type { LocalInfo } from '../../services/local.service';
+import { uploadLocalImage, type LocalInfo } from '../../services/local.service';
 
 interface Props {
     local: LocalInfo | null;
     categorias: CartaCategoria[];
     productos: CartaProducto[];
     onDownload: (template: PdfTemplate, bgColor: PdfBgColor) => Promise<void> | void;
+    onLocalChanged?: (updated: LocalInfo) => void;
     downloading?: boolean;
 }
 
@@ -37,11 +38,27 @@ const COLORS: Array<{ id: PdfBgColor; nombre: string; swatch: string }> = [
     { id: 'azul',    nombre: 'Azul',    swatch: '#1E3A8A' },
 ];
 
-export function CartaPdfPanel({ local, categorias, productos, onDownload, downloading }: Props) {
+export function CartaPdfPanel({ local, categorias, productos, onDownload, onLocalChanged, downloading }: Props) {
     const [template, setTemplate] = useState<PdfTemplate>('minimalista');
     const [bgColor, setBgColor]   = useState<PdfBgColor>('blanco');
+    const [uploading, setUploading] = useState(false);
 
     const empty = productos.length === 0;
+
+    async function handleUploadImage(file: File) {
+        if (!local?.id) return;
+        setUploading(true);
+        try {
+            const r = await uploadLocalImage(file, local.id);
+            // Actualizar local con la nueva URL para que el preview reaccione al instante
+            onLocalChanged?.({ ...local, imagen_hero: r.url });
+        } catch (e) {
+            const msg = e instanceof Error ? e.message : 'Error subiendo imagen';
+            alert(msg);
+        } finally {
+            setUploading(false);
+        }
+    }
 
     return (
         <div className="db-card">
@@ -98,8 +115,10 @@ export function CartaPdfPanel({ local, categorias, productos, onDownload, downlo
                             local={local}
                             categorias={categorias}
                             productos={productos}
+                            onUploadImage={handleUploadImage}
                         />
                     )}
+                    {uploading && <div className="pdf-uploading">Subiendo imagen…</div>}
                 </div>
             </div>
 

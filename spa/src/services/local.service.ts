@@ -15,6 +15,7 @@ export interface LocalInfo {
     web?: string;
     instagram?: string;
     tagline?: string;
+    imagen_hero?: string;
     updated_at?: string;
 }
 
@@ -42,4 +43,36 @@ export async function updateLocal(
  */
 export function localDisplayName(info?: LocalInfo | null): string {
     return (info?.nombre || '').trim() || 'Mi Local';
+}
+
+/**
+ * Sube una imagen del local (logo/hero) a /MEDIA/local/<id>/. Persiste la
+ * URL relativa en local.imagen_hero y la devuelve para que el cliente
+ * actualice el state inmediatamente.
+ *
+ * Usa multipart fuera de SynaxisClient (igual que uploadCartaSource) porque
+ * fetch nativo es necesario para FormData con File.
+ */
+export async function uploadLocalImage(file: File, localId: string): Promise<{ url: string; local_id: string }> {
+    let token = '';
+    try { token = sessionStorage.getItem('mylocal_token') ?? ''; } catch (_) { /* incognito */ }
+    if (!token) throw new Error('No hay sesion activa.');
+
+    const form = new FormData();
+    form.append('action', 'upload_local_image');
+    form.append('local_id', localId);
+    form.append('file', file);
+
+    const res = await fetch('/acide/index.php', {
+        method: 'POST',
+        credentials: 'omit',
+        headers: { 'Authorization': `Bearer ${token}` },
+        body: form,
+    });
+    const text = await res.text();
+    let json: { success: boolean; data?: { url: string; local_id: string }; error?: string };
+    try { json = JSON.parse(text); }
+    catch { throw new Error(`Respuesta no JSON del servidor (HTTP ${res.status})`); }
+    if (!json.success || !json.data) throw new Error(json.error ?? 'Error subiendo imagen');
+    return json.data;
 }

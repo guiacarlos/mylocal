@@ -24,7 +24,7 @@ require_once __DIR__ . '/../lib.php';
 require_once realpath(__DIR__ . '/../../../CAPABILITIES') . '/LOCALES/LocalModel.php';
 require_once realpath(__DIR__ . '/../../../CAPABILITIES') . '/CARTA/CartaModel.php';
 
-function handle_local(string $action, array $req, ?array $user): array
+function handle_local(string $action, array $req, ?array $user, array $files = []): array
 {
     if (!$user) throw new RuntimeException('Sesion requerida');
     $data = $req['data'] ?? [];
@@ -54,12 +54,66 @@ function handle_local(string $action, array $req, ?array $user): array
             if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'update_local');
             return $r['data'] ?? $r;
 
+        case 'upload_local_image':
+            return local_upload_image($req, $files, $user);
+
         case 'bootstrap_local':
             return local_bootstrap_for_user($user);
 
         default:
             throw new RuntimeException("Accion local no reconocida: $action");
     }
+}
+
+/**
+ * Sube una imagen del local (hero/logo) al directorio MEDIA y persiste la URL
+ * relativa en local.imagen_hero.
+ *
+ * Endpoint multipart: action=upload_local_image, file=<File>, local_id=<id>.
+ * Acepta jpg/jpeg/png/webp. Maximo 5 MB.
+ */
+function local_upload_image(array $req, array $files, array $user): array
+{
+    $localId = (string) ($req['local_id'] ?? $_POST['local_id'] ?? 'l_default');
+    if (!\Locales\LocalModel::userCanAccess($user, $localId)) {
+        throw new RuntimeException('Sin permisos sobre este local');
+    }
+
+    $f = $files['file'] ?? null;
+    if (!$f || ($f['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+        throw new RuntimeException('No se recibio archivo o error de subida');
+    }
+    if (($f['size'] ?? 0) > 5 * 1024 * 1024) {
+        throw new RuntimeException('Imagen demasiado grande (max 5 MB)');
+    }
+
+    $allowed = ['jpg', 'jpeg', 'png', 'webp'];
+    $ext = strtolower(pathinfo($f['name'] ?? '', PATHINFO_EXTENSION));
+    if (!in_array($ext, $allowed, true)) {
+        throw new RuntimeException("Formato no permitido: $ext (jpg/png/webp)");
+    }
+
+    // MEDIA esta en la raiz del proyecto (regla del proyecto, ver CLAUDE.md)
+    $mediaRoot = realpath(__DIR__ . '/../../../MEDIA');
+    if (!$mediaRoot) {
+        $mediaRoot = __DIR__ . '/../../../MEDIA';
+        @mkdir($mediaRoot, 0775, true);
+    }
+    $localDir = $mediaRoot . '/local/' . preg_replace('/[^a-z0-9_\-]/', '', strtolower($localId));
+    if (!is_dir($localDir)) @mkdir($localDir, 0775, true);
+
+    $filename = 'hero_' . bin2hex(random_bytes(4)) . '.' . $ext;
+    $dest = $localDir . '/' . $filename;
+    if (!move_uploaded_file($f['tmp_name'], $dest)) {
+        throw new RuntimeException('Error guardando imagen');
+    }
+
+    // URL publica (servida por router.php / vite serveMediaPlugin)
+    $url = '/MEDIA/local/' . basename($localDir) . '/' . $filename;
+
+    \Locales\LocalModel::update($localId, ['imagen_hero' => $url]);
+
+    return ['url' => $url, 'local_id' => $localId];
 }
 
 /**

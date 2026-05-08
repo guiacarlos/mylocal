@@ -131,6 +131,7 @@ const ALLOWED_ACTIONS = [
     'sala_resumen',
     // Local — datos del establecimiento (multi-local, multi-user)
     'get_local', 'list_my_locales', 'create_local', 'update_local', 'bootstrap_local',
+    'upload_local_image',
     // Suscripciones SaaS
     'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
     // Sistema
@@ -292,6 +293,13 @@ try {
             require_once __DIR__ . '/handlers/local.php';
             // lectura permitida a cualquier rol con sesion (lo necesita la SPA)
             resp(true, handle_local($action, $req, $user));
+
+        case 'upload_local_image':
+            require_once __DIR__ . '/handlers/local.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            // Multipart: $_POST trae action+local_id, $_FILES trae file
+            $req['local_id'] = $req['local_id'] ?? ($_POST['local_id'] ?? '');
+            resp(true, handle_local($action, $req, $user, $_FILES));
 
         case 'create_local':
         case 'update_local':

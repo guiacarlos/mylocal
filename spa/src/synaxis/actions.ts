@@ -148,6 +148,7 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'create_local',         scope: 'server', domain: 'local', description: 'Crea local nuevo (propietario=user actual)' },
     { action: 'update_local',         scope: 'server', domain: 'local', description: 'Actualiza datos del establecimiento' },
     { action: 'bootstrap_local',      scope: 'server', domain: 'local', description: 'Idempotente: crea l_default + carta principal si user no tiene local' },
+    { action: 'upload_local_image',   scope: 'server', domain: 'local', description: 'Sube imagen del local (logo/hero) a /MEDIA/local/' },
 
     // ── Carta CRUD persistente AxiDB (jerarquia local→carta→categoria→producto)
     { action: 'list_cartas',          scope: 'server', domain: 'carta' },

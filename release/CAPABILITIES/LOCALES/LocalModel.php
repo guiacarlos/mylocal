@@ -17,6 +17,7 @@ namespace Locales;
  *   web             string
  *   instagram       string   sin @
  *   tagline         string   subtitulo corto
+ *   imagen_hero     string   URL de imagen principal (logo/foto local)
  *   owner_user_id   string   "u_..."  (propietario unico)
  *   members         array    [{user_id, role}]  equipo (admin/editor/sala/cocina/camarero)
  *   default_carta_id string  "c_..."  cual es la principal
@@ -57,6 +58,7 @@ class LocalModel
             'web'               => trim((string) ($data['web'] ?? '')),
             'instagram'         => ltrim(trim((string) ($data['instagram'] ?? '')), '@'),
             'tagline'           => trim((string) ($data['tagline'] ?? '')),
+            'imagen_hero'       => trim((string) ($data['imagen_hero'] ?? '')),
             'owner_user_id'     => (string) $data['owner_user_id'],
             'members'           => $data['members'] ?? [
                 ['user_id' => $data['owner_user_id'], 'role' => 'admin'],
@@ -101,7 +103,7 @@ class LocalModel
         if (!$existing) return ['success' => false, 'error' => 'Local no encontrado'];
 
         $allowed = ['nombre', 'telefono', 'direccion', 'email', 'web', 'instagram',
-                    'tagline', 'slug', 'default_carta_id', 'members'];
+                    'tagline', 'imagen_hero', 'slug', 'default_carta_id', 'members'];
         $clean = ['updated_at' => date('c')];
         foreach ($allowed as $f) {
             if (array_key_exists($f, $patch)) {
