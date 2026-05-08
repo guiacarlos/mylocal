@@ -168,14 +168,14 @@ export function CartaPreview({ template, bgColor, local, categorias, productos, 
         );
     }
 
-    // ── Plantilla MODERNA: hero con imagen, grid asimetrico
+    // ── Plantilla MODERNA: hero full-width arriba, nombre centrado grande debajo
     const heroSrc = hasOwnImage ? heroUrl : DEFAULT_HERO;
     return (
         <div className={pageClass} {...dataAttrs}>
             <header className="pdf-mod-hero">
                 <button
                     type="button"
-                    className="pdf-image-zone pdf-image-zone--rect"
+                    className="pdf-image-zone pdf-image-zone--banner"
                     onClick={handleImageClick}
                     aria-label={hasOwnImage ? 'Cambiar imagen del local' : 'Subir tu imagen'}
                     title={hasOwnImage ? 'Cambiar imagen' : 'Click para subir tu imagen'}

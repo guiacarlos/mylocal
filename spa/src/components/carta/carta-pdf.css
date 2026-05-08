@@ -202,6 +202,16 @@
 .pdf-image-zone--rect.pdf-image-zone--empty {
     border-style: dashed;
 }
+.pdf-image-zone--banner {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border-style: solid;
+    flex-shrink: 0;
+}
+.pdf-image-zone--banner.pdf-image-zone--empty {
+    border-style: dashed;
+}
 
 /* ══════════════════════════════════════════════════════════════════
    PLANTILLA MINIMALISTA — editorial, dos columnas adaptativas
@@ -400,22 +410,17 @@
 
 .pdf-mod-hero {
     display: flex;
-    gap: 14px;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
     padding-bottom: 14px;
-    border-bottom: 2px solid var(--accent);
     margin-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
     flex-shrink: 0;
 }
 .pdf-mod-hero-text {
-    flex: 1;
-    min-width: 0;
-}
-.pdf-mod-eyebrow {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.25em;
-    color: var(--accent);
+    width: 100%;
 }
 .pdf-mod-hero h1 {
     margin: 4px 0 4px;
@@ -426,9 +431,10 @@
     word-wrap: break-word;
 }
 .pdf-mod-sub {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--muted);
     font-style: italic;
+    margin-top: 2px;
 }
 
 .pdf-mod-grid {
