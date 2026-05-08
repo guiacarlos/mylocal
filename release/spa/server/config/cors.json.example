@@ -19,6 +19,10 @@
         "get_table_order",
         "table_request",
         "revolut_webhook",
-        "csrf_token"
+        "csrf_token",
+        "get_local",
+        "list_cartas",
+        "list_categorias",
+        "list_productos"
     ]
 }

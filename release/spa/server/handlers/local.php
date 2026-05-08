@@ -26,14 +26,21 @@ require_once realpath(__DIR__ . '/../../../CAPABILITIES') . '/CARTA/CartaModel.p
 
 function handle_local(string $action, array $req, ?array $user, array $files = []): array
 {
-    if (!$user) throw new RuntimeException('Sesion requerida');
     $data = $req['data'] ?? [];
 
+    // get_local es publico (la carta digital publica lo necesita sin sesion).
+    // El resto de acciones si exige sesion.
+    if ($action === 'get_local') {
+        $id = (string) ($data['id'] ?? '');
+        if ($id === '') {
+            $id = $user ? local_resolve_default_for_user($user) : 'l_default';
+        }
+        return local_get_or_empty($id);
+    }
+
+    if (!$user) throw new RuntimeException('Sesion requerida');
+
     switch ($action) {
-        case 'get_local':
-            $id = (string) ($data['id'] ?? '');
-            if ($id === '') $id = local_resolve_default_for_user($user);
-            return local_get_or_empty($id);
 
         case 'list_my_locales':
             return ['items' => \Locales\LocalModel::listByUser($user['id'] ?? '')];

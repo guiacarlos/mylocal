@@ -51,6 +51,8 @@ $corsCfg = @load_config_optional('cors') ?? [
         'get_payment_settings', 'get_mesa_settings', 'list_products',
         'process_external_order', 'get_table_order', 'table_request',
         'revolut_webhook',
+        // Carta digital publica: el cliente que escanea el QR lee sin sesion
+        'get_local', 'list_cartas', 'list_categorias', 'list_productos',
     ],
 ];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -245,6 +247,14 @@ try {
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
             resp(true, handle_carta($action, $req, $_FILES));
 
+        // Carta CRUD — LECTURAS publicas (cliente escanea QR sin sesion)
+        case 'list_cartas':
+        case 'list_categorias':
+        case 'list_productos':
+            require_once __DIR__ . '/handlers/carta.php';
+            resp(true, handle_carta($action, $req));
+
+        // Carta CRUD — ESCRITURAS solo admin/editor
         case 'ocr_extract':
         case 'ocr_parse':
         case 'enhance_image_sync':
@@ -254,15 +264,12 @@ try {
         case 'ai_traducir':
         case 'importar_carta_estructurada':
         case 'generate_pdf_carta':
-        case 'list_cartas':
         case 'create_carta':
         case 'update_carta':
         case 'delete_carta':
-        case 'list_categorias':
         case 'create_categoria':
         case 'update_categoria':
         case 'delete_categoria':
-        case 'list_productos':
         case 'create_producto':
         case 'update_producto':
         case 'delete_producto':
