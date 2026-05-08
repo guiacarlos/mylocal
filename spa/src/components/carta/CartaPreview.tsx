@@ -46,11 +46,18 @@ function groupByCategory(categorias: CartaCategoria[], productos: CartaProducto[
     return out;
 }
 
+// Imagenes por defecto: si el hostelero todavia no ha subido la suya,
+// usamos los assets de MyLocal para que la carta se vea espectacular sin
+// que el usuario haga nada. Click en la zona reemplaza por su imagen.
+const DEFAULT_LOGO = '/MEDIA/Iogo.png';
+const DEFAULT_HERO = '/MEDIA/hero.png';
+
 export function CartaPreview({ template, bgColor, local, categorias, productos, onUploadImage }: Props) {
     const nombre = localDisplayName(local);
     const telefono = (local?.telefono ?? '').trim();
     const tagline = (local?.tagline ?? '').trim();
     const heroUrl = (local?.imagen_hero ?? '').trim();
+    const hasOwnImage = heroUrl !== '';
 
     const groups = useMemo(() => groupByCategory(categorias, productos), [categorias, productos]);
     const totalCats = groups.length;
@@ -113,16 +120,18 @@ export function CartaPreview({ template, bgColor, local, categorias, productos, 
 
     // ── Plantilla CLÁSICA: centrada, serif, logo circular, orlas
     if (template === 'clasica') {
+        const logoSrc = hasOwnImage ? heroUrl : DEFAULT_LOGO;
         return (
             <div className={pageClass} {...dataAttrs}>
                 <header className="pdf-cla-head">
                     <button
                         type="button"
-                        className={`pdf-image-zone pdf-image-zone--circle${heroUrl ? '' : ' pdf-image-zone--empty'}`}
+                        className="pdf-image-zone pdf-image-zone--circle"
                         onClick={handleImageClick}
-                        aria-label="Cambiar logo del local"
+                        aria-label={hasOwnImage ? 'Cambiar logo' : 'Subir tu logo'}
+                        title={hasOwnImage ? 'Cambiar logo' : 'Click para subir tu logo'}
                     >
-                        {heroUrl ? <img src={heroUrl} alt="" /> : <span>+ Logo</span>}
+                        <img src={logoSrc} alt="" />
                     </button>
                     <input ref={fileRef} type="file" accept="image/*" hidden onChange={handleFileChange} />
                     <div className="pdf-cla-orla">❦ ❦ ❦</div>
@@ -160,20 +169,21 @@ export function CartaPreview({ template, bgColor, local, categorias, productos, 
     }
 
     // ── Plantilla MODERNA: hero con imagen, grid asimetrico
+    const heroSrc = hasOwnImage ? heroUrl : DEFAULT_HERO;
     return (
         <div className={pageClass} {...dataAttrs}>
             <header className="pdf-mod-hero">
                 <button
                     type="button"
-                    className={`pdf-image-zone pdf-image-zone--rect${heroUrl ? '' : ' pdf-image-zone--empty'}`}
+                    className="pdf-image-zone pdf-image-zone--rect"
                     onClick={handleImageClick}
-                    aria-label="Cambiar imagen del local"
+                    aria-label={hasOwnImage ? 'Cambiar imagen del local' : 'Subir tu imagen'}
+                    title={hasOwnImage ? 'Cambiar imagen' : 'Click para subir tu imagen'}
                 >
-                    {heroUrl ? <img src={heroUrl} alt="" /> : <span>+ Foto</span>}
+                    <img src={heroSrc} alt="" />
                 </button>
                 <input ref={fileRef} type="file" accept="image/*" hidden onChange={handleFileChange} />
                 <div className="pdf-mod-hero-text">
-                    <div className="pdf-mod-eyebrow">CARTA · DIGITAL</div>
                     <h1>{nombre}</h1>
                     {tagline && <div className="pdf-mod-sub">{tagline}</div>}
                 </div>
