@@ -9,12 +9,22 @@ spa/server/data/_rl/
 spa/server/data/ocr_uploads/
 spa/server/data/mesas/
 spa/server/data/zonas/
+spa/server/data/cartas/
+spa/server/data/carta_categorias/
+spa/server/data/carta_productos/
+spa/server/data/locales/
+spa/server/data/local/
 release/spa/server/data/sessions/
 release/spa/server/data/users/
 release/spa/server/data/_rl/
 release/spa/server/data/ocr_uploads/
 release/spa/server/data/mesas/
 release/spa/server/data/zonas/
+release/spa/server/data/cartas/
+release/spa/server/data/carta_categorias/
+release/spa/server/data/carta_productos/
+release/spa/server/data/locales/
+release/spa/server/data/local/
 STORAGE/sessions/
 STORAGE/revisions/
 

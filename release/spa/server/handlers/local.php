@@ -1,89 +1,145 @@
 <?php
 /**
- * local.php - configuracion del establecimiento (local).
+ * local.php - handler de establecimientos (locales).
  *
- * Coleccion: 'local'. Documento unico por id (id == local_id).
+ * Modelo: jerarquia preparada para multi-local / multi-user.
+ *   - Un usuario puede ser propietario de N locales (owner_user_id)
+ *   - Un local puede tener N miembros con distintos roles (members)
+ *   - Un local puede tener N cartas activas (default_carta_id apunta a la principal)
  *
- * Schema:
- *   id          string   slug del local (ej "default", "bar-de-lola")
- *   nombre      string   nombre comercial ("Bar de Lola", "Socola")
- *   telefono    string   "+34 600 000 000"
- *   direccion   string   opcional
- *   email       string   opcional
- *   web         string   opcional
- *   instagram   string   handle sin @ (opcional)
- *   tagline     string   "Cocina mediterranea de mercado" (opcional)
- *   updated_at  string
+ * Persistencia: spa/server/data/locales/<id>.json (AxiDB)
+ * IDs: "l_<16 hex>" — ver CAPABILITIES/LOCALES/LocalModel.php
  *
  * Acciones:
- *   get_local      - lee el local; si no existe devuelve defaults vacios
- *   update_local   - upsert del documento
- *
- * Auth: cualquier rol con sesion. update solo admin/editor.
+ *   get_local        - lee local por id (o el default del usuario)
+ *   list_my_locales  - lista locales accesibles por el usuario actual
+ *   create_local     - crea nuevo local (propietario = usuario actual)
+ *   update_local     - upsert (solo admin/editor del local)
+ *   bootstrap_local  - idempotente: si user no tiene local, crea l_default
  */
 
 declare(strict_types=1);
 
 require_once __DIR__ . '/../lib.php';
-
-const LOCAL_DEFAULT_ID = 'default';
+require_once realpath(__DIR__ . '/../../../CAPABILITIES') . '/LOCALES/LocalModel.php';
+require_once realpath(__DIR__ . '/../../../CAPABILITIES') . '/CARTA/CartaModel.php';
 
 function handle_local(string $action, array $req, ?array $user): array
 {
     if (!$user) throw new RuntimeException('Sesion requerida');
     $data = $req['data'] ?? [];
-    $localId = local_sanitize_id((string) ($data['id'] ?? $user['local_id'] ?? LOCAL_DEFAULT_ID));
 
     switch ($action) {
         case 'get_local':
-            return local_get($localId);
+            $id = (string) ($data['id'] ?? '');
+            if ($id === '') $id = local_resolve_default_for_user($user);
+            return local_get_or_empty($id);
+
+        case 'list_my_locales':
+            return ['items' => \Locales\LocalModel::listByUser($user['id'] ?? '')];
+
+        case 'create_local':
+            $data['owner_user_id'] = $user['id'] ?? '';
+            $r = \Locales\LocalModel::create($data);
+            if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'create_local');
+            return $r['data'] ?? $r;
 
         case 'update_local':
-            // Solo roles administrativos pueden modificar (whitelist defensiva
-            // alineada con require_role del dispatcher)
-            return local_update($localId, $data);
+            $id = (string) ($data['id'] ?? '');
+            if ($id === '') throw new RuntimeException('id requerido');
+            if (!\Locales\LocalModel::userCanAccess($user, $id)) {
+                throw new RuntimeException('Sin permisos sobre este local');
+            }
+            $r = \Locales\LocalModel::update($id, $data);
+            if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'update_local');
+            return $r['data'] ?? $r;
+
+        case 'bootstrap_local':
+            return local_bootstrap_for_user($user);
 
         default:
             throw new RuntimeException("Accion local no reconocida: $action");
     }
 }
 
-function local_get(string $id): array
+/**
+ * Devuelve el local resuelto, o un esqueleto vacio para que la UI no rompa.
+ * El esqueleto tiene id pero no existe en disco; la UI puede mostrar form vacio.
+ */
+function local_get_or_empty(string $id): array
 {
-    $doc = data_get('local', $id);
-    if (!$doc) {
-        return [
-            'id'        => $id,
-            'nombre'    => '',
-            'telefono'  => '',
-            'direccion' => '',
-            'email'     => '',
-            'web'       => '',
-            'instagram' => '',
-            'tagline'   => '',
-        ];
-    }
-    return $doc;
+    $doc = \Locales\LocalModel::read($id);
+    if ($doc) return $doc;
+    return [
+        'id'                => $id,
+        'slug'              => '',
+        'nombre'            => '',
+        'telefono'          => '',
+        'direccion'         => '',
+        'email'             => '',
+        'web'               => '',
+        'instagram'         => '',
+        'tagline'           => '',
+        'owner_user_id'     => '',
+        'members'           => [],
+        'default_carta_id'  => '',
+    ];
 }
 
-function local_update(string $id, array $patch): array
+/**
+ * Resuelve el local por defecto para un usuario.
+ * Reglas:
+ *   1. Si el usuario tiene locales, usa el primero (en futuro: ultimo activo).
+ *   2. Si no tiene ninguno, devuelve "l_default" como placeholder.
+ *      bootstrap_local lo materializara cuando se llame explicitamente.
+ */
+function local_resolve_default_for_user(array $user): string
 {
-    $allowed = ['nombre', 'telefono', 'direccion', 'email', 'web', 'instagram', 'tagline'];
-    $clean = ['id' => $id];
-    foreach ($allowed as $f) {
-        if (array_key_exists($f, $patch)) {
-            $val = trim((string) $patch[$f]);
-            if (mb_strlen($val) > 200) $val = mb_substr($val, 0, 200);
-            $clean[$f] = $val;
-        }
-    }
-    $clean['updated_at'] = date('c');
-    return data_put('local', $id, $clean);
+    $list = \Locales\LocalModel::listByUser($user['id'] ?? '');
+    if (!empty($list)) return $list[0]['id'];
+    return 'l_default';
 }
 
-function local_sanitize_id(string $id): string
+/**
+ * Idempotente. Si el usuario no tiene ningun local, crea "l_default" + carta
+ * principal. Si ya tiene, devuelve el primero.
+ *
+ * Esto se llama desde la SPA al cargar el dashboard la primera vez.
+ */
+function local_bootstrap_for_user(array $user): array
 {
-    $id = strtolower(trim($id));
-    $id = preg_replace('/[^a-z0-9_\-]/', '', $id) ?? '';
-    return $id !== '' ? $id : LOCAL_DEFAULT_ID;
+    $userId = (string) ($user['id'] ?? '');
+    if ($userId === '') throw new RuntimeException('Usuario sin id');
+
+    $list = \Locales\LocalModel::listByUser($userId);
+    if (!empty($list)) {
+        return ['local' => $list[0], 'created' => false];
+    }
+
+    // Crear el local por defecto
+    $localRes = \Locales\LocalModel::create([
+        'id'             => 'l_default',
+        'slug'           => 'mi-local',
+        'nombre'         => 'Mi Local',
+        'owner_user_id'  => $userId,
+    ]);
+    if (!($localRes['success'] ?? false)) {
+        throw new RuntimeException($localRes['error'] ?? 'No se pudo crear el local');
+    }
+    $local = $localRes['data'];
+
+    // Crear la carta principal
+    $cartaRes = \Carta\CartaModel::create([
+        'local_id' => $local['id'],
+        'nombre'   => 'Carta principal',
+        'tipo'     => 'principal',
+    ]);
+    if ($cartaRes['success'] ?? false) {
+        \Locales\LocalModel::update($local['id'], [
+            'default_carta_id' => $cartaRes['data']['id'],
+        ]);
+        $local['default_carta_id'] = $cartaRes['data']['id'];
+    }
+
+    return ['local' => $local, 'created' => true];
 }

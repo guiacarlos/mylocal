@@ -142,9 +142,26 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'create_mesas_batch',   scope: 'server', domain: 'sala', description: 'Wizard paso 2: N mesas en una zona' },
     { action: 'regenerate_mesa_qr',   scope: 'server', domain: 'sala', description: 'Cambia el token QR de la mesa' },
 
-    // ── Local: datos del establecimiento ─────────────────────
-    { action: 'get_local',            scope: 'server', domain: 'local', description: 'Lee datos del local (nombre, telefono, contacto)' },
+    // ── Local: datos del establecimiento (multi-local, multi-user) ────
+    { action: 'get_local',            scope: 'server', domain: 'local', description: 'Lee datos del local actual' },
+    { action: 'list_my_locales',      scope: 'server', domain: 'local', description: 'Locales accesibles por el usuario' },
+    { action: 'create_local',         scope: 'server', domain: 'local', description: 'Crea local nuevo (propietario=user actual)' },
     { action: 'update_local',         scope: 'server', domain: 'local', description: 'Actualiza datos del establecimiento' },
+    { action: 'bootstrap_local',      scope: 'server', domain: 'local', description: 'Idempotente: crea l_default + carta principal si user no tiene local' },
+
+    // ── Carta CRUD persistente AxiDB (jerarquia local→carta→categoria→producto)
+    { action: 'list_cartas',          scope: 'server', domain: 'carta' },
+    { action: 'create_carta',         scope: 'server', domain: 'carta' },
+    { action: 'update_carta',         scope: 'server', domain: 'carta' },
+    { action: 'delete_carta',         scope: 'server', domain: 'carta' },
+    { action: 'list_categorias',      scope: 'server', domain: 'carta' },
+    { action: 'create_categoria',     scope: 'server', domain: 'carta' },
+    { action: 'update_categoria',     scope: 'server', domain: 'carta' },
+    { action: 'delete_categoria',     scope: 'server', domain: 'carta' },
+    { action: 'list_productos',       scope: 'server', domain: 'carta' },
+    { action: 'create_producto',      scope: 'server', domain: 'carta' },
+    { action: 'update_producto',      scope: 'server', domain: 'carta' },
+    { action: 'delete_producto',      scope: 'server', domain: 'carta' },
 
     // ── Suscripciones SaaS (Revolut) ─────────────────────────
     { action: 'create_subscription',   scope: 'server', domain: 'billing', description: 'Crea orden Revolut + guarda pending' },

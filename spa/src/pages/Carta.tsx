@@ -21,7 +21,7 @@ import {
 } from '../services/carta.service';
 import { getLocal, localDisplayName, type LocalInfo } from '../services/local.service';
 
-const LOCAL_ID = 'default';
+const LOCAL_ID = 'l_default';
 
 export function Carta() {
     const { client, ready } = useSynaxis();

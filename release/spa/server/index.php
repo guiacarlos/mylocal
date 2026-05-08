@@ -119,14 +119,18 @@ const ALLOWED_ACTIONS = [
     'ai_sugerir_alergenos', 'ai_generar_descripcion', 'ai_generar_promocion', 'ai_traducir',
     'importar_carta_estructurada',
     'generate_pdf_carta',
+    // Carta CRUD persistente AxiDB (jerarquia local→carta→categoria→producto)
+    'list_cartas', 'create_carta', 'update_carta', 'delete_carta',
+    'list_categorias', 'create_categoria', 'update_categoria', 'delete_categoria',
+    'list_productos', 'create_producto', 'update_producto', 'delete_producto',
     // Sala — zonas + mesas + QRs (Ola 1)
     'list_zonas', 'create_zona', 'update_zona', 'delete_zona',
     'create_zonas_preset', 'reorder_zonas',
     'list_mesas', 'create_mesa', 'update_mesa', 'delete_mesa',
     'create_mesas_batch', 'regenerate_mesa_qr',
     'sala_resumen',
-    // Local — datos del establecimiento (nombre, telefono, contacto)
-    'get_local', 'update_local',
+    // Local — datos del establecimiento (multi-local, multi-user)
+    'get_local', 'list_my_locales', 'create_local', 'update_local', 'bootstrap_local',
     // Suscripciones SaaS
     'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
     // Sistema
@@ -249,9 +253,21 @@ try {
         case 'ai_traducir':
         case 'importar_carta_estructurada':
         case 'generate_pdf_carta':
+        case 'list_cartas':
+        case 'create_carta':
+        case 'update_carta':
+        case 'delete_carta':
+        case 'list_categorias':
+        case 'create_categoria':
+        case 'update_categoria':
+        case 'delete_categoria':
+        case 'list_productos':
+        case 'create_producto':
+        case 'update_producto':
+        case 'delete_producto':
             require_once __DIR__ . '/handlers/carta.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
-            resp(true, handle_carta($action, $req['data'] ?? $req));
+            resp(true, handle_carta($action, $req));
 
         case 'list_zonas':
         case 'create_zona':
@@ -271,10 +287,13 @@ try {
             resp(true, handle_sala($action, $req, $user));
 
         case 'get_local':
+        case 'list_my_locales':
+        case 'bootstrap_local':
             require_once __DIR__ . '/handlers/local.php';
-            // get permitido a cualquier rol con sesion (lo necesita la SPA)
+            // lectura permitida a cualquier rol con sesion (lo necesita la SPA)
             resp(true, handle_local($action, $req, $user));
 
+        case 'create_local':
         case 'update_local':
             require_once __DIR__ . '/handlers/local.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);

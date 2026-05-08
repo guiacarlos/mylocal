@@ -7,6 +7,7 @@ import {
     generarPromocion,
     enhanceImage,
     uploadCartaSource,
+    updateProducto,
 } from '../../services/carta.service';
 
 interface Props {
@@ -38,7 +39,9 @@ export function CartaProductosPanel({ client, categorias, productos, onProductoU
     }
 
     async function persist(p: CartaProducto, data: Partial<CartaProducto>) {
-        await client.execute({ action: 'update', collection: 'carta_productos', id: p.id, data });
+        // Persistencia server-side AxiDB (spa/server/data/carta_productos/<id>.json).
+        // Nunca cache local: la fuente de verdad esta en el server.
+        await updateProducto(client, p.id, data);
         onProductoUpdated({ ...p, ...data });
     }
 

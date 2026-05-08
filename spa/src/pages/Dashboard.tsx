@@ -23,7 +23,7 @@ import {
 type MainTab = 'carta' | 'mesas' | 'facturacion' | 'config';
 type CartaTab = 'importar' | 'productos' | 'pdf';
 
-const LOCAL_ID = 'default';
+const LOCAL_ID = 'l_default';
 
 export function Dashboard() {
     const client = useSynaxisClient();
@@ -42,7 +42,14 @@ export function Dashboard() {
         listProductos(client, LOCAL_ID).then(setProductos);
     };
 
-    useEffect(() => { reload(); }, []);
+    // Bootstrap idempotente del local: si el usuario no tiene ningun local,
+    // crea l_default + carta principal. Si ya existe, no hace nada.
+    // Despues, carga categorias y productos del server.
+    useEffect(() => {
+        client.execute({ action: 'bootstrap_local', data: {} })
+            .catch(e => console.warn('[Dashboard] bootstrap_local fallo:', e))
+            .finally(() => reload());
+    }, []);
 
     useEffect(() => {
         if (mainTab === 'facturacion' && !sub) {

@@ -37,8 +37,145 @@ function handle_carta(string $action, array $req, array $files = []): array
         case 'importar_carta_estructurada': return carta_importar($req);
         case 'generate_pdf_carta':        return carta_generate_pdf($req);
         case 'ocr_import_carta':          return carta_ocr_import_carta($files);
+        // CRUD persistente AxiDB (server-side, fuente unica de verdad)
+        case 'list_cartas':               return carta_list_cartas($req);
+        case 'create_carta':              return carta_create_carta($req);
+        case 'update_carta':              return carta_update_carta($req);
+        case 'delete_carta':              return carta_delete_carta($req);
+        case 'list_categorias':           return carta_list_categorias($req);
+        case 'create_categoria':          return carta_create_categoria($req);
+        case 'update_categoria':          return carta_update_categoria($req);
+        case 'delete_categoria':          return carta_delete_categoria($req);
+        case 'list_productos':            return carta_list_productos($req);
+        case 'create_producto':           return carta_create_producto($req);
+        case 'update_producto':           return carta_update_producto($req);
+        case 'delete_producto':           return carta_delete_producto($req);
         default: throw new RuntimeException("Acción de carta no reconocida: $action");
     }
+}
+
+/* ─────────────────────────────────────────────────────────
+   CRUD PERSISTENTE — fuente unica de verdad en AxiDB
+   spa/server/data/{cartas, carta_categorias, carta_productos}/<id>.json
+───────────────────────────────────────────────────────── */
+
+require_once CAP_ROOT . '/CARTA/CartaModel.php';
+require_once CAP_ROOT . '/CARTA/CategoriaModel.php';
+require_once CAP_ROOT . '/CARTA/ProductoModel.php';
+
+function carta_resolve_local_id(array $req, ?array $user = null): string
+{
+    $id = (string) ($req['local_id'] ?? $req['data']['local_id'] ?? '');
+    if ($id !== '') return $id;
+    return 'l_default';
+}
+
+function carta_list_cartas(array $req): array
+{
+    $localId = carta_resolve_local_id($req);
+    return ['items' => \Carta\CartaModel::listByLocal($localId)];
+}
+
+function carta_create_carta(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $r = \Carta\CartaModel::create($data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error create_carta');
+    return $r['data'] ?? $r;
+}
+
+function carta_update_carta(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $id = (string) ($data['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    $r = \Carta\CartaModel::update($id, $data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error update_carta');
+    return $r['data'] ?? $r;
+}
+
+function carta_delete_carta(array $req): array
+{
+    $id = (string) ($req['id'] ?? $req['data']['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    $r = \Carta\CartaModel::delete($id);
+    return $r['data'] ?? ['ok' => true];
+}
+
+function carta_list_categorias(array $req): array
+{
+    $cartaId = (string) ($req['carta_id'] ?? $req['data']['carta_id'] ?? '');
+    $localId = carta_resolve_local_id($req);
+    if ($cartaId !== '') {
+        return ['items' => \Carta\CategoriaModel::listByCarta($cartaId)];
+    }
+    return ['items' => \Carta\CategoriaModel::listByLocal($localId)];
+}
+
+function carta_create_categoria(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $r = \Carta\CategoriaModel::create($data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error create_categoria');
+    return $r['data'] ?? $r;
+}
+
+function carta_update_categoria(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $id = (string) ($data['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    $r = \Carta\CategoriaModel::update($id, $data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error update_categoria');
+    return $r['data'] ?? $r;
+}
+
+function carta_delete_categoria(array $req): array
+{
+    $id = (string) ($req['id'] ?? $req['data']['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    \Carta\CategoriaModel::delete($id);
+    return ['ok' => true];
+}
+
+function carta_list_productos(array $req): array
+{
+    $cartaId     = (string) ($req['carta_id'] ?? $req['data']['carta_id'] ?? '');
+    $categoriaId = (string) ($req['categoria_id'] ?? $req['data']['categoria_id'] ?? '');
+    $localId     = carta_resolve_local_id($req);
+    if ($categoriaId !== '') {
+        return ['items' => \Carta\ProductoModel::listByCategoria($categoriaId)];
+    }
+    if ($cartaId !== '') {
+        return ['items' => \Carta\ProductoModel::listByCarta($cartaId)];
+    }
+    return ['items' => \Carta\ProductoModel::listByLocal($localId)];
+}
+
+function carta_create_producto(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $r = \Carta\ProductoModel::create($data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error create_producto');
+    return $r['data'] ?? $r;
+}
+
+function carta_update_producto(array $req): array
+{
+    $data = $req['data'] ?? $req;
+    $id = (string) ($data['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    $r = \Carta\ProductoModel::update($id, $data);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error update_producto');
+    return $r['data'] ?? $r;
+}
+
+function carta_delete_producto(array $req): array
+{
+    $id = (string) ($req['id'] ?? $req['data']['id'] ?? '');
+    if ($id === '') throw new RuntimeException('id requerido');
+    \Carta\ProductoModel::delete($id);
+    return ['ok' => true];
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -263,41 +400,93 @@ function carta_traducir(array $req): array
    IMPORTAR — guarda categorías + productos en lote
 ───────────────────────────────────────────────────────── */
 
+/**
+ * Importa carta estructurada del OCR de forma atomica:
+ *   - Crea (o reutiliza) una carta para el local
+ *   - Crea N categorias bajo esa carta
+ *   - Crea M productos bajo esas categorias
+ *
+ * Persiste TODO en AxiDB (spa/server/data/cartas, carta_categorias, carta_productos)
+ * con la jerarquia correcta carta_id → categoria_id → producto.
+ *
+ * Devuelve {carta_id, categorias, productos, ids_creados} para que el cliente
+ * pueda navegar inmediatamente a la carta importada.
+ */
 function carta_importar(array $req): array
 {
-    $localId    = $req['local_id'] ?? 'default';
-    $categorias = $req['categorias'] ?? [];
+    $data       = $req['data'] ?? $req;
+    $localId    = (string) ($data['local_id'] ?? 'l_default');
+    $categorias = $data['categorias'] ?? $req['categorias'] ?? [];
+    $cartaId    = (string) ($data['carta_id'] ?? '');
+    $cartaName  = (string) ($data['carta_nombre'] ?? 'Carta importada');
+
     if (!is_array($categorias) || empty($categorias)) {
         throw new RuntimeException('categorias vacías');
     }
-    $count = ['categorias' => 0, 'productos' => 0];
-    foreach ($categorias as $cat) {
-        $catId  = 'cat_' . bin2hex(random_bytes(6));
-        data_put('carta_categorias', $catId, [
-            'id'        => $catId,
-            'local_id'  => $localId,
-            'nombre'    => $cat['nombre'] ?? 'Sin nombre',
-            'orden'     => 0,
-            'disponible' => true,
-        ], true);
-        $count['categorias']++;
-        foreach (($cat['productos'] ?? []) as $p) {
-            $pId = 'prod_' . bin2hex(random_bytes(6));
-            data_put('carta_productos', $pId, [
-                'id'           => $pId,
-                'local_id'     => $localId,
-                'categoria_id' => $catId,
-                'nombre'       => $p['nombre'] ?? '',
-                'descripcion'  => $p['descripcion'] ?? '',
-                'precio'       => floatval($p['precio'] ?? 0),
-                'alergenos'    => $p['alergenos'] ?? [],
-                'disponible'   => true,
-                'origen_import' => 'ocr',
-            ], true);
-            $count['productos']++;
+
+    // 1) Resolver/crear la carta destino
+    if ($cartaId === '') {
+        // Buscar primera carta activa del local; si no hay, crear una nueva
+        $existing = \Carta\CartaModel::listByLocal($localId, true);
+        if (!empty($existing)) {
+            $cartaId = $existing[0]['id'];
+        } else {
+            $r = \Carta\CartaModel::create([
+                'local_id' => $localId,
+                'nombre'   => $cartaName,
+                'tipo'     => 'principal',
+            ]);
+            if (!($r['success'] ?? false)) {
+                throw new RuntimeException($r['error'] ?? 'No se pudo crear la carta');
+            }
+            $cartaId = $r['data']['id'];
         }
     }
-    return $count;
+
+    // 2) Crear categorias y productos bajo la carta
+    $count = ['categorias' => 0, 'productos' => 0];
+    $orden = 0;
+    $ordenCategorias = [];
+
+    foreach ($categorias as $cat) {
+        $catRes = \Carta\CategoriaModel::create([
+            'carta_id'  => $cartaId,
+            'local_id'  => $localId,
+            'nombre'    => $cat['nombre'] ?? 'Sin nombre',
+            'orden'     => $orden++,
+            'icono'     => $cat['icono'] ?? '',
+        ]);
+        if (!($catRes['success'] ?? false)) continue;
+        $catId = $catRes['data']['id'];
+        $ordenCategorias[] = $catId;
+        $count['categorias']++;
+
+        $ordenP = 0;
+        foreach (($cat['productos'] ?? []) as $p) {
+            $pRes = \Carta\ProductoModel::create([
+                'carta_id'      => $cartaId,
+                'categoria_id'  => $catId,
+                'local_id'      => $localId,
+                'nombre'        => (string) ($p['nombre'] ?? ''),
+                'descripcion'   => (string) ($p['descripcion'] ?? ''),
+                'precio'        => floatval($p['precio'] ?? 0),
+                'alergenos'     => is_array($p['alergenos'] ?? null) ? $p['alergenos'] : [],
+                'origen_import' => 'ocr',
+                'orden'         => $ordenP++,
+            ]);
+            if ($pRes['success'] ?? false) $count['productos']++;
+        }
+    }
+
+    // 3) Actualizar el orden de categorias en la carta
+    \Carta\CartaModel::update($cartaId, ['categorias_orden' => $ordenCategorias]);
+
+    return [
+        'carta_id'   => $cartaId,
+        'local_id'   => $localId,
+        'categorias' => $count['categorias'],
+        'productos'  => $count['productos'],
+    ];
 }
 
 /* ─────────────────────────────────────────────────────────

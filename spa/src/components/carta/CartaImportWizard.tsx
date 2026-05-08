@@ -6,6 +6,7 @@ import React, { useRef, useState } from 'react';
 import { useSynaxisClient } from '../../hooks/useSynaxis';
 import {
     importCartaFromFile,
+    importCartaStructured,
     type CartaStructured,
 } from '../../services/carta.service';
 
@@ -72,29 +73,17 @@ export function CartaImportWizard({ localId = 'default', onDone }: Props) {
     async function handleImport() {
         if (!carta) return;
         setStep('extracting');
-        setStatusMsg('Guardando carta en local...');
+        setStatusMsg('Guardando carta...');
         try {
-            for (const cat of carta.categorias) {
-                const catId = `cat_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-                await client.execute({
-                    action: 'create',
-                    collection: 'carta_categorias',
-                    data: { id: catId, local_id: localId, nombre: cat.nombre, orden: 0, disponible: true },
-                });
-                for (const p of cat.productos) {
-                    const pId = `prod_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-                    await client.execute({
-                        action: 'create',
-                        collection: 'carta_productos',
-                        data: {
-                            id: pId, local_id: localId, categoria_id: catId,
-                            nombre: p.nombre, descripcion: p.descripcion,
-                            precio: p.precio, alergenos: [], disponible: true,
-                            origen_import: 'ocr',
-                        },
-                    });
-                }
-            }
+            // Persistencia atomica server-side: crea (o reusa) carta + N categorias
+            // + M productos en spa/server/data/{cartas, carta_categorias, carta_productos}/.
+            // Todo en AxiDB, fuente unica de verdad. Cero IndexedDB.
+            const r = await importCartaStructured(client, {
+                local_id:    localId,
+                carta_nombre:'Carta importada',
+                categorias:  carta.categorias,
+            });
+            console.log('[CartaImport] guardado en AxiDB:', r);
             setStep('done');
             onDone?.();
         } catch (e: unknown) {

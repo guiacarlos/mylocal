@@ -80,44 +80,106 @@ export async function queryProducts(client: SynaxisClient, category?: string): P
     return res.success && res.data ? res.data.items : [];
 }
 
-// ── CRUD categorías ───────────────────────────────────────────────────────
+// ── CRUD server-side (AxiDB persistente, no IndexedDB) ───────────────────
+// Toda la carta vive en spa/server/data/{cartas, carta_categorias, carta_productos}/<id>.json
+// El cliente NUNCA persiste localmente — fuente unica de verdad en server.
 
-export async function listCategorias(client: SynaxisClient, local_id: string): Promise<CartaCategoria[]> {
-    const res = await client.execute<CartaCategoria[]>({ action: 'list', collection: 'carta_categorias' });
-    if (!res.success || !res.data) return [];
-    return (res.data as CartaCategoria[]).filter(c => !local_id || c.local_id === local_id);
+async function callServer<T>(client: SynaxisClient, action: string, data: Record<string, unknown>): Promise<T> {
+    const res = await client.execute({ action, data });
+    if (!res.success) throw new Error(res.error ?? `Error en ${action}`);
+    return res.data as T;
 }
 
-export async function createCategoria(client: SynaxisClient, data: Partial<CartaCategoria>) {
-    return client.execute({ action: 'create', collection: 'carta_categorias', data });
+// Cartas
+export interface CartaDoc {
+    id: string;
+    local_id: string;
+    nombre: string;
+    tipo: string;
+    tema: string;
+    activa: boolean;
+    categorias_orden: string[];
+}
+
+export async function listCartas(client: SynaxisClient, local_id: string): Promise<CartaDoc[]> {
+    const res = await callServer<{ items: CartaDoc[] }>(client, 'list_cartas', { local_id });
+    return res.items ?? [];
+}
+
+export async function createCarta(client: SynaxisClient, data: Partial<CartaDoc>): Promise<CartaDoc> {
+    return callServer<CartaDoc>(client, 'create_carta', data as Record<string, unknown>);
+}
+
+// Categorias
+export async function listCategorias(client: SynaxisClient, local_id: string, carta_id?: string): Promise<CartaCategoria[]> {
+    const res = await callServer<{ items: CartaCategoria[] }>(client, 'list_categorias', {
+        local_id,
+        ...(carta_id ? { carta_id } : {}),
+    });
+    return res.items ?? [];
+}
+
+export async function createCategoria(client: SynaxisClient, data: Partial<CartaCategoria> & { carta_id: string; local_id: string }) {
+    return callServer<CartaCategoria>(client, 'create_categoria', data as Record<string, unknown>);
 }
 
 export async function updateCategoria(client: SynaxisClient, id: string, data: Partial<CartaCategoria>) {
-    return client.execute({ action: 'update', collection: 'carta_categorias', id, data });
+    return callServer<CartaCategoria>(client, 'update_categoria', { id, ...data });
 }
 
 export async function deleteCategoria(client: SynaxisClient, id: string) {
-    return client.execute({ action: 'delete', collection: 'carta_categorias', id });
+    return callServer<{ ok: boolean }>(client, 'delete_categoria', { id });
 }
 
-// ── CRUD productos ────────────────────────────────────────────────────────
-
-export async function listProductos(client: SynaxisClient, local_id: string): Promise<CartaProducto[]> {
-    const res = await client.execute<CartaProducto[]>({ action: 'list', collection: 'carta_productos' });
-    if (!res.success || !res.data) return [];
-    return (res.data as CartaProducto[]).filter(p => !local_id || p.local_id === local_id);
+// Productos
+export async function listProductos(client: SynaxisClient, local_id: string, carta_id?: string, categoria_id?: string): Promise<CartaProducto[]> {
+    const res = await callServer<{ items: CartaProducto[] }>(client, 'list_productos', {
+        local_id,
+        ...(carta_id ? { carta_id } : {}),
+        ...(categoria_id ? { categoria_id } : {}),
+    });
+    return res.items ?? [];
 }
 
-export async function createProducto(client: SynaxisClient, data: Partial<CartaProducto>) {
-    return client.execute({ action: 'create', collection: 'carta_productos', data });
+export async function createProducto(client: SynaxisClient, data: Partial<CartaProducto> & { carta_id: string; categoria_id: string; local_id: string; nombre: string }) {
+    return callServer<CartaProducto>(client, 'create_producto', data as Record<string, unknown>);
 }
 
 export async function updateProducto(client: SynaxisClient, id: string, data: Partial<CartaProducto>) {
-    return client.execute({ action: 'update', collection: 'carta_productos', id, data });
+    return callServer<CartaProducto>(client, 'update_producto', { id, ...data });
 }
 
 export async function deleteProducto(client: SynaxisClient, id: string) {
-    return client.execute({ action: 'delete', collection: 'carta_productos', id });
+    return callServer<{ ok: boolean }>(client, 'delete_producto', { id });
+}
+
+// ── Bootstrap del local (idempotente: crea l_default + carta principal) ──
+
+export interface BootstrapLocalResp {
+    local: { id: string; nombre: string; default_carta_id: string };
+    created: boolean;
+}
+
+export async function bootstrapLocal(client: SynaxisClient): Promise<BootstrapLocalResp> {
+    return callServer<BootstrapLocalResp>(client, 'bootstrap_local', {});
+}
+
+// ── Import atomico de carta tras OCR ─────────────────────────────────────
+// Persiste TODO en server (spa/server/data/cartas, carta_categorias, carta_productos)
+// con la jerarquia carta_id → categoria_id → producto.
+
+export interface ImportCartaResp {
+    carta_id: string;
+    local_id: string;
+    categorias: number;
+    productos: number;
+}
+
+export async function importCartaStructured(
+    client: SynaxisClient,
+    data: { local_id: string; carta_id?: string; carta_nombre?: string; categorias: CartaStructured['categorias'] }
+): Promise<ImportCartaResp> {
+    return callServer<ImportCartaResp>(client, 'importar_carta_estructurada', data as Record<string, unknown>);
 }
 
 // ── IA — Upload para OCR (multipart, fuera de SynaxisClient) ─────────────
