@@ -6,6 +6,9 @@
 
 import type { SynaxisClient } from '../synaxis/SynaxisClient';
 
+export type WebTemplate = 'moderna' | 'minimal' | 'premium';
+export type WebColor = 'claro' | 'oscuro' | 'blanco_roto';
+
 export interface LocalInfo {
     id: string;
     nombre: string;
@@ -14,8 +17,14 @@ export interface LocalInfo {
     email?: string;
     web?: string;
     instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    whatsapp?: string;
     tagline?: string;
     imagen_hero?: string;
+    web_template?: WebTemplate;
+    web_color?: WebColor;
+    copyright?: string;
     updated_at?: string;
 }
 

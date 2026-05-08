@@ -1,17 +1,12 @@
 /**
- * Carta - vista publica de la carta digital.
+ * Carta - vista publica de la carta digital (lo que ve el cliente al escanear el QR).
  *
- * Lee carta_productos + carta_categorias del local. Agrupa por categoria y
- * permite filtrar con chips. Si el local todavia no ha importado nada,
- * muestra empty state amable que sugiere ir al dashboard.
- *
- * Nota: en Ola 1 todavia no hay multi-tenancy real por subdominio. La
- * URL /carta/<zona-slug>/<mesa-slug> identifica el contexto pero el
- * cliente lee del unico local que existe ('default'). Cuando llegue
- * multi-tenancy, se resuelve el local_id desde el subdominio.
+ * Usa CartaWebPreview con la plantilla y color que el hostelero eligio en el
+ * dashboard (Carta -> Web). Si todavia no hay productos, muestra un empty
+ * state amable que sugiere ir al panel.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSynaxis } from '../hooks/useSynaxis';
 import {
     listProductos,
@@ -20,6 +15,8 @@ import {
     type CartaCategoria,
 } from '../services/carta.service';
 import { getLocal, localDisplayName, type LocalInfo } from '../services/local.service';
+import { CartaWebPreview } from '../components/carta/CartaWebPreview';
+import '../components/carta/carta-web.css';
 
 const LOCAL_ID = 'l_default';
 
@@ -29,7 +26,6 @@ export function Carta() {
     const [categorias, setCategorias] = useState<CartaCategoria[]>([]);
     const [local, setLocal] = useState<LocalInfo | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [activeCat, setActiveCat] = useState<string | null>(null);
 
     useEffect(() => {
         if (!ready) return;
@@ -53,43 +49,15 @@ export function Carta() {
         return () => { cancelled = true; };
     }, [client, ready]);
 
-    const catNombrePorId = useMemo(() => {
-        const m = new Map<string, string>();
-        for (const c of categorias) m.set(c.id, c.nombre);
-        return m;
-    }, [categorias]);
-
-    const productosPorCat = useMemo(() => {
-        const groups = new Map<string, CartaProducto[]>();
-        for (const p of productos ?? []) {
-            const cat = catNombrePorId.get(p.categoria_id) ?? 'Otros';
-            if (!groups.has(cat)) groups.set(cat, []);
-            groups.get(cat)!.push(p);
-        }
-        return groups;
-    }, [productos, catNombrePorId]);
-
-    const tabs = useMemo(() => {
-        const cats = Array.from(productosPorCat.keys());
-        return ['Todo', ...cats];
-    }, [productosPorCat]);
-
-    const filtered = useMemo(() => {
-        if (!productos) return [];
-        if (!activeCat || activeCat === 'Todo') return productos;
-        return productos.filter(p => (catNombrePorId.get(p.categoria_id) ?? 'Otros') === activeCat);
-    }, [productos, activeCat, catNombrePorId]);
-
-    const nombreLocal = localDisplayName(local);
-
     if (error) return <p className="sc-err">No se pudo cargar la carta: {error}</p>;
     if (!ready || productos === null) return <p className="sc-loading">Cargando carta…</p>;
 
     if (productos.length === 0) {
+        const nombre = localDisplayName(local);
         return (
             <section className="sc-carta sc-carta--empty">
                 <header className="sc-carta__head">
-                    <h1>{nombreLocal}</h1>
+                    <h1>{nombre}</h1>
                     <p className="sc-carta__sub">Carta digital</p>
                 </header>
                 <div className="sc-carta__empty-card">
@@ -106,39 +74,17 @@ export function Carta() {
         );
     }
 
-    return (
-        <section className="sc-carta">
-            <header className="sc-carta__head">
-                <h1>{nombreLocal}</h1>
-                <p className="sc-carta__sub">Carta digital · {productos.length} platos</p>
-                <nav className="sc-carta__cats">
-                    {tabs.map(c => (
-                        <button
-                            key={c}
-                            type="button"
-                            className={'sc-chip ' + ((activeCat ?? 'Todo') === c ? 'is-active' : '')}
-                            onClick={() => setActiveCat(c === 'Todo' ? null : c)}
-                        >{c}</button>
-                    ))}
-                </nav>
-            </header>
+    // Plantilla y color elegidos por el hostelero (con defaults seguros)
+    const template = local?.web_template ?? 'moderna';
+    const color    = local?.web_color    ?? 'claro';
 
-            <ul className="sc-carta__grid">
-                {filtered.map(p => (
-                    <li key={p.id} className="sc-product">
-                        <div className="sc-product__head">
-                            <h3>{p.nombre}</h3>
-                            <span className="sc-product__price">{p.precio.toFixed(2)} €</span>
-                        </div>
-                        {p.descripcion && <p className="sc-product__desc">{p.descripcion}</p>}
-                        {p.alergenos && p.alergenos.length > 0 && (
-                            <p className="sc-product__aller">
-                                Alergenos: {p.alergenos.join(', ')}
-                            </p>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </section>
+    return (
+        <CartaWebPreview
+            template={template}
+            color={color}
+            local={local}
+            categorias={categorias}
+            productos={productos}
+        />
     );
 }

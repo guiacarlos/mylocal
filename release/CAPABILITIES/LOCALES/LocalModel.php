@@ -18,6 +18,12 @@ namespace Locales;
  *   instagram       string   sin @
  *   tagline         string   subtitulo corto
  *   imagen_hero     string   URL de imagen principal (logo/foto local)
+ *   facebook        string   handle/url de Facebook (opcional)
+ *   tiktok          string   handle de TikTok sin @ (opcional)
+ *   whatsapp        string   numero E.164 sin signos (opcional, ej "34600000000")
+ *   web_template    string   plantilla de la carta web: moderna|minimal|premium
+ *   web_color       string   tema de color web: claro|oscuro|blanco_roto
+ *   copyright       string   texto del footer publico (opcional)
  *   owner_user_id   string   "u_..."  (propietario unico)
  *   members         array    [{user_id, role}]  equipo (admin/editor/sala/cocina/camarero)
  *   default_carta_id string  "c_..."  cual es la principal
@@ -59,6 +65,12 @@ class LocalModel
             'instagram'         => ltrim(trim((string) ($data['instagram'] ?? '')), '@'),
             'tagline'           => trim((string) ($data['tagline'] ?? '')),
             'imagen_hero'       => trim((string) ($data['imagen_hero'] ?? '')),
+            'facebook'          => trim((string) ($data['facebook'] ?? '')),
+            'tiktok'            => ltrim(trim((string) ($data['tiktok'] ?? '')), '@'),
+            'whatsapp'          => preg_replace('/[^0-9+]/', '', (string) ($data['whatsapp'] ?? '')) ?? '',
+            'web_template'      => self::sanitizeWebTemplate($data['web_template'] ?? 'moderna'),
+            'web_color'         => self::sanitizeWebColor($data['web_color'] ?? 'claro'),
+            'copyright'         => trim((string) ($data['copyright'] ?? '')),
             'owner_user_id'     => (string) $data['owner_user_id'],
             'members'           => $data['members'] ?? [
                 ['user_id' => $data['owner_user_id'], 'role' => 'admin'],
@@ -103,16 +115,24 @@ class LocalModel
         if (!$existing) return ['success' => false, 'error' => 'Local no encontrado'];
 
         $allowed = ['nombre', 'telefono', 'direccion', 'email', 'web', 'instagram',
-                    'tagline', 'imagen_hero', 'slug', 'default_carta_id', 'members'];
+                    'tagline', 'imagen_hero', 'slug', 'default_carta_id', 'members',
+                    'facebook', 'tiktok', 'whatsapp',
+                    'web_template', 'web_color', 'copyright'];
         $clean = ['updated_at' => date('c')];
         foreach ($allowed as $f) {
-            if (array_key_exists($f, $patch)) {
+            if (\array_key_exists($f, $patch)) {
                 if ($f === 'slug') {
                     $clean[$f] = self::sanitizeSlug($patch[$f]);
-                } elseif ($f === 'instagram') {
+                } elseif ($f === 'instagram' || $f === 'tiktok') {
                     $clean[$f] = ltrim(trim((string) $patch[$f]), '@');
+                } elseif ($f === 'whatsapp') {
+                    $clean[$f] = preg_replace('/[^0-9+]/', '', (string) $patch[$f]) ?? '';
+                } elseif ($f === 'web_template') {
+                    $clean[$f] = self::sanitizeWebTemplate((string) $patch[$f]);
+                } elseif ($f === 'web_color') {
+                    $clean[$f] = self::sanitizeWebColor((string) $patch[$f]);
                 } elseif ($f === 'members') {
-                    $clean[$f] = is_array($patch[$f]) ? $patch[$f] : [];
+                    $clean[$f] = \is_array($patch[$f]) ? $patch[$f] : [];
                 } else {
                     $clean[$f] = trim((string) $patch[$f]);
                 }
@@ -150,6 +170,21 @@ class LocalModel
         $map = ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','ñ'=>'n','ü'=>'u'];
         $s = strtr($s, $map);
         return self::sanitizeSlug($s);
+    }
+
+    public const WEB_TEMPLATES = ['moderna', 'minimal', 'premium'];
+    public const WEB_COLORS    = ['claro', 'oscuro', 'blanco_roto'];
+
+    public static function sanitizeWebTemplate(string $t): string
+    {
+        $t = strtolower(trim($t));
+        return \in_array($t, self::WEB_TEMPLATES, true) ? $t : 'moderna';
+    }
+
+    public static function sanitizeWebColor(string $c): string
+    {
+        $c = strtolower(trim($c));
+        return \in_array($c, self::WEB_COLORS, true) ? $c : 'claro';
     }
 
     private static function validate(array $data, bool $isCreate): ?string

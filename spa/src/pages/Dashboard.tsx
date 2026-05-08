@@ -6,6 +6,7 @@ import { useSynaxisClient } from '../hooks/useSynaxis';
 import { CartaImportWizard } from '../components/carta/CartaImportWizard';
 import { CartaProductosPanel } from '../components/carta/CartaProductosPanel';
 import { CartaPdfPanel } from '../components/carta/CartaPdfPanel';
+import { CartaWebPanel } from '../components/carta/CartaWebPanel';
 import { SalaTab } from '../components/sala/SalaTab';
 import { getLocal, type LocalInfo } from '../services/local.service';
 import {
@@ -23,7 +24,7 @@ import {
 } from '../services/subscriptions.service';
 
 type MainTab = 'carta' | 'mesas' | 'facturacion' | 'config';
-type CartaTab = 'importar' | 'productos' | 'pdf';
+type CartaTab = 'importar' | 'productos' | 'pdf' | 'web';
 
 const LOCAL_ID = 'l_default';
 
@@ -66,7 +67,7 @@ export function Dashboard() {
     // Refresca el local cuando se entra al tab Mesas o al subtab PDF: si el
     // hostelero cambia el nombre/telefono en otra pestana, el preview lo ve.
     useEffect(() => {
-        if (mainTab === 'mesas' || (mainTab === 'carta' && cartaTab === 'pdf')) {
+        if (mainTab === 'mesas' || (mainTab === 'carta' && (cartaTab === 'pdf' || cartaTab === 'web'))) {
             getLocal(client, LOCAL_ID).then(setLocal).catch(() => {});
         }
     }, [mainTab, cartaTab]);
@@ -127,7 +128,7 @@ export function Dashboard() {
                 {mainTab === 'carta' && (
                     <>
                         <nav className="db-tabs">
-                            {(['importar', 'productos', 'pdf'] as CartaTab[]).map(t => (
+                            {(['importar', 'productos', 'pdf', 'web'] as CartaTab[]).map(t => (
                                 <button key={t} className={`db-tab${cartaTab === t ? ' db-tab--active' : ''}`} onClick={() => setCartaTab(t)}>
                                     {t.charAt(0).toUpperCase() + t.slice(1)}
                                 </button>
@@ -166,6 +167,16 @@ export function Dashboard() {
                                     setPdfPlantilla(template);
                                     await handlePdf();
                                 }}
+                            />
+                        )}
+
+                        {cartaTab === 'web' && (
+                            <CartaWebPanel
+                                client={client}
+                                local={local}
+                                categorias={categorias}
+                                productos={productos}
+                                onLocalChanged={setLocal}
                             />
                         )}
                     </>
