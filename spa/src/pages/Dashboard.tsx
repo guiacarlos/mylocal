@@ -5,7 +5,9 @@ import '../styles/checkout.css';
 import { useSynaxisClient } from '../hooks/useSynaxis';
 import { CartaImportWizard } from '../components/carta/CartaImportWizard';
 import { CartaProductosPanel } from '../components/carta/CartaProductosPanel';
+import { CartaPdfPanel } from '../components/carta/CartaPdfPanel';
 import { SalaTab } from '../components/sala/SalaTab';
+import { getLocal, type LocalInfo } from '../services/local.service';
 import {
     listCategorias,
     listProductos,
@@ -33,6 +35,7 @@ export function Dashboard() {
     const [categorias, setCategorias] = useState<CartaCategoria[]>([]);
     const [productos, setProductos] = useState<CartaProducto[]>([]);
     const [pdfPlantilla, setPdfPlantilla] = useState<'minimalista' | 'clasica' | 'moderna'>('minimalista');
+    const [local, setLocal] = useState<LocalInfo | null>(null);
     const [pdfLoading, setPdfLoading] = useState(false);
     const [sub, setSub] = useState<Subscription | null>(null);
     const [cancelLoading, setCancelLoading] = useState(false);
@@ -44,11 +47,14 @@ export function Dashboard() {
 
     // Bootstrap idempotente del local: si el usuario no tiene ningun local,
     // crea l_default + carta principal. Si ya existe, no hace nada.
-    // Despues, carga categorias y productos del server.
+    // Despues, carga categorias, productos e info del local del server.
     useEffect(() => {
         client.execute({ action: 'bootstrap_local', data: {} })
             .catch(e => console.warn('[Dashboard] bootstrap_local fallo:', e))
-            .finally(() => reload());
+            .finally(() => {
+                reload();
+                getLocal(client, LOCAL_ID).then(setLocal).catch(() => {});
+            });
     }, []);
 
     useEffect(() => {
@@ -68,7 +74,11 @@ export function Dashboard() {
                 nombre: cat.nombre,
                 productos: productos.filter(p => p.categoria_id === cat.id),
             }));
-            await generarPdfCarta(client, { plantilla: pdfPlantilla, local: { nombre: 'Mi Restaurante' }, categorias: catData });
+            await generarPdfCarta(client, {
+                plantilla: pdfPlantilla,
+                local: { nombre: local?.nombre || 'Mi Local', telefono: local?.telefono || '' },
+                categorias: catData,
+            });
         } catch (e: unknown) {
             alert(e instanceof Error ? e.message : 'Error generando PDF');
         } finally {
@@ -138,22 +148,16 @@ export function Dashboard() {
                         )}
 
                         {cartaTab === 'pdf' && (
-                            <div className="db-card">
-                                <div className="db-card-title">Carta fisica en PDF</div>
-                                <div className="db-card-sub">Genera tu carta imprimible lista para llevar a la imprenta.</div>
-                                <div className="db-plantillas" style={{ marginBottom: 20 }}>
-                                    {(['minimalista', 'clasica', 'moderna'] as const).map(pl => (
-                                        <div key={pl} className={`db-plantilla${pdfPlantilla === pl ? ' db-plantilla--sel' : ''}`} onClick={() => setPdfPlantilla(pl)}>
-                                            <div className="db-plantilla-name">{pl.charAt(0).toUpperCase() + pl.slice(1)}</div>
-                                            <div className="db-plantilla-desc">{pl === 'minimalista' ? 'Elegante y limpia' : pl === 'clasica' ? 'Tradicional con orla' : 'Moderna con color'}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                                <button className="db-btn db-btn--primary" disabled={pdfLoading || productos.length === 0} onClick={handlePdf}>
-                                    {pdfLoading ? 'Generando...' : 'Descargar PDF'}
-                                </button>
-                                {productos.length === 0 && <p style={{ marginTop: 10, fontSize: 'var(--sp-text-xs)', color: 'var(--sp-text-muted)' }}>Importa productos antes de generar el PDF.</p>}
-                            </div>
+                            <CartaPdfPanel
+                                local={local}
+                                categorias={categorias}
+                                productos={productos}
+                                downloading={pdfLoading}
+                                onDownload={async (template, _bgColor) => {
+                                    setPdfPlantilla(template);
+                                    await handlePdf();
+                                }}
+                            />
                         )}
                     </>
                 )}
