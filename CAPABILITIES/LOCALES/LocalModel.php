@@ -117,7 +117,15 @@ class LocalModel
         $allowed = ['nombre', 'telefono', 'direccion', 'email', 'web', 'instagram',
                     'tagline', 'imagen_hero', 'slug', 'default_carta_id', 'members',
                     'facebook', 'tiktok', 'whatsapp',
-                    'web_template', 'web_color', 'copyright'];
+                    'web_template', 'web_color', 'copyright',
+                    // Configuracion ampliada (Ola 3)
+                    'idiomas',          // array de codigos ISO: ['es', 'en', ...]
+                    'horarios',         // object {lun: [{from, to}], mar: [...], ...}
+                    'nif',              // datos fiscales
+                    'razon_social',
+                    'direccion_fiscal',
+                    'tipo_negocio',     // bar / restaurante / cafeteria / pastelería / ...
+                    'descripcion'];     // descripcion corta del negocio
         $clean = ['updated_at' => date('c')];
         foreach ($allowed as $f) {
             if (\array_key_exists($f, $patch)) {
@@ -131,7 +139,11 @@ class LocalModel
                     $clean[$f] = self::sanitizeWebTemplate((string) $patch[$f]);
                 } elseif ($f === 'web_color') {
                     $clean[$f] = self::sanitizeWebColor((string) $patch[$f]);
-                } elseif ($f === 'members') {
+                } elseif ($f === 'members' || $f === 'idiomas') {
+                    $clean[$f] = \is_array($patch[$f]) ? $patch[$f] : [];
+                } elseif ($f === 'horarios') {
+                    // Estructura {dia: [{from, to}, ...], ...}. Aceptamos
+                    // tanto array vacio (limpiar) como objeto con tramos.
                     $clean[$f] = \is_array($patch[$f]) ? $patch[$f] : [];
                 } else {
                     $clean[$f] = trim((string) $patch[$f]);

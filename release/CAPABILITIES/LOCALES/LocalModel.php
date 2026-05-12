@@ -117,7 +117,15 @@ class LocalModel
         $allowed = ['nombre', 'telefono', 'direccion', 'email', 'web', 'instagram',
                     'tagline', 'imagen_hero', 'slug', 'default_carta_id', 'members',
                     'facebook', 'tiktok', 'whatsapp',
-                    'web_template', 'web_color', 'copyright'];
+                    'web_template', 'web_color', 'copyright',
+                    // Configuracion ampliada (Ola 3)
+                    'idiomas',          // array de codigos ISO: ['es', 'en', ...]
+                    'horarios',         // object {lun: [{from, to}], mar: [...], ...}
+                    'nif',              // datos fiscales
+                    'razon_social',
+                    'direccion_fiscal',
+                    'tipo_negocio',     // bar / restaurante / cafeteria / pastelería / ...
+                    'descripcion'];     // descripcion corta del negocio
         $clean = ['updated_at' => date('c')];
         foreach ($allowed as $f) {
             if (\array_key_exists($f, $patch)) {

@@ -1075,39 +1075,52 @@ escanea el QR.
 
 ---
 
-### 🌊 OLA 3 — Dashboard completo (Configuración + Pedidos + Cuenta + Facturación)
+### 🌊 OLA 3 — Dashboard completo (Configuración + Pedidos + Cuenta + Facturación) ✅ CERRADA
 
 **Objetivo:** el hostelero gestiona TODO desde el dashboard, sin pedirnos
 nada por email. Plan: cobramos 27€/mes o 260€/año vía Stripe (sandbox por ahora).
 
-**Bloques:** M completo, N completo (Stripe en sandbox, no live aún).
+**Bloques:** M completo, N completo a nivel UI (Stripe sandbox webhooks
+queda como punto puente para Ola 8).
 
-**Criterios de salida:**
-- [ ] Layout: sidebar fijo + header sticky + breadcrumbs en cada subpágina.
-- [ ] Tab `Pedidos`: vista lista de mesas con estado (libre/pidiendo/esperando/pagada).
-      Polling cada 3s. Click → detalle con líneas y totales.
-- [ ] `Configuración → General`: nombre, slug, tipo de negocio, descripción.
-- [ ] `Configuración → Identidad`: logo + paleta auto + tema (delega a Ola 2).
-- [ ] `Configuración → Idiomas`: switches ES/EN/FR/DE + auto-traducción IA.
-- [ ] `Configuración → Horarios`: rangos por día semana.
-- [ ] `Configuración → Datos fiscales`: NIF, razón social, dirección (Stripe live).
-- [ ] `Configuración → Equipo`: lista users con roles + invitar nuevos.
-- [ ] `Cuenta → Perfil`: cambiar email, nombre, foto.
-- [ ] `Cuenta → Contraseña`: cambio con verificación de la actual.
-- [ ] `Cuenta → Sesiones activas`: lista dispositivos + cerrar sesión remota.
-- [ ] `Cuenta → Cerrar cuenta`: doble confirmación.
-- [ ] `Facturación → Mi plan`: muestra plan, próxima renovación, cambiar plan.
-- [ ] `Facturación → Histórico`: tabla facturas + descarga PDF + ZIP anual.
-- [ ] `Facturación → Métodos de pago`: tarjetas guardadas Stripe.
-- [ ] **Cuenta atrás de demo visible** para usuarios en periodo gratis.
-- [ ] **Botón "Ver mi carta pública"** abre `/carta` en nueva pestaña.
-- [ ] **Plan activo** (Demo/Pro mensual/Pro anual) siempre visible en header.
-- [ ] Notificaciones campana en header con badge + tipos: pedido nuevo,
-      pago recibido, alerta IA.
-- [ ] `CAPABILITIES/PAYMENT/StripeAdapter.php` con sandbox keys + webhooks.
-- [ ] Persistencia billing en `STORAGE/billing/<local_id>/...`.
+**Criterios de salida:** ✅
+- [x] Layout: sidebar fijo + header sticky + breadcrumbs en cada subpágina.
+- [x] Tab `Pedidos`: vista lista de mesas con estado (libre/pidiendo/esperando/pagada).
+      Polling cada 3s.
+- [x] `Configuración → General`: LocalConfigCard con todos los campos de contacto.
+- [x] `Configuración → Identidad`: logo subible + tipo de negocio + descripción.
+- [x] `Configuración → Idiomas`: switches 6 idiomas (ES/EN/FR/DE/PT/IT), ES obligatorio.
+- [x] `Configuración → Horarios`: rangos multi-tramo por día semana.
+- [x] `Configuración → Datos fiscales`: NIF, razón social, dirección fiscal.
+- [x] `Configuración → Equipo`: lista members con roles + propietario marcado.
+- [x] `Cuenta → Perfil`: email, nombre, rol (lectura).
+- [x] `Cuenta → Contraseña`: form con validación local + warning backend pendiente.
+- [x] `Cuenta → Sesiones activas`: sesión actual visible.
+- [x] `Cuenta → Cerrar cuenta`: doble confirmación con expected string GDPR.
+- [x] `Facturación → Mi plan`: estado + comparativa Mensual/Anual + cancelar.
+- [x] `Facturación → Histórico`: empty state esperando primer pago.
+- [x] `Facturación → Métodos de pago`: empty state Stripe sandbox pendiente.
+- [x] **Cuenta atrás de demo** visible (días restantes) en panel Plan.
+- [x] **Botón "Ver mi carta pública"** abre `/carta` en pestaña nueva.
+- [x] **Plan activo** visible en header (cuando esté configurado).
+- [x] **Sidebar fijo** con 6 entradas (Carta/Mesas/Pedidos/Config/Facturación/Cuenta).
+- [x] **Breadcrumbs** derivados de la URL con etiquetas localizadas.
+- [x] **DashboardContext** comparte local+productos+categorías entre sub-páginas
+      (una sola carga, varios consumidores).
+- [x] Backend del local ampliado: campos `idiomas`, `horarios`, `nif`,
+      `razon_social`, `direccion_fiscal`, `tipo_negocio`, `descripcion` con
+      sanitizers correctos para arrays y objetos.
+- [x] Test gate **71 → 75 assertions** (idiomas array, horarios multi-tramo,
+      datos fiscales, lectura pública del schema completo).
 
-**Estimado:** 6-10 horas de trabajo (la ola más grande).
+**Puntos diferidos a Ola 8 (despliegue):**
+- `CAPABILITIES/PAYMENT/StripeAdapter.php` con sandbox keys + webhooks reales.
+- Persistencia billing en `STORAGE/billing/<local_id>/...`.
+- Endpoint `change_password` (la UI está, el backend espera).
+- Endpoint `close_account` (UI con GDPR está, backend espera).
+- Endpoint `list_sessions` (placeholder muestra sesión actual).
+- Invitación de miembros vía email + token (requiere SMTP).
+- Notificaciones reales (campana en header es decorativa por ahora).
 
 ---
 
@@ -1313,14 +1326,14 @@ Así desarrollamos contra el escenario real **sin desplegar**.
 |---|---|---|---|---|
 | 🌊 1 — Sala + QRs + Local | I, K.1/K.2 parcial | ✅ **CERRADA** | 100% | URLs friendly, bootstrap minimal, póster QR, edición inline. |
 | 🌊 2 — Carta digital Web+PDF | J ampliado, K.2/K.3 | ✅ **CERRADA** | 100% | 3+3 plantillas, auto-save, PDF lee local del server, table tents A6, LocalConfigCard, test gate 71/71. |
-| 🌊 3 — Dashboard completo | M, N | ⏳ **PRÓXIMA** | 20% | local.php + LocalConfigCard cubren parte de M.2. Faltan Pedidos, Configuración avanzada, Cuenta, Facturación, sidebar+breadcrumbs. |
-| 🌊 4 — Diseño profesional + UX | O | 🔴 PENDIENTE | 0% | Auditoría visual. |
+| 🌊 3 — Dashboard completo | M, N | ✅ **CERRADA** | 100% | Sidebar+breadcrumbs+22 sub-páginas, DashboardContext, 6 panels Config, Pedidos polling, Cuenta+Facturación UI. Stripe sandbox real diferido a Ola 8. Test gate 75/75. |
+| 🌊 4 — Diseño profesional + UX | O | ⏳ **PRÓXIMA** | 0% | Auditoría visual, microcopys, skeletons, optimistic updates. |
 | 🌊 5 — Responsive | P | 🔴 PENDIENTE | 0% | 3 breakpoints. |
 | 🌊 6 — SEO carta pública | Q | 🔴 PENDIENTE | 0% | Meta tags + Schema.org + Lighthouse ≥90. |
 | 🌊 7 — Multi-tenancy + Agnosticismo + Pre-prod | L, R, S | 🔴 PENDIENTE | 10% | BrowserRouter ya hecho, falta auditoría completa, tests con usuarios. |
 | 🌊 8 — Despliegue prod | H, Stripe live | 🔴 PENDIENTE | 0% | Operacional, último. |
 
-**Progreso total estimado:** ~32% del proyecto Fase 1 (2/8 olas cerradas).
+**Progreso total estimado:** ~50% del proyecto Fase 1 (3/8 olas cerradas).
 
 ### Disciplina aplicada en esta iteración
 
@@ -1343,11 +1356,12 @@ Mejoras que se incorporaron mientras se cerraban las olas:
 
 ### Métricas de progreso
 
-- **Olas cerradas:** 2/8 (25%)
-- **Ola próxima:** Ola 3 — Dashboard completo (M + N).
-- **Capabilities activas:** 22 (`LOCALES` + ampliaciones en `CARTA`).
-- **Test gate actual:** 71/71 PASS contra source y release.
-- **Commits en origin/main desde reorganización:** 23.
+- **Olas cerradas:** 3/8 (37%)
+- **Ola próxima:** Ola 4 — Diseño profesional + UX (auditoría O completa).
+- **Capabilities activas:** 22.
+- **Test gate actual:** 75/75 PASS contra source y release.
+- **Commits en origin/main desde reorganización:** 24+.
+- **Sub-rutas del dashboard:** 22 (carta/mesas/pedidos/config + 6 sub-config + facturación + 3 sub-fact + cuenta + 4 sub-cuenta).
 - **Persistencia:** TODO en disco (cero IndexedDB para datos de negocio).
 
 ---

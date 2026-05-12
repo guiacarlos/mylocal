@@ -9,6 +9,14 @@ import type { SynaxisClient } from '../synaxis/SynaxisClient';
 export type WebTemplate = 'moderna' | 'minimal' | 'premium';
 export type WebColor = 'claro' | 'oscuro' | 'blanco_roto';
 
+export type Idioma = 'es' | 'en' | 'fr' | 'de' | 'pt' | 'it';
+
+export interface HorarioTramo { from: string; to: string }
+export type DiaSemana = 'lun' | 'mar' | 'mie' | 'jue' | 'vie' | 'sab' | 'dom';
+export type Horarios = Partial<Record<DiaSemana, HorarioTramo[]>>;
+
+export interface LocalMember { user_id: string; role: string }
+
 export interface LocalInfo {
     id: string;
     nombre: string;
@@ -25,6 +33,17 @@ export interface LocalInfo {
     web_template?: WebTemplate;
     web_color?: WebColor;
     copyright?: string;
+    // Configuracion ampliada (Ola 3)
+    idiomas?: Idioma[];
+    horarios?: Horarios;
+    nif?: string;
+    razon_social?: string;
+    direccion_fiscal?: string;
+    tipo_negocio?: string;
+    descripcion?: string;
+    members?: LocalMember[];
+    owner_user_id?: string;
+    default_carta_id?: string;
     updated_at?: string;
 }
 
