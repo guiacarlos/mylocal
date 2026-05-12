@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Routes, Route, Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 import { Home } from './pages/Home';
@@ -42,75 +42,66 @@ function PublicLayout() {
 }
 
 /**
- * Layout para rutas que requieren sesion.
- * Solo aqui disparamos las validaciones de token y usuario.
+ * PrivateLayout - guard de autenticacion para /dashboard, /checkout, /sistema/tpv.
+ *
+ * Hace la verificacion de sesion UNA SOLA VEZ al montar el guard. No
+ * re-fetcha en cada cambio de URL (eso causaba la sensacion de "recarga
+ * en cada click").
+ *
+ * NO renderiza UI propia (cabeceras, botones de logout): cada child route
+ * tiene su layout. El guard solo bloquea hasta validar y deja pasar via Outlet.
+ *
+ * Reglas de redireccion segun rol — se evaluan cuando el rol o la ruta
+ * cambian, pero sin re-fetchear la sesion.
  */
 function PrivateLayout() {
     const { client, ready } = useSynaxis();
     const navigate = useNavigate();
     const location = useLocation();
     const [checking, setChecking] = useState(true);
-    const [user, setUser] = useState<any>(null);
+    const [role, setRole] = useState<string | null>(null);
+    const checkedRef = useRef(false);
 
+    // Verificación inicial de sesión — UNA sola vez aunque cambie la URL
     useEffect(() => {
         if (!ready) return;
+        if (checkedRef.current) return;
+        checkedRef.current = true;
+
         (async () => {
             try {
-                setChecking(true);
-                console.log('[PrivateLayout] Verificando sesión...');
                 await ensureCsrfToken(client);
-                console.log('[PrivateLayout] CSRF asegurado. Token en cliente:', !!client['token']);
                 const currentUser = await getCurrentUser(client);
-                console.log('[PrivateLayout] Resultado getCurrentUser:', currentUser ? 'Usuario encontrado' : 'NULO');
-                
                 if (!currentUser) {
-                    console.warn('[PrivateLayout] Sin sesión activa. Redirigiendo a login...');
                     navigate('/?login=1', { replace: true });
                 } else {
-                    setUser(currentUser);
-                    console.log('[PrivateLayout] Sesión válida. Rol:', currentUser.role);
-                    const role = (currentUser.role || '').toLowerCase();
-                    if (['sala', 'cocina', 'camarero'].includes(role) && !location.pathname.startsWith('/sistema')) {
-                        console.log('[PrivateLayout] Rol staff detectado. Forzando TPV.');
-                        navigate('/sistema/tpv', { replace: true });
-                    } else if (!['sala', 'cocina', 'camarero'].includes(role) && location.pathname.startsWith('/sistema')) {
-                        console.log('[PrivateLayout] Rol admin en zona staff. Redirigiendo a Dashboard.');
-                        navigate('/dashboard', { replace: true });
-                    }
+                    setRole((currentUser.role || '').toLowerCase());
                 }
             } catch (err) {
-                console.error('[PrivateLayout] Error crítico en verificación:', err);
+                console.error('[PrivateLayout] Error verificando sesión:', err);
                 navigate('/?login=1', { replace: true });
             } finally {
                 setChecking(false);
             }
         })();
-    }, [client, ready, navigate, location.pathname]);
+    }, [client, ready, navigate]);
 
-    async function handleLogout() {
-        const { logout } = await import('./services/auth.service');
-        await logout(client);
-        navigate('/', { replace: true });
-    }
+    // Redirección por rol cuando cambia la ruta — SIN re-fetch, solo policy
+    useEffect(() => {
+        if (!role) return;
+        const isStaff = ['sala', 'cocina', 'camarero'].includes(role);
+        const inStaffZone = location.pathname.startsWith('/sistema');
+        if (isStaff && !inStaffZone) {
+            navigate('/sistema/tpv', { replace: true });
+        } else if (!isStaff && inStaffZone) {
+            navigate('/dashboard', { replace: true });
+        }
+    }, [role, location.pathname, navigate]);
 
     if (checking) return <div className="sc-loading">Validando sesión...</div>;
 
-    return (
-        <div className="sc-private-env">
-            <header className="sc-private-header">
-                <div className="sc-private-header__left">
-                    <span className="sc-badge">{user?.role}</span>
-                    <span className="sc-user-name">{user?.name || user?.email}</span>
-                </div>
-                <button onClick={handleLogout} className="sc-btn sc-btn--ghost sc-btn--sm">
-                    Salir
-                </button>
-            </header>
-            <main className="sc-private-content">
-                <Outlet />
-            </main>
-        </div>
-    );
+    // Sin chrome propio: cada child route tiene su layout (DashboardLayout, TPV, ...).
+    return <Outlet />;
 }
 
 export function App() {
