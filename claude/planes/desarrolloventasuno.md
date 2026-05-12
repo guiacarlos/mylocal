@@ -1005,114 +1005,283 @@ profesional, agnóstico, modular y pulido. Subir a producción es la
 ÚLTIMA ola. Subir antes nos retrasa porque cada bug descubierto en
 producción es 10x más caro de arreglar que en local.
 
-Hay **8 olas** de trabajo. Cada una se cierra completa con build
-verde + commit + push antes de pasar a la siguiente.
+**Disciplina de cierre** (actualizado 2026-05-08):
+- Cada ola se cierra al 100% antes de pasar a la siguiente.
+- Si un ítem depende de una ola futura, se MUEVE a esa ola en el plan,
+  no se deja "pendiente con asterisco".
+- Si una decisión arquitectural de una ola futura ayuda a la actual,
+  se aplica AHORA para no rehacer trabajo después.
+- Build verde + test gate + commit + push antes de marcar una ola cerrada.
 
-### 🌊 OLA 1 — Sala configurable (estancias + mesas + QRs)
+Cada ola lleva:
+- **Objetivo**: para qué sirve.
+- **Bloques**: secciones del checklist 7.
+- **Criterios de salida**: lista exacta de lo que debe estar marcado [x]
+  antes de declararla cerrada. Esto es el contrato.
 
-**Objetivo:** el hostelero configura zonas y mesas en menos de 1 minuto.
+---
 
-Trabajo:
-- Bloque **I** completo (Estancias + Mesas).
-- Sub-tareas K.1 y K.2 (centro de impresión QRs).
+### 🌊 OLA 1 — Sala configurable (estancias + mesas + QRs + local) ✅ CERRADA
 
-Estado al cerrar la ola: dashboard muestra "Mi sala: 3 zonas, 24 mesas",
-botón "Descargar 2 hojas de QRs" funciona en local.
+**Objetivo:** el hostelero configura su local, zonas y mesas. Tiene QRs.
 
-### 🌊 OLA 2 — Tema visual
+**Bloques:** I (completo), K.1+K.2 (parciales).
 
-**Objetivo:** carta pública con identidad propia, 4 estéticas a elegir.
+**Criterios de salida:** ✅
+- [x] CRUD de zonas y mesas server-side (AxiDB persistente).
+- [x] Bootstrap minimal automático (1 zona "Sala" + 1 mesa "1" al crear).
+- [x] SalaMapa con edición inline (añadir/renombrar/borrar zonas).
+- [x] Datos del local persistidos (nombre, teléfono, dirección, redes).
+- [x] URLs friendly `/carta/<zona>/mesa-<n>`.
+- [x] Póster A4 marketing del QR principal con logo MyLocal por defecto.
+- [x] Hoja A4 con QRs por mesa imprimible.
 
-Trabajo:
-- Bloque **J** completo (Selector de Temas).
-- Aplicar el tema activo al PDF de la carta (K.3).
+**Movido a Olas posteriores:**
+- Estado mesa en tiempo real (libre/pidiendo/...) → **Ola 3 (Pedidos)**.
+- Importar/exportar mesas CSV → **Ola 3 (Configuración avanzada)** o drop.
 
-Estado al cerrar la ola: el hostelero previsualiza su carta en los 4
-temas y aplica uno con un clic.
+---
 
-### 🌊 OLA 3 — Dashboard completo y zona del cliente
+### 🌊 OLA 2 — Carta digital pública (Web + PDF) 🟡 EN CURSO
 
-**Objetivo:** el hostelero gestiona TODO desde el dashboard. No
-necesita pedirnos nada por email.
+**Objetivo:** el hostelero elige plantilla y color de su carta digital.
+Lo que ve en preview es lo que sale en PDF y en /carta cuando el cliente
+escanea el QR.
 
-Trabajo:
-- Bloque **M** completo (Dashboard de configuración).
-- Bloque **N** completo (Suscripción + Facturas + Mi Cuenta).
+**Bloques:** J completo (ampliado/sustituido), K.2 cerrar, K.3 completo.
 
-Estado al cerrar la ola: tabs Carta / Mesas / Configuración /
-Facturación funcionan a nivel UI y AxiDB. Sin Stripe live aún (mock
-local con Stripe test).
+**Criterios de salida:**
+- [x] 3 plantillas Web (moderna/minimal/premium) × 3 colores (claro/oscuro/blanco roto).
+- [x] 3 plantillas PDF (minimalista/clásica/moderna) × 5 colores.
+- [x] Imagen del local subible (`/MEDIA/local/<id>/`) con defaults bonitos.
+- [x] Auto-save en panel Web.
+- [x] Carta pública `/carta/...` renderiza con plantilla y color elegidos.
+- [x] Lecturas públicas sin sesión (`list_productos`, `get_local`, etc).
+- [ ] **`generate_pdf_carta` backend usa el tema/color elegido** (K.3).
+- [ ] **Sangrado 3mm + marcas de corte** en PDFs imprimibles (K.3).
+- [ ] **`generate_table_tents`** — PDF multi-página A6, un display por mesa (K.2).
+- [ ] **Editor de redes sociales y copyright** en dashboard (UI para
+      instagram/facebook/tiktok/whatsapp/copyright que ya tienen backend).
+- [ ] **Editor del tagline del local** (campo ya en backend, falta UI).
+- [ ] Test gate ampliado: assertion de `web_template`/`web_color` persistidos.
+
+**Cierre estimado:** 1-2 horas de trabajo.
+
+---
+
+### 🌊 OLA 3 — Dashboard completo (Configuración + Pedidos + Cuenta + Facturación)
+
+**Objetivo:** el hostelero gestiona TODO desde el dashboard, sin pedirnos
+nada por email. Plan: cobramos 27€/mes o 260€/año vía Stripe (sandbox por ahora).
+
+**Bloques:** M completo, N completo (Stripe en sandbox, no live aún).
+
+**Criterios de salida:**
+- [ ] Layout: sidebar fijo + header sticky + breadcrumbs en cada subpágina.
+- [ ] Tab `Pedidos`: vista lista de mesas con estado (libre/pidiendo/esperando/pagada).
+      Polling cada 3s. Click → detalle con líneas y totales.
+- [ ] `Configuración → General`: nombre, slug, tipo de negocio, descripción.
+- [ ] `Configuración → Identidad`: logo + paleta auto + tema (delega a Ola 2).
+- [ ] `Configuración → Idiomas`: switches ES/EN/FR/DE + auto-traducción IA.
+- [ ] `Configuración → Horarios`: rangos por día semana.
+- [ ] `Configuración → Datos fiscales`: NIF, razón social, dirección (Stripe live).
+- [ ] `Configuración → Equipo`: lista users con roles + invitar nuevos.
+- [ ] `Cuenta → Perfil`: cambiar email, nombre, foto.
+- [ ] `Cuenta → Contraseña`: cambio con verificación de la actual.
+- [ ] `Cuenta → Sesiones activas`: lista dispositivos + cerrar sesión remota.
+- [ ] `Cuenta → Cerrar cuenta`: doble confirmación.
+- [ ] `Facturación → Mi plan`: muestra plan, próxima renovación, cambiar plan.
+- [ ] `Facturación → Histórico`: tabla facturas + descarga PDF + ZIP anual.
+- [ ] `Facturación → Métodos de pago`: tarjetas guardadas Stripe.
+- [ ] **Cuenta atrás de demo visible** para usuarios en periodo gratis.
+- [ ] **Botón "Ver mi carta pública"** abre `/carta` en nueva pestaña.
+- [ ] **Plan activo** (Demo/Pro mensual/Pro anual) siempre visible en header.
+- [ ] Notificaciones campana en header con badge + tipos: pedido nuevo,
+      pago recibido, alerta IA.
+- [ ] `CAPABILITIES/PAYMENT/StripeAdapter.php` con sandbox keys + webhooks.
+- [ ] Persistencia billing en `STORAGE/billing/<local_id>/...`.
+
+**Estimado:** 6-10 horas de trabajo (la ola más grande).
+
+---
 
 ### 🌊 OLA 4 — Diseño profesional y UX
 
-**Objetivo:** el producto se ve profesional y compite visualmente con
+**Objetivo:** el producto se ve profesional. Compite visualmente con
 Last.app y Qamarero.
 
-Trabajo:
-- Bloque **O** completo (auditoría de cada pantalla del dashboard).
-- Microcopys revisados, mensajes de error humanos, estados de carga
-  con esqueletos.
-- Cumplimiento estricto de `artifacts/skilldashboard.md` y
-  `artifacts/skilldiseno.md`.
+**Bloques:** O completo.
 
-Estado al cerrar la ola: cada pantalla pasa la regla "si lo enseño en
-una demo a un cliente real, no me da vergüenza".
+**Criterios de salida:**
+- [ ] Captura de cada pantalla del dashboard comparada con Last.app/Qamarero.
+- [ ] Microcopys: ningún botón "Submit/OK/Guardar" genérico. Usar verbo+objeto.
+- [ ] Mensajes de error humanos en castellano (sin "Error 500").
+- [ ] Mensajes de éxito breves y celebrativos.
+- [ ] Skeleton screens en listas (categorías, productos, pedidos).
+- [ ] Loading inline en botones (texto + spinner pequeño).
+- [ ] Optimistic updates en CRUD.
+- [ ] Auditoría CSS: ningún color literal `#XXXXXX` fuera de variables.
+- [ ] Auditoría tipografía: 4 tamaños máximo, 3 weights máximo.
+- [ ] Animaciones: transiciones <150ms ease-out, hover táctil.
+- [ ] Sin animaciones decorativas (no parallax).
 
-### 🌊 OLA 5 — Responsive completo (mobile + tablet + desktop)
+**Estimado:** 4-6 horas.
 
-**Objetivo:** funciona perfecto en móvil. No es un afterthought.
+---
 
-Trabajo:
-- Bloque **P** completo (audit responsive de cada pantalla).
-- Tres breakpoints validados: 375px, 768px, 1280px.
-- Touch targets ≥ 44px en móvil.
-- Carta pública mobile-first verificada con clientes finales reales
-  (3-4 testers escaneando QR con móvil real).
+### 🌊 OLA 5 — Responsive (mobile + tablet + desktop)
 
-Estado al cerrar la ola: cualquier pantalla funciona y se ve bien en
-los 3 anchos.
+**Objetivo:** funciona perfecto en móvil. La mitad de hosteleros lo usarán
+solo desde el móvil.
+
+**Bloques:** P completo.
+
+**Criterios de salida:**
+- [ ] Cada pantalla del dashboard probada en 375px, 768px, 1280px.
+- [ ] Sin scroll horizontal en ningún tamaño.
+- [ ] Touch targets ≥ 44px en móvil.
+- [ ] Inputs altura ≥ 44px (evita zoom auto iOS).
+- [ ] Sidebar oculto tras botón hamburguesa en móvil.
+- [ ] Header sticky con info condensada en móvil.
+- [ ] Tabs internas scroll horizontal en pantallas estrechas.
+- [ ] Tablas largas → cards apiladas en móvil.
+- [ ] Formularios → labels arriba en móvil (no a la izquierda).
+- [ ] Modales → bottom-sheet en móvil, centrados en desktop.
+- [ ] 3-4 testers reales escanean QR con su móvil: tiempo medio "ver
+      carta" < 3s en red 3G; "añadir plato al carrito" < 60s.
+
+**Estimado:** 4-6 horas.
+
+---
 
 ### 🌊 OLA 6 — SEO + carta pública optimizada
 
-**Objetivo:** las cartas públicas se indexan bien y cargan rápido. Es
-gratis tráfico orgánico.
+**Objetivo:** las cartas públicas se indexan en Google. Tráfico orgánico
+gratis a cada cliente que tengamos.
 
-Trabajo:
-- Bloque **Q** completo (meta tags, Schema.org, sitemap, robots,
-  performance).
-- Lighthouse ≥ 90 en mobile para `<slug>.mylocal.es`.
-- Web Vitals: LCP < 2.5s, CLS < 0.1, INP < 200ms.
+**Bloques:** Q completo.
 
-Estado al cerrar la ola: una carta pública pasa el Lighthouse audit
-con score ≥ 90 en mobile.
+**Criterios de salida:**
+- [ ] `<title>` dinámico: "Carta de [Nombre] - MyLocal".
+- [ ] `<meta description>` con local + 3 platos destacados.
+- [ ] `<meta property="og:image">` con logo o foto destacada.
+- [ ] `<link rel="canonical">` apuntando a `<slug>.mylocal.es/carta`.
+- [ ] Schema.org `Restaurant` con dirección, teléfono, horarios.
+- [ ] Schema.org `Menu` con `MenuSection` + `MenuItem`.
+- [ ] Validar con Google Rich Results Test.
+- [ ] `sitemap.xml` dinámico con subdominios activos.
+- [ ] `robots.txt` permite cartas públicas, prohíbe `/dashboard|sistema|acide`.
+- [ ] LCP < 2.5s en mobile 3G.
+- [ ] CLS < 0.1.
+- [ ] INP < 200ms.
+- [ ] Lighthouse mobile ≥ 90 en una carta real.
+- [ ] `<link rel="preload">` para fuentes locales.
+- [ ] Imágenes `loading="lazy"` excepto primer viewport.
+- [ ] WebP/AVIF cuando el navegador lo soporta.
 
-### 🌊 OLA 7 — Agnosticismo y pre-producción (verificación local)
+**Estimado:** 3-5 horas.
 
-**Objetivo:** el código es agnóstico de servidor — funciona en cualquier
-subdominio, subdirectorio, IP, puerto. Sin rutas absolutas.
+---
 
-Trabajo:
-- Bloque **R** completo (audit agnosticismo).
-- Bloque **S** completo (pre-producción local).
+### 🌊 OLA 7 — Multi-tenancy + Agnosticismo + Pre-producción
 
-Estado al cerrar la ola: 3 testers reales (no técnicos) hacen el
-onboarding completo en local sin ayuda. Tiempo medio < 10 minutos.
-Test gate ampliado: > 80 assertions cubren todo el dashboard.
+**Objetivo:** el código es agnóstico (funciona en cualquier subdominio/IP),
+los datos están aislados por local, y un tester real puede onboardearse
+solo en menos de 10 minutos.
 
-### 🌊 OLA 8 — Despliegue producción Hostinger + Cloudflare
+**Bloques:** L completo (multi-tenancy), R completo (agnosticismo),
+S completo (pre-prod).
 
-**Cuándo se hace:** SOLO cuando las olas 1-7 estén cerradas con [x].
+**Criterios de salida:**
 
-Trabajo:
-- Bloque **H** completo (Cloudflare + Hostinger + subdominios).
-- Bloque **L** completo (multi-tenancy seguro).
-- Configuración de secretos en producción (api keys via panel admin,
-  no commiteadas).
-- Stripe live + datos fiscales reales en legales.
+Multi-tenancy (L):
+- [ ] Función global `get_current_local_id()` que combina subdomain +
+      header `X-Local-Id`.
+- [ ] Filtro automático por `local_id` en lecturas/escrituras.
+- [ ] Bloquear cross-local: admin de A no puede tocar datos de B
+      (enforce `LocalModel::userCanAccess` en cada handler).
+- [ ] `LocalSwitcher` UI extendido (avatar + enlace `<slug>.mylocal.es`).
+- [ ] Endpoint `list_my_locales` filtrado por usuario autenticado.
 
-Estado al cerrar la ola: la primera venta real. Carta digital del
-cliente operativa en `<slug>.mylocal.es` con todo lo de las olas 1-7
-funcionando en producción.
+Agnosticismo (R):
+- [ ] grep `/acide/` → solo en `SynaxisClient.apiUrl` (configurable).
+- [ ] grep `/MEDIA/` en JSX → ninguna ruta absoluta hardcoded.
+- [ ] grep `http://|https://` → solo URLs externas explícitas (Gemini, Stripe).
+- [ ] No `window.location.origin + '/...'` para enlaces internos.
+- [ ] `vite.config.ts` con `base: './'`.
+- [ ] `router.php` con `__DIR__` en todos los includes.
+- [ ] Probar mover `release/` a otra carpeta y arrancar PHP.
+- [ ] Probar montar SPA en `/`, `/app/`, `/cliente-x/` — mismo build funciona.
+
+Pre-prod (S):
+- [ ] Test gate ampliado: >80 assertions cubren dashboard, no solo login+OCR.
+- [ ] `test_dashboard.php` con: crear local, configurar mesas, cambiar tema,
+      generar PDFs, gestionar suscripción mock.
+- [ ] Build aborta si cualquiera falla.
+- [ ] 3 hosteleros amigos hacen onboarding completo en local sin ayuda.
+- [ ] Métrica: tiempo medio < 10 min del registro al QR descargado.
+- [ ] Métrica: 0 momentos de "no sé qué hacer aquí".
+- [ ] Seed de local "demo" con 30 productos, 5 categorías, 3 zonas, 12 mesas.
+- [ ] `docs/DEPLOY.md` con procedimiento exacto para Ola 8.
+- [ ] `docs/RUNBOOK.md` con incidencias frecuentes.
+- [ ] `docs/BACKUP.md` con backup de `STORAGE/` en Hostinger.
+- [ ] Plan de rollback documentado.
+
+**Estimado:** 5-8 horas.
+
+---
+
+### 🌊 OLA 8 — Despliegue producción Hostinger + Cloudflare + Stripe live
+
+**Cuándo:** SOLO cuando las olas 1-7 estén cerradas con [x].
+
+**Bloques:** H completo (Cloudflare + Hostinger), Stripe live final.
+
+**Criterios de salida:**
+
+Cloudflare:
+- [ ] `mylocal.es` añadido a Cloudflare como sitio.
+- [ ] Nameservers en Hostinger apuntan a Cloudflare.
+- [ ] Status "Active" en Cloudflare tras propagación.
+- [ ] Registro `A @` → IP Hostinger (proxied).
+- [ ] Registro `A *` → wildcard, misma IP (proxied).
+- [ ] SSL/TLS modo Full (strict).
+- [ ] Origin Certificate generado e instalado en Hostinger.
+- [ ] Page Rule cache 1 mes para `*.mylocal.es/MEDIA/*`.
+- [ ] Page Rule cache 1 año para `*.mylocal.es/assets/*`.
+- [ ] Page Rule bypass cache para `*.mylocal.es/acide/*`.
+
+Hostinger:
+- [ ] `release/` subido a `public_html`.
+- [ ] Origin Certificate instalado en el dominio.
+- [ ] PHP ≥ 8.2 con `openssl`, `curl`, `fileinfo`, `gd`, `mbstring`, `intl`.
+- [ ] `STORAGE/` y `MEDIA/` con permisos 755, usuario PHP.
+- [ ] Cron 1 min: `php /home/<user>/public_html/axidb/plugins/jobs/worker_run.php`.
+- [ ] `health_check` responde 200 desde `https://mylocal.es/acide/index.php`.
+
+Subdominios:
+- [ ] Extractor de slug en `router.php` define `CURRENT_LOCAL_SLUG`.
+- [ ] Mismo extractor en `spa/server/index.php`.
+- [ ] Cargar `STORAGE/locales/<slug>.json` automáticamente cada request.
+- [ ] Si slug no existe, redirigir a landing pública `mylocal.es`.
+
+Slug validator (L cierre):
+- [ ] Lista reservadas: admin, dashboard, api, app, www, mail, ftp, cpanel,
+      cdn, static, assets, acide, mylocal, demo, test, staging, dev, panel,
+      support, help, docs, blog, shop, store.
+- [ ] Regex `^[a-z][a-z0-9-]{2,30}$`.
+- [ ] Endpoint `validate_slug` con `{available, reason}`.
+- [ ] UI registro con feedback en vivo.
+
+Stripe live:
+- [ ] Live keys configuradas en `STORAGE/options/payment.json` (vía panel admin).
+- [ ] Datos fiscales reales rellenados en páginas legales.
+- [ ] Primera venta real registrada.
+
+**Estimado:** 4-8 horas operacional + testing.
+
+**Estado al cerrar:** Carta digital del primer cliente operativa en
+`<slug>.mylocal.es` con todo lo de las olas 1-7 funcionando en producción.
 
 ---
 
@@ -1132,47 +1301,48 @@ Así desarrollamos contra el escenario real **sin desplegar**.
 
 ---
 
-## 10.1 Estado actual de las Olas (snapshot 2026-05-07)
+## 10.1 Estado actual de las Olas (snapshot 2026-05-08)
 
-| Ola | Bloques | Estado | Notas |
-|---|---|---|---|
-| 🌊 1 — Sala configurable + QRs | I, K.1 (parcial), K.2 | ✅ **CERRADA** | Commits `958ac2b`, `bdcfb29`, `96c726a`, `9cd9e64`, `fa39b7c` en origin/main. Bootstrap minimal (1 zona "Sala" + 1 mesa) en lugar del wizard de presets. URLs friendly `/carta/<zona>/mesa-<n>`. QR sheet por mesas + póster de marca del local. |
-| 🌊 2 — Tema visual (4 estilos) | J | ⏳ **PRÓXIMA** | Pendiente arrancar. Ver bloque J completo. K.3 (tema activo en PDF) entra aquí. |
-| 🌊 3 — Dashboard completo | M, N | 🔴 PENDIENTE | M.2 Configuración del local: parcialmente cubierto por `local.php` (nombre, teléfono). Falta logo, slug, fiscales, equipo, idiomas, horarios. |
-| 🌊 4 — Diseño profesional + UX | O | 🔴 PENDIENTE | Auditoría pantalla por pantalla con captures contra Last.app/Qamarero. |
-| 🌊 5 — Responsive completo | P | 🔴 PENDIENTE | 3 breakpoints: 375 / 768 / 1280 px. |
-| 🌊 6 — SEO + carta pública | Q | 🔴 PENDIENTE | Lighthouse ≥ 90 mobile en `<slug>.mylocal.es`. |
-| 🌊 7 — Agnosticismo + pre-prod | R, S | 🔴 PENDIENTE | Test gate > 80 assertions, 3 testers reales. |
-| 🌊 8 — Despliegue Hostinger + CF | H, L | 🔴 PENDIENTE | El último, según anti-patrón documentado. |
+| Ola | Bloques | Estado | % | Notas |
+|---|---|---|---|---|
+| 🌊 1 — Sala + QRs + Local | I, K.1/K.2 parcial | ✅ **CERRADA** | 100% | URLs friendly, bootstrap minimal, póster QR, edición inline. |
+| 🌊 2 — Carta digital Web+PDF | J ampliado, K.2 cierre, K.3 | 🟡 **EN CURSO** | 70% | 3+3 plantillas, auto-save, carta pública sin sesión. Faltan ítems del bloque "Criterios de salida" en sección 10. |
+| 🌊 3 — Dashboard completo | M, N | 🔴 PENDIENTE | 15% | local.php existe, faltan TODAS las pantallas Configuración/Pedidos/Cuenta/Facturación. |
+| 🌊 4 — Diseño profesional + UX | O | 🔴 PENDIENTE | 0% | Auditoría visual. |
+| 🌊 5 — Responsive | P | 🔴 PENDIENTE | 0% | 3 breakpoints. |
+| 🌊 6 — SEO carta pública | Q | 🔴 PENDIENTE | 0% | Meta tags + Schema.org + Lighthouse ≥90. |
+| 🌊 7 — Multi-tenancy + Agnosticismo + Pre-prod | L, R, S | 🔴 PENDIENTE | 10% | BrowserRouter ya hecho, falta auditoría completa, tests con usuarios. |
+| 🌊 8 — Despliegue prod | H, Stripe live | 🔴 PENDIENTE | 0% | Operacional, último. |
 
-### Trabajo extra fuera del plan original (iteración 2026-05-05/07)
+**Progreso total estimado:** ~25% del proyecto Fase 1.
 
-Aparecieron mejoras importantes que no estaban en el roadmap inicial pero
-encajan en la filosofía del proyecto:
+### Disciplina aplicada en esta iteración
 
-- ✅ **Refactor LOGIN a `CAPABILITIES/LOGIN/`** (sección 9.6) — login bloqueado, futuras features no lo tocan.
-- ✅ **`LocalQrPoster`** (extra K.2) — póster A4 de marketing con nombre+teléfono del local.
-- ✅ **URLs friendly + BrowserRouter** (sección 9.7) — `/dashboard` limpio, `/carta/terraza/mesa-10` identificativo.
-- ✅ **Servidor IA propio `ai.miaplic.com`** (sección 9.8) — Gemma 4 E2B vía llama.cpp, eliminando dependencia y cuotas de Gemini.
-- ✅ **Pipeline OCR cascada** (sección 9.8) — Tesseract → Gemma 4 → Gemini fallback.
-- ✅ **UX review con botones en header** (sección 9.9).
-- ✅ **Test gate**: 31 → 50 → 64 assertions, build aborta si rompe.
+A partir del 2026-05-08, el plan se ejecuta con **ola-a-ola completa**:
+no se considera una ola cerrada hasta que TODOS sus criterios de salida
+están marcados [x]. Si un ítem depende de una ola futura, se mueve al
+plan de esa ola y se queda eliminado del actual (no "[ ] depende de X").
+
+### Trabajo extra fuera del plan original (iteración 2026-05-05/08)
+
+Mejoras que se incorporaron mientras se cerraban las olas:
+
+- ✅ **Refactor LOGIN a `CAPABILITIES/LOGIN/`** — login bloqueado.
+- ✅ **`LocalQrPoster`** — póster A4 de marketing con nombre+teléfono.
+- ✅ **URLs friendly + BrowserRouter** — `/dashboard` limpio, `/carta/terraza/mesa-10`.
+- ✅ **Servidor IA propio `ai.miaplic.com`** — Gemma 4 E2B vía llama.cpp.
+- ✅ **Pipeline OCR cascada** — Tesseract → Gemma 4 → Gemini fallback.
+- ✅ **Persistencia AxiDB jerárquica** — `local → carta → categoría → producto` server-side.
+- ✅ **Lecturas públicas** — la carta digital se sirve sin sesión.
 
 ### Métricas de progreso
 
-- **Olas cerradas**: 1/8 (12.5%)
-- **Olas próximas (siguiente sprint)**: 1 (Ola 2 — Tema visual)
-- **Capabilities activas**: 21 (ver `CAPABILITIES/`)
-- **Test gate actual**: 64/64 PASS contra `release/` y `source/`
-- **Commits en origin/main desde reorganización del plan**: 14
-- **Líneas de código añadidas en última iteración**: ~3500 (LOGIN refactor + sala + IA pipeline + UX)
-
-### Próximas decisiones que necesitan al usuario
-
-1. ¿Arrancamos Ola 2 (4 temas visuales) o pausamos para probar Ola 1 en producción local con mock de hostelero real?
-2. Para Ola 2: ¿los 4 temas son los del plan (Minimal / Dark / Classic / Premium) o ajustamos a 3 más realistas?
-3. `php_errors.log` versionado por error sigue en `origin/main` (señalado a GestasAI). ¿Limpio con `git rm --cached`?
-4. Cuando arrancamos Ola 8 (despliegue), ¿plan i18n (`claude/planes/idiomas.md`) entra antes o después del despliegue?
+- **Olas cerradas:** 1/8 (12.5%)
+- **Ola en curso:** Ola 2 (cierre del 70% al 100%)
+- **Capabilities activas:** 22 (`LOCALES` añadida).
+- **Test gate actual:** 64/64 PASS.
+- **Commits en origin/main desde reorganización:** 22.
+- **Persistencia:** TODO en disco (cero IndexedDB para datos de negocio).
 
 ---
 
