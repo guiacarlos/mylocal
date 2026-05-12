@@ -11,6 +11,7 @@
 
 import { useLocation, Link } from 'react-router-dom';
 import { useMemo } from 'react';
+import { Bell, ExternalLink, LogOut } from 'lucide-react';
 import type { LocalInfo } from '../../services/local.service';
 import { localDisplayName } from '../../services/local.service';
 import { buildLocalCartaUrl } from '../../services/sala.service';
@@ -94,16 +95,26 @@ export function DashboardHeader({ local, plan, onLogout }: Props) {
                     target="_blank"
                     rel="noreferrer"
                     className="db-btn db-btn--ghost db-btn--sm"
-                >Ver mi carta pública</a>
+                    title="Abre tu carta pública en una pestaña nueva"
+                >
+                    <ExternalLink size={14} strokeWidth={1.75} />
+                    <span>Ver mi carta</span>
+                </a>
                 <button
-                    className="db-btn db-btn--ghost db-btn--sm"
+                    className="db-btn db-btn--ghost db-btn--sm db-btn--icon"
                     aria-label="Notificaciones"
                     title="Notificaciones (próximamente)"
-                >🔔</button>
+                >
+                    <Bell size={14} strokeWidth={1.75} />
+                </button>
                 <button
                     className="db-btn db-btn--ghost db-btn--sm"
                     onClick={onLogout}
-                >Salir</button>
+                    title="Cerrar sesión"
+                >
+                    <LogOut size={14} strokeWidth={1.75} />
+                    <span>Salir</span>
+                </button>
             </div>
         </header>
     );

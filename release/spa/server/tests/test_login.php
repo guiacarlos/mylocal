@@ -592,6 +592,80 @@ if ($token) {
     if ($cartaId !== '') $post(['action' => 'delete_carta', 'data' => ['id' => $cartaId]], $token);
 }
 
+// ── 9e. Ola 3: campos nuevos de configuracion del local ─────────────────
+echo "\n[9e] Ola 3: dashboard config (idiomas, horarios, fiscal)\n";
+
+if ($token) {
+    // Persistir idiomas como array
+    $r = $post(['action' => 'update_local', 'data' => [
+        'id' => 'l_default',
+        'idiomas' => ['es', 'en', 'fr'],
+    ]], $token);
+    $idiomas = $r['json']['data']['idiomas'] ?? [];
+    check(
+        "update_local persiste idiomas como array (es/en/fr)",
+        is_array($idiomas) && count($idiomas) === 3
+            && in_array('es', $idiomas, true)
+            && in_array('en', $idiomas, true)
+            && in_array('fr', $idiomas, true)
+    );
+
+    // Persistir horarios como objeto anidado
+    $r = $post(['action' => 'update_local', 'data' => [
+        'id' => 'l_default',
+        'horarios' => [
+            'lun' => [['from' => '13:00', 'to' => '16:00'], ['from' => '20:00', 'to' => '23:30']],
+            'mar' => [['from' => '13:00', 'to' => '16:00']],
+        ],
+    ]], $token);
+    $horarios = $r['json']['data']['horarios'] ?? [];
+    check(
+        "update_local persiste horarios con multi-tramo por dia",
+        is_array($horarios)
+            && isset($horarios['lun']) && count($horarios['lun']) === 2
+            && ($horarios['lun'][0]['from'] ?? '') === '13:00'
+    );
+
+    // Persistir datos fiscales
+    $r = $post(['action' => 'update_local', 'data' => [
+        'id' => 'l_default',
+        'nif' => 'B12345678',
+        'razon_social' => 'Bar de Lola S.L.',
+        'direccion_fiscal' => 'Calle Mayor 1, 30001 Murcia',
+        'tipo_negocio' => 'Restaurante',
+        'descripcion' => 'Cocina mediterranea de producto.',
+    ]], $token);
+    $d = $r['json']['data'] ?? [];
+    check(
+        "update_local persiste NIF + razon social + direccion fiscal + tipo + descripcion",
+        ($d['nif'] ?? '') === 'B12345678'
+            && ($d['razon_social'] ?? '') === 'Bar de Lola S.L.'
+            && ($d['tipo_negocio'] ?? '') === 'Restaurante'
+            && mb_strlen($d['descripcion'] ?? '') > 0
+    );
+
+    // get_local devuelve TODO el nuevo schema cuando lee sin sesion (carta publica)
+    $pub = $post(['action' => 'get_local', 'data' => ['id' => 'l_default']]);
+    $pd = $pub['json']['data'] ?? [];
+    check(
+        "get_local publico expone idiomas + horarios + tipo_negocio + descripcion",
+        is_array($pd['idiomas'] ?? null)
+            && is_array($pd['horarios'] ?? null)
+            && isset($pd['tipo_negocio'])
+            && isset($pd['descripcion'])
+    );
+
+    // Cleanup: limpiar campos de test para no dejar basura
+    $post(['action' => 'update_local', 'data' => [
+        'id' => 'l_default',
+        'idiomas' => ['es'],
+        'horarios' => [],
+        'nif' => '',
+        'razon_social' => '',
+        'direccion_fiscal' => '',
+    ]], $token);
+}
+
 // ── 10. Logout invalida el token ────────────────────────────────
 if ($token) {
     $logout = $post(['action' => 'auth_logout'], $token);

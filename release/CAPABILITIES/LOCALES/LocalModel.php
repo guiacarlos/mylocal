@@ -139,7 +139,11 @@ class LocalModel
                     $clean[$f] = self::sanitizeWebTemplate((string) $patch[$f]);
                 } elseif ($f === 'web_color') {
                     $clean[$f] = self::sanitizeWebColor((string) $patch[$f]);
-                } elseif ($f === 'members') {
+                } elseif ($f === 'members' || $f === 'idiomas') {
+                    $clean[$f] = \is_array($patch[$f]) ? $patch[$f] : [];
+                } elseif ($f === 'horarios') {
+                    // Estructura {dia: [{from, to}, ...], ...}. Aceptamos
+                    // tanto array vacio (limpiar) como objeto con tramos.
                     $clean[$f] = \is_array($patch[$f]) ? $patch[$f] : [];
                 } else {
                     $clean[$f] = trim((string) $patch[$f]);

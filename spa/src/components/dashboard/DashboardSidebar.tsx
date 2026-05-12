@@ -1,32 +1,34 @@
 /**
  * DashboardSidebar - navegacion principal lateral.
  *
- * Sub-rutas relativas al base /dashboard/:
- *   carta        Carta digital (importar, productos, pdf, web)
- *   mesas        Sala + zonas + mesas + datos del local
- *   pedidos      Tiempo real, polling 3s (pendiente Ola 3 TPV)
- *   config       Configuracion (general, identidad, idiomas, horarios, fiscal, equipo)
- *   facturacion  Plan + facturas + metodos de pago
- *   cuenta       Perfil + password + sesiones + cerrar cuenta
- *
- * En mobile se oculta detras de boton hamburguesa (Ola 5).
+ * Sigue skilldashboard.md: sidebar oscura compacta con iconos lucide-react,
+ * solo icon en desktop con tooltip nativo. Cero emojis.
  */
 
 import { NavLink } from 'react-router-dom';
+import {
+    Book,
+    Armchair,
+    Bell,
+    Settings,
+    CreditCard,
+    User,
+    type LucideIcon,
+} from 'lucide-react';
 
 interface NavItem {
     to: string;
     label: string;
-    icon: string;
+    Icon: LucideIcon;
 }
 
 const ITEMS: NavItem[] = [
-    { to: '/dashboard/carta',       label: 'Carta',       icon: '📋' },
-    { to: '/dashboard/mesas',       label: 'Mesas',       icon: '🪑' },
-    { to: '/dashboard/pedidos',     label: 'Pedidos',     icon: '🔔' },
-    { to: '/dashboard/config',      label: 'Configuración', icon: '⚙️' },
-    { to: '/dashboard/facturacion', label: 'Facturación', icon: '💳' },
-    { to: '/dashboard/cuenta',      label: 'Cuenta',      icon: '👤' },
+    { to: '/dashboard/carta',       label: 'Carta',       Icon: Book },
+    { to: '/dashboard/mesas',       label: 'Mesas',       Icon: Armchair },
+    { to: '/dashboard/pedidos',     label: 'Pedidos',     Icon: Bell },
+    { to: '/dashboard/config',      label: 'Configuración', Icon: Settings },
+    { to: '/dashboard/facturacion', label: 'Facturación', Icon: CreditCard },
+    { to: '/dashboard/cuenta',      label: 'Cuenta',      Icon: User },
 ];
 
 interface Props {
@@ -36,20 +38,21 @@ interface Props {
 export function DashboardSidebar({ onClose }: Props) {
     return (
         <aside className="db-sidebar" aria-label="Navegación principal">
-            <div className="db-sidebar-brand">
-                <img src="/MEDIA/Iogo.png" alt="MyLocal" />
-                <span>MyLocal</span>
+            <div className="db-sidebar__brand" aria-label="MyLocal">
+                <img src="/MEDIA/Iogo.png" alt="" />
             </div>
-            <nav className="db-sidebar-nav">
-                {ITEMS.map(item => (
+            <nav className="db-sidebar__nav">
+                {ITEMS.map(({ to, label, Icon }) => (
                     <NavLink
-                        key={item.to}
-                        to={item.to}
+                        key={to}
+                        to={to}
                         onClick={onClose}
-                        className={({ isActive }) => `db-sidebar-link${isActive ? ' db-sidebar-link--active' : ''}`}
+                        title={label}
+                        aria-label={label}
+                        className={({ isActive }) => `db-sidebar__item${isActive ? ' db-sidebar__item--active' : ''}`}
                     >
-                        <span className="db-sidebar-icon" aria-hidden>{item.icon}</span>
-                        <span>{item.label}</span>
+                        <Icon size={18} strokeWidth={1.75} />
+                        <span className="db-sidebar__label">{label}</span>
                     </NavLink>
                 ))}
             </nav>
