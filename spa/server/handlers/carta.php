@@ -493,18 +493,95 @@ function carta_importar(array $req): array
    GENERATE PDF — carta física con plantilla seleccionada
 ───────────────────────────────────────────────────────── */
 
+/**
+ * Genera PDF de la carta. Lee TODO del server (local + categorias + productos).
+ * Si el cliente no pasa nada, usa l_default y la primera carta activa.
+ *
+ * Acepta:
+ *   - local_id   string  (default: l_default)
+ *   - plantilla  string  minimalista|clasica|moderna (default: la del local web_template
+ *                        normalizada, o 'minimalista')
+ *   - color      string  blanco|negro|naranja|rojo|azul (default: 'blanco')
+ *
+ * Aplica sangrado 3mm en el PDF (margen de seguridad para imprenta).
+ */
 function carta_generate_pdf(array $req): array
 {
-    $plantilla  = $req['plantilla'] ?? 'minimalista';
-    $local      = $req['local'] ?? ['nombre' => 'Mi Restaurante'];
-    $categorias = $req['categorias'] ?? [];
+    $localId   = (string) ($req['local_id'] ?? $req['data']['local_id'] ?? 'l_default');
+    $plantilla = (string) ($req['plantilla'] ?? $req['data']['plantilla'] ?? '');
+    $color     = (string) ($req['color'] ?? $req['data']['color'] ?? 'blanco');
 
-    if (!in_array($plantilla, ['minimalista', 'clasica', 'moderna'], true)) {
-        throw new RuntimeException("Plantilla no válida: $plantilla");
+    // Validacion estricta
+    $plantillasValidas = ['minimalista', 'clasica', 'moderna'];
+    $coloresValidos    = ['blanco', 'negro', 'naranja', 'rojo', 'azul'];
+
+    // Resolver local desde server (fuente unica de verdad)
+    \Locales\LocalModel::class; // autoload check
+    $localDoc = \Locales\LocalModel::read($localId);
+    if (!$localDoc) {
+        throw new RuntimeException("Local no encontrado: $localId");
     }
+
+    // Si no se paso plantilla, mapear desde web_template del local
+    if ($plantilla === '') {
+        $webTpl = $localDoc['web_template'] ?? 'moderna';
+        // web tpl → pdf tpl (mapeo razonable)
+        $plantilla = ['moderna' => 'moderna', 'minimal' => 'minimalista', 'premium' => 'clasica'][$webTpl] ?? 'minimalista';
+    }
+    if (!in_array($plantilla, $plantillasValidas, true)) {
+        $plantilla = 'minimalista';
+    }
+    if (!in_array($color, $coloresValidos, true)) {
+        $color = 'blanco';
+    }
+
+    // Resolver categorias + productos de la carta default del local
+    $cartaId = $localDoc['default_carta_id'] ?? '';
+    if ($cartaId === '') {
+        $cartas = \Carta\CartaModel::listByLocal($localId, true);
+        if (!empty($cartas)) $cartaId = $cartas[0]['id'];
+    }
+    if ($cartaId === '') {
+        throw new RuntimeException('No hay carta configurada en este local.');
+    }
+
+    $cats     = \Carta\CategoriaModel::listByCarta($cartaId);
+    $allProds = \Carta\ProductoModel::listByCarta($cartaId);
+
+    $categorias = [];
+    foreach ($cats as $cat) {
+        $productos = array_values(array_filter($allProds, fn($p) => ($p['categoria_id'] ?? '') === $cat['id']));
+        if (empty($productos)) continue;
+        $categorias[] = [
+            'nombre'    => $cat['nombre'],
+            'productos' => array_map(fn($p) => [
+                'nombre'      => $p['nombre'] ?? '',
+                'descripcion' => $p['descripcion'] ?? '',
+                'precio'      => floatval($p['precio'] ?? 0),
+                'alergenos'   => $p['alergenos'] ?? [],
+            ], $productos),
+        ];
+    }
+
     if (empty($categorias)) {
-        throw new RuntimeException('No hay datos de carta. Importa productos primero.');
+        throw new RuntimeException('No hay productos en la carta. Importa productos primero.');
     }
+
+    // Datos del local consolidados (con defaults razonables para el footer)
+    $local = [
+        'nombre'      => $localDoc['nombre']      ?? 'Mi Local',
+        'tagline'     => $localDoc['tagline']     ?? '',
+        'telefono'    => $localDoc['telefono']    ?? '',
+        'direccion'   => $localDoc['direccion']   ?? '',
+        'web'         => $localDoc['web']         ?? '',
+        'instagram'   => $localDoc['instagram']   ?? '',
+        'logo_url'    => $localDoc['imagen_hero'] ?? '',
+        'copyright'   => $localDoc['copyright']   ?? '',
+        'color_principal' => carta_pdf_color_fg($color),
+    ];
+
+    // Paleta CSS para la plantilla (--bg, --fg, --accent, --line)
+    $palette = carta_pdf_palette($color);
 
     $tplPath = CAP_ROOT . '/PDFGEN/templates/carta_' . $plantilla . '.php';
     if (!file_exists($tplPath)) throw new RuntimeException("Plantilla no encontrada: $plantilla");
@@ -514,7 +591,39 @@ function carta_generate_pdf(array $req): array
     $html = (string) ob_get_clean();
 
     require_once CAP_ROOT . '/PDFGEN/PdfRenderer.php';
-    $r = (new \PDFGEN\PdfRenderer())->render($html, ['paper' => 'A4', 'orientation' => 'portrait']);
+    // Sangrado 3mm: margenes interiores reducidos para que la plantilla pueda
+    // dibujar elementos que lleguen al borde fisico tras corte de imprenta.
+    $r = (new \PDFGEN\PdfRenderer())->render($html, [
+        'paper'        => 'A4',
+        'orientation'  => 'portrait',
+        'bleed_mm'     => 3,
+    ]);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error PDF');
-    return ['pdf_base64' => base64_encode($r['data']), 'engine' => $r['engine'], 'plantilla' => $plantilla];
+
+    return [
+        'pdf_base64' => base64_encode($r['data']),
+        'engine'     => $r['engine'],
+        'plantilla'  => $plantilla,
+        'color'      => $color,
+        'productos'  => count(array_merge(...array_map(fn($c) => $c['productos'], $categorias))),
+    ];
+}
+
+/** Paleta CSS de los 5 colores del PDF (espejo del frontend pdf-bg--*). */
+function carta_pdf_palette(string $color): array
+{
+    $map = [
+        'blanco'  => ['bg' => '#ffffff', 'fg' => '#0F0F0F', 'accent' => '#C8A96E', 'muted' => '#6b6b6b', 'line' => 'rgba(0,0,0,0.14)'],
+        'negro'   => ['bg' => '#1a1a1a', 'fg' => '#ffffff', 'accent' => '#C8A96E', 'muted' => '#b8b8b8', 'line' => 'rgba(255,255,255,0.18)'],
+        'naranja' => ['bg' => '#FF6B35', 'fg' => '#ffffff', 'accent' => '#FFE4B5', 'muted' => 'rgba(255,255,255,0.85)', 'line' => 'rgba(255,255,255,0.35)'],
+        'rojo'    => ['bg' => '#B91C1C', 'fg' => '#ffffff', 'accent' => '#FECACA', 'muted' => 'rgba(255,255,255,0.85)', 'line' => 'rgba(255,255,255,0.30)'],
+        'azul'    => ['bg' => '#1E3A8A', 'fg' => '#ffffff', 'accent' => '#BFDBFE', 'muted' => 'rgba(255,255,255,0.85)', 'line' => 'rgba(255,255,255,0.30)'],
+    ];
+    return $map[$color] ?? $map['blanco'];
+}
+
+/** Color foreground principal para color_principal legacy de las plantillas. */
+function carta_pdf_color_fg(string $color): string
+{
+    return carta_pdf_palette($color)['fg'];
 }

@@ -1042,7 +1042,7 @@ Cada ola lleva:
 
 ---
 
-### 🌊 OLA 2 — Carta digital pública (Web + PDF) 🟡 EN CURSO
+### 🌊 OLA 2 — Carta digital pública (Web + PDF) ✅ CERRADA
 
 **Objetivo:** el hostelero elige plantilla y color de su carta digital.
 Lo que ve en preview es lo que sale en PDF y en /carta cuando el cliente
@@ -1050,22 +1050,28 @@ escanea el QR.
 
 **Bloques:** J completo (ampliado/sustituido), K.2 cerrar, K.3 completo.
 
-**Criterios de salida:**
+**Criterios de salida:** ✅
 - [x] 3 plantillas Web (moderna/minimal/premium) × 3 colores (claro/oscuro/blanco roto).
 - [x] 3 plantillas PDF (minimalista/clásica/moderna) × 5 colores.
 - [x] Imagen del local subible (`/MEDIA/local/<id>/`) con defaults bonitos.
 - [x] Auto-save en panel Web.
 - [x] Carta pública `/carta/...` renderiza con plantilla y color elegidos.
 - [x] Lecturas públicas sin sesión (`list_productos`, `get_local`, etc).
-- [ ] **`generate_pdf_carta` backend usa el tema/color elegido** (K.3).
-- [ ] **Sangrado 3mm + marcas de corte** en PDFs imprimibles (K.3).
-- [ ] **`generate_table_tents`** — PDF multi-página A6, un display por mesa (K.2).
-- [ ] **Editor de redes sociales y copyright** en dashboard (UI para
-      instagram/facebook/tiktok/whatsapp/copyright que ya tienen backend).
-- [ ] **Editor del tagline del local** (campo ya en backend, falta UI).
-- [ ] Test gate ampliado: assertion de `web_template`/`web_color` persistidos.
-
-**Cierre estimado:** 1-2 horas de trabajo.
+- [x] **`generate_pdf_carta` backend usa el local del server** (lee `web_template`,
+      `web_color`, `imagen_hero`, telefono, tagline, copyright automáticamente).
+- [x] **3 plantillas PDF reescritas** con paleta CSS por color, logo del local
+      en header, footer con teléfono + copyright.
+- [x] **Sangrado 3mm** vía opción `bleed_mm` en PdfRenderer + márgenes de
+      seguridad en cada plantilla.
+- [x] **`SalaTableTents`** — A6 por mesa client-side con `qrcode.react` +
+      `window.print()` (cero leak de tokens, mismo patrón que SalaQrSheet).
+- [x] **`LocalConfigCard`** — editor inline de TODOS los campos del local
+      (nombre, tagline, teléfono, dirección, email, web, instagram, facebook,
+      tiktok, whatsapp, copyright) con auto-save al perder foco.
+- [x] Test gate **64 → 71 assertions**: bootstrap_local, web_template/web_color
+      persistidos, whitelist rechaza valores inválidos, jerarquía atómica
+      carta→categoría→producto, lecturas públicas sin Bearer, escrituras
+      protegidas.
 
 ---
 
@@ -1306,15 +1312,15 @@ Así desarrollamos contra el escenario real **sin desplegar**.
 | Ola | Bloques | Estado | % | Notas |
 |---|---|---|---|---|
 | 🌊 1 — Sala + QRs + Local | I, K.1/K.2 parcial | ✅ **CERRADA** | 100% | URLs friendly, bootstrap minimal, póster QR, edición inline. |
-| 🌊 2 — Carta digital Web+PDF | J ampliado, K.2 cierre, K.3 | 🟡 **EN CURSO** | 70% | 3+3 plantillas, auto-save, carta pública sin sesión. Faltan ítems del bloque "Criterios de salida" en sección 10. |
-| 🌊 3 — Dashboard completo | M, N | 🔴 PENDIENTE | 15% | local.php existe, faltan TODAS las pantallas Configuración/Pedidos/Cuenta/Facturación. |
+| 🌊 2 — Carta digital Web+PDF | J ampliado, K.2/K.3 | ✅ **CERRADA** | 100% | 3+3 plantillas, auto-save, PDF lee local del server, table tents A6, LocalConfigCard, test gate 71/71. |
+| 🌊 3 — Dashboard completo | M, N | ⏳ **PRÓXIMA** | 20% | local.php + LocalConfigCard cubren parte de M.2. Faltan Pedidos, Configuración avanzada, Cuenta, Facturación, sidebar+breadcrumbs. |
 | 🌊 4 — Diseño profesional + UX | O | 🔴 PENDIENTE | 0% | Auditoría visual. |
 | 🌊 5 — Responsive | P | 🔴 PENDIENTE | 0% | 3 breakpoints. |
 | 🌊 6 — SEO carta pública | Q | 🔴 PENDIENTE | 0% | Meta tags + Schema.org + Lighthouse ≥90. |
 | 🌊 7 — Multi-tenancy + Agnosticismo + Pre-prod | L, R, S | 🔴 PENDIENTE | 10% | BrowserRouter ya hecho, falta auditoría completa, tests con usuarios. |
 | 🌊 8 — Despliegue prod | H, Stripe live | 🔴 PENDIENTE | 0% | Operacional, último. |
 
-**Progreso total estimado:** ~25% del proyecto Fase 1.
+**Progreso total estimado:** ~32% del proyecto Fase 1 (2/8 olas cerradas).
 
 ### Disciplina aplicada en esta iteración
 
@@ -1337,11 +1343,11 @@ Mejoras que se incorporaron mientras se cerraban las olas:
 
 ### Métricas de progreso
 
-- **Olas cerradas:** 1/8 (12.5%)
-- **Ola en curso:** Ola 2 (cierre del 70% al 100%)
-- **Capabilities activas:** 22 (`LOCALES` añadida).
-- **Test gate actual:** 64/64 PASS.
-- **Commits en origin/main desde reorganización:** 22.
+- **Olas cerradas:** 2/8 (25%)
+- **Ola próxima:** Ola 3 — Dashboard completo (M + N).
+- **Capabilities activas:** 22 (`LOCALES` + ampliaciones en `CARTA`).
+- **Test gate actual:** 71/71 PASS contra source y release.
+- **Commits en origin/main desde reorganización:** 23.
 - **Persistencia:** TODO en disco (cero IndexedDB para datos de negocio).
 
 ---

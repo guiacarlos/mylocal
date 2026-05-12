@@ -138,7 +138,8 @@ class LocalModel
                 }
             }
         }
-        return data_put(self::COLLECTION, $id, $clean);
+        $saved = data_put(self::COLLECTION, $id, $clean);
+        return ['success' => true, 'data' => $saved];
     }
 
     public static function userCanAccess(?array $user, string $localId, string $minRole = 'sala'): bool

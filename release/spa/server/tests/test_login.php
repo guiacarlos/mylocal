@@ -500,6 +500,98 @@ if ($token) {
     }
 }
 
+// ── 9d. Ola 2: persistencia jerarquia carta + tema web + lectura publica ───
+echo "\n[9d] Ola 2: jerarquia AxiDB + tema web + lectura publica\n";
+
+if ($token) {
+    // Bootstrap del local default
+    $boot = $post(['action' => 'bootstrap_local', 'data' => []], $token);
+    $localId = $boot['json']['data']['local']['id'] ?? '';
+    check(
+        "bootstrap_local devuelve local con id l_*",
+        is_string($localId) && str_starts_with($localId, 'l_')
+    );
+
+    // Persistir web_template + web_color via update_local
+    $upd = $post(['action' => 'update_local', 'data' => [
+        'id' => $localId,
+        'web_template' => 'premium',
+        'web_color' => 'oscuro',
+        'instagram' => 'mylocaltest',
+        'tagline' => 'Cocina mediterranea',
+    ]], $token);
+    check(
+        "update_local persiste web_template/web_color/instagram/tagline",
+        ($upd['json']['data']['web_template'] ?? '') === 'premium'
+            && ($upd['json']['data']['web_color'] ?? '') === 'oscuro'
+            && ($upd['json']['data']['instagram'] ?? '') === 'mylocaltest'
+    );
+
+    // Whitelist: valores invalidos se normalizan a defaults
+    $bad = $post(['action' => 'update_local', 'data' => [
+        'id' => $localId,
+        'web_template' => 'hacker',
+        'web_color' => 'arcoiris',
+    ]], $token);
+    check(
+        "update_local rechaza valores fuera de whitelist (normaliza a defaults)",
+        ($bad['json']['data']['web_template'] ?? '') === 'moderna'
+            && ($bad['json']['data']['web_color'] ?? '') === 'claro'
+    );
+
+    // Restaurar tema válido
+    $post(['action' => 'update_local', 'data' => [
+        'id' => $localId, 'web_template' => 'moderna', 'web_color' => 'claro',
+    ]], $token);
+
+    // Importar una carta atomica (jerarquia carta -> categoria -> producto)
+    $imp = $post(['action' => 'importar_carta_estructurada', 'data' => [
+        'local_id' => $localId,
+        'carta_nombre' => 'Carta test gate',
+        'categorias' => [
+            [
+                'nombre' => 'Test Tapas',
+                'productos' => [
+                    ['nombre' => 'Croquetas', 'descripcion' => '', 'precio' => 7.50],
+                    ['nombre' => 'Patatas', 'descripcion' => '', 'precio' => 4.00],
+                ],
+            ],
+        ],
+    ]], $token);
+    $cartaId = $imp['json']['data']['carta_id'] ?? '';
+    check(
+        "importar_carta_estructurada crea carta + 1 categoria + 2 productos atomico",
+        ($imp['json']['data']['categorias'] ?? 0) === 1
+            && ($imp['json']['data']['productos'] ?? 0) === 2
+            && is_string($cartaId) && str_starts_with($cartaId, 'c_')
+    );
+
+    // Lectura publica de get_local SIN bearer (el cliente del QR no esta logueado)
+    $pubLocal = $post(['action' => 'get_local', 'data' => ['id' => $localId]]);
+    check(
+        "get_local accesible publicamente (sin Bearer) — necesario para carta del QR",
+        ($pubLocal['json']['success'] ?? false) === true
+            && ($pubLocal['json']['data']['id'] ?? '') === $localId
+    );
+
+    $pubProds = $post(['action' => 'list_productos', 'data' => ['local_id' => $localId]]);
+    check(
+        "list_productos accesible publicamente — la carta digital se sirve sin sesion",
+        ($pubProds['json']['success'] ?? false) === true
+            && count($pubProds['json']['data']['items'] ?? []) >= 2
+    );
+
+    // Escrituras siguen protegidas (debe ser 401)
+    $unauth = $post(['action' => 'update_local', 'data' => ['id' => $localId, 'nombre' => 'HACKED']]);
+    check(
+        "update_local SIN Bearer rechazado (HTTP 401) — escrituras protegidas",
+        $unauth['code'] === 401
+    );
+
+    // Cleanup carta de test
+    if ($cartaId !== '') $post(['action' => 'delete_carta', 'data' => ['id' => $cartaId]], $token);
+}
+
 // ── 10. Logout invalida el token ────────────────────────────────
 if ($token) {
     $logout = $post(['action' => 'auth_logout'], $token);

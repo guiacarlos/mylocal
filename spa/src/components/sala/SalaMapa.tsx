@@ -23,14 +23,15 @@ import {
     updateZona,
     deleteZona,
     buildMesaUrl,
-    buildLocalCartaUrl,
     type Mesa,
     type SalaResumen,
     type Zona,
 } from '../../services/sala.service';
 import { SalaQrSheet } from './SalaQrSheet';
+import { SalaTableTents } from './SalaTableTents';
 import { LocalQrPoster } from './LocalQrPoster';
-import { getLocal, updateLocal, localDisplayName, type LocalInfo } from '../../services/local.service';
+import { LocalConfigCard } from './LocalConfigCard';
+import { getLocal, localDisplayName, type LocalInfo } from '../../services/local.service';
 
 interface Props {
     localId: string;
@@ -46,14 +47,11 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
     const [busy, setBusy] = useState(false);
     const [showSheet, setShowSheet] = useState(false);
     const [showPoster, setShowPoster] = useState(false);
+    const [showTents, setShowTents] = useState(false);
     const [editingZonaId, setEditingZonaId] = useState<string | null>(null);
     const [editingZonaName, setEditingZonaName] = useState('');
 
     const [local, setLocal] = useState<LocalInfo | null>(null);
-    const [editingNombre, setEditingNombre] = useState(false);
-    const [editingTelefono, setEditingTelefono] = useState(false);
-    const [draftNombre, setDraftNombre] = useState('');
-    const [draftTelefono, setDraftTelefono] = useState('');
 
     async function reload() {
         setLoading(true);
@@ -69,19 +67,6 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         }
     }
     useEffect(() => { reload(); }, [localId]);
-
-    async function saveLocalField(field: 'nombre' | 'telefono', value: string) {
-        const trimmed = value.trim();
-        const current = (local?.[field] ?? '').trim();
-        if (trimmed === current) return;
-        setBusy(true);
-        try {
-            const updated = await updateLocal(client, localId, { [field]: trimmed });
-            setLocal(updated);
-        } finally {
-            setBusy(false);
-        }
-    }
 
     async function handleAddZona() {
         const nombre = prompt('Nombre de la nueva estancia:', 'Nueva zona');
@@ -188,74 +173,27 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
         return <LocalQrPoster local={local} onClose={() => setShowPoster(false)} />;
     }
 
-    const cartaUrl = buildLocalCartaUrl();
+    if (showTents) {
+        return (
+            <SalaTableTents
+                local={local}
+                zonas={resumen.zonas}
+                mesas={mesas}
+                onClose={() => setShowTents(false)}
+            />
+        );
+    }
+
     const zonaPorId = new Map(resumen.zonas.map(z => [z.id, z]));
     const zonaDeSelected = selected ? zonaPorId.get(selected.zone_id) : null;
-    const nombreLocal = (local?.nombre ?? '').trim();
-    const telefonoLocal = (local?.telefono ?? '').trim();
 
     return (
         <div>
-            <div className="sm-local-card">
-                <div className="sm-local-row">
-                    <label className="sm-local-label">Nombre del local</label>
-                    {editingNombre ? (
-                        <input
-                            className="sm-local-input"
-                            value={draftNombre}
-                            autoFocus
-                            placeholder="Bar de Lola"
-                            onChange={e => setDraftNombre(e.target.value)}
-                            onBlur={() => { saveLocalField('nombre', draftNombre); setEditingNombre(false); }}
-                            onKeyDown={e => {
-                                if (e.key === 'Enter') { saveLocalField('nombre', draftNombre); setEditingNombre(false); }
-                                if (e.key === 'Escape') setEditingNombre(false);
-                            }}
-                        />
-                    ) : (
-                        <button
-                            className="sm-local-value"
-                            onClick={() => { setDraftNombre(nombreLocal); setEditingNombre(true); }}
-                            title="Click para editar"
-                        >{nombreLocal || <span className="sm-local-placeholder">Sin nombre · click para editar</span>}</button>
-                    )}
-                </div>
-                <div className="sm-local-row">
-                    <label className="sm-local-label">Telefono</label>
-                    {editingTelefono ? (
-                        <input
-                            className="sm-local-input"
-                            value={draftTelefono}
-                            autoFocus
-                            placeholder="+34 600 000 000"
-                            onChange={e => setDraftTelefono(e.target.value)}
-                            onBlur={() => { saveLocalField('telefono', draftTelefono); setEditingTelefono(false); }}
-                            onKeyDown={e => {
-                                if (e.key === 'Enter') { saveLocalField('telefono', draftTelefono); setEditingTelefono(false); }
-                                if (e.key === 'Escape') setEditingTelefono(false);
-                            }}
-                        />
-                    ) : (
-                        <button
-                            className="sm-local-value"
-                            onClick={() => { setDraftTelefono(telefonoLocal); setEditingTelefono(true); }}
-                            title="Click para editar"
-                        >{telefonoLocal || <span className="sm-local-placeholder">Sin telefono · click para editar</span>}</button>
-                    )}
-                </div>
-                <div className="sm-local-row">
-                    <label className="sm-local-label">URL publica</label>
-                    <code className="sm-url">{cartaUrl}</code>
-                    <button
-                        className="db-btn db-btn--ghost db-btn--sm"
-                        onClick={() => navigator.clipboard?.writeText(cartaUrl)}
-                    >Copiar</button>
-                </div>
-                <div className="sm-local-actions">
-                    <button className="db-btn db-btn--primary" onClick={() => setShowPoster(true)}>
-                        QR principal del local
-                    </button>
-                </div>
+            <LocalConfigCard local={local} onChange={setLocal} collapsibleAdvanced />
+            <div className="sm-local-poster-bar">
+                <button className="db-btn db-btn--primary" onClick={() => setShowPoster(true)}>
+                    QR principal del local
+                </button>
             </div>
 
             <div className="sm-header">
@@ -270,9 +208,14 @@ export function SalaMapa({ localId, resumen, onChange }: Props) {
                         + Estancia
                     </button>
                     {resumen.mesas_total > 0 && (
-                        <button className="db-btn db-btn--ghost" onClick={() => setShowSheet(true)}>
-                            Imprimir QRs por mesa
-                        </button>
+                        <>
+                            <button className="db-btn db-btn--ghost" onClick={() => setShowSheet(true)}>
+                                Hoja A4 de QRs
+                            </button>
+                            <button className="db-btn db-btn--ghost" onClick={() => setShowTents(true)}>
+                                Displays A6 por mesa
+                            </button>
+                        </>
                     )}
                 </div>
             </div>

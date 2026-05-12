@@ -1,57 +1,73 @@
 <?php
 /**
- * Plantilla Carta Clasica - tipografia serif, marcos, ornamentacion sobria.
- * Espera mismas variables que carta_minimalista.
+ * Plantilla Carta Clasica - serif elegante, centrada, orlas decorativas.
+ * Logo circular en header si esta configurado.
+ *
+ * Variables: $local, $categorias, $palette, $color, $plantilla.
  */
-$titulo = htmlspecialchars($local['nombre'] ?? 'Carta');
-$color = htmlspecialchars($local['color_principal'] ?? '#5B3A1E');
+$nombre = htmlspecialchars($local['nombre'] ?? 'Carta');
+$tagline = htmlspecialchars($local['tagline'] ?? '');
+$telefono = htmlspecialchars($local['telefono'] ?? '');
+$copyright = htmlspecialchars($local['copyright'] ?? '');
+$logo = htmlspecialchars($local['logo_url'] ?? '');
+
+$p = $palette ?? ['bg' => '#fff', 'fg' => '#0F0F0F', 'accent' => '#C8A96E', 'muted' => '#666', 'line' => 'rgba(0,0,0,0.14)'];
+$bg = $p['bg']; $fg = $p['fg']; $accent = $p['accent']; $muted = $p['muted']; $line = $p['line'];
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title><?= $titulo ?></title>
+<title><?= $nombre ?> · Carta</title>
 <style>
-  @page { margin: 22mm 20mm; }
-  body { font-family: 'Times', serif; color: #2A1F14; font-size: 11pt; }
-  .frame { border: 2pt double <?= $color ?>; padding: 16pt 20pt; }
-  h1 { text-align: center; font-size: 32pt; font-weight: normal; margin: 0; letter-spacing: 0.05em; color: <?= $color ?>; }
-  .sub { text-align: center; font-size: 10pt; font-style: italic; margin: 4pt 0 14pt; color: #6B4F35; }
-  .ornament { text-align: center; color: <?= $color ?>; margin: 10pt 0 4pt; font-size: 14pt; letter-spacing: 0.6em; }
-  h2 { font-size: 16pt; text-align: center; font-weight: normal; font-variant: small-caps; letter-spacing: 0.15em; color: <?= $color ?>; margin: 14pt 0 8pt; }
-  .item { margin-bottom: 9pt; }
+  @page { size: A4; margin: 20mm 18mm; }
+  body { font-family: 'Times New Roman', Georgia, serif; background: <?= $bg ?>; color: <?= $fg ?>; font-size: 10pt; }
+  .head { text-align: center; margin-bottom: 18pt; }
+  .logo { width: 60pt; height: 60pt; border-radius: 50%; border: 2pt solid <?= $accent ?>; margin: 0 auto 8pt; display: block; }
+  .orla { color: <?= $accent ?>; letter-spacing: 0.4em; font-size: 10pt; margin: 4pt 0; }
+  h1 { font-style: italic; font-weight: 400; font-size: 30pt; margin: 6pt 0 4pt; color: <?= $fg ?>; }
+  .sub { font-size: 10pt; color: <?= $muted ?>; font-variant: small-caps; letter-spacing: 0.14em; margin-bottom: 6pt; }
+  h2 { font-weight: 400; font-size: 16pt; font-variant: small-caps; letter-spacing: 0.1em; text-align: center; margin: 16pt 0 4pt; color: <?= $fg ?>; }
+  .line { height: 1pt; background: <?= $accent ?>; margin: 4pt 30mm 10pt; }
+  .item { margin-bottom: 7pt; padding: 0 8mm; }
   .item-row { display: table; width: 100%; }
-  .item-name { display: table-cell; font-weight: bold; padding-right: 8pt; }
-  .item-dots { display: table-cell; border-bottom: 1pt dotted #B89A78; width: 100%; }
-  .item-price { display: table-cell; padding-left: 8pt; font-weight: bold; white-space: nowrap; }
-  .item-desc { font-size: 10pt; color: #6B4F35; font-style: italic; margin-top: 1pt; }
-  .alergenos { font-size: 8pt; color: #8E7758; margin-top: 1pt; }
-  .footer { text-align: center; font-size: 8pt; color: #8E7758; margin-top: 18pt; font-style: italic; }
+  .item-name { display: table-cell; font-weight: 600; font-size: 11pt; }
+  .item-price { display: table-cell; text-align: right; font-weight: 600; color: <?= $accent ?>; }
+  .item-desc { font-size: 9pt; color: <?= $muted ?>; font-style: italic; margin-top: 1pt; }
+  .alergenos { font-size: 7pt; color: <?= $muted ?>; margin-top: 1pt; }
+  .footer { position: fixed; bottom: 8mm; left: 0; right: 0; text-align: center; font-size: 9pt; color: <?= $muted ?>; }
 </style>
 </head>
 <body>
-<div class="frame">
-  <h1><?= $titulo ?></h1>
-  <div class="sub">Carta de la casa</div>
+  <div class="head">
+    <?php if ($logo): ?><img class="logo" src="<?= $logo ?>" alt=""><?php endif; ?>
+    <div class="orla">❦ ❦ ❦</div>
+    <h1><?= $nombre ?></h1>
+    <?php if ($tagline): ?><div class="sub"><?= $tagline ?></div><?php endif; ?>
+    <div class="orla">❦</div>
+  </div>
+
   <?php foreach ($categorias as $cat): ?>
-    <div class="ornament">&middot; &middot; &middot;</div>
     <h2><?= htmlspecialchars($cat['nombre'] ?? '') ?></h2>
+    <div class="line"></div>
     <?php foreach (($cat['productos'] ?? []) as $p): ?>
       <div class="item">
         <div class="item-row">
           <span class="item-name"><?= htmlspecialchars($p['nombre'] ?? '') ?></span>
-          <span class="item-dots">&nbsp;</span>
           <span class="item-price"><?= number_format(floatval($p['precio'] ?? 0), 2, ',', '.') ?> &euro;</span>
         </div>
         <?php if (!empty($p['descripcion'])): ?>
           <div class="item-desc"><?= htmlspecialchars($p['descripcion']) ?></div>
         <?php endif; ?>
         <?php if (!empty($p['alergenos'])): ?>
-          <div class="alergenos">Alergenos: <?= htmlspecialchars(implode(', ', $p['alergenos'])) ?></div>
+          <div class="alergenos">Contiene: <?= htmlspecialchars(implode(', ', $p['alergenos'])) ?></div>
         <?php endif; ?>
       </div>
     <?php endforeach; ?>
   <?php endforeach; ?>
-  <div class="footer">Precios IVA incluido</div>
-</div>
+
+  <div class="footer">
+    <?php if ($telefono): ?><?= $telefono ?> &middot; <?php endif; ?><?= $nombre ?>
+    <?php if ($copyright): ?><br><?= $copyright ?><?php endif; ?>
+  </div>
 </body>
 </html>

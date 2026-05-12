@@ -198,6 +198,24 @@
     padding-top: 12px;
     border-top: 1px solid var(--sp-border, #E5E5E3);
 }
+.sm-local-toggle {
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    color: var(--sp-accent-alt, #C8A96E);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 0;
+    text-align: left;
+}
+.sm-local-toggle:hover { text-decoration: underline; }
+
+.sm-local-poster-bar {
+    margin: 8px 0 16px;
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* SalaMapa */
 
@@ -719,5 +737,134 @@
         margin: 0;
         box-shadow: none;
         page-break-after: avoid;
+    }
+}
+
+/* SalaTableTents - displays A6 por mesa */
+
+.tents-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--sp-bg-soft, #F8F8F6);
+    z-index: 9000;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.tents-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--sp-bg, #fff);
+    border-bottom: 1px solid var(--sp-border, #E5E5E3);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.tents-title { font-size: 15px; font-weight: 600; color: var(--sp-text, #0F0F0F); }
+.tents-title span { color: var(--sp-text-muted, #717171); font-weight: 400; margin-left: 6px; }
+
+.tents-paper {
+    max-width: 920px;
+    margin: 16px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.tents-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--sp-text-muted, #717171);
+}
+
+.tents-card {
+    aspect-ratio: 105 / 148;        /* A6 portrait */
+    background: #fff;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    padding: 10mm 8mm;
+    overflow: hidden;
+    page-break-after: always;
+}
+.tents-card-head { text-align: center; }
+.tents-card-local {
+    font-size: 14pt;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #0F0F0F;
+}
+.tents-card-tag {
+    font-size: 9pt;
+    color: #717171;
+    font-style: italic;
+    margin-top: 2pt;
+}
+.tents-card-qr {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4mm 0;
+}
+.tents-card-foot { text-align: center; }
+.tents-card-mesa {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6pt;
+}
+.tents-mesa-label {
+    font-size: 10pt;
+    color: #717171;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.tents-mesa-numero {
+    font-size: 28pt;
+    font-weight: 700;
+    color: #0F0F0F;
+    line-height: 1;
+}
+.tents-card-zona {
+    font-size: 9pt;
+    color: #717171;
+    margin-top: 2pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.tents-card-cta {
+    margin-top: 6pt;
+    font-size: 8pt;
+    color: #717171;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media print {
+    @page { size: A6 portrait; margin: 0; }
+    .tents-toolbar, .tents-empty { display: none !important; }
+    .tents-overlay { position: static; background: #fff; overflow: visible; }
+    .tents-paper {
+        display: block;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: none;
+    }
+    .tents-card {
+        width: 105mm;
+        height: 148mm;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
     }
 }
