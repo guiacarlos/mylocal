@@ -9,6 +9,14 @@ const API_TARGET = process.env.SOCOLA_API || 'http://127.0.0.1:8091';
 // Carpeta raiz de medios del proyecto (fuera de /spa)
 const MEDIA_ROOT = path.resolve(process.cwd(), '..', 'MEDIA');
 
+// Destino del bundle. Por defecto, ../release (build local de MyLocal).
+// El AppBootstrap CLI (tools/bootstrap/bootstrap.mjs) lo sobrescribe via
+// VITE_OUT_DIR para emitir cada tenant en su propia carpeta sin contaminar
+// release/.
+const OUT_DIR = process.env.VITE_OUT_DIR
+    ? path.resolve(process.cwd(), process.env.VITE_OUT_DIR)
+    : path.resolve(process.cwd(), '..', 'release');
+
 // MIME types soportados
 const MIME_TYPES: Record<string, string> = {
     '.png':  'image/png',
@@ -66,7 +74,7 @@ export default defineConfig({
     build: {
         target: 'es2020',
         sourcemap: false,
-        outDir: '../release',
+        outDir: OUT_DIR,
         emptyOutDir: true,
     },
 });
