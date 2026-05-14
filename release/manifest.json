@@ -1,0 +1,88 @@
+﻿{
+    "key": "marco-cms",
+    "name": "Marco CMS",
+    "version": "1.0.0",
+    "description": "Sistema de Gestión de Contenidos moderno y potente. Cliente web standalone que se integra con GestasAI para autenticación y almacenamiento de contenidos vía GestasCore-ACIDE.",
+    "category": "WEB",
+    "author": "GestasAI Team",
+    "homepage": "http://localhost:5173/settings",
+    "license": "MIT",
+    "icon": "FileText",
+    "store_media": {
+        "banner": "/assets/marco_cms_banner.png",
+        "screenshots": []
+    },
+    "type": "CLIENT",
+    "capabilities": [
+        "content:create",
+        "content:read",
+        "content:update",
+        "content:delete",
+        "auth:client",
+        "universal_api:query",
+        "universal_api:insert",
+        "universal_api:update",
+        "universal_api:delete"
+    ],
+    "permissions": [
+        "auth:login",
+        "content:read",
+        "content:write",
+        "content:delete",
+        "bridge:query",
+        "bridge:insert",
+        "bridge:update",
+        "bridge:delete"
+    ],
+    "ui": {
+        "menu": {
+            "label": "Marco CMS",
+            "icon": "FileText",
+            "path": "/marco",
+            "public": false
+        },
+        "widgets": [
+            "ContentDashboardWidget",
+            "ContentEditorWidget",
+            "ContentListWidget"
+        ]
+    },
+    "network": {
+        "strategy": "external_client",
+        "host": "localhost",
+        "port": 5173,
+        "health_check": "/"
+    },
+    "database": {
+        "required": false,
+        "collections": [
+            "marco_content"
+        ],
+        "migrations": false
+    },
+    "ai": {
+        "enabled": true,
+        "description": "Sistema de gestión de contenidos que utiliza GestasAI para autenticación (Plugin Auth) y almacenamiento (GestasCore-ACIDE). Permite crear, editar y publicar contenidos de forma intuitiva.",
+        "tools": [
+            "marco_create_content",
+            "marco_edit_content",
+            "marco_delete_content",
+            "marco_list_contents",
+            "marco_publish_content"
+        ],
+        "context_endpoint": "/api/marco/context"
+    },
+    "dependencies": {
+        "required": [
+            "plugin-auth",
+            "plugin-seed"
+        ],
+        "optional": []
+    },
+    "configuration": {
+        "api_url": "",
+        "content_collection": "marco_content",
+        "default_status": "draft",
+        "max_content_length": 50000
+    }
+}

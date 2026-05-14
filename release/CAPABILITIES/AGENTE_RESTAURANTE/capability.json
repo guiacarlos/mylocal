@@ -1,9 +1,0 @@
-{
-    "id": "agente_restaurante",
-    "name": "Agente Restaurante",
-    "description": "IA especializada en servicio de restaurante con soporte para múltiples agentes (Cocina, Sala, Sommelier).",
-    "version": "1.0.0",
-    "icon": "Bot",
-    "entry": "RestaurantAgentEngine.php",
-    "namespace": "RESTAURANTE"
-}

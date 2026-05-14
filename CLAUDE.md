@@ -4,6 +4,63 @@ Guia de trabajo para agentes de IA en este proyecto.
 
 ---
 
+## REGLA CRITICA — BUILD (leer antes de cualquier build)
+
+### NUNCA ejecutes `npm run build` solo para actualizar release/
+
+`npm run build` usa `--emptyOutDir` que **borra todo el contenido de release/**
+antes de compilar. Solo deja los assets JS/CSS de Vite. Pierdes:
+- `release/router.php` — sin el que `start.bat` no arranca
+- `release/gateway.php`
+- `release/spa/server/` — el backend API completo
+- `release/manifest.json`, `robots.txt`, `schema.json`, `favicon.*`
+
+**Consecuencia real (2026-05):** tras un `git pull` + `npm run build`, la app
+dejaba de arrancar con error `readfile(...index.html): No such file or directory`.
+Arreglar el entorno despues del fallo costo 40 minutos.
+
+### Regla: usar SIEMPRE `build.ps1` para construir release/
+
+```powershell
+.\build.ps1
+```
+
+Esto hace todo en orden correcto: compila la SPA, copia el backend PHP,
+materializa configs, y ejecuta el gate de login.
+
+### Excepcion permitida: solo recompilar el frontend
+
+Si solo cambiaste CSS o TSX y necesitas actualizar los assets sin tocar el
+backend, puedes hacer build manual en dos pasos:
+
+```powershell
+cd spa && npm run build   # borra y regenera assets/index.html
+cd ..
+# Restaurar los archivos PHP que npm borro:
+Copy-Item router.php release\router.php -Force
+Copy-Item gateway.php release\gateway.php -Force
+Copy-Item manifest.json release\manifest.json -Force
+Copy-Item robots.txt release\robots.txt -Force
+Copy-Item schema.json release\schema.json -Force
+Copy-Item favicon.png release\favicon.png -Force
+Copy-Item favicon.jpg release\favicon.jpg -Force
+robocopy spa\server release\spa\server /E /NFL /NDL /NJH /NJS > $null
+```
+
+### Flujo despues de `git clone` o `git pull` (arrancar en menos de 2 min)
+
+```
+1. cd spa && npm install     # solo si hay cambios en package.json
+2. start.bat                 # sirve release/ en localhost:3000 (produccion local)
+   -- o --
+   run.bat                   # Vite HMR en :5173 + PHP API en :8091 (desarrollo)
+```
+
+Si `start.bat` falla con error sobre `release\router.php` no encontrado:
+ejecuta `.\build.ps1` una vez para regenerar release/ completa.
+
+---
+
 ## LECTURA OBLIGATORIA antes de tocar nada
 
 ### 1. `claude/AUTH_LOCK.md` — contrato bloqueado del login
