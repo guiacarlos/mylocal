@@ -658,8 +658,8 @@ Cada ola se marca aquí al cerrar:
 - [ ] Ola A — Refactor `modules/hosteleria/`
 - [ ] Ola B — Manifest dinámico
 - [ ] Ola C — Runtime `app/` + `_shared/`
-- [ ] Ola D — AppBootstrap CLI
-- [ ] Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES
+- [x] Ola D — AppBootstrap CLI
+- [x] Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES
 - [ ] Ola F — Módulo `clinica/`
 - [ ] Ola G — Módulo `logistica/`
 - [ ] Ola H — Módulo `asesoria/`

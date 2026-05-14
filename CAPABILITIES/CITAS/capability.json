@@ -1,0 +1,12 @@
+{
+  "id": "CITAS",
+  "version": "1.0.0",
+  "description": "Gestión de citas para cualquier servicio agendable (clínicas, asesorías, talleres).",
+  "depends_on": ["LOGIN", "OPTIONS", "NOTIFICACIONES"],
+  "collections": ["citas", "recursos_agenda"],
+  "actions": [
+    "cita_create", "cita_update", "cita_list", "cita_cancel", "cita_get",
+    "recurso_create", "recurso_update", "recurso_list", "recurso_delete",
+    "cita_publica_crear"
+  ]
+}

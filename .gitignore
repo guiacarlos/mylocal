@@ -76,9 +76,12 @@ spa/vite.config.js
 
 # ── Scripts de prueba temporales ───────────────────────────────
 test_*.php
-# excepcion: el test gate del login es load-bearing, debe ir al repo
+# excepciones: tests de integracion load-bearing (Ola E)
 !spa/server/tests/test_login.php
 !release/spa/server/tests/test_login.php
+!spa/server/tests/test_citas.php
+!spa/server/tests/test_crm.php
+!spa/server/tests/test_notif.php
 
 # ── Estado local del agente / material de trabajo personal ─────
 .claude/
