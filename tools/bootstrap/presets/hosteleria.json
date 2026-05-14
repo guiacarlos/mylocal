@@ -1,0 +1,32 @@
+{
+    "module": "hosteleria",
+    "capabilities": [
+        "LOGIN",
+        "OPTIONS",
+        "AI",
+        "GEMINI",
+        "AGENTE_RESTAURANTE",
+        "CARTA",
+        "QR",
+        "TPV",
+        "PRODUCTS",
+        "PAYMENT",
+        "FISCAL",
+        "OCR",
+        "PDFGEN",
+        "ENHANCER",
+        "DELIVERY",
+        "LOCALES",
+        "API",
+        "LEGAL",
+        "WIKI",
+        "WEBSCRAPER",
+        "RECETAS",
+        "CANAL"
+    ],
+    "default_role": "admin",
+    "default_user": {
+        "email": null,
+        "password": null
+    }
+}
