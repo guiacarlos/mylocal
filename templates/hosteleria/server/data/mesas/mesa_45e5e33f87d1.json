@@ -1,0 +1,15 @@
+{
+    "id": "mesa_45e5e33f87d1",
+    "local_id": "l_default",
+    "zone_id": "zone_2c8ba141f862",
+    "numero": "1",
+    "capacidad": 4,
+    "qr_token": "c0d5df8612ffa030",
+    "estado": "libre",
+    "activa": true,
+    "created_at": "2026-05-08T07:08:56+00:00",
+    "updated_at": "2026-05-08T07:08:56+00:00",
+    "_updatedAt": "2026-05-08T07:08:56+00:00",
+    "_version": 1,
+    "_createdAt": "2026-05-08T07:08:56+00:00"
+}

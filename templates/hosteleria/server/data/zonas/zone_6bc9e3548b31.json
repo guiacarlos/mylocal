@@ -1,0 +1,13 @@
+{
+    "id": "zone_6bc9e3548b31",
+    "local_id": "test_sala",
+    "nombre": "Sala",
+    "icono": "utensils",
+    "orden": 1,
+    "activa": false,
+    "created_at": "2026-05-12T08:29:06+00:00",
+    "updated_at": "2026-05-12T08:29:07+00:00",
+    "_updatedAt": "2026-05-12T08:29:07+00:00",
+    "_version": 2,
+    "_createdAt": "2026-05-12T08:29:06+00:00"
+}

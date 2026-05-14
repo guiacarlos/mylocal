@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/context/asesoriacontext.tsx","./src/pages/calendariofiscalpage.tsx","./src/pages/clientespage.tsx","./src/pages/documentospage.tsx","./src/pages/facturaspage.tsx","./src/pages/tareaspage.tsx","./src/services/asesoria.service.ts"],"version":"5.9.3"}

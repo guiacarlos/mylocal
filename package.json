@@ -1,0 +1,16 @@
+{
+  "name": "mylocal-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MyLocal framework — workspace raiz. Los templates y el SDK se instalan desde aqui.",
+  "scripts": {
+    "dev:hosteleria": "pnpm -F hosteleria dev",
+    "dev:clinica": "pnpm -F clinica dev",
+    "build:hosteleria": "pnpm -F hosteleria build",
+    "build:clinica": "pnpm -F clinica build",
+    "build": "pnpm -F hosteleria build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

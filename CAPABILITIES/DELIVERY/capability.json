@@ -1,0 +1,14 @@
+{
+  "id": "DELIVERY",
+  "version": "1.0.0",
+  "description": "Gestión de pedidos, flota y entregas para logística y reparto.",
+  "depends_on": ["LOGIN", "OPTIONS", "CRM", "NOTIFICACIONES"],
+  "collections": ["pedidos", "vehiculos", "entregas"],
+  "actions": [
+    "pedido_create", "pedido_list", "pedido_get", "pedido_estado",
+    "vehiculo_create", "vehiculo_list", "vehiculo_update",
+    "entrega_asignar", "entrega_list_dia",
+    "incidencia_add",
+    "pedido_seguimiento"
+  ]
+}

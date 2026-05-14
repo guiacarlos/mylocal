@@ -1,0 +1,14 @@
+{
+    "id": "cat_b4f771694dbfdd8b",
+    "carta_id": "c_07288f343ef0b131",
+    "local_id": "l_default",
+    "nombre": "Test Tapas",
+    "orden": 0,
+    "icono": "",
+    "disponible": true,
+    "created_at": "2026-05-12T08:20:55+00:00",
+    "updated_at": "2026-05-12T08:20:55+00:00",
+    "_updatedAt": "2026-05-12T08:20:55+00:00",
+    "_version": 1,
+    "_createdAt": "2026-05-12T08:20:55+00:00"
+}

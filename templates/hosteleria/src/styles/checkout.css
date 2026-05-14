@@ -1,0 +1,48 @@
+/* ══════════════════════════════════════════════════════════════════
+   CHECKOUT & BILLING — prefijo ck-
+   ══════════════════════════════════════════════════════════════════ */
+
+.ck-page    { max-width: 900px; margin: 0 auto; padding: var(--sp-gap-xl) var(--sp-gap-md); }
+.ck-header  { text-align: center; margin-bottom: var(--sp-gap-xl); }
+.ck-title   { font-family: var(--sp-font-display); font-size: var(--sp-text-xl); font-weight: 700; margin-bottom: var(--sp-gap-xs); }
+.ck-sub     { font-size: var(--sp-text-sm); color: var(--sp-text-muted); }
+.ck-label   { font-size: var(--sp-text-sm); color: var(--sp-text-muted); margin-top: var(--sp-gap-sm); }
+
+/* Plan grid */
+.ck-plans   { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sp-gap-md); margin-bottom: var(--sp-gap-xl); }
+
+.ck-plan    { position: relative; border: 2px solid var(--sp-border); border-radius: var(--sp-radius-md); padding: var(--sp-gap-lg) var(--sp-gap-md); display: flex; flex-direction: column; gap: var(--sp-gap-sm); background: var(--sp-bg); }
+.ck-plan--featured { border-color: var(--sp-accent-alt); background: #fdf9f2; }
+
+.ck-badge   { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--sp-accent-alt); color: var(--sp-bg-dark); font-size: var(--sp-text-xs); font-weight: 700; padding: 3px 14px; border-radius: var(--sp-radius-pill); white-space: nowrap; }
+
+.ck-plan-name   { font-size: var(--sp-text-md); font-weight: 700; }
+.ck-plan-price  { font-size: 2rem; font-weight: 800; font-family: var(--sp-font-display); line-height: 1; }
+.ck-plan-period { font-size: var(--sp-text-sm); font-weight: 400; color: var(--sp-text-muted); margin-left: 4px; }
+
+.ck-features    { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.ck-features li { font-size: var(--sp-text-sm); color: var(--sp-text-soft); padding-left: 18px; position: relative; }
+.ck-features li::before { content: '✓'; position: absolute; left: 0; color: var(--sp-accent-alt); font-weight: 700; }
+
+.ck-cta { width: 100%; justify-content: center; margin-top: var(--sp-gap-sm); }
+
+.ck-legal   { text-align: center; font-size: var(--sp-text-xs); color: var(--sp-text-muted); }
+.ck-legal a { color: var(--sp-text-soft); text-decoration: underline; }
+
+/* Estados de carga / éxito */
+.ck-center  { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; gap: var(--sp-gap-md); text-align: center; }
+
+.ck-spinner { width: 36px; height: 36px; border: 3px solid var(--sp-border); border-top-color: var(--sp-accent-alt); border-radius: 50%; animation: ck-spin 0.8s linear infinite; }
+@keyframes ck-spin { to { transform: rotate(360deg); } }
+
+.ck-success-icon { width: 56px; height: 56px; border-radius: 50%; background: #166534; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+
+/* Billing en Dashboard */
+.db-billing-card    { border: 2px solid var(--sp-accent-alt); border-radius: var(--sp-radius-md); padding: var(--sp-gap-md); background: #fdf9f2; margin-bottom: var(--sp-gap-md); }
+.db-billing-plan    { font-size: var(--sp-text-md); font-weight: 700; margin-bottom: 4px; }
+.db-billing-status  { display: inline-flex; align-items: center; gap: 6px; font-size: var(--sp-text-xs); font-weight: 600; padding: 3px 10px; border-radius: var(--sp-radius-pill); }
+.db-billing-status--active    { background: #dcfce7; color: #166534; }
+.db-billing-status--trial     { background: #fef9c3; color: #854d0e; }
+.db-billing-status--past_due  { background: #fee2e2; color: #991b1b; }
+.db-billing-status--cancelled { background: var(--sp-bg-muted); color: var(--sp-text-muted); }
+.db-billing-meta    { font-size: var(--sp-text-sm); color: var(--sp-text-muted); margin-top: var(--sp-gap-sm); }

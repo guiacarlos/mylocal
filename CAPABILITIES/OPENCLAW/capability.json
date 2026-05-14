@@ -1,0 +1,22 @@
+{
+    "id": "OPENCLAW",
+    "version": "1.0.0",
+    "description": "Integración bidireccional con OpenClaw: MyLocal como skill del agente + push de eventos al agente",
+    "depends_on": ["LOGIN", "OPTIONS"],
+    "collections": [],
+    "public_actions": ["openclaw_manifest", "openclaw_call"],
+    "actions": [
+        "openclaw_manifest",
+        "openclaw_call",
+        "openclaw_status",
+        "openclaw_event_push"
+    ],
+    "config_keys": [
+        "openclaw.enabled",
+        "openclaw.skill_api_key",
+        "openclaw.push_url",
+        "openclaw.push_token",
+        "openclaw.push_channel"
+    ],
+    "notes": "openclaw.skill_api_key es el token que OpenClaw debe enviar para llamar a este skill. openclaw.push_url es el webhook local de OpenClaw (ej: http://localhost:3001/api/send)."
+}

@@ -1,0 +1,503 @@
+/* CartaPdfPanel + CartaPreview - panel del dashboard "Carta física en PDF" */
+
+/* ── Tabs de plantilla ─────────────────────────────────────────── */
+
+.pdf-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 16px 0 18px;
+}
+.pdf-tab {
+    text-align: left;
+    padding: 12px 14px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 10px;
+    background: var(--sp-bg, #fff);
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font: inherit;
+    color: inherit;
+}
+.pdf-tab:hover {
+    border-color: var(--sp-accent-alt, #C8A96E);
+    transform: translateY(-1px);
+}
+.pdf-tab--active {
+    border-color: var(--sp-accent-alt, #C8A96E);
+    box-shadow: 0 0 0 2px rgba(200, 169, 110, 0.18);
+    background: var(--sp-bg-soft, #F8F8F6);
+}
+.pdf-tab-name { font-size: 14px; font-weight: 600; color: var(--sp-text, #0F0F0F); }
+.pdf-tab-desc { font-size: 12px; color: var(--sp-text-muted, #717171); }
+
+/* ── Stage: sidebar colores + canvas preview ───────────────────── */
+
+.pdf-stage {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    margin-top: 4px;
+}
+@media (max-width: 768px) { .pdf-stage { grid-template-columns: 1fr; } }
+
+.pdf-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 10px;
+    background: var(--sp-bg, #fff);
+    height: fit-content;
+}
+.pdf-colors-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sp-text-muted, #717171);
+    margin-bottom: 6px;
+}
+.pdf-color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+}
+.pdf-color:hover { background: var(--sp-bg-soft, #F8F8F6); }
+.pdf-color--active {
+    border-color: var(--sp-accent-alt, #C8A96E);
+    background: var(--sp-bg-soft, #F8F8F6);
+}
+.pdf-color-swatch {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+.pdf-color-name { font-size: 13px; color: var(--sp-text, #0F0F0F); }
+
+/* ── Canvas (preview) ──────────────────────────────────────────── */
+
+.pdf-canvas {
+    background: #f3f4f6;
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: auto;
+    min-height: 540px;
+}
+.pdf-empty {
+    text-align: center;
+    color: var(--sp-text-muted, #717171);
+    padding: 80px 20px;
+    max-width: 360px;
+}
+.pdf-empty-sub { font-size: 12px; margin-top: 8px; }
+
+.pdf-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+.pdf-actions-hint { font-size: 12px; color: var(--sp-text-muted, #717171); }
+
+.pdf-uploading {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PREVIEW PAGE — A4 escalada, plantilla y color intercambiables
+   ══════════════════════════════════════════════════════════════════ */
+
+.pdf-page {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1.414;          /* A4 */
+    padding: 28px 26px;
+    background: var(--bg, #fff);
+    color: var(--fg, #0F0F0F);
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paletas — texto/acentos se adaptan automaticamente al fondo */
+.pdf-bg--blanco  { --bg: #ffffff; --fg: #0F0F0F; --accent: #C8A96E; --muted: #6b6b6b; --line: rgba(0,0,0,0.14); }
+.pdf-bg--negro   { --bg: #1a1a1a; --fg: #ffffff; --accent: #C8A96E; --muted: #b8b8b8; --line: rgba(255,255,255,0.18); }
+.pdf-bg--naranja { --bg: #FF6B35; --fg: #ffffff; --accent: #FFE4B5; --muted: rgba(255,255,255,0.85); --line: rgba(255,255,255,0.35); }
+.pdf-bg--rojo    { --bg: #B91C1C; --fg: #ffffff; --accent: #FECACA; --muted: rgba(255,255,255,0.85); --line: rgba(255,255,255,0.30); }
+.pdf-bg--azul    { --bg: #1E3A8A; --fg: #ffffff; --accent: #BFDBFE; --muted: rgba(255,255,255,0.85); --line: rgba(255,255,255,0.30); }
+
+/* ── Zonas de imagen (clickables) ─────────────────────────────── */
+
+.pdf-image-zone {
+    position: relative;
+    border: 1.5px dashed var(--line);
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.15s, transform 0.1s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.pdf-image-zone:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
+}
+.pdf-image-zone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.pdf-image-zone--circle {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    border-style: solid;
+    margin: 0 auto 10px;
+}
+.pdf-image-zone--circle.pdf-image-zone--empty {
+    border-style: dashed;
+}
+.pdf-image-zone--rect {
+    width: 130px; height: 130px;
+    border-radius: 6px;
+    border-style: solid;
+    flex-shrink: 0;
+}
+.pdf-image-zone--rect.pdf-image-zone--empty {
+    border-style: dashed;
+}
+.pdf-image-zone--banner {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border-style: solid;
+    flex-shrink: 0;
+}
+.pdf-image-zone--banner.pdf-image-zone--empty {
+    border-style: dashed;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PLANTILLA MINIMALISTA — editorial, dos columnas adaptativas
+   ══════════════════════════════════════════════════════════════════ */
+
+.pdf-page--minimalista { font-family: 'Inter', system-ui, sans-serif; }
+
+.pdf-min-head {
+    text-align: center;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+}
+.pdf-min-eyebrow {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.3em;
+    margin-bottom: 6px;
+}
+.pdf-min-head h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+.pdf-min-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin: 10px auto 0;
+}
+
+.pdf-min-grid {
+    flex: 1;
+    display: grid;
+    /* auto-fit con minmax: 1 cat = 1 columna ancha, 2 cats = 2 cols, etc. */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px 22px;
+    align-content: start;
+}
+/* Si solo hay 1 categoria, centrarla y darle ancho controlado */
+.pdf-page--minimalista[data-cats="1"] .pdf-min-grid {
+    grid-template-columns: minmax(0, 320px);
+    justify-content: center;
+}
+/* Densidad ajusta espaciado interno */
+.pdf-page--minimalista[data-density="sparse"] .pdf-min-grid { gap: 22px 30px; }
+.pdf-page--minimalista[data-density="dense"]  .pdf-min-grid { gap: 10px 18px; font-size: 9px; }
+
+.pdf-min-cat { break-inside: avoid; }
+.pdf-min-cat-title {
+    text-align: center;
+    background: var(--fg);
+    color: var(--bg);
+    padding: 3px 0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+}
+.pdf-min-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pdf-min-item { margin-bottom: 6px; }
+.pdf-min-item-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+.pdf-min-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pdf-min-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--line);
+    margin-bottom: 3px;
+}
+.pdf-min-price { white-space: nowrap; }
+.pdf-min-desc {
+    font-size: 8.5px;
+    color: var(--muted);
+    margin-top: 1px;
+    line-height: 1.35;
+}
+
+.pdf-min-foot {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PLANTILLA CLÁSICA — centrada, serif, logo circular, orlas
+   ══════════════════════════════════════════════════════════════════ */
+
+.pdf-page--clasica { font-family: 'Playfair Display', Georgia, serif; }
+
+.pdf-cla-head {
+    text-align: center;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+}
+.pdf-cla-head h1 {
+    margin: 4px 0;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+}
+.pdf-cla-sub {
+    font-size: 11px;
+    color: var(--muted);
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    margin-bottom: 4px;
+}
+.pdf-cla-orla {
+    color: var(--accent);
+    letter-spacing: 0.4em;
+    font-size: 9px;
+    margin: 2px 0;
+}
+
+.pdf-cla-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* Distribuye categorias a lo largo del alto disponible */
+    justify-content: flex-start;
+    gap: 14px;
+}
+/* 1 categoria: centrarla verticalmente para no dejar hueco abajo */
+.pdf-page--clasica[data-cats="1"] .pdf-cla-body {
+    justify-content: center;
+}
+/* Sparse (pocos productos): mas espacio entre categorias */
+.pdf-page--clasica[data-density="sparse"] .pdf-cla-body { gap: 22px; }
+.pdf-page--clasica[data-density="dense"]  .pdf-cla-body { gap: 10px; }
+
+.pdf-cla-cat { break-inside: avoid; }
+.pdf-cla-cat h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+.pdf-cla-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin: 4px 30px 10px;
+}
+.pdf-cla-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 12px;
+}
+.pdf-cla-item { margin-bottom: 8px; }
+.pdf-cla-item-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.pdf-cla-price { color: var(--accent); }
+.pdf-cla-desc {
+    font-size: 9.5px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 1px;
+}
+.pdf-cla-foot {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 10px;
+    color: var(--muted);
+    flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PLANTILLA MODERNA — hero con imagen + nombre, grid asimetrico
+   ══════════════════════════════════════════════════════════════════ */
+
+.pdf-page--moderna { font-family: 'Outfit', 'Inter', sans-serif; }
+
+.pdf-mod-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+    flex-shrink: 0;
+}
+.pdf-mod-hero-text {
+    width: 100%;
+}
+.pdf-mod-hero h1 {
+    margin: 4px 0 4px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    word-wrap: break-word;
+}
+.pdf-mod-sub {
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.pdf-mod-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px 18px;
+    align-content: start;
+}
+.pdf-page--moderna[data-cats="1"] .pdf-mod-grid {
+    grid-template-columns: 1fr;
+}
+.pdf-page--moderna[data-density="sparse"] .pdf-mod-grid { gap: 22px 22px; }
+.pdf-page--moderna[data-density="dense"]  .pdf-mod-grid { gap: 10px 14px; font-size: 9px; }
+
+.pdf-mod-cat { break-inside: avoid; }
+.pdf-mod-cat-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+}
+.pdf-mod-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pdf-mod-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 7px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--line);
+}
+.pdf-mod-item:last-child { border-bottom: none; }
+.pdf-mod-item-info {
+    flex: 1;
+    min-width: 0;
+}
+.pdf-mod-name { font-size: 11px; font-weight: 600; }
+.pdf-mod-desc { font-size: 8.5px; color: var(--muted); margin-top: 1px; }
+.pdf-mod-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.pdf-mod-foot {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 2px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+.pdf-mod-foot span { color: var(--muted); letter-spacing: 0.14em; }
+.pdf-mod-foot strong { font-size: 14px; }

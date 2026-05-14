@@ -1,0 +1,87 @@
+# ════════════════════════════════════════════════════════════════════
+# Synaxis server — .htaccess endurecido
+# Documentación completa en docs/SECURITY.md
+# ════════════════════════════════════════════════════════════════════
+
+# --- Listado de directorios desactivado ---------------------------------------
+Options -Indexes -MultiViews
+Options +FollowSymLinks
+
+# --- Entry point único: todo a index.php -------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Forzar HTTPS en producción (descomentar en deploy real).
+    # RewriteCond %{HTTPS} !=on
+    # RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Todo request de texto (sin archivo estático detrás) → index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ index.php [L,QSA]
+</IfModule>
+
+# --- Denegar acceso directo a archivos sensibles -----------------------------
+# Secretos, configuración, logs, backups, scripts CLI, SQLite.
+<FilesMatch "\.(env|ini|log|lock|bak|backup|old|sql|sqlite|db|tar|gz|zip|7z|rar|pem|key|crt|p12)$">
+    Require all denied
+</FilesMatch>
+
+# --- Denegar los JSON reales de config (los .example sí se pueden ver) -------
+# NOTE: a nivel HTTP cualquier .json del directorio está bloqueado abajo,
+# pero dejamos esta regla explícita como defensa en profundidad.
+<FilesMatch "^(gemini|revolut|auth|cors)\.json$">
+    Require all denied
+</FilesMatch>
+
+# --- Denegar .git, .env, y cualquier dotfile --------------------------------
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# --- No servir directamente PHP de handlers ni lib ---------------------------
+# Solo index.php es público. Un atacante no debe poder llegar a
+# handlers/auth.php o lib.php saltándose el dispatcher.
+<FilesMatch "^(lib|bootstrap)\.php$">
+    Require all denied
+</FilesMatch>
+
+# NOTA: los directorios sensibles (handlers/, config/, data/, bin/) se
+# bloquean con un .htaccess propio dentro de cada uno con `Require all denied`.
+# No se puede usar <Directory> aquí — esa directiva es server-config only.
+
+# --- Cabeceras de seguridad ---------------------------------------------------
+<IfModule mod_headers.c>
+    # Evita clickjacking
+    Header always set X-Frame-Options "DENY"
+    # MIME sniffing off
+    Header always set X-Content-Type-Options "nosniff"
+    # Referrer mínimo
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Sin plugins viejos
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+    # Permissions Policy restrictiva (no cámara/mic/geo por defecto)
+    Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(self), usb=()"
+    # HSTS (activar solo cuando HTTPS esté garantizado)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # CSP mínima: el server solo sirve JSON, nada debería embedearlo
+    Header always set Content-Security-Policy "default-src 'none'; frame-ancestors 'none'"
+    # Quitar la X-Powered-By de PHP (defensa en profundidad)
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+# --- Ocultar la versión de PHP/Apache en respuestas --------------------------
+<IfModule mod_php.c>
+    php_flag expose_php Off
+</IfModule>
+
+# --- Tamaño máximo del request (anti-DoS pequeño) ----------------------------
+LimitRequestBody 10485760
+# 10 MB. Para uploads realmente grandes ajustar aquí y en upload.php.
+
+# --- Bloqueo de métodos no usados --------------------------------------------
+<LimitExcept GET POST OPTIONS>
+    Require all denied
+</LimitExcept>

@@ -1,0 +1,4 @@
+{
+  "id": "asesoria",
+  "capabilities": ["LOGIN", "OPTIONS", "CRM", "CITAS", "NOTIFICACIONES", "OCR", "FISCAL", "TAREAS", "AI"]
+}

@@ -1,0 +1,18 @@
+{
+    "id": "c_8e7e9c68cd91bd68",
+    "local_id": "l_default",
+    "nombre": "Carta test gate",
+    "tipo": "principal",
+    "tema": "minimal",
+    "activa": false,
+    "vigencia_desde": null,
+    "vigencia_hasta": null,
+    "categorias_orden": [
+        "cat_7a3ef8d73ea4330a"
+    ],
+    "created_at": "2026-05-12T08:28:30+00:00",
+    "updated_at": "2026-05-12T08:28:30+00:00",
+    "_updatedAt": "2026-05-12T08:28:30+00:00",
+    "_version": 3,
+    "_createdAt": "2026-05-12T08:28:30+00:00"
+}

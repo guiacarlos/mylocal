@@ -1,0 +1,10 @@
+{
+    "id": "u_73616c616100",
+    "email": "sala@socola.es",
+    "name": "Editor Sala",
+    "role": "sala",
+    "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$VWZGbHR0YjFQSlFJbXAwQw$TMTstJtp/BAXDmv6dDTBKDwYkqLIA5gX6ijvB2/C4So",
+    "_createdAt": "2026-04-30T18:00:00+00:00",
+    "_updatedAt": "2026-04-30T18:00:00+00:00",
+    "_version": 1
+}

@@ -1,0 +1,5 @@
+# Denegar acceso HTTP directo a la "base de datos" JSON.
+# Los datos se leen/escriben solo vía server/index.php con auth + CSRF.
+# Media (server/data/media) se expone aparte vía un alias controlado
+# si hace falta servir imágenes; no directamente desde aquí.
+Require all denied

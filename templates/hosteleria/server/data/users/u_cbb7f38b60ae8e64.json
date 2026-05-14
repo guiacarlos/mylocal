@@ -1,0 +1,10 @@
+{
+    "id": "u_cbb7f38b60ae8e64",
+    "email": "cocina@socola.es",
+    "name": "Editor Cocina",
+    "role": "cocina",
+    "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$eGVXUHI0Qk1odW5uMERrOA$zFtjnkN2kGCM9f6jKIdpLW6v7oVCWLrWAEdptrhdu6k",
+    "_updatedAt": "2026-05-04T06:16:00+00:00",
+    "_version": 1,
+    "_createdAt": "2026-05-04T06:16:00+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "hosteleria",
+  "name": "MyLocal · Hosteleria",
+  "version": "1.0.0",
+  "description": "Template hosteleria: carta digital QR, mesas, TPV, agente IA.",
+  "capabilities": [
+    "LOGIN",
+    "OPTIONS",
+    "AI",
+    "GEMINI",
+    "PRODUCTS",
+    "PAYMENT",
+    "FISCAL",
+    "CARTA",
+    "QR",
+    "TPV",
+    "OCR",
+    "PDFGEN",
+    "AGENTE_RESTAURANTE"
+  ]
+}

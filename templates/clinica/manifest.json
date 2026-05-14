@@ -1,0 +1,18 @@
+{
+  "id": "clinica",
+  "name": "MyLocal · Clinica",
+  "version": "1.0.0",
+  "description": "Template clinica: agenda, pacientes, historial, stock, recordatorios.",
+  "capabilities": [
+    "LOGIN",
+    "OPTIONS",
+    "AI",
+    "GEMINI",
+    "PRODUCTS",
+    "PAYMENT",
+    "FISCAL",
+    "CITAS",
+    "CRM",
+    "NOTIFICACIONES"
+  ]
+}

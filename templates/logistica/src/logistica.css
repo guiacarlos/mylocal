@@ -1,0 +1,104 @@
+/* ── Logistica template styles ───────────────────────────────────────── */
+
+:root {
+    --lg-accent: #6366f1;
+    --lg-accent-alt: #4f46e5;
+    --lg-bg: #ffffff;
+    --lg-bg-soft: #f8fafc;
+    --lg-bg-muted: #e2e8f0;
+    --lg-border: #e2e8f0;
+    --lg-text: #0f172a;
+    --lg-text-muted: #64748b;
+    --lg-text-soft: #94a3b8;
+    --lg-radius: 8px;
+    --lg-radius-sm: 4px;
+    --lg-text-xs: 0.75rem;
+    --lg-text-sm: 0.875rem;
+    --lg-text-base: 1rem;
+
+    /* estado colores */
+    --lg-recibido: #f59e0b;
+    --lg-preparando: #3b82f6;
+    --lg-en_ruta: #8b5cf6;
+    --lg-entregado: #22c55e;
+    --lg-incidencia: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: var(--lg-bg-soft); color: var(--lg-text); }
+
+/* ── Layout ──────────────────────────────────────────────────────────── */
+.lg-shell    { display: flex; min-height: 100vh; }
+.lg-sidebar  { width: 230px; background: #1e1b4b; color: #e0e7ff; flex-shrink: 0; display: flex; flex-direction: column; }
+.lg-sidebar-logo { padding: 20px 16px; font-weight: 700; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 10px; }
+.lg-sidebar-nav  { flex: 1; padding: 8px 0; }
+.lg-nav-item     { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: var(--lg-text-sm); color: #a5b4fc; cursor: pointer; text-decoration: none; transition: background 0.1s, color 0.1s; }
+.lg-nav-item:hover, .lg-nav-item.active { background: rgba(255,255,255,0.06); color: #e0e7ff; }
+.lg-main     { flex: 1; overflow-y: auto; }
+.lg-header   { padding: 16px 24px; background: var(--lg-bg); border-bottom: 1px solid var(--lg-border); }
+.lg-content  { padding: 24px; }
+
+/* ── Cards ───────────────────────────────────────────────────────────── */
+.lg-card        { background: var(--lg-bg); border: 1px solid var(--lg-border); border-radius: var(--lg-radius); padding: 20px; margin-bottom: 16px; }
+.lg-card-title  { font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
+.lg-card-sub    { font-size: var(--lg-text-sm); color: var(--lg-text-muted); margin-bottom: 16px; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────── */
+.lg-btn            { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--lg-radius-sm); border: 1px solid transparent; font-size: var(--lg-text-sm); font-weight: 500; cursor: pointer; transition: opacity 0.1s; }
+.lg-btn:disabled   { opacity: 0.5; cursor: not-allowed; }
+.lg-btn--primary   { background: var(--lg-accent); color: #fff; border-color: var(--lg-accent); }
+.lg-btn--ghost     { background: transparent; color: var(--lg-text-muted); border-color: var(--lg-border); }
+.lg-btn--danger    { background: #ef4444; color: #fff; }
+
+/* ── Status ───────────────────────────────────────────────────────────── */
+.lg-status { display: flex; align-items: center; gap: 8px; font-size: var(--lg-text-sm); color: var(--lg-text-muted); padding: 8px 0; }
+.lg-dot    { width: 8px; height: 8px; border-radius: 50%; background: var(--lg-accent); animation: lgpulse 1.5s infinite; }
+@keyframes lgpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* ── Form ─────────────────────────────────────────────────────────────── */
+.lg-form      { background: var(--lg-bg-soft); border: 1px solid var(--lg-border); border-radius: var(--lg-radius); padding: 16px; margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+.lg-form-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lg-input     { width: 100%; padding: 7px 10px; border: 1px solid var(--lg-border); border-radius: var(--lg-radius-sm); font-size: var(--lg-text-sm); background: var(--lg-bg); }
+.lg-label     { font-size: var(--lg-text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--lg-text-muted); display: block; margin-bottom: 3px; }
+
+/* ── Pedidos ──────────────────────────────────────────────────────────── */
+.lg-pedido-row        { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--lg-border); cursor: pointer; transition: background 0.1s; }
+.lg-pedido-row:hover  { background: var(--lg-bg-soft); }
+.lg-pedido-codigo     { font-family: monospace; font-size: var(--lg-text-xs); background: var(--lg-bg-muted); padding: 2px 6px; border-radius: 3px; flex-shrink: 0; }
+.lg-pedido-cliente    { font-weight: 500; font-size: var(--lg-text-sm); }
+.lg-pedido-dir        { font-size: var(--lg-text-xs); color: var(--lg-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+
+/* ── Estado badges ────────────────────────────────────────────────────── */
+.lg-badge             { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.lg-badge--recibido   { background: #fef3c7; color: #92400e; }
+.lg-badge--preparando { background: #dbeafe; color: #1e40af; }
+.lg-badge--en_ruta    { background: #ede9fe; color: #5b21b6; }
+.lg-badge--entregado  { background: #dcfce7; color: #14532d; }
+.lg-badge--incidencia { background: #fee2e2; color: #991b1b; }
+
+/* ── Flota ────────────────────────────────────────────────────────────── */
+.lg-vehiculo-row       { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--lg-border); }
+.lg-vehiculo-matricula { font-family: monospace; font-weight: 700; font-size: var(--lg-text-sm); min-width: 90px; }
+.lg-vehiculo-conductor { font-size: var(--lg-text-sm); flex: 1; }
+.lg-vehiculo-modelo    { font-size: var(--lg-text-xs); color: var(--lg-text-muted); }
+
+/* ── Seguimiento público ──────────────────────────────────────────────── */
+.lg-tracking-shell  { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--lg-bg-soft); padding: 24px; }
+.lg-tracking-card   { background: var(--lg-bg); border: 1px solid var(--lg-border); border-radius: var(--lg-radius); padding: 32px; max-width: 480px; width: 100%; }
+.lg-tracking-title  { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+.lg-tracking-sub    { font-size: var(--lg-text-sm); color: var(--lg-text-muted); margin-bottom: 24px; }
+.lg-tracking-estado { font-size: 1.5rem; font-weight: 800; margin: 16px 0; }
+.lg-tracking-field  { font-size: var(--lg-text-sm); color: var(--lg-text-muted); margin-bottom: 6px; }
+.lg-tracking-value  { font-weight: 500; color: var(--lg-text); }
+
+/* ── Incidencias ──────────────────────────────────────────────────────── */
+.lg-inc-row   { padding: 12px 14px; border-bottom: 1px solid var(--lg-border); }
+.lg-inc-tipo  { font-size: var(--lg-text-xs); font-weight: 600; color: #dc2626; text-transform: uppercase; letter-spacing: 0.05em; }
+.lg-inc-desc  { font-size: var(--lg-text-sm); margin-top: 2px; }
+.lg-inc-meta  { font-size: var(--lg-text-xs); color: var(--lg-text-muted); margin-top: 4px; }
+
+@media (max-width: 768px) {
+    .lg-shell    { flex-direction: column; }
+    .lg-sidebar  { width: 100%; }
+    .lg-form-row { grid-template-columns: 1fr; }
+}

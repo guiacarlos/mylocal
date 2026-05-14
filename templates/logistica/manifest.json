@@ -1,0 +1,5 @@
+{
+  "id": "logistica",
+  "capabilities": ["LOGIN", "OPTIONS", "CRM", "NOTIFICACIONES", "DELIVERY"],
+  "public_routes": ["/seguimiento/:codigo"]
+}

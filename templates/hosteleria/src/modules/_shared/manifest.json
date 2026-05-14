@@ -1,0 +1,78 @@
+{
+    "id": "_shared",
+    "name": "Nucleo generico",
+    "version": "1.0.0",
+    "description": "Modulo siempre activo: landing, paginas legales/wiki, checkout, y las 3 sub-areas genericas del dashboard (Configuracion, Facturacion, Cuenta). Cualquier vertical lo carga junto a su modulo de sector.",
+    "requires_capabilities": [
+        "LOGIN",
+        "OPTIONS"
+    ],
+    "public_routes": [
+        { "path": "/legal",        "component": "LegalPage" },
+        { "path": "/legal/:slug",  "component": "LegalPage" },
+        { "path": "/aviso-legal",  "component": "LegalPage" },
+        { "path": "/privacidad",   "component": "LegalPage" },
+        { "path": "/cookies",      "component": "LegalPage" },
+        { "path": "/uso",          "component": "LegalPage" },
+        { "path": "/terminos",     "component": "LegalPage" },
+        { "path": "/cuentas",      "component": "LegalPage" },
+        { "path": "/reembolso",    "component": "LegalPage" },
+        { "path": "/reembolsos",   "component": "LegalPage" },
+        { "path": "/wiki",         "component": "WikiIndex" },
+        { "path": "/wiki/:slug",   "component": "WikiArticle" }
+    ],
+    "private_routes": [
+        { "path": "/checkout", "component": "Checkout" }
+    ],
+    "raw_routes": [
+        { "path": "/", "component": "Home" }
+    ],
+    "crumb_labels": {
+        "dashboard":   "Inicio",
+        "config":      "Configuración",
+        "facturacion": "Facturación",
+        "cuenta":      "Cuenta",
+        "general":     "General",
+        "identidad":   "Identidad",
+        "idiomas":     "Idiomas",
+        "horarios":    "Horarios",
+        "fiscal":      "Datos fiscales",
+        "equipo":      "Equipo",
+        "perfil":      "Perfil",
+        "password":    "Contraseña",
+        "sesiones":    "Sesiones",
+        "cerrar":      "Cerrar cuenta",
+        "plan":        "Mi plan",
+        "historico":   "Histórico",
+        "metodos":     "Métodos de pago"
+    },
+    "dashboard_nav": [
+        { "to": "/dashboard/config",      "label": "Configuracion", "icon": "Settings" },
+        { "to": "/dashboard/facturacion", "label": "Facturacion",   "icon": "CreditCard" },
+        { "to": "/dashboard/cuenta",      "label": "Cuenta",        "icon": "User" }
+    ],
+    "dashboard_routes": [
+        { "path": "config/*", "component": "ConfigPage", "children": [
+            { "index": true, "redirect": "general" },
+            { "path": "general",   "component": "ConfigGeneralPage" },
+            { "path": "identidad", "component": "ConfigIdentidadPage" },
+            { "path": "idiomas",   "component": "ConfigIdiomasPage" },
+            { "path": "horarios",  "component": "ConfigHorariosPage" },
+            { "path": "fiscal",    "component": "ConfigFiscalPage" },
+            { "path": "equipo",    "component": "ConfigEquipoPage" }
+        ]},
+        { "path": "facturacion/*", "component": "FacturacionPage", "children": [
+            { "index": true, "redirect": "plan" },
+            { "path": "plan",      "component": "FacturacionPlanPage" },
+            { "path": "historico", "component": "FacturacionHistoricoPage" },
+            { "path": "metodos",   "component": "FacturacionMetodosPage" }
+        ]},
+        { "path": "cuenta/*", "component": "CuentaPage", "children": [
+            { "index": true, "redirect": "perfil" },
+            { "path": "perfil",   "component": "CuentaPerfilPage" },
+            { "path": "password", "component": "CuentaPasswordPage" },
+            { "path": "sesiones", "component": "CuentaSesionesPage" },
+            { "path": "cerrar",   "component": "CuentaCerrarPage" }
+        ]}
+    ]
+}

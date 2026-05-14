@@ -1,0 +1,15 @@
+{
+    "id": "mesa_10f1f673c184",
+    "local_id": "test_sala",
+    "zone_id": "zone_964393064d0b",
+    "numero": "2",
+    "capacidad": 4,
+    "qr_token": "a669b10431da61b8",
+    "estado": "libre",
+    "activa": false,
+    "created_at": "2026-05-08T07:10:36+00:00",
+    "updated_at": "2026-05-08T07:10:36+00:00",
+    "_updatedAt": "2026-05-08T07:10:36+00:00",
+    "_version": 3,
+    "_createdAt": "2026-05-08T07:10:36+00:00"
+}

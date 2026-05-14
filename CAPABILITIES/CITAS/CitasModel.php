@@ -56,7 +56,16 @@ class CitasModel
         $doc = data_get('citas', $id);
         if (!$doc) throw new \RuntimeException('Cita no encontrada.');
         if ($doc['estado'] === 'cancelada') throw new \InvalidArgumentException('La cita ya está cancelada.');
-        return data_put('citas', $id, array_merge($doc, ['estado' => 'cancelada']), true);
+        $saved = data_put('citas', $id, array_merge($doc, ['estado' => 'cancelada']), true);
+        if (class_exists(\EventBus::class)) {
+            \EventBus::emit('cita.cancelada', [
+                'cita_id'      => $id,
+                'cliente'      => $doc['cliente_id'] ?? '',
+                'fecha_inicio' => $doc['inicio'] ?? '',
+                'local_id'     => $doc['local_id'] ?? '',
+            ]);
+        }
+        return $saved;
     }
 
     /** Lista citas de un local, opcionalmente filtradas por rango ISO8601 */

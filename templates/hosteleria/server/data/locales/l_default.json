@@ -1,0 +1,35 @@
+{
+    "id": "l_default",
+    "slug": "mi-local",
+    "nombre": "Bar de Lola",
+    "telefono": "+34 677 677 677",
+    "direccion": "",
+    "email": "",
+    "web": "",
+    "instagram": "mylocaltest",
+    "tagline": "Cocina mediterranea",
+    "owner_user_id": "u_e29f5a9fd3834e8f",
+    "members": [
+        {
+            "user_id": "u_e29f5a9fd3834e8f",
+            "role": "admin"
+        }
+    ],
+    "default_carta_id": "c_85b4cd90d99c3688",
+    "created_at": "2026-05-08T06:41:13+00:00",
+    "updated_at": "2026-05-12T10:32:07+00:00",
+    "_updatedAt": "2026-05-12T10:32:07+00:00",
+    "_version": 66,
+    "_createdAt": "2026-05-08T06:41:13+00:00",
+    "web_template": "moderna",
+    "web_color": "claro",
+    "idiomas": [
+        "es"
+    ],
+    "horarios": [],
+    "nif": "",
+    "razon_social": "",
+    "direccion_fiscal": "",
+    "tipo_negocio": "Restaurante",
+    "descripcion": "Cocina mediterranea de producto."
+}

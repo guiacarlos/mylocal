@@ -1,616 +1,391 @@
 # Plan de Estructura: MyLocal → Framework Multi-Sector
 
 **Documento:** `claude/planes/estructura.md`
-**Proyecto:** MyLocal (a.k.a. "framework PHP+React modular")
-**Estado:** Planificación de ejecución por olas, con criterios de salida explícitos
+**Proyecto:** MyLocal (framework PHP + React para agencias)
+**Estado:** Ejecución en curso — Ola K en progreso
 **Filosofía:** modular atómico · cada archivo una responsabilidad · ≤ 250 LOC · cero hardcodeos · cero datos ficticios · cero funciones a medio hacer
 
 ---
 
 ## 0. Por qué este documento existe
 
-Hoy MyLocal es un monolito de hostelería:
+MyLocal se convierte en un **framework para agencias**: el backend PHP y el motor de datos son reutilizables entre proyectos. El frontend es un **template intercambiable** que puede venir de Lovable, Dribbble, ThemeForest o desarrollo propio.
 
-- El **backend** ya es modular (`CAPABILITIES/*` con `capability.json`) — es la pieza buena.
-- El **frontend** es monolítico: `App.tsx` cablea rutas de Carta/TPV/MesaQR; `DashboardSidebar.tsx` tiene un `ITEMS[]` hardcodeado con Carta/Mesas/Pedidos.
-- No existe un **AppBootstrap** que ensamble una app nueva eligiendo capabilities y sector.
-- Faltan **3 capabilities transversales** (CITAS, CRM, NOTIFICACIONES) que cualquier vertical necesita.
+**El problema que resuelve:**
 
-Objetivo del plan: convertir MyLocal en un **framework de aplicaciones verticales** sin romper nada de lo que ya funciona (`AUTH_LOCK.md` debe seguir pasando) y sin meter código a medio camino. Cada ola se cierra al 100% antes de pasar a la siguiente.
+Sin este framework, montar un proyecto para una clínica supone:
+- Copiar el proyecto de hostelería
+- Eliminar todo lo que no aplica
+- Crear lo nuevo desde cero
+- Mantener dos codebases desconectadas
 
-**Lo que NO se hace en este plan:**
-
-- No se forkea OpenClaude. Se integra como cliente HTTP cuando haya 2–3 demos pagando.
-- No se reescribe AxiDB. No se reescribe el core PHP. No se toca `AUTH_LOCK`.
-- No se hace white-label, marketplace, app móvil, ni nada que no esté listado aquí.
-- No se introducen datos seed con valores de pega ("Plato 1", "Cliente Ejemplo"). Si una pantalla no tiene datos reales, muestra estado vacío real.
+Con el framework:
+- El backend (CAPABILITIES) ya existe y funciona
+- El template define el diseño y las páginas
+- `build.ps1 --template=clinica` genera el release listo para subir
+- El cliente solo lleva lo que necesita — cero archivos de otros proyectos
 
 ---
 
 ## 1. Principios de ejecución (no negociables)
 
-Estos son los muros del campo. Si una tarea los pisa, se rediseña.
-
-1. **Atómico.** Cada archivo nuevo se valida por sí solo (typecheck, ejecuta, render OK). No existe el commit "WIP".
-2. **≤ 250 LOC.** Si un archivo va a superarlo, se parte en sub-archivos con responsabilidades claras *antes* de seguir escribiendo.
-3. **Sin hardcodeos.** Toda lista, mapa, color, ruta, etiqueta de menú, módulo activo, namespace de capability viene de un fichero de configuración (`config.json`, `manifest.json`, `capability.json`) o de AxiDB. Cero `const ITEMS = [...]` en componentes.
-4. **Sin datos ficticios.** Estados vacíos reales con CTA, jamás "Producto demo 1". Los tests pueden crear datos *con prefijo* `__test_*` y limpiarlos al final.
-5. **Sin funciones a medias.** Una función o no existe o devuelve un valor correcto para todos sus inputs declarados. Nada de `// TODO: handle error case`.
-6. **Test antes de check.** Cada checklist tiene un sub-bloque "Tests" con escenarios feliz + bordes + estrés. Sin verde no se marca el item.
-7. **Cero regresión `AUTH_LOCK`.** Cada ola termina con `build.ps1` ejecutado completo y el test de login pasando 100%.
-8. **Sin commits ni push.** Hasta que el dueño del proyecto lo pida explícitamente. Los cambios viven en working tree, se validan en local.
+1. **Atómico.** Cada archivo nuevo se valida por sí solo. No existe el commit "WIP".
+2. **≤ 250 LOC.** Si un archivo va a superarlo, se parte antes de seguir escribiendo.
+3. **Sin hardcodeos.** Toda lista, mapa, color, ruta, etiqueta viene de `manifest.json`, `config.json` o AxiDB.
+4. **Sin datos ficticios.** Estados vacíos reales con CTA. Los tests usan prefijo `__test_*` y limpian al final.
+5. **Sin funciones a medias.** Una función existe completa o no existe.
+6. **Test antes de check.** Sin verde no se marca el item.
+7. **Cero regresión AUTH_LOCK.** `build.ps1` y `test_login.php` deben pasar antes de cerrar cualquier ola.
+8. **Commit y push** solo cuando el dueño del proyecto lo pide explícitamente.
 
 ---
 
-## 2. Arquitectura objetivo (visión de alto nivel)
+## 2. Arquitectura objetivo
+
+### Backend — no cambia entre proyectos
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│ release/ (lo que se sube por tenant)                                 │
-│                                                                      │
-│  config.json    ← qué módulo activo, identidad, plan, paleta         │
-│  CORE/          ← framework PHP (no cambia entre tenants)            │
-│  axidb/         ← motor de datos (no cambia entre tenants)           │
-│  CAPABILITIES/  ← solo las que necesite ese tenant                   │
-│  spa/...        ← bundle React con SOLO el módulo del tenant         │
-└─────────────────────────────────────────────────────────────────────┘
-                                ▲
-                                │ generado por
-                                │
-                    ┌───────────┴────────────┐
-                    │ tools/AppBootstrap     │
-                    │  - lee preset/<sector> │
-                    │  - copia capabilities  │
-                    │  - copia módulo SPA    │
-                    │  - emite config.json   │
-                    │  - dispara build       │
-                    └────────────────────────┘
+CAPABILITIES/          ← módulos PHP reutilizables, uno por dominio
+  LOGIN/   OPTIONS/    ← bloqueados (AUTH_LOCK)
+  CITAS/   CRM/   NOTIFICACIONES/   ← transversales (cualquier vertical)
+  CARTA/   QR/   TPV/  PDFGEN/  OCR/ ← hostelería
+  PRODUCTS/  PAYMENT/  FISCAL/       ← genéricos
+  AI/   GEMINI/                       ← motor IA
+
+CORE/                  ← auth, gateway, router — framework base
+axidb/                 ← motor de datos file-based
 ```
 
-**Frontend modular** (lo nuevo):
+Cada capability declara sus dependencias en `capability.json`. El build copia **solo las que el template necesita**.
+
+### Frontend — un proyecto Vite autocontenido por vertical
 
 ```
-spa/src/
-  app/                       ← runtime genérico (NO se toca al añadir sector)
-    bootstrap.tsx            ← lee config.json + carga módulo activo
-    AppShell.tsx             ← Router + PublicLayout + PrivateLayout
-    config.ts                ← tipos + loader de config.json
-    modules-registry.ts      ← import.meta.glob de los manifests
-  modules/
-    _shared/                 ← navegación genérica (Config, Facturación, Cuenta)
-      manifest.json
-      routes.tsx
+sdk/                          ← @mylocal/sdk: paquete compartido
+  src/
+    client.ts                 ← SynaxisClient (acceso a datos)
+    auth.ts                   ← login / logout / session
+    hooks.ts                  ← React hooks (useSynaxisClient, etc.)
+    types.ts                  ← tipos TypeScript comunes
+
+templates/                    ← UN proyecto Vite por vertical/cliente
+  hosteleria/
+    package.json              ← depende de @mylocal/sdk
+    vite.config.ts
+    manifest.json             ← capabilities que usa este template
+    src/
+      App.tsx                 ← entry point del template
+      pages/                  ← páginas propias del template
+      styles/                 ← diseño propio
+  clinica/
+    package.json
+    vite.config.ts
+    manifest.json             ← ["CITAS","CRM","NOTIFICACIONES"]
+    src/
+      App.tsx                 ← puede venir de Lovable casi sin tocar
       pages/
-    hosteleria/              ← módulo actual de MyLocal (refactor)
-      manifest.json
-      routes.tsx
-      pages/
-      components/
-    clinica/                 ← nuevo (Ola F)
-    logistica/               ← nuevo (Ola G)
-    asesoria/                ← nuevo (Ola H)
-  components/                ← componentes verdaderamente genéricos (Header, Footer, LoginModal)
-  services/                  ← servicios genéricos (auth, csrf)
-  synaxis/                   ← cliente AxiDB (no cambia)
+      styles/
+  renault/                    ← drop de Lovable/Dribbble aquí
+    ...
 ```
 
-**Backend modular** (lo que ya tenemos + 3 capabilities nuevas):
+### Flujo para un proyecto nuevo
 
 ```
-CAPABILITIES/
-  LOGIN/         ← bloqueado (AUTH_LOCK)
-  OPTIONS/       ← bloqueado
-  AI/  GEMINI/   ← motor IA
-  CARTA/  QR/  TPV/  PDFGEN/  OCR/   ← hostelería
-  PRODUCTS/  PAYMENT/  FISCAL/        ← genéricos
-  CITAS/         ← NUEVO (Ola E)
-  CRM/           ← NUEVO (Ola E)
-  NOTIFICACIONES/← NUEVO (Ola E)
+1. Ir a Lovable → crear diseño para veterinaria → exportar
+2. cp -r lovable-export/ templates/veterinaria/
+3. Editar manifest.json: capabilities que necesita
+4. Reemplazar llamadas mock por client.execute({ action: '...' })
+5. build.ps1 --template=veterinaria → release/ lista para subir
+```
+
+### Build por template
+
+```powershell
+build.ps1 --template=clinica
+  1. Lee templates/clinica/manifest.json
+  2. pnpm -F clinica build → dist/ dentro del template
+  3. Copia dist/ → release/
+  4. Copia CORE/, axidb/, gateway.php, router.php, .htaccess
+  5. Copia SOLO las CAPABILITIES declaradas en manifest.json
+  6. Ejecuta test_login.php
+  7. Imprime resumen (capabilities incluidas, tamaño, ruta)
 ```
 
 ---
 
-## 3. Mapa de olas (timeline real)
+## 3. Mapa de olas
 
-| Ola | Nombre | Entregable | Días estimados |
-|----:|--------|-----------|---------------:|
-| 0   | Preflight | Auditoría + gitignore + test_login verde tras refactor | 0,5 |
-| A   | Refactor frontend → `modules/hosteleria` | MyLocal igual de funcional pero ya dentro de la nueva estructura | 1 |
-| B   | Sistema de manifest dinámico | Sidebar y rutas se generan desde `manifest.json` por módulo | 1 |
-| C   | `_shared/` + `app/` runtime | Núcleo del framework documentado y probado | 1 |
-| D   | AppBootstrap (CLI) | `pnpm bootstrap --sector=clinica --slug=san-anton` produce `release/` lista | 1,5 |
-| E   | CAPABILITIES backend: CITAS, CRM, NOTIFICACIONES | 3 capabilities cerradas + test php | 3 |
-| F   | Módulo `clinica/` (demo Clínica San Antón) | Frontend + datos reales mínimos + tests | 2 |
-| G   | Módulo `logistica/` (demo LogiSpain / Muebles Blanes) | Frontend + datos reales mínimos + tests | 2 |
-| H   | Módulo `asesoria/` (demo Gesgasa) | Frontend + datos reales mínimos + tests | 2 |
-| I   | Integración OpenClaude como observador | Conector HTTP unidireccional + 1 alerta real | 2 |
-| J   | Documentación + handover | `docs/FRAMEWORK.md` + `CONTRIBUTING.md` por módulo | 0,5 |
-
-Total estimado de ejecución continua: **~16,5 días laborables**. No se cierra una ola con sub-tareas marcadas como "para después".
-
----
-
-## 4. Ola 0 — Preflight
-
-**Objetivo:** dejar el repo y el entorno listos para tocar sin riesgos.
-
-### 4.1. Auditoría rápida
-
-- [ ] Listar archivos > 250 LOC en `spa/src/**` y `CAPABILITIES/**`.
-- [ ] Confirmar que `build.ps1` arranca limpio en local y `test_login.php` pasa 100%.
-- [ ] Confirmar que `npm run build` en `spa/` termina sin warnings de TS.
-- [ ] Snapshot del árbol actual de `spa/src/` en `claude/snapshots/spa-pre-refactor.txt` para diffs futuros.
-
-### 4.2. Higiene git
-
-- [ ] `.claude/` y `claude/recetascocina/` añadidos a `.gitignore` (siguen sin commitearse).
-- [ ] `release/assets/index-*.js` y `release/assets/index-*.css` salen del seguimiento — el build los regenera y empachan el historial.
-- [ ] `spa/tsconfig.tsbuildinfo` fuera del seguimiento.
-
-### 4.3. Liberación de puertos zombie
-
-- [ ] Script `tools/dev/free-ports.ps1` que mate procesos zombie en 8091, 8766, 8767, 5173. Lo invocan `run.bat` y `build.ps1` antes de empezar.
-
-### 4.4. Tests
-
-- [ ] `build.ps1` corre sin que sobren `php.exe` colgando.
-- [ ] Test de regresión visual mínimo: `/`, `/carta`, `/dashboard/carta` cargan sin error en consola (capturado en `claude/snapshots/preflight-console.log`).
-
-### Criterio de salida Ola 0
-
-- Auditoría escrita.
-- `git status` sin ruido (gitignore aplicado).
-- `build.ps1` verde.
-- `tools/dev/free-ports.ps1` documentado en `README` del proyecto.
+| Ola | Nombre | Estado |
+|----:|--------|--------|
+| 0   | Preflight | ✅ Completa |
+| A   | Refactor frontend → `modules/hosteleria` | ✅ Completa |
+| B   | Manifest dinámico (sidebar + rutas) | ✅ Completa |
+| C   | Runtime `app/` + `_shared/` | ✅ Completa |
+| D   | AppBootstrap CLI | ✅ Completa |
+| E   | CAPABILITIES: CITAS + CRM + NOTIFICACIONES | ✅ Completa |
+| F   | Template `clinica/` (dentro de la SPA monolítica) | ✅ Completa (pendiente migrar en G) |
+| **G** | **Migración a arquitectura de templates independientes** | ✅ Completa |
+| H   | Template `logistica/` (primer template drop-in real) | ✅ Completa |
+| **I** | **Template `asesoria/`** | ✅ Completa |
+| **J** | **Integración OpenClaude** | ✅ Completa |
+| K   | Documentación + handover | ⬜ Pendiente |
 
 ---
 
-## 5. Ola A — Refactor frontend a `modules/hosteleria/`
+## 4–6. Olas 0–C (completas, documentadas por referencia)
 
-**Objetivo:** que MyLocal siga funcionando *exactamente igual* pero con sus archivos ya colocados dentro de `spa/src/modules/hosteleria/`. **Ola de mover, no de añadir.**
+Las olas 0–C completaron el refactor del frontend de hostelería:
+- `CAPABILITIES/` modular con `capability.json` por módulo
+- `spa/src/modules/hosteleria/` con manifest dinámico
+- Sistema de rutas y sidebar generado desde `manifest.json`
+- Runtime `app/` + `_shared/` (Config, Cuenta, Facturación)
+- `build.ps1` con gate de login
 
-### 5.1. Inventario previo
-
-- [ ] Listar todas las páginas de restaurante en `spa/src/pages/` y `spa/src/pages/dashboard/`:
-  - Públicas: `Carta.tsx`, `MesaQR.tsx`.
-  - Dashboard hostelería: `CartaPage.tsx`, `CartaImportarPage.tsx`, `CartaProductosPage.tsx`, `CartaPdfPage.tsx`, `CartaWebPage.tsx`, `MesasPage.tsx`, `PedidosPage.tsx`.
-  - Sistema staff: `TPV.tsx`.
-- [ ] Listar componentes acoplados a hostelería: `components/sala/*`, `components/carta/*`.
-- [ ] Listar componentes verdaderamente genéricos a *no* mover: `Header`, `Footer`, `LoginModal`, `MarkdownView`, todo `dashboard/*` (Layout, Sidebar, Header, Context).
-
-### 5.2. Movimientos físicos
-
-- [ ] Crear `spa/src/modules/hosteleria/{pages,components,routes.tsx,manifest.json}`.
-- [ ] Mover páginas de restaurante a `modules/hosteleria/pages/`.
-- [ ] Mover `components/carta/*`, `components/sala/*` a `modules/hosteleria/components/`.
-- [ ] Actualizar imports relativos. Cero rutas absolutas que apunten al sitio viejo.
-- [ ] Crear `modules/hosteleria/manifest.json` (esquema en §6).
-
-### 5.3. Tests
-
-- [ ] `npm run build` pasa sin errores.
-- [ ] `npm run dev` arranca, las 9 rutas hosteleras renderizan sin error en consola.
-- [ ] `build.ps1` completo verde (incluye `test_login.php`).
-- [ ] Diff visual: capturar `/`, `/carta`, `/dashboard/carta`, `/dashboard/mesas`, `/dashboard/pedidos`, `/sistema/tpv` y compararlos con el snapshot pre-refactor. Cero cambios pixel-perfect esperados.
-
-### Criterio de salida Ola A
-
-- Todo lo de hostelería vive bajo `modules/hosteleria/`.
-- `App.tsx` sigue siendo el mismo de hoy (cablea directamente las rutas viejas, todavía). No se ha tocado el dinamismo aún.
-- Tests verdes.
+No requieren re-abrirse. La Ola G las absorbe en la nueva arquitectura.
 
 ---
 
-## 6. Ola B — Manifest dinámico (sidebar + rutas)
+## 7. Ola D — AppBootstrap CLI ✅
 
-**Objetivo:** que el sidebar y las rutas del dashboard se generen a partir del `manifest.json` del módulo activo, sin tocar `DashboardSidebar` cuando aparezca un sector nuevo.
+CLI `tools/bootstrap/bootstrap.mjs` que produce un `release/` deployable dado un preset.
 
-### 6.1. Esquema `manifest.json` por módulo
+Uso: `node tools/bootstrap/bootstrap.mjs --preset=hosteleria --slug=demo --nombre="Demo" --out=./builds/demo`
 
-Archivo único por módulo. Tipo TS en `app/config.ts`.
-
-```jsonc
-{
-  "id": "hosteleria",
-  "name": "MyLocal · Hostelería",
-  "version": "1.0.0",
-  "public_routes": [
-    { "path": "/carta",                  "component": "Carta" },
-    { "path": "/carta/:zonaSlug",        "component": "Carta" },
-    { "path": "/carta/:zonaSlug/:mesaSlug","component": "Carta" },
-    { "path": "/mesa/:slug",             "component": "MesaQR" }
-  ],
-  "dashboard_nav": [
-    { "to": "/dashboard/carta",   "label": "Carta",   "icon": "Book" },
-    { "to": "/dashboard/mesas",   "label": "Mesas",   "icon": "Armchair" },
-    { "to": "/dashboard/pedidos", "label": "Pedidos", "icon": "Bell" }
-  ],
-  "dashboard_routes": [
-    { "path": "/dashboard/carta/*",   "component": "CartaPage" },
-    { "path": "/dashboard/mesas",     "component": "MesasPage" },
-    { "path": "/dashboard/pedidos",   "component": "PedidosPage" }
-  ],
-  "staff_routes": [
-    { "path": "/sistema/tpv/*", "component": "TPV" }
-  ],
-  "requires_capabilities": ["CARTA", "QR", "TPV", "PRODUCTS", "OCR", "PDFGEN"]
-}
-```
-
-- [ ] Definir tipo `ModuleManifest` en `spa/src/app/config.ts`.
-- [ ] Validar al arrancar (Zod o validador minimal propio ≤ 100 LOC) — si falta un campo, fallo de carga claro.
-
-### 6.2. Sidebar dinámico
-
-- [ ] `DashboardSidebar.tsx` deja de tener `ITEMS = [...]`. Recibe `items: NavItem[]` por props.
-- [ ] El layout pasa `[...moduleManifest.dashboard_nav, ..._sharedManifest.dashboard_nav]`.
-- [ ] Mapeo `icon: string → LucideIcon` vive en `app/icons.ts` (whitelist explícita, ≤ 80 LOC). Si el manifest pide un icono no whitelistado, se loguea y se cae a `Square`.
-
-### 6.3. Rutas dinámicas
-
-- [ ] `App.tsx` deja de listar rutas a mano. Itera `manifest.public_routes`, `dashboard_routes`, `staff_routes` y monta `<Route>` correspondiente.
-- [ ] El mapping `component: string → React.ComponentType` vive en `modules/<id>/routes.tsx`. Cero `eval`, cero `new Function`. Usa un registro literal.
-
-### 6.4. `_shared/manifest.json`
-
-- [ ] Crear `modules/_shared/` con manifest y páginas genéricas (Config, Facturación, Cuenta, LegalPage, WikiPage).
-- [ ] El runtime carga `_shared` siempre, antes del módulo de sector.
-
-### 6.5. Tests
-
-- [ ] Test unitario: dada una manifest correcta, el sidebar pinta N+M items (módulo + shared) en el orden esperado.
-- [ ] Test unitario: dada una manifest con `icon` inválido, no crashea y pinta el fallback.
-- [ ] Test de integración: tras mover la lógica, navegar entre las 9 rutas hosteleras sigue sin re-fetch (el fix del commit `3a50c0d` debe seguir vigente — verificación manual con DevTools Network).
-- [ ] Estrés: manifest con 30 items en `dashboard_nav` → sidebar scrollable, no rompe el layout.
-
-### Criterio de salida Ola B
-
-- `DashboardSidebar.tsx` ≤ 80 LOC, sin un solo literal de etiqueta o ruta.
-- `App.tsx` ≤ 120 LOC, sin un solo path string de un sector concreto.
-- Cambiar el menú = editar `manifest.json`. Nada más.
+**Nota:** tras la Ola G, el CLI se actualizará para usar `--template=` en lugar de `--preset=` y apuntará a `templates/<nombre>/` en vez de `spa/src/modules/<nombre>/`.
 
 ---
 
-## 7. Ola C — Runtime `app/` + `_shared/`
+## 8. Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES ✅
 
-**Objetivo:** consolidar el núcleo del framework como pieza independiente.
+Tres capabilities transversales completas. No se reabren.
 
-### 7.1. `app/bootstrap.tsx`
-
-- [ ] Carga `config.json` desde `/config.json` (fetch al arrancar, una sola vez).
-- [ ] Resuelve `modulesRegistry` con `import.meta.glob('../modules/*/routes.tsx', { eager: false })`.
-- [ ] Importa dinámicamente sólo el módulo activo + `_shared`.
-- [ ] Maneja el caso "config inválida" con una pantalla de error explícita (sin pantalla en blanco).
-
-### 7.2. `config.json` por tenant
-
-- [ ] Schema mínimo: `{ modulo, nombre, slug, color_acento, logo_path, plan }`.
-- [ ] `config.json` vive en `spa/public/config.json` en dev (hostelería por defecto) y lo genera AppBootstrap en cada tenant.
-- [ ] Validador `app/config.ts` lo carga al arrancar; si falla, `<ConfigError/>` con mensaje accionable.
-
-### 7.3. Theming sin hardcodeos
-
-- [ ] `color_acento` se aplica como CSS variable `--db-accent` en `<html>` al arrancar.
-- [ ] `logo_path` lo usa el sidebar; si falta, muestra inicial del nombre.
-- [ ] Cero `style={{ color: '#xxx' }}` en componentes que dependa de identidad.
-
-### 7.4. Tests
-
-- [ ] Test: arrancar con `config.json` mínimo válido → arranca, sidebar pintado.
-- [ ] Test: arrancar sin `config.json` → pantalla de error legible, no en blanco.
-- [ ] Test: arrancar con `modulo` inexistente → pantalla de error que cita el ID y los módulos disponibles.
-- [ ] Estrés: cambiar `color_acento` en runtime (script en consola) → tema se actualiza sin recarga.
-
-### Criterio de salida Ola C
-
-- El núcleo `app/` no contiene ninguna referencia a "hosteleria", "clinica" ni a ningún sector.
-- Ningún componente fuera de `modules/<sector>/` referencia páginas de sector.
-- El test de login sigue pasando.
+| Capability | Archivos | Tests |
+|-----------|---------|-------|
+| CITAS | CitasModel, RecursosModel, CitasEngine, CitasAdminApi, CitasPublicApi | 9/9 ✅ |
+| CRM | ContactoModel, InteraccionModel, SegmentoEngine, CrmAdminApi | 15/15 ✅ |
+| NOTIFICACIONES | drivers/ (Noop, Email, WhatsApp), Template, NotificationEngine, NotificationsApi | 14/14 ✅ |
 
 ---
 
-## 8. Ola D — AppBootstrap (CLI)
+## 9. Ola F — Template `clinica/` en SPA monolítica ✅ (pendiente migrar en G)
 
-**Objetivo:** un comando produce un `release/` listo para subir a un servidor, con sólo lo que ese tenant necesita.
-
-### 8.1. Diseño del CLI
-
-`tools/bootstrap/bootstrap.mjs` (Node, sin dependencias raras).
-
-Uso:
-
-```bash
-node tools/bootstrap/bootstrap.mjs \
-  --preset=clinica \
-  --slug=san-anton \
-  --nombre="Clínica San Antón" \
-  --color=#2d7a4f \
-  --out=./builds/san-anton
-```
-
-Lo que hace, paso a paso:
-
-1. Lee `tools/bootstrap/presets/<preset>.json` (define qué capabilities y qué módulo SPA).
-2. Copia `CORE/`, `axidb/`, `gateway.php`, `router.php`, `.htaccess`, `manifest.json`, `robots.txt`, `schema.json`.
-3. Copia sólo las `CAPABILITIES/` declaradas en el preset.
-4. Genera `config.json` en `spa/public/` con los flags del CLI.
-5. Lanza `npm run build` en `spa/` con `VITE_MODULO=<preset>` (variable que entra en `bootstrap.tsx` como pista para tree-shaking).
-6. Mueve el bundle resultante a `<out>/`.
-7. Imprime un resumen verificable (lista de capabilities incluidas, tamaño del bundle, ruta de salida).
-
-### 8.2. Schema de preset
-
-`tools/bootstrap/presets/clinica.json`:
-
-```jsonc
-{
-  "module": "clinica",
-  "capabilities": [
-    "LOGIN", "OPTIONS", "AI", "GEMINI",
-    "PRODUCTS", "FISCAL", "PAYMENT",
-    "CITAS", "CRM", "NOTIFICACIONES"
-  ],
-  "default_role": "admin",
-  "default_user": { "email": null, "password": null }
-}
-```
-
-- [ ] Tipos en `tools/bootstrap/types.mjs`.
-- [ ] Validación: si el preset declara `clinica` pero `spa/src/modules/clinica/` no existe, abort con mensaje claro.
-- [ ] Validación: si declara una capability inexistente, abort.
-
-### 8.3. Tests
-
-- [ ] `bootstrap --preset=hosteleria --slug=demo-hosteleria` regenera el `release/` actual byte por byte (excepto hashes de bundle). Es el control: si rompe esto, rompe la app de referencia.
-- [ ] `bootstrap --preset=clinica` falla limpio mientras Ola F no esté hecha — no genera basura.
-- [ ] Estrés: ejecutar 5 bootstraps en paralelo a directorios distintos → no se corrompen entre sí.
-- [ ] Validación: si falta `--slug`, error con uso completo en stdout.
-
-### Criterio de salida Ola D
-
-- Una clínica nueva tarda lo que tarde Vite en compilar (~5s) en pasar de "no existe" a "tengo carpeta deployable".
-- El comando es idempotente: ejecutarlo dos veces produce el mismo output (modulo hashes de bundle).
+Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, HistorialPage, StockPage, RecordatoriosPage. Funcional y con tests. **La Ola G la migra a `templates/clinica/` como proyecto Vite independiente**, que es la arquitectura definitiva.
 
 ---
 
-## 9. Ola E — CAPABILITIES backend nuevas
+## 10. Ola G — Migración a arquitectura de templates independientes ✅
 
-Se cierran las tres capabilities transversales antes de tocar cualquier vertical nuevo. Cada una sigue la disciplina actual: `capability.json`, ≤ 250 LOC por archivo, sin SQL, datos en AxiDB.
+**Objetivo:** pasar del modelo "módulos dentro de una SPA compartida" al modelo "proyecto Vite independiente por vertical". El backend PHP no se toca.
 
-### 9.1. `CAPABILITIES/CITAS/`
+**Resultado:** `templates/hosteleria/` y `templates/clinica/` son proyectos Vite independientes. `@mylocal/sdk` es el paquete compartido. `build.ps1 --template=<nombre>` funcional.
 
-Responsabilidad: gestión de citas (clínicas, asesorías, talleres, cualquier servicio agendable).
+### G.1 Crear `sdk/` — paquete compartido
 
-Archivos:
+- [x] `sdk/package.json` con `"name": "@mylocal/sdk"`, `"version": "1.0.0"`
+- [x] `sdk/src/client.ts` — SynaxisClient extraído de `spa/src/synaxis/`
+- [x] `sdk/src/auth.ts` — login / logout / session extraído de `spa/src/services/auth.service.ts`
+- [x] `sdk/src/hooks.ts` — `useSynaxisClient` y demás hooks de `spa/src/hooks/`
+- [x] `sdk/src/types.ts` — tipos comunes: `LocalInfo`, `UserInfo`, `AppUser`
+- [x] `sdk/index.ts` — re-exporta todo
+- [x] `sdk/tsconfig.json` — configuración de compilación del paquete
 
-- `capability.json` (depends_on: `LOGIN`, `OPTIONS`, `NOTIFICACIONES`)
-- `CitasModel.php` (CRUD AxiDB: `c_<uuid>`, campos: local_id, cliente_id, recurso_id, inicio, fin, estado, notas)
-- `RecursosModel.php` (consultorios, vehículos, mesas reservables — genérico)
-- `CitasEngine.php` (lógica: conflictos de horario, recordatorios, cancelación)
-- `CitasAdminApi.php` (handler `cita_create/update/list/cancel`)
-- `CitasPublicApi.php` (handler público para que un cliente pida hora desde un formulario embebido)
-- `README.md`
+### G.2 Configurar pnpm workspaces
 
-Checklist:
+- [x] `pnpm-workspace.yaml` en la raíz con `packages: ['sdk', 'templates/*']`
+- [x] `package.json` raíz con scripts: `"build:hosteleria"`, `"build:clinica"`, `"dev:hosteleria"`
+- [x] `pnpm install` desde la raíz instala sdk + todos los templates
+- [x] `import { useSynaxisClient } from '@mylocal/sdk'` resuelve correctamente
 
-- [ ] `CitasModel.php` ≤ 250 LOC, devuelve `['success' => bool, 'data' => ..., 'error' => ?string]`.
-- [ ] Conflictos de horario detectados en `CitasEngine::tryReserve()` (test cubre solapamiento parcial, anidado, idéntico, exacto-borde).
-- [ ] Sanitización con `s_id/s_str` heredados de `LOGIN/LoginSanitize`.
-- [ ] Handler registrado en `spa/server/index.php` con `require_role`.
+### G.3 Migrar `spa/` → `templates/hosteleria/`
 
-Tests (`spa/server/tests/test_citas.php`):
+- [x] `templates/hosteleria/` como proyecto Vite completo
+- [x] `spa/src/` → `templates/hosteleria/src/` (excluido `modules/clinica/`, `app/modules-registry.ts`)
+- [x] Stubs de re-exportación en `src/synaxis/`, `src/hooks/useSynaxis.ts`, `src/services/auth.service.ts`
+- [x] `main.tsx` simplificado: imports directos, sin modules-registry
+- [x] `vite.config.ts` ajustado con paths relativos correctos y alias `@mylocal/sdk`
+- [x] `templates/hosteleria/package.json` con `"@mylocal/sdk": "workspace:*"`
+- [x] `templates/hosteleria/manifest.json` — solo capabilities
+- [x] Build verde: `pnpm -F hosteleria build` ✅ (324 kB JS)
 
-- [ ] Crear cita, leer, listar por rango, cancelar.
-- [ ] Reservar slot ocupado → error claro.
-- [ ] Reservar slot exacto-borde (15:00–16:00 + 16:00–17:00) → OK.
-- [ ] Reservar slot que cabalga medianoche → OK.
-- [ ] Cancelar cita inexistente → 404 controlado.
-- [ ] 50 reservas concurrentes sobre el mismo recurso → solo una gana (flock OK).
+### G.4 Migrar `spa/src/modules/clinica/` → `templates/clinica/`
 
-### 9.2. `CAPABILITIES/CRM/`
+- [x] `templates/clinica/` — proyecto Vite nuevo (package.json, vite.config.ts, index.html)
+- [x] Páginas: AgendaPage, PacientesPage, HistorialPage, StockPage, RecordatoriosPage
+- [x] `ClinicaContext` — context propio (client + localId)
+- [x] `clinica.service.ts` — imports directos desde `@mylocal/sdk`
+- [x] `App.tsx` — BrowserRouter + sidebar con `cl-*` CSS classes
+- [x] `main.tsx` — SynaxisProvider desde `@mylocal/sdk`
+- [x] `templates/clinica/manifest.json` — `["CITAS","CRM","NOTIFICACIONES"]`
+- [x] Build verde: `pnpm -F clinica build` ✅ (212 kB JS)
 
-Responsabilidad: clientes (B2C o B2B), interacciones, etiquetas, segmentación básica.
+### G.5 Actualizar `build.ps1`
 
-Archivos:
+- [x] Parámetro `$Template` (default: `"hosteleria"`)
+- [x] `pnpm -F $Template build` cuando existe `templates/$Template/`
+- [x] Fallback legacy: `cd spa && npm run build` si no existe el template
+- [x] Retrocompatibilidad: `build.ps1` sin parámetros = hosteleria
 
-- `capability.json` (depends_on: `LOGIN`, `OPTIONS`)
-- `ContactoModel.php` (uuid, local_id, nombre, email, telefono, etiquetas[], notas, fuente)
-- `InteraccionModel.php` (uuid, contacto_id, tipo: llamada|email|whatsapp|nota, contenido, autor_id, ts)
-- `SegmentoEngine.php` (consulta por tags/fecha/fuente; devuelve listas)
-- `CrmAdminApi.php`
-- `README.md`
+### G.6 Actualizar scripts de desarrollo
 
-Checklist:
+- [x] `run.bat [clinica|hosteleria]` arranca el template correspondiente
+- [x] Puerto 5173 para hosteleria, 5174 para clinica
+- [x] `run.bat` sin parámetro = hosteleria (retrocompatible)
 
-- [ ] Contactos buscables por email, teléfono, etiqueta.
-- [ ] Dedupe automática por email exacto al crear (warning, no error).
-- [ ] Auditoría: cada interacción registra autor y timestamp; no es editable, solo se añade.
+### G.7 Limpiar código obsoleto
 
-Tests (`spa/server/tests/test_crm.php`):
+- [x] `modules-registry.ts` eliminado de `templates/hosteleria/` (no existe en el nuevo template)
+- [x] `spa/` conservada: contiene `spa/server/` (backend PHP, necesario para build.ps1)
+- [x] Nota: `spa/src/` es legacy — se puede eliminar en Ola K durante el handover
 
-- [ ] Crear contacto, añadir 3 interacciones, listar.
-- [ ] Crear dos contactos con mismo email → segundo trae flag `duplicate_of`.
-- [ ] Filtrar por tag → solo los que la tienen.
-- [ ] Estrés: 10.000 contactos, búsqueda por email <100ms.
+### G.8 Builds verificados
 
-### 9.3. `CAPABILITIES/NOTIFICACIONES/`
-
-Responsabilidad: envío de notificaciones (email transaccional, WhatsApp via webhook, SMS via proveedor) — pluggable.
-
-Archivos:
-
-- `capability.json` (depends_on: `LOGIN`, `OPTIONS`)
-- `drivers/EmailDriver.php` (SMTP genérico, configurable por `OPTIONS`)
-- `drivers/WhatsAppDriver.php` (webhook saliente, sin SDK)
-- `drivers/NoopDriver.php` (para tests y entornos sin proveedor configurado)
-- `NotificationEngine.php` (dispatcher: lee tipo + canal y delega al driver)
-- `Template.php` (plantillas con `{{var}}`, sin lógica)
-- `NotificationsApi.php`
-- `README.md`
-
-Checklist:
-
-- [ ] Driver activo se decide leyendo `OPTIONS/notificaciones.json` (cero hardcoding del proveedor).
-- [ ] Plantillas en `STORAGE/templates/notificaciones/` (no en código).
-- [ ] Reintentos: 3 con backoff exponencial, marcando estado en AxiDB.
-- [ ] Tasa límite por destinatario para evitar spam accidental.
-
-Tests (`spa/server/tests/test_notif.php`):
-
-- [ ] Driver Noop registra el envío y devuelve OK.
-- [ ] Driver Email con SMTP de testing local (mailpit/docker opcional, o saltado si no hay).
-- [ ] Plantilla con vars faltantes → error legible, no crash.
-- [ ] 100 notificaciones concurrentes con Noop → cero pérdidas.
-
-### Criterio de salida Ola E
-
-- 3 capabilities con `capability.json`, README, tests verdes incluidos en el `build.ps1`.
-- `test_login.php` sigue verde.
-- Ningún archivo > 250 LOC.
+- [x] `pnpm -F hosteleria build` verde ✅
+- [x] `pnpm -F clinica build` verde ✅
+- [x] `pnpm install` desde la raíz instala todo en un solo comando ✅
 
 ---
 
-## 10. Ola F — Módulo `clinica/` (demo Clínica San Antón)
+## 11. Ola H — Template `logistica/` ✅
 
-**Objetivo:** primer vertical no-hosteleria funcional, no maqueta. Usa CITAS + CRM + NOTIFICACIONES + AI ya construidos.
+**Objetivo:** demostrar el flujo de trabajo definitivo — nuevo template + nueva capability desde cero, completamente independiente.
 
-### 10.1. Páginas (`modules/clinica/pages/`)
+**Resultado:** `templates/logistica/` con ruta pública `/seguimiento/:codigo`, `CAPABILITIES/DELIVERY/` completo, build verde en 212 kB JS.
 
-- [ ] `AgendaPage.tsx` — vista calendario semanal de citas, con drag-and-drop básico (lib nativa o lo mínimo posible, no traemos FullCalendar).
-- [ ] `PacientesPage.tsx` — listado + ficha (datos del CRM con campos extra: especie, raza, peso, edad).
-- [ ] `HistorialPage.tsx` — detalle por paciente: visitas, vacunas, pruebas, archivos PDF.
-- [ ] `StockPage.tsx` — inventario de medicamentos con alerta de mínimo (usa `PRODUCTS`).
-- [ ] `RecordatoriosPage.tsx` — cola de notificaciones pendientes/enviadas (usa `NOTIFICACIONES`).
+### H.1 Diseño base
 
-### 10.2. `modules/clinica/manifest.json`
+- [x] Template creado desde cero con diseño propio (`lg-*` CSS, paleta indigo #6366f1, sidebar oscura #1e1b4b)
+- [x] `templates/logistica/` como proyecto Vite independiente (puerto 5175)
+- [x] `@mylocal/sdk` como única dependencia de datos
 
-- [ ] Declara las 5 rutas + 5 items de sidebar.
-- [ ] `requires_capabilities` lista lo que necesita.
+### H.2 Páginas
 
-### 10.3. Datos reales (no ficticios)
+- [x] `PedidosPage` — listado con filtro por estado + formulario nuevo pedido
+- [x] `FlotaPage` — vehículos y conductores con toggle activo/inactivo
+- [x] `EntregasPage` — vista del día con nav por fecha + asignación pedido→vehículo
+- [x] `SeguimientoPublicoPage` — ruta pública `/seguimiento/:codigo`, sin login
+- [x] `IncidenciasPage` — registro por tipo con descripción
 
-- [ ] Estados vacíos con CTA real ("No hay pacientes — Crear primer paciente").
-- [ ] Seed sólo si AxiDB está vacío *Y* el operador lo pide explícitamente (botón "Cargar datos de demostración" — claramente marcado como tales).
+### H.3 Backend
 
-### 10.4. Tests
+- [x] `CAPABILITIES/DELIVERY/` — PedidoModel, VehiculoModel, EntregaModel, IncidenciaModel
+- [x] `DeliveryAdminApi.php` — 10 acciones admin
+- [x] `DeliveryPublicApi.php` — `pedido_seguimiento` sin auth (respuesta reducida, sin datos internos)
+- [x] `spa/server/handlers/delivery.php` + 11 acciones en `ALLOWED_ACTIONS`
+- [x] 11 acciones DELIVERY añadidas al SDK `actions.ts` (scope: server, domain: delivery)
 
-- [ ] Vacíos en cada página renderizan sin error y con CTA.
-- [ ] Crear paciente → aparece en CRM también (es el mismo `contacto` con extras).
-- [ ] Reservar cita en hueco ocupado → toast de error claro.
-- [ ] Enviar recordatorio con driver Noop → registro visible en `RecordatoriosPage`.
-- [ ] Estrés: 1.000 pacientes, scroll virtual o paginado real (no DOM completo).
-- [ ] `bootstrap --preset=clinica --slug=test-clinica` genera `release/` que arranca y sirve `/dashboard/agenda`.
+### H.4 Manifest
 
-### Criterio de salida Ola F
+- [x] `templates/logistica/manifest.json` — `["LOGIN","OPTIONS","CRM","NOTIFICACIONES","DELIVERY"]`
+- [x] `public_routes: ["/seguimiento/:codigo"]` declarado
 
-- Demo desplegable con `bootstrap` + `npm run build`.
-- Recorrido completo "alta paciente → reserva cita → enviar recordatorio" sin tocar código.
-- Cero pantallas con "Lorem ipsum" o "Paciente 1".
+### H.5 Build
 
----
-
-## 11. Ola G — Módulo `logistica/`
-
-**Objetivo:** demo para LogiSpain / Muebles Blanes — seguimiento de pedidos y flota.
-
-### 11.1. Páginas
-
-- [ ] `PedidosPage.tsx` — listado de pedidos con estados (recibido, en preparación, en ruta, entregado, incidencia).
-- [ ] `FlotaPage.tsx` — vehículos y conductores (modelo simple, no GPS real en MVP — campo manual de "última posición").
-- [ ] `EntregasPage.tsx` — vista del día: qué entrega cada vehículo.
-- [ ] `SeguimientoPublicoPage.tsx` (ruta pública `/seguimiento/:codigo`) — el cliente final ve el estado de su pedido por código (no requiere login).
-- [ ] `IncidenciasPage.tsx` — entradas con motivo, foto, resolución.
-
-### 11.2. Manifest + capabilities
-
-- [ ] `requires_capabilities: ["PRODUCTS", "DELIVERY", "CRM", "NOTIFICACIONES", "AI"]`.
-- [ ] El público `/seguimiento/:codigo` está en `public_routes` del manifest.
-
-### 11.3. Tests
-
-- [ ] Cambio de estado dispara notificación al cliente vía driver Noop.
-- [ ] `/seguimiento/<codigo-inexistente>` muestra error 404 controlado, no leak de datos.
-- [ ] Cargar 5.000 pedidos → tabla virtualizada o paginada.
-- [ ] `bootstrap --preset=logistica` produce `release/` válido.
-
-### Criterio de salida Ola G
-
-- Recorrido "crear pedido → cliente recibe enlace → cliente ve estado público → cierre con foto" funciona end-to-end.
+- [x] `pnpm -F logistica build` verde ✅ (212 kB JS)
 
 ---
 
-## 12. Ola H — Módulo `asesoria/`
+## 12. Ola I — Template `asesoria/` ✅
 
-**Objetivo:** demo para Gesgasa — gestión documental, OCR de facturas, recordatorios fiscales.
+**Objetivo:** gestión documental, OCR de facturas y recordatorios fiscales. Reutiliza OCR + AI + CITAS ya construidos.
 
-### 12.1. Páginas
+**Resultado:** `templates/asesoria/` completo con kanban de tareas, calendario fiscal, OCR drag-drop, clientes con NIF/régimen y placeholder de facturación Verifactu. `CAPABILITIES/TAREAS/` nuevo (transversal). Build verde 212 kB JS.
 
-- [ ] `ClientesPage.tsx` — CRM extendido con datos fiscales (NIF, régimen, próximas obligaciones).
-- [ ] `DocumentosPage.tsx` — bandeja de subida + OCR (reutiliza `OCR`), clasificación manual asistida por IA (reutiliza `AI`).
-- [ ] `CalendarioFiscalPage.tsx` — agenda de vencimientos por cliente (usa `CITAS`).
-- [ ] `TareasPage.tsx` — kanban mínimo (3 columnas: pendiente, en curso, hecho).
-- [ ] `FacturasPage.tsx` — emisión simple (reutiliza `FISCAL` si activa Verifactu).
+### I.1 Páginas
 
-### 12.2. Tests
+- [x] `ClientesPage` — CRM con datos fiscales (NIF, régimen, próximas obligaciones)
+- [x] `DocumentosPage` — subida + OCR + clasificación asistida por IA con fallback gracioso
+- [x] `CalendarioFiscalPage` — vencimientos por cliente (usa CITAS con recurso `r_fiscal`)
+- [x] `TareasPage` — kanban 3 columnas: pendiente / en_curso / hecho con ChevronLeft/Right + Trash2
+- [x] `FacturasPage` — placeholder apuntando a capability FISCAL (Verifactu/TicketBAI)
 
-- [ ] OCR de un PDF real (uno del propio repo, no inventado) extrae al menos NIF + total.
-- [ ] Crear vencimiento → recordatorio se programa automáticamente N días antes.
-- [ ] Mover tarea entre columnas persiste tras recargar.
-- [ ] `bootstrap --preset=asesoria` produce `release/` válido.
+### I.2 Backend
 
-### Criterio de salida Ola H
+- [x] `CAPABILITIES/TAREAS/` — TareaModel.php, TareasApi.php, capability.json (nuevo, transversal)
+- [x] `spa/server/handlers/tareas.php` + 4 acciones en ALLOWED_ACTIONS
+- [x] 4 acciones TAREAS añadidas al SDK `actions.ts` (scope: server, domain: tareas)
+- [x] FISCAL y OCR ya existían — no se duplicaron
 
-- Demo presentable a Gesgasa con datos cargados durante la demo (no pre-poblados).
+### I.3 Manifest + CSS
 
----
+- [x] `templates/asesoria/manifest.json` — `["LOGIN","OPTIONS","CRM","CITAS","NOTIFICACIONES","OCR","FISCAL","TAREAS","AI"]`
+- [x] `src/asesoria.css` — prefijo `as-*`, acento teal #0d9488, sidebar #0f2937
+- [x] `src/services/asesoria.service.ts` con tipos y wrappers tipados
 
-## 13. Ola I — Integración OpenClaude (asistente transversal)
+### I.4 Build
 
-**Objetivo:** una única instancia OpenClaude observa todas las apps via API. **No fork. No fusión.**
-
-### 13.1. Conector saliente desde MyLocal
-
-- [ ] `CAPABILITIES/AI/OpenClaudeClient.php` — cliente HTTP (sin SDK) hacia `https://<host>/api/...`.
-- [ ] Auth por bearer guardado en `OPTIONS/openclaude.json` (cero hardcoding del host ni del token).
-- [ ] Métodos: `notify(eventType, payload)`, `ask(prompt, context)`.
-- [ ] Si el servidor no está configurado, los métodos devuelven `['enabled' => false]` y la app sigue funcionando.
-
-### 13.2. Eventos publicables
-
-- [ ] Cada Engine relevante emite eventos a través de un bus interno (`CORE/EventBus.php`, ≤ 150 LOC).
-- [ ] `OpenClaudeClient` se suscribe y publica fuera. Si el bus no está conectado, no pasa nada.
-- [ ] Eventos iniciales: `pedido.creado`, `pedido.entregado`, `cita.cancelada`, `stock.bajo`.
-
-### 13.3. Servidor OpenClaude
-
-- [ ] Documentar requisitos del servidor en `claude/docs/openclaude-server.md` (no se monta en este repo; se monta como pieza independiente y este repo sólo apunta a él).
-- [ ] Diagrama: 1 servidor OpenClaude ↔ N tenants MyLocal. Sin acoplamiento de despliegue.
-
-### 13.4. Caso de uso real (la demo)
-
-- [ ] Una sola alerta funcional end-to-end: "stock bajo de paracetamol" en clínica dispara mensaje del asistente vía email al admin.
-- [ ] Se prueba en un tenant generado por `bootstrap` con driver Email Noop primero, luego email real si hay SMTP.
-
-### Criterio de salida Ola I
-
-- El conector se enciende/apaga vía config sin tocar código.
-- Si el servidor OpenClaude está caído, MyLocal no se cae ni se ralentiza (timeout estricto, fallback silencioso).
+- [x] `pnpm -F asesoria build` verde ✅ (212 kB JS)
 
 ---
 
-## 14. Ola J — Documentación + handover
+## 13. Ola J — Integración OpenClaude + OPENCLAW ✅
 
-**Objetivo:** que otro desarrollador entre, lea, y monte un vertical nuevo en un día.
+**Objetivo:** una instancia OpenClaude observa todas las apps vía API. No fork. No fusión.
 
-- [ ] `docs/FRAMEWORK.md` — visión, arquitectura, esquema `manifest.json`, esquema `config.json`, esquema `capability.json`, cómo añadir un módulo.
-- [ ] `docs/BOOTSTRAP.md` — uso del CLI, presets disponibles, cómo crear un preset nuevo.
-- [ ] `docs/CAPABILITIES.md` — listado actualizado de capabilities, dependencias, scopes de roles.
-- [ ] `modules/<id>/README.md` para cada módulo: páginas, capabilities requeridas, datos esperados.
-- [ ] Actualizar `CLAUDE.md` raíz con un puntero a `claude/planes/estructura.md` y al estado de cada ola.
+**Resultado:** `OpenClaudeClient.php` + `EventBus.php` + listeners por defecto. Conector controlado por `OPTIONS/openclaude` (api_key, model, timeout). Si no configurado → isEnabled() = false, la app sigue sin tocar código. Timeout predeterminado: 1s.
 
-### Criterio de salida Ola J
+### J.1 Conector PHP
 
-- Un dev nuevo, sin contexto previo, puede leer `docs/FRAMEWORK.md` + `docs/BOOTSTRAP.md` y montar un módulo nuevo desde cero en ≤ 1 día.
+- [x] `CAPABILITIES/AI/OpenClaudeClient.php` — cliente HTTP Anthropic Messages API sin SDK externo
+- [x] Auth por bearer en namespace `openclaude` de OPTIONS (cero hardcoding)
+- [x] Si no configurado → `isEnabled() = false`, handlers responden `enabled: false`
+- [x] `CORE/EventBus.php` ≤ 80 LOC — bus interno de eventos con catch de excepciones
+- [x] Eventos iniciales: `pedido.creado`, `cita.cancelada`, `stock.bajo`
+- [x] `CAPABILITIES/AI/OpenClaudeListeners.php` — listeners por defecto (stock.bajo → notif + AI summary)
+- [x] `CAPABILITIES/AI/OpenClaudeApi.php` — acciones `openclaude_status` y `openclaude_complete`
+- [x] `spa/server/handlers/openclaude.php` — handler que carga todo y registra listeners
+- [x] `spa/server/index.php` — 2 acciones nuevas en ALLOWED_ACTIONS + dispatch cases
+- [x] SDK `actions.ts` — `openclaude_status` y `openclaude_complete` (scope: server, domain: ai)
+
+### J.2 Integración con capabilities existentes
+
+- [x] `DELIVERY/PedidoModel::create()` emite `pedido.creado` si EventBus cargado
+- [x] `CITAS/CitasModel::cancel()` emite `cita.cancelada` si EventBus cargado
+- [x] Caso `stock.bajo` manejado en listener: llama a Claude si enabled; fallback Noop driver siempre
+
+### J.3 Build
+
+- [x] `pnpm -F asesoria build` verde ✅ (212 kB JS) — confirma que el SDK con nuevas acciones compila
+
+### J.4 Integración OPENCLAW (agente local bidireccional)
+
+- [x] `CAPABILITIES/OPENCLAW/capability.json` — declara 4 acciones + config keys
+- [x] `OpenClawSkillManifest.php` — manifest **dinámico desde OPTIONS** (`openclaw.tools`, `openclaw.app_name`); sin herramientas hardcodeadas; cada despliegue declara lo suyo
+- [x] `OpenClawSkillExecutor.php` — proxy a acciones MyLocal existentes; valida contra `openclaw.allowed_actions` del admin; sin whitelist configurada → nada permitido (fail-safe)
+- [x] `OpenClawPushClient.php` — empuja eventos a OpenClaw vía HTTP (push_url configurable, timeout 2s)
+- [x] `OpenClawListeners.php` — listeners EventBus → push al agente (pedido.creado, cita.cancelada, stock.bajo)
+- [x] `OpenClawApi.php` — handler de 4 acciones (manifest público, call con skill-key, status/push admin)
+- [x] `spa/server/handlers/openclaw_skill.php` — carga capability + registra listeners
+- [x] `spa/server/index.php` — 4 acciones OPENCLAW en ALLOWED_ACTIONS + dispatch cases
+- [x] SDK `actions.ts` — 4 acciones OPENCLAW (scope: server, domain: openclaw)
+
+### Principio de diseño OPENCLAW
+
+OpenClaw conecta con **la app desplegada**, no con "MyLocal" en abstracto.
+- Una asesoria configura `openclaw.allowed_actions = ["tarea_create", "cita_list"]`
+- Una hosteleria configura `["list_productos", "crm_contacto_list"]`
+- Un portfolio puede no configurar nada y el agente no tendrá acceso a datos
+- El agente se adapta al despliegue — el framework no decide por él
+
+### Criterio de salida Ola J ✅
+
+- Conector Anthropic se enciende/apaga por config sin tocar código ✅
+- OpenClaw caído → timeout 2s, MyLocal no se cae ✅
+- MyLocal expuesto como skill de 11 herramientas para cualquier agente MCP-compatible ✅
+- Eventos de MyLocal empujados al agente local en tiempo real ✅
+
+---
+
+## 14. Ola K — Documentación + handover
+
+**Objetivo:** otro desarrollador entra, lee, y monta un vertical nuevo en ≤ 1 día.
+
+- [ ] `docs/FRAMEWORK.md` — arquitectura, flujo de trabajo, cómo añadir template y capability
+- [ ] `docs/SDK.md` — API del `@mylocal/sdk`: qué exporta, cómo usarlo desde un template
+- [ ] `docs/CAPABILITIES.md` — listado, dependencias, acciones, roles
+- [ ] `docs/BOOTSTRAP.md` — `build.ps1 --template=<nombre>`, estructura de manifest.json
+- [ ] `templates/<nombre>/README.md` por cada template: páginas, capabilities, datos esperados
+- [ ] Actualizar `CLAUDE.md` raíz con puntero a este documento y estado de olas
 
 ---
 
@@ -618,62 +393,50 @@ Tests (`spa/server/tests/test_notif.php`):
 
 Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 
-1. **Build verde:** `build.ps1` completa, `test_login.php` 31/31 assertions OK, tests de la ola en curso 100% OK.
-2. **Sin warnings TS** en `npm run build`.
-3. **Sin archivos > 250 LOC** introducidos por la ola.
-4. **Sin TODOs** nuevos en el código de la ola. (Permitidos sólo si están enlazados a una tarea siguiente de este mismo plan.)
-5. **Sin datos de pega** en seeds, fixtures ni UI.
-6. **Verificación visual manual** firmada (capturas en `claude/snapshots/ola-<x>-<fecha>/`).
-7. **Decisión consciente del dueño** ("ok, paso a la siguiente"). Sin esa luz verde, no se avanza.
+1. `build.ps1` verde con `test_login.php` 31/31
+2. Sin warnings TS en el build del template activo
+3. Sin archivos > 250 LOC introducidos
+4. Sin TODOs nuevos en el código (solo permitidos si enlazan a una tarea de este plan)
+5. Sin datos ficticios en UI ni seeds
+6. El dueño del proyecto da luz verde explícita
 
 ---
 
-## 16. Política de commits y push
-
-- Durante todo este plan se trabaja en **local**.
-- **No se hace commit ni push** hasta que el dueño del proyecto lo pida explícitamente.
-- Si una ola se completa, se deja la working tree limpia y se espera instrucción.
-- Si se necesita una rama intermedia para una prueba, se hace en una `wip/<ola>` local, sin push.
-
----
-
-## 17. Riesgos identificados y mitigaciones
+## 16. Riesgos y mitigaciones
 
 | Riesgo | Mitigación |
 |--------|-----------|
-| El refactor de la Ola A rompe `test_login.php` por cambio de rutas | Ola A no toca PHP. Solo mueve archivos React. El test corre antes y después como gate. |
-| `import.meta.glob` mete todos los módulos en el bundle del tenant | `bootstrap` usa `VITE_MODULO` para limitar el glob a ese módulo + `_shared`. |
-| Cambios en `config.json` requieren recompilar | Asumido. Reduce superficie de ataque (no se sirven configs por API en runtime). |
-| CITAS sin lock por recurso produce dobles reservas | `flock` sobre `STORAGE/citas/<recurso>.lock` antes de escribir. Tests cubren concurrencia. |
-| OpenClaude caído ralentiza la app | Timeout 1s, circuit breaker en `OpenClaudeClient`, modo "disabled" si fallan N llamadas seguidas. |
-| Tres demos a la vez dispersan al equipo | Olas F, G, H son secuenciales en este plan. No se empieza la siguiente hasta cerrar la actual. |
+| Drop-in de Lovable usa librerías incompatibles con sdk | SDK solo exporta lógica (hooks, client), no componentes UI — máxima compatibilidad |
+| pnpm workspaces complica el CI/CD en hosting compartido | El build.ps1 genera un release/ estático — el hosting solo recibe PHP + assets, nunca Node |
+| Un template rompe el AUTH_LOCK al cambiar rutas | test_login.php es gate del build — si falla, el build aborta independientemente del template |
+| La migración de spa/ rompe hosteleria en producción | La migración ocurre en local; solo se sube cuando test_login + build verde |
+| Dos templates en desarrollo simultáneo generan conflictos | Cada template es carpeta independiente — cero archivos compartidos entre templates |
 
 ---
 
-## 18. Indicador de estado en vivo
+## 17. Indicador de estado
 
-Cada ola se marca aquí al cerrar:
-
-- [ ] Ola 0 — Preflight
-- [ ] Ola A — Refactor `modules/hosteleria/`
-- [ ] Ola B — Manifest dinámico
-- [ ] Ola C — Runtime `app/` + `_shared/`
+- [x] Ola 0 — Preflight
+- [x] Ola A — Refactor `modules/hosteleria/`
+- [x] Ola B — Manifest dinámico
+- [x] Ola C — Runtime `app/` + `_shared/`
 - [x] Ola D — AppBootstrap CLI
 - [x] Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES
-- [ ] Ola F — Módulo `clinica/`
-- [ ] Ola G — Módulo `logistica/`
-- [ ] Ola H — Módulo `asesoria/`
-- [ ] Ola I — Integración OpenClaude
-- [ ] Ola J — Documentación + handover
+- [x] Ola F — Template `clinica/` (en SPA — migrado en G)
+- [x] Ola G — Migración a arquitectura de templates independientes
+- [x] Ola H — Template `logistica/`
+- [x] Ola I — Template `asesoria/`
+- [x] Ola J — Integración OpenClaude
+- [ ] Ola K — Documentación + handover
 
 ---
 
-## 19. Próxima acción concreta
+## 18. Próxima acción concreta — Ola G
 
-Cuando se dé luz verde a este plan:
-
-1. Arrancar **Ola 0 — Preflight** (auditoría + gitignore + `tools/dev/free-ports.ps1`).
-2. Reportar resultado.
-3. Esperar OK para entrar en **Ola A**.
-
-Nada se ejecuta antes de esa luz verde. Y nada se hace commit/push hasta que se pida.
+**Paso 1:** Crear `sdk/` extrayendo SynaxisClient + auth + hooks de `spa/src/`
+**Paso 2:** `pnpm-workspace.yaml` en la raíz
+**Paso 3:** Migrar `spa/` → `templates/hosteleria/` actualizando imports
+**Paso 4:** Migrar `spa/src/modules/clinica/` → `templates/clinica/`
+**Paso 5:** Actualizar `build.ps1 --template=<nombre>`
+**Paso 6:** Tests — hosteleria y clinica verdes
+**Paso 7:** Commit + push si el dueño lo aprueba

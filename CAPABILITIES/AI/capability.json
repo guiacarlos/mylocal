@@ -1,10 +1,15 @@
 {
-    "key": "ai",
-    "name": "AI Local Client",
-    "category": "IA",
-    "simil": "IA Engine",
-    "description": "Cliente OpenAI-compatible para modelos locales (llama.cpp, vLLM). Usado como motor primario de OCR y parseo de carta.",
-    "version": "1.0.0",
-    "actions": ["chat", "vision", "ocr_extract", "ocr_parse"],
-    "config_keys": ["ai.local_endpoint", "ai.local_api_key", "ai.local_model"]
+    "id": "AI",
+    "version": "1.1.0",
+    "description": "Motor IA: cliente OpenAI-compatible local + conector OpenClaude (Anthropic) + EventBus transversal",
+    "depends_on": ["LOGIN", "OPTIONS"],
+    "collections": [],
+    "actions": [
+        "chat", "vision", "ocr_extract", "ocr_parse",
+        "openclaude_status", "openclaude_complete"
+    ],
+    "config_keys": [
+        "ai.local_endpoint", "ai.local_api_key", "ai.local_model",
+        "openclaude.api_key", "openclaude.model", "openclaude.timeout"
+    ]
 }

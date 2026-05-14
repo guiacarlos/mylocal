@@ -6,8 +6,12 @@
 # ╚══════════════════════════════════════════════════════════════════╝
 # build.ps1 — MyLocal
 # Genera /release/ completa y autosuficiente para subir a cualquier servidor Apache+PHP.
-# Uso: .\build.ps1
+# Uso: .\build.ps1 [--template=hosteleria|clinica|...]
 # No requiere nada instalado en el servidor destino.
+
+param(
+    [string]$Template = "hosteleria"
+)
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
@@ -16,7 +20,7 @@ $ROOT    = $PSScriptRoot
 $SPA     = Join-Path $ROOT "spa"
 $RELEASE = Join-Path $ROOT "release"
 
-Write-Host "=== MyLocal Build ===" -ForegroundColor Cyan
+Write-Host "=== MyLocal Build (template: $Template) ===" -ForegroundColor Cyan
 
 # 0. Liberar puertos que un build/test anterior haya dejado ocupados.
 # El test gate (paso 2.3) lanza su propio PHP server en 8766; si un build
@@ -25,25 +29,34 @@ Write-Host "=== MyLocal Build ===" -ForegroundColor Cyan
 & (Join-Path $ROOT "tools\dev\free-ports.ps1") -Quiet
 
 # 1. Compilar SPA React
-Write-Host "[1/3] Compilando SPA React..." -ForegroundColor Yellow
-Set-Location $SPA
+Write-Host "[1/3] Compilando template '$Template'..." -ForegroundColor Yellow
 
-# Se envuelve en try/catch para manejar errores reales pero permitir warnings de npm/vite
-try {
-    # Usamos cmd /c para aislar a npm de la sensibilidad de PowerShell 5.1 con stderr
-    cmd /c "npm run build --silent"
-} catch {
-    Write-Host "ERROR: El proceso de build falló" -ForegroundColor Red
+$templateDir = Join-Path $ROOT "templates\$Template"
+if (Test-Path $templateDir) {
+    # Nuevo sistema: templates/ con pnpm workspaces
+    try {
+        cmd /c "pnpm -F $Template build"
+    } catch {
+        Write-Host "ERROR: pnpm build fallo para template '$Template'" -ForegroundColor Red
+        exit 1
+    }
+} else {
+    # Fallback legacy: spa/ con npm
+    Set-Location $SPA
+    try {
+        cmd /c "npm run build --silent"
+    } catch {
+        Write-Host "ERROR: El proceso de build falló" -ForegroundColor Red
+        Set-Location $ROOT
+        exit 1
+    }
     Set-Location $ROOT
-    exit 1
 }
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: npm run build fallo (exit $LASTEXITCODE)" -ForegroundColor Red
-    Set-Location $ROOT
+    Write-Host "ERROR: build fallo (exit $LASTEXITCODE)" -ForegroundColor Red
     exit 1
 }
-Set-Location $ROOT
 Write-Host "      OK -> release/ generada (JS + CSS)" -ForegroundColor Green
 
 # 2. Copiar backend PHP y archivos de servidor

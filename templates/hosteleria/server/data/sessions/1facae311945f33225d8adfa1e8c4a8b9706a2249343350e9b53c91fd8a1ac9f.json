@@ -1,0 +1,13 @@
+{
+    "userId": "u_636f63696e6100",
+    "role": "cocina",
+    "email": "cocina@socola.es",
+    "ua_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ip": "127.0.0.1",
+    "createdAt": "2026-05-05T17:23:32+00:00",
+    "expiresAt": "2026-05-06T17:23:32+00:00",
+    "id": "1facae311945f33225d8adfa1e8c4a8b9706a2249343350e9b53c91fd8a1ac9f",
+    "_updatedAt": "2026-05-05T17:23:32+00:00",
+    "_version": 1,
+    "_createdAt": "2026-05-05T17:23:32+00:00"
+}

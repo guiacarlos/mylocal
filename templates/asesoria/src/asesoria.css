@@ -1,0 +1,104 @@
+/* ── Asesoria template styles ────────────────────────────────────────── */
+
+:root {
+    --as-accent: #0d9488;
+    --as-accent-alt: #0f766e;
+    --as-bg: #ffffff;
+    --as-bg-soft: #f8fafc;
+    --as-bg-muted: #e2e8f0;
+    --as-border: #e2e8f0;
+    --as-text: #0f172a;
+    --as-text-muted: #64748b;
+    --as-text-soft: #94a3b8;
+    --as-radius: 8px;
+    --as-radius-sm: 4px;
+    --as-text-xs: 0.75rem;
+    --as-text-sm: 0.875rem;
+    --as-text-base: 1rem;
+
+    /* prioridad */
+    --as-alta: #dc2626;
+    --as-media: #f59e0b;
+    --as-baja: #64748b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: var(--as-bg-soft); color: var(--as-text); }
+
+/* ── Layout ──────────────────────────────────────────────────────────── */
+.as-shell    { display: flex; min-height: 100vh; }
+.as-sidebar  { width: 230px; background: #0f2937; color: #e2e8f0; flex-shrink: 0; display: flex; flex-direction: column; }
+.as-sidebar-logo { padding: 20px 16px; font-weight: 700; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 10px; }
+.as-sidebar-nav  { flex: 1; padding: 8px 0; }
+.as-nav-item     { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: var(--as-text-sm); color: #94a3b8; cursor: pointer; text-decoration: none; transition: background 0.1s, color 0.1s; }
+.as-nav-item:hover, .as-nav-item.active { background: rgba(255,255,255,0.06); color: #f1f5f9; }
+.as-main    { flex: 1; overflow-y: auto; }
+.as-content { padding: 24px; }
+
+/* ── Cards ───────────────────────────────────────────────────────────── */
+.as-card        { background: var(--as-bg); border: 1px solid var(--as-border); border-radius: var(--as-radius); padding: 20px; margin-bottom: 16px; }
+.as-card-title  { font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; }
+.as-card-sub    { font-size: var(--as-text-sm); color: var(--as-text-muted); margin-bottom: 16px; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────── */
+.as-btn           { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--as-radius-sm); border: 1px solid transparent; font-size: var(--as-text-sm); font-weight: 500; cursor: pointer; transition: opacity 0.1s; }
+.as-btn:disabled  { opacity: 0.5; cursor: not-allowed; }
+.as-btn--primary  { background: var(--as-accent); color: #fff; border-color: var(--as-accent); }
+.as-btn--ghost    { background: transparent; color: var(--as-text-muted); border-color: var(--as-border); }
+.as-btn--danger   { background: #ef4444; color: #fff; }
+.as-btn--sm       { padding: 4px 8px; font-size: var(--as-text-xs); }
+
+/* ── Status ───────────────────────────────────────────────────────────── */
+.as-status { display: flex; align-items: center; gap: 8px; font-size: var(--as-text-sm); color: var(--as-text-muted); padding: 8px 0; }
+.as-dot    { width: 8px; height: 8px; border-radius: 50%; background: var(--as-accent); animation: aspulse 1.5s infinite; }
+@keyframes aspulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* ── Form ─────────────────────────────────────────────────────────────── */
+.as-form      { background: var(--as-bg-soft); border: 1px solid var(--as-border); border-radius: var(--as-radius); padding: 16px; margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+.as-form-row  { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.as-form-row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.as-input     { width: 100%; padding: 7px 10px; border: 1px solid var(--as-border); border-radius: var(--as-radius-sm); font-size: var(--as-text-sm); background: var(--as-bg); }
+.as-label     { font-size: var(--as-text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--as-text-muted); display: block; margin-bottom: 3px; }
+
+/* ── Clientes ─────────────────────────────────────────────────────────── */
+.as-cli-row       { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--as-border); cursor: pointer; transition: background 0.1s; }
+.as-cli-row:hover { background: var(--as-bg-soft); }
+.as-cli-avatar    { width: 36px; height: 36px; border-radius: 50%; background: var(--as-bg-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: var(--as-text-sm); color: var(--as-text-soft); flex-shrink: 0; }
+.as-cli-name      { font-weight: 500; font-size: var(--as-text-base); }
+.as-cli-meta      { font-size: var(--as-text-xs); color: var(--as-text-muted); }
+.as-cli-nif       { font-family: monospace; font-size: var(--as-text-xs); background: var(--as-bg-muted); padding: 1px 5px; border-radius: 3px; flex-shrink: 0; }
+
+/* ── Kanban ───────────────────────────────────────────────────────────── */
+.as-kanban        { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.as-kanban-col    { background: var(--as-bg-soft); border-radius: var(--as-radius); padding: 12px; min-height: 200px; }
+.as-kanban-title  { font-size: var(--as-text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--as-text-muted); margin-bottom: 10px; }
+.as-tarea-card    { background: var(--as-bg); border: 1px solid var(--as-border); border-radius: var(--as-radius-sm); padding: 10px; margin-bottom: 8px; }
+.as-tarea-titulo  { font-size: var(--as-text-sm); font-weight: 500; margin-bottom: 4px; }
+.as-tarea-meta    { font-size: var(--as-text-xs); color: var(--as-text-muted); }
+.as-prio-dot      { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.as-prio-alta  { background: var(--as-alta); }
+.as-prio-media { background: var(--as-media); }
+.as-prio-baja  { background: var(--as-baja); }
+
+/* ── Documentos ───────────────────────────────────────────────────────── */
+.as-doc-drop  { border: 2px dashed var(--as-border); border-radius: var(--as-radius); padding: 32px; text-align: center; cursor: pointer; color: var(--as-text-muted); transition: border-color 0.1s; }
+.as-doc-drop:hover { border-color: var(--as-accent); }
+.as-doc-result { background: var(--as-bg-soft); border: 1px solid var(--as-border); border-radius: var(--as-radius-sm); padding: 12px; font-size: var(--as-text-sm); }
+
+/* ── Calendario Fiscal ────────────────────────────────────────────────── */
+.as-vcto-row     { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--as-border); }
+.as-vcto-fecha   { font-size: var(--as-text-sm); font-weight: 600; min-width: 80px; flex-shrink: 0; }
+.as-vcto-label   { font-size: var(--as-text-sm); flex: 1; }
+.as-vcto-estado  { font-size: var(--as-text-xs); padding: 2px 8px; border-radius: 999px; }
+.as-vcto-pendiente  { background: #fef3c7; color: #92400e; }
+.as-vcto-completada { background: #dcfce7; color: #14532d; }
+.as-vcto-cancelada  { background: #f1f5f9; color: #64748b; text-decoration: line-through; }
+.as-vcto-vencida    { background: #fee2e2; color: #991b1b; }
+
+@media (max-width: 900px) {
+    .as-shell     { flex-direction: column; }
+    .as-sidebar   { width: 100%; }
+    .as-kanban    { grid-template-columns: 1fr; }
+    .as-form-row  { grid-template-columns: 1fr; }
+    .as-form-row3 { grid-template-columns: 1fr; }
+}
