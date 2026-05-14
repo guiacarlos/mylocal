@@ -422,6 +422,233 @@ cat release/STORAGE/.vault/users/index.json
 
 ---
 
+## 11. Diseño de Referencia — MyLocal App
+
+Este es el lenguaje visual de la aplicación. Cualquier página nueva debe seguir estos patrones.
+
+### 11.1 Fondo fijo de cuadrícula muy fina
+
+El fondo de toda la app es blanco con una cuadrícula muy tenue — líneas de 1px cada 24px, color gris al 5-7% de opacidad. Fijo, no se desplaza con el scroll.
+
+```css
+/* Fondo cuadrícula fina — aplica a body o al contenedor raíz */
+body, .app-root {
+  background-color: #FAFAFA;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+
+/* Modo oscuro: cuadrícula blanca muy tenue */
+body.dark, body.dark .app-root {
+  background-color: #111214;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+```
+
+### 11.2 Estructura de navegación — secciones del dashboard
+
+El sidebar izquierdo (oscuro, ver `skilldashboard.md`) contiene estas secciones en este orden:
+
+```
+Mi Local              ← nombre del restaurante (header del sidebar)
+Ver mi carta          ← enlace rápido a la carta pública (subheader)
+──────────────
+QR                    ← generador y gestor de QR de mesas
+Web                   ← carta digital web (preview en vivo + temas)
+Importar              ← importar carta desde PDF/imagen con IA
+Productos             ← gestión de productos + acciones IA por fila
+PDF                   ← generador de carta física (plantillas + colores)
+──────────────
+Cuenta                ← perfil, contraseña, sesiones, cerrar cuenta
+Planes                ← suscripción, facturación, métodos de pago
+──────────────
+[pie de página]       ← versión, soporte, aviso legal (sin enlace, solo texto)
+```
+
+### 11.3 Layout carta-web — patrón de 3 columnas con preview central
+
+La página de carta web (y cualquier página con preview en vivo) usa este patrón:
+
+```
+┌───────────┬──────────────────────────┬────────────────┐
+│ Panel Izq │    Preview centrado       │  Panel Der     │
+│ (config)  │  (mockup de móvil ~280px) │  (config)      │
+└───────────┴──────────────────────────┴────────────────┘
+       ↓
+┌──────────────────────────────────────────────────────┐
+│  Selector de plantillas (cards horizontales)          │
+└──────────────────────────────────────────────────────┘
+```
+
+- **Panel izquierdo**: controles de tema/color en tarjeta flotante sobre el fondo cuadrícula
+- **Preview central**: mockup de teléfono (frame redondeado, sombra ligera, ancho ~280px) con la carta renderizada dentro
+- **Panel derecho**: controles secundarios (colores de fondo, opciones adicionales)
+- **Selector de plantillas**: row de cards en la parte inferior, la activa tiene borde de acento; cada card muestra nombre + descripción en 2 líneas pequeñas
+
+```css
+/* Layout 3 columnas — carta web y vistas con preview en vivo */
+.cw-layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 24px;
+  padding: 24px;
+  align-items: start;
+}
+
+/* Mockup de móvil */
+.cw-phone-frame {
+  width: 280px;
+  min-height: 500px;
+  border: 2px solid var(--db-border-strong);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+/* Selector de plantillas */
+.cw-templates {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+}
+
+.cw-tpl-card {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--db-border);
+  border-radius: var(--db-radius-md);
+  cursor: pointer;
+  background: var(--db-bg-surface);
+  transition: border-color 0.12s;
+}
+.cw-tpl-card--active { border-color: var(--db-accent); }
+.cw-tpl-card__name   { font-size: 13px; font-weight: 600; color: var(--db-text-main); }
+.cw-tpl-card__desc   { font-size: 11px; color: var(--db-text-dim); margin-top: 2px; line-height: 1.3; }
+
+/* Responsive: en móvil el preview baja abajo */
+@media (max-width: 767px) {
+  .cw-layout { grid-template-columns: 1fr; }
+  .cw-phone-frame { width: 100%; max-width: 320px; margin: 0 auto; }
+}
+```
+
+### 11.4 Barra CTA — "Listo para el cambio?"
+
+Barra sticky en la parte inferior de cualquier página con acción principal pendiente. Blanco semitransparente, borde superior, texto + botón icono a la derecha.
+
+```css
+.cw-cta-bar {
+  position: sticky;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--db-border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--db-text-main);
+  z-index: 50;
+}
+
+.cw-cta-bar__btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--db-text-main);
+  color: #fff;
+  border: none;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+.cw-cta-bar__btn:hover { opacity: 0.8; }
+
+body.dark .cw-cta-bar {
+  background: rgba(28, 29, 32, 0.92);
+}
+```
+
+### 11.5 Selector de color con dot
+
+Para seleccionar colores (tema o fondo), usar dots circulares + label, en columna vertical:
+
+```tsx
+// Ejemplo de uso
+{COLORES.map(c => (
+  <button key={c.id} className={`cw-color-opt${color === c.id ? ' cw-color-opt--active' : ''}`} onClick={() => setColor(c.id)}>
+    <span className="cw-color-dot" style={{ background: c.hex }} />
+    {c.label}
+  </button>
+))}
+```
+
+```css
+.cw-color-opt {
+  display: flex; align-items: center; gap: 10px;
+  padding: 7px 12px;
+  border: 1px solid var(--db-border);
+  border-radius: var(--db-radius-md);
+  background: var(--db-bg-surface);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--db-text-main);
+  width: 100%;
+  transition: border-color 0.1s;
+}
+.cw-color-opt--active { border-color: var(--db-accent); }
+.cw-color-dot {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+```
+
+### 11.6 Toggle modo oscuro en header
+
+El header del dashboard lleva a la derecha un toggle para modo claro/oscuro (pill negro/blanco) seguido del logo/ícono de la app.
+
+```tsx
+<button className="db-theme-toggle" onClick={toggleDark} aria-label="Cambiar tema">
+  <span className={`db-theme-toggle__dot${dark ? ' db-theme-toggle__dot--dark' : ''}`} />
+</button>
+```
+
+```css
+.db-theme-toggle {
+  width: 40px; height: 22px;
+  border-radius: 11px;
+  border: 1px solid var(--db-border-strong);
+  background: var(--db-bg-raised);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s;
+}
+.db-theme-toggle__dot {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--db-text-muted);
+  transition: left 0.15s, background 0.15s;
+}
+.db-theme-toggle__dot--dark {
+  left: 20px;
+  background: var(--db-text-main);
+}
+```
+
+---
+
 ## Resumen de la filosofía
 
 > **Modular**: cada cosa en su lugar, cada lugar con una cosa.  

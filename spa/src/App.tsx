@@ -114,9 +114,11 @@ export function App() {
                 <Route path="/sistema/tpv/*" element={<TPV />} />
             </Route>
 
-            {/* 2. Rutas con layout público (header + footer marketing) */}
+            {/* 2. Landing — sin header/footer de marketing, layout propio */}
+            <Route path="/" element={<Home />} />
+
+            {/* 3. Rutas con layout público (header + footer marketing) */}
             <Route element={<PublicLayout />}>
-                <Route path="/" element={<Home />} />
                 <Route path="/carta" element={<Carta />} />
                 <Route path="/carta/:zonaSlug" element={<Carta />} />
                 <Route path="/carta/:zonaSlug/:mesaSlug" element={<Carta />} />

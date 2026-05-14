@@ -1,0 +1,209 @@
+/* Landing — layout fiel al diseño de referencia, mobile-first */
+
+/* ── Root ── */
+.lp-root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100dvh;
+  background-color: #FAFAFA;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.022) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-attachment: fixed;
+}
+@media (min-width: 720px) {
+  .lp-root { grid-template-columns: 186px 1fr; }
+  .lp-cta  { grid-column: 1 / -1; }
+}
+
+/* ── Sidebar ── */
+.lp-sidebar {
+  display: none;
+  flex-direction: column;
+  padding: 22px 0 0;
+  overflow-y: auto;
+}
+@media (min-width: 720px) { .lp-sidebar { display: flex; } }
+
+.lp-sidebar__brand {
+  font-weight: 700; font-size: 15px; color: #0F0F0F;
+  padding: 0 18px 2px;
+}
+.lp-sidebar__sub {
+  font-size: 12px; color: #888; display: block;
+  padding: 0 18px 14px; text-decoration: none;
+}
+.lp-sidebar__sub:hover { color: #C8A96E; }
+
+/* Nav links */
+.lp-sidebar__nav {
+  display: flex; flex-direction: column; gap: 1px;
+  padding: 10px 8px; border-top: 1px solid #EFEFED;
+}
+.lp-sidebar__link {
+  display: block; padding: 8px 12px; font-size: 14px; font-weight: 500;
+  color: #888; text-decoration: none; border-radius: 6px; border: none;
+  background: none; cursor: pointer; font-family: inherit; text-align: left;
+  transition: background 0.1s, color 0.1s;
+}
+.lp-sidebar__link:hover        { background: #F3F3F1; color: #0F0F0F; }
+.lp-sidebar__link--active      { color: #0F0F0F; font-weight: 700; }
+
+/* Tema de Color — dentro del sidebar */
+.lp-sidebar__theme {
+  padding: 14px 8px 10px;
+  border-top: 1px solid #EFEFED;
+  margin-top: 6px;
+}
+.lp-sidebar__theme-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #ADADAB; padding: 0 10px; margin-bottom: 8px;
+}
+.lp-sidebar__theme-opt {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border: 1px solid transparent; border-radius: 8px; background: transparent;
+  cursor: pointer; font-size: 13px; color: #0F0F0F; font-family: inherit;
+  transition: border-color 0.1s, background 0.1s; text-align: left; width: 100%;
+}
+.lp-sidebar__theme-opt:hover           { background: #F5F5F3; }
+.lp-sidebar__theme-opt--active         { border-color: #CBCBC9; }
+
+/* Cuenta — al fondo */
+.lp-sidebar__bottom {
+  margin-top: auto; padding: 10px 8px 16px;
+  border-top: 1px solid #EFEFED;
+}
+
+.lp-dot {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; display: block;
+}
+
+/* ── Main ── */
+.lp-main {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 14px 16px 20px; gap: 16px;
+  position: relative; overflow-y: auto; min-height: 0;
+}
+
+/* Toggle modo + logo — top right */
+.lp-topbar {
+  position: absolute; top: 14px; right: 16px;
+  display: flex; align-items: center; gap: 10px; z-index: 10;
+}
+/* Toggle claro/oscuro */
+.lp-toggle {
+  width: 38px; height: 20px; border-radius: 10px;
+  background: #222; position: relative; cursor: pointer;
+  border: none; flex-shrink: 0;
+}
+.lp-toggle__dot {
+  position: absolute; top: 3px; left: 20px;
+  width: 14px; height: 14px; border-radius: 50%; background: #fff;
+  transition: left 0.15s;
+}
+.lp-toggle--light .lp-toggle__dot { left: 3px; background: #555; }
+/* Logo circular del app */
+.lp-logo-icon {
+  width: 32px; height: 32px; border-radius: 50%; overflow: hidden;
+  border: 1px solid #E5E5E3; flex-shrink: 0;
+}
+.lp-logo-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── Stage: phone + panel derecho ── */
+.lp-stage {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 16px; width: 100%; padding-top: 42px;
+}
+@media (min-width: 720px) {
+  .lp-stage { flex-direction: row; justify-content: center; align-items: flex-start; gap: 22px; padding-top: 22px; }
+}
+
+/* Panel COLOR DE FONDO (derecha) */
+.lp-panel {
+  background: #fff; border: 1px solid #E8E8E6; border-radius: 12px;
+  padding: 14px 12px; display: flex; flex-direction: column; gap: 4px; min-width: 160px;
+}
+@media (max-width: 719px) {
+  .lp-panel { flex-direction: row; flex-wrap: wrap; gap: 8px; width: 100%; max-width: 380px; }
+  .lp-panel__title { width: 100%; margin-bottom: 0; }
+}
+.lp-panel__title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #ADADAB; margin-bottom: 6px;
+}
+.lp-panel__opt {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border: 1px solid transparent; border-radius: 8px; background: transparent;
+  cursor: pointer; font-size: 13px; color: #0F0F0F; font-family: inherit;
+  transition: border-color 0.1s, background 0.1s; text-align: left; width: 100%;
+}
+.lp-panel__opt:hover           { background: #F5F5F3; }
+.lp-panel__opt--active         { border-color: #CBCBC9; }
+
+/* ── Phone mockup ── */
+.lp-phone {
+  width: 270px; background: #fff; border: 1.5px solid #D8D8D8;
+  border-radius: 24px; overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10); flex-shrink: 0;
+}
+@media (min-width: 720px) { .lp-phone { width: 294px; } }
+
+.lp-phone__hero { position: relative; height: 130px; overflow: hidden; background: #1a1a1a; }
+.lp-phone__hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; display: block; }
+.lp-phone__name {
+  position: absolute; bottom: 10px; left: 14px; color: #fff; font-size: 17px; font-weight: 700;
+  font-family: 'Outfit', sans-serif; text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.lp-phone__cat-bar { display: flex; border-bottom: 1px solid #F0F0F0; padding: 0 14px; }
+.lp-phone__cat-tab { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; color: #aaa; padding: 8px 0; text-transform: uppercase; }
+.lp-phone__cat-tab--active { color: #0F0F0F; border-bottom: 2px solid #0F0F0F; }
+.lp-phone__section-title { padding: 10px 14px 4px; font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: #0F0F0F; }
+.lp-phone__items { padding: 0; }
+.lp-phone__item { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; font-size: 11px; color: #0F0F0F; border-bottom: 1px solid #F5F5F5; font-weight: 500; }
+.lp-phone__item span { color: #C8A96E; font-weight: 600; white-space: nowrap; }
+.lp-phone__foot { padding: 8px 14px 6px; text-align: center; }
+.lp-phone__brand { font-size: 12px; font-weight: 600; color: #ADADAB; }
+.lp-phone__copy  { font-size: 9px; color: #D0D0D0; margin-top: 2px; }
+
+/* ── Columna izquierda del stage (tema + plantillas) ── */
+.lp-left-col {
+  display: flex; flex-direction: column; gap: 8px;
+}
+
+/* ── Template selector ── */
+.lp-templates { display: flex; flex-direction: column; gap: 6px; }
+.lp-tpl { padding: 10px 12px; border: 1px solid #E5E5E3; border-radius: 10px; background: #fff; cursor: pointer; text-align: left; display: flex; flex-direction: column; gap: 3px; transition: border-color 0.12s, opacity 0.12s; font-family: inherit; opacity: 0.45; width: 100%; }
+.lp-tpl--active { border-color: #C8A96E; opacity: 1; }
+.lp-tpl:hover   { opacity: 0.8; }
+.lp-tpl__name   { font-size: 13px; font-weight: 700; color: #0F0F0F; }
+.lp-tpl__desc   { font-size: 10px; color: #ADADAB; line-height: 1.4; }
+
+/* ── Tabs ── */
+.lp-tabs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.lp-tab { padding: 8px 18px; border: 1px solid #E5E5E3; border-radius: 999px; background: transparent; font-size: 13px; color: #ADADAB; cursor: pointer; font-family: inherit; transition: background 0.1s; }
+.lp-tab:hover { background: #F5F5F3; color: #0F0F0F; }
+
+/* ── CTA Bar — estilo Gemini ── */
+.lp-cta {
+  position: sticky; bottom: 0;
+  padding: 10px 20px 14px;
+  z-index: 50;
+}
+.lp-cta__wrap {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff;
+  border: 1px solid #E0E0DE;
+  border-radius: 999px;
+  padding: 10px 10px 10px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 720px; margin: 0 auto;
+}
+.lp-cta__placeholder { flex: 1; font-size: 15px; color: #ADADAB; font-family: inherit; user-select: none; }
+.lp-cta__btn {
+  width: 40px; height: 40px; border-radius: 50%; background: #0F0F0F; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; transition: opacity 0.15s; flex-shrink: 0;
+}
+.lp-cta__btn:hover { opacity: 0.75; }
