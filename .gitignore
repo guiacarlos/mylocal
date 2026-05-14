@@ -37,7 +37,10 @@ spa/server/config/gemini_settings.json
 spa/server/config/revolut.json
 spa/server/config/auth.json
 spa/server/config/cors.json
-config.json
+# config.json en la raiz del proyecto (legacy: tenia credenciales antiguas).
+# El config del tenant nuevo vive en spa/public/config.json y SI se versiona
+# por defecto; cada despliegue lo regenera el AppBootstrap.
+/config.json
 
 # OPTIONS - source of truth de configuracion (api keys, stripe, etc).
 # Solo se versiona el .example (sin secretos). El .json real queda local.
@@ -76,3 +79,14 @@ test_*.php
 # excepcion: el test gate del login es load-bearing, debe ir al repo
 !spa/server/tests/test_login.php
 !release/spa/server/tests/test_login.php
+
+# ── Estado local del agente / material de trabajo personal ─────
+.claude/
+claude/recetascocina/
+claude/snapshots/
+
+# ── Bundles de Vite (regenerados en cada build, su hash cambia) ─
+# Las fuentes (.ttf) si se versionan: cambian poco y el nombre
+# con hash garantiza cache-busting cuando se actualizan.
+release/assets/index-*.js
+release/assets/index-*.css

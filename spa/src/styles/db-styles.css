@@ -1,11 +1,12 @@
 /* ══════════════════════════════════════════════════════════════════
    MYLOCAL DASHBOARD DESIGN SYSTEM — prefijo db-
    Extiende las variables CSS de sp-styles.css
-   ══════════════════════════════════════════════════════════════════ */
 
-@import url('../components/sala/sala-wizard.css');
-@import url('../components/carta/carta-pdf.css');
-@import url('../components/carta/carta-web.css');
+   NOTA: este fichero es generico. Los CSS de cada modulo de sector los
+   carga el propio modulo (side-effect imports en su routes.tsx). Antes
+   estos tres @import vivian aqui y acoplaban el dashboard al sector;
+   se eliminaron al cerrar Ola C.
+   ══════════════════════════════════════════════════════════════════ */
 
 /* Layout */
 .db-layout        { display: flex; flex-direction: column; min-height: 100vh; background: var(--sp-bg-soft); }

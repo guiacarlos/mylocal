@@ -715,6 +715,16 @@ if ($camareroToken) {
 }
 
 // ── Cleanup ─────────────────────────────────────────────────────
+// En Windows, proc_terminate() solo mata al wrapper de cmd.exe que envuelve
+// al servidor PHP; el php.exe hijo queda huerfano escuchando en el puerto y
+// el padre (PowerShell que invoca este script) se cuelga esperando EOF de
+// los pipes del proceso fantasma. taskkill /T mata todo el arbol.
+if (PHP_OS_FAMILY === 'Windows') {
+    $status = @proc_get_status($proc);
+    if ($status && !empty($status['pid'])) {
+        @exec(sprintf('taskkill /F /T /PID %d 2>NUL', (int) $status['pid']));
+    }
+}
 proc_terminate($proc, 9);
 proc_close($proc);
 

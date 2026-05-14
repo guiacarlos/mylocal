@@ -18,6 +18,12 @@ $RELEASE = Join-Path $ROOT "release"
 
 Write-Host "=== MyLocal Build ===" -ForegroundColor Cyan
 
+# 0. Liberar puertos que un build/test anterior haya dejado ocupados.
+# El test gate (paso 2.3) lanza su propio PHP server en 8766; si un build
+# previo no termino limpio, el puerto sigue listening y el siguiente test
+# se cuelga indefinidamente esperando a su servidor.
+& (Join-Path $ROOT "tools\dev\free-ports.ps1") -Quiet
+
 # 1. Compilar SPA React
 Write-Host "[1/3] Compilando SPA React..." -ForegroundColor Yellow
 Set-Location $SPA
@@ -128,9 +134,14 @@ if (Test-Path $testScript) {
         $testOut | ForEach-Object { Write-Host "  $_" }
         Write-Host ""
         Write-Host "Lee claude/AUTH_LOCK.md y arregla la regresion antes de re-buildear." -ForegroundColor Yellow
+        & (Join-Path $ROOT "tools\dev\free-ports.ps1") -Ports 8766 -Quiet
         exit 1
     }
     Write-Host "      OK -> tests de login + OCR pasan" -ForegroundColor Green
+    # Doble seguro: si el cleanup del test dejo el server PHP huerfano en 8766
+    # (sucede de vez en cuando en Windows con PHP built-in server), lo matamos
+    # aqui antes de seguir. free-ports es idempotente; si no hay nada, no hace nada.
+    & (Join-Path $ROOT "tools\dev\free-ports.ps1") -Ports 8766 -Quiet
 } else {
     Write-Host "AVISO: test_login.php no encontrado en release. Saltando gate." -ForegroundColor Yellow
 }

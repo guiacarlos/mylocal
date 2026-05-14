@@ -1,77 +1,60 @@
 /**
- * DashboardHeader - header sticky con plan, ver carta, campana, breadcrumbs.
+ * DashboardHeader - header sticky generico. Cero conocimiento del sector.
  *
- * Mostrara (cuando estén implementados):
- *   - Breadcrumbs derivados de la URL actual
- *   - Plan activo del local (Demo / Pro mensual / Pro anual)
- *   - Boton "Ver mi carta publica" -> abre /carta en pestana nueva
- *   - Campana de notificaciones con badge
- *   - Avatar del usuario / logout
+ * Recibe por props:
+ *   - local: para el badge del nombre del establecimiento.
+ *   - plan: chip opcional del plan activo.
+ *   - onLogout: handler.
+ *   - crumbLabels: mapeo segmento-URL -> texto humano. Lo emite Dashboard.tsx
+ *     fusionando crumb_labels de cada modulo activo (manifest.json).
+ *   - publicLink: si algun modulo declara public_link en su manifest,
+ *     Dashboard.tsx construye {url, label, title} y lo pasa aqui; sin
+ *     publicLink el boton "Ver mi <sitio>" simplemente no se renderiza.
  */
 
 import { useLocation, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { Bell, ExternalLink, LogOut } from 'lucide-react';
+
 import type { LocalInfo } from '../../services/local.service';
 import { localDisplayName } from '../../services/local.service';
-import { buildLocalCartaUrl } from '../../services/sala.service';
 
 interface Crumb { label: string; to?: string }
+
+export interface PublicLink {
+    url: string;
+    label: string;
+    title?: string;
+}
 
 interface Props {
     local: LocalInfo | null;
     plan?: string;
     onLogout: () => void;
+    crumbLabels?: Record<string, string>;
+    publicLink?: PublicLink;
 }
 
-const SECTION_LABELS: Record<string, string> = {
-    carta: 'Carta',
-    mesas: 'Mesas',
-    pedidos: 'Pedidos',
-    config: 'Configuración',
-    facturacion: 'Facturación',
-    cuenta: 'Cuenta',
-    importar: 'Importar',
-    productos: 'Productos',
-    pdf: 'PDF',
-    web: 'Web',
-    general: 'General',
-    identidad: 'Identidad',
-    idiomas: 'Idiomas',
-    horarios: 'Horarios',
-    fiscal: 'Datos fiscales',
-    equipo: 'Equipo',
-    perfil: 'Perfil',
-    password: 'Contraseña',
-    sesiones: 'Sesiones',
-    cerrar: 'Cerrar cuenta',
-    plan: 'Mi plan',
-    historico: 'Histórico',
-    metodos: 'Métodos de pago',
-};
-
-function pathCrumbs(pathname: string): Crumb[] {
+function pathCrumbs(pathname: string, labels: Record<string, string>): Crumb[] {
     const parts = pathname.replace(/^\//, '').split('/');
     const crumbs: Crumb[] = [];
     let acc = '';
     for (const p of parts) {
         if (!p) continue;
         acc += '/' + p;
-        const label = SECTION_LABELS[p] ?? p;
+        const label = labels[p] ?? p;
         crumbs.push({ label, to: acc });
-    }
-    // El primer crumb (dashboard) lo dejamos pero sin link interno relevante
-    if (crumbs.length > 0 && crumbs[0].label.toLowerCase() === 'dashboard') {
-        crumbs[0].label = 'Inicio';
     }
     return crumbs;
 }
 
-export function DashboardHeader({ local, plan, onLogout }: Props) {
+export function DashboardHeader({ local, plan, onLogout, crumbLabels, publicLink }: Props) {
     const location = useLocation();
-    const crumbs = useMemo(() => pathCrumbs(location.pathname), [location.pathname]);
+    const crumbs = useMemo(
+        () => pathCrumbs(location.pathname, crumbLabels ?? {}),
+        [location.pathname, crumbLabels],
+    );
     const nombre = localDisplayName(local);
-    const cartaUrl = buildLocalCartaUrl();
 
     return (
         <header className="db-header">
@@ -90,16 +73,18 @@ export function DashboardHeader({ local, plan, onLogout }: Props) {
             <div className="db-header-right">
                 <span className="db-header-local" title="Local activo">{nombre}</span>
                 {plan && <span className={`db-plan db-plan--${plan}`}>{plan}</span>}
-                <a
-                    href={cartaUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="db-btn db-btn--ghost db-btn--sm"
-                    title="Abre tu carta pública en una pestaña nueva"
-                >
-                    <ExternalLink size={14} strokeWidth={1.75} />
-                    <span>Ver mi carta</span>
-                </a>
+                {publicLink && (
+                    <a
+                        href={publicLink.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="db-btn db-btn--ghost db-btn--sm"
+                        title={publicLink.title}
+                    >
+                        <ExternalLink size={14} strokeWidth={1.75} />
+                        <span>{publicLink.label}</span>
+                    </a>
+                )}
                 <button
                     className="db-btn db-btn--ghost db-btn--sm db-btn--icon"
                     aria-label="Notificaciones"

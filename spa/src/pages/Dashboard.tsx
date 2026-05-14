@@ -1,110 +1,106 @@
 /**
- * Dashboard - shell del panel del hostelero.
+ * Dashboard - shell del panel. Config-driven y manifest-driven.
  *
- * Estructura:
- *   /dashboard                 -> redirige a /dashboard/carta
- *   /dashboard/carta           -> CartaPage (tabs Importar/Productos/PDF/Web)
- *   /dashboard/mesas           -> MesasPage (sala + zonas + mesas + local)
- *   /dashboard/pedidos         -> PedidosPage (tiempo real, polling 3s)
- *   /dashboard/config          -> ConfigPage (sub-tabs General/Identidad/.../Equipo)
- *   /dashboard/facturacion     -> FacturacionPage (Plan/Histórico/Métodos)
- *   /dashboard/cuenta          -> CuentaPage (Perfil/Password/Sesiones/Cerrar)
+ * Composicion:
+ *   ConfigProvider (de main.tsx) -> ACTIVE_MODULES + tenant config
+ *      |
+ *   DashboardProvider (estado generico: local del establecimiento)
+ *      |
+ *   Provider de cada modulo de sector (estado especifico del vertical)
+ *      |
+ *   DashboardLayout -> Sidebar (items fusionados) + Header (crumbs/publicLink fusionados)
+ *      |
+ *   Routes (dashboard_routes fusionados)
  *
- * Sidebar fijo + header sticky con breadcrumbs + Outlet para sub-paginas.
- * Estado compartido (local, productos, categorias) via DashboardContext.
+ * Anadir un sector nuevo NO requiere editar nada de aqui: el modulo se
+ * incluye via config.json + modules-registry y el shell lo recoge solo.
  */
 
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import type { ReactNode, FC } from 'react';
+
 import '../styles/db-styles.css';
 import '../styles/checkout.css';
 import { DashboardLayout } from '../components/dashboard/DashboardLayout';
 import { DashboardProvider, useDashboard } from '../components/dashboard/DashboardContext';
 import { logout } from '../services/auth.service';
 import { useSynaxisClient } from '../hooks/useSynaxis';
+import { useActiveModules, useTenantConfig, useComponentRegistry } from '../app/ConfigContext';
+import { renderRoutes } from '../app/route-builder';
 
-import { CartaPage } from './dashboard/CartaPage';
-import { CartaImportarPage } from './dashboard/CartaImportarPage';
-import { CartaProductosPage } from './dashboard/CartaProductosPage';
-import { CartaPdfPage } from './dashboard/CartaPdfPage';
-import { CartaWebPage } from './dashboard/CartaWebPage';
-import { MesasPage } from './dashboard/MesasPage';
-import { PedidosPage } from './dashboard/PedidosPage';
-import { ConfigPage } from './dashboard/ConfigPage';
-import { ConfigGeneralPage } from './dashboard/config/ConfigGeneralPage';
-import { ConfigIdentidadPage } from './dashboard/config/ConfigIdentidadPage';
-import { ConfigIdiomasPage } from './dashboard/config/ConfigIdiomasPage';
-import { ConfigHorariosPage } from './dashboard/config/ConfigHorariosPage';
-import { ConfigFiscalPage } from './dashboard/config/ConfigFiscalPage';
-import { ConfigEquipoPage } from './dashboard/config/ConfigEquipoPage';
-import { FacturacionPage } from './dashboard/FacturacionPage';
-import { FacturacionPlanPage } from './dashboard/facturacion/FacturacionPlanPage';
-import { FacturacionHistoricoPage } from './dashboard/facturacion/FacturacionHistoricoPage';
-import { FacturacionMetodosPage } from './dashboard/facturacion/FacturacionMetodosPage';
-import { CuentaPage } from './dashboard/CuentaPage';
-import { CuentaPerfilPage } from './dashboard/cuenta/CuentaPerfilPage';
-import { CuentaPasswordPage } from './dashboard/cuenta/CuentaPasswordPage';
-import { CuentaSesionesPage } from './dashboard/cuenta/CuentaSesionesPage';
-import { CuentaCerrarPage } from './dashboard/cuenta/CuentaCerrarPage';
+/** Compone N Providers anidados (en orden). Permite que cada modulo
+ *  aporte un Provider sin hacer un arbol cableado a mano. */
+function composeProviders(providers: FC<{ children: ReactNode }>[], children: ReactNode): ReactNode {
+    return providers.reduceRight((acc, P) => <P>{acc}</P>, children);
+}
 
 function DashboardShell() {
     const { local } = useDashboard();
     const client = useSynaxisClient();
     const navigate = useNavigate();
+    const config = useTenantConfig();
+    const modules = useActiveModules();
+    const registry = useComponentRegistry();
+
+    const sidebarItems = modules.flatMap(m => m.manifest.dashboard_nav ?? []);
+    const dashboardRoutes = modules.flatMap(m => m.manifest.dashboard_routes ?? []);
+
+    // Fusion de crumb_labels de todos los modulos. Si dos modulos definen
+    // la misma clave, el primero (sector) gana sobre _shared.
+    const crumbLabels: Record<string, string> = {};
+    for (let i = modules.length - 1; i >= 0; i--) {
+        Object.assign(crumbLabels, modules[i].manifest.crumb_labels ?? {});
+    }
+
+    // Public link del primer modulo que lo declare (tipicamente el sector).
+    const publicLinkSpec = modules.flatMap(m =>
+        m.manifest.public_link ? [m.manifest.public_link] : [],
+    )[0];
+    const publicLink = publicLinkSpec && typeof window !== 'undefined' ? {
+        url: `${window.location.protocol}//${window.location.host}${publicLinkSpec.route}`,
+        label: publicLinkSpec.label,
+        title: publicLinkSpec.title,
+    } : undefined;
+
+    // Landing por defecto: primer item del sidebar fusionado.
+    const defaultLanding = (() => {
+        const first = sidebarItems[0];
+        if (!first) return 'config';
+        return first.to.replace(/^\/dashboard\//, '').replace(/\/.*$/, '');
+    })();
 
     async function handleLogout() {
-        try { await logout(client); } catch (_) {}
+        try { await logout(client); } catch (_) { /* ya saliendo, sin reintento */ }
         navigate('/');
     }
 
     return (
         <Routes>
-            <Route element={<DashboardLayout local={local} onLogout={handleLogout} />}>
-                <Route index element={<Navigate to="carta" replace />} />
-
-                <Route path="carta" element={<CartaPage />}>
-                    <Route index element={<Navigate to="importar" replace />} />
-                    <Route path="importar"  element={<CartaImportarPage />} />
-                    <Route path="productos" element={<CartaProductosPage />} />
-                    <Route path="pdf"       element={<CartaPdfPage />} />
-                    <Route path="web"       element={<CartaWebPage />} />
-                </Route>
-
-                <Route path="mesas"   element={<MesasPage />} />
-                <Route path="pedidos" element={<PedidosPage />} />
-
-                <Route path="config" element={<ConfigPage />}>
-                    <Route index element={<Navigate to="general" replace />} />
-                    <Route path="general"   element={<ConfigGeneralPage />} />
-                    <Route path="identidad" element={<ConfigIdentidadPage />} />
-                    <Route path="idiomas"   element={<ConfigIdiomasPage />} />
-                    <Route path="horarios"  element={<ConfigHorariosPage />} />
-                    <Route path="fiscal"    element={<ConfigFiscalPage />} />
-                    <Route path="equipo"    element={<ConfigEquipoPage />} />
-                </Route>
-
-                <Route path="facturacion" element={<FacturacionPage />}>
-                    <Route index element={<Navigate to="plan" replace />} />
-                    <Route path="plan"      element={<FacturacionPlanPage />} />
-                    <Route path="historico" element={<FacturacionHistoricoPage />} />
-                    <Route path="metodos"   element={<FacturacionMetodosPage />} />
-                </Route>
-
-                <Route path="cuenta" element={<CuentaPage />}>
-                    <Route index element={<Navigate to="perfil" replace />} />
-                    <Route path="perfil"   element={<CuentaPerfilPage />} />
-                    <Route path="password" element={<CuentaPasswordPage />} />
-                    <Route path="sesiones" element={<CuentaSesionesPage />} />
-                    <Route path="cerrar"   element={<CuentaCerrarPage />} />
-                </Route>
+            <Route element={
+                <DashboardLayout
+                    local={local}
+                    plan={config.plan}
+                    onLogout={handleLogout}
+                    items={sidebarItems}
+                    brandLogoSrc={config.logo_path}
+                    brandAlt={config.nombre}
+                    crumbLabels={crumbLabels}
+                    publicLink={publicLink}
+                />
+            }>
+                <Route index element={<Navigate to={defaultLanding} replace />} />
+                {renderRoutes(dashboardRoutes, registry)}
             </Route>
         </Routes>
     );
 }
 
 export function Dashboard() {
+    const modules = useActiveModules();
+    const moduleProviders = modules.flatMap(m => m.Provider ? [m.Provider] : []);
     return (
         <DashboardProvider>
-            <DashboardShell />
+            {composeProviders(moduleProviders, <DashboardShell />)}
         </DashboardProvider>
     );
 }

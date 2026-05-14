@@ -1,21 +1,21 @@
 /**
- * DashboardContext - estado compartido entre sub-paginas del dashboard.
+ * DashboardContext - estado generico del dashboard (cero hosteleria).
  *
- * Una unica carga inicial (bootstrap_local + listCategorias + listProductos +
- * getLocal) sirve a TODAS las sub-paginas. Cada sub-pagina puede pedir reload
- * o setLocal directo cuando hace cambios optimistas.
+ * Carga el LOCAL (entidad del establecimiento, comun a cualquier vertical:
+ * un restaurante, una clinica, un taller, una asesoria). Cada sub-pagina
+ * generica (Config, Cuenta, Facturacion) lo consume sin saber del sector.
+ *
+ * Estado especifico de un sector (carta y productos para hosteleria, citas
+ * para clinica, pedidos para logistica, etc.) vive en el Provider de su
+ * propio modulo (ver modules/hosteleria/HosteleriaContext.tsx). Dashboard.tsx
+ * los compone.
  */
 
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
+
 import { useSynaxisClient } from '../../hooks/useSynaxis';
 import { getLocal, type LocalInfo } from '../../services/local.service';
-import {
-    listCategorias,
-    listProductos,
-    type CartaCategoria,
-    type CartaProducto,
-} from '../../services/carta.service';
 import type { SynaxisClient } from '../../synaxis';
 
 export const LOCAL_ID = 'l_default';
@@ -23,11 +23,9 @@ export const LOCAL_ID = 'l_default';
 interface DashboardCtx {
     client: SynaxisClient;
     local: LocalInfo | null;
-    categorias: CartaCategoria[];
-    productos: CartaProducto[];
     setLocal: (l: LocalInfo) => void;
-    setProductos: (p: CartaProducto[]) => void;
-    reload: () => void;
+    /** Re-fetcha el local. No toca estado de otros providers. */
+    reload: () => Promise<void>;
     loading: boolean;
 }
 
@@ -42,43 +40,25 @@ export function useDashboard(): DashboardCtx {
 export function DashboardProvider({ children }: { children: ReactNode }) {
     const client = useSynaxisClient();
     const [local, setLocal] = useState<LocalInfo | null>(null);
-    const [categorias, setCategorias] = useState<CartaCategoria[]>([]);
-    const [productos, setProductos] = useState<CartaProducto[]>([]);
     const [loading, setLoading] = useState(true);
 
-    async function reload() {
+    async function reload(): Promise<void> {
         setLoading(true);
         try {
-            const [cats, prods, info] = await Promise.all([
-                listCategorias(client, LOCAL_ID).catch(() => []),
-                listProductos(client, LOCAL_ID).catch(() => []),
-                getLocal(client, LOCAL_ID).catch(() => null),
-            ]);
-            setCategorias(cats);
-            setProductos(prods);
+            const info = await getLocal(client, LOCAL_ID).catch(() => null);
             if (info) setLocal(info);
         } finally {
             setLoading(false);
         }
     }
 
-    // Bootstrap idempotente + primera carga
+    // Bootstrap idempotente + primera carga del local.
     useEffect(() => {
         client.execute({ action: 'bootstrap_local', data: {} })
             .catch(e => console.warn('[Dashboard] bootstrap_local fallo:', e))
             .finally(() => reload());
     }, []);
 
-    const value: DashboardCtx = {
-        client,
-        local,
-        categorias,
-        productos,
-        setLocal,
-        setProductos,
-        reload,
-        loading,
-    };
-
+    const value: DashboardCtx = { client, local, setLocal, reload, loading };
     return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

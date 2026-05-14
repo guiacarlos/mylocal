@@ -12,8 +12,9 @@ echo  Los cambios en el codigo se ven INSTANTANEAMENTE.
 echo  No es necesario hacer build hasta el final.
 echo.
 
-:: Matar procesos anteriores si existen
-taskkill /F /IM php.exe /T > nul 2>&1
+:: Liberar puertos que un ciclo anterior haya dejado ocupados.
+:: Solo mata procesos LISTEN en 8091/8766/8767/5173 — selectivo, no por nombre.
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\dev\free-ports.ps1" -Quiet
 
 :: 1. Backend PHP en segundo plano (para llamadas API /acide/...)
 echo  [1/2] Iniciando Backend PHP en puerto 8091...

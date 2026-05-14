@@ -1,0 +1,86 @@
+/* LocalConfigCard - tarjeta editable de datos del local.
+ *
+ * Componente generico (no es de hosteleria): editar nombre, telefono,
+ * direccion, etc. Lo usan tanto el dashboard generico (ConfigGeneralPage)
+ * como la pagina de Mesas del modulo de hosteleria (SalaMapa).
+ *
+ * Prefijo de clases `.sm-local-*` por historia (vivian en sala-wizard.css).
+ * Renombrar a un prefijo neutro queda como tarea de cosmetica para Ola C.
+ */
+
+.sm-local-card {
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    background: var(--sp-bg, #fff);
+    border: 1px solid var(--sp-border, #E5E5E3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sm-local-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.sm-local-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sp-text-muted, #717171);
+    min-width: 130px;
+}
+.sm-local-value {
+    flex: 1;
+    text-align: left;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.12s;
+    min-width: 200px;
+}
+.sm-local-value:hover {
+    background: var(--sp-bg-soft, #F8F8F6);
+}
+.sm-local-placeholder {
+    color: var(--sp-text-muted, #717171);
+    font-weight: 400;
+    font-style: italic;
+}
+.sm-local-input {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sp-text, #0F0F0F);
+    border: 1px solid var(--sp-accent-alt, #C8A96E);
+    border-radius: 6px;
+    padding: 6px 8px;
+    background: var(--sp-bg, #fff);
+    outline: none;
+    min-width: 200px;
+}
+.sm-local-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--sp-border, #E5E5E3);
+}
+.sm-local-toggle {
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    color: var(--sp-accent-alt, #C8A96E);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 0;
+    text-align: left;
+}
+.sm-local-toggle:hover { text-decoration: underline; }
