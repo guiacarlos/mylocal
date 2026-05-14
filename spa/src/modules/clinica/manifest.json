@@ -1,0 +1,31 @@
+{
+    "id": "clinica",
+    "name": "MyLocal · Clínica",
+    "version": "1.0.0",
+    "description": "Módulo vertical para clínicas veterinarias y médicas: agenda, pacientes, historial, stock e notificaciones.",
+    "requires_capabilities": [
+        "CITAS",
+        "CRM",
+        "NOTIFICACIONES",
+        "PRODUCTS"
+    ],
+    "crumb_labels": {
+        "agenda":        "Agenda",
+        "pacientes":     "Pacientes",
+        "stock":         "Stock",
+        "recordatorios": "Recordatorios"
+    },
+    "dashboard_nav": [
+        { "to": "/dashboard/agenda",        "label": "Agenda",        "icon": "Calendar" },
+        { "to": "/dashboard/pacientes",     "label": "Pacientes",     "icon": "Users" },
+        { "to": "/dashboard/stock",         "label": "Stock",         "icon": "Package" },
+        { "to": "/dashboard/recordatorios", "label": "Recordatorios", "icon": "Bell" }
+    ],
+    "dashboard_routes": [
+        { "path": "agenda",            "component": "AgendaPage" },
+        { "path": "pacientes",         "component": "PacientesPage" },
+        { "path": "pacientes/:id",     "component": "HistorialPage" },
+        { "path": "stock",             "component": "StockPage" },
+        { "path": "recordatorios",     "component": "RecordatoriosPage" }
+    ]
+}

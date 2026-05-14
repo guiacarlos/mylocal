@@ -26,6 +26,10 @@ import {
     COMPONENTS as hosteleriaComponents,
     Provider as hosteleriaProvider,
 } from '../modules/hosteleria/routes';
+import {
+    manifest as clinicaManifest,
+    COMPONENTS as clinicaComponents,
+} from '../modules/clinica/routes';
 
 export interface ResolvedModule {
     manifest: ModuleManifest;
@@ -45,6 +49,10 @@ const SECTOR_MODULES: Record<string, ResolvedModule> = {
         manifest: hosteleriaManifest,
         COMPONENTS: hosteleriaComponents,
         Provider: hosteleriaProvider,
+    },
+    clinica: {
+        manifest: clinicaManifest,
+        COMPONENTS: clinicaComponents,
     },
 };
 

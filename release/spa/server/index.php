@@ -140,6 +140,18 @@ const ALLOWED_ACTIONS = [
     'upload', 'synaxis_sync', 'health_check',
     // Público (lectura mínima que el cliente puede cachear)
     'validate_coupon', 'get_payment_settings', 'get_mesa_settings', 'list_products',
+    // CITAS (agenda y reservas internas)
+    'cita_create', 'cita_update', 'cita_list', 'cita_cancel', 'cita_get',
+    'recurso_create', 'recurso_update', 'recurso_list', 'recurso_delete',
+    'cita_publica_crear',
+    // CRM (contactos, interacciones, segmentación)
+    'crm_contacto_create', 'crm_contacto_update', 'crm_contacto_get',
+    'crm_contacto_list', 'crm_contacto_delete',
+    'crm_interaccion_add', 'crm_interaccion_list',
+    'crm_segmento_query',
+    // NOTIFICACIONES
+    'notif_send', 'notif_send_template', 'notif_list',
+    'notif_template_list', 'notif_template_save',
 ];
 
 if (!$action) resp(false, null, 'action requerida');
@@ -328,6 +340,47 @@ try {
         case 'list_products':
             // Acciones públicas de lectura: leen directamente del cache server.
             resp(true, handle_public_read($action));
+
+        // ── CITAS ────────────────────────────────────────────────────────
+        case 'cita_create':
+        case 'cita_update':
+        case 'cita_list':
+        case 'cita_cancel':
+        case 'cita_get':
+        case 'recurso_create':
+        case 'recurso_update':
+        case 'recurso_list':
+        case 'recurso_delete':
+            require_once __DIR__ . '/handlers/citas.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, \Citas\handle_citas_admin($action, $req, $user));
+
+        case 'cita_publica_crear':
+            require_once __DIR__ . '/handlers/citas.php';
+            resp(true, \Citas\handle_citas_public($action, $req));
+
+        // ── CRM ──────────────────────────────────────────────────────────
+        case 'crm_contacto_create':
+        case 'crm_contacto_update':
+        case 'crm_contacto_get':
+        case 'crm_contacto_list':
+        case 'crm_contacto_delete':
+        case 'crm_interaccion_add':
+        case 'crm_interaccion_list':
+        case 'crm_segmento_query':
+            require_once __DIR__ . '/handlers/crm.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, \Crm\handle_crm($action, $req, $user));
+
+        // ── NOTIFICACIONES ───────────────────────────────────────────────
+        case 'notif_send':
+        case 'notif_send_template':
+        case 'notif_list':
+        case 'notif_template_list':
+        case 'notif_template_save':
+            require_once __DIR__ . '/handlers/notificaciones.php';
+            require_role($user, ['superadmin', 'administrador', 'admin']);
+            resp(true, \Notificaciones\handle_notificaciones($action, $req, $user));
 
         default:
             resp(false, null, "Acción no implementada: $action");

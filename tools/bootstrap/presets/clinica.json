@@ -1,0 +1,20 @@
+{
+    "module": "clinica",
+    "capabilities": [
+        "LOGIN",
+        "OPTIONS",
+        "AI",
+        "GEMINI",
+        "PRODUCTS",
+        "PAYMENT",
+        "FISCAL",
+        "CITAS",
+        "CRM",
+        "NOTIFICACIONES"
+    ],
+    "default_role": "admin",
+    "default_user": {
+        "email": null,
+        "password": null
+    }
+}
