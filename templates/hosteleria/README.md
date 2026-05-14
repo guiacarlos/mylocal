@@ -1,6 +1,29 @@
-# Socolá — SPA + SynaxisCore
+# Template: Hostelería
 
-React + Vite + TypeScript. La base de datos corre en el navegador (SynaxisCore → IndexedDB) y un server PHP adelgazado maneja solo lo que no puede vivir en el cliente (login real, webhook Revolut, proxy Gemini, subida de medios, sync entre dispositivos).
+Gestión completa para bares y restaurantes. Carta digital QR, TPV, agente IA de sala.
+
+**Puerto dev:** 5173 | **CSS prefix:** `sp-*` | **Build:** `.\build.ps1 -Template hosteleria`
+
+## Páginas
+
+| Ruta | Descripción |
+|------|-------------|
+| `/carta` | Carta digital pública (sin login) |
+| `/carta/:mesa` | Carta con contexto de mesa para pedido QR |
+| `/mesa/:slug` | Vista QR para el cliente |
+| `/login` | Autenticación del hostelero |
+| `/dashboard/*` | Panel de gestión autenticado |
+| `/sistema/tpv/*` | Punto de venta (sala/cocina/admin) |
+
+## Capabilities
+
+```json
+["LOGIN","OPTIONS","CARTA","QR","TPV","CRM","NOTIFICACIONES","GEMINI","AGENTE_RESTAURANTE","PRODUCTS","PAYMENT","FISCAL"]
+```
+
+## Credenciales de desarrollo
+
+`socola@socola.es` / `socola2026` (auto-creadas en primer arranque)
 
 ## Arrancar
 

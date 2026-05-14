@@ -2,7 +2,7 @@
 
 **Documento:** `claude/planes/estructura.md`
 **Proyecto:** MyLocal (framework PHP + React para agencias)
-**Estado:** Ejecución en curso — Ola K en progreso
+**Estado:** Completado — todas las olas G–K terminadas
 **Filosofía:** modular atómico · cada archivo una responsabilidad · ≤ 250 LOC · cero hardcodeos · cero datos ficticios · cero funciones a medio hacer
 
 ---
@@ -320,9 +320,9 @@ Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, Historia
 
 ## 13. Ola J — Integración OpenClaude + OPENCLAW ✅
 
-**Objetivo:** una instancia OpenClaude observa todas las apps vía API. No fork. No fusión.
+**Objetivo:** conectar MyLocal con agentes IA externos sin acoplamiento. Dos piezas independientes: conector Anthropic Claude (texto/AI) + integración bidireccional con OpenClaw (agente local).
 
-**Resultado:** `OpenClaudeClient.php` + `EventBus.php` + listeners por defecto. Conector controlado por `OPTIONS/openclaude` (api_key, model, timeout). Si no configurado → isEnabled() = false, la app sigue sin tocar código. Timeout predeterminado: 1s.
+**Resultado:** `EventBus.php` como bus interno de eventos; `OpenClaudeClient.php` para llamadas a la API de Anthropic (toggle por config); `CAPABILITIES/OPENCLAW/` para integración bidireccional con el agente OpenClaw — manifest dinámico por despliegue, executor proxy, push de eventos en tiempo real.
 
 ### J.1 Conector PHP
 
@@ -371,7 +371,7 @@ OpenClaw conecta con **la app desplegada**, no con "MyLocal" en abstracto.
 
 - Conector Anthropic se enciende/apaga por config sin tocar código ✅
 - OpenClaw caído → timeout 2s, MyLocal no se cae ✅
-- MyLocal expuesto como skill de 11 herramientas para cualquier agente MCP-compatible ✅
+- Manifest de skill dinámico — cada despliegue declara sus herramientas en OPTIONS ✅
 - Eventos de MyLocal empujados al agente local en tiempo real ✅
 
 ---
@@ -380,12 +380,12 @@ OpenClaw conecta con **la app desplegada**, no con "MyLocal" en abstracto.
 
 **Objetivo:** otro desarrollador entra, lee, y monta un vertical nuevo en ≤ 1 día.
 
-- [ ] `docs/FRAMEWORK.md` — arquitectura, flujo de trabajo, cómo añadir template y capability
-- [ ] `docs/SDK.md` — API del `@mylocal/sdk`: qué exporta, cómo usarlo desde un template
-- [ ] `docs/CAPABILITIES.md` — listado, dependencias, acciones, roles
-- [ ] `docs/BOOTSTRAP.md` — `build.ps1 --template=<nombre>`, estructura de manifest.json
-- [ ] `templates/<nombre>/README.md` por cada template: páginas, capabilities, datos esperados
-- [ ] Actualizar `CLAUDE.md` raíz con puntero a este documento y estado de olas
+- [x] `docs/FRAMEWORK.md` — arquitectura, flujo de trabajo, cómo añadir template y capability
+- [x] `docs/SDK.md` — API del `@mylocal/sdk`: qué exporta, cómo usarlo desde un template
+- [x] `docs/CAPABILITIES.md` — listado, dependencias, acciones, roles
+- [x] `docs/BOOTSTRAP.md` — `build.ps1 --template=<nombre>`, estructura de manifest.json
+- [x] `templates/<nombre>/README.md` por cada template: páginas, capabilities, datos esperados
+- [x] Actualizar `CLAUDE.md` raíz con puntero a este documento y estado de olas
 
 ---
 
@@ -427,16 +427,30 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 - [x] Ola H — Template `logistica/`
 - [x] Ola I — Template `asesoria/`
 - [x] Ola J — Integración OpenClaude
-- [ ] Ola K — Documentación + handover
+- [x] Ola K — Documentación + handover
 
 ---
 
-## 18. Próxima acción concreta — Ola G
+## 18. Estado final y próxima acción
 
-**Paso 1:** Crear `sdk/` extrayendo SynaxisClient + auth + hooks de `spa/src/`
-**Paso 2:** `pnpm-workspace.yaml` en la raíz
-**Paso 3:** Migrar `spa/` → `templates/hosteleria/` actualizando imports
-**Paso 4:** Migrar `spa/src/modules/clinica/` → `templates/clinica/`
-**Paso 5:** Actualizar `build.ps1 --template=<nombre>`
-**Paso 6:** Tests — hosteleria y clinica verdes
-**Paso 7:** Commit + push si el dueño lo aprueba
+**Olas 0–K: todas completadas.**
+
+- Olas 0–J: commit `37fcd8b`
+- Ola K: documentación + CLAUDE.md actualizado (commit en curso)
+
+### Deuda técnica conocida
+
+| Archivo | Líneas | Límite | Nota |
+|---------|--------|--------|------|
+| `sdk/src/synaxis/SynaxisCore.ts` | 262 | 250 | Migrado de `spa/src/synaxis/` — no escrito desde cero. Partir si se toca en el futuro. |
+
+### Cómo añadir un nuevo vertical ahora mismo
+
+```
+1. cp -r templates/clinica/ templates/veterinaria/
+2. Editar templates/veterinaria/manifest.json  ← capabilities que necesita
+3. Editar templates/veterinaria/package.json   ← name: "veterinaria"
+4. Editar src/App.tsx y src/pages/             ← UI propia
+5. pnpm install && pnpm -F veterinaria build   ← build verde
+6. Si necesita agente: OPTIONS openclaw.allowed_actions + openclaw.tools
+```

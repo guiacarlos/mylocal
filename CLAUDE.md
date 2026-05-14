@@ -101,19 +101,43 @@ el test de login DEBE seguir pasando despues. Es la red de seguridad.
 
 ## Que es este proyecto
 
-Plataforma SaaS de hosteleria espanola. Carta digital QR + TPV + agentes IA.
-Arquitectura: React (frontend) + PHP (backend) + AxiDB (datos).
-Plan completo: claude/planes/mylocal.md
+Framework multi-sector para negocios espanoles. Genera aplicaciones verticales
+(hosteleria, clinica, logistica, asesoria, ...) desde una base comun de SDK +
+CAPABILITIES + templates React.
+
+Arquitectura: React/TypeScript (frontend) + PHP (backend) + AxiDB (datos).
+Plan de construccion: `claude/planes/estructura.md`
+
+### Documentacion del framework
+
+| Documento | Que cubre |
+|-----------|-----------|
+| `docs/FRAMEWORK.md` | Arquitectura en 3 capas, añadir capabilities y templates |
+| `docs/SDK.md` | SynaxisClient, hooks, tipos, patrones de servicio |
+| `docs/CAPABILITIES.md` | Catalogo completo de capabilities PHP |
+| `docs/BOOTSTRAP.md` | Arranque dev, build, despliegue, manifest.json |
+| `templates/*/README.md` | Referencia rapida de cada template |
+
+### Estado de olas (framework multi-sector)
+
+| Ola | Descripcion | Estado |
+|-----|-------------|--------|
+| G | pnpm workspaces + SDK compartido | completa |
+| H | CAPABILITIES modulares (TAREAS + DELIVERY) | completa |
+| I | Template asesoria | completa |
+| J | EventBus + OpenClaude + OpenClaw | completa |
+| K | Documentacion y handover | completa |
 
 ---
 
 ## Arquitectura fundamental
 
-MyLocal es una aplicacion React + PHP. No hay MySQL. No hay base de datos externa.
+MyLocal es un framework React + PHP. No hay MySQL. No hay base de datos externa.
 
-- El frontend es React compilado con Vite. Vive en socola_spa/
-- El backend es PHP puro. Vive en CORE/ y CAPABILITIES/
-- La capa de datos es AxiDB: un motor file-based propio (JSON en STORAGE/)
+- El frontend es React + TypeScript compilado con Vite. Cada vertical vive en `templates/<nombre>/`
+- El SDK compartido vive en `sdk/` y se enlaza via pnpm workspaces (`@mylocal/sdk`)
+- El backend es PHP puro. Vive en `CORE/` y `CAPABILITIES/`
+- La capa de datos es AxiDB: un motor file-based propio (JSON en `STORAGE/`)
 - AxiDB reemplaza completamente a MySQL. Toda lectura y escritura pasa por el
 - No se usa SQL. No se instala nada en el servidor mas alla de PHP.
 
@@ -122,21 +146,19 @@ La SPA se comunica con el backend exclusivamente via:
 
 ---
 
-## Modulos activos en la SPA
+## Templates disponibles
 
-Rutas React que existen en el producto:
-  /               pagina de inicio publica
-  /carta          carta digital publica (lectura)
-  /carta/:mesa    carta con contexto de mesa (pedido QR)
-  /mesa/:slug     vista de mesa QR para el cliente
-  /login          autenticacion del hostelero
-  /dashboard/*    panel de gestion (hostelero autenticado)
-  /sistema/tpv/*  punto de venta (roles sala/cocina/admin)
-  /nosotros       pagina informativa
-  /contacto       pagina informativa
+Cada template es una SPA React independiente con su propio `package.json` y puerto dev.
 
-Modulos eliminados por no pertenecer al producto:
-  Academia — eliminada. No es parte del roadmap.
+| Template | Puerto | Vertical |
+|----------|--------|----------|
+| hosteleria | 5173 | Bares y restaurantes — carta QR, TPV, agente IA |
+| clinica | 5174 | Agenda medica, historial, stock sanitario |
+| logistica | 5175 | Pedidos, flota, entregas, seguimiento publico |
+| asesoria | 5176 | Gestion documental, OCR, calendario fiscal, kanban |
+
+Arrancar un template: `run.bat <nombre>` — levanta PHP en 8091 + Vite con HMR.
+Ver rutas y capabilities de cada template: `templates/<nombre>/README.md`
 
 ---
 
@@ -157,14 +179,13 @@ Modulos eliminados por no pertenecer al producto:
 
 Para trabajar en el proyecto con cambios instantáneos (HMR):
 
-1. **Ejecuta `run.bat`** en la raíz.
-   - Levanta el Backend PHP (puerto 8090).
-   - Levanta el Frontend Vite (puerto 5173).
-   - Abre el navegador automáticamente.
-2. **Edita el código** en `spa/src/`.
+1. **Ejecuta `run.bat <template>`** en la raíz.
+   - Levanta el Backend PHP (puerto 8091).
+   - Levanta el Frontend Vite del template (puerto 5173-5176).
+2. **Edita el código** en `templates/<nombre>/src/` o en `sdk/src/`.
 3. **Ver cambios**: El navegador se actualiza solo al guardar.
 
-**IMPORTANTE**: No es necesario hacer `build.ps1` durante el desarrollo. Solo se hace al finalizar el proyecto o para despliegues reales.
+**IMPORTANTE**: No es necesario hacer `build.ps1` durante el desarrollo. Solo se hace al finalizar o para despliegues reales.
 
 ---
 
@@ -172,18 +193,20 @@ Para trabajar en el proyecto con cambios instantáneos (HMR):
 
 ### Carpeta de trabajo (desarrollo)
 
-spa/    codigo fuente React + Vite
-        aqui se trabaja, aqui se ejecuta npm run dev
+templates/<nombre>/   codigo fuente React + Vite de cada vertical
+sdk/                  SDK compartido (@mylocal/sdk)
+                      aqui se trabaja, run.bat levanta Vite con HMR
 
 ### Carpeta de produccion: /release/
 
 El script build.ps1 (en la raiz del proyecto) genera /release/ completa y
 autosuficiente. Para construir una version de produccion:
 
-  .\build.ps1
+  .\build.ps1                    # hosteleria por defecto
+  .\build.ps1 -Template clinica  # cualquier otro template
 
 Eso es todo. El script:
-  1. Compila la SPA React (spa/ -> release/index.html + release/assets/)
+  1. Compila el template con pnpm -F <nombre> build -> release/index.html + assets/
   2. Copia CORE/, CAPABILITIES/, axidb/, fonts/, seed/
   3. Copia .htaccess, gateway.php, router.php, favicon.png, manifest.json, robots.txt
   4. Crea STORAGE/ vacia (el servidor escribe datos ahi en tiempo real)
@@ -191,8 +214,8 @@ Eso es todo. El script:
 REGLAS CRITICAS:
 - release/ es la carpeta de produccion completa. Se sube TAL CUAL al servidor.
 - release/ incluye frontend + backend + motor de datos. Todo en uno.
-- STORAGE/ NO se incluye en release/ (son datos del restaurante, van aparte)
-- spa/ NUNCA va al servidor — es solo codigo fuente de desarrollo
+- STORAGE/ NO se incluye en release/ (son datos del negocio, van aparte)
+- templates/ y sdk/ NUNCA van al servidor — son solo codigo fuente de desarrollo
 - No se copia a mano nada. El script lo hace todo.
 
 ### Lo que contiene release/ (completo)
@@ -242,41 +265,56 @@ diagnostico rapido cuando algo falla.
 ## Estructura de modulos
 
 ```
-spa/                   fuente React — solo para desarrollo local
-release/               build de produccion — lo que se sube al servidor (raiz del proyecto)
-axidb/                 motor de datos — no modificar sin entender el protocolo
-CORE/                  framework base — auth, config, gestion de archivos
-CAPABILITIES/CARTA/    carta digital hostelera
-CAPABILITIES/QR/       generacion de QR
-CAPABILITIES/TPV/      punto de venta
-CAPABILITIES/AGENTE_RESTAURANTE/  agente IA
-CAPABILITIES/PRODUCTS/ productos genericos (base)
-CAPABILITIES/GEMINI/   conector IA
-STORAGE/               datos en tiempo real — excluidos de git
-MEDIA/                 imagenes de productos
+sdk/                       SDK compartido TypeScript — SynaxisClient, hooks, tipos
+templates/hosteleria/      vertical bares y restaurantes (puerto 5173)
+templates/clinica/         vertical clinicas (puerto 5174)
+templates/logistica/       vertical logistica (puerto 5175)
+templates/asesoria/        vertical asesorias (puerto 5176)
+release/                   build de produccion — lo que se sube al servidor
+axidb/                     motor de datos — no modificar sin entender el protocolo
+CORE/                      framework base — auth, config, EventBus, gestion archivos
+CAPABILITIES/LOGIN/        autenticacion y sesion (bloqueado — ver AUTH_LOCK.md)
+CAPABILITIES/OPTIONS/      configuracion del negocio
+CAPABILITIES/CRM/          contactos y clientes
+CAPABILITIES/CITAS/        agenda y citas
+CAPABILITIES/NOTIFICACIONES/ notificaciones internas
+CAPABILITIES/TAREAS/       kanban de tareas
+CAPABILITIES/AI/           OpenClaudeClient (Anthropic) + listeners
+CAPABILITIES/OPENCLAW/     integracion bidireccional con agente OpenClaw
+CAPABILITIES/CARTA/        carta digital hostelera
+CAPABILITIES/QR/           generacion de QR
+CAPABILITIES/TPV/          punto de venta
+CAPABILITIES/DELIVERY/     pedidos y entregas logisticas
+CAPABILITIES/GEMINI/       conector Google Gemini
+CAPABILITIES/AGENTE_RESTAURANTE/ agente IA hostelero
+CAPABILITIES/PRODUCTS/     productos genericos
+CAPABILITIES/PAYMENT/      pagos
+CAPABILITIES/FISCAL/       facturacion Verifactu/TicketBAI
+STORAGE/                   datos en tiempo real — excluidos de git
+MEDIA/                     imagenes de productos
+docs/                      documentacion del framework (FRAMEWORK, SDK, CAPABILITIES, BOOTSTRAP)
 ```
 
 ---
 
 ## Flujo de trabajo
 
-1. **Desarrollo**: Usar `run.bat` para ver cambios instantáneos.
-2. **Implementar**: Seguir el plan en `claude/planes/mylocal.md`.
+1. **Desarrollo**: Usar `run.bat <template>` para ver cambios instantáneos.
+2. **Implementar**: Seguir el plan en `claude/planes/estructura.md`.
 3. **Calidad**: Verificar que ningún archivo supera las 250 líneas.
-4. **Finalizar**: Solo al terminar el proyecto o fase crítica, ejecutar `build.ps1` para generar la carpeta `release/`.
+4. **Finalizar**: Solo al terminar o para despliegue, ejecutar `.\build.ps1 -Template <nombre>`.
 
 ---
 
 ## Lo que NO se hace
 
-- No se crean modulos fuera del plan (claude/planes/mylocal.md)
+- No se crean modulos fuera del plan (claude/planes/estructura.md)
 - No se usa MySQL ni ninguna base de datos externa
 - No se usa la carpeta dist/ — la carpeta de produccion es /release/ en la raiz
-- No se sube spa/ al servidor de produccion
+- No se suben templates/ ni sdk/ al servidor de produccion
 - No se instala hardware propietario en el codigo
 - No se sube STORAGE, vault ni config con credenciales
 - No se añaden features de fases futuras antes de cerrar la fase actual
-- No se añade Academia ni ningun modulo que no este en el roadmap
 
 ---
 
