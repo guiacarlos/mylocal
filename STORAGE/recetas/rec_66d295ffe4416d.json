@@ -1,0 +1,116 @@
+{
+  "id": "rec_66d295ffe4416d",
+  "slug": "albondigas-con-pure-de-patata",
+  "titulo": "Albóndigas Con Puré De Patata",
+  "resumen": "Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Déjalas templar, pélalas y pásalas por el pasapurés. Sazona y agrega un chorrito de aceite y un poco de perejil picado. Reserva el puré.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "carne picada de ternera y cerdo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "miga de pan"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "caldo de carne"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Déjalas templar, pélalas y pásalas por el pasapurés. Sazona y agrega un chorrito de aceite y un poco de perejil picado. Reserva el puré.",
+    "Pela las cebollas y 3 dientes de ajo, pícalos y pon todo a dorar en una cazuela. Sazona. Cuando esté bien dorado, añade 1 cucharada de harina y rehógala un poco. Vierte el caldo y el vino y deja reducir durante 10 minutos. Tritura la salsa y resérvala en la cazuela.",
+    "Desmenuza la miga de pan y ponla en un bol. Vierte encima la leche y deja que se empape bien.",
+    "Pela el otro diente de ajo, pícalo finamente y colócalo en un bol. Agrega la carne picada, la miga de pan escurrida, el huevo y un poco de perejil picado. Salpimienta y mezcla bien. Coge pequeñas porciones de masa y forma las albóndigas. Enharínalas y fríelas en una sartén con aceite. Cuando se doren, escúrrelas sobre una fuente cubierta con papel absorbente.",
+    "Introduce las albóndigas en la salsa y cocínalas a fuego suave durante 8-10 minutos. Sirve las albóndigas con su salsa y acompáñalas con el puré de patata.",
+    "BROCHETAS DE SOLOMILLO Y MELÓN CON ENSALADA DE RÚCULA Ingredientes (4 p.)",
+    "2 solomillos de cerdo 500 g de melón 100 g de rúcula 2 perretxikos (setas de primavera) 200 ml de vino Pedro Ximénez vinagre de Jerez aceite de oliva virgen extra pimienta sal perejil",
+    "Elaboración",
+    "Pon el vino y 50 mililitros de vinagre a reducir en una cazuelita hasta que espese. Salpimienta los solomillos y dóralos por los dos lados en una plancha con un chorrito de aceite. A los 4 minutos, retíralos y corta cada uno en 6 trozos. Corta el melón en 4 rajas, pélalas y dóralas en la plancha durante 2 minutos. Corta cada una por la mitad. Monta las brochetas alternando 3 trozos de solomillo y 2 de melón. Riega una bandeja de horno con un chorrito de aceite, coloca encima las brochetas y hornéalas a 200 ºC durante 5-6 minutos. Limpia y seca las hojas de rúcula y ponlas en una fuente. Sazónalas y alíñalas con aceite y vinagre. Mezcla bien. Corta los perretxikos en láminas muy finas y espárcelos sobre la ensalada. Sirve las brochetas, salséalas y acompáñalas con la ensalada. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Albóndigas Con Puré De Patata",
+    "meta_description": "Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Déjalas templar, pélalas y pásalas por el pasapurés. Sazona y agrega un chorrito de aceite y un poco de perejil picado. Reserva el puré.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

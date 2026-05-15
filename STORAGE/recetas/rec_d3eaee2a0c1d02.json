@@ -1,0 +1,83 @@
+{
+  "id": "rec_d3eaee2a0c1d02",
+  "slug": "patatas-a-la-alcorina",
+  "titulo": "Patatas A La Alcorina",
+  "resumen": "Cuece los huevos en un cazo con abundante agua. A los 10 minutos, sácalos, refréscalos y pélalos. Córtalos en cuartos y resérvalos. Fríe la rebanada de pan en una sartén con aceite y escúrrela sobre un plato cubierto con papel absorbente. C",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "panceta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "almendras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rebanada",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Cuece los huevos en un cazo con abundante agua. A los 10 minutos, sácalos, refréscalos y pélalos. Córtalos en cuartos y resérvalos. Fríe la rebanada de pan en una sartén con aceite y escúrrela sobre un plato cubierto con papel absorbente. Calienta un chorrito de aceite en una cazuela. Pela los ajos y añádelos (enteros). Corta la panceta en dados y agrégalos. Pela y casca las patatas e incorpóralas. Cubre todo con agua, sazona y cuece a fuego medio durante 15- 20 minutos. Cuando las patatas estén hechas, retira los ajos y colócalos en el mortero. Pica las almendras un poco y añádelas. Agrega también el pan frito troceado y maja todo bien. Espolvorea con perejil picado. Incorpora el majado a la cazuela, remueve un poco y cocina 4-5 minutos más. Sirve. Decora con los huevos y con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas A La Alcorina",
+    "meta_description": "Cuece los huevos en un cazo con abundante agua. A los 10 minutos, sácalos, refréscalos y pélalos. Córtalos en cuartos y resérvalos. Fríe la rebanada de pan en una sartén con aceite y escúrrela sobre un plato cubierto con papel absorbente. C",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

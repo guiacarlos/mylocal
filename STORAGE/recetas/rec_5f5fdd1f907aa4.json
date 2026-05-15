@@ -1,0 +1,93 @@
+{
+  "id": "rec_5f5fdd1f907aa4",
+  "slug": "patatas-con-berberechos-picantes",
+  "titulo": "Patatas Con Berberechos Picantes",
+  "resumen": "Lava las patatas y colócalas en una cazuela con abundante agua y una pizca de sal. Cuécelas durante 30 minutos. Pélalas y córtalas en rodajas de medio centímetro de grosor. Resérvalas. Pela los dientes de ajo y pícalos finamente. Ponlos a r",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "5",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "900",
+      "unidad": "g",
+      "nombre": "berberechos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón picante"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y colócalas en una cazuela con abundante agua y una pizca de sal. Cuécelas durante 30 minutos. Pélalas y córtalas en rodajas de medio centímetro de grosor. Resérvalas. Pela los dientes de ajo y pícalos finamente. Ponlos a rehogar en una tartera con un chorrito de aceite. Agrega también la guindilla. Vierte el txakoli y dale un hervor. Incorpora los berberechos, coloca la tapa y espera a que se abran. Resérvalos. Retira las hojas externas, los tallos y las puntas de las alcachofas. Corta las alcachofas en láminas y fríelas en una sartén con aceite templado. Escúrrelas sobre un plato cubierto con papel absorbente y sazónalas. Espolvorea una fuente con sal y pimienta y coloca encima las rodajas de patata. Espolvoréalas con perejil picado y coloca sobre ellas los berberechos con su jugo. Espolvorea con pimentón picante. Coloca encima las alcachofas fritas y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas Con Berberechos Picantes",
+    "meta_description": "Lava las patatas y colócalas en una cazuela con abundante agua y una pizca de sal. Cuécelas durante 30 minutos. Pélalas y córtalas en rodajas de medio centímetro de grosor. Resérvalas. Pela los dientes de ajo y pícalos finamente. Ponlos a r",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

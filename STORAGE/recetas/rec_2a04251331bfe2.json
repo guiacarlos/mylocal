@@ -1,0 +1,103 @@
+{
+  "id": "rec_2a04251331bfe2",
+  "slug": "sopa-vina-ab",
+  "titulo": "Sopa Viña Ab",
+  "resumen": "Pon las almejas en un bol con agua y sal para que suelten cualquier resto de arenilla que puedan tener. Pon al fuego una sartén con un chorrito de agua. Añade las almejas, tapa y espera a que se abran. Corta la cabeza de la pescadilla y sác",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pescadilla (1 kg aprox.)"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "gambas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "vino amontillado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "",
+      "nombre": "-200 ml de aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las almejas en un bol con agua y sal para que suelten cualquier resto de arenilla que puedan tener. Pon al fuego una sartén con un chorrito de agua. Añade las almejas, tapa y espera a que se abran. Corta la cabeza de la pescadilla y sácale los lomos. Pela las gambas y reserva las cabezas y las cáscaras. Pon 1 litro y medio de agua a calentar en una cazuela. Añade la espina, las pieles y la cabeza de la pescadilla y las cáscaras y las cabezas de las gambas. Sazona y agrega unas ramas de perejil. Cuece durante 10-12 minutos. Cuela el caldo. Reserva un vaso y deja que se enfríe. Pasa el resto a otra cazuela y ponlo a calentar. Pela las patatas y, con una cuchara parisién (sacabolas), saca bolitas de patata. Añádelas al caldo. Incorpora también el caldo que han soltado las almejas. Cuece las bolitas de patata durante unos 10 minutos. Salpimienta el pescado y añádelo a la cazuela junto con las gambas y las almejas. Vierte el vino. Espolvorea con perejil picado y cuece todo junto durante un par de minutos. Deja que se temple. Pon un chorrito de zumo de limón en el vaso de la batidora, agrega el huevo, una pizca de sal y el aceite. Liga la mezcla con la batidora hasta conseguir una buena mayonesa. Pásala a un bol. Coge el vaso de caldo reservado anteriormente (que estará casi frío), viértelo poco a poco sobre la mayonesa y remueve bien con una varilla. Cuando esté bien disuelto, agrega la mayonesa a la cazuela poco a poco y mezcla bien. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Viña Ab",
+    "meta_description": "Pon las almejas en un bol con agua y sal para que suelten cualquier resto de arenilla que puedan tener. Pon al fuego una sartén con un chorrito de agua. Añade las almejas, tapa y espera a que se abran. Corta la cabeza de la pescadilla y sác",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

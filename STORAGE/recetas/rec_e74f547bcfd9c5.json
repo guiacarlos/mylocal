@@ -1,0 +1,88 @@
+{
+  "id": "rec_e74f547bcfd9c5",
+  "slug": "habitas-con-jamon-y-calamares",
+  "titulo": "Habitas Con Jamón Y Calamares",
+  "resumen": "Pon agua a calentar en una cazuelita. Sazona e incorpora las habitas. Cuécelas durante 12-14 minutos. Escúrrelas y resérvalas. Pica los dientes de ajo y la cebolleta finamente y ponlos a pochar a fuego suave en una sartén grande con un chor",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "habitas tiernas (peladas)"
+    },
+    {
+      "cantidad": "110",
+      "unidad": "g",
+      "nombre": "jamón"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "calamar (limpio)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "vino de Jerez"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en una cazuelita. Sazona e incorpora las habitas. Cuécelas durante 12-14 minutos. Escúrrelas y resérvalas. Pica los dientes de ajo y la cebolleta finamente y ponlos a pochar a fuego suave en una sartén grande con un chorrito de aceite. Cuando la verdura esté rehogada, agrega el jamón cortado en daditos y rehógalo un poco. Incorpora las habitas, vierte el vino y dale un hervor. Pica un poco de menta y añádela. Limpia el calamar, córtalo en dados y sazónalo. Saltéalo en una sartén con aceite a fuego fuerte y añádelo a la cazuela de las habitas. Cocina el conjunto durante 3-4 minutos. Coloca el pimentón en el colador y espolvoréalo por encima. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Habitas Con Jamón Y Calamares",
+    "meta_description": "Pon agua a calentar en una cazuelita. Sazona e incorpora las habitas. Cuécelas durante 12-14 minutos. Escúrrelas y resérvalas. Pica los dientes de ajo y la cebolleta finamente y ponlos a pochar a fuego suave en una sartén grande con un chor",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

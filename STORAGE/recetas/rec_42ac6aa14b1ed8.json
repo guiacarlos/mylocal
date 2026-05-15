@@ -1,0 +1,93 @@
+{
+  "id": "rec_42ac6aa14b1ed8",
+  "slug": "faneca-frita-con-pure-de-patatas-especial",
+  "titulo": "Faneca Frita Con Puré De Patatas Especial",
+  "resumen": "Pela 1 diente de ajo y dóralo en una sartén con un poco de aceite. Corta en daditos las cebolletas y los pimientos y añádelos. Rehógalos bien y reserva. Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "fanecas de ración"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela 1 diente de ajo y dóralo en una sartén con un poco de aceite. Corta en daditos las cebolletas y los pimientos y añádelos. Rehógalos bien y reserva. Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas durante 35-40 minutos aproximadamente. Escúrrelas, pélalas, trocéalas y pásalas por el pasapurés. Coloca el puré en un bol grande. Sazona y espolvorea con un poco de perejil picado. Añade las verduras pochadas y mezcla. Reserva el puré. Limpia las fanecas y retírales las cabezas (puedes congelarlas para preparar un caldo en otra ocasión). Salpimienta las fanecas y pásalas por harina. Pon aceite a calentar en una sartén, agrega 4 dientes de ajo (sin pelar) aplastados y las fanecas. Fríelas durante 3 minutos por cada lado. Sirve las fanecas y acompáñalas con el puré de patatas y verduras. Decora con los ajos fritos y con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Faneca Frita Con Puré De Patatas Especial",
+    "meta_description": "Pela 1 diente de ajo y dóralo en una sartén con un poco de aceite. Corta en daditos las cebolletas y los pimientos y añádelos. Rehógalos bien y reserva. Pon las patatas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas ",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

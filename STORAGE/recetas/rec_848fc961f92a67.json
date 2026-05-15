@@ -1,0 +1,98 @@
+{
+  "id": "rec_848fc961f92a67",
+  "slug": "bocado-de-la-reina-con-salsa-de-vino-tinto-y-chalotas",
+  "titulo": "Bocado De La Reina Con Salsa De Vino Tinto Y Chalotas",
+  "resumen": "Pela y pica 2 dientes de ajo y ponlos a dorar en una cazuela con aceite. Corta la cebolla y la zanahoria en dados y agrégalos. Rehoga todo un poco. Añade una pizca de sal y otra de azúcar y agrega el vino. Deja reducir durante 20 minutos. P",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "bocados de la reina"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "-20 chalotas"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela y pica 2 dientes de ajo y ponlos a dorar en una cazuela con aceite. Corta la cebolla y la zanahoria en dados y agrégalos. Rehoga todo un poco. Añade una pizca de sal y otra de azúcar y agrega el vino. Deja reducir durante 20 minutos. Pasado este tiempo, cuela y pon la salsa en un cazo. Liga la salsa con un poco de harina de maíz diluida en agua fría. Dale un hervor y resérvala caliente. Pela las chalotas y confítalas (a fuego suave) en una cazuelita con aceite. Sazona y reserva. Pela y pica finamente el otro diente de ajo, colócalo en un plato y añádele un chorrito de aceite. Limpia las piezas de carne, salpimiéntalas y úntalas con el aceite de ajo. Cocínalas a la plancha por los dos lados. Sirve la carne (la puedes filetear) con las chalotas confitadas. Salsea y decora con unas ramitas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bocado De La Reina Con Salsa De Vino Tinto Y Chalotas",
+    "meta_description": "Pela y pica 2 dientes de ajo y ponlos a dorar en una cazuela con aceite. Corta la cebolla y la zanahoria en dados y agrégalos. Rehoga todo un poco. Añade una pizca de sal y otra de azúcar y agrega el vino. Deja reducir durante 20 minutos. P",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

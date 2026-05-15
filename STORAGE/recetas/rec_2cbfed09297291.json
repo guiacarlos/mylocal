@@ -1,0 +1,83 @@
+{
+  "id": "rec_2cbfed09297291",
+  "slug": "helado-de-turron-con-frambuesas",
+  "titulo": "Helado De Turrón Con Frambuesas",
+  "resumen": "Coloca la nata en un bol y bátela con una batidora de varillas eléctrica hasta que quede semimontada. Resérvala en el frigorífico. Pon el azúcar en una sartén, agrégale el agua y calienta a fuego muy suave hasta conseguir un jarabe espeso (",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "turrón blando"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "mermelada de fresa"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "18",
+      "unidad": "g",
+      "nombre": "alletas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca la nata en un bol y bátela con una batidora de varillas eléctrica hasta que quede semimontada. Resérvala en el frigorífico. Pon el azúcar en una sartén, agrégale el agua y calienta a fuego muy suave hasta conseguir un jarabe espeso (justo antes de que se haga caramelo). Coloca las yemas en un bol grande y móntalas con una batidora de varillas. Vierte el jarabe caliente (tiene que ir directamente del fuego a las yemas) poco a poco y sigue montándolas hasta que espumen bien (aproximadamente 6-8 minutos). Pica el turrón finamente e incorpóralo a la mezcla. Con una lengua, remueve la mezcla hasta que los ingredientes queden perfectamente integrados. Incorpora la nata semimontada y sigue removiendo con movimientos suaves y envolventes. Forra la base de un cortapastas cuadrado grande con film transparente y vierte en él la mezcla. Introduce en el congelador y espera a que la mezcla se congele. Pon a calentar la mermelada en una sartén. Cuando esté bien caliente, agrega las frambuesas, mezcla bien y retira la sartén del fuego. Sirve las frambuesas a un lado del plato y una porción de helado en el otro. Acompaña con las galletas y adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Helado De Turrón Con Frambuesas",
+    "meta_description": "Coloca la nata en un bol y bátela con una batidora de varillas eléctrica hasta que quede semimontada. Resérvala en el frigorífico. Pon el azúcar en una sartén, agrégale el agua y calienta a fuego muy suave hasta conseguir un jarabe espeso (",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -152,6 +152,18 @@ const ALLOWED_ACTIONS = [
     // NOTIFICACIONES
     'notif_send', 'notif_send_template', 'notif_list',
     'notif_template_list', 'notif_template_save',
+    // TAREAS (kanban transversal)
+    'tarea_create', 'tarea_list', 'tarea_update', 'tarea_delete',
+    // DELIVERY (pedidos, flota, entregas, incidencias)
+    'pedido_create', 'pedido_list', 'pedido_get', 'pedido_estado',
+    'vehiculo_create', 'vehiculo_list', 'vehiculo_update',
+    'entrega_asignar', 'entrega_list_dia',
+    'incidencia_add',
+    'pedido_seguimiento',
+    // OPENCLAUDE (asistente transversal — conector Anthropic)
+    'openclaude_status', 'openclaude_complete',
+    // OPENCLAW (integración con agente OpenClaw local — skill bidireccional)
+    'openclaw_manifest', 'openclaw_call', 'openclaw_status', 'openclaw_event_push',
 ];
 
 if (!$action) resp(false, null, 'action requerida');
@@ -381,6 +393,60 @@ try {
             require_once __DIR__ . '/handlers/notificaciones.php';
             require_role($user, ['superadmin', 'administrador', 'admin']);
             resp(true, \Notificaciones\handle_notificaciones($action, $req, $user));
+
+        // ── TAREAS ───────────────────────────────────────────────────────
+        case 'tarea_create':
+        case 'tarea_list':
+        case 'tarea_update':
+        case 'tarea_delete':
+            require_once __DIR__ . '/handlers/tareas.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, \Tareas\handle_tareas($action, $req, $user));
+
+        // ── DELIVERY ─────────────────────────────────────────────────────
+        case 'pedido_create':
+        case 'pedido_list':
+        case 'pedido_get':
+        case 'pedido_estado':
+        case 'vehiculo_create':
+        case 'vehiculo_list':
+        case 'vehiculo_update':
+        case 'entrega_asignar':
+        case 'entrega_list_dia':
+        case 'incidencia_add':
+            require_once __DIR__ . '/handlers/delivery.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor']);
+            resp(true, \Delivery\handle_delivery_admin($action, $req, $user));
+
+        case 'pedido_seguimiento':
+            require_once __DIR__ . '/handlers/delivery.php';
+            resp(true, \Delivery\handle_delivery_public($action, $req));
+
+        // ── OPENCLAUDE ───────────────────────────────────────────────────
+        case 'openclaude_status':
+            require_once __DIR__ . '/handlers/openclaude.php';
+            resp(true, \AI\handle_openclaude($action, $req, $user ?? []));
+
+        case 'openclaude_complete':
+            require_once __DIR__ . '/handlers/openclaude.php';
+            require_role($user, ['superadmin', 'administrador', 'admin']);
+            resp(true, \AI\handle_openclaude($action, $req, $user));
+
+        // ── OPENCLAW (skill bidireccional con agente local) ───────────────
+        case 'openclaw_manifest':
+            require_once __DIR__ . '/handlers/openclaw_skill.php';
+            resp(true, \OpenClaw\handle_openclaw_capability($action, $req, [], getallheaders() ?: []));
+
+        case 'openclaw_call':
+            require_once __DIR__ . '/handlers/openclaw_skill.php';
+            // Auth gestionada internamente por OpenClawSkillExecutor::validateKey()
+            resp(true, \OpenClaw\handle_openclaw_capability($action, $req, [], getallheaders() ?: []));
+
+        case 'openclaw_status':
+        case 'openclaw_event_push':
+            require_once __DIR__ . '/handlers/openclaw_skill.php';
+            require_role($user, ['superadmin', 'administrador', 'admin']);
+            resp(true, \OpenClaw\handle_openclaw_capability($action, $req, $user, getallheaders() ?: []));
 
         default:
             resp(false, null, "Acción no implementada: $action");

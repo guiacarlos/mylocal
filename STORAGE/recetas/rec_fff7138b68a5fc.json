@@ -1,0 +1,78 @@
+{
+  "id": "rec_fff7138b68a5fc",
+  "slug": "torrijas-con-dulce-de-leche",
+  "titulo": "Torrijas Con Dulce De Leche",
+  "resumen": "Pon la leche en una cazuela. Con un pelador, saca un par de tiras de corteza de limón y añádelas. Agrega también el azúcar y la rama de canela y calienta la leche a fuego lento. Remoja las rebanadas de pan en la leche infusionada con limón ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "rebanadas",
+      "nombre": "pan de molde (gruesas)"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "dulce de leche"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon la leche en una cazuela. Con un pelador, saca un par de tiras de corteza de limón y añádelas. Agrega también el azúcar y la rama de canela y calienta la leche a fuego lento. Remoja las rebanadas de pan en la leche infusionada con limón y canela. Déjalas reposar un rato. Escúrrelas bien (sin aplastar) y córtalas por la mitad. Calienta una sartén con mantequilla y dora las torrijas por los dos lados. Sirve las torrijas en una fuente, rocíalas con el dulce de leche y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Torrijas Con Dulce De Leche",
+    "meta_description": "Pon la leche en una cazuela. Con un pelador, saca un par de tiras de corteza de limón y añádelas. Agrega también el azúcar y la rama de canela y calienta la leche a fuego lento. Remoja las rebanadas de pan en la leche infusionada con limón ",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

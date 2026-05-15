@@ -1,0 +1,93 @@
+{
+  "id": "rec_1e17cdda06b401",
+  "slug": "milhojas-de-cerdo-iberico-con-salsa-de-jamon",
+  "titulo": "Milhojas De Cerdo Ibérico Con Salsa De Jamón",
+  "resumen": "Pela las patatas, cáscalas y cuécelas en una cazuela con agua y una pizca de sal durante 15 minutos. Pásalas por el pasapurés. Corta las aceitunas en rodajitas y añádelas. Agrega la mostaza, un chorrito de aceite y perejil picado. Mezcla bi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "milhojas de carne de cerdo ibérico"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón ibérico"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "aceitunas verdes (sin hueso)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "mostaza"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino de Jerez"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, cáscalas y cuécelas en una cazuela con agua y una pizca de sal durante 15 minutos. Pásalas por el pasapurés. Corta las aceitunas en rodajitas y añádelas. Agrega la mostaza, un chorrito de aceite y perejil picado. Mezcla bien y reserva. Salpimienta el milhojas de cerdo ibérico y colócalo en un recipiente apto para el horno. Hornéalo a 180 ºC durante 40 minutos. Pasado este tiempo, riégalo con el vino de Jerez y ásalo a 160 ºC durante 20 minutos más. Deja templar. Corta el jamón en daditos muy pequeños. Rehógalos brevemente en un cazo con un chorrito de aceite. Añade el jugo que ha soltado el milhojas y dale un hervor. Diluye harina de maíz en un poco de agua fría, agrégala al cazo y remueve hasta que ligue la salsa. Corta el milhojas en rodajas y salséalas. Sirve un poco de puré de patata en cada ración. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Milhojas De Cerdo Ibérico Con Salsa De Jamón",
+    "meta_description": "Pela las patatas, cáscalas y cuécelas en una cazuela con agua y una pizca de sal durante 15 minutos. Pásalas por el pasapurés. Corta las aceitunas en rodajitas y añádelas. Agrega la mostaza, un chorrito de aceite y perejil picado. Mezcla bi",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,135 @@
+{
+  "id": "rec_3b9502a774233d",
+  "slug": "rollo-de-bonito-a-la-asturiana",
+  "titulo": "Rollo De Bonito A La Asturiana",
+  "resumen": "Para la salsa, pela y pica el diente de ajo y ponlo a dorar en una cazuela con un chorrito de aceite. Pica las cebollas, agrégalas y espera a que se doren. Vierte el vino, dale un hervor y añade los tomates rallados. Sazona y sofríe todo bi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "650",
+      "unidad": "g",
+      "nombre": "bonito fresco"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "14",
+      "unidad": "",
+      "nombre": "aceitunas verdes"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina y 2 huevos (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, pela y pica el diente de ajo y ponlo a dorar en una cazuela con un chorrito de aceite. Pica las cebollas, agrégalas y espera a que se doren. Vierte el vino, dale un hervor y añade los tomates rallados. Sazona y sofríe todo bien durante 10 minutos más. Tritura y reserva la salsa caliente.",
+    "Elimina la piel y las espinas del bonito. Desmenúzalo y ponlo en un bol. Pica el diente de ajo finamente y añádelo. Pica finamente el jamón, las aceitunas verdes y los pimientos del piquillo y agrégalos. Pica la cebolleta e incorpórala. Agrega también un poco de perejil picado y 1 huevo crudo. Mezcla y sazona. Incorpora el pan rallado y mezcla.",
+    "Mójate las manos. Separa la masa en dos partes y colócalas sobre dos trozos de film transparente. Envuelve como si fuera un caramelo y dales forma de chorizo. Deja reposar 10 minutos. Retira el film. Pasa los rollos por harina y huevo batido y fríelos en una sartén con aceite caliente. Córtalos en rodajas, sirve y salsea. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rollo De Bonito A La Asturiana",
+    "meta_description": "Para la salsa, pela y pica el diente de ajo y ponlo a dorar en una cazuela con un chorrito de aceite. Pica las cebollas, agrégalas y espera a que se doren. Vierte el vino, dale un hervor y añade los tomates rallados. Sazona y sofríe todo bi",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

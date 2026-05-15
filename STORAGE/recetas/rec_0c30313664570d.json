@@ -1,0 +1,93 @@
+{
+  "id": "rec_0c30313664570d",
+  "slug": "chicharro-a-la-mostaza",
+  "titulo": "Chicharro A La Mostaza",
+  "resumen": "Limpia los chicharros y filetéalos. Sazona los filetes y colócalos sobre una fuente de horno untada con un poco de aceite. Para la bechamel, funde la mantequilla en una cazuela al fuego. Agrega la harina y rehógala bien. Vierte la leche poc",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "general",
+  "tags": [
+    "general",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chicharros (jureles) grandes"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la bechamel de mostaza:"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "mostaza"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia los chicharros y filetéalos. Sazona los filetes y colócalos sobre una fuente de horno untada con un poco de aceite. Para la bechamel, funde la mantequilla en una cazuela al fuego. Agrega la harina y rehógala bien. Vierte la leche poco a poco y cocínala durante 8-10 minutos sin dejar de remover. Sazona y agrega la mostaza y un poco de perejil picado. Mezcla bien. Cubre los filetes de chicharro con la bechamel e introdúcelos en el horno a 180 ºC durante 10-12 minutos. Retíralos del horno, sirve y adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Chicharro A La Mostaza",
+    "meta_description": "Limpia los chicharros y filetéalos. Sazona los filetes y colócalos sobre una fuente de horno untada con un poco de aceite. Para la bechamel, funde la mantequilla en una cazuela al fuego. Agrega la harina y rehógala bien. Vierte la leche poc",
+    "meta_keywords": "general, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

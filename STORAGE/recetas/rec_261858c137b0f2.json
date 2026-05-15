@@ -1,0 +1,103 @@
+{
+  "id": "rec_261858c137b0f2",
+  "slug": "mariposas-de-salmon-con-verduras",
+  "titulo": "Mariposas De Salmón Con Verduras",
+  "resumen": "Pela la patata y la calabaza, córtalas en daditos y rehógalos en una cazuela con un chorrito de aceite. Sazona. Cuando empiecen a tomar color, limpia y trocea los champiñones e incorpóralos a la cazuela. Lava el calabacín, córtalo en dadito",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "salmón fresco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "rodaja de calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "escarola"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "ranada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino de Jerez"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la patata y la calabaza, córtalas en daditos y rehógalos en una cazuela con un chorrito de aceite. Sazona. Cuando empiecen a tomar color, limpia y trocea los champiñones e incorpóralos a la cazuela. Lava el calabacín, córtalo en daditos y añádelo. Cuando las verduras estén a punto, vierte el vino y cocínalas hasta que se evapore el líquido. Resérvalas. Limpia bien la escarola y colócala en un bol. Desgrana sobre ella la granada y aliña la ensalada con aceite, vinagre y sal. Mezcla y reserva. Para hacer las mariposas, retira las espinas al salmón y córtalo en filetes de unos 3 centímetros de ancho. Haz un corte en el centro de cada filete (a lo largo), ábrelos como si fuera un libro y aplástalos un poco con el cuchillo. Salpimienta el salmón y ásalo a la plancha 2 minutos por cada lado. Sirve las verduras en el fondo de los platos, coloca encima el salmón y acompáñalo con la ensalada. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mariposas De Salmón Con Verduras",
+    "meta_description": "Pela la patata y la calabaza, córtalas en daditos y rehógalos en una cazuela con un chorrito de aceite. Sazona. Cuando empiecen a tomar color, limpia y trocea los champiñones e incorpóralos a la cazuela. Lava el calabacín, córtalo en dadito",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

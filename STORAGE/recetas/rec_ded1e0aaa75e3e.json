@@ -1,0 +1,93 @@
+{
+  "id": "rec_ded1e0aaa75e3e",
+  "slug": "garbanzos-con-verduras-y-morcilla",
+  "titulo": "Garbanzos Con Verduras Y Morcilla",
+  "resumen": "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y, cuando empiece a hervir, agrega los garbanzos, la cebolla (pelada y entera) y el comino. Sazona, cierra la olla y cuece todo durante 20 minutos. Pon la morcilla en un",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "morcilla de cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "repollo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "comino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y, cuando empiece a hervir, agrega los garbanzos, la cebolla (pelada y entera) y el comino. Sazona, cierra la olla y cuece todo durante 20 minutos. Pon la morcilla en una cazuela, cúbrela con agua, añade unas ramitas de perejil y cuécela durante 25-30 minutos a fuego suave. Resérvala caliente. Tuesta los piñones en una sartén sin aceite con cuidado de que no se quemen. Retíralos a un plato y resérvalos. Pela y lamina los ajos y ponlos a dorar en una tartera con un chorrito de aceite. Lava el repollo, córtalo en juliana y agrégalo. Pela y ralla las zanahorias e incorpóralas. Sazona y rehoga las verduras durante unos 10 minutos. Agrega los garbanzos escurridos y un poco de perejil picado. Saltéalos brevemente. Sirve en los platos. Corta la morcilla en 8 trozos y pon 2 trozos en cada plato. Salpica los platos con los piñones y adórnalos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Garbanzos Con Verduras Y Morcilla",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y, cuando empiece a hervir, agrega los garbanzos, la cebolla (pelada y entera) y el comino. Sazona, cierra la olla y cuece todo durante 20 minutos. Pon la morcilla en un",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

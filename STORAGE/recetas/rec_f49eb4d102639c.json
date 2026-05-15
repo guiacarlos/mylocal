@@ -1,0 +1,117 @@
+{
+  "id": "rec_f49eb4d102639c",
+  "slug": "pizza-picante-de-pavo-y-pina",
+  "titulo": "Pizza Picante De Pavo Y Piña",
+  "resumen": "Pon la salsa de tomate en una cazuelita. Agrega la guindilla y caliéntala durante 5 minutos para que la salsa quede picante. Deja que se enfríe.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "pechuga de pavo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "piña"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso mozzarella"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "harina + 50 g para estirar"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon la salsa de tomate en una cazuelita. Agrega la guindilla y caliéntala durante 5 minutos para que la salsa quede picante. Deja que se enfríe.",
+    "Para hacer la masa, mezcla en un bol 300 gramos de harina, el agua, el aceite y una pizca de sal. Amasa bien hasta obtener una masa homogénea y compacta. Espolvorea la masa con un poco de harina y estírala hasta que quede bien fina. Cubre con ella la bandeja del horno forrada con papel de hornear.",
+    "Pela la piña, córtala en trozos de bocado y sazónalos. Pon un chorrito de aceite en una sartén y saltéalos.",
+    "Pon una sartén a calentar, agrega los piñones y tuéstalos un poco.",
+    "Cubre la masa con la salsa de tomate picante. Corta el pavo en tacos y colócalos encima. Agrega la piña salteada y la mozzarella cortada en dados. Hornéala a 200 ºC durante 15 minutos. Sácala y espolvoréala con el orégano y los piñones tostados. Adorna con una ramita de perejil y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pizza Picante De Pavo Y Piña",
+    "meta_description": "Pon la salsa de tomate en una cazuelita. Agrega la guindilla y caliéntala durante 5 minutos para que la salsa quede picante. Deja que se enfríe.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

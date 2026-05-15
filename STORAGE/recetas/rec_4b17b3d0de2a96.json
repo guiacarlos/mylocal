@@ -1,0 +1,112 @@
+{
+  "id": "rec_4b17b3d0de2a96",
+  "slug": "muslo-de-pavo-guisado",
+  "titulo": "Muslo De Pavo Guisado",
+  "resumen": "Quítale la piel al pavo, deshuésalo y trocéalo. Salpimiéntalo, pásalo por harina y dóralo en una sartén grande con un chorrito de aceite. Retira y pasa los trozos a la olla rápida.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 7,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "muslo de pavo (2.700 g con hueso)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vodka"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza antigua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Quítale la piel al pavo, deshuésalo y trocéalo. Salpimiéntalo, pásalo por harina y dóralo en una sartén grande con un chorrito de aceite. Retira y pasa los trozos a la olla rápida.",
+    "Pela los dientes de ajo, córtalos por la mitad y ponlos a rehogar en la misma sartén donde has dorado la carne. Limpia los puerros y pela las cebollas y las zanahorias. Corta todo en dados grandes, agrégalos a la sartén, sazónalos y dóralos.",
+    "Añade el vodka y flambéalo. Agrega el txakoli, remueve y añade todo a la olla rápida. Cubre con agua, pon a punto de sal y coloca la tapa. Cocínalo durante 15 minutos.",
+    "Pasado este tiempo, abre la olla y retira la carne de pavo a una tartera. Pasa la salsa por el pasapurés y añádela a la tartera. Agrega la mostaza y mezcla bien.",
+    "Pela las patatas, córtalas en dados y fríelas en una sartén con abundante aceite. Retíralas, escúrrelas sobre un plato cubierto con papel absorbente y sazónalas. Incorpóralas a la tartera y espolvorea con perejil picado. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Muslo De Pavo Guisado",
+    "meta_description": "Quítale la piel al pavo, deshuésalo y trocéalo. Salpimiéntalo, pásalo por harina y dóralo en una sartén grande con un chorrito de aceite. Retira y pasa los trozos a la olla rápida.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

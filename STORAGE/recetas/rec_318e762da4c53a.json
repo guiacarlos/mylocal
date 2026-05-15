@@ -1,0 +1,93 @@
+{
+  "id": "rec_318e762da4c53a",
+  "slug": "crema-de-remolacha-con-rulos-de-jamon",
+  "titulo": "Crema De Remolacha Con Rulos De Jamón",
+  "resumen": "Pica los puerros y ponlos a rehogar en una cazuela grande con un chorrito de aceite. Trocea la manzana y añádela. Pela las remolachas, trocéalas y agrégalas. Cubre con agua, sazona y cocina a fuego moderado durante 20 minutos. Tritura y aña",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "remolachas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana granny smith"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "pasta brick"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "l",
+      "nombre": "onchas de jamón serrano"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "pipas de girasol"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pica los puerros y ponlos a rehogar en una cazuela grande con un chorrito de aceite. Trocea la manzana y añádela. Pela las remolachas, trocéalas y agrégalas. Cubre con agua, sazona y cocina a fuego moderado durante 20 minutos. Tritura y añade la leche evaporada. Mezcla bien y mantén caliente. Extiende las láminas de pasta brick, cúbrelas con las lonchas de jamón y enróllalas. Pincela el final de las láminas con un poco de agua, termina de enrollar, apóyalas sobre la tabla y deja que reposen un poco para que se peguen. Recorta los extremos que no tienen jamón y corta los rulos en cilindros de 2-3 centímetros. Colócalos en una placa de horno forrada con papel de hornear y hornéalos a 180 ºC durante 15 minutos. Pela las zanahorias y saca láminas finas con un pelador. Saltéalas en una sartén con un chorrito de aceite y sazónalas. Tuesta las pipas de girasol en otra sartén con unas gotas de aceite y sálalas. Sirve la crema y acompáñala con el salteado de zanahoria, las pipas y los rulos. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Remolacha Con Rulos De Jamón",
+    "meta_description": "Pica los puerros y ponlos a rehogar en una cazuela grande con un chorrito de aceite. Trocea la manzana y añádela. Pela las remolachas, trocéalas y agrégalas. Cubre con agua, sazona y cocina a fuego moderado durante 20 minutos. Tritura y aña",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

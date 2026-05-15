@@ -1,0 +1,107 @@
+{
+  "id": "rec_d650c5d18a54e6",
+  "slug": "guiso-de-cordero",
+  "titulo": "Guiso De Cordero",
+  "resumen": "Pon las patatas en una cazuela. Cúbrelas con agua y cuécelas durante 30 minutos. Deja que se templen, pélalas y pásalas por el pasapurés. Coloca el puré en un bol y aderézalo con sal y un chorrito de aceite. Resérvalo.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "cordero (troceado)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "guisantes"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "habitas"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon las patatas en una cazuela. Cúbrelas con agua y cuécelas durante 30 minutos. Deja que se templen, pélalas y pásalas por el pasapurés. Coloca el puré en un bol y aderézalo con sal y un chorrito de aceite. Resérvalo.",
+    "Corta cada zanahoria en 5 trozos y tornéalas. Ponlas a cocer en una cazuela con agua. Aproximadamente en 15 minutos estarán a punto. Resérvalas.",
+    "Salpimienta el cordero y dóralo en la olla rápida con un chorrito de aceite. Retíralo a un plato.",
+    "Pela los dientes de ajo y las cebollas y pícalos. Pica los pimientos verdes. Rehoga las verduras en la olla donde has rehogado la carne. Sazona. Vierte el txakoli y dale un hervor. Introduce el cordero y cúbrelo con agua. Coloca la tapa y cocínalo durante 15 minutos.",
+    "Retira la carne a un plato y tritura la salsa con la batidora eléctrica. Pasa la salsa a una tartera e introduce el cordero, las zanahorias torneadas, los guisantes y las habitas. Mezcla y cuece todo conjuntamente durante 8-10 minutos. Sirve el guiso de cordero y acompáñalo con el puré de patatas decorado con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Guiso De Cordero",
+    "meta_description": "Pon las patatas en una cazuela. Cúbrelas con agua y cuécelas durante 30 minutos. Deja que se templen, pélalas y pásalas por el pasapurés. Coloca el puré en un bol y aderézalo con sal y un chorrito de aceite. Resérvalo.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_96f91b13e15bbe",
+  "slug": "tortitas-americanas",
+  "titulo": "Tortitas Americanas",
+  "resumen": "Coloca el huevo, la leche, la harina y la levadura en un vaso batidor. Mezcla con la varilla hasta conseguir una masa homogénea. Deja que repose durante 2-3 minutos. Calienta un poco de mantequilla en una sartén pequeña, vierte una porción ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "taza",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "taza",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharaditas",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "nata para montar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca el huevo, la leche, la harina y la levadura en un vaso batidor. Mezcla con la varilla hasta conseguir una masa homogénea. Deja que repose durante 2-3 minutos. Calienta un poco de mantequilla en una sartén pequeña, vierte una porción de masa y fríela por los dos lados a fuego no muy fuerte. Repite el proceso hasta terminar toda la masa. Lava y corta las 4 fresas por la mitad y, después, cada mitad en láminas. Monta la nata y mézclala con la leche condensada. Pon una porción de la mezcla de nata y leche condensada en el centro de cada tortita y alrededor, formando una flor, coloca las láminas de fresa. Decora con el resto de las fresas picaditas, unas hojas de menta y unos hilos de leche condensada."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tortitas Americanas",
+    "meta_description": "Coloca el huevo, la leche, la harina y la levadura en un vaso batidor. Mezcla con la varilla hasta conseguir una masa homogénea. Deja que repose durante 2-3 minutos. Calienta un poco de mantequilla en una sartén pequeña, vierte una porción ",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

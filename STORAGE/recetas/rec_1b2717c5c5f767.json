@@ -1,0 +1,98 @@
+{
+  "id": "rec_1b2717c5c5f767",
+  "slug": "empanada-de-bacalao",
+  "titulo": "Empanada De Bacalao",
+  "resumen": "Pela los ajos y las cebollas y córtalos en daditos. Corta también los pimientos en daditos. Pon todo a pochar en una sartén grande con un chorro de aceite. Sazona y pocha bien. Cuando las verduras estén bien pochadas, incorpora el bacalao y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "masas para empanada"
+    },
+    {
+      "cantidad": "650",
+      "unidad": "g",
+      "nombre": "bacalao desmigado desalado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos y las cebollas y córtalos en daditos. Corta también los pimientos en daditos. Pon todo a pochar en una sartén grande con un chorro de aceite. Sazona y pocha bien. Cuando las verduras estén bien pochadas, incorpora el bacalao y rehógalo un poco. Agrega una cucharadita de pimentón. Vierte el vino y dale un hervor. Añade la salsa de tomate, mezcla y cocina todo durante 4-5 minutos. Escurre bien y espera a que se temple. Desenrolla una masa de empanada y extiéndela sobre la bandeja del horno (cubierta con papel de hornear). Distribuye el relleno encima (dejando los bordes libres) y cúbrelo con la otra masa para empanada. Cierra la empanada doblando los bordes (repulgue). Bate el huevo y pinta con él la parte superior de la empanada. Realiza tres cortes con una tijera en la parte central (chimeneas) de la empanada y hornéala a 200 ºC durante unos 20 minutos. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Empanada De Bacalao",
+    "meta_description": "Pela los ajos y las cebollas y córtalos en daditos. Corta también los pimientos en daditos. Pon todo a pochar en una sartén grande con un chorro de aceite. Sazona y pocha bien. Cuando las verduras estén bien pochadas, incorpora el bacalao y",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

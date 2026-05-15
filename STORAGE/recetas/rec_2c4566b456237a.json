@@ -1,0 +1,113 @@
+{
+  "id": "rec_2c4566b456237a",
+  "slug": "borraja-con-arroz-y-setas",
+  "titulo": "Borraja Con Arroz Y Setas",
+  "resumen": "Pela la cebolleta y pícala finamente. Pela los ajos y córtalos en cilindros. Pon todo a rehogar en una cazuela con un chorrito de aceite. Sazona. Limpia y trocea las setas y añádelas. Pocha todo un poco e incorpora el arroz, el vino, 1 litr",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "borraja"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "setas de cultivo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la pasta orly:"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "cava"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela la cebolleta y pícala finamente. Pela los ajos y córtalos en cilindros. Pon todo a rehogar en una cazuela con un chorrito de aceite. Sazona. Limpia y trocea las setas y añádelas. Pocha todo un poco e incorpora el arroz, el vino, 1 litro de agua y la pastilla de caldo. Cocínalo durante 10 minutos. Retira las hojas de las borrajas y resérvalas. Limpia los tallos, trocéalos y añádelos a la cazuela. Cocina el conjunto durante 8-10 minutos más. Para la pasta orly, coloca la harina y la levadura en un bol. Añade los huevos y el cava y sazona. Bate todo con la batidora eléctrica y deja fermentar durante 15-20 minutos. Pasa las hojas de la borraja por la pasta orly y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente. Sirve el arroz y acompáñalo con las hojas de borraja."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Borraja Con Arroz Y Setas",
+    "meta_description": "Pela la cebolleta y pícala finamente. Pela los ajos y córtalos en cilindros. Pon todo a rehogar en una cazuela con un chorrito de aceite. Sazona. Limpia y trocea las setas y añádelas. Pocha todo un poco e incorpora el arroz, el vino, 1 litr",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

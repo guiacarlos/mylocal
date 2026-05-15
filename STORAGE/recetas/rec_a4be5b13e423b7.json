@@ -1,0 +1,93 @@
+{
+  "id": "rec_a4be5b13e423b7",
+  "slug": "lentejas-con-chorizo-de-calabaza-y-polenta",
+  "titulo": "Lentejas Con Chorizo De Calabaza Y Polenta",
+  "resumen": "Pela 2 dientes de ajo y la cebolleta, córtalos en daditos y ponlos a rehogar en la olla rápida con un chorrito de aceite. Sazona. Agrega la salsa de tomate y las lentejas. Cúbrelas con abundante agua, pon a punto de sal y cierra la olla. Cu",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "lentejas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "polenta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela 2 dientes de ajo y la cebolleta, córtalos en daditos y ponlos a rehogar en la olla rápida con un chorrito de aceite. Sazona. Agrega la salsa de tomate y las lentejas. Cúbrelas con abundante agua, pon a punto de sal y cierra la olla. Cuece durante 10-12 minutos. Pela la calabaza, córtala en dados y colócalos en el vaso batidor. Pela y pica el otro diente de ajo y añádelo. Vierte 100 mililitros de agua, sazona y tritura con la batidora eléctrica. Añade el orégano y el pimentón. Mezcla bien y pon todo a calentar en una sartén. Cuando hierva, añade la polenta y cocínala sin dejar de remover durante 2-3 minutos. Extiende la mezcla en una fuente y dale forma de chorizo. Envuélvelo en film transparente, redondéalo e introdúcelo en el frigorífico como mínimo durante una hora. Córtalo en rodajas y retira el film. Calienta una sartén con un poco de aceite, agrega las rodajas y fríelas. Sirve las lentejas y acompáñalas con las rodajas fritas. Espolvorea los platos con un poco de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lentejas Con Chorizo De Calabaza Y Polenta",
+    "meta_description": "Pela 2 dientes de ajo y la cebolleta, córtalos en daditos y ponlos a rehogar en la olla rápida con un chorrito de aceite. Sazona. Agrega la salsa de tomate y las lentejas. Cúbrelas con abundante agua, pon a punto de sal y cierra la olla. Cu",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

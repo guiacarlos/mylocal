@@ -1,0 +1,78 @@
+{
+  "id": "rec_f65b7e565b73ac",
+  "slug": "flan-de-pera",
+  "titulo": "Flan De Pera",
+  "resumen": "Pon 75 gramos de azúcar a calentar en una sartén. Cuando se funda, vierte el caramelo en 4 moldes aptos para el horno.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pera"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon 75 gramos de azúcar a calentar en una sartén. Cuando se funda, vierte el caramelo en 4 moldes aptos para el horno.",
+    "Pon la leche a calentar con la rama de canela para aromatizarla. Deja enfriar.",
+    "Bate los huevos en un bol, añade el resto del azúcar y mezcla bien. Vete añadiendo la leche aromatizada poco a poco sin dejar de remover con una varilla.",
+    "Pela la pera y córtala en daditos pequeños. Pon la mantequilla a fundir en una sartén, añade los daditos de pera y cocínalos.",
+    "Reparte la pera en los moldes y añade la mezcla de leche aromatizada y huevos. Cocina al baño maría en el horno a 170 ºC durante 20 minutos.",
+    "Deja enfriar y desmolda. Sirve y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Flan De Pera",
+    "meta_description": "Pon 75 gramos de azúcar a calentar en una sartén. Cuando se funda, vierte el caramelo en 4 moldes aptos para el horno.",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

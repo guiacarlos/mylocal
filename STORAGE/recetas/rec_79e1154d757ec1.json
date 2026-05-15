@@ -1,0 +1,98 @@
+{
+  "id": "rec_79e1154d757ec1",
+  "slug": "pato-asado-con-uvas",
+  "titulo": "Pato Asado Con Uvas",
+  "resumen": "Separa unos 100 gramos de uvas, lávalas y colócalas en un vaso batidor. Tritúralas con la batidora eléctrica hasta obtener un zumo. Cuela y pon el zumo en un bol. Agrega la miel y la salsa de soja y mezcla bien. Incorpora el tomate frito y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "racimo de uva blanca (300 g)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "echuga"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharada",
+      "nombre": "tomate frito"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Separa unos 100 gramos de uvas, lávalas y colócalas en un vaso batidor. Tritúralas con la batidora eléctrica hasta obtener un zumo. Cuela y pon el zumo en un bol. Agrega la miel y la salsa de soja y mezcla bien. Incorpora el tomate frito y reserva la mezcla.",
+    "Corta los patos por la mitad (de manera que cada trozo tenga muslo y pechuga) y salpimiéntalos. Pinta los trozos con la mezcla reservada y colócalos en una bandeja apta para el horno. Vierte un poco más de mezcla por encima y hornéalos a 220 ºC durante 15 minutos. (Abre el horno cada 5 minutos y pinta la carne con la salsa.)",
+    "Retira el pato y corta cada trozo por la mitad. Reserva la carne y el jugo de la bandeja.",
+    "Lava el resto de las uvas y saltéalas en una sartén con un chorrito de aceite y un poco del jugo de la bandeja.",
+    "Limpia las hojas de lechuga y alíñalas con sal, aceite y vinagre.",
+    "Sirve, en cada plato, medio pato, unas uvas salteadas y un poco de ensalada. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pato Asado Con Uvas",
+    "meta_description": "Separa unos 100 gramos de uvas, lávalas y colócalas en un vaso batidor. Tritúralas con la batidora eléctrica hasta obtener un zumo. Cuela y pon el zumo en un bol. Agrega la miel y la salsa de soja y mezcla bien. Incorpora el tomate frito y ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

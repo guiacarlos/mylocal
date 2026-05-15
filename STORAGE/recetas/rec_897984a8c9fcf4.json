@@ -1,0 +1,106 @@
+{
+  "id": "rec_897984a8c9fcf4",
+  "slug": "lasana-de-espinacas-pavo-y-calabacin",
+  "titulo": "Lasaña De Espinacas, Pavo Y Calabacín",
+  "resumen": "Pela y pica los ajos y la cebolleta. Ponlos a pochar en una sartén con un chorrito de aceite. Corta los calabacines en dados y añádelos. Pica las espinacas y agrégalas. Sazona e incorpora el pavo cortado en daditos. Reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "l",
+      "nombre": "áminas de lasaña"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "pechuga de pavo cocida"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "calabacines"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "750",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica los ajos y la cebolleta. Ponlos a pochar en una sartén con un chorrito de aceite. Corta los calabacines en dados y añádelos. Pica las espinacas y agrégalas. Sazona e incorpora el pavo cortado en daditos. Reserva.",
+    "Pon abundante agua a calentar en una tartera. Sazona y, cuando empiece a hervir, añade las láminas de lasaña. Cuécelas el tiempo que indique el paquete. Escúrrelas sobre un paño de cocina limpio y seco.",
+    "Pon una capa de pasta en el fondo de una fuente apta para el horno. Cúbrela con una capa de verduras con pavo, otra capa de pasta, otra de verduras con pavo y, finalmente, otra de lasaña.",
+    "Pon un poco de aceite en una cazuela, agrega la harina y rehógala un poco. Vierte la leche poco a poco y cocina durante 6-8 minutos sin dejar de remover. Salpimienta, añade perejil picado y mezcla. Cubre la lasaña con la bechamel, ralla encima la zanahoria y gratínala en el horno durante 5-6 minutos. Decora con una ramita de perejil y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lasaña De Espinacas, Pavo Y Calabacín",
+    "meta_description": "Pela y pica los ajos y la cebolleta. Ponlos a pochar en una sartén con un chorrito de aceite. Corta los calabacines en dados y añádelos. Pica las espinacas y agrégalas. Sazona e incorpora el pavo cortado en daditos. Reserva.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,101 @@
+{
+  "id": "rec_2cb49a7b37e247",
+  "slug": "tortillas-de-pavo-con-pisto",
+  "titulo": "Tortillas De Pavo Con Pisto",
+  "resumen": "Con ayuda de un cuchillo de sierra, corta 4 rebanadas de pan. Tuéstalas en el horno. Corta en daditos pequeños la cebolleta, el pimiento y el calabacín. Ponlos a freír en una sartén con aceite.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "jamón curado de pavo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "hogaza",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "-2 patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Con ayuda de un cuchillo de sierra, corta 4 rebanadas de pan. Tuéstalas en el horno. Corta en daditos pequeños la cebolleta, el pimiento y el calabacín. Ponlos a freír en una sartén con aceite.",
+    "Pela las patatas, córtalas en daditos y fríelas en otra sartén con aceite. Sazona y añádelas a la sartén de las verduras. Mezcla bien.",
+    "Pela los dientes de ajo, pícalos finamente y rehógalos en otra sartén con un chorrito de aceite. Pela los tomates, pícalos y añádelos. Sazona y cocina el tomate durante unos 10 minutos.",
+    "Bate en un bol 2 huevos con una pizca de sal. Corta el pavo en daditos y añade una cuarta parte. Cuaja la tortilla y repite el proceso con el resto de los huevos. Sirve las rebanadas de pan, úntalas con la salsa de tomate y coloca encima las tortillas. Acompaña las tostas con el pisto y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tortillas De Pavo Con Pisto",
+    "meta_description": "Con ayuda de un cuchillo de sierra, corta 4 rebanadas de pan. Tuéstalas en el horno. Corta en daditos pequeños la cebolleta, el pimiento y el calabacín. Ponlos a freír en una sartén con aceite.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

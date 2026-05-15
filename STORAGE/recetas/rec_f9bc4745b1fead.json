@@ -1,0 +1,93 @@
+{
+  "id": "rec_f9bc4745b1fead",
+  "slug": "ternera-rellena-con-lombarda-manzana-y-beicon",
+  "titulo": "Ternera Rellena Con Lombarda, Manzana Y Beicon",
+  "resumen": "Pon un poco de aceite en un recipiente apto para el horno. Pela la cebolla, córtala en dados grandes y añádelos. Vierte el vino. Unta el atadito con la mostaza antigua y colócalo encima. Ásalo a 180 ºC durante 40 minutos. Baja la temperatur",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "atadito de ternera"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "lombarda"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "manzanas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de beicon"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza antigua"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon un poco de aceite en un recipiente apto para el horno. Pela la cebolla, córtala en dados grandes y añádelos. Vierte el vino. Unta el atadito con la mostaza antigua y colócalo encima. Ásalo a 180 ºC durante 40 minutos. Baja la temperatura del horno a 160 ºC y cocínalo durante 20-25 minutos más. Retira la carne y deja que se temple. Tritura la cebolla con los jugos de la bandeja y espolvorea con un poco de perejil picado. Corta la carne en rebanadas, colócalas en una fuente y salséalas. Mantenlas calientes. Corta las lonchas de beicon en dados y rehógalos brevemente en una tartera con un chorrito de aceite. Corta la lombarda en juliana fina y agrégala. Pela las manzanas, córtalas en dados y añádelos. Salpimienta y cocina todo durante 10-12 minutos. Sirve la carne con la salsa y acompáñala con la guarnición. Decora con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ternera Rellena Con Lombarda, Manzana Y Beicon",
+    "meta_description": "Pon un poco de aceite en un recipiente apto para el horno. Pela la cebolla, córtala en dados grandes y añádelos. Vierte el vino. Unta el atadito con la mostaza antigua y colócalo encima. Ásalo a 180 ºC durante 40 minutos. Baja la temperatur",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

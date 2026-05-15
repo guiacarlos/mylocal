@@ -1,0 +1,96 @@
+{
+  "id": "rec_e8733e8093841a",
+  "slug": "arroz-con-calamares-y-pure-de-morrones",
+  "titulo": "Arroz Con Calamares Y Puré De Morrones",
+  "resumen": "Coloca los pimientos en una bandeja apta para horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 190 ºC durante 40 minutos. Retírales los tallos y las semillas y pélalos. Colócalos en el vaso batidor, añade un chorrito de aceite,",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz bomba"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "calamares (600 g) con sus tintas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Coloca los pimientos en una bandeja apta para horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 190 ºC durante 40 minutos. Retírales los tallos y las semillas y pélalos. Colócalos en el vaso batidor, añade un chorrito de aceite, 1 diente de ajo pelado y picado y una pizca de sal. Tritura con la batidora eléctrica y reserva el puré. Limpia los calamares y resérvalos. Pela y pica las cebolletas y 2 dientes de ajo. Pica también el pimiento verde y pon todo a rehogar en la olla rápida con un chorrito de aceite. Sazona. Pela los tomates, pícalos y agrégalos. Rehoga el conjunto durante 6-8 minutos. Añade los tentáculos de los calamares picaditos. Pon a punto de sal, vierte el txakoli y dale un hervor.",
+    "Coloca las tintas (en el caso de que no tengan, puedes utilizar tinta de calamar en sobre) en el vaso batidor, añade 2 vasos de agua, tritura todo con la batidora eléctrica y agrega a la olla. Añade también los calamares. Coloca la tapa y cocínalos durante 8 minutos. Retira los calamares, pasa el resto a la jarra batidora (vaso americano) y tritura bien. Si la salsa queda muy espesa, puedes aligerarla agregando un poco más de agua.",
+    "Rehoga el arroz en una tartera con un chorrito de aceite. Agrega la salsa y cocina el arroz durante 20 minutos.",
+    "Corta los calamares en cilindros de bocado y agrégalos a la tartera. Cocina todo junto durante 3-5 minutos más. Sirve el arroz y acompáñalo con el puré de pimientos y ajo. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Calamares Y Puré De Morrones",
+    "meta_description": "Coloca los pimientos en una bandeja apta para horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 190 ºC durante 40 minutos. Retírales los tallos y las semillas y pélalos. Colócalos en el vaso batidor, añade un chorrito de aceite,",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

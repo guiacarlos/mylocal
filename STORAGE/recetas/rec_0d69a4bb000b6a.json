@@ -1,0 +1,68 @@
+{
+  "id": "rec_0d69a4bb000b6a",
+  "slug": "copas-de-melocoton-y-queso",
+  "titulo": "Copas De Melocotón Y Queso",
+  "resumen": "Pela los melocotones. Trocea y tritura un melocotón y medio en la jarra batidora. Pica el otro medio melocotón y resérvalo. Mezcla el queso fresco batido y el mascarpone en un bol. Añade el puré de melocotón y sigue mezclando. Machaca las g",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "melocotones"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso fresco batido"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso mascarpone"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "g",
+      "nombre": "alletas"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "pistachos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "grosellas y hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pela los melocotones. Trocea y tritura un melocotón y medio en la jarra batidora. Pica el otro medio melocotón y resérvalo. Mezcla el queso fresco batido y el mascarpone en un bol. Añade el puré de melocotón y sigue mezclando. Machaca las galletas y los pistachos en el mortero. Prepara 4 recipientes y monta de la siguiente manera: coloca en el fondo de cada recipiente la galleta y el pistacho machados; encima, un poco de la crema de queso y melocotón, y finalmente, unos trocitos de melocotón picado. Repite el proceso. Decora con unas hojas de menta y unas grosellas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Copas De Melocotón Y Queso",
+    "meta_description": "Pela los melocotones. Trocea y tritura un melocotón y medio en la jarra batidora. Pica el otro medio melocotón y resérvalo. Mezcla el queso fresco batido y el mascarpone en un bol. Añade el puré de melocotón y sigue mezclando. Machaca las g",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rec_4f2c44d3dba01f",
+  "slug": "ceviche",
+  "titulo": "Ceviche",
+  "resumen": "Corta el rape, el verdel, el salmón y las gambas en dados pequeños y colócalos en un bol. Salpimiéntalos. Corta las guindillas por la mitad, retírales las pepitas y añádelas al bol. Corta en juliana fina la cebolleta y los ajos en láminas e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "rape limpio sin piel"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "verdel limpio sin piel"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "salmón fresco limpio sin piel"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "gambas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "uindillas picantes"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de 2 limones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de 1 lima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de lechuga"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta el rape, el verdel, el salmón y las gambas en dados pequeños y colócalos en un bol. Salpimiéntalos. Corta las guindillas por la mitad, retírales las pepitas y añádelas al bol. Corta en juliana fina la cebolleta y los ajos en láminas e incorpóralos al pescado. Riega con el zumo de limón y de lima y deja macerar durante una hora. Escurre el ceviche. Lava las hojas de lechuga, escúrrelas y sécalas. Para servir, cubre el fondo de una fuente con las hojas de lechuga, pon encima el ceviche y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ceviche",
+    "meta_description": "Corta el rape, el verdel, el salmón y las gambas en dados pequeños y colócalos en un bol. Salpimiéntalos. Corta las guindillas por la mitad, retírales las pepitas y añádelas al bol. Corta en juliana fina la cebolleta y los ajos en láminas e",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

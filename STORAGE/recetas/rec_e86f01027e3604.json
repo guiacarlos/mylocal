@@ -1,0 +1,88 @@
+{
+  "id": "rec_e86f01027e3604",
+  "slug": "perca-con-crema-de-mejillones",
+  "titulo": "Perca Con Crema De Mejillones",
+  "resumen": "Cuece las patatas durante 20 minutos en una cazuela con abundante agua y una pizca de sal. Resérvalas. Pon el vino a calentar en una tartera. Agrega los mejillones (limpios y sin barbas). Tapa y, cuando se abran, retira las conchas y corta ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "filetes medianos de perca"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "mejillones"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "patatas pequeñas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Cuece las patatas durante 20 minutos en una cazuela con abundante agua y una pizca de sal. Resérvalas. Pon el vino a calentar en una tartera. Agrega los mejillones (limpios y sin barbas). Tapa y, cuando se abran, retira las conchas y corta la carne en dados. Cuela el caldo y resérvalo. Limpia los puerros (retirándoles la parte inferior, la superior y la primera capa), córtalos en dados y ponlos a pochar en una sartén con aceite. Agrega los mejillones, el caldo y la nata. Salpimienta la mezcla y cuécela durante 4 minutos. Tritura y pasa los ingredientes por el pasapurés. Sazona los filetes de perca y cuécelos al vapor durante 3 minutos. Sirve la crema de mejillones en el fondo de los platos y coloca encima los filetes de perca y las patatas cocidas cortadas por la mitad. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Perca Con Crema De Mejillones",
+    "meta_description": "Cuece las patatas durante 20 minutos en una cazuela con abundante agua y una pizca de sal. Resérvalas. Pon el vino a calentar en una tartera. Agrega los mejillones (limpios y sin barbas). Tapa y, cuando se abran, retira las conchas y corta ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,88 @@
+{
+  "id": "rec_038700ec13d9b1",
+  "slug": "albondigas-de-espinacas-queso-y-pinones",
+  "titulo": "Albóndigas De Espinacas, Queso Y Piñones",
+  "resumen": "Pela y pica los dientes de ajo y dóralos en una sartén con aceite. Pela los tomates, trocéalos y añádelos. Sazona y cocínalos a fuego suave hasta que se deshagan. Reserva la salsa. Lava las espinacas para eliminar cualquier resto de tierra ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "kg",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso Idiazábal"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "tomates maduros"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y 2 huevos (para rebozar)"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "copos de patata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela y pica los dientes de ajo y dóralos en una sartén con aceite. Pela los tomates, trocéalos y añádelos. Sazona y cocínalos a fuego suave hasta que se deshagan. Reserva la salsa. Lava las espinacas para eliminar cualquier resto de tierra que puedan tener. Cuécelas con un poco de sal durante 5 minutos y escúrrelas bien. Pica las espinacas finamente y ponlas en un bol. Ralla encima el queso y agrega los piñones y los copos de patata. Mezcla bien, coge pequeñas porciones de masa y redondéalas. Pasa las albóndigas por harina y huevo batido (con una pizca de sal) y fríelas en una sartén con abundante aceite. Escúrrelas sobre un plato cubierto con papel absorbente. Sirve un poco de salsa en el fondo de los platos y pon encima las albóndigas. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Albóndigas De Espinacas, Queso Y Piñones",
+    "meta_description": "Pela y pica los dientes de ajo y dóralos en una sartén con aceite. Pela los tomates, trocéalos y añádelos. Sazona y cocínalos a fuego suave hasta que se deshagan. Reserva la salsa. Lava las espinacas para eliminar cualquier resto de tierra ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_379bac8327f610",
+  "slug": "ensalada-de-lechuga-garbanzos-cocidos-y-remolacha",
+  "titulo": "Ensalada De Lechuga, Garbanzos Cocidos Y Remolacha",
+  "resumen": "Pon a remojar los garbanzos la víspera (con ocho horas de remojo es suficiente). Escurre los garbanzos, introdúcelos en la olla a presión y cúbrelos con abundante agua fría. Sazona. Cierra la olla y cuece los garbanzos durante 30 minutos. U",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "echuga"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "remolacha cocida"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el aliño de mostaza:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharaditas",
+      "nombre": "mostaza de Dijon"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre de vino"
+    }
+  ],
+  "pasos": [
+    "Pon a remojar los garbanzos la víspera (con ocho horas de remojo es suficiente). Escurre los garbanzos, introdúcelos en la olla a presión y cúbrelos con abundante agua fría. Sazona. Cierra la olla y cuece los garbanzos durante 30 minutos. Una vez transcurrido este tiempo, deja que la olla se enfríe. Escurre los garbanzos y resérvalos. (Guarda el caldo, que podrás utilizar otro día como base para una buena sopa.) Lava las hojas de lechuga, sécalas y córtalas en juliana fina. Colócalas en una fuente. Corta la remolacha en pequeños dados y añádelos a la lechuga. Esparce los garbanzos por encima. Mezcla en un bol el aceite, la mostaza y unas gotas de vinagre. Con ayuda de una varilla o un tenedor, bate bien todos los ingredientes para que quede una salsa homogénea. Aliña la ensalada, sazónala y salpícala con las semillas de sésamo."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Lechuga, Garbanzos Cocidos Y Remolacha",
+    "meta_description": "Pon a remojar los garbanzos la víspera (con ocho horas de remojo es suficiente). Escurre los garbanzos, introdúcelos en la olla a presión y cúbrelos con abundante agua fría. Sazona. Cierra la olla y cuece los garbanzos durante 30 minutos. U",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

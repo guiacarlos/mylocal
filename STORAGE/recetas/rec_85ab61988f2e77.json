@@ -1,0 +1,91 @@
+{
+  "id": "rec_85ab61988f2e77",
+  "slug": "lentejas-caldosas-con-acelgas-y-churros-de-txistorra",
+  "titulo": "Lentejas Caldosas Con Acelgas Y Churros De Txistorra",
+  "resumen": "Lava los puerros, pícalos y póchalos con un chorrito de aceite en la olla rápida. Lava las acelgas, retira los hilos de las pencas, pícalas y añádelas a la olla. Reserva las hojas. Pela la rodaja de calabaza, córtala en dados y añádelos. Sa",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "lentejas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "acelga"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "txistorra"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava los puerros, pícalos y póchalos con un chorrito de aceite en la olla rápida. Lava las acelgas, retira los hilos de las pencas, pícalas y añádelas a la olla. Reserva las hojas. Pela la rodaja de calabaza, córtala en dados y añádelos. Sazona y rehoga todo un poco. Agrega las lentejas y cúbrelas con bastante agua. Añade también la hoja de laurel. Sazona, coloca la tapa y cuece todo durante 15 minutos. Abre la olla, pica las hojas de acelga en juliana y agrégalas. Cuécelas durante 2-3 minutos.",
+    "Retira la piel a la txistorra, córtala en trocitos pequeños y saltéalos en una sartén con un chorrito de aceite. Con ayuda de un colador, escúrrela bien para que suelte la grasa. Pícala bien.",
+    "Tamiza la harina. Calienta en una cazuelita el agua (250 ml) con una pizca de sal. Cuando el agua empiece a burbujear, agrega la harina poco a poco. Mezcla bien con una varilla hasta que la masa se despegue de la cazuela. Agrega la txistorra y mezcla bien. Deja templar e introduce la mezcla en una manga.",
+    "Pon a calentar abundante aceite en una sartén honda. Cuando esté bien caliente, añade porciones de la mezcla directamente a la sartén formando churros (de 3 en 3). Fríelos y escúrrelos sobre un plato cubierto con papel absorbente. Sirve las lentejas y acompáñalas con los churros de txistorra."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lentejas Caldosas Con Acelgas Y Churros De Txistorra",
+    "meta_description": "Lava los puerros, pícalos y póchalos con un chorrito de aceite en la olla rápida. Lava las acelgas, retira los hilos de las pencas, pícalas y añádelas a la olla. Reserva las hojas. Pela la rodaja de calabaza, córtala en dados y añádelos. Sa",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,93 @@
+{
+  "id": "rec_ec059d28f96127",
+  "slug": "gelatina-de-yogur-con-frutas",
+  "titulo": "Gelatina De Yogur Con Frutas",
+  "resumen": "Pon la gelatina en un bol con agua fría y deja que se hidrate. Pon a calentar la nata en una cazuelita, escurre las hojas de gelatina e introdúcelas en la nata hirviendo. Mezcla bien hasta que se disuelvan. Pon los yogures en un bol y agreg",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yogures naturales"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "uvas pasas (sin pepitas)"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "arándanos frescos"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "g",
+      "nombre": "alletas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon la gelatina en un bol con agua fría y deja que se hidrate. Pon a calentar la nata en una cazuelita, escurre las hojas de gelatina e introdúcelas en la nata hirviendo. Mezcla bien hasta que se disuelvan. Pon los yogures en un bol y agrega la nata con la gelatina. Reparte la mezcla en 4 recipientes y deja que se enfríen y solidifiquen en el frigorífico. Pon a calentar una sartén con un chorrito de aceite. Pela y pica el plátano en trocitos y agrégalo a la sartén. Añade las pasas, los arándanos, el azúcar y una pizca de sal. Saltea todo conjuntamente, retíralo a un bol y deja enfriar. Machaca las galletas en el mortero, añádelas al bol y mezcla suavemente. Saca los recipientes del frigorífico. Reparte encima la mezcla de pasas, arándanos, plátano y galleta. Sirve y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gelatina De Yogur Con Frutas",
+    "meta_description": "Pon la gelatina en un bol con agua fría y deja que se hidrate. Pon a calentar la nata en una cazuelita, escurre las hojas de gelatina e introdúcelas en la nata hirviendo. Mezcla bien hasta que se disuelvan. Pon los yogures en un bol y agreg",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_0aa5fe56695302",
+  "slug": "tarta-de-galletas",
+  "titulo": "Tarta De Galletas",
+  "resumen": "En la base de un molde rectangular, coloca una capa de galletas. Con la ayuda de un pincel, empápalas bien con la leche, y después añade una capa de mermelada de fresa. Coloca otra capa de galletas y repite el proceso hasta seis veces. Term",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "180",
+      "unidad": "g",
+      "nombre": "chocolate blanco para postres"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "32",
+      "unidad": "g",
+      "nombre": "alletas rectangulares"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "mermelada de fresa"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para decorar:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "onzas de chocolate negro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "frutos rojos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "En la base de un molde rectangular, coloca una capa de galletas. Con la ayuda de un pincel, empápalas bien con la leche, y después añade una capa de mermelada de fresa. Coloca otra capa de galletas y repite el proceso hasta seis veces. Termina con una capa de galletas. Funde el chocolate blanco al baño maría. Añade una cucharada de aceite, mezcla y napa la tarta de galletas. Deja que se enfríe unas horas en el frigorífico. Desmolda. Funde el chocolate negro y salpica la superficie de la tarta con unos hilos. Adorna con unas hojas de menta y unos frutos rojos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Galletas",
+    "meta_description": "En la base de un molde rectangular, coloca una capa de galletas. Con la ayuda de un pincel, empápalas bien con la leche, y después añade una capa de mermelada de fresa. Coloca otra capa de galletas y repite el proceso hasta seis veces. Term",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

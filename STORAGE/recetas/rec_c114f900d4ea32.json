@@ -1,0 +1,108 @@
+{
+  "id": "rec_c114f900d4ea32",
+  "slug": "pastel-de-manzana-y-nueces",
+  "titulo": "Pastel De Manzana Y Nueces",
+  "resumen": "Unta un molde con una cucharadita de mantequilla y espolvoréalo con un poco de harina. Coloca en un bol la harina, la levadura y el azúcar. Bate un poco con la batidora de varillas y añade los huevos. Sigue batiendo hasta que queden todos l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "225",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "9,5",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "manzanas"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "nueces peladas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "canela molida"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 1 limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y mantequilla para el molde"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para decorar:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "frutos rojos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Unta un molde con una cucharadita de mantequilla y espolvoréalo con un poco de harina. Coloca en un bol la harina, la levadura y el azúcar. Bate un poco con la batidora de varillas y añade los huevos. Sigue batiendo hasta que queden todos los ingredientes perfectamente integrados. Funde la mantequilla e incorpórala. Añade también las manzanas peladas y ralladas, las nueces picadas, la canela y la ralladura de limón. Mezcla bien. Vierte la preparación en el molde y hornea a 180 ºC durante 25 minutos. Retíralo y deja que se enfríe antes de desmoldarlo. Córtalo en porciones, espolvoréalo con azúcar glas y adórnalo con unos frutos rojos y unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pastel De Manzana Y Nueces",
+    "meta_description": "Unta un molde con una cucharadita de mantequilla y espolvoréalo con un poco de harina. Coloca en un bol la harina, la levadura y el azúcar. Bate un poco con la batidora de varillas y añade los huevos. Sigue batiendo hasta que queden todos l",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

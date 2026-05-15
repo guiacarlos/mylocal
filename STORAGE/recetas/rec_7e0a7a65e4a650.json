@@ -1,0 +1,93 @@
+{
+  "id": "rec_7e0a7a65e4a650",
+  "slug": "hamburguesa-con-cebolletas-y-puerros",
+  "titulo": "Hamburguesa Con Cebolletas Y Puerros",
+  "resumen": "Pela los dientes de ajo y 2 cebolletas, pícalos finamente y ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga todo bien. Añade la rama de romero y una cucharada de harina y cocínalo. Vierte el vino, dale un hervor y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "hamburguesas de angus"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "puerros (pequeños)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los dientes de ajo y 2 cebolletas, pícalos finamente y ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga todo bien. Añade la rama de romero y una cucharada de harina y cocínalo. Vierte el vino, dale un hervor y agrega un vaso de agua. Deja que reduzca. Retira la rama de romero y tritura la salsa. Espolvorea con perejil picado y mantenla caliente. Corta el resto de las cebolletas por la mitad y cocínalas a la plancha. Limpia los puerros, retírales la parte superior, dejando solo la parte blanca, y cocínalos a la plancha. Sazona. Pasa las hamburguesas por harina y huevo batido. Fríelas brevemente por los dos lados en una sartén con aceite. Sirve las hamburguesas, salsea y acompáñalas con las verduras a la plancha. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hamburguesa Con Cebolletas Y Puerros",
+    "meta_description": "Pela los dientes de ajo y 2 cebolletas, pícalos finamente y ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga todo bien. Añade la rama de romero y una cucharada de harina y cocínalo. Vierte el vino, dale un hervor y ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

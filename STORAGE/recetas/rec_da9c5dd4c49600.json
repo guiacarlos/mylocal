@@ -1,0 +1,118 @@
+{
+  "id": "rec_da9c5dd4c49600",
+  "slug": "muslos-de-pollo-rellenos",
+  "titulo": "Muslos De Pollo Rellenos",
+  "resumen": "Para la salsa, deshuesa los muslos de pollo, reserva la carne y pon los huesos a dorar en una cazuela con un chorrito de aceite. Agrega el vino blanco, dale un hervor para que se evapore el alcohol y vierte la salsa de tomate. Sazona y coci",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "muslos de pollo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón de York"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina de trigo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina de garbanzos"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "copos de patata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "panko (miga de pan rallado)"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "ml",
+      "nombre": "tónica"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, deshuesa los muslos de pollo, reserva la carne y pon los huesos a dorar en una cazuela con un chorrito de aceite. Agrega el vino blanco, dale un hervor para que se evapore el alcohol y vierte la salsa de tomate. Sazona y cocina todo durante 15 minutos. Retira los huesos, cuela y reserva la salsa caliente. Salpimienta los muslos deshuesados, extiéndelos sobre una superficie plana y coloca sobre cada muslo 1 pimiento del piquillo (abierto) y una loncha de jamón de York. Enróscalos, átalos con una cuerda de cocina y colócalos en una bandeja apta para horno. Hornéalos a 190 ºC durante 30-35 minutos. Para los aros de cebolla, mezcla en un bol la harina de trigo con la de garbanzos, los copos de puré de patata y el pimentón. Mezcla bien y añade la tónica. Mezcla. Introduce los aros de cebolla en la masa, pásalos por el panko y fríelos en una sartén con abundante aceite. Escúrrelos sobre una fuente cubierta con papel absorbente. Sazona. Corta las cuerdas y sirve un muslo de pollo relleno por comensal (puedes filetearlo para que se vea el relleno). Salséalos y acompáñalos con los aros de cebolla. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Muslos De Pollo Rellenos",
+    "meta_description": "Para la salsa, deshuesa los muslos de pollo, reserva la carne y pon los huesos a dorar en una cazuela con un chorrito de aceite. Agrega el vino blanco, dale un hervor para que se evapore el alcohol y vierte la salsa de tomate. Sazona y coci",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

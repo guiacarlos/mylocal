@@ -1,0 +1,96 @@
+{
+  "id": "rec_1e6efcc7f728a7",
+  "slug": "lentejas-con-boniato-y-arroz",
+  "titulo": "Lentejas Con Boniato Y Arroz",
+  "resumen": "Pon las lentejas y el agua en una cazuela grande. Pela la cebolleta y el boniato, córtalos en daditos y añádelos. Sazona y vierte un chorrito de aceite. Cocina durante 40-45 minutos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "lentejas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "boniato"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "tomates cherry"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon las lentejas y el agua en una cazuela grande. Pela la cebolleta y el boniato, córtalos en daditos y añádelos. Sazona y vierte un chorrito de aceite. Cocina durante 40-45 minutos.",
+    "Pela y pica los ajos y dóralos en una cazuela con un chorrito de aceite. Pela las zanahorias, córtalas en daditos y añádelos a la cazuela. Lava y pica finamente los puerros y agrégalos. Incorpora el arroz, rehoga, añade agua (el doble y un poco más de agua que de arroz), sazona y cuece durante 18-20 minutos.",
+    "Pon un poco de agua a calentar en una cazuela. Cuando empiece a hervir, añade los tomates. Escáldalos durante 1 minuto. Retíralos, refréscalos y pélalos.",
+    "Sirve en el fondo de los platos una porción de lentejas y coloca en el centro de cada uno una porción de arroz. Acompaña con los tomates y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lentejas Con Boniato Y Arroz",
+    "meta_description": "Pon las lentejas y el agua en una cazuela grande. Pela la cebolleta y el boniato, córtalos en daditos y añádelos. Sazona y vierte un chorrito de aceite. Cocina durante 40-45 minutos.",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

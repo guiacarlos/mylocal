@@ -1,0 +1,98 @@
+{
+  "id": "rec_dddcba23e21834",
+  "slug": "copas-de-bizcocho-y-helado",
+  "titulo": "Copas De Bizcocho Y Helado",
+  "resumen": "Remoja las pasas en el ron y tenlas a remojo 30 minutos como mínimo. Para hacer el jarabe, pon a calentar en un cazo el azúcar con el agua. Cuando se funda el azúcar, retira la cazuela del fuego y deja que se enfríe. Mezcla en un bol grande",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "planchas finas de bizcocho"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "ron"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "helado"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "azúcar (para quemar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "grosellas y hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la crema de yema:"
+    },
+    {
+      "cantidad": "140",
+      "unidad": "g",
+      "nombre": "azúcar (para el jarabe)"
+    },
+    {
+      "cantidad": "65",
+      "unidad": "g",
+      "nombre": "agua (para el jarabe)"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharada",
+      "nombre": "esencia de vainilla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    }
+  ],
+  "pasos": [
+    "Remoja las pasas en el ron y tenlas a remojo 30 minutos como mínimo. Para hacer el jarabe, pon a calentar en un cazo el azúcar con el agua. Cuando se funda el azúcar, retira la cazuela del fuego y deja que se enfríe. Mezcla en un bol grande las yemas con la harina de maíz refinada. Añade el jarabe y la esencia de vainilla. Mezcla bien todo con una varilla manual y pasa la mezcla a una cazuela. Cocina a fuego suave, sin dejar de remover con una varilla, hasta que hierva (50 segundos aproximadamente) y empiece a espumar. Deja que se temple un poco. Con ayuda de un cortapastas redondo, corta 8 círculos de bizcocho. Coloca 4 en la base de 4 vasos anchos y emborráchalos con el ron. Reparte encima el helado y, después, las pasas, y cubre con el resto de los bizcochos. Presiónalos con la mano para que se asienten y pincélalos con otro poco de ron. Rellénalos hasta el borde con la crema de yema e introduce los vasos en el congelador. Cuando estén congelados (también basta con que estén bien fríos), espolvorea la superficie con azúcar y quémala con un soplete. Sirve y decora con unas hojitas de menta y unas grosellas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Copas De Bizcocho Y Helado",
+    "meta_description": "Remoja las pasas en el ron y tenlas a remojo 30 minutos como mínimo. Para hacer el jarabe, pon a calentar en un cazo el azúcar con el agua. Cuando se funda el azúcar, retira la cazuela del fuego y deja que se enfríe. Mezcla en un bol grande",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,78 @@
+{
+  "id": "rec_7b5fce681925eb",
+  "slug": "borraja-con-patatas-y-jamon",
+  "titulo": "Borraja Con Patatas Y Jamón",
+  "resumen": "Retira las hojas de las borrajas y la parte inferior del tallo. Lávalas y córtalas en trozos de 4 centímetros. Pon agua a calentar en una cazuela, sazónala y, cuando empiece a hervir, añade la borraja. Cuécela durante 12 minutos. Escurre la",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "borraja"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Retira las hojas de las borrajas y la parte inferior del tallo. Lávalas y córtalas en trozos de 4 centímetros. Pon agua a calentar en una cazuela, sazónala y, cuando empiece a hervir, añade la borraja. Cuécela durante 12 minutos. Escurre la borraja y resérvala. Reserva también el caldo. Pela las patatas, córtalas en daditos y fríelas en una sartén con aceite. Cuando estén hechas, escúrrelas sobre un plato cubierto con papel absorbente. Sazona. Pela los dientes de ajo, lamínalos y rehógalos en una tartera con un chorrito de aceite. Corta el jamón en dados y añádelos. Antes de que cojan color, agrega la harina, rehógala un poco y vierte un poco del caldo de cocción de la borraja. Cocina el conjunto durante un par de minutos e incorpora la borraja. Mezcla bien y agrega las patatas. Decora con una hojita de perejil. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Borraja Con Patatas Y Jamón",
+    "meta_description": "Retira las hojas de las borrajas y la parte inferior del tallo. Lávalas y córtalas en trozos de 4 centímetros. Pon agua a calentar en una cazuela, sazónala y, cuando empiece a hervir, añade la borraja. Cuécela durante 12 minutos. Escurre la",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

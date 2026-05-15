@@ -1,0 +1,103 @@
+{
+  "id": "rec_a6233c1d3dd6e0",
+  "slug": "tallarines-con-verduras-y-sardina-vieja",
+  "titulo": "Tallarines Con Verduras Y Sardina Vieja",
+  "resumen": "Envuelve las sardinas en papel de horno y dales unos golpes. Desenvuélvelas y, con ayuda de una puntilla, elimínales la piel, las espinas y las tripas. Córtalas en trozos pequeños, colócalas en un bol y cúbrelas con aceite. Lamina 2 ajos y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "tallarines"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "setas shitake"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "sardinas viejas"
+    },
+    {
+      "cantidad": "750",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "mejorana"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Envuelve las sardinas en papel de horno y dales unos golpes. Desenvuélvelas y, con ayuda de una puntilla, elimínales la piel, las espinas y las tripas. Córtalas en trozos pequeños, colócalas en un bol y cúbrelas con aceite. Lamina 2 ajos y añádelos. Deja macerar de un día para otro. Pon la salsa de tomate en una cazuela, sazónala y agrega el orégano, la mejorana, el laurel y la albahaca. Cocínala durante unos 10-15 minutos a fuego suave para que absorba los aromas y reduzca un poco. Retira la albahaca y el laurel. Reserva la salsa. Pela los otros 2 dientes de ajo y pícalos. Corta el calabacín y las setas en dados. Saltea las verduras en el wok con un poco de aceite. Sazona. Pon abundante agua a calentar. Cuando empiece a hervir, sálala e introduce los tallarines. Cuécelos durante 10-12 minutos y añádelos al wok junto con las sardinas (sin ajos ni aceite). Salpimienta. Sirve la salsa de tomate en el fondo del plato y encima los tallarines con sardina."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tallarines Con Verduras Y Sardina Vieja",
+    "meta_description": "Envuelve las sardinas en papel de horno y dales unos golpes. Desenvuélvelas y, con ayuda de una puntilla, elimínales la piel, las espinas y las tripas. Córtalas en trozos pequeños, colócalas en un bol y cúbrelas con aceite. Lamina 2 ajos y ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

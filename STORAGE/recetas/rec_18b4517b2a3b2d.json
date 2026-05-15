@@ -1,0 +1,118 @@
+{
+  "id": "rec_18b4517b2a3b2d",
+  "slug": "copa-de-la-casa",
+  "titulo": "Copa De La Casa",
+  "resumen": "Para hacer las tejas, mezcla en un cuenco la harina, el azúcar, las almendras molidas, las almendras picadas y una pizca de sal. Añade la mantequilla a punto de pomada y la clara de huevo. Mezcla bien hasta conseguir una masa homogénea. Cog",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "melocotón"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "sandía"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "plátanos"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "queso mascarpone"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para las tejas:"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "almendra molida"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "almendra picada"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cl",
+      "nombre": "ara de huevo"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "g",
+      "nombre": "harina de trigo"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer las tejas, mezcla en un cuenco la harina, el azúcar, las almendras molidas, las almendras picadas y una pizca de sal. Añade la mantequilla a punto de pomada y la clara de huevo. Mezcla bien hasta conseguir una masa homogénea. Coge porciones de masa y colócalas (sin que se toquen) sobre una placa de horno (forrada con papel de hornear). Humedécete las manos y extiende la masa. Hornea a 200 ºC durante unos 10 minutos. Pela el melocotón, la sandía y el plátano. Trocea la fruta y colócala en un bol. Abre la vaina de vainilla y raspa el interior con el cuchillo, saca la pulpa y las semillas e incorpóralas a un bol. Añade la nata y el azúcar y monta un poco con una batidora de varillas. Mezcla la nata con el queso mascarpone. Coloca en el fondo de cada copa una porción de mascarpone y nata y rellena con las frutas. Decora con las tejas y con las hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Copa De La Casa",
+    "meta_description": "Para hacer las tejas, mezcla en un cuenco la harina, el azúcar, las almendras molidas, las almendras picadas y una pizca de sal. Añade la mantequilla a punto de pomada y la clara de huevo. Mezcla bien hasta conseguir una masa homogénea. Cog",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

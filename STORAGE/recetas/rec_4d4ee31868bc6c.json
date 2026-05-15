@@ -1,0 +1,93 @@
+{
+  "id": "rec_4d4ee31868bc6c",
+  "slug": "lasana-de-alcachofas-con-jamon",
+  "titulo": "Lasaña De Alcachofas Con Jamón",
+  "resumen": "Pon abundante agua a calentar en una cazuela amplia y baja. Cuando empiece a hervir, sazona y agrega las láminas de lasaña. Cuécelas durante el tiempo que indique el paquete. Escúrrelas y extiéndelas sobre un paño de cocina limpio. Pela las",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "áminas de lasaña"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "700",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso emmental"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a calentar en una cazuela amplia y baja. Cuando empiece a hervir, sazona y agrega las láminas de lasaña. Cuécelas durante el tiempo que indique el paquete. Escúrrelas y extiéndelas sobre un paño de cocina limpio. Pela las alcachofas, retirándoles las hojas externas y las puntas. Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega las alcachofas y sazona. Cuécelas durante 15 minutos. Escúrrelas y pícalas. Pica el jamón finamente. Pela el diente de ajo, pícalo finamente y ponlo a rehogar con el jamón en una sartén con un chorrito de aceite. Agrega las alcachofas y saltéalas durante 6-8 minutos. Pon un chorrito de aceite a calentar en una cazuela. Agrega la harina y rehógala bien. Vierte la leche poco a poco y cocina la bechamel sin dejar de remover. Pon a punto de sal y ralla encima un poco de nuez moscada. Agrega un poco de la bechamel a las alcachofas con jamón. Mezcla. Extiende una capa de láminas de lasaña en una bandeja apta para horno. Cúbrelas con una capa de la farsa de alcachofas. Repite el proceso dos veces más y termina con una capa de láminas de lasaña. Cubre con el resto de la bechamel y espolvoréala con el queso. Gratina hasta que se caliente la lasaña y se dore el queso. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lasaña De Alcachofas Con Jamón",
+    "meta_description": "Pon abundante agua a calentar en una cazuela amplia y baja. Cuando empiece a hervir, sazona y agrega las láminas de lasaña. Cuécelas durante el tiempo que indique el paquete. Escúrrelas y extiéndelas sobre un paño de cocina limpio. Pela las",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

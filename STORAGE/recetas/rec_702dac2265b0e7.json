@@ -1,0 +1,78 @@
+{
+  "id": "rec_702dac2265b0e7",
+  "slug": "habas-secas-con-pulpo",
+  "titulo": "Habas Secas Con Pulpo",
+  "resumen": "Corta en dados la cebolleta y el pimiento verde y rehógalos en una cazuela con un chorrito de aceite durante 10 minutos. Sazona, aparta la cazuela del fuego y agrega el pimentón. Mezcla bien. Pon de nuevo la cazuela al fuego, añade las haba",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "habas secas (remojadas desde la víspera)"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "pulpo cocido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta en dados la cebolleta y el pimiento verde y rehógalos en una cazuela con un chorrito de aceite durante 10 minutos. Sazona, aparta la cazuela del fuego y agrega el pimentón. Mezcla bien. Pon de nuevo la cazuela al fuego, añade las habas escurridas, cúbrelas con agua y cuécelas a fuego lento durante una hora y cuarto aproximadamente, hasta que queden tiernas. Prueba y pon a punto de sal. Si el guiso te queda ligero, puedes ligarlo agregando un poco de harina de maíz refinada diluida en agua fría. Trocea el pulpo en trozos de bocado y añádelo a las habas. Espolvorea con perejil picado y guisa todo junto durante 5 minutos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Habas Secas Con Pulpo",
+    "meta_description": "Corta en dados la cebolleta y el pimiento verde y rehógalos en una cazuela con un chorrito de aceite durante 10 minutos. Sazona, aparta la cazuela del fuego y agrega el pimentón. Mezcla bien. Pon de nuevo la cazuela al fuego, añade las haba",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

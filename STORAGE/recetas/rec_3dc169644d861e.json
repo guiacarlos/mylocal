@@ -1,0 +1,98 @@
+{
+  "id": "rec_3dc169644d861e",
+  "slug": "alcachofas-con-almejas-en-vinagreta",
+  "titulo": "Alcachofas Con Almejas En Vinagreta",
+  "resumen": "Pon a calentar un chorrito de agua en una tartera, agrega las almejas, tapa y espera a que se abran. Pela las alcachofas, quitándoles varias capas de hojas hasta llegar a la parte tierna, y retírales los tallos y las puntas. Córtalas en 4 y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta:"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar un chorrito de agua en una tartera, agrega las almejas, tapa y espera a que se abran. Pela las alcachofas, quitándoles varias capas de hojas hasta llegar a la parte tierna, y retírales los tallos y las puntas. Córtalas en 4 y cuécelas en una cazuela con agua y una pizca de sal durante 15 minutos. Coloca las alcachofas y las almejas en una fuente grande. Puedes poner las alcachofas en el centro y las almejas alrededor. Para la vinagreta, corta en daditos los pimientos, el tomate, la cebolleta y el ajo y colócalos en un bol. Sazona y vierte un chorrito de vinagre y un buen chorro de aceite de oliva. Mezcla bien. Aliña las alcachofas y las almejas y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Alcachofas Con Almejas En Vinagreta",
+    "meta_description": "Pon a calentar un chorrito de agua en una tartera, agrega las almejas, tapa y espera a que se abran. Pela las alcachofas, quitándoles varias capas de hojas hasta llegar a la parte tierna, y retírales los tallos y las puntas. Córtalas en 4 y",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

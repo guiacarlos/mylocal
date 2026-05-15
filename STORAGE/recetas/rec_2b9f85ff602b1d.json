@@ -1,0 +1,83 @@
+{
+  "id": "rec_2b9f85ff602b1d",
+  "slug": "gallo-con-tartar-de-tomate-y-aceitunas-negras",
+  "titulo": "Gallo Con Tartar De Tomate Y Aceitunas Negras",
+  "resumen": "Para hacer el tartar, pela los tomates, córtalos en dados y ponlos a escurrir en un colador sobre un bol. Reserva las peladuras y el líquido que hayan soltado. Pon los tomates picados en un bol. Corta las aceitunas negras en daditos y añáde",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "g",
+      "nombre": "allos (hermosos)"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer el tartar, pela los tomates, córtalos en dados y ponlos a escurrir en un colador sobre un bol. Reserva las peladuras y el líquido que hayan soltado. Pon los tomates picados en un bol. Corta las aceitunas negras en daditos y añádelas. Agrega también un poco de perejil picado, 1 cucharada de aceite y una pizca de sal. Mezcla bien y reserva. Pon las gelatinas en un bol, cúbrelas con agua y espera a que se hidraten. Coloca un cazo al fuego con el agua y las peladuras y el líquido de los tomates. Deja que reduzca a la mitad. Cuela la reducción y agrégale las gelatinas remojadas. Mezcla bien hasta que se deshagan y deja reposar 2-3 minutos. Vierte el contenido en el bol de tomate con aceitunas, mezcla y reparte en 4 recipientes pequeños. Mantenlos en el frigorífico hasta que cuajen. Desmolda y reserva. Saca los filetes de gallo y colócalos sobre una placa de horno untada de aceite. Salpimiéntalos, dóblalos por la mitad y riégalos con una gotita de aceite. Hornéalos a 200 ºC durante 5 minutos. Sirve el pescado con los tartar de tomate y aceitunas. Decora los platos con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gallo Con Tartar De Tomate Y Aceitunas Negras",
+    "meta_description": "Para hacer el tartar, pela los tomates, córtalos en dados y ponlos a escurrir en un colador sobre un bol. Reserva las peladuras y el líquido que hayan soltado. Pon los tomates picados en un bol. Corta las aceitunas negras en daditos y añáde",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

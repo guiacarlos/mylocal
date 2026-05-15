@@ -1,0 +1,85 @@
+{
+  "id": "rec_4f638a438a917d",
+  "slug": "talos-variados",
+  "titulo": "Talos Variados",
+  "resumen": "Pon la harina en un recipiente amplio. Haz un hueco en el centro y añade una pizca de sal. Templa el agua y agrégala poco a poco al recipiente de la harina. Amasa hasta que quede una masa compacta y homogénea. Tápala con un paño de cocina l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón cocido"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "queso Idiazábal"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "txistorra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "harina de maíz (para talos)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon la harina en un recipiente amplio. Haz un hueco en el centro y añade una pizca de sal. Templa el agua y agrégala poco a poco al recipiente de la harina. Amasa hasta que quede una masa compacta y homogénea. Tápala con un paño de cocina limpio y déjala reposar en el frigorífico durante 30 minutos. Haz 8 bolitas de masa y aplástalas con la mano hasta conseguir unas tortas finas. Calienta la plancha y cocina las tortas de maíz por los dos lados hasta que se doren.",
+    "Corta lonchas pequeñas de queso y envuélvelas con las lonchas de jamón. Forra la placa del horno con papel de hornear y coloca encima las lonchas de jamón con queso. Caliéntalas en el horno a 180 ºC durante 4-5 minutos.",
+    "Corta la txistorra en trozos y fríelos en una sartén con un chorrito de aceite. Rellena la mitad de los talos con la txistorra y el resto con el jamón y el queso. Colócalos en la placa de horno forrada con papel de hornear y hornéalos a 180 ºC durante 4 minutos. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Talos Variados",
+    "meta_description": "Pon la harina en un recipiente amplio. Haz un hueco en el centro y añade una pizca de sal. Templa el agua y agrégala poco a poco al recipiente de la harina. Amasa hasta que quede una masa compacta y homogénea. Tápala con un paño de cocina l",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

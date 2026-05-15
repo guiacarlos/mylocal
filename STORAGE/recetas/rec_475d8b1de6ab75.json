@@ -1,0 +1,112 @@
+{
+  "id": "rec_475d8b1de6ab75",
+  "slug": "ensalada-de-salmon-habas-y-rabanitos",
+  "titulo": "Ensalada De Salmón, Habas Y Rabanitos",
+  "resumen": "Mezcla la sal gruesa con el azúcar. Pon la mitad en el fondo de un recipiente. Coloca el salmón encima y cúbrelo con el resto de la mezcla de sal y azúcar. Deja que macere durante 1 hora en el frigorífico. Pasado este tiempo, retírale la sa",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "salmón fresco"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "habas frescas (desgranadas)"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "-12 rabanitos"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "sal gruesa"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "brotes de lechuga"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza de miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "eneldo fresco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Mezcla la sal gruesa con el azúcar. Pon la mitad en el fondo de un recipiente. Coloca el salmón encima y cúbrelo con el resto de la mezcla de sal y azúcar. Deja que macere durante 1 hora en el frigorífico. Pasado este tiempo, retírale la sal y el azúcar, pásalo por el grifo y sécalo bien. Córtalo en tiras, colócalo en una fuente y cúbrelo con aceite.",
+    "Corta el pan en daditos y ponlos en una placa de horno. Riégalos con un poco de aceite, mézclalos bien y hornéalos hasta que se doren. Resérvalos.",
+    "Cuece las habas en un cazo con agua y una pizca de sal durante 6-8 minutos. Escurre y rocíalas con un chorrito de aceite. Resérvalas.",
+    "Limpia los rabanitos y corta 4 en lonchitas. Corta los otros dándoles forma de flor. Resérvalos.",
+    "Coloca las tiras de salmón escurridas ocupando la mitad de una fuente. Pon en la otra mitad los brotes de lechuga bien limpios. Reparte, por encima de los brotes, las habas, las frambuesas, los costrones de pan y las lonchitas de rabanitos, y sazona esta parte de la ensalada. Espolvorea con la menta y el eneldo finamente picados.",
+    "Mezcla en un bote la mostaza de miel con un buen chorro de aceite. Tapa el bote, agítalo enérgicamente y aliña la ensalada. Decora con los rabanitos en forma de flor. Sirve.",
+    "ENSALADA DE MANZANA Y TOMATE Ingredientes (4 p.)",
+    "1 bolsa de hojas de lechugas variadas 1 tomate 1 manzana 1 zanahoria aceite de oliva virgen extra vinagre y sal",
+    "Elaboración",
+    "Coloca las hojas de lechuga en una fuente. Pela el tomate, córtalo en dados y agrégalos a la fuente. Pela la manzana y la zanahoria, rállalas y une al resto de la ensalada. Sazona. Pon en un bote un poco de aceite y un chorrito de vinagre. Tapa y agita para que se mezclen. Aliña la ensalada."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Salmón, Habas Y Rabanitos",
+    "meta_description": "Mezcla la sal gruesa con el azúcar. Pon la mitad en el fondo de un recipiente. Coloca el salmón encima y cúbrelo con el resto de la mezcla de sal y azúcar. Deja que macere durante 1 hora en el frigorífico. Pasado este tiempo, retírale la sa",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

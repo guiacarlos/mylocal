@@ -1,0 +1,88 @@
+{
+  "id": "rec_a49ecb4c51f006",
+  "slug": "raya-a-la-sanluquena",
+  "titulo": "Raya A La Sanluqueña",
+  "resumen": "Corta los recortes de las esquinas de la raya. Reserva la raya. Coloca los recortes en una cazuela. Limpia el puerro, trocéalo y añádelo a la cazuela. Agrega 1 litro de agua, sazona y cuece todo durante 15 minutos. Cuela el caldo y resérval",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "raya"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pan duro"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "manzanilla de Sanlúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta los recortes de las esquinas de la raya. Reserva la raya. Coloca los recortes en una cazuela. Limpia el puerro, trocéalo y añádelo a la cazuela. Agrega 1 litro de agua, sazona y cuece todo durante 15 minutos. Cuela el caldo y resérvalo. Pela los dientes de ajo, lamínalos y dóralos en una sartén con aceite. Cuando se doren, retíralos a un plato. Corta el pan en rebanadas y agrégalo a la sartén. Fríelo hasta que coja un poco de color. Añade los ajos fritos, el pimentón y el vino. Dale un hervor y pasa todo al vaso batidor. Tritura con la batidora eléctrica. Trocea la raya, salpimiéntala y ponla en una tartera con una gotita de aceite. Vierte encima el caldo y el triturado de ajos, pan, vino y pimentón. Cocina la raya a fuego lento durante 5 minutos. Sirve y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Raya A La Sanluqueña",
+    "meta_description": "Corta los recortes de las esquinas de la raya. Reserva la raya. Coloca los recortes en una cazuela. Limpia el puerro, trocéalo y añádelo a la cazuela. Agrega 1 litro de agua, sazona y cuece todo durante 15 minutos. Cuela el caldo y resérval",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

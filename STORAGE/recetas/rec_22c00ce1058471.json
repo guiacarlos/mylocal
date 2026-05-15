@@ -1,0 +1,83 @@
+{
+  "id": "rec_22c00ce1058471",
+  "slug": "minipinchos-de-cerdo-con-papas-alinadas",
+  "titulo": "Minipinchos De Cerdo Con Papas Aliñadas",
+  "resumen": "Cuece las patatas (con piel) y los huevos en una cazuela con agua hirviendo. Retira los huevos a los 10 minutos y las patatas a los 30. Pela las patatas, córtalas en dados y colócalos en un bol. Pela los huevos, córtalos en dados y agrégalo",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "18",
+      "unidad": "",
+      "nombre": "minipinchos de cerdo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "aceitunas rellenas de anchoa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Cuece las patatas (con piel) y los huevos en una cazuela con agua hirviendo. Retira los huevos a los 10 minutos y las patatas a los 30. Pela las patatas, córtalas en dados y colócalos en un bol. Pela los huevos, córtalos en dados y agrégalos al bol. Corta las aceitunas por la mitad y añádelas. Agrega la cebolleta picada y perejil picado y aliña con aceite, vinagre y sal. Mezcla bien y reserva. Cocina las brochetas a la plancha por los dos lados. Sirve las brochetas y acompáñalas con las papas aliñadas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Minipinchos De Cerdo Con Papas Aliñadas",
+    "meta_description": "Cuece las patatas (con piel) y los huevos en una cazuela con agua hirviendo. Retira los huevos a los 10 minutos y las patatas a los 30. Pela las patatas, córtalas en dados y colócalos en un bol. Pela los huevos, córtalos en dados y agrégalo",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

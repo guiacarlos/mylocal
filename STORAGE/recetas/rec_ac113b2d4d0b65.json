@@ -1,0 +1,108 @@
+{
+  "id": "rec_ac113b2d4d0b65",
+  "slug": "pentagrama-primaveral",
+  "titulo": "Pentagrama Primaveral",
+  "resumen": "Pela las patatas, córtalas en dados, sazónalos y fríelos en una sartén con aceite y unas ramitas de perejil. Retíralos a un plato cubierto con papel absorbente. Corta el pan en medias lunas y fríelo en la misma sartén donde has frito las pa",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "bonito en aceite"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal (fina y gruesa)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharaditas",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, córtalas en dados, sazónalos y fríelos en una sartén con aceite y unas ramitas de perejil. Retíralos a un plato cubierto con papel absorbente. Corta el pan en medias lunas y fríelo en la misma sartén donde has frito las patatas. Cuando estén doradas, retíralas y escúrrelas sobre un plato cubierto con papel absorbente. Reserva el aceite en la sartén. Pela las zanahorias, córtalas en dados y cuécelas en una cazuela grande con un poco de agua y una pizca de sal. Coloca encima el accesorio para cocer al vapor y pon en él las judías verdes cortadas en dados. Tapa la cazuela y cuece las verduras durante 12 minutos. Escúrrelas y resérvalas. Para la mayonesa, pon el huevo en el vaso de la batidora. Agrega un chorrito de vinagre, una pizca de sal y una buena cantidad de aceite. Introduce el brazo de la batidora hasta el fondo, dale marcha y, cuando empiece a ligar, realiza movimientos ascendentes y descendentes hasta que ligue del todo. Desmenuza el bonito y colócalo en un bol. Pica la cebolleta finamente y añádela. Agrega también la mayonesa y mezcla bien. Sirve en filas: una de patatas, una de zanahorias, una de judías, una de bonito y una de pan frito. Riega las hortalizas con aceite y sazónalas con sal gruesa. Decora con perejil y un hilo de aceite."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pentagrama Primaveral",
+    "meta_description": "Pela las patatas, córtalas en dados, sazónalos y fríelos en una sartén con aceite y unas ramitas de perejil. Retíralos a un plato cubierto con papel absorbente. Corta el pan en medias lunas y fríelo en la misma sartén donde has frito las pa",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

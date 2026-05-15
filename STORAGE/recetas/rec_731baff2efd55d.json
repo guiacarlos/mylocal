@@ -1,0 +1,93 @@
+{
+  "id": "rec_731baff2efd55d",
+  "slug": "bonito-con-tomate",
+  "titulo": "Bonito Con Tomate",
+  "resumen": "Pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Lava las cebollas y el pimiento verde y córtalos en dados. Añádelos a la cazuela y rehógalos durante 4-5 minutos. Lava los tomates, trocéalos y agrégalos. Co",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "bonito fresco"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates grandes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Lava las cebollas y el pimiento verde y córtalos en dados. Añádelos a la cazuela y rehógalos durante 4-5 minutos. Lava los tomates, trocéalos y agrégalos. Condimenta con una pizca de sal y otra de azúcar. Tapa y cocina todo durante 30 minutos. Tritura con la batidora eléctrica, cuela y reserva la salsa. Corta el bonito en trozos medianos, salpimiéntalos y dóralos en una sartén por los dos lados. Añade la salsa de tomate y cocina todo junto durante un par de minutos a fuego suave. Sirve el bonito con tomate y adorna los platos con unas hojas de perejil.",
+    "TATAKI DE BONITO Ingredientes (4 p.)",
+    "1 rodaja de bonito (700 g) 8 cucharadas de salsa de soja 3 cucharadas de mirin 1 cucharada de azúcar 4 cucharadas de sake 1 cucharada de wasabi pimienta sal",
+    "Para la ensalada: hojas de lechuga de diferentes colores 1 endibia 8 tomates cherry vinagre de frambuesa aceite de oliva virgen extra sal",
+    "Elaboración",
+    "Limpia el bonito y córtalo en 4 trozos. Resérvalos. Mezcla el wasabi con unas gotas de agua y remueve hasta que quede una pasta. Haz bolitas pequeñas y resérvalas. Pon en un cuenco la salsa de soja, el sake, el mirin y el azúcar y mezcla bien hasta que se deshaga el azúcar. Introduce los trozos de bonito y déjalo macerando durante 15 minutos. Dales la vuelta cada 2-3 minutos para que se impregnen bien. Escurre el bonito. Pasa la salsa a un cazo y ponla a reducir. Reserva. Salpimienta el bonito y cocínalo a la plancha un minuto y medio por cada lado. Reserva. Limpia la endibia y las hojas de lechuga, trocéalas y colócalas en un bol. Lava los tomates cherry y añádelos. Aliña con aceite, vinagre de frambuesa y una pizca de sal. Corta el bonito en láminas y salséalo. Acompáñalo con la ensalada Decora los platos con las bolitas de wasabi."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bonito Con Tomate",
+    "meta_description": "Pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Lava las cebollas y el pimiento verde y córtalos en dados. Añádelos a la cazuela y rehógalos durante 4-5 minutos. Lava los tomates, trocéalos y agrégalos. Co",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

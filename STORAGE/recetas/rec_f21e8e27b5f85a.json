@@ -1,0 +1,118 @@
+{
+  "id": "rec_f21e8e27b5f85a",
+  "slug": "macarrones-con-beicon-espinacas-y-salsa-mornay",
+  "titulo": "Macarrones Con Beicon, Espinacas Y Salsa Mornay",
+  "resumen": "Pon abundante agua a hervir en una cazuela grande. Cuando empiece a hervir, agrega la sal y los macarrones y cuece durante 8-10 minutos. Escúrrelos y refréscalos. Lamina los dientes de ajo y corta el beicon en dados. Dóralos en el wok con u",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "macarrones"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "l",
+      "nombre": "onchas de beicon"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "avellanas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa Mornay:"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "queso emmental rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a hervir en una cazuela grande. Cuando empiece a hervir, agrega la sal y los macarrones y cuece durante 8-10 minutos. Escúrrelos y refréscalos. Lamina los dientes de ajo y corta el beicon en dados. Dóralos en el wok con un chorrito de aceite. Agrega las espinacas, sazónalas y saltéalas. Incorpora la pasta y saltea todo de nuevo. Rehoga la harina en una cazuela con un chorrito de aceite. Vierte la leche poco a poco, sazona y cocina sin dejar de remover por lo menos durante 5 minutos. Espolvorea con perejil picado. Incorpora el queso. Mezcla en un bol la nata con las yemas de huevo e incorpora la mezcla a la bechamel. Cocínala a fuego suave durante 1 minuto sin dejar de batir. Reparte la pasta en 4 recipientes aptos para el horno y nápalos con la salsa Mornay. Pica las avellanas, espolvorea los recipientes con ellas y gratínalos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Macarrones Con Beicon, Espinacas Y Salsa Mornay",
+    "meta_description": "Pon abundante agua a hervir en una cazuela grande. Cuando empiece a hervir, agrega la sal y los macarrones y cuece durante 8-10 minutos. Escúrrelos y refréscalos. Lamina los dientes de ajo y corta el beicon en dados. Dóralos en el wok con u",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

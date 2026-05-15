@@ -1,0 +1,118 @@
+{
+  "id": "rec_729bb59eefacda",
+  "slug": "crepes-de-pavo-y-queso",
+  "titulo": "Crepes De Pavo Y Queso",
+  "resumen": "Pica la cebolleta y ponla a rehogar en una cazuelita con un chorrito de aceite. Sazona. Pica las aceitunas y agrégalas. Corta la lechuga en juliana fina e incorpórala. Dale un hervor. Añade 150 mililitros de agua y cocina el conjunto durant",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de pechuga de pavo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de queso"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "aceitunas verdes (sin hueso)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "echuga pequeña"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "tomate concentrado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nuez de mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pica la cebolleta y ponla a rehogar en una cazuelita con un chorrito de aceite. Sazona. Pica las aceitunas y agrégalas. Corta la lechuga en juliana fina e incorpórala. Dale un hervor. Añade 150 mililitros de agua y cocina el conjunto durante 8-10 minutos. Tritura. Pon a punto de sal y reserva. Coloca los huevos en un vaso batidor. Añade la harina, la leche, el tomate concentrado, el aceite y una pizca de sal. Tritura con la batidora eléctrica hasta que quede una masa homogénea sin grumos. Funde la nuez de mantequilla en una sartén, vierte un cacillo de masa, extiéndela bien y, cuando se cuaje, dale la vuelta. Cocínala durante 30 segundos. Repite el proceso con el resto de la masa. Extiende los crepes sobre una superficie lisa, rellénalos con una loncha de pavo y otra de queso. Enróscalos y fríelos en una sartén con aceite. Escúrrelos sobre un plato forrado con papel absorbente. Sirve la salsa en el fondo de la fuente y coloca encima los crepes. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes De Pavo Y Queso",
+    "meta_description": "Pica la cebolleta y ponla a rehogar en una cazuelita con un chorrito de aceite. Sazona. Pica las aceitunas y agrégalas. Corta la lechuga en juliana fina e incorpórala. Dale un hervor. Añade 150 mililitros de agua y cocina el conjunto durant",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

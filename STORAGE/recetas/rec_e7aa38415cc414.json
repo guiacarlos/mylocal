@@ -1,0 +1,136 @@
+{
+  "id": "rec_e7aa38415cc414",
+  "slug": "salmon-a-la-papillote-con-salsa-tartara",
+  "titulo": "Salmón A La Papillote Con Salsa Tártara",
+  "resumen": "Para la salsa tártara, casca 1 huevo en el vaso batidor, agrega el aceite, el vinagre y una pizca de sal. Introduce el brazo batidor hasta el fondo y comienza a batir sin moverlo. Cuando comience a emulsionar, mueve la batidora poco a poco,",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "rodajas de salmón (de unos 175 g)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa tártara:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 pepinillos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "alcaparras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un chorrito de vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa tártara, casca 1 huevo en el vaso batidor, agrega el aceite, el vinagre y una pizca de sal. Introduce el brazo batidor hasta el fondo y comienza a batir sin moverlo. Cuando comience a emulsionar, mueve la batidora poco a poco, de arriba abajo, hasta que los ingredientes liguen. Reserva en un bol.",
+    "Cuece el otro huevo durante 10 minutos en un cazo con agua y sal. Deja que se enfríe, pélalo, pícalo y añádelo al bol de la mayonesa. Agrega también las alcaparras, la cebolleta y los pepinillos, todo bien picadito. Espolvorea con perejil picado, mezcla y reserva la salsa tártara.",
+    "Con ayuda de la mandolina, corta la patata (pelada) y el calabacín (sin pelar) en láminas finas. Limpia los puerros y la cebolleta y córtalos en juliana fina. Reserva.",
+    "Extiende 4 trozos grandes de papel de aluminio sobre una superficie plana. Coloca sobre cada uno (a un lado del papel) una cama de patatas y, encima, otra de calabacines. Reparte por encima los puerros y la cebolleta. Sazona las verduras y coloca encima las rodajas de salmón salpimentadas. Riega con un chorrito de aceite y un poco de vino blanco. Cierra los paquetes herméticamente por todos los costados y cocínalos en el horno a 190 ºC durante 10 minutos aproximadamente (hasta que se inflen). Sirve un paquetito por comensal, ábrelos con mucho cuidado y acompaña el salmón con la salsa tártara. Puedes decorar los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmón A La Papillote Con Salsa Tártara",
+    "meta_description": "Para la salsa tártara, casca 1 huevo en el vaso batidor, agrega el aceite, el vinagre y una pizca de sal. Introduce el brazo batidor hasta el fondo y comienza a batir sin moverlo. Cuando comience a emulsionar, mueve la batidora poco a poco,",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

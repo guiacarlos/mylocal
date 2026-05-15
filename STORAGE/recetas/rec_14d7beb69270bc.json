@@ -1,0 +1,108 @@
+{
+  "id": "rec_14d7beb69270bc",
+  "slug": "crepes-de-champinones-con-salsa-de-albahaca",
+  "titulo": "Crepes De Champiñones Con Salsa De Albahaca",
+  "resumen": "Pela y lamina los ajos y dóralos en una sartén con un chorrito de aceite. Limpia bien los champiñones, filetéalos y añádelos. Sazona y cocina durante 6-8 minutos. Resérvalos. Para hacer la masa de los crepes, pon en un vaso batidor la harin",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yogur natural"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "-12 hojas de albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y lamina los ajos y dóralos en una sartén con un chorrito de aceite. Limpia bien los champiñones, filetéalos y añádelos. Sazona y cocina durante 6-8 minutos. Resérvalos. Para hacer la masa de los crepes, pon en un vaso batidor la harina, la leche, los huevos, una pizca de sal y una cucharada de aceite. Tritura con la batidora eléctrica hasta que quede una mezcla homogénea. Vierte una gotita de aceite en una sartén, deja que se caliente un poco y extiéndela bien. Con la ayuda de un cazo, agrega un poco de la masa de los crepes, extiéndela bien por todo el fondo de la sartén y, cuando empiecen a salir burbujitas, dale la vuelta. Desecha el primer crepe y repite el proceso con el resto de la masa. Extiende los crepes y reparte los champiñones salteados por encima. Enróllalos y fríelos en una sartén con abundante aceite caliente. Retíralos y escúrrelos sobre una fuente cubierta con papel absorbente. Pica la albahaca y colócala en un vaso batidor junto con el yogur y unas gotas de zumo de limón. Tritura con la batidora eléctrica. Sirve 2 crepes por ración y acompáñalos con la salsa de yogur y albahaca. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes De Champiñones Con Salsa De Albahaca",
+    "meta_description": "Pela y lamina los ajos y dóralos en una sartén con un chorrito de aceite. Limpia bien los champiñones, filetéalos y añádelos. Sazona y cocina durante 6-8 minutos. Resérvalos. Para hacer la masa de los crepes, pon en un vaso batidor la harin",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

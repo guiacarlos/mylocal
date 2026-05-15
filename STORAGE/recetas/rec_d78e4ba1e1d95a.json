@@ -1,0 +1,113 @@
+{
+  "id": "rec_d78e4ba1e1d95a",
+  "slug": "coques-a-la-calfo",
+  "titulo": "Coques A La Calfó",
+  "resumen": "Coloca el pimiento en un recipiente apto para el horno, riégalo con un poco de aceite y sazónalo. Ásalo a 180 ºC durante 25-30 minutos. Deja atemperar, pélalo, córtalo en tiras y ponlo en un bol. Adereza con aceite y sal. Cuece los huevos e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 10,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "harina de maíz blanca"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "harina de trigo"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "g",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el relleno:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "atún (en conserva)"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "filetes de anchoas en salazón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca el pimiento en un recipiente apto para el horno, riégalo con un poco de aceite y sazónalo. Ásalo a 180 ºC durante 25-30 minutos. Deja atemperar, pélalo, córtalo en tiras y ponlo en un bol. Adereza con aceite y sal. Cuece los huevos en un cazo con agua y una pizca de sal. A los 10 minutos, retíralos, refréscalos, pélalos y córtalos en daditos. Ponlos en un bol y resérvalos. Para la masa, calienta el agua con el aceite y la sal. Cuando el agua empiece a hervir, agrega las harinas de golpe. Mezcla bien hasta conseguir una masa homogénea. Retira la cazuela del fuego y deja que la masa repose durante unos minutos. Amasa, dale forma de rulo y córtalo en 10-12 porciones. Redondea las porciones. Coloca cada bola entre dos trozos de film transparente y aplástalas con un recipiente plano. Caliéntalas en una sartén sin nada de aceite. Corta el tomate por la mitad, rállalo y ponlo en un bol. Pela y pica un diente de ajo y añádelo al bol. Sazona y vierte un buen chorro de aceite. Mezcla. Pon las anchoas en un bol. Desmenuza el atún y ponlo en otro bol. Rellena las coques a tu gusto."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Coques A La Calfó",
+    "meta_description": "Coloca el pimiento en un recipiente apto para el horno, riégalo con un poco de aceite y sazónalo. Ásalo a 180 ºC durante 25-30 minutos. Deja atemperar, pélalo, córtalo en tiras y ponlo en un bol. Adereza con aceite y sal. Cuece los huevos e",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

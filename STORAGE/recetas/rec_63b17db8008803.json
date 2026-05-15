@@ -1,0 +1,115 @@
+{
+  "id": "rec_63b17db8008803",
+  "slug": "brochetas-de-coles-de-bruselas-con-salsa-curry",
+  "titulo": "Brochetas De Coles De Bruselas Con Salsa Curry",
+  "resumen": "Retira las hojas externas de las coles de Bruselas. Cuécelas en una cazuela con abundante agua durante 8-10 minutos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "coles de Bruselas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos de codorniz"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "tomates cherry"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "beicon (en una pieza)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa curry:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "nata líquida"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira las hojas externas de las coles de Bruselas. Cuécelas en una cazuela con abundante agua durante 8-10 minutos.",
+    "Cuece los huevos de codorniz durante 5 minutos. Refréscalos y pélalos.",
+    "Haz un corte en forma de cruz por la base de los tomates cherry. Escáldalos, refréscalos y pélalos.",
+    "Corta el beicon en 8 tacos, cocínalos a la plancha y resérvalos.",
+    "Corta los puerros en juliana fina y fríelos en aceite a fuego suave hasta que se queden crujientes. Escúrrelos sobre un plato cubierto con papel absorbente. Sazona.",
+    "Ensarta, en cada palito de brocheta, 1 col de Bruselas, 1 tomate, 1 taco de beicon y 1 huevo. Sazónalas y colócalas sobre una placa de horno untada de aceite y hornéalas a 200 ºC durante 4-5 minutos.",
+    "Para la salsa, corta en daditos la cebolleta y ponla a pochar en una cazuelita con un chorrito de aceite. Agrega el curry y la nata líquida. Sazona. Deja que reduzca a fuego suave durante 4-5 minutos.",
+    "Sirve la salsa en el fondo de los platos, pon encima las brochetas y acompáñalas con la juliana de puerro frito. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Brochetas De Coles De Bruselas Con Salsa Curry",
+    "meta_description": "Retira las hojas externas de las coles de Bruselas. Cuécelas en una cazuela con abundante agua durante 8-10 minutos.",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

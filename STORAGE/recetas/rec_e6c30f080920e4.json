@@ -1,0 +1,78 @@
+{
+  "id": "rec_e6c30f080920e4",
+  "slug": "maruca-con-crema-de-acelgas",
+  "titulo": "Maruca Con Crema De Acelgas",
+  "resumen": "Limpia las acelgas y separa las pencas de las hojas verdes. Pica las hojas de las acelgas y cuécelas durante 15 minutos en una cazuela con agua, un chorrito de aceite y una pizca de sal. Tritura y reserva. Retira los hilos de las pencas y c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "maruca en filetes"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "acelgas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia las acelgas y separa las pencas de las hojas verdes. Pica las hojas de las acelgas y cuécelas durante 15 minutos en una cazuela con agua, un chorrito de aceite y una pizca de sal. Tritura y reserva. Retira los hilos de las pencas y córtalas en trozos de 3 centímetros. Cuécelas en una cazuela con una pizca de sal durante 15 minutos. Retíralas, escúrrelas y pásalas por harina y huevo batido. Fríelas en una sartén con aceite y escúrrelas sobre un plato cubierto con papel absorbente. Salpimienta los filetes de maruca y fríelos en una sartén con aceite y 3 dientes de ajo (sin pelar y aplastados). Retíralos y escúrrelos sobre un plato cubierto con papel absorbente. Sirve en cada plato un poco de crema de acelgas, un par de filetes de maruca y unas pencas rebozadas. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Maruca Con Crema De Acelgas",
+    "meta_description": "Limpia las acelgas y separa las pencas de las hojas verdes. Pica las hojas de las acelgas y cuécelas durante 15 minutos en una cazuela con agua, un chorrito de aceite y una pizca de sal. Tritura y reserva. Retira los hilos de las pencas y c",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

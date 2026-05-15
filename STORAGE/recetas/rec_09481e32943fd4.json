@@ -1,0 +1,148 @@
+{
+  "id": "rec_09481e32943fd4",
+  "slug": "sopa-de-tortilla",
+  "titulo": "Sopa De Tortilla",
+  "resumen": "Calienta un chorrito de aceite en una cazuela grande. Pica la cebolla, las cebolletas (con el tallo verde), el manojo de cilantro, el jalapeño y los ajos. Añádelos a la cazuela. Incorpora el pimentón, el orégano, el azúcar, sal y pimienta. ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "chile jalapeño"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de pollo"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "zumo de tomate"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "zumo de limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manojo de cilantro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "orégano seco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la guarnición:"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso mozzarella"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aguacate"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tortillas mexicanas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manojito de cilantro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    }
+  ],
+  "pasos": [
+    "Calienta un chorrito de aceite en una cazuela grande. Pica la cebolla, las cebolletas (con el tallo verde), el manojo de cilantro, el jalapeño y los ajos. Añádelos a la cazuela. Incorpora el pimentón, el orégano, el azúcar, sal y pimienta. Cocina la mezcla a fuego lento durante 10 minutos. Pela los tomates, córtalos en daditos y añádelos. Incorpora el zumo de tomate y el caldo de pollo. Cuando empiece a hervir, cocínalo durante 10-15 minutos más. Vierte el zumo de limón y retira la cazuela del fuego. Ralla el queso, corta el aguacate en daditos y pica el manojito de cilantro finamente. Reserva. Corta las tortillas en tiritas finas y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente. Corta el limón en rodajas. Sirve la sopa y acompáñala con las guarniciones."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Tortilla",
+    "meta_description": "Calienta un chorrito de aceite en una cazuela grande. Pica la cebolla, las cebolletas (con el tallo verde), el manojo de cilantro, el jalapeño y los ajos. Añádelos a la cazuela. Incorpora el pimentón, el orégano, el azúcar, sal y pimienta. ",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

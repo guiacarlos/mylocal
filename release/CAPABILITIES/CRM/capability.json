@@ -1,0 +1,13 @@
+{
+  "id": "CRM",
+  "version": "1.0.0",
+  "description": "Clientes (B2C/B2B), interacciones, etiquetas y segmentación básica.",
+  "depends_on": ["LOGIN", "OPTIONS"],
+  "collections": ["crm_contactos", "crm_interacciones"],
+  "actions": [
+    "crm_contacto_create", "crm_contacto_update", "crm_contacto_get",
+    "crm_contacto_list", "crm_contacto_delete",
+    "crm_interaccion_add", "crm_interaccion_list",
+    "crm_segmento_query"
+  ]
+}

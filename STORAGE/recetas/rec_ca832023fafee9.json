@@ -1,0 +1,106 @@
+{
+  "id": "rec_ca832023fafee9",
+  "slug": "fideos-de-arroz-con-pollo",
+  "titulo": "Fideos De Arroz Con Pollo",
+  "resumen": "Pela la zanahoria y el pimiento rojo y córtalos en tiras finas. Lava el pimiento verde y el calabacín y córtalos en tiras finas. Saltea las verduras en una sartén con un chorrito de aceite. Sazónalas y déjalas al dente. Añade los germinados",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "fideos de arroz"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "cintas de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "germinados de soja fresca"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tallo fino de cebolleta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela la zanahoria y el pimiento rojo y córtalos en tiras finas. Lava el pimiento verde y el calabacín y córtalos en tiras finas. Saltea las verduras en una sartén con un chorrito de aceite. Sazónalas y déjalas al dente. Añade los germinados de soja y saltéalos. Vierte la salsa de soja, remueve bien todos los ingredientes, pásalos a un bol y ponle una tapa. Deja que las verduras reposen un poco.",
+    "Salpimienta las tiras de pollo y saltéalas en la sartén con un chorrito de aceite. Espolvoréalas con perejil picado y agrégalas al bol de las verduras. Coloca la tapa.",
+    "Bate el huevo y haz una tortillita en la misma sartén. Trocéala e introdúcela en el bol. Coloca de nuevo la tapa.",
+    "Calienta en la sartén 300 mililitros de agua y añade los fideos. Cuécelos durante 3 minutos. Añádelos al bol y mezcla todo. Decora con una ramita de perejil y con el tallo de cebolleta picadito. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Fideos De Arroz Con Pollo",
+    "meta_description": "Pela la zanahoria y el pimiento rojo y córtalos en tiras finas. Lava el pimiento verde y el calabacín y córtalos en tiras finas. Saltea las verduras en una sartén con un chorrito de aceite. Sazónalas y déjalas al dente. Añade los germinados",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,118 @@
+{
+  "id": "rec_214308b7fb08e2",
+  "slug": "arroz-con-pollo-cerdo-y-langostinos",
+  "titulo": "Arroz Con Pollo, Cerdo Y Langostinos",
+  "resumen": "Salpimienta la costilla de cerdo y los trozos de pollo. Rehógalos en una paella con un chorrito de aceite. Corta el calamar en dados y añádelos. Pica finamente el puerro, el pimiento verde y los ajos e incorpóralos. Añade el arroz, rehógalo",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "pollo"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "costilla de cerdo"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "calamar (limpio)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "caldo para paella"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos del piquillo (en conserva)"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "guisantes (en conserva)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Salpimienta la costilla de cerdo y los trozos de pollo. Rehógalos en una paella con un chorrito de aceite. Corta el calamar en dados y añádelos. Pica finamente el puerro, el pimiento verde y los ajos e incorpóralos. Añade el arroz, rehógalo un poco, incorpora la salsa de tomate y vierte el caldo. Cuando empiece a hervir, cocínalo durante 8-10 minutos. Pela los langostinos sin quitarles las cabezas. Agrega los guisantes y los langostinos. Cocina todo durante 8 minutos más. Retira la paella del fuego, tápala con un paño limpio de cocina y deja que repose durante un par de minutos. Haz tiras con los pimientos del piquillo y colócalos por encima. Adorna con el limón y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Pollo, Cerdo Y Langostinos",
+    "meta_description": "Salpimienta la costilla de cerdo y los trozos de pollo. Rehógalos en una paella con un chorrito de aceite. Corta el calamar en dados y añádelos. Pica finamente el puerro, el pimiento verde y los ajos e incorpóralos. Añade el arroz, rehógalo",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,91 @@
+{
+  "id": "rec_d0682a3a43163b",
+  "slug": "rollitos-de-tortilla-con-queso-y-jamon",
+  "titulo": "Rollitos De Tortilla Con Queso Y Jamón",
+  "resumen": "Para hacer la salsa de pimientos, pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pela y pica la cebolla y añádela. Sazona y deja que se dore un poco. Incorpora la harina y cocínala. Pica los pimientos, añ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "queso"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de jamón"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer la salsa de pimientos, pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pela y pica la cebolla y añádela. Sazona y deja que se dore un poco. Incorpora la harina y cocínala. Pica los pimientos, añádelos y mezcla bien. Vierte un vaso de agua y cocínalos a fuego suave durante 15 minutos. Tritúralos con la batidora eléctrica y reserva la salsa.",
+    "Para hacer una tortilla (tipo crepe), vierte unas gotas de aceite en una sartén, añade 1 huevo batido con una pizca de sal y de perejil picado. Cuájala y dale la vuelta como si fuera un crepe. Repite el proceso con el resto de los huevos. Reserva las tortillas.",
+    "Corta el queso en bastones (reserva un trocito para rallar) y coloca encima de cada tortillita un bastón. Enróllalas y envuelve cada rollito con una loncha de jamón. Coloca los rollitos en una placa de horno cubierta con papel de hornear. Cúbrelos con el resto del queso rallado y gratínalos en el horno hasta que se doren.",
+    "Sirve la salsa de pimientos en el fondo de los platos y coloca encima las tortillas. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rollitos De Tortilla Con Queso Y Jamón",
+    "meta_description": "Para hacer la salsa de pimientos, pela y pica los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pela y pica la cebolla y añádela. Sazona y deja que se dore un poco. Incorpora la harina y cocínala. Pica los pimientos, añ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

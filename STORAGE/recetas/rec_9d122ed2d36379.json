@@ -1,0 +1,116 @@
+{
+  "id": "rec_9d122ed2d36379",
+  "slug": "arroz-con-muslos-de-codorniz",
+  "titulo": "Arroz Con Muslos De Codorniz",
+  "resumen": "Corta las codornices en trozos, sazónalas y dóralas en una cazuela con aceite. Lava los puerros, córtalos en cilindros y añádelos a la cazuela. Aplasta 3 ajos (con piel) y agrégalos. Incorpora la hoja de laurel. Rehoga todo bien. Cubre con ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "codornices"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "muslos de codorniz"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones grandes"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos de codorniz"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta las codornices en trozos, sazónalas y dóralas en una cazuela con aceite. Lava los puerros, córtalos en cilindros y añádelos a la cazuela. Aplasta 3 ajos (con piel) y agrégalos. Incorpora la hoja de laurel. Rehoga todo bien. Cubre con agua, pon a punto de sal y cuece durante unos 15 minutos aproximadamente. Cuela y reserva el caldo.",
+    "Pela la cebolleta, la zanahoria y los otros 2 dientes de ajo y pícalos finamente. Pon la verdura a pochar junto con los tallos de los champiñones bien picados (reserva las boinas) en una tartera con un chorrito de aceite.",
+    "Salpimienta los muslitos de codorniz y añádelos. Cocínalos durante 3-4 minutos para que se doren un poco. Cuando estén doraditos, añade el arroz y rehógalo un poco. Vierte el vino y dale un hervor. Añade el caldo (el doble que de arroz y un poco más) y cocina el arroz a fuego medio durante unos 18 minutos. Remuévelo de vez en cuando.",
+    "Cocina los champiñones en una sartén con un chorrito de aceite. Colócalos en una bandeja de horno, espolvoréalos con un poco de perejil picado y casca un huevo de codorniz dentro de cada uno. Sazónalos y hornéalos a 200 ºC durante 2 minutos. Colócalos encima del arroz y espolvorea todo con un poco de perejil picado. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Muslos De Codorniz",
+    "meta_description": "Corta las codornices en trozos, sazónalas y dóralas en una cazuela con aceite. Lava los puerros, córtalos en cilindros y añádelos a la cazuela. Aplasta 3 ajos (con piel) y agrégalos. Incorpora la hoja de laurel. Rehoga todo bien. Cubre con ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "rec_6c75d22dc64547",
+  "slug": "sopa-de-bacalao",
+  "titulo": "Sopa De Bacalao",
+  "resumen": "Pela y corta en dados 2 zanahorias. Corta también en dados 1 cebolla, 1 puerro y los ajos. Pon todo a rehogar en una cazuela con un chorrito de aceite. Añade la cabeza del bacalao, las espinas y las pieles (reserva los lomos). Cubre con agu",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "bacalao (1.200 g)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pan de sopa"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y corta en dados 2 zanahorias. Corta también en dados 1 cebolla, 1 puerro y los ajos. Pon todo a rehogar en una cazuela con un chorrito de aceite. Añade la cabeza del bacalao, las espinas y las pieles (reserva los lomos). Cubre con agua, sazona y cuece durante 30 minutos. Cuela y reserva el fumet. Pela y pica la otra cebolla, las otras 2 zanahorias y el otro puerro. Ponlos a pochar en una cazuela con un chorrito de aceite. Sazona. Vierte el vino y dale un hervor. Incorpora la salsa de tomate y el fumet. Cocina durante 15 minutos. Con un cuchillo de sierra, pica el pan finamente y añádelo. Cuece durante 10 minutos más. Corta los trozos de bacalao en dados. Salpimiéntalos y saltéalos en una sartén con un chorrito de aceite. Incorpóralos a la sopa, pon a punto de sal, espolvorea con perejil picado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Bacalao",
+    "meta_description": "Pela y corta en dados 2 zanahorias. Corta también en dados 1 cebolla, 1 puerro y los ajos. Pon todo a rehogar en una cazuela con un chorrito de aceite. Añade la cabeza del bacalao, las espinas y las pieles (reserva los lomos). Cubre con agu",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

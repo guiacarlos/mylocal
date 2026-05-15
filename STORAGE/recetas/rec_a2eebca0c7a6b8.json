@@ -1,0 +1,93 @@
+{
+  "id": "rec_a2eebca0c7a6b8",
+  "slug": "ajoarriero-con-bogavante",
+  "titulo": "Ajoarriero Con Bogavante",
+  "resumen": "Pela 2 dientes de ajo y la cebolla y pícalos finamente. Ponlos a pochar en una cazuela con un chorrito de aceite. Agrega el tomate triturado y cocínalo durante 20 minutos. Sazona. Pásalo por el pasapurés y reserva. Pela y lamina los otros 5",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "bacalao desmigado desalado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "bogavante de 800 g"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "tomate triturado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela 2 dientes de ajo y la cebolla y pícalos finamente. Ponlos a pochar en una cazuela con un chorrito de aceite. Agrega el tomate triturado y cocínalo durante 20 minutos. Sazona. Pásalo por el pasapurés y reserva. Pela y lamina los otros 5 dientes de ajo. Corta en dados las cebolletas y el pimiento verde. Pon todo a pochar en una cazuela grande con un chorrito de aceite. Sazona. Cuando la verdura esté casi pochada, agrega los pimientos del piquillo troceados y el bacalao. Incorpora la salsa de tomate y mezcla bien. Deja cocinar durante 5 minutos. Trocea el bogavante y cocínalo en una sartén con un chorrito de aceite. Sirve el ajoarriero con el bogavante y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ajoarriero Con Bogavante",
+    "meta_description": "Pela 2 dientes de ajo y la cebolla y pícalos finamente. Ponlos a pochar en una cazuela con un chorrito de aceite. Agrega el tomate triturado y cocínalo durante 20 minutos. Sazona. Pásalo por el pasapurés y reserva. Pela y lamina los otros 5",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

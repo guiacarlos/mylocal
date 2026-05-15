@@ -1,0 +1,83 @@
+{
+  "id": "rec_0c6b2d395b3ce3",
+  "slug": "huevos-escalfados-a-la-florentina",
+  "titulo": "Huevos Escalfados A La Florentina",
+  "resumen": "Cuece las espinacas en una cazuela con agua y una pizca de sal. Escúrrelas bien y pícalas. Prepara una salsa bechamel: pon dos cucharadas de aceite en una sartén, añade la harina, rehógala brevemente y vierte la leche poco a poco y sin deja",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso manchego tierno"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Cuece las espinacas en una cazuela con agua y una pizca de sal. Escúrrelas bien y pícalas. Prepara una salsa bechamel: pon dos cucharadas de aceite en una sartén, añade la harina, rehógala brevemente y vierte la leche poco a poco y sin dejar de remover hasta que espese. Sazona, espolvoréala con un poco de perejil picado y cocínala durante 6-8 minutos más. Pon agua a hervir en una cazuela amplia y baja. Baja la temperatura del agua y agrega el vinagre. Casca los huevos cuidadosamente sobre la cazuela, escálfalos durante 2-3 minutos y retíralos. Coloca las espinacas formando 4 nidos en una fuente que resista el calor del horno. Coloca sobre cada nido 1 huevo escalfado. Cúbrelos con la salsa bechamel. Espolvoréalos con el queso recién rallado y gratínalos en el horno durante 2-3 minutos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevos Escalfados A La Florentina",
+    "meta_description": "Cuece las espinacas en una cazuela con agua y una pizca de sal. Escúrrelas bien y pícalas. Prepara una salsa bechamel: pon dos cucharadas de aceite en una sartén, añade la harina, rehógala brevemente y vierte la leche poco a poco y sin deja",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

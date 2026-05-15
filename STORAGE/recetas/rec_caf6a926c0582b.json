@@ -1,0 +1,113 @@
+{
+  "id": "rec_caf6a926c0582b",
+  "slug": "menestra-de-invierno",
+  "titulo": "Menestra De Invierno",
+  "resumen": "Separa la coliflor en ramilletes y colócalos en el accesorio para cocer al vapor. Pela las zanahorias, córtalas en rodajitas y añádelas. Retira las primeras hojas a las coles de Bruselas y añádelas. Sazona y cuece las verduras al vapor dura",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "coles de Bruselas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "coliflor"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "acelga"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos de codorniz"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Separa la coliflor en ramilletes y colócalos en el accesorio para cocer al vapor. Pela las zanahorias, córtalas en rodajitas y añádelas. Retira las primeras hojas a las coles de Bruselas y añádelas. Sazona y cuece las verduras al vapor durante 10 minutos aproximadamente.",
+    "Pela las alcachofas y cuécelas en una cazuela con agua y una pizca de sal durante 15-18 minutos. Colócalas boca abajo sobre un plato cubierto con papel absorbente. Reserva también el agua de cocción de las alcachofas.",
+    "Separa las pencas de las hojas de acelga (reserva las hojas para hacer un puré). Corta las pencas en trozos de 4-5 centímetros y retírales los hilos. Cuécelas en un cazo con agua y una pizca de sal durante 15 minutos. Escúrrelas y sécalas bien con papel absorbente. Pasa las pencas por harina y huevo batido y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto de papel absorbente.",
+    "Pela y lamina los ajos. Ponlos a rehogar en una tartera con un chorrito de aceite. Pela la cebolleta, córtala en daditos y añádelos. Rehoga todo un poco.",
+    "Corta el jamón en daditos, agrégalos y rehógalos brevemente. Incorpora la harina, rehógala un poco y vierte un poco del líquido de cocción de las alcachofas reservado. Introduce en la tartera las verduras (pencas rebozadas, coliflor, zanahorias, alcachofas y coles de Bruselas) y cocina todo durante 3-4 minutos.",
+    "Casca los huevos de codorniz y añádelos. Deja que se cocinen con el calor de las verduras. Pon a punto de sal y espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Menestra De Invierno",
+    "meta_description": "Separa la coliflor en ramilletes y colócalos en el accesorio para cocer al vapor. Pela las zanahorias, córtalas en rodajitas y añádelas. Retira las primeras hojas a las coles de Bruselas y añádelas. Sazona y cuece las verduras al vapor dura",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

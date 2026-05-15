@@ -1,0 +1,103 @@
+{
+  "id": "rec_c4e3652c722f78",
+  "slug": "pastel-de-macarrones",
+  "titulo": "Pastel De Macarrones",
+  "resumen": "Pon a cocer los macarrones en una cacerola con abundante agua hirviendo y una pizca de sal. Cuando estén cocidos, escúrrelos, refréscalos y repártelos en dos boles. Para hacer la crema, casca los huevos en un vaso batidor. Vierte la leche y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "macarrones"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas gruesas de jamón"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "-4 cucharadas de salsa de tomate"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yogur natural"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso curado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon a cocer los macarrones en una cacerola con abundante agua hirviendo y una pizca de sal. Cuando estén cocidos, escúrrelos, refréscalos y repártelos en dos boles. Para hacer la crema, casca los huevos en un vaso batidor. Vierte la leche y el yogur. Salpimienta y bate con la batidora eléctrica. Resérvala. Vierte la salsa de tomate y la mitad de la crema (reserva la otra mitad en el vaso batidor) en uno de los boles de macarrones. Mezcla bien y pasa los macarrones a un molde cubierto con papel de horno. Hornéalos a 180 ºC durante 6-8 minutos. Reserva los macarrones horneados en el molde. Limpia las espinacas, pícalas y añádelas a la crema reservada en el vaso batidor. Tritura con la batidora eléctrica y vierte la crema al otro bol de macarrones. Mezcla bien y reserva los macarrones con la crema de espinacas. Pela y pica las cebollas y dóralas en una cazuela con un chorrito de aceite. Sazona. Pica el jamón, añádelo y rehógalo. Retira el exceso de aceite y coloca el salteado encima de los macarrones horneados. Sobre el jamón y la cebolla, coloca los macarrones con la salsa de espinacas. Añade el queso rallado y hornea todo a 180 ºC durante 20-25 minutos. Retira el papel de horno y corta el pastel en porciones como si fuera una tarta. Sirve en un plato una ración de pastel y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pastel De Macarrones",
+    "meta_description": "Pon a cocer los macarrones en una cacerola con abundante agua hirviendo y una pizca de sal. Cuando estén cocidos, escúrrelos, refréscalos y repártelos en dos boles. Para hacer la crema, casca los huevos en un vaso batidor. Vierte la leche y",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

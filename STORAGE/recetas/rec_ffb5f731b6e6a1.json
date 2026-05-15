@@ -1,0 +1,82 @@
+{
+  "id": "rec_ffb5f731b6e6a1",
+  "slug": "risotto-de-gambas-al-aroma-de-tomate",
+  "titulo": "Risotto De Gambas Al Aroma De Tomate",
+  "resumen": "Corta 8 ajos frescos en cilindros y rehógalos en una cazuela con un chorrito de aceite. Pela las gambas, resérvalas e incorpora las cabezas y las cáscaras a la cazuela. Rehoga brevemente a fuego fuerte y añade 1.600 mililitros de agua. Sazo",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "36",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates secos en aceite"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "queso Idiazábal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta 8 ajos frescos en cilindros y rehógalos en una cazuela con un chorrito de aceite. Pela las gambas, resérvalas e incorpora las cabezas y las cáscaras a la cazuela. Rehoga brevemente a fuego fuerte y añade 1.600 mililitros de agua. Sazona, cuece todo durante 15 minutos y cuélalo.",
+    "Coloca los tomates y 4 ajos frescos troceados en un vaso batidor. Añade un buen chorro de aceite y tritura. Cuela la mezcla y resérvala.",
+    "Pica el resto de los ajos frescos y rehógalos en una cazuela (amplia y plana) con un chorrito de aceite. Agrega el arroz, sazona, rehógalo un poco y vierte el caldo (1.200 ml) poco a poco. Remuévelo de vez en cuando para que vaya soltando la fécula. Cocínalo durante 17 minutos.",
+    "Vierte el aceite de tomate seco y ajo fresco y mezcla bien. Ralla el queso y agrégalo. Remueve bien hasta que se funda.",
+    "Cocina las gambas a la plancha. Sazónalas y colócalas encima. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Risotto De Gambas Al Aroma De Tomate",
+    "meta_description": "Corta 8 ajos frescos en cilindros y rehógalos en una cazuela con un chorrito de aceite. Pela las gambas, resérvalas e incorpora las cabezas y las cáscaras a la cazuela. Rehoga brevemente a fuego fuerte y añade 1.600 mililitros de agua. Sazo",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "id": "rec_99fb18c761c6a7",
+  "slug": "tarta-de-chocolate-y-platano",
+  "titulo": "Tarta De Chocolate Y Plátano",
+  "resumen": "Machaca las galletas en el mortero y colócalas en un bol. Agrega 40 gramos de mantequilla fundida y mezcla bien. Coloca un molde cuadrado (tipo cortapastas) sobre un plato. Cubre el fondo del molde con la mezcla de galletas y mantequilla, a",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "chocolate de cobertura"
+    },
+    {
+      "cantidad": "90",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "35",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "galletas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Machaca las galletas en el mortero y colócalas en un bol. Agrega 40 gramos de mantequilla fundida y mezcla bien. Coloca un molde cuadrado (tipo cortapastas) sobre un plato. Cubre el fondo del molde con la mezcla de galletas y mantequilla, aplastándola con la mano. Introdúcelo en el frigorífico hasta que endurezca. Trocea el chocolate y ponlo en un bol. Pon a calentar en un cazo la nata y el azúcar. Cuando hierva, vierte la nata azucarada sobre el chocolate. Remueve bien hasta que el chocolate se funda por completo. Agrega el resto de la mantequilla y sigue removiendo hasta que todos los ingredientes queden perfectamente integrados. Vierte la mezcla sobre la galleta y deja que se enfríe en el frigorífico durante 2 horas aproximadamente. Desmolda. Pela el plátano, córtalo en rodajas y colócalas encima. Sirve y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Chocolate Y Plátano",
+    "meta_description": "Machaca las galletas en el mortero y colócalas en un bol. Agrega 40 gramos de mantequilla fundida y mezcla bien. Coloca un molde cuadrado (tipo cortapastas) sobre un plato. Cubre el fondo del molde con la mezcla de galletas y mantequilla, a",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,88 @@
+{
+  "id": "rec_4016cec4c8f4f8",
+  "slug": "cola-de-merluza-rellena",
+  "titulo": "Cola De Merluza Rellena",
+  "resumen": "Saca los 2 lomos de la merluza y reserva la espina central. Corta cada lomo en 4 trozos. Reserva los 8 trozos y sazónalos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cola de merluza (700 g)"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Saca los 2 lomos de la merluza y reserva la espina central. Corta cada lomo en 4 trozos. Reserva los 8 trozos y sazónalos.",
+    "Para hacer el fumet, pela las gambas y resérvalas. Coloca las cabezas, las cáscaras de las gambas y la espina de la merluza en un cazo con un poco de agua. Sazona y cuece todo durante 10-15 minutos. Cuela y reserva.",
+    "Coloca 6 gambas sobre 4 de los trozos de merluza y tápalos con los otros 4 trozos. Ata cada porción con cuerda de cocina. Unta el fondo de una bandeja apta para horno con aceite y coloca encima los trozos de merluza rellenos. Rocía cada uno con aceite y vierte por encima el vino blanco y unos cacitos de fumet. Hornéalos a 220 ºC durante 5-7 minutos.",
+    "Para tornear las patatas y las zanahorias, córtalas en rectángulos (4 cm x 2 cm) y, con una puntilla, redondea las esquinas. Cuécelas durante 15 minutos en un cazo con agua hirviendo y una pizca de sal. Escúrrelas y saltéalas en una sartén con un chorrito de aceite. Espolvoréalas con un poco de perejil picado.",
+    "Retira los trozos de merluza, colócalos en una fuente y quítales la cuerda. Pasa el líquido que han soltado a una sartén y deja que reduzca un poco. Diluye la harina de maíz en agua fría y añádela a la sartén. Cocínala sin dejar de remover hasta que ligue.",
+    "Sirve, en cada plato, una porción de merluza con su guarnición. Salsea y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cola De Merluza Rellena",
+    "meta_description": "Saca los 2 lomos de la merluza y reserva la espina central. Corta cada lomo en 4 trozos. Reserva los 8 trozos y sazónalos.",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

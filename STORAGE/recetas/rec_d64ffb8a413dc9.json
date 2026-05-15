@@ -1,0 +1,78 @@
+{
+  "id": "rec_d64ffb8a413dc9",
+  "slug": "magdalenas-de-chocolate-y-leche-condensada",
+  "titulo": "Magdalenas De Chocolate Y Leche Condensada",
+  "resumen": "Casca los huevos en un cuenco y móntalos con una varilla eléctrica o a mano. Añade poco a poco el aceite e incorpora la leche condensada sin dejar de batir. Agrega la ralladura de limón. Mezcla la levadura con la harina tamizada y añade a l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 12,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "140",
+      "unidad": "g",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "chocolate de cobertura"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de ½ limón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "sobre de levadura en polvo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta y frutos rojos (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Casca los huevos en un cuenco y móntalos con una varilla eléctrica o a mano. Añade poco a poco el aceite e incorpora la leche condensada sin dejar de batir. Agrega la ralladura de limón. Mezcla la levadura con la harina tamizada y añade a la mezcla anterior. Mezcla bien todo y coloca en una manga pastelera. Coloca los moldes para magdalenas sobre una bandeja apta para horno y rellénalos hasta la mitad. Ralla el chocolate y espolvoréalo sobre las magdalenas. Hornéalas a 200 ºC durante 15-20 minutos. Retira del horno y sirve. Decora con hojas de menta y frutos rojos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Magdalenas De Chocolate Y Leche Condensada",
+    "meta_description": "Casca los huevos en un cuenco y móntalos con una varilla eléctrica o a mano. Añade poco a poco el aceite e incorpora la leche condensada sin dejar de batir. Agrega la ralladura de limón. Mezcla la levadura con la harina tamizada y añade a l",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

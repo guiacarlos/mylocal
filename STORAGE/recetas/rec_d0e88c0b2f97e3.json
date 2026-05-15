@@ -1,0 +1,113 @@
+{
+  "id": "rec_d0e88c0b2f97e3",
+  "slug": "pizza-de-espinacas-y-chorizo",
+  "titulo": "Pizza De Espinacas Y Chorizo",
+  "resumen": "Pon 350 gramos de harina en un bol y añade la sal. Haz un hueco en el centro y agrega el agua, el aceite y la levadura. Sazona y amasa todo bien hasta obtener una masa homogénea y compacta que no se pegue en las manos. Deja que la masa repo",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "chorizo"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso mozzarella"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "dátiles"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "aceitunas verdes"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "harina + 50 para estirar"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon 350 gramos de harina en un bol y añade la sal. Haz un hueco en el centro y agrega el agua, el aceite y la levadura. Sazona y amasa todo bien hasta obtener una masa homogénea y compacta que no se pegue en las manos. Deja que la masa repose durante 30 minutos. Divide la masa en 2 trozos. Espolvorea con harina una superficie lisa y coloca encima una porción de masa. Trabájala un poco y estírala con ayuda del rodillo hasta que quede a tu gusto. Repite el proceso con el otro trozo de masa. Coloca las masas sobre 2 bandejas de horno cubiertas con papel de hornear. Cubre las masas con la salsa de tomate. Retira el hueso a los dátiles, trocéalos y saltéalos en una sartén con un chorrito de aceite. Incorpora las espinacas y saltea el conjunto. Reparte los dátiles con las espinacas sobre las 2 pizzas y distribuye encima el queso cortado en dados. Añade el chorizo y las aceitunas troceadas. Hornéalas a 180 ºC durante 25 minutos aproximadamente. Decora con una ramita de perejil y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pizza De Espinacas Y Chorizo",
+    "meta_description": "Pon 350 gramos de harina en un bol y añade la sal. Haz un hueco en el centro y agrega el agua, el aceite y la levadura. Sazona y amasa todo bien hasta obtener una masa homogénea y compacta que no se pegue en las manos. Deja que la masa repo",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

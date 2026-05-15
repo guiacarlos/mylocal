@@ -1,0 +1,82 @@
+{
+  "id": "rec_49104fcd6d1f1b",
+  "slug": "morcilla-dulce",
+  "titulo": "Morcilla Dulce",
+  "resumen": "Abre la fruta de la pasión, saca la pulpa y colócala en un bol. Añade un chorrito de aceite y mezcla. Reserva. Coloca las galletas en el mortero y májalas hasta que queden casi reducidas a polvo. Resérvalas en un bol. Pela y aplasta el plát",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 7,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "galletas (tipo María)"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "arroz inflado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "chocolate negro"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "fruta de la pasión"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Abre la fruta de la pasión, saca la pulpa y colócala en un bol. Añade un chorrito de aceite y mezcla. Reserva. Coloca las galletas en el mortero y májalas hasta que queden casi reducidas a polvo. Resérvalas en un bol. Pela y aplasta el plátano y resérvalo.",
+    "Pon un bol al baño maría con el chocolate y la mantequilla. Remueve hasta que se fundan.",
+    "Incorpora en el bol del chocolate el arroz inflado, el plátano y el polvo de galleta. Mezcla todo bien y amasa la mezcla a mano.",
+    "Corta dos trozos grandes de film transparente y reparte la mezcla sobre ellos. Ciérralos dándoles forma de morcilla. Introduce las morcillas en el frigorífico durante unas 3-4 horas aproximadamente.",
+    "Retírales el film y córtalas en rodajas. Sirve y decora con la fruta de la pasión y unas hojitas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Morcilla Dulce",
+    "meta_description": "Abre la fruta de la pasión, saca la pulpa y colócala en un bol. Añade un chorrito de aceite y mezcla. Reserva. Coloca las galletas en el mortero y májalas hasta que queden casi reducidas a polvo. Resérvalas en un bol. Pela y aplasta el plát",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "id": "rec_5038009eeac5c0",
+  "slug": "tartaletas-de-avena-con-verduras-y-queso",
+  "titulo": "Tartaletas De Avena Con Verduras Y Queso",
+  "resumen": "Mezcla en un cuenco los copos de avena, la harina, el aceite, el agua y una pizca de sal. Amasa hasta que quede una masa compacta. Deja que repose durante una hora. Corta la masa en 4 trozos, redondéalos y estíralos con el rodillo. Coloca l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "copos de avena"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Mezcla en un cuenco los copos de avena, la harina, el aceite, el agua y una pizca de sal. Amasa hasta que quede una masa compacta. Deja que repose durante una hora. Corta la masa en 4 trozos, redondéalos y estíralos con el rodillo. Coloca la masa, presionándola suavemente, sobre los moldes de tartaleta. Retira los bordes sobrantes. Corta 4 círculos de papel de hornear de la medida del interior de las tartaletas y coloca uno sobre cada tartaleta. Rellénalas con garbanzos (de esta manera la masa no se inflará durante el horneado). Hornéalas durante 20-25 minutos a 180 ºC. Desmolda las tartaletas y retira tanto los garbanzos como el papel de horno. Resérvalas.",
+    "Pela los dientes de ajo y la cebolla, córtalos en daditos y ponlos a pochar en una tartera con un chorrito de aceite. Añade el pimiento verde, el rojo y el calabacín, todo finamente picado. Sazona y cocina todo durante 15 minutos a fuego moderado. Una vez pochados, pela y trocea el tomate y añádelo. Cocina todo durante otros 5 minutos. Con ayuda de un colador, escurre las verduras.",
+    "Corta el queso en daditos y coloca la mitad en el fondo de las tartaletas. Rellena con el pisto y pon el queso restante por encima.",
+    "Sirve una tartaleta por ración y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tartaletas De Avena Con Verduras Y Queso",
+    "meta_description": "Mezcla en un cuenco los copos de avena, la harina, el aceite, el agua y una pizca de sal. Amasa hasta que quede una masa compacta. Deja que repose durante una hora. Corta la masa en 4 trozos, redondéalos y estíralos con el rodillo. Coloca l",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

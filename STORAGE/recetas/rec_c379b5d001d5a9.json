@@ -1,0 +1,73 @@
+{
+  "id": "rec_c379b5d001d5a9",
+  "slug": "anchoas-con-tomate",
+  "titulo": "Anchoas Con Tomate",
+  "resumen": "Limpia las anchoas, retirándoles las cabezas y las vísceras. Pela las cebollas y los tomates y córtalos en dados. Pon las cebollas a pochar en una sartén con un chorrito de aceite. Cuando cojan color, incorpora los tomates, sazona y cocínal",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "anchoas frescas (boquerones)"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates grandes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón (dulce o picante)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia las anchoas, retirándoles las cabezas y las vísceras. Pela las cebollas y los tomates y córtalos en dados. Pon las cebollas a pochar en una sartén con un chorrito de aceite. Cuando cojan color, incorpora los tomates, sazona y cocínalos a fuego suave durante 30 minutos. Coloca la mitad del sofrito en la base de un recipiente apto para el horno. Sazona las anchoas, colócalas encima y espolvoréalas con el pimentón. Cúbrelas con el resto del sofrito y espolvoréalo con un poco de perejil picado. Hornea las anchoas con tomate a 180 ºC durante 5 minutos y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Anchoas Con Tomate",
+    "meta_description": "Limpia las anchoas, retirándoles las cabezas y las vísceras. Pela las cebollas y los tomates y córtalos en dados. Pon las cebollas a pochar en una sartén con un chorrito de aceite. Cuando cojan color, incorpora los tomates, sazona y cocínal",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

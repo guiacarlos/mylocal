@@ -1,0 +1,99 @@
+{
+  "id": "rec_2453443f139ed0",
+  "slug": "hamburguesas-de-garbanzos-y-polenta",
+  "titulo": "Hamburguesas De Garbanzos Y Polenta",
+  "resumen": "Pasa los garbanzos por el pasapurés. Reserva el puré.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "garbanzos (cocidos)"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "polenta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta rallada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria rallada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "escarola"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "sésamo blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pasa los garbanzos por el pasapurés. Reserva el puré.",
+    "Pon a hervir el agua con una pizca de sal. Cuando empiece a hervir, añade la polenta y remueve bien. Cuando empiece a espesar, añade el puré de garbanzos. Incorpora la zanahoria y la cebolleta. Mezcla bien y cocina el conjunto durante 3-4 minutos sin parar de remover. Pon a punto de sal. Extiende la mezcla en una bandeja y deja reposar 1 hora para que endurezca.",
+    "Tuesta el sésamo en una sartén y añade el perejil picado. Reserva.",
+    "Trocea la escarola en un bol y reserva.",
+    "Desmolda la mezcla de polenta y garbanzos y, con ayuda de un cortapastas, saca 12 hamburguesas. Con los recortes que sobran puedes formar bolitas y hacer unas croquetas.",
+    "Fríe las hamburguesas en una sartén con muy poco aceite.",
+    "Sirve las hamburguesas y espolvoréalas con la mezcla de sésamo y perejil. Acompáñalas con la ensalada de escarola aliñada con sal, aceite y vinagre."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hamburguesas De Garbanzos Y Polenta",
+    "meta_description": "Pasa los garbanzos por el pasapurés. Reserva el puré.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

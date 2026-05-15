@@ -1,0 +1,98 @@
+{
+  "id": "rec_f3f0a866d76934",
+  "slug": "codillo-con-repollo",
+  "titulo": "Codillo Con Repollo",
+  "resumen": "Pon los codillos en la olla rápida. Agrega los clavos y la cabeza de ajos (cortada por la mitad). Cúbrelos con 250 mililitros de cerveza y la misma cantidad de agua. Sazona, tapa y cuécelos durante 40 minutos. Pon en un cazo el resto de la ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "codillos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "cerveza"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "repollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cabeza de ajos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza antigua"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cl",
+      "nombre": "avos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon los codillos en la olla rápida. Agrega los clavos y la cabeza de ajos (cortada por la mitad). Cúbrelos con 250 mililitros de cerveza y la misma cantidad de agua. Sazona, tapa y cuécelos durante 40 minutos. Pon en un cazo el resto de la cerveza y la miel. Pon al fuego y deja que reduzca un poco. Lava la patata, colócala en un recipiente apto para el horno y riégala con un chorrito de aceite. Pon los codillos en otra bandeja apta para el horno. Úntalos con la reducción de cerveza y miel. Hornea la patata y los codillos a 200 ºC durante 30 minutos. Corta el repollo en juliana fina y saltéalo en una sartén con un chorrito de aceite. Salpimiéntalo y cocínalo durante unos 10-15 minutos. Añade la patata pelada y aplastada y la mostaza. Mezcla bien. Sirve el repollo con los codillos y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Codillo Con Repollo",
+    "meta_description": "Pon los codillos en la olla rápida. Agrega los clavos y la cabeza de ajos (cortada por la mitad). Cúbrelos con 250 mililitros de cerveza y la misma cantidad de agua. Sazona, tapa y cuécelos durante 40 minutos. Pon en un cazo el resto de la ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

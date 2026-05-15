@@ -1,0 +1,93 @@
+{
+  "id": "rec_f6c9e847ed95ec",
+  "slug": "congrio-al-azafran",
+  "titulo": "Congrio Al Azafrán",
+  "resumen": "Corta los ajos en láminas, y la cebolleta y el pimiento en dados. Ponlos a rehogar en una cazuela con un chorrito de aceite. Cuando se doren un poco, añade el tomate pelado y cortado en dados. Rehógalo durante 5 minutos. Sazona el congrio, ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "rodajas de congrio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "caldo de pescado"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "unas hebras de azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil y sal"
+    }
+  ],
+  "pasos": [
+    "Corta los ajos en láminas, y la cebolleta y el pimiento en dados. Ponlos a rehogar en una cazuela con un chorrito de aceite. Cuando se doren un poco, añade el tomate pelado y cortado en dados. Rehógalo durante 5 minutos. Sazona el congrio, pásalo por harina y colócalo sobre la verdura pochada. Espolvoréalo con el azafrán y agrega el vino blanco y el caldo de pescado. Cocina el congrio durante 2-3 minutos por cada lado. Sirve y adorna con unas hojas de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Congrio Al Azafrán",
+    "meta_description": "Corta los ajos en láminas, y la cebolleta y el pimiento en dados. Ponlos a rehogar en una cazuela con un chorrito de aceite. Cuando se doren un poco, añade el tomate pelado y cortado en dados. Rehógalo durante 5 minutos. Sazona el congrio, ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_00387cae755b75",
+  "slug": "tartitas-de-frutas",
+  "titulo": "Tartitas De Frutas",
+  "resumen": "Tritura las galletas y ponlas en un bol. Derrite la mantequilla en el microondas, agrégala al bol y mezcla bien. Reserva. Pon la gelatina en un bol con agua fría hasta que se ablande. Calienta la nata, introduce en ella las hojas de gelatin",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "galletas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "g",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "525",
+      "unidad": "g",
+      "nombre": "queso fresco tipo quark"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 2 limas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "fresas, arándanos, frambuesas y nueces"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Tritura las galletas y ponlas en un bol. Derrite la mantequilla en el microondas, agrégala al bol y mezcla bien. Reserva. Pon la gelatina en un bol con agua fría hasta que se ablande. Calienta la nata, introduce en ella las hojas de gelatina y mezcla bien hasta que se fundan. Mezcla el queso y la leche condensada en un bol. Incorpora la nata con gelatina y la ralladura de las limas y remueve bien. Forra con film transparente el fondo de 4 moldes (o aros) de metal de ración (poniendo el papel por el exterior). Reparte la mezcla anterior entre los moldes. Introdúcelos en el frigorífico y deja que reposen hasta que endurezcan. Desmolda y adorna los platos con las migas de galleta, las fresas, las frambuesas, los arándanos y las nueces. Decora con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tartitas De Frutas",
+    "meta_description": "Tritura las galletas y ponlas en un bol. Derrite la mantequilla en el microondas, agrégala al bol y mezcla bien. Reserva. Pon la gelatina en un bol con agua fría hasta que se ablande. Calienta la nata, introduce en ella las hojas de gelatin",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

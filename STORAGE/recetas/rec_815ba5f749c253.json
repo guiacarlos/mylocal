@@ -1,0 +1,133 @@
+{
+  "id": "rec_815ba5f749c253",
+  "slug": "pan-de-jamon-con-queso-y-aceitunas-alinadas",
+  "titulo": "Pan De Jamón Con Queso Y Aceitunas Aliñadas",
+  "resumen": "Aplasta un poco las aceitunas y ponlas en un bol. Agrega un chorro de aceite de oliva, el vinagre, el pimentón y la cebolla cortada en trozos grandes. Deja que maceren 1 hora como mínimo. Pon 125 mililitros de aceite en un cazo. Añade los a",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "jamón cocido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "queso camembert (250 g)"
+    },
+    {
+      "cantidad": "225",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "tomates secos en aceite"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "piñones tostados"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para las aceitunas aliñadas:"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    }
+  ],
+  "pasos": [
+    "Aplasta un poco las aceitunas y ponlas en un bol. Agrega un chorro de aceite de oliva, el vinagre, el pimentón y la cebolla cortada en trozos grandes. Deja que maceren 1 hora como mínimo. Pon 125 mililitros de aceite en un cazo. Añade los ajos enteros y machacados. Agrega también la rama de tomillo. Calienta el aceite a fuego suave durante unos 5 minutos, cuélalo y resérvalo. Unta un molde con un poco de aceite y espolvoréalo con un poco de harina. Bate los huevos en un bol, sazona y agrega el aceite aromatizado y el agua. Añade la harina y la levadura tamizadas. Pica los tomates y el jamón e incorpóralos. Agrega los piñones, mezcla bien y pasa la masa al molde. Hornea a 180 ºC durante 45 minutos. Retira el plástico que envuelve el queso y colócalo de nuevo en su propio envase de madera. Hazle unos cortes en la parte superior y caliéntalo en el horno durante 5 minutos aproximadamente. Sirve el pan con el queso y las aceitunas aliñadas. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pan De Jamón Con Queso Y Aceitunas Aliñadas",
+    "meta_description": "Aplasta un poco las aceitunas y ponlas en un bol. Agrega un chorro de aceite de oliva, el vinagre, el pimentón y la cebolla cortada en trozos grandes. Deja que maceren 1 hora como mínimo. Pon 125 mililitros de aceite en un cazo. Añade los a",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

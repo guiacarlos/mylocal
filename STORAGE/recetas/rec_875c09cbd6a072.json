@@ -1,0 +1,98 @@
+{
+  "id": "rec_875c09cbd6a072",
+  "slug": "leche-frita",
+  "titulo": "Leche Frita",
+  "resumen": "Coloca una cazuela al fuego y añade la rama de canela, la vaina de vainilla y el anís estrellado. Agrega 400 mililitros de leche, un trozo de corteza de lima y otro de naranja. Calienta la leche a fuego suave sin dejar de remover con la var",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ima"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "naranja"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "anís estrellado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "canela en polvo y azúcar en grano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca una cazuela al fuego y añade la rama de canela, la vaina de vainilla y el anís estrellado. Agrega 400 mililitros de leche, un trozo de corteza de lima y otro de naranja. Calienta la leche a fuego suave sin dejar de remover con la varilla. En un bol, mezcla con una varilla el azúcar y la harina de maíz refinada. Vierte el resto de la leche y remueve bien. Cuela la leche caliente de la cazuela sobre el bol y mezcla bien. Vuelve a colocar todo en la misma cazuela y cocina (sin dejar de remover) hasta que espese. Pasa la masa a un recipiente y deja que se enfríe. Córtala en trozos. Pásalos por harina y huevo batido y fríelos en una sartén con aceite caliente. Escúrrelos sobre un plato cubierto con papel absorbente. Mezcla la canela en polvo y el azúcar en grano y espolvorea con la mezcla el fondo de una fuente. Coloca encima la leche frita y espolvoréala con un poco más de la mezcla de azúcar y canela. Decora con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Leche Frita",
+    "meta_description": "Coloca una cazuela al fuego y añade la rama de canela, la vaina de vainilla y el anís estrellado. Agrega 400 mililitros de leche, un trozo de corteza de lima y otro de naranja. Calienta la leche a fuego suave sin dejar de remover con la var",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

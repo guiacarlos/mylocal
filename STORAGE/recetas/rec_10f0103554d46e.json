@@ -1,0 +1,107 @@
+{
+  "id": "rec_10f0103554d46e",
+  "slug": "alubias-blancas-con-calabaza-y-panceta",
+  "titulo": "Alubias Blancas Con Calabaza Y Panceta",
+  "resumen": "Pon las alubias a remojo la víspera. Escúrrelas y ponlas en la olla rápida. Cúbrelas con agua.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "alubias blancas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "panceta fresca"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "hinojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "comino molido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "orégano en polvo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las alubias a remojo la víspera. Escúrrelas y ponlas en la olla rápida. Cúbrelas con agua.",
+    "Retira la primera capa de la cebolleta y del hinojo y córtalos por la mitad. Pela la zanahoria y córtala por la mitad. Pela los ajos. Añade las verduras a la olla. Sazona, vierte un chorrito de aceite y pon la tapa. Cuece todo durante 15 minutos.",
+    "Retira las verduras, pásalas al vaso batidor y tritúralas con un poco del caldo de las alubias. Coloca las alubias en una cazuela y agrega la crema de verduras.",
+    "Corta la panceta en dados y dórala en una sartén con un chorrito de aceite. Sazona. Retira el exceso de aceite. Corta la calabaza en dados y añádelos. Saltea el conjunto y agrega a las alubias. Cocina todo junto durante 8-10 minutos. Remueve de vez en cuando y añade perejil picado.",
+    "Mezcla en un bol el comino, el pimentón y el orégano. Vierte un chorro de aceite y mezcla bien. Sirve las alubias y salpica con el aceite de especias."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Alubias Blancas Con Calabaza Y Panceta",
+    "meta_description": "Pon las alubias a remojo la víspera. Escúrrelas y ponlas en la olla rápida. Cúbrelas con agua.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,93 @@
+{
+  "id": "rec_be78f67f49670a",
+  "slug": "arroz-frito-tres-delicias",
+  "titulo": "Arroz Frito Tres Delicias",
+  "resumen": "Pela la zanahoria, córtala en daditos y ponla a cocer en una cazuela con agua hirviendo y una pizca de sal. Agrega los guisantes y cuece todo durante 6-8 minutos. Retira, cuela y reserva. Enjuaga el arroz. Pon abundante agua a calentar en u",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "arroz basmati"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "jamón cocido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "guisantes (desgranados)"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la zanahoria, córtala en daditos y ponla a cocer en una cazuela con agua hirviendo y una pizca de sal. Agrega los guisantes y cuece todo durante 6-8 minutos. Retira, cuela y reserva. Enjuaga el arroz. Pon abundante agua a calentar en una cazuela y, cuando empiece a hervir, agrega el arroz. Sazona y cuécelo durante unos 12 minutos aproximadamente. Cuélalo, refréscalo con agua fría y escúrrelo. Pon una sartén al fuego, agrega un poco de aceite y saltea el jamón cortado en cuadraditos. Retira y reserva. Agrega un poco más de aceite a la misma sartén. Bate los huevos en un bol, sazónalos y viértelos. Cuaja la tortilla y córtala en cuadraditos. Pela los langostinos y salpimiéntalos. Pon a calentar un poco de aceite en un wok (o sartén) y saltea brevemente los langostinos. Agrega el arroz y cocínalo durante un minuto sin dejar de remover. Incorpora el resto de los ingredientes y mezcla bien. Salséalo con la salsa de soja y decora con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Frito Tres Delicias",
+    "meta_description": "Pela la zanahoria, córtala en daditos y ponla a cocer en una cazuela con agua hirviendo y una pizca de sal. Agrega los guisantes y cuece todo durante 6-8 minutos. Retira, cuela y reserva. Enjuaga el arroz. Pon abundante agua a calentar en u",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

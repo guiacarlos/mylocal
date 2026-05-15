@@ -1,0 +1,98 @@
+{
+  "id": "rec_8204b2407d5b53",
+  "slug": "sabirones-en-papillote",
+  "titulo": "Sabirones En Papillote",
+  "resumen": "Retira la cabeza de los sabirones y sácales los lomos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "sabirones"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "ml",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira la cabeza de los sabirones y sácales los lomos.",
+    "Pela y pica la calabaza y resérvala. Corta la cebolleta en dados y ponla a rehogar en una cazuela con un chorrito de aceite. Cuando esté dorada, agrega la calabaza. Rehógala un poco. Vierte la soja y un vaso de agua y cocina todo durante 10 minutos aproximadamente. Tritura con la batidora eléctrica y mantén la salsa caliente.",
+    "Retira la parte inferior de los espárragos y córtalos en juliana fina. Pela las zanahorias y saca tiras finas con un pelador. Retira la parte inferior y superior de los puerros, elimínales la primera capa y córtalos en juliana fina. Lava el calabacín y córtalo en rodajas.",
+    "Corta 4 trozos grandes de papel de aluminio. Cubre el fondo de cada uno con una capa de calabacines y distribuye por encima una mezcla del resto de las verduras. Sazónalas.",
+    "Salpimienta los filetes de sabirón y coloca 4 en cada trozo de papel de aluminio. Riégalos con un chorrito de aceite y ciérralos herméticamente por los bordes. Colócalos en una bandeja de horno y hornéalos a 220 ºC durante 10 minutos.",
+    "Abre los paquetes con cuidado de no quemarte y salséalos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sabirones En Papillote",
+    "meta_description": "Retira la cabeza de los sabirones y sácales los lomos.",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

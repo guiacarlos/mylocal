@@ -1,0 +1,101 @@
+{
+  "id": "rec_af51a4e940833f",
+  "slug": "conejo-empanado-con-patatas-y-pimientos",
+  "titulo": "Conejo Empanado Con Patatas Y Pimientos",
+  "resumen": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Pélalas y trocéalas en dados. Colócalas en un bol, sazónalas y resérvalas. Trocea el conejo en trozos pequeños. Salpimiéntalo y colóc",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Pélalas y trocéalas en dados. Colócalas en un bol, sazónalas y resérvalas. Trocea el conejo en trozos pequeños. Salpimiéntalo y colócalo en un bol. Maja los dientes de ajo en el mortero, añade el tomillo y sigue majando. Vierte un chorrito de vinagre, mezcla y añade un buen chorro de aceite. Mezcla bien. Vierte el majado al bol del conejo y deja que macere durante 30 minutos.",
+    "Mezcla en un bol el pan rallado y la harina de maíz. Reboza los trozos de conejo y fríelos en una sartén con aceite. Escúrrelos sobre un plato cubierto con papel absorbente.",
+    "Corta los pimientos en trozos y fríelos en una sartén con aceite. Sazónalos y añádelos al bol de las patatas. Mezcla bien.",
+    "Sirve el conejo con las patatas y los pimientos. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Conejo Empanado Con Patatas Y Pimientos",
+    "meta_description": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal durante 30 minutos. Pélalas y trocéalas en dados. Colócalas en un bol, sazónalas y resérvalas. Trocea el conejo en trozos pequeños. Salpimiéntalo y colóc",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

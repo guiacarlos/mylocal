@@ -1,0 +1,103 @@
+{
+  "id": "rec_44932314021bbe",
+  "slug": "cintas-de-pollo-empanado-con-tomate-especiado",
+  "titulo": "Cintas De Pollo Empanado Con Tomate Especiado",
+  "resumen": "Pela las chalotas, pícalas finamente y ponlas a pochar en una cazuelita con un chorrito de aceite. Sazona. Cuando las chalotas cojan un poco de color, agrega el azúcar, el vinagre de Módena y la salsa de tomate. Deja que reduzca a la mitad.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "cintas de pollo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "panko (pan rallado japonés)"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "lechugas variadas"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "ml",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "orégano picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela las chalotas, pícalas finamente y ponlas a pochar en una cazuelita con un chorrito de aceite. Sazona. Cuando las chalotas cojan un poco de color, agrega el azúcar, el vinagre de Módena y la salsa de tomate. Deja que reduzca a la mitad. Salpimienta las cintas de pollo y espolvoréalas con el orégano. Pásalas por el panko y fríelas en una sartén con aceite caliente. Escúrrelas sobre un plato forrado con papel absorbente. Lava las hojas de lechuga, sécalas, trocéalas y colócalas en una fuente. Adereza con aceite, vinagre y sal. Sirve las tiras de pollo con la salsa y la ensalada. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cintas De Pollo Empanado Con Tomate Especiado",
+    "meta_description": "Pela las chalotas, pícalas finamente y ponlas a pochar en una cazuelita con un chorrito de aceite. Sazona. Cuando las chalotas cojan un poco de color, agrega el azúcar, el vinagre de Módena y la salsa de tomate. Deja que reduzca a la mitad.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

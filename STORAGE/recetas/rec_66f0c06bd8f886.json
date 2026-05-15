@@ -1,0 +1,106 @@
+{
+  "id": "rec_66f0c06bd8f886",
+  "slug": "canelones-de-verano",
+  "titulo": "Canelones De Verano",
+  "resumen": "Pon abundante agua a calentar en una cazuela amplia y plana. Sazona y, cuando empiece a hervir, agrega las láminas de canelón. Cuécelas durante el tiempo que indique el paquete. Retíralas y escúrrelas sobre un trapo limpio. Resérvalas.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "áminas de canelón"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "",
+      "nombre": "espárragos blancos"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "setas de cultivo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "guisantes congelados"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a calentar en una cazuela amplia y plana. Sazona y, cuando empiece a hervir, agrega las láminas de canelón. Cuécelas durante el tiempo que indique el paquete. Retíralas y escúrrelas sobre un trapo limpio. Resérvalas.",
+    "Retira la parte inferior de los espárragos verdes y córtalos en cilindros. Pela los espárragos blancos, córtalos por la mitad a lo largo y pícalos. Elimina la primera capa del puerro y córtalo en daditos. Pon todo a pochar en una cazuela con un chorrito de aceite y sazona. Reserva las verduras en una fuente.",
+    "Limpia los ajos frescos y córtalos en cilindros. Retira la parte inferior de las setas y trocéalas. Pon a calentar una cazuela con un chorrito de aceite y añade los ajos y las setas. Sazona y pocha todo. Pásalo a otra fuente y reserva.",
+    "Rellena la mitad de las láminas de canelón con el relleno de espárragos con puerro y la otra mitad con el de setas con ajos frescos.",
+    "Coloca los guisantes en un vaso batidor, salpimiéntalos y vierte un chorrito de aceite. Tritúralos con la batidora eléctrica (si el puré quedara espeso, puedes aligerarlo agregando un poco de agua). Cuela la mezcla, caliéntala y lígala con la harina de maíz diluida en agua fría. Pon a punto de sal.",
+    "Sirve los canelones y salséalos con la salsa de guisantes. Decora los platos con unas hojas de perejil. SOPAS Y CREMAS SOPA DE ARROZ CON ALMEJAS Ingredientes (4-6 p.)",
+    "20 almejas 100 g de arroz 1 puerro 2 zanahorias 1.500 ml de caldo de ave 1 cucharadita de azafrán aceite de oliva virgen extra perejil sal",
+    "Elaboración",
+    "Limpia el puerro y pela las zanahorias. Pica las verduras y rehógalas en una cazuela con un chorrito de aceite. Sazona, añade el arroz y rehógalo un poco. Cuando empiece a tomar color el arroz, agrega el azafrán. Añade el caldo de ave, tapa y deja que hierva durante 15 minutos. Cuando el arroz esté a punto, incorpora las almejas y deja hervir hasta que se abran. Espolvorea la sopa con perejil picado y sírvela en platos soperos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Canelones De Verano",
+    "meta_description": "Pon abundante agua a calentar en una cazuela amplia y plana. Sazona y, cuando empiece a hervir, agrega las láminas de canelón. Cuécelas durante el tiempo que indique el paquete. Retíralas y escúrrelas sobre un trapo limpio. Resérvalas.",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

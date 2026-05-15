@@ -1,0 +1,118 @@
+{
+  "id": "rec_8cec01a0ecf8ad",
+  "slug": "aji-de-gallina",
+  "titulo": "Ají De Gallina",
+  "resumen": "Pon agua en la olla rápida, limpia y trocea el puerro y la rama de apio y agrégalos. Incorpora la carne de gallina, sazona, coloca la tapa y cuece todo durante 30 minutos. Cuela y reserva el caldo. Deshilacha la pechuga y resérvala. Retira ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "pechuga de gallina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "rama",
+      "nombre": "apio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "pasta de ají amarillo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "rodajas de pan de molde"
+    },
+    {
+      "cantidad": "9",
+      "unidad": "",
+      "nombre": "nueces pacanas (peladas)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon agua en la olla rápida, limpia y trocea el puerro y la rama de apio y agrégalos. Incorpora la carne de gallina, sazona, coloca la tapa y cuece todo durante 30 minutos. Cuela y reserva el caldo. Deshilacha la pechuga y resérvala. Retira la corteza del pan de molde, trocéalo y ponlo en el vaso de la batidora. Vierte la leche y deja reposar hasta que quede bien empapado. Tritura el pan y resérvalo. Pon los huevos a cocer en una cazuela con agua. Deja templar, pélalos y resérvalos. Pela 2 dientes de ajo y pícalos finamente. Rehógalos un poco a fuego suave en una tartera con un chorrito de aceite. Pica la cebolla finamente y añádela. Rehoga todo a fuego suave e incorpora la pasta de ají y la gallina deshilachada. Salpimienta. Añade el pan remojado en leche y remueve. Vierte un poco del caldo resultante de cocer las pechugas y cocina el ají a fuego suave durante 15 minutos aproximadamente. Pela los otros 2 dientes de ajo y rehógalos en una cazuela con un chorrito de aceite. Agrega el arroz, cubre con el caldo (el doble y un poco más de agua que de arroz) y cuécelo durante unos 18 minutos. Sirve el ají y acompáñalo con el arroz. Coloca encina las nueces picaditas, los huevos cocidos cortados a la mitad y el queso rallado. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ají De Gallina",
+    "meta_description": "Pon agua en la olla rápida, limpia y trocea el puerro y la rama de apio y agrégalos. Incorpora la carne de gallina, sazona, coloca la tapa y cuece todo durante 30 minutos. Cuela y reserva el caldo. Deshilacha la pechuga y resérvala. Retira ",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_726ffd98950e20",
+  "slug": "tostas-de-queso-fresco-y-tapenade",
+  "titulo": "Tostas De Queso Fresco Y Tapenade",
+  "resumen": "Para hacer la tapenade, pica las aceitunas y colócalas en un vaso batidor. Añade las alcaparras, las anchoas, los piñones y el ajo pelado y finamente picado. Vierte el zumo de naranja y tritura con la batidora eléctrica hasta que quede una ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "rebanadas",
+      "nombre": "pan tostadas"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "alcaparras"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharada",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "anchoas en aceite"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de ½ naranja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Para hacer la tapenade, pica las aceitunas y colócalas en un vaso batidor. Añade las alcaparras, las anchoas, los piñones y el ajo pelado y finamente picado. Vierte el zumo de naranja y tritura con la batidora eléctrica hasta que quede una pasta homogénea. Unta la tapenade en las tostadas y coloca encima de cada tostada una loncha de queso fresco. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tostas De Queso Fresco Y Tapenade",
+    "meta_description": "Para hacer la tapenade, pica las aceitunas y colócalas en un vaso batidor. Añade las alcaparras, las anchoas, los piñones y el ajo pelado y finamente picado. Vierte el zumo de naranja y tritura con la batidora eléctrica hasta que quede una ",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

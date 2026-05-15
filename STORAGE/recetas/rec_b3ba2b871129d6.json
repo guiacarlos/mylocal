@@ -1,0 +1,94 @@
+{
+  "id": "rec_b3ba2b871129d6",
+  "slug": "crumble-de-pera-y-fresa",
+  "titulo": "Crumble De Pera Y Fresa",
+  "resumen": "Pela las peras y córtalas en trocitos. Distribúyelas en 4 recipientes aptos para el horno. Hornéalas a 180 ºC durante 10 minutos. Lava las fresas, retírales los tallos y córtalas en cuartos. Colócalas en un bol y espolvoréalas con el azúcar",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "peras conferencia"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "azúcar moscabado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "avellana picada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "canela en polvo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pela las peras y córtalas en trocitos. Distribúyelas en 4 recipientes aptos para el horno. Hornéalas a 180 ºC durante 10 minutos. Lava las fresas, retírales los tallos y córtalas en cuartos. Colócalas en un bol y espolvoréalas con el azúcar glas, la vainilla y la canela. Deja macerar durante 10 minutos. Coloca la harina en un bol junto con el azúcar y una pizca de sal. Incorpora la avellana picada y la mantequilla (a punto de pomada). Mezcla a mano hasta obtener una masa granulosa. Resérvala.",
+    "Reparte las fresas en los recipientes donde están las peras. Agrega por encima la masa e introduce los recipientes de nuevo en el horno a 180 ºC. Hornea a 180 ºC durante 15-20 minutos. Sirve y decora con unas hojitas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crumble De Pera Y Fresa",
+    "meta_description": "Pela las peras y córtalas en trocitos. Distribúyelas en 4 recipientes aptos para el horno. Hornéalas a 180 ºC durante 10 minutos. Lava las fresas, retírales los tallos y córtalas en cuartos. Colócalas en un bol y espolvoréalas con el azúcar",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

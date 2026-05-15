@@ -1,0 +1,101 @@
+{
+  "id": "rec_b8d71a0a20336f",
+  "slug": "minipizzas-de-gambas-almejas-y-champinones",
+  "titulo": "Minipizzas De Gambas, Almejas Y Champiñones",
+  "resumen": "Para la salsa de tomate, pela y pica los dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Pica la cebolla e incorpórala. Trocea los tomates y añádelos. Echa una pizca de sal y otra de azúcar y cocínalos durante 25-3",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "masas para minipizzas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "unas hojas de albahaca fresca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Para la salsa de tomate, pela y pica los dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Pica la cebolla e incorpórala. Trocea los tomates y añádelos. Echa una pizca de sal y otra de azúcar y cocínalos durante 25-30 minutos. Pasa por el pasapurés y reserva la salsa. Pon las hojas de albahaca en un vaso batidor, mezcla con unas cucharadas de aceite y tritura con la batidora eléctrica. Reserva. Limpia y lamina los champiñones y saltéalos en una sartén con un chorrito de aceite. Sazónalos y resérvalos.",
+    "Calienta las almejas en una cazuelita con un chorrito de aceite. Coloca la tapa y, cuando se abran, reserva la carne.",
+    "Coloca las masas para minipizzas sobre la placa del horno. Úntalas con el aceite de albahaca cubriendo bien la superficie. Coloca encima una cucharada de salsa de tomate. Pon 5 gambas peladas encima de cada base. Sobre 4 de ellas, reparte las almejas, y sobre las otras 4, los champiñones. Vierte una gotita de aceite de albahaca por encima de cada una y hornéalas durante 12 minutos a 250 ºC.",
+    "Sirve dos minipizzas por comensal y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Minipizzas De Gambas, Almejas Y Champiñones",
+    "meta_description": "Para la salsa de tomate, pela y pica los dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Pica la cebolla e incorpórala. Trocea los tomates y añádelos. Echa una pizca de sal y otra de azúcar y cocínalos durante 25-3",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

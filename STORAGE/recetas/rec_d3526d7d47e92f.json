@@ -1,0 +1,83 @@
+{
+  "id": "rec_d3526d7d47e92f",
+  "slug": "volovanes-de-ajos-frescos-champinones-y-gambas",
+  "titulo": "Volovanes De Ajos Frescos, Champiñones Y Gambas",
+  "resumen": "Pela las gambas y resérvalas. Saltea las cabezas y las cáscaras en una sartén con un buen chorro de aceite. Pásalas al mortero y aplástalas bien. Cuela el jugo que hayan soltado y resérvalo. En la misma sartén, sofríe los ajos cortados en c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "volovanes"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las gambas y resérvalas. Saltea las cabezas y las cáscaras en una sartén con un buen chorro de aceite. Pásalas al mortero y aplástalas bien. Cuela el jugo que hayan soltado y resérvalo. En la misma sartén, sofríe los ajos cortados en cilindros y los champiñones bien picados. Sazona. Agrega las gambas picadas y saltéalas. Reserva la mezcla de ajos, champiñones y gambas. Bate los huevos en un bol grande con un poco de perejil picado. Sazona. Agrega la nata y la mezcla de ajo, champiñón y gambas. Mezcla bien y cuájalo al baño maría. Calienta los volovanes en el horno. Rellénalos con el revuelto. Sirve dos volovanes por ración y salpica el plato con el aceite de gambas. Decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Volovanes De Ajos Frescos, Champiñones Y Gambas",
+    "meta_description": "Pela las gambas y resérvalas. Saltea las cabezas y las cáscaras en una sartén con un buen chorro de aceite. Pásalas al mortero y aplástalas bien. Cuela el jugo que hayan soltado y resérvalo. En la misma sartén, sofríe los ajos cortados en c",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

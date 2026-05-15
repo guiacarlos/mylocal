@@ -1,0 +1,105 @@
+{
+  "id": "rec_da360a4a9e482d",
+  "slug": "pechuga-de-pavo-a-la-mostaza-con-su-guarnicion",
+  "titulo": "Pechuga De Pavo A La Mostaza Con Su Guarnición",
+  "resumen": "Introduce las ramas de romero en la pechuga de pavo (una por cada extremo; puedes ayudarte de un cuchillo para abrir camino). Unta por los dos lados la pechuga de pavo con 1 cucharada de mostaza.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pechuga de pavo (1 kg)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "mostaza a la antigua"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "repollo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "ramas",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "sal gruesa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Introduce las ramas de romero en la pechuga de pavo (una por cada extremo; puedes ayudarte de un cuchillo para abrir camino). Unta por los dos lados la pechuga de pavo con 1 cucharada de mostaza.",
+    "Mezcla la sal gruesa y el azúcar y coloca la mitad en una fuente. Pon encima la pechuga y cúbrela con el resto de la mezcla de sal y azúcar. Deja que macere durante 2 horas como mínimo. Transcurrido este tiempo, lava la pechuga con agua, sécala bien y dórala en una sartén con un chorrito de aceite. Reserva.",
+    "Coloca la pechuga en una fuente de horno, úntala con la otra cucharada de mostaza, vierte una gota de aceite por encima y hornéala a 200 ºC durante 20 minutos. Cuando pasen 10 minutos, vierte un vasito de agua. Una vez horneada, deja que repose durante 3-4 minutos. En el momento de servir, córtala en filetes. Pela y lamina los ajos y corta el repollo en juliana. Dora los ajos en una sartén con un chorrito de aceite, incorpora el repollo, tapa la sartén y saltéalo a fuego no muy fuerte. Sazona. Pela los tomates, córtalos en gajos y alíñalos con aceite de oliva, sal y vinagre de Módena. Sirve los filetes de pavo, vierte el jugo de la bandeja de horno sobre ellos y acompáñalos con el repollo salteado y unos gajos de tomate. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pechuga De Pavo A La Mostaza Con Su Guarnición",
+    "meta_description": "Introduce las ramas de romero en la pechuga de pavo (una por cada extremo; puedes ayudarte de un cuchillo para abrir camino). Unta por los dos lados la pechuga de pavo con 1 cucharada de mostaza.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

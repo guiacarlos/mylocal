@@ -2,7 +2,7 @@
 
 **Documento:** `claude/planes/estructura.md`
 **Proyecto:** MyLocal (framework PHP + React para agencias)
-**Estado:** Completado — todas las olas G–K terminadas
+**Estado:** Completado — todas las olas 0–L terminadas, cero deuda
 **Filosofía:** modular atómico · cada archivo una responsabilidad · ≤ 250 LOC · cero hardcodeos · cero datos ficticios · cero funciones a medio hacer
 
 ---
@@ -129,7 +129,8 @@ build.ps1 --template=clinica
 | H   | Template `logistica/` (primer template drop-in real) | ✅ Completa |
 | **I** | **Template `asesoria/`** | ✅ Completa |
 | **J** | **Integración OpenClaude** | ✅ Completa |
-| K   | Documentación + handover | ⬜ Pendiente |
+| K   | Documentación + handover | ✅ Completa |
+| **L** | **Cierre técnico: tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore** | ✅ Completa |
 
 ---
 
@@ -428,21 +429,43 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 - [x] Ola I — Template `asesoria/`
 - [x] Ola J — Integración OpenClaude
 - [x] Ola K — Documentación + handover
+- [x] Ola L — Cierre técnico (tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore)
 
 ---
 
-## 18. Estado final y próxima acción
+## 18. Estado final
 
-**Olas 0–K: todas completadas.**
+**Olas 0–L: todas completadas, cero deuda.**
 
-- Olas 0–J: commit `37fcd8b`
-- Ola K: documentación + CLAUDE.md actualizado (commit en curso)
+### Saldo de la Ola L
 
-### Deuda técnica conocida
+| Item | Antes (post Ola K) | Después (Ola L) |
+|------|--------------------|-----------------|
+| Tests AUTH_LOCK para DELIVERY | ausente | `spa/server/tests/test_delivery.php` — 33/33 ✅ |
+| Tests AUTH_LOCK para TAREAS | ausente | `spa/server/tests/test_tareas.php` — 17/17 ✅ |
+| Tests para OpenClaude + EventBus | ausente | `spa/server/tests/test_openclaude.php` — 19/19 ✅ |
+| Tests para OPENCLAW (manifest + fail-safe) | ausente | `spa/server/tests/test_openclaw.php` — 26/26 ✅ |
+| Bug latente OpenClawApi `_oc_call` (ArgumentCountError) | sin detectar | corregido + cubierto por test (regresión documentada) |
+| AppBootstrap CLI | apuntaba a `spa/src/modules/<id>/` (estructura pre-G) | v2: lee `templates/<id>/manifest.json`, `--template=` (alias `--preset=`), 4 presets disponibles |
+| Limpieza `_rl/` en bootstrap | inexistente | bootstrap limpia `data/_rl/` antes del gate |
+| `spa/src/` legacy | duplicaba `templates/hosteleria/src/` | eliminado, `build.ps1` y `run.bat` sin fallbacks legacy |
+| `sdk/src/synaxis/SynaxisCore.ts` 262 LOC | sobre el límite 250 | partido: SynaxisCore 194 + Helpers 48 + Versioning 51 + Oplog 52 + RequestNormalize 49 = 5 archivos ≤ 200 LOC |
+| `build.ps1` ejecuta tests de capabilities | solo `test_login` | 7 gates: CITAS, CRM, NOTIF, DELIVERY, TAREAS, OPENCLAUDE, OPENCLAW |
+| `build.ps1` para 4 templates | solo hosteleria validado | hosteleria + clinica + logistica + asesoria todos verdes |
 
-| Archivo | Líneas | Límite | Nota |
-|---------|--------|--------|------|
-| `sdk/src/synaxis/SynaxisCore.ts` | 262 | 250 | Migrado de `spa/src/synaxis/` — no escrito desde cero. Partir si se toca en el futuro. |
+### Acumulado de tests verdes
+
+- `test_login.php`              75/75
+- `test_citas.php`               9/9
+- `test_crm.php`                15/15
+- `test_notif.php`              14/14
+- `test_delivery.php`           33/33 (Ola L)
+- `test_tareas.php`             17/17 (Ola L)
+- `test_openclaude.php`         19/19 (Ola L)
+- `test_openclaw.php`           26/26 (Ola L)
+- **Total: 208 PASS / 0 FAIL**
+- Framework SPA (`test-framework.mjs`): 24/24
+- Bootstrap CLI (`test-bootstrap.mjs`): 19/19
 
 ### Cómo añadir un nuevo vertical ahora mismo
 
@@ -452,5 +475,7 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 3. Editar templates/veterinaria/package.json   ← name: "veterinaria"
 4. Editar src/App.tsx y src/pages/             ← UI propia
 5. pnpm install && pnpm -F veterinaria build   ← build verde
-6. Si necesita agente: OPTIONS openclaw.allowed_actions + openclaw.tools
+6. node tools/bootstrap/bootstrap.mjs --template=veterinaria --slug=cliente --nombre="Cliente"
+   --out=./builds/cliente  ← release listo para subir
+7. Si necesita agente: OPTIONS openclaw.allowed_actions + openclaw.tools
 ```

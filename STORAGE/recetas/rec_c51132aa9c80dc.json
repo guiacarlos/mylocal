@@ -1,0 +1,98 @@
+{
+  "id": "rec_c51132aa9c80dc",
+  "slug": "milhojas-de-tortilla",
+  "titulo": "Milhojas De Tortilla",
+  "resumen": "Pon un poco de aceite en una fuente apta para el horno. Abre los pimientos por la mitad y colócalos en la fuente. Añádeles una pizca de sal y otra de azúcar e introdúcelos en el horno a 170 ºC durante 10 minutos. Pica las cebolletas finamen",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 cucharadas de salsa de tomate"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon un poco de aceite en una fuente apta para el horno. Abre los pimientos por la mitad y colócalos en la fuente. Añádeles una pizca de sal y otra de azúcar e introdúcelos en el horno a 170 ºC durante 10 minutos. Pica las cebolletas finamente y ponlas a pochar en una sartén con un poco de aceite. Limpia los champiñones, córtalos en láminas, añádelos a la sartén, sazona y deja que se pochen bien. Bate 3 huevos, sazónalos, agrégales los champiñones con las cebolletas y mezcla bien. Vuelca todo nuevamente en la sartén y cuaja la tortilla. Pica los ajos frescos y dóralos en una sartén con un poco de aceite. Bate 3 huevos, sazónalos y añádeles los ajos frescos. Mezcla bien, vierte todo en la sartén y cuaja la tortilla. Pica los dientes de ajo finamente y dóralos en una sartén con un poco de aceite. Pela las gambas, pícalas y añádelas a la sartén. Saltéalas brevemente. Bate 4 huevos, sazónalos y agrégales las gambas con los ajos. Mezcla bien y vierte todo en la sartén. Cuaja la tortilla. Coloca la tortilla de champiñones en el fondo de la fuente; pon encima los pimientos del piquillo, la tortilla de ajos frescos y una capa de salsa de tomate. Termina con la tortilla de gambas. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Milhojas De Tortilla",
+    "meta_description": "Pon un poco de aceite en una fuente apta para el horno. Abre los pimientos por la mitad y colócalos en la fuente. Añádeles una pizca de sal y otra de azúcar e introdúcelos en el horno a 170 ºC durante 10 minutos. Pica las cebolletas finamen",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

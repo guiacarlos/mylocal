@@ -1,0 +1,83 @@
+{
+  "id": "rec_6438695987a865",
+  "slug": "repollo-con-bombones-de-morcilla",
+  "titulo": "Repollo Con Bombones De Morcilla",
+  "resumen": "Limpia bien el repollo, córtalo en juliana y cuécelo durante unos 20 minutos en una cazuela con abundante agua y sal al gusto. Escurre y resérvalo caliente en una cazuela. Pon un poco de aceite en una sartén, agrega el maíz, coloca la tapa ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "repollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "morcilla de cebolla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "g",
+      "nombre": "copos de patata"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "maíz para hacer palomitas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia bien el repollo, córtalo en juliana y cuécelo durante unos 20 minutos en una cazuela con abundante agua y sal al gusto. Escurre y resérvalo caliente en una cazuela. Pon un poco de aceite en una sartén, agrega el maíz, coloca la tapa y fríelo hasta que explote. Escúrrelo sobre un plato forrado con papel absorbente. Cuando se enfríe, pícalo finamente y resérvalo. Coloca la morcilla en un plato, cúbrela con film transparente y pínchalo. Cocínala en el microondas durante 3 minutos. Pela la manzana, córtala en lascas y cocínala en una sartén con un chorrito de aceite. Mezcla la manzana salteada con el interior de la morcilla y los copos de patata. Forma bolitas y pásalas por las palomitas. En el momento de servir, coloca las bolitas en la placa de horno y caliéntalas. Pela los ajos, córtalos en láminas y dóralos en una sartén con unas 4 cucharadas de aceite. Cuando empiecen a dorarse, añade un poco de perejil picado y viértelo sobre el repollo. Mezcla bien y sirve. Acompáñalo con los bombones de morcilla."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Repollo Con Bombones De Morcilla",
+    "meta_description": "Limpia bien el repollo, córtalo en juliana y cuécelo durante unos 20 minutos en una cazuela con abundante agua y sal al gusto. Escurre y resérvalo caliente en una cazuela. Pon un poco de aceite en una sartén, agrega el maíz, coloca la tapa ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

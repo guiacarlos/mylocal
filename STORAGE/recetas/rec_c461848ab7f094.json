@@ -1,0 +1,73 @@
+{
+  "id": "rec_c461848ab7f094",
+  "slug": "mousse-de-limon",
+  "titulo": "Mousse De Limón",
+  "resumen": "Forra con papel de aluminio el fondo de 4 aros o moldes (poniendo el papel por fuera del aro). Con ayuda de un pelador, extrae la piel de un limón en tiras. Corta las tiras en juliana fina y ponlas a hervir en una cacerola con medio vaso de",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "imones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cl",
+      "nombre": "aras de huevo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Forra con papel de aluminio el fondo de 4 aros o moldes (poniendo el papel por fuera del aro). Con ayuda de un pelador, extrae la piel de un limón en tiras. Corta las tiras en juliana fina y ponlas a hervir en una cacerola con medio vaso de agua y 2 cucharadas de azúcar. Deja que hierva durante 5-6 minutos para que se confite. Diluye las láminas de gelatina en una sartén con una pizca de agua y resérvalas. Exprime los dos limones y reserva el zumo. Vierte en un bol la leche condensada y el zumo de los dos limones. Bate con la batidora de varillas. Añade la gelatina diluida. Separa en un bol dos claras de huevo y móntalas con la ayuda de una batidora de varillas. Añade al resto de los ingredientes. Mezcla suavemente, con movimientos envolventes. Rellena los moldes con la mousse e introdúcelos en el frigorífico hasta que adquieran consistencia. Desmolda las mousses y preséntalas con la corteza de limón confitada por encima. Decora con unas hojitas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mousse De Limón",
+    "meta_description": "Forra con papel de aluminio el fondo de 4 aros o moldes (poniendo el papel por fuera del aro). Con ayuda de un pelador, extrae la piel de un limón en tiras. Corta las tiras en juliana fina y ponlas a hervir en una cacerola con medio vaso de",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_32148cf7b4c42b",
+  "slug": "judias-verdes-con-crema-ligera-de-patata",
+  "titulo": "Judías Verdes Con Crema Ligera De Patata",
+  "resumen": "Pela las patatas, cáscalas y colócalas en la olla rápida. Cúbrelas con agua y coloca encima el accesorio para cocer al vapor. Retira las puntas y los hilos de las judías. Colócalas sobre el accesorio, sazónalas, tapa la olla y cuece todo du",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "boletus"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, cáscalas y colócalas en la olla rápida. Cúbrelas con agua y coloca encima el accesorio para cocer al vapor. Retira las puntas y los hilos de las judías. Colócalas sobre el accesorio, sazónalas, tapa la olla y cuece todo durante 3 minutos. Abre la olla, saca las judías y resérvalas. Retira parte del líquido de la olla y tritura las patatas con una batidora eléctrica. Añade las 2 yemas y un par de cucharadas de aceite y mezcla bien. Ralla encima un poco de pimienta, espolvorea con perejil picado y mezcla bien. Reserva la crema de patata. Pela los dientes de ajo y córtalos en láminas finas. Ponlos a dorar en una sartén con un chorrito de aceite. Limpia los boletus, pícalos y añádelos a la sartén. Sazona y saltéalos brevemente. Sirve la crema ligera de patata en el fondo de una fuente amplia, coloca en el centro los boletus salteados y, a los lados, las judías."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Judías Verdes Con Crema Ligera De Patata",
+    "meta_description": "Pela las patatas, cáscalas y colócalas en la olla rápida. Cúbrelas con agua y coloca encima el accesorio para cocer al vapor. Retira las puntas y los hilos de las judías. Colócalas sobre el accesorio, sazónalas, tapa la olla y cuece todo du",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

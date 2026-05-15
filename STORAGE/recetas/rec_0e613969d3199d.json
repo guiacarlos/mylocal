@@ -1,0 +1,101 @@
+{
+  "id": "rec_0e613969d3199d",
+  "slug": "pechugas-de-pollo-rebozadas-con-tomate-picante",
+  "titulo": "Pechugas De Pollo Rebozadas Con Tomate Picante",
+  "resumen": "Pela dos dientes de ajo y la cebolla, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Agrega también la guindilla. Cuando se doren, pica los tomates y agrégalos. Vierte el vino blanco, sazona y cocina durante media hora.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "-10 filetes de pechuga de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo morrón"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos y harina (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela dos dientes de ajo y la cebolla, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Agrega también la guindilla. Cuando se doren, pica los tomates y agrégalos. Vierte el vino blanco, sazona y cocina durante media hora. Pasa por el pasapurés y ponlo en una cazuela.",
+    "Pela los otros 2 dientes de ajo, lamínalos y rehógalos en una sartén con un chorrito de aceite. Pela el pimiento, córtalo en tiras de bocado, agrégalo y cocínalo durante unos 15 minutos. Cuando esté blando, incorpóralo a la cazuela del tomate, mezcla bien y cocina todo junto durante 5 minutos.",
+    "Salpimienta los filetes de pollo y pásalos por harina y huevo batido con una pizca de sal. Fríelos (vuelta y vuelta) en una sartén con aceite. Escúrrelos sobre un plato cubierto con papel absorbente.",
+    "Sirve los filetes de pollo rebozados con la salsa de tomate con pimientos. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pechugas De Pollo Rebozadas Con Tomate Picante",
+    "meta_description": "Pela dos dientes de ajo y la cebolla, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Agrega también la guindilla. Cuando se doren, pica los tomates y agrégalos. Vierte el vino blanco, sazona y cocina durante media hora.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

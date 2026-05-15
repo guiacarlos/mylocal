@@ -1,0 +1,78 @@
+{
+  "id": "rec_a3eff69bc9b8cf",
+  "slug": "berenjenas-rellenas-de-bacalao",
+  "titulo": "Berenjenas Rellenas De Bacalao",
+  "resumen": "Limpia y corta las berenjenas a lo largo, haz unas incisiones por la parte interna con un cuchillo (sin llegar a la piel), sazónalas y rocíalas con un chorrito de aceite. Hornéalas a 190 ºC durante 30 minutos. Retíralas del horno, deja que ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "berenjenas medianas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "bacalao desmigado y desalado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas o cebollas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia y corta las berenjenas a lo largo, haz unas incisiones por la parte interna con un cuchillo (sin llegar a la piel), sazónalas y rocíalas con un chorrito de aceite. Hornéalas a 190 ºC durante 30 minutos. Retíralas del horno, deja que se templen y vacíalas con cuidado de que la piel no se rompa. Reserva la carne y las cáscaras por separado. Pela las cebollas, córtalas en dados y ponlas a pochar en una sartén con un chorrito de aceite. Cuando empiecen a coger color, añade la carne de las berenjenas (bien picada) y rehoga todo junto durante 5-6 minutos. Añade el bacalao y rehógalo brevemente. Incorpora la salsa de tomate y mezcla. Rellena las cáscaras de las berenjenas con la mezcla, cúbrelas con el queso y gratínalas durante 3-5 minutos. Decora con unas hojas de perejil,"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Berenjenas Rellenas De Bacalao",
+    "meta_description": "Limpia y corta las berenjenas a lo largo, haz unas incisiones por la parte interna con un cuchillo (sin llegar a la piel), sazónalas y rocíalas con un chorrito de aceite. Hornéalas a 190 ºC durante 30 minutos. Retíralas del horno, deja que ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

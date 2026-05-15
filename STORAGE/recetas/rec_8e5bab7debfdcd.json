@@ -1,0 +1,93 @@
+{
+  "id": "rec_8e5bab7debfdcd",
+  "slug": "arroz-con-esparragos-verdes-y-chorizo",
+  "titulo": "Arroz Con Espárragos Verdes Y Chorizo",
+  "resumen": "Limpia el puerro y pela la zanahoria. Córtalos en cilindros y ponlos en una cazuela con agua (1,5 l). Retira la parte inferior del tallo de los espárragos y añádelos. Sazona, añade una rama de perejil y cuece todo durante 15-20 minutos. Cue",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz redondo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "chorizo"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "tomates cherry"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia el puerro y pela la zanahoria. Córtalos en cilindros y ponlos en una cazuela con agua (1,5 l). Retira la parte inferior del tallo de los espárragos y añádelos. Sazona, añade una rama de perejil y cuece todo durante 15-20 minutos. Cuela y reserva el caldo. Corta los ajos en láminas. Corta el chorizo en cuartos de luna y los espárragos en cilindros. Rehoga todo durante 5 minutos en una cazuela (amplia y baja) con un chorrito de aceite durante 5 minutos (remuévelo de vez en cuando). Añade el arroz, rehógalo un poco, adereza con sal y 1 cucharadita de pimentón y vierte el caldo (el triple que de arroz). Cocínalo durante 18-20 minutos. Corta los tomates cherry por la mitad y distribúyelos sobre el arroz dejando la parte del interior hacia arriba. Tapa el arroz y deja que repose durante 5 minutos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Espárragos Verdes Y Chorizo",
+    "meta_description": "Limpia el puerro y pela la zanahoria. Córtalos en cilindros y ponlos en una cazuela con agua (1,5 l). Retira la parte inferior del tallo de los espárragos y añádelos. Sazona, añade una rama de perejil y cuece todo durante 15-20 minutos. Cue",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,108 @@
+{
+  "id": "rec_2485fe9c024d31",
+  "slug": "menestra-de-verduras-rebozadas",
+  "titulo": "Menestra De Verduras Rebozadas",
+  "resumen": "Pela las alcachofas y los espárragos. Cuécelos por separado en dos cazuelas con agua hirviendo y una pizca de sal. A los 20 minutos, retíralos y resérvalos. Reserva el agua resultante de la cocción de las alcachofas.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "coliflor"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "habas desgranadas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "guisantes desgranados"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo (para rebozar)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las alcachofas y los espárragos. Cuécelos por separado en dos cazuelas con agua hirviendo y una pizca de sal. A los 20 minutos, retíralos y resérvalos. Reserva el agua resultante de la cocción de las alcachofas.",
+    "Pela las zanahorias y separa la coliflor en ramilletes. Cuécelas en una cazuela con agua y una pizca de sal durante 20 minutos. Resérvalas.",
+    "Cuece las habas con los guisantes, en otra cazuela, durante 12-15 minutos. Resérvalos.",
+    "Pon agua a calentar en otra cazuela. Cuando empiece a hervir, agrega las espinacas y cuécelas durante 5 minutos. Retíralas y escúrrelas bien. Forma bolitas con ellas.",
+    "Reboza con harina y huevo batido las alcachofas (cortadas por la mitad), los ramilletes de coliflor y las bolitas de espinacas. Fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente.",
+    "Corta el jamón en taquitos y rehógalos en una tartera (cazuela amplia y baja). Agrega 2 cucharadas de harina y rehógala un poco. Añade 2 vasos del agua de cocción de las alcachofas y remueve sin parar hasta que ligue la salsa. Incorpora los guisantes, las habas, los espárragos, la zanahoria (cortada en rodajitas), las alcachofas, la coliflor y las bolitas de espinacas, y pon a punto de sal. Remueve bien y cocina todo junto durante 5 minutos. Espolvorea con un poco de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Menestra De Verduras Rebozadas",
+    "meta_description": "Pela las alcachofas y los espárragos. Cuécelos por separado en dos cazuelas con agua hirviendo y una pizca de sal. A los 20 minutos, retíralos y resérvalos. Reserva el agua resultante de la cocción de las alcachofas.",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

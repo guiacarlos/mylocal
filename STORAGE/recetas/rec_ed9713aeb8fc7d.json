@@ -1,0 +1,117 @@
+{
+  "id": "rec_ed9713aeb8fc7d",
+  "slug": "carrilleras-de-rape-con-salsa-de-piquillos",
+  "titulo": "Carrilleras De Rape Con Salsa De Piquillos",
+  "resumen": "Unta una fuente apta para el horno con un poco de aceite. Extiende encima los pimientos del piquillo, espolvoréalos con una pizca de sal y otra de azúcar y riégalos con otro chorro de aceite. Cocínalos en el horno a 200 ºC durante 20 minuto",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "carrilleras de rape"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de piquillos:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ata de pimientos del piquillo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate grande maduro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Unta una fuente apta para el horno con un poco de aceite. Extiende encima los pimientos del piquillo, espolvoréalos con una pizca de sal y otra de azúcar y riégalos con otro chorro de aceite. Cocínalos en el horno a 200 ºC durante 20 minutos. Reserva.",
+    "Corta los dientes de ajo y la cebolla en dados y ponlos a pochar en una cazuela con un poco de aceite. Cuando vayan cogiendo color, añade el tomate pelado y picado y cocínalo durante unos 5 minutos. Agrega los pimientos del piquillo, mezcla bien y tritura con una batidora eléctrica. Cuela la salsa y resérvala.",
+    "Retira la parte inferior de los espárragos y cuécelos en una cazuela con agua y una pizca de sal durante 15 minutos. Escúrrelos.",
+    "Pica los 2 dientes de ajo y dóralos en una sartén con aceite. Salpimienta las carrilleras, incorpóralas y saltéalas durante un par de minutos. Añade un poco de la salsa de piquillos y dales un hervor.",
+    "Para servir, pon los espárragos en una fuente amplia, coloca al lado las carrilleras y pon el resto de la salsa en una salsera. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Carrilleras De Rape Con Salsa De Piquillos",
+    "meta_description": "Unta una fuente apta para el horno con un poco de aceite. Extiende encima los pimientos del piquillo, espolvoréalos con una pizca de sal y otra de azúcar y riégalos con otro chorro de aceite. Cocínalos en el horno a 200 ºC durante 20 minuto",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

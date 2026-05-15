@@ -1,0 +1,93 @@
+{
+  "id": "rec_06c2c189b7b577",
+  "slug": "salmonetes-al-horno-con-calabacin",
+  "titulo": "Salmonetes Al Horno Con Calabacín",
+  "resumen": "Corta las cebolletas en juliana fina y ponlas a freír en una sartén con aceite. Sazona. Pela la patata, córtala en lascas e incorpórala. Sazona y fríe todo bien. Escurre y reserva. Lava el pimiento y córtalo en cilindros. Lava el calabacín ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "salmonetes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta las cebolletas en juliana fina y ponlas a freír en una sartén con aceite. Sazona. Pela la patata, córtala en lascas e incorpórala. Sazona y fríe todo bien. Escurre y reserva. Lava el pimiento y córtalo en cilindros. Lava el calabacín y córtalo en rodajas finas. Pon un poco del aceite de freír las patatas en un wok, añade el pimiento y el calabacín, sazónalos y saltéalos. Limpia los salmonetes y saca los lomos. Para la provenzal, pela los dientes de ajo, pícalos finamente y mézclalos con el pan rallado y un poco de perejil picado. Forra la placa del horno con un trozo de papel de hornear. Coloca encima los lomos de salmonete dejando la parte de la piel hacia abajo. Salpimiéntalos y espolvoréalos con la provenzal. Hornéalos a 200 ºC durante 5 minutos. Sirve los salmonetes y acompáñalos con las hortalizas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmonetes Al Horno Con Calabacín",
+    "meta_description": "Corta las cebolletas en juliana fina y ponlas a freír en una sartén con aceite. Sazona. Pela la patata, córtala en lascas e incorpórala. Sazona y fríe todo bien. Escurre y reserva. Lava el pimiento y córtalo en cilindros. Lava el calabacín ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

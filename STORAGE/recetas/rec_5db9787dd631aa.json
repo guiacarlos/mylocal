@@ -1,0 +1,93 @@
+{
+  "id": "rec_5db9787dd631aa",
+  "slug": "paella-de-conejo",
+  "titulo": "Paella De Conejo",
+  "resumen": "Corta en daditos la cebolleta, los pimientos y la zanahoria. Ponlos a rehogar en una paella con un poco de aceite. Cuando empiecen a dorarse, pela el tomate, rállalo y agrégalo. Rehoga todo bien. Agrega el conejo salpimentado y fríelo duran",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo pequeño y joven (troceado)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento morrón (pelado)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria pequeña"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta en daditos la cebolleta, los pimientos y la zanahoria. Ponlos a rehogar en una paella con un poco de aceite. Cuando empiecen a dorarse, pela el tomate, rállalo y agrégalo. Rehoga todo bien. Agrega el conejo salpimentado y fríelo durante 5-6 minutos, hasta que quede dorado. Incorpora el arroz, sazónalo y rehógalo un poco. Añade las hebras de azafrán y agua (el doble y un poco más). Cocina durante 10 minutos a fuego fuerte. Introduce la paella en el horno y hornea el arroz a 190 ºC durante 12-15 minutos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Paella De Conejo",
+    "meta_description": "Corta en daditos la cebolleta, los pimientos y la zanahoria. Ponlos a rehogar en una paella con un poco de aceite. Cuando empiecen a dorarse, pela el tomate, rállalo y agrégalo. Rehoga todo bien. Agrega el conejo salpimentado y fríelo duran",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

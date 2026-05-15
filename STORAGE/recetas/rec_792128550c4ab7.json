@@ -1,0 +1,76 @@
+{
+  "id": "rec_792128550c4ab7",
+  "slug": "limones-rellenos",
+  "titulo": "Limones Rellenos",
+  "resumen": "Corta la parte inferior de los limones para crear una base y que puedan mantenerse de pie. Córtales también la parte superior. Exprime 2 limones, teniendo mucho cuidado de que no se rompan, y reserva el zumo en el exprimidor. Vacía los otro",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "imones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yogures"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cl",
+      "nombre": "aras de huevo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "fruta de la pasión"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Corta la parte inferior de los limones para crear una base y que puedan mantenerse de pie. Córtales también la parte superior. Exprime 2 limones, teniendo mucho cuidado de que no se rompan, y reserva el zumo en el exprimidor. Vacía los otros 2 limones.",
+    "Coloca los yogures en un bol.",
+    "Corta por la mitad la fruta de la pasión y exprímela (se mezclará el zumo de limón con el de la fruta de la pasión). Vierte los zumos en el bol de los yogures y mezcla bien.",
+    "Monta un poco las claras y añade el azúcar glas. Sigue montando hasta que estén a punto de nieve. Agrégalas al bol de los zumos y de los yogures. Mezcla bien y rellena los limones con esta mezcla. Introduce los limones rellenos en el congelador. A la hora de servir, decora con una fresita y unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Limones Rellenos",
+    "meta_description": "Corta la parte inferior de los limones para crear una base y que puedan mantenerse de pie. Córtales también la parte superior. Exprime 2 limones, teniendo mucho cuidado de que no se rompan, y reserva el zumo en el exprimidor. Vacía los otro",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

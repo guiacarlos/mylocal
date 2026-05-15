@@ -1,0 +1,88 @@
+{
+  "id": "rec_c44cc5760b5fd2",
+  "slug": "timbales-de-patata-pimiento-y-bacalao",
+  "titulo": "Timbales De Patata, Pimiento Y Bacalao",
+  "resumen": "Lava los pimientos, colócalos en una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 200 ºC durante 30 minutos. Deja que se templen, pélalos y córtalos en tiras. Resérvalos. Pasa el jugo que hayan soltado a un cazo y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pimientos morrones"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "bacalao desalado"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "rebanadas",
+      "nombre": "pan (de la víspera)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Lava los pimientos, colócalos en una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 200 ºC durante 30 minutos. Deja que se templen, pélalos y córtalos en tiras. Resérvalos. Pasa el jugo que hayan soltado a un cazo y ponlo al fuego para que reduzca. Pon agua a calentar en una cazuela, introduce los trozos de bacalao (sin piel) y cuécelos brevemente. Deja que se enfríen y sepáralos en lascas. Pon a cocer las patatas y los huevos en otra cazuela con agua y una pizca de sal. A los 10 minutos, retira los huevos, refréscalos y pélalos. A los 30 minutos, retira las patatas, pélalas, córtalas en rodajas gruesas y resérvalas. Tuesta las rebanadas de pan en el horno hasta que se doren. Retíralas y úntalas con el diente de ajo. Con ayuda de un aro, monta 4 timbales colocando en el fondo una base de patatas y, sobre ellas, unos pimientos y las lascas de bacalao. Ralla encima los huevos cocidos. Salpica con las aceitunas negras cortadas en aros. Salsea y acompaña con las rebanadas de pan untadas en ajo. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Timbales De Patata, Pimiento Y Bacalao",
+    "meta_description": "Lava los pimientos, colócalos en una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 200 ºC durante 30 minutos. Deja que se templen, pélalos y córtalos en tiras. Resérvalos. Pasa el jugo que hayan soltado a un cazo y ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

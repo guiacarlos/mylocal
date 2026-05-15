@@ -1,0 +1,103 @@
+{
+  "id": "rec_c3e95abc280936",
+  "slug": "tarta-de-almendras-y-arandanos",
+  "titulo": "Tarta De Almendras Y Arándanos",
+  "resumen": "Mezcla en un bol 250 gramos de azúcar, la canela y 250 gramos de almendra molida. Unta un bol de cristal con aceite, fórralo con tiras de papel de hornear y espolvorea con el resto de la almendra. En otro bol, bate bien los huevos con la va",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "5",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "275",
+      "unidad": "g",
+      "nombre": "almendra molida"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "mermelada de arándanos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 1 limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas y hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de arándanos:"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "arándanos"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    }
+  ],
+  "pasos": [
+    "Mezcla en un bol 250 gramos de azúcar, la canela y 250 gramos de almendra molida. Unta un bol de cristal con aceite, fórralo con tiras de papel de hornear y espolvorea con el resto de la almendra. En otro bol, bate bien los huevos con la varilla. Añade la ralladura de limón y la mezcla de azúcar, almendra y canela. Mezcla bien. Agrega la mermelada de arándanos y mezcla toscamente. Vierte la masa en el molde y hornéala a 180 ºC durante 40 minutos. Deja enfriar y desmolda. Disuelve la harina de maíz en agua y viértela en una sartén junto con los arándanos y 20 gramos de azúcar. Deja que hierva hasta que ligue un poco. Espolvorea la tarta con azúcar glas y riégala con la salsa de arándanos. Decora con una hojita de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Almendras Y Arándanos",
+    "meta_description": "Mezcla en un bol 250 gramos de azúcar, la canela y 250 gramos de almendra molida. Unta un bol de cristal con aceite, fórralo con tiras de papel de hornear y espolvorea con el resto de la almendra. En otro bol, bate bien los huevos con la va",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

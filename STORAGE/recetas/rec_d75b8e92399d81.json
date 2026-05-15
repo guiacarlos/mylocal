@@ -1,0 +1,112 @@
+{
+  "id": "rec_d75b8e92399d81",
+  "slug": "bacalao-fresco-con-hortalizas-asadas",
+  "titulo": "Bacalao Fresco Con Hortalizas Asadas",
+  "resumen": "Pela el diente de ajo, pícalo un poco, cúbrelo con un poco de sal gruesa y aplástalo con la hoja de un cuchillo cebollero hasta que quede reducido a una pasta. Mezcla el panko con el ajo y con un chorrito de aceite. Mezcla bien con las mano",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "bacalao fresco (de 1 kg)"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "panko"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal gruesa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela el diente de ajo, pícalo un poco, cúbrelo con un poco de sal gruesa y aplástalo con la hoja de un cuchillo cebollero hasta que quede reducido a una pasta. Mezcla el panko con el ajo y con un chorrito de aceite. Mezcla bien con las manos. Extiende la mezcla sobre una bandeja apta para el horno y tuéstala en el horno a 160 ºC durante 6-7 minutos. Reserva.",
+    "Retira la parte inferior de los espárragos, pela los ajos frescos y córtalos en trozos de 4 centímetros. Lava el calabacín y córtalo en rodajas de 4 centímetros. Pela el pimiento y córtalo en trozos grandes. Pon todo (espárragos, ajos, calabacín y pimiento) en una fuente apta para el horno, sazona, rocía con aceite y asa en el horno a 190 ºC durante 20 minutos.",
+    "Lava los tomates, rállalos y escúrrelos bien. Pon un poco de aceite en una sartén grande, agrega el tomate, una pizca de sal y otra de azúcar y cocínalo a fuego fuerte durante 20 minutos.",
+    "Corta el bacalao en tajadas y salpimiéntalo. Cocínalo a la plancha.",
+    "Sirve el bacalao en el centro del plato y coloca a un lado la salsa de tomate y, al otro, las hortalizas asadas. Espolvorea el pescado con el panko. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Fresco Con Hortalizas Asadas",
+    "meta_description": "Pela el diente de ajo, pícalo un poco, cúbrelo con un poco de sal gruesa y aplástalo con la hoja de un cuchillo cebollero hasta que quede reducido a una pasta. Mezcla el panko con el ajo y con un chorrito de aceite. Mezcla bien con las mano",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

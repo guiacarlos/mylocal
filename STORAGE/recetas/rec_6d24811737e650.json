@@ -1,0 +1,108 @@
+{
+  "id": "rec_6d24811737e650",
+  "slug": "bacalao-fresco-al-horno",
+  "titulo": "Bacalao Fresco Al Horno",
+  "resumen": "Extiende un poco de aceite en una placa de horno. Salpimienta las tajadas de bacalao, colócalas encima y, con ayuda de un pincel, píntalas con un poco de aceite. Hornéalas a 180 ºC durante 10 minutos. Retíralas. Limpia los pimientos, córtal",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tajadas de bacalao sin espinas (700 g)"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "puré de patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "queso rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Extiende un poco de aceite en una placa de horno. Salpimienta las tajadas de bacalao, colócalas encima y, con ayuda de un pincel, píntalas con un poco de aceite. Hornéalas a 180 ºC durante 10 minutos. Retíralas. Limpia los pimientos, córtalos en trozos de bocado y fríelos en una sartén con aceite durante unos 10 minutos. Para la mayonesa de ajo, coloca en un vaso batidor el huevo, el diente de ajo picado, un chorrito de vinagre, una pizca de sal y el aceite. Tritura los ingredientes con una batidora eléctrica hasta que liguen. Mezcla el puré de patatas con la mayonesa hasta obtener una masa homogénea y cubre con ella las tajadas de bacalao. Espolvoréalas con el queso y gratínalas en el horno durante 2-3 minutos. Sirve y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Fresco Al Horno",
+    "meta_description": "Extiende un poco de aceite en una placa de horno. Salpimienta las tajadas de bacalao, colócalas encima y, con ayuda de un pincel, píntalas con un poco de aceite. Hornéalas a 180 ºC durante 10 minutos. Retíralas. Limpia los pimientos, córtal",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

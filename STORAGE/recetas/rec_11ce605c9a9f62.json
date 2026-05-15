@@ -1,0 +1,98 @@
+{
+  "id": "rec_11ce605c9a9f62",
+  "slug": "higadillos-de-pollo-con-garbanzos",
+  "titulo": "Higadillos De Pollo Con Garbanzos",
+  "resumen": "Pon los garbanzos a remojo la víspera. Escúrrelos y pon agua a hervir en la olla rápida. Agrega los garbanzos, la cebolleta, el pimiento y el puerro. Sazona. Coloca la tapa y cuece durante 25 minutos. Abre la olla, retira la verdura, escurr",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "higadillos de pollo"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de guindilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "pizca",
+      "nombre": "ras el hanout"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Escúrrelos y pon agua a hervir en la olla rápida. Agrega los garbanzos, la cebolleta, el pimiento y el puerro. Sazona. Coloca la tapa y cuece durante 25 minutos. Abre la olla, retira la verdura, escurre los garbanzos y reserva tanto las legumbres como el caldo de la cocción. Limpia y trocea los higadillos. Salpimiéntalos. Pela los dientes de ajo, córtalos en láminas y ponlos a dorar en una sartén con un chorro de aceite junto con el trozo de guindilla. Agrega los higadillos y saltéalos. Añade el ras el hanout y los garbanzos escurridos. Vierte un vaso del caldo de la cocción, mezcla y cocina durante 3 minutos. Pon a punto de sal y reserva. Sirve los garbanzos en plato hondo y espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Higadillos De Pollo Con Garbanzos",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Escúrrelos y pon agua a hervir en la olla rápida. Agrega los garbanzos, la cebolleta, el pimiento y el puerro. Sazona. Coloca la tapa y cuece durante 25 minutos. Abre la olla, retira la verdura, escurr",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

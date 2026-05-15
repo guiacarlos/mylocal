@@ -1,0 +1,117 @@
+{
+  "id": "rec_a1c907b53c332a",
+  "slug": "sopa-de-picadillo",
+  "titulo": "Sopa De Picadillo",
+  "resumen": "Trocea los tomates, colócalos en un bol grande junto con el agua y tritúralos con la batidora eléctrica. Cuela y reserva el caldo. Pica finamente la cebolleta, la zanahoria, la calabaza y el calabacín y ponlos a rehogar en una cazuela grand",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "carne picada"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "pasta (coditos)"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "700",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea los tomates, colócalos en un bol grande junto con el agua y tritúralos con la batidora eléctrica. Cuela y reserva el caldo. Pica finamente la cebolleta, la zanahoria, la calabaza y el calabacín y ponlos a rehogar en una cazuela grande con un chorrito de aceite. Sazona y añade el curry. Vierte el caldo de tomate y cocínalo todo durante 20 minutos. Salpimienta la carne picada y saltéala en una sartén con un chorrito de aceite. Incorpórala a la cazuela junto con la pasta y cuece durante 10 minutos. Fríe las rebanadas de pan en una sartén con un chorrito de aceite. Pasa las puntas de las rebanadas primero por la sopa y luego por perejil picado. Sirve la sopa en platos hondos y acompáñala con las rebanadas de pan. Decora con unas hojas de perejil.",
+    "VICHYSSOISE Ingredientes (4 p.)",
+    "5 puerros 2 patatas 1 cebolleta 150 ml de nata líquida 1 nuez de mantequilla aceite de oliva virgen extra cebollino perifollo sal",
+    "Para el caldo de ave:",
+    "1 muslo de pollo 1 esqueleto de pollo 1 zanahoria parte verde de los puerros 1.500 ml de agua perejil sal",
+    "Elaboración",
+    "Para el caldo, pon la zanahoria, la parte verde de los puerros, unas ramas de perejil, el muslo y el esqueleto de pollo en una cazuela. Cubre con agua, pon a punto de sal y cuece todo durante 20-25 minutos. Cuela y reserva el caldo.",
+    "Limpia la cebolleta y los puerros. Pica todo y pon a pochar en una cazuela con la mantequilla y un chorrito de aceite. Añade las patatas (peladas y cascadas), sazona y rehoga a fuego suave. Es importante que no cojan color.",
+    "Vierte el caldo de ave y cuece todo durante 12-15 minutos. Tritura con la batidora eléctrica y cuela. Añade la nata y remueve bien con una cuchara. Espera a que se temple e introduce en el frigorífico para que se enfríe bien.",
+    "En el momento de servir, espolvorea con cebollino y perifollo muy picados."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Picadillo",
+    "meta_description": "Trocea los tomates, colócalos en un bol grande junto con el agua y tritúralos con la batidora eléctrica. Cuela y reserva el caldo. Pica finamente la cebolleta, la zanahoria, la calabaza y el calabacín y ponlos a rehogar en una cazuela grand",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

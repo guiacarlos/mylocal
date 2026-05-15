@@ -1,0 +1,98 @@
+{
+  "id": "rec_d507fbe3adf26a",
+  "slug": "rollitos-de-pasta-filo",
+  "titulo": "Rollitos De Pasta Filo",
+  "resumen": "Pon las pasas en un bol. Pica los higos y las ciruelas en dados y añádelos. Riega con el brandy y deja que maceren durante 30 minutos como mínimo. Mezcla en un bol el jengibre fresco rallado con la ralladura de lima, una cucharada de canela",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "hojas",
+      "nombre": "pasta filo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de jengibre fresco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 1 lima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "canela en polvo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar moscabado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "higos"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "ciruelas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon las pasas en un bol. Pica los higos y las ciruelas en dados y añádelos. Riega con el brandy y deja que maceren durante 30 minutos como mínimo. Mezcla en un bol el jengibre fresco rallado con la ralladura de lima, una cucharada de canela y el azúcar moscabado. Funde la mantequilla. Coloca 2 hojas de pasta filo sobre una superficie lisa, pincélalas con la mantequilla y espolvoréalas con la mezcla anterior. Repite la operación con el resto de las hojas (siempre de dos en dos) montándolas escalonadamente y formando una fila. Escurre la mezcla de pasas, higos y ciruelas. Pela la manzana, pícala en dados, cocínala 4 minutos en el microondas y añádela al bol. Cubre con la fruta ¾ partes de la superficie de la pasta filo, dejando un borde libre sin rellenar. Enrosca empezando por el lado que tiene relleno, pincela con mantequilla y hornea a 180 ºC durante 30 minutos. Cada cierto tiempo, pincela con la grasa que suelte. Deja templar y corta el rulo en 6 trozos. Adorna con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rollitos De Pasta Filo",
+    "meta_description": "Pon las pasas en un bol. Pica los higos y las ciruelas en dados y añádelos. Riega con el brandy y deja que maceren durante 30 minutos como mínimo. Mezcla en un bol el jengibre fresco rallado con la ralladura de lima, una cucharada de canela",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

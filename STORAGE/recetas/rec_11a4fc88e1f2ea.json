@@ -1,0 +1,78 @@
+{
+  "id": "rec_11a4fc88e1f2ea",
+  "slug": "cupcakes-de-vainilla",
+  "titulo": "Cupcakes De Vainilla",
+  "resumen": "Pon la mantequilla a punto de pomada en un bol, agrega el azúcar y mezcla con la batidora de varillas eléctrica hasta conseguir una masa uniforme. Añade un huevo y sigue batiendo. Incorpora el otro huevo y sigue batiendo. Añade la ralladura",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 15,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "9,5",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "ralladura de limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "crema de vainilla para cupcakes"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "rosas de azúcar"
+    }
+  ],
+  "pasos": [
+    "Pon la mantequilla a punto de pomada en un bol, agrega el azúcar y mezcla con la batidora de varillas eléctrica hasta conseguir una masa uniforme. Añade un huevo y sigue batiendo. Incorpora el otro huevo y sigue batiendo. Añade la ralladura de limón. Mezcla la levadura con la harina y agrega. Mezcla bien. Introduce la masa en una manga pastelera y repártela entre los moldes de cupcake. Colócalos sobre la placa del horno y hornéalos a 180 ºC durante 25 minutos. Retíralos y deja que se enfríen. Adorna los cupcakes con la crema de vainilla. Coloca una rosa encima de cada cupcake y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cupcakes De Vainilla",
+    "meta_description": "Pon la mantequilla a punto de pomada en un bol, agrega el azúcar y mezcla con la batidora de varillas eléctrica hasta conseguir una masa uniforme. Añade un huevo y sigue batiendo. Incorpora el otro huevo y sigue batiendo. Añade la ralladura",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

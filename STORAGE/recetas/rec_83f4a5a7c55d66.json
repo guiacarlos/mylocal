@@ -1,0 +1,93 @@
+{
+  "id": "rec_83f4a5a7c55d66",
+  "slug": "villeroy-de-redondo-jamon-de-pavo-y-queso",
+  "titulo": "Villeroy De Redondo, Jamón De Pavo Y Queso",
+  "resumen": "Salpimienta los filetes de redondo y fríelos brevemente en una sartén con aceite a fuego fuerte. Sácalos y escúrrelos para que suelten el jugo. Pon a calentar 130 mililitros de aceite en una cazuela. Agrega la harina y cocínala removiendo c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "filetes finos de redondo"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "l",
+      "nombre": "onchas de jamón curado de pavo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de queso"
+    },
+    {
+      "cantidad": "1.300",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "130",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina, huevos y pan rallado (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Salpimienta los filetes de redondo y fríelos brevemente en una sartén con aceite a fuego fuerte. Sácalos y escúrrelos para que suelten el jugo. Pon a calentar 130 mililitros de aceite en una cazuela. Agrega la harina y cocínala removiendo con una varilla. Vierte la leche poco a poco y remueve hasta que ligue bien. Sazona y cocina la salsa bechamel durante 10 minutos. Extiende los filetes de redondo sobre una superficie lisa. Coloca una loncha de queso y un par de lonchas de jamón curado de pavo encima de cada uno. Unta una bandeja con un poco de aceite, vierte un cacillo de bechamel y coloca encima un filete con queso y el jamón curado de pavo. Nápalo con otro cacillo de bechamel. Haz lo mismo con el resto de los filetes de redondo con queso y jamón. Deja que se enfríen (puedes introducirlos en el frigorífico). Recorta los sobrantes de bechamel y pasa los villeroy por harina, huevo batido y pan rallado. Fríelos en una sartén con abundante aceite durante 1 minuto y medio por cada lado. Escúrrelos sobre un plato cubierto con papel absorbente. Sirve la salsa de tomate en el fondo de los platos, coloca encima un villeroy de redondo, pavo y queso y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Villeroy De Redondo, Jamón De Pavo Y Queso",
+    "meta_description": "Salpimienta los filetes de redondo y fríelos brevemente en una sartén con aceite a fuego fuerte. Sácalos y escúrrelos para que suelten el jugo. Pon a calentar 130 mililitros de aceite en una cazuela. Agrega la harina y cocínala removiendo c",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,146 @@
+{
+  "id": "rec_28f08046c9b3f0",
+  "slug": "guiso-de-las-bodas-de-camacho",
+  "titulo": "Guiso De Las Bodas De Camacho",
+  "resumen": "Trocea el pollo, sazónalo y fríelo en una tartera grande con aceite. Retíralo a un plato y resérvalo.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pollo (de 1 kg aprox.)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "almendras laminadas tostadas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "ranos de pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para las croquetas:"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "miga de pan de la víspera"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de jamón serrano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el pollo, sazónalo y fríelo en una tartera grande con aceite. Retíralo a un plato y resérvalo.",
+    "Pela dos dientes de ajo, pícalos y fríelos en la misma tartera donde has frito el pollo. Antes de que el ajo coja color, agrega la cebolla cortada en juliana. Pela los pimientos, córtalos en juliana y añádelos. Sazona y rehoga bien toda la verdura. Agrega el pollo, los granos de pimienta negra, las hojas de laurel y el vino blanco (dale un hervor para que se evapore el alcohol). Vierte un poco de caldo, tapa y cocínalo durante 30 minutos.",
+    "Pon la miga de pan a remojo en un bol con agua. Cuando se ablande, escúrrela bien y mézclala con el huevo y las lonchas de jamón bien picaditas. Maja en el mortero los dientes de ajo con una pizca de sal y añádelo. Agrega un poco de perejil picado y mezcla bien. Coge pequeñas porciones de masa, redondéalas y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente.",
+    "Sirve el guiso con las croquetas de pan. Espolvoréalo con las almendras laminadas y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Guiso De Las Bodas De Camacho",
+    "meta_description": "Trocea el pollo, sazónalo y fríelo en una tartera grande con aceite. Retíralo a un plato y resérvalo.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

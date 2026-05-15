@@ -1,0 +1,88 @@
+{
+  "id": "rec_19bf0d7abf1f32",
+  "slug": "empanada-de-morcilla-calabaza-y-manzana",
+  "titulo": "Empanada De Morcilla, Calabaza Y Manzana",
+  "resumen": "Pica los ajos frescos y ponlos a pochar en una sartén con un chorrito de aceite. Pela y pica la calabaza y agrégala. Sazona y cocina todo durante unos 15 minutos. Pásalo a un bol. Tuesta los piñones en una sartén sin aceite y agrégalos al b",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "l",
+      "nombre": "áminas de pasta filo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "morcilla de verduras"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "manzanas"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pica los ajos frescos y ponlos a pochar en una sartén con un chorrito de aceite. Pela y pica la calabaza y agrégala. Sazona y cocina todo durante unos 15 minutos. Pásalo a un bol. Tuesta los piñones en una sartén sin aceite y agrégalos al bol. Pela 1 manzana, córtala en dados y saltéalos en una sartén con un chorrito de aceite. Retira la piel de la morcilla y echa el interior a la sartén. Cocina el conjunto brevemente. Agrega el salteado al bol y mezcla bien. Pela las otras 2 manzanas, trocéalas y cocínalas en una sartén con un chorrito de aceite. Pásalas al vaso batidor, sazona, vierte la leche evaporada, tritura y reserva. En el momento de servir, caliéntala. Coloca un papel de hornear sobre la placa del horno. Coge 4 láminas de pasta filo y extiéndelas sobre la placa de horno. Extiende el relleno encima (sin llegar a los bordes), cúbrelo con otras 2 láminas de pasta filo y pincélalas con un poco de aceite. Dobla los bordes hacia el centro y pincélalos con un poco más de aceite. Hornea la empanada a 200 ºC durante 15 minutos. Sirve la empanada y acompáñala con la salsa. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Empanada De Morcilla, Calabaza Y Manzana",
+    "meta_description": "Pica los ajos frescos y ponlos a pochar en una sartén con un chorrito de aceite. Pela y pica la calabaza y agrégala. Sazona y cocina todo durante unos 15 minutos. Pásalo a un bol. Tuesta los piñones en una sartén sin aceite y agrégalos al b",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

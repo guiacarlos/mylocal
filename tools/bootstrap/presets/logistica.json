@@ -1,0 +1,15 @@
+{
+    "module": "logistica",
+    "capabilities": [
+        "LOGIN",
+        "OPTIONS",
+        "CRM",
+        "NOTIFICACIONES",
+        "DELIVERY"
+    ],
+    "default_role": "admin",
+    "default_user": {
+        "email": null,
+        "password": null
+    }
+}

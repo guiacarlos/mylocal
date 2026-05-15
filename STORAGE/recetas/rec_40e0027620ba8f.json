@@ -1,0 +1,108 @@
+{
+  "id": "rec_40e0027620ba8f",
+  "slug": "pasta-verde-picante-con-salmon",
+  "titulo": "Pasta Verde Picante Con Salmón",
+  "resumen": "Coloca los pimientos sobre la placa del horno. Riégalos con un chorrito de aceite y sálalos. Hornéalos a 200 ºC durante 30-40 minutos. Pélalos, córtalos en tiras y resérvalos. Mezcla en un bol la harina con los huevos, el aceite, el puré de",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "salmón (limpio sin espinas)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones (amarillos)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "salsa picante"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la pasta:"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "puré de espinacas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca los pimientos sobre la placa del horno. Riégalos con un chorrito de aceite y sálalos. Hornéalos a 200 ºC durante 30-40 minutos. Pélalos, córtalos en tiras y resérvalos. Mezcla en un bol la harina con los huevos, el aceite, el puré de espinacas y la sal. Amasa todo durante unos 5-6 minutos y envuelve la masa en film transparente. Deja que repose durante 30 minutos. Forma bolas con la masa. Espolvoréalas con harina y estíralas (máquina o rodillo) hasta que queden bien finas. Córtalas en tiras finas y deja que se sequen. Pela los ajos, pícalos finamente y ponlos a dorar en una sartén con aceite. Agrega el salmón cortado en dados y saltéalo brevemente. Salpimienta e incorpora la salsa picante. Pon agua a calentar con una pizca de sal. Agrega la pasta y cuécela durante 2- 3 minutos. Escúrrela y añádela a la sartén del salmón. Saltea brevemente. Ralla encima un poco de la cáscara de la lima. Sirve y adorna los platos"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pasta Verde Picante Con Salmón",
+    "meta_description": "Coloca los pimientos sobre la placa del horno. Riégalos con un chorrito de aceite y sálalos. Hornéalos a 200 ºC durante 30-40 minutos. Pélalos, córtalos en tiras y resérvalos. Mezcla en un bol la harina con los huevos, el aceite, el puré de",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

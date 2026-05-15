@@ -1,0 +1,103 @@
+{
+  "id": "rec_58e08e47379b27",
+  "slug": "macarrones-con-pollo-al-curry",
+  "titulo": "Macarrones Con Pollo Al Curry",
+  "resumen": "Pon abundante agua a calentar en una cazuela grande. Sazona y, cuando empiece a hervir, agrega los macarrones. Cuécelos durante el tiempo que indique el paquete. Pela 2 dientes de ajo, la zanahoria y las cebolletas y pícalo todo finamente. ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "macarrones"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "cintas de pollo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "nueces (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a calentar en una cazuela grande. Sazona y, cuando empiece a hervir, agrega los macarrones. Cuécelos durante el tiempo que indique el paquete. Pela 2 dientes de ajo, la zanahoria y las cebolletas y pícalo todo finamente. Ponlos a pochar en otra cazuela con un chorrito de aceite. Sazona y deja que se doren un poco. Añade la harina, rehógala un poco e incorpora el curry y 500 mililitros de agua. Deja que reduzca un poco. Agrega los macarrones escurridos. Pela y ralla la manzana e incorpórala. Mezcla bien. Salpimienta las cintas de pollo y saltéalas en una sartén con un chorrito de aceite y el otro ajo pelado y bien picado. Añade perejil picado. Pásalas a la cazuela y mezcla. Sirve y adorna con las nueces y con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Macarrones Con Pollo Al Curry",
+    "meta_description": "Pon abundante agua a calentar en una cazuela grande. Sazona y, cuando empiece a hervir, agrega los macarrones. Cuécelos durante el tiempo que indique el paquete. Pela 2 dientes de ajo, la zanahoria y las cebolletas y pícalo todo finamente. ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

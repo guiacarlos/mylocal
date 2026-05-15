@@ -1,0 +1,83 @@
+{
+  "id": "rec_185a41165f817e",
+  "slug": "tarta-de-higos",
+  "titulo": "Tarta De Higos",
+  "resumen": "La víspera, pon a remojo los higos en té para que se hidraten. Unta un molde con un poco de mantequilla y espolvoréalo con un poco de harina. Cúbrelo con la pasta quebrada, coloca encima papel de hornear y añade unos garbanzos para evitar q",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ámina de masa quebrada"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "higos secos remojados en té"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "mantequilla y harina para untar el molde"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "garbanzos crudos (para hornear la masa quebrada)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "La víspera, pon a remojo los higos en té para que se hidraten. Unta un molde con un poco de mantequilla y espolvoréalo con un poco de harina. Cúbrelo con la pasta quebrada, coloca encima papel de hornear y añade unos garbanzos para evitar que la masa suba. Hornéala a 180 ºC durante 15 minutos. Retira el papel y los garbanzos. Escurre los higos, retírales el rabito y córtalos por la mitad. Cubre con ellos toda la superficie de la tarta (sin retirarla del molde). Bate los huevos en un bol. Agrega la nata, el azúcar y la esencia de vainilla. Mezcla bien y vierte la mezcla sobre los higos. Coloca la tarta sobre una bandeja de horno y hornéala a 180 ºC durante unos 30 minutos. Deja que se enfríe y desmóldala. Sirve y adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Higos",
+    "meta_description": "La víspera, pon a remojo los higos en té para que se hidraten. Unta un molde con un poco de mantequilla y espolvoréalo con un poco de harina. Cúbrelo con la pasta quebrada, coloca encima papel de hornear y añade unos garbanzos para evitar q",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

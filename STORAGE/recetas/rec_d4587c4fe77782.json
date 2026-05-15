@@ -1,0 +1,103 @@
+{
+  "id": "rec_d4587c4fe77782",
+  "slug": "pavo-mechado-con-manzana-asada",
+  "titulo": "Pavo Mechado Con Manzana Asada",
+  "resumen": "Corta el tocino y el jamón en tiras, ponlas una a una en un mechador e introdúcelas en la pechuga. Ata la pechuga, salpimiéntala y dórala en una tartera con un chorrito de aceite. Cuando tome color, moja con el brandy, el vino y el caldo, y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "pechuga de pavo en una pieza"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "tocino"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "-6 manzanas golden rojas y verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "copa",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "caldo de verdura"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta el tocino y el jamón en tiras, ponlas una a una en un mechador e introdúcelas en la pechuga. Ata la pechuga, salpimiéntala y dórala en una tartera con un chorrito de aceite. Cuando tome color, moja con el brandy, el vino y el caldo, y deja que se guise 3 minutos a fuego lento. Pon la pechuga junto con la salsa en una fuente apta para el horno y agrega el tomillo. Hornea a 200 ºC durante 15 minutos; dale la vuelta y vuelve a hornear, a 190 ºC, durante 15-20 minutos. Retira la cuerda de cocina al pavo y córtalo en ocho lonchas. Reserva. Cuela la salsa y caliéntala en una sartén. Lígala con la harina de maíz diluida en agua fría y espolvoréala con un poco de perejil picado. Deja reducir a fuego fuerte. Corta las manzanas en cuatro rodajas gruesas y vuelve a montar las manzanas alternando rodajas de distinto color (para dar un toque original y vistoso). Ensarta cada manzana en un palo de brocheta, ponlas en una fuente apta para el horno (puedes pintarlas con un poco de aceite para darles brillo) y asa a 190 ºC durante 15-20 minutos (ásalas junto con el pavo mechado para que se cocinen a la vez). Sirve el pavo en un plato, salsea por encima (puedes acompañarlo con el resto de la salsa en una salsera) y acompaña con la manzana multicolor. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pavo Mechado Con Manzana Asada",
+    "meta_description": "Corta el tocino y el jamón en tiras, ponlas una a una en un mechador e introdúcelas en la pechuga. Ata la pechuga, salpimiéntala y dórala en una tartera con un chorrito de aceite. Cuando tome color, moja con el brandy, el vino y el caldo, y",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

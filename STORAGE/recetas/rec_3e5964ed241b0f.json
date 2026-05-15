@@ -1,0 +1,103 @@
+{
+  "id": "rec_3e5964ed241b0f",
+  "slug": "arroz-tailandes",
+  "titulo": "Arroz Tailandés",
+  "resumen": "Enjuaga el arroz dos o tres veces para quitarle el exceso de almidón. Cuécelo en una cazuela con abundante agua y una pizca de sal durante 11-12 minutos a fuego medio. Escúrrelo y resérvalo. Pela las zanahorias y el pimiento. Corta las zana",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "arroz tailandés (jazmín)"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "pechuga de pollo"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "brotes de soja"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "ml",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "cacahuetes tostados"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Enjuaga el arroz dos o tres veces para quitarle el exceso de almidón. Cuécelo en una cazuela con abundante agua y una pizca de sal durante 11-12 minutos a fuego medio. Escúrrelo y resérvalo. Pela las zanahorias y el pimiento. Corta las zanahorias en rodajas oblicuas y el pimiento en rombos. Pon un chorrito de aceite en el wok o en una sartén, agrega las verduras, sazona y saltéalas. Resérvalas en un plato. Corta la pechuga de pollo en tiras de bocado, salpimiéntalas y saltéalas brevemente en un wok o una sartén. Añade las gambas y saltéalas. Agrega los brotes de soja y cocina el conjunto durante un par de minutos. Salpimienta. Incorpora las verduras salteadas (zanahorias y pimiento), el arroz y la salsa de soja. Mezcla y saltea todo conjuntamente. Sirve el arroz. Pica los cacahuetes y el cebollino y espolvoréalos sobre el arroz. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Tailandés",
+    "meta_description": "Enjuaga el arroz dos o tres veces para quitarle el exceso de almidón. Cuécelo en una cazuela con abundante agua y una pizca de sal durante 11-12 minutos a fuego medio. Escúrrelo y resérvalo. Pela las zanahorias y el pimiento. Corta las zana",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

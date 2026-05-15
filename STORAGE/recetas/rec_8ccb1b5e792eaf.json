@@ -1,0 +1,126 @@
+{
+  "id": "rec_8ccb1b5e792eaf",
+  "slug": "tartaletas-de-ensaladilla-rusa",
+  "titulo": "Tartaletas De Ensaladilla Rusa",
+  "resumen": "Pon las patatas (limpias y con piel) a cocer a fuego suave en una cazuela con agua fría. Pela las zanahorias y añádelas. Introduce los huevos. Sazona. A los 10 minutos, retira los huevos, y deja cocer las patatas y las zanahorias durante 20",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "32",
+      "unidad": "",
+      "nombre": "tartaletas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "aceitunas verdes (sin hueso)"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pepinillos"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "atún en aceite"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "huevas de trucha"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "",
+      "nombre": "-200 ml de aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las patatas (limpias y con piel) a cocer a fuego suave en una cazuela con agua fría. Pela las zanahorias y añádelas. Introduce los huevos. Sazona. A los 10 minutos, retira los huevos, y deja cocer las patatas y las zanahorias durante 20 minutos más.",
+    "Pela las patatas y los huevos y pícalos en trocitos pequeños. Pica también las zanahorias, los pepinillos y 8 aceitunas. Desmenuza el atún. Coloca todo en un bol, sazona y reserva.",
+    "Para la mayonesa, pon el huevo en el vaso de la batidora, agrega una pizca de vinagre, el aceite y sal. Bate bien.",
+    "Mezcla la mayonesa con los ingredientes del bol. Rellena las tartaletas con la ensaladilla y decora 8 con gambas, 8 con huevas, 8 con aceitunas y 8 con perejil. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tartaletas De Ensaladilla Rusa",
+    "meta_description": "Pon las patatas (limpias y con piel) a cocer a fuego suave en una cazuela con agua fría. Pela las zanahorias y añádelas. Introduce los huevos. Sazona. A los 10 minutos, retira los huevos, y deja cocer las patatas y las zanahorias durante 20",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

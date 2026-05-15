@@ -1,0 +1,107 @@
+{
+  "id": "rec_f1e828ae52142a",
+  "slug": "sopa-de-conejo",
+  "titulo": "Sopa De Conejo",
+  "resumen": "Trocea el conejo y saca la carne de los lomos y de los muslos. Pícala y resérvala. Reserva aparte el resto del conejo.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "apio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "fideos"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "tapioca"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el conejo y saca la carne de los lomos y de los muslos. Pícala y resérvala. Reserva aparte el resto del conejo.",
+    "Pela 1 zanahoria y la cebolla, limpia 1 puerro y la rama de apio. Corta todo en dados y ponlos a rehogar en una cazuela con un chorrito de aceite. Sazona.",
+    "Cuando las verduras estén doradas, agrega el resto del conejo (paletillas, costillas y huesos) y rehógalo un poco. Cubre con los 2 litros de agua y cuece todo durante 30 minutos. Pon a punto de sal. Desespuma, desengrasa y cuela el caldo. (Si quieres, puedes aprovechar la carne del conejo para croquetas.)",
+    "Para la sopa, pela las otras 2 zanahorias y los otros 2 puerros y pícalos finamente. Ponlos a pochar en otra cazuela grande con un chorrito de aceite. Sazona. Pela y pica el tomate, añádelo y rehógalo un poco. Vierte el caldo, añade la tapioca y cuece durante 5 minutos. Pon a punto de sal.",
+    "Salpimienta y saltea la carne de conejo picada en una sartén con un chorrito de aceite. Agrega un poco de perejil picado y añádelos a la cazuela. Incorpora los fideos, cocina el conjunto durante 2 minutos más y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Conejo",
+    "meta_description": "Trocea el conejo y saca la carne de los lomos y de los muslos. Pícala y resérvala. Reserva aparte el resto del conejo.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

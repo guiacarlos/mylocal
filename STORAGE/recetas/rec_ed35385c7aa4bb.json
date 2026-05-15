@@ -1,0 +1,119 @@
+{
+  "id": "rec_ed35385c7aa4bb",
+  "slug": "sopa-txakoli",
+  "titulo": "Sopa Txakoli",
+  "resumen": "Pela el mango, el plátano y el kiwi. Pícalos en daditos y colócalos en un bol. Lava las fresas, retírales el tallo, pícalas en daditos y añádelas. Reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "750",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "trozos de cáscara de naranja"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "anises estrellados"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "kiwi"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "mango"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "bolas de helado de queso"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "magdalena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pela el mango, el plátano y el kiwi. Pícalos en daditos y colócalos en un bol. Lava las fresas, retírales el tallo, pícalas en daditos y añádelas. Reserva.",
+    "Pon el vino a calentar en una cazuela. Agrega las pasas, el azúcar, la cáscara de naranja, la rama de canela, la vaina de vainilla (abierta) y los anises estrellados. Cuece todo durante 30 minutos.",
+    "Coloca la gelatina en un bol con agua fría y deja que se humedezca bien. Escúrrela y agrégala al vino aromatizado. Dale un par de vueltas y vierte todo en un bol para que se enfríe. Una vez fría, mezcla la sopa con la fruta.",
+    "Corta la magdalena en 4 rodajas y pon una en el centro de cada plato. Vierte la sopa alrededor y, encima del trozo de magdalena, coloca una bolita de helado. Adorna con unas hojas de menta y sirve. CREMA FRÍA DE MANGO Ingredientes (4 p.)",
+    "3 mangos 3 huevos 250 ml de leche 1 vaina de vainilla 50 g de azúcar sal aceite de oliva virgen extra grosellas 8 barquillos hojas de menta",
+    "Elaboración",
+    "Pela y trocea los mangos (reserva medio) y ponlos en el vaso de la batidora. Añade los huevos, el azúcar y el interior de la vaina de vainilla. Tritura bien. Pon la leche a calentar y añade el puré de mango. Cuece a fuego medio sin dejar de remover con la varilla hasta que empiece a espesar. Reparte la crema en 4 copas y deja que se enfríe. Pica finamente el mango reservado y colócalo en un bol. Añade un chorro de aceite, unas hojas de menta picaditas y una pizca de sal. Mezcla y decora las copas. Adorna con las grosellas, los barquillos y la menta. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Txakoli",
+    "meta_description": "Pela el mango, el plátano y el kiwi. Pícalos en daditos y colócalos en un bol. Lava las fresas, retírales el tallo, pícalas en daditos y añádelas. Reserva.",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

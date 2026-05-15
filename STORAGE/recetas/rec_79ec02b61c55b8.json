@@ -1,0 +1,78 @@
+{
+  "id": "rec_79ec02b61c55b8",
+  "slug": "crema-de-tomate-y-aguacate-con-gambas-crujientes",
+  "titulo": "Crema De Tomate Y Aguacate Con Gambas Crujientes",
+  "resumen": "Haz un corte en forma de cruz en la parte inferior de los tomates y escáldalos durante un minuto. Deja que se templen y pélalos. Pícalos y ponlos en un bol. Abre el aguacate, retira el hueso, saca la carne, trocéala y añádela al bol. Pela e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "tomates maduros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aguacate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ámina de pasta brick"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Haz un corte en forma de cruz en la parte inferior de los tomates y escáldalos durante un minuto. Deja que se templen y pélalos. Pícalos y ponlos en un bol. Abre el aguacate, retira el hueso, saca la carne, trocéala y añádela al bol. Pela el diente de ajo, pícalo y añádelo. Tritura y cuela la mezcla para eliminar las pepitas. Pon a punto de sal, pasa la crema a una jarra y métela en el frigorífico para que se enfríe durante al menos 1 hora. Pica un poco las hojas de albahaca y colócalas en un vaso batidor. Agrega aceite y tritura. Resérvalo. Corta la pasta brick en 12 triángulos, sazona las gambas y envuélvelas con la pasta. Fríelas en una sartén con aceite y escúrrelas sobre un plato cubierto con papel absorbente. Ensarta las gambas crujientes en brochetas. Sirve la crema y salpícala con el aceite de albahaca. Acompáñala con las gambas crujientes."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Tomate Y Aguacate Con Gambas Crujientes",
+    "meta_description": "Haz un corte en forma de cruz en la parte inferior de los tomates y escáldalos durante un minuto. Deja que se templen y pélalos. Pícalos y ponlos en un bol. Abre el aguacate, retira el hueso, saca la carne, trocéala y añádela al bol. Pela e",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,126 @@
+{
+  "id": "rec_02f2da4e324113",
+  "slug": "poke-de-atun",
+  "titulo": "Poké De Atún",
+  "resumen": "Pela los tallos de cebolleta, córtalos en rodajas finas y ponlos a macerar en un bol con el zumo de limón durante unos 15 minutos. Cuela y reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "atún (limpio)"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tallos de cebolleta"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "rabanitos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "tomates cherry"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pepino"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aguacate"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "aceite de sésamo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "90",
+      "unidad": "g",
+      "nombre": "huevas rojas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "alga wakame hidratada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de 1 limón"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "ml",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "g",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cilantro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los tallos de cebolleta, córtalos en rodajas finas y ponlos a macerar en un bol con el zumo de limón durante unos 15 minutos. Cuela y reserva.",
+    "Mezcla, en otro bol, el vinagre con el azúcar y una pizca de sal. Lava los rabanitos y córtalos en rodajitas finas. Añádelos al bol y déjalos macerando durante 30 minutos.",
+    "Corta el atún en dados y ponlos en otro bol. Agrega la salsa de soja, el aceite de sésamo y los tallos de cebolleta macerados. Marina el pescado durante 30 minutos.",
+    "Pon agua a calentar en una cazuela. Añade el arroz, sazónalo y cocínalo durante 18 minutos. Escúrrelo y resérvalo. Lava los tomates, córtalos por la mitad y resérvalos. Lava el pepino, hazle 4 surcos a lo largo por la parte de la piel, córtalo en rodajas finas y resérvalas. Corta el aguacate por la mitad, sácale la pulpa y córtala en medias lunas. Reparte el arroz en 4 boles, coloca encima el atún marinado con la cebolleta, los tomates, el pepino, el aguacate, los rabanitos, las algas picaditas y las huevas. Espolvorea con las semillas de sésamo y un poco de cilantro picadito. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Poké De Atún",
+    "meta_description": "Pela los tallos de cebolleta, córtalos en rodajas finas y ponlos a macerar en un bol con el zumo de limón durante unos 15 minutos. Cuela y reserva.",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

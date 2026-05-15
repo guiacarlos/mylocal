@@ -1,0 +1,103 @@
+{
+  "id": "rec_316ff30dfc2cee",
+  "slug": "rollitos-de-pavo-con-champinones",
+  "titulo": "Rollitos De Pavo Con Champiñones",
+  "resumen": "Pela y pica 4 dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Limpia los champiñones y agrégalos enteros a la cazuela. Añade las guindillas, la harina, el vino, sal y un puñado de perejil picado y cocínalos durante",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "filetes de pechuga de pavo"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón cocido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "brócoli"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "uindillas cayenas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica 4 dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Limpia los champiñones y agrégalos enteros a la cazuela. Añade las guindillas, la harina, el vino, sal y un puñado de perejil picado y cocínalos durante 20 minutos. Resérvalos. Salpimienta los filetes de pavo, pon media loncha de jamón cocido encima de cada uno y enróllalos. Sujeta cada rollito con un palillo. Coloca los rollitos en una bandeja de horno, condiméntalos con un poco de sal, pimienta y aceite y hornéalos durante 15-20 minutos a 200 ºC. Para hacer la provenzal, mezcla el pan rallado, 2 dientes de ajo picado y perejil picado al gusto. Cuando los rollitos estén casi hechos, espolvoréalos con la provenzal y gratínalos durante 3-4 minutos. Retira del horno y reserva. Separa los ramilletes de brócoli y escáldalos en una cazuela con agua hirviendo y sal durante 4-5 minutos. Sirve en cada plato 2 rollitos y acompáñalos con el brócoli y los champiñones."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rollitos De Pavo Con Champiñones",
+    "meta_description": "Pela y pica 4 dientes de ajo y ponlos a dorar en una cazuela con un chorrito de aceite. Limpia los champiñones y agrégalos enteros a la cazuela. Añade las guindillas, la harina, el vino, sal y un puñado de perejil picado y cocínalos durante",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

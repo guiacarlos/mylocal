@@ -1,0 +1,78 @@
+{
+  "id": "rec_ee7f1fed08ec52",
+  "slug": "bacalao-con-huevos",
+  "titulo": "Bacalao Con Huevos",
+  "resumen": "Limpia los ajos frescos y córtalos en cilindros. Saltéalos en una sartén con aceite y pásalos a una cazuela de barro. Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega los lomos de bacalao y cuécelos durante 3-4 minutos. R",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "l",
+      "nombre": "omos de bacalao desalado"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "pan de chapata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia los ajos frescos y córtalos en cilindros. Saltéalos en una sartén con aceite y pásalos a una cazuela de barro. Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega los lomos de bacalao y cuécelos durante 3-4 minutos. Retíralos, escúrrelos, deja que se templen, sepáralos en lascas y ponlas sobre los ajos frescos. Casca los huevos, añádelos a la cazuela y sazona. Corta las aceitunas por la mitad y agrégalas. Introduce la cazuela de barro en el horno y hornea a 200 ºC durante 10 minutos. Corta el pan en dados y fríelos en una sartén con aceite hasta que se doren. Retíralos y escúrrelos sobre un plato cubierto con papel absorbente. Sirve la cazuela y pon encima los costrones de pan frito. Espolvorea con un poco de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Con Huevos",
+    "meta_description": "Limpia los ajos frescos y córtalos en cilindros. Saltéalos en una sartén con aceite y pásalos a una cazuela de barro. Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega los lomos de bacalao y cuécelos durante 3-4 minutos. R",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

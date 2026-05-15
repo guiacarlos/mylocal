@@ -1,0 +1,103 @@
+{
+  "id": "rec_b3603f76072574",
+  "slug": "hamburguesas-de-verduras-con-salsa-de-tomate",
+  "titulo": "Hamburguesas De Verduras Con Salsa De Tomate",
+  "resumen": "Cuece la patata en una cazuela con agua durante 30 minutos. Pélala y pásala por el pasapurés. Reserva. Pela la cebolla, córtala en daditos y ponla a pochar en una sartén con un poco de aceite. Corta los ajos frescos en cilindros y añádelos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "coliflor"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "copos de avena (finos)"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina de garbanzo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Cuece la patata en una cazuela con agua durante 30 minutos. Pélala y pásala por el pasapurés. Reserva. Pela la cebolla, córtala en daditos y ponla a pochar en una sartén con un poco de aceite. Corta los ajos frescos en cilindros y añádelos. Sazona y rehoga bien. Limpia la coliflor, rállala y añádela a la sartén. Corta el calabacín en daditos muy pequeños y agrégalos. Pela las zanahorias, rállalas e incorpóralas. Cocina las verduras durante 20-25 minutos a fuego suave. Coloca todo en un bol y agrega el puré de patata. Añade los copos de avena, la harina de garbanzo y el orégano. Pon a punto de sal, mezcla y deja reposar durante 5 minutos. Divide la masa en 8 porciones y dales forma de hamburguesa. Pon la plancha a calentar con un chorrito de aceite. Agrega las hamburguesas y cocínalas a la plancha durante 3 minutos por cada lado. Sirve y acompáñalas con la salsa de tomate caliente. Decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hamburguesas De Verduras Con Salsa De Tomate",
+    "meta_description": "Cuece la patata en una cazuela con agua durante 30 minutos. Pélala y pásala por el pasapurés. Reserva. Pela la cebolla, córtala en daditos y ponla a pochar en una sartén con un poco de aceite. Corta los ajos frescos en cilindros y añádelos.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

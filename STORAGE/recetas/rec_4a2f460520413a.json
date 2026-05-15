@@ -1,0 +1,120 @@
+{
+  "id": "rec_4a2f460520413a",
+  "slug": "sopa-de-verduras-con-toque",
+  "titulo": "Sopa De Verduras Con Toque",
+  "resumen": "Pica la panceta y rehógala en una cazuela grande con un chorrito de aceite. Pela y pica los ajos, la cebolleta y los puerros e incorpóralos. Rehógalos brevemente. Pela y pica el tomate y agrégalo. Sazona y cocina un poco. Trocea la coliflor",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "fideos"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "l",
+      "nombre": "onchas de panceta"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate maduro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "coliflor"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pica la panceta y rehógala en una cazuela grande con un chorrito de aceite. Pela y pica los ajos, la cebolleta y los puerros e incorpóralos. Rehógalos brevemente. Pela y pica el tomate y agrégalo. Sazona y cocina un poco. Trocea la coliflor. Pela las alcachofas y la patata, córtalas en daditos y saltéalos en una sartén con un chorrito de aceite. Añade el tomillo, la coliflor y el pimentón, saltea brevemente y pasa todo a la cazuela. Pon a punto de sal. Cubre con abundante agua y cuece todo durante 15 minutos. Incorpora los fideos y cocina la sopa durante 5 minutos más. Reserva.",
+    "Escalda durante 1 minuto las hojas de espinaca en una cazuela con agua hirviendo y sal. Escúrrelas bien, pícalas y forma bolitas con ellas. Pásalas por harina y huevo batido y fríelas en una sartén con abundante aceite caliente durante 1 minuto. Retíralas a un plato cubierto con papel absorbente.",
+    "Sirve la sopa y adórnala con las bolitas de espinaca. Decora con un poco de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Verduras Con Toque",
+    "meta_description": "Pica la panceta y rehógala en una cazuela grande con un chorrito de aceite. Pela y pica los ajos, la cebolleta y los puerros e incorpóralos. Rehógalos brevemente. Pela y pica el tomate y agrégalo. Sazona y cocina un poco. Trocea la coliflor",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

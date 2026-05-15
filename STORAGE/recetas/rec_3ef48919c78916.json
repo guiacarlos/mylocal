@@ -1,0 +1,93 @@
+{
+  "id": "rec_3ef48919c78916",
+  "slug": "garbanzos-con-pisto",
+  "titulo": "Garbanzos Con Pisto",
+  "resumen": "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y agrega los garbanzos escurridos. Pica la panceta y la oreja e incorpóralas. Tapa y cuece todo durante 20 minutos. Corta la cebolla y los dientes de ajo en dados y ponl",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "oreja de cerdo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "panceta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "berenjenas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y agrega los garbanzos escurridos. Pica la panceta y la oreja e incorpóralas. Tapa y cuece todo durante 20 minutos. Corta la cebolla y los dientes de ajo en dados y ponlos a pochar en una tartera con un chorrito de aceite. Sazónalos y rehógalos hasta que se doren. Pela las berenjenas, córtalas en dados e incorpóralas. Pica también el calabacín (con piel) y añádelo. Rehógalos bien hasta que se doren. Pela los tomates, córtalos en dados e incorpóralos a la tartera de las verduras. Cocina el conjunto durante 5 minutos. Escurre los garbanzos con la panceta y la oreja y añádelos a la tartera de las verduras. Mezcla todo, sirve y espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Garbanzos Con Pisto",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Calienta agua en la olla rápida y agrega los garbanzos escurridos. Pica la panceta y la oreja e incorpóralas. Tapa y cuece todo durante 20 minutos. Corta la cebolla y los dientes de ajo en dados y ponl",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

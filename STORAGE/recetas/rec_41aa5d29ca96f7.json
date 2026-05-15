@@ -1,0 +1,113 @@
+{
+  "id": "rec_41aa5d29ca96f7",
+  "slug": "pastas-y-masas-canelones-de-carne-con-queso-fresco-y-espinacas",
+  "titulo": "Pastas Y Masas Canelones De Carne Con Queso Fresco Y Espinacas",
+  "resumen": "Calienta abundante agua en una cazuela y sazónala. Cuando empiece a hervir, agrega las láminas de canelón y cuécelas durante el tiempo que indique el paquete (10-12 minutos). Refresca las láminas en agua fría, escúrrelas y resérvalas sobre ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "l",
+      "nombre": "áminas de canelón"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "carne picada de ternera"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la bechamel:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Calienta abundante agua en una cazuela y sazónala. Cuando empiece a hervir, agrega las láminas de canelón y cuécelas durante el tiempo que indique el paquete (10-12 minutos). Refresca las láminas en agua fría, escúrrelas y resérvalas sobre un paño de cocina limpio. Para hacer la bechamel, vierte un chorrito de aceite en una cazuela, añade la harina y cocínala. Vierte la leche poco a poco sin dejar de remover. Condimenta con sal y un poco de nuez moscada y cocina la bechamel durante 6-8 minutos sin dejar de remover. Resérvala. Saltea la carne en una sartén con un chorrito de aceite. Sazona y añade las espinacas limpias y picaditas. Saltea el conjunto. Escurre el líquido y coloca el salteado en un bol. Añade 6 cucharadas de bechamel, las pasas y el queso fresco cortado en daditos. Mezcla bien y deja que se temple. Pon un poco de relleno en cada lámina de canelón, enróllalos y colócalos en una fuente apta para el horno. Nápalos con el resto de la bechamel y espolvoréalos con las semillas de sésamo. Hornéalos a 220 ºC durante 4-5 minutos (también se pueden gratinar en el último momento). Sirve los canelones y decóralos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pastas Y Masas Canelones De Carne Con Queso Fresco Y Espinacas",
+    "meta_description": "Calienta abundante agua en una cazuela y sazónala. Cuando empiece a hervir, agrega las láminas de canelón y cuécelas durante el tiempo que indique el paquete (10-12 minutos). Refresca las láminas en agua fría, escúrrelas y resérvalas sobre ",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

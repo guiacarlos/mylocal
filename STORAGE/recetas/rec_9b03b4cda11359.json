@@ -1,0 +1,98 @@
+{
+  "id": "rec_9b03b4cda11359",
+  "slug": "vasitos-de-crema-de-cafe",
+  "titulo": "Vasitos De Crema De Café",
+  "resumen": "Pon a calentar 400 mililitros de leche. En un bol, mezcla el licor de naranja con el agua. Corta los bizcochos de soletilla en 4 trozos y emborráchalos con la mezcla. Mezcla en otro bol el café soluble, el azúcar y la harina de maíz refinad",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 12,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "yemas"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "soperas de café soluble"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "bizcochos de soletilla"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "licor de naranja"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "cacao"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "piñones tostados"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "almendras tostadas laminadas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar 400 mililitros de leche. En un bol, mezcla el licor de naranja con el agua. Corta los bizcochos de soletilla en 4 trozos y emborráchalos con la mezcla. Mezcla en otro bol el café soluble, el azúcar y la harina de maíz refinada. Añade el resto de la leche (100 ml) y mezcla hasta conseguir una especie de papilla. Incorpora las yemas y mezcla bien. Agrega un poco de la leche caliente, bate un poco con una varilla y vierte todo en la cazuela. Cocina la crema, sin dejar de remover, hasta que espese. Coloca un poco de crema en el fondo de cada vasito, pon encima un cuarto de bizcocho, otra porción de crema, otro cuarto de bizcocho y otra porción de crema. Espolvorea con cacao y adorna con piñones y almendras. Adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Vasitos De Crema De Café",
+    "meta_description": "Pon a calentar 400 mililitros de leche. En un bol, mezcla el licor de naranja con el agua. Corta los bizcochos de soletilla en 4 trozos y emborráchalos con la mezcla. Mezcla en otro bol el café soluble, el azúcar y la harina de maíz refinad",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

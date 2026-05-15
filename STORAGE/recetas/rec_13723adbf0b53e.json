@@ -1,0 +1,97 @@
+{
+  "id": "rec_13723adbf0b53e",
+  "slug": "crema-de-calabaza-con-cigalitas-y-beicon",
+  "titulo": "Crema De Calabaza Con Cigalitas Y Beicon",
+  "resumen": "Pela y pica el puerro, la cebolleta (parte blanca) la patata, la zanahoria y la calabaza y ponlo todo a pochar en una cazuela con un chorrito de aceite. Sazona. Cubre con agua y cuece las verduras durante 20 minutos. Tritura y reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "cigalitas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "onchas de beicon"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "boletus"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica el puerro, la cebolleta (parte blanca) la patata, la zanahoria y la calabaza y ponlo todo a pochar en una cazuela con un chorrito de aceite. Sazona. Cubre con agua y cuece las verduras durante 20 minutos. Tritura y reserva.",
+    "Saltea las cigalas en una sartén con un chorrito de aceite. Pélalas y envuélvelas con el beicon. Pínchalas con un palillo para que no se suelten.",
+    "Pon un poco de aceite en una sartén, agrega las cigalitas y fríelas de manera que el beicon quede tostadito.",
+    "Limpia los boletus y córtalos en daditos. Saltéalos brevemente en una sartén con un chorrito de aceite. Sazona y espolvorea con un poco de perejil picado.",
+    "Sirve los boletus en el fondo de los platos, pon encima la crema y adorna con las cigalitas. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Calabaza Con Cigalitas Y Beicon",
+    "meta_description": "Pela y pica el puerro, la cebolleta (parte blanca) la patata, la zanahoria y la calabaza y ponlo todo a pochar en una cazuela con un chorrito de aceite. Sazona. Cubre con agua y cuece las verduras durante 20 minutos. Tritura y reserva.",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rec_be8b2fb709bc23",
+  "slug": "papas-con-costilla-y-pina",
+  "titulo": "Papas Con Costilla Y Piña",
+  "resumen": "Trocea el costillar en 8 trozos y lávalos bien para quitarles el exceso de sal. Colócalos en un bol grande y cúbrelos con agua. Introduce el recipiente en el frigorífico y deja las costillas a remojo durante 2 días cambiándoles el agua cada",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "costilla de cerdo salada"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "papas (patatas)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "piñas (mazorcas de maíz)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el mojo de cilantro:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trocito de pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manojo de cilantro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "comino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "",
+      "nombre": "-200 ml de aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el costillar en 8 trozos y lávalos bien para quitarles el exceso de sal. Colócalos en un bol grande y cúbrelos con agua. Introduce el recipiente en el frigorífico y deja las costillas a remojo durante 2 días cambiándoles el agua cada 8 horas (igual que el bacalao). Coloca las costillas en la olla rápida, cúbrelas con agua y ponlas a calentar. Coloca la tapa y cuécelas durante 15 minutos. Abre la olla y desgrasa el caldo. Pela las patatas e incorpóralas (enteras) a la olla. Pela las mazorcas y corta cada una en 4 trozos. Añádelas a la olla, coloca de nuevo la tapa y cuece todo durante 10 minutos más. Para hacer el mojo de cilantro, introduce en un vaso batidor los ajos (pelados y troceados), el pimiento (picado), las hojas de cilantro, el comino, un chorrito de vinagre, el aceite, una pizca de sal y otra de pimienta. Tritura bien y resérvalo. Coloca las costillas con las mazorcas y las patatas en una fuente. Rocía todo con el mojo. Pon el resto del mojo en una salsera para que cada uno se sirva lo que le apetezca. Decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Papas Con Costilla Y Piña",
+    "meta_description": "Trocea el costillar en 8 trozos y lávalos bien para quitarles el exceso de sal. Colócalos en un bol grande y cúbrelos con agua. Introduce el recipiente en el frigorífico y deja las costillas a remojo durante 2 días cambiándoles el agua cada",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

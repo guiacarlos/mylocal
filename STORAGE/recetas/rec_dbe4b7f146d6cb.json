@@ -1,0 +1,93 @@
+{
+  "id": "rec_dbe4b7f146d6cb",
+  "slug": "rape-en-vinagreta",
+  "titulo": "Rape En Vinagreta",
+  "resumen": "Pon agua a calentar en una cazuelita. Agrega las habas y cuécelas durante 10 minutos. Escúrrelas y resérvalas. Cuece el huevo en otra cazuelita con agua durante 10 minutos. Refréscalo, pélalo y córtalo en daditos. Resérvalo. Sazona el lomo ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "omo de rape de 600 g"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "habas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos (en conserva)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en una cazuelita. Agrega las habas y cuécelas durante 10 minutos. Escúrrelas y resérvalas. Cuece el huevo en otra cazuelita con agua durante 10 minutos. Refréscalo, pélalo y córtalo en daditos. Resérvalo. Sazona el lomo de rape. Extiende el pimentón sobre un trozo grande papel de aluminio y reboza el lomo en el pimentón hasta que quede bien impregnado. Envuelve el lomo con el papel de aluminio (tiene que quedar bien cerrado para que no le entre nada de agua) y ponlo a cocer en una cazuela con agua durante 6 minutos a fuego lento. Para la vinagreta, corta en daditos la cebolleta y los pimientos verde y rojo (pelado) y mézclalos en un bol con las habas cocidas. Añade también el huevo picado, aceite, vinagre y sal. Mezcla bien. Corta el rape en rodajas. Sirve el rape con los espárragos y adereza con la vinagreta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rape En Vinagreta",
+    "meta_description": "Pon agua a calentar en una cazuelita. Agrega las habas y cuécelas durante 10 minutos. Escúrrelas y resérvalas. Cuece el huevo en otra cazuelita con agua durante 10 minutos. Refréscalo, pélalo y córtalo en daditos. Resérvalo. Sazona el lomo ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

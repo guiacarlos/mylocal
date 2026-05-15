@@ -1,0 +1,88 @@
+{
+  "id": "rec_f1d0fd6eca0f2b",
+  "slug": "relleno-navarro",
+  "titulo": "Relleno Navarro",
+  "resumen": "Pela los ajos y lamínalos. Pela las cebollas y córtalas en dados. Ponlos a pochar en una sartén con un chorrito de aceite. Sazona. Pasa la mitad de las verduras pochadas a una cazuela y la otra mitad a una cazuelita. Añade a la cazuela gran",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "relleno de Navarra (600 g)"
+    },
+    {
+      "cantidad": "750",
+      "unidad": "ml",
+      "nombre": "tomate triturado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos y lamínalos. Pela las cebollas y córtalas en dados. Ponlos a pochar en una sartén con un chorrito de aceite. Sazona. Pasa la mitad de las verduras pochadas a una cazuela y la otra mitad a una cazuelita. Añade a la cazuela grande una pizca de orégano y el tomate. Cocina a fuego suave durante 30 minutos. Pasa la salsa por el pasapurés y mantenla caliente hasta la hora de servir. Pica los pimientos del piquillo y añádelos a la cazuelita pequeña. Vierte el brandy y flambéalo para que se evapore el alcohol. Cocina a fuego suave durante 15 minutos y tritura con la batidora eléctrica. Mantén la salsa caliente hasta el momento de servir. Retira la piel al relleno y córtalo en rodajas. Calienta un poco de aceite en una sartén y fríe (por los dos lados) las rodajas de relleno hasta que se doren. Sirve el relleno y acompáñalo con las dos salsas. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Relleno Navarro",
+    "meta_description": "Pela los ajos y lamínalos. Pela las cebollas y córtalas en dados. Ponlos a pochar en una sartén con un chorrito de aceite. Sazona. Pasa la mitad de las verduras pochadas a una cazuela y la otra mitad a una cazuelita. Añade a la cazuela gran",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

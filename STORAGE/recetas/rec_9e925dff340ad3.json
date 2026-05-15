@@ -1,0 +1,88 @@
+{
+  "id": "rec_9e925dff340ad3",
+  "slug": "sopa-japonesa",
+  "titulo": "Sopa Japonesa",
+  "resumen": "Limpia y pica los puerros y las zanahorias y ponlos a cocer en una cazuela con abundante agua y un poco de sal. Añade el dashi, mezcla y deja que hierva todo durante 5-6 minutos. Retira la piel a los muslos de pollo y deshuésalos. Trocea la",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "muslos de pollo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "fideos udon"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharaditas",
+      "nombre": "dashi en polvo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia y pica los puerros y las zanahorias y ponlos a cocer en una cazuela con abundante agua y un poco de sal. Añade el dashi, mezcla y deja que hierva todo durante 5-6 minutos. Retira la piel a los muslos de pollo y deshuésalos. Trocea la carne e incorpórala al caldo junto con medio vaso de salsa de soja. Mezcla bien y, cuando aparezca un poco de espuma en la superficie, retírala. Corta la cebolleta en juliana y agrégala. Cuece todos los ingredientes a fuego suave durante 15 minutos. Pica el cebollino y añádelo. En el último momento, espolvorea con un poco de perejil picado. Pon agua a calentar en otra cazuela. Cuando empiece a hervir, agrega el udon y cuécelo durante 10 minutos. Escurre. Sirve en cada bol unos fideos de udon y vierte por encima la sopa."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Japonesa",
+    "meta_description": "Limpia y pica los puerros y las zanahorias y ponlos a cocer en una cazuela con abundante agua y un poco de sal. Añade el dashi, mezcla y deja que hierva todo durante 5-6 minutos. Retira la piel a los muslos de pollo y deshuésalos. Trocea la",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

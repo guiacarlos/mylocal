@@ -1,0 +1,111 @@
+{
+  "id": "rec_9a5e9454df068e",
+  "slug": "carpaccio-de-ternera-con-su-guarnicion",
+  "titulo": "Carpaccio De Ternera Con Su Guarnición",
+  "resumen": "Coloca los pimientos sobre una fuente apta para el horno. Riégalos con un chorrito de aceite y sálalos. Ásalos en el horno a 180 ºC durante 30-40 minutos. Pélalos y córtalos en tiras. Bate en un bol 1 dedo del agua resultante de asar los pi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "paquetes",
+      "nombre": "carpaccio de ternera (250 g aprox.)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos rojos"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "melón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "oncha gruesa de jamón (100 g)"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "rúcula"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "ml",
+      "nombre": "aceite de hierbas provenzales"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca los pimientos sobre una fuente apta para el horno. Riégalos con un chorrito de aceite y sálalos. Ásalos en el horno a 180 ºC durante 30-40 minutos. Pélalos y córtalos en tiras. Bate en un bol 1 dedo del agua resultante de asar los pimientos y 2 dedos de aceite. Aliña los pimientos y sálalos.",
+    "Enjuaga y seca las hojas de rúcula y ponlas en una fuente. Corta el jamón en taquitos e incorpóralos. Con una cuchara parisién, saca bolitas de melón y añádelas. En el momento de servir, aliña la ensalada con aceite, vinagre y sal.",
+    "Retira la parte inferior del tallo de los champiñones y lávalos. Córtalos en láminas finas. Pica finamente los dientes de ajo y dóralos en una sartén con un chorrito de aceite. Añade los champiñones y saltéalos durante 3-4 minutos. Sazona y espolvoréalos con un poco de perejil picado.",
+    "Extiende el carpaccio en una fuente grande. Salpimienta. Alíñalo con el aceite de hierbas provenzales y espolvoréalo con el queso parmesano. Acompáñalo con los pimientos, los champiñones y la ensalada. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Carpaccio De Ternera Con Su Guarnición",
+    "meta_description": "Coloca los pimientos sobre una fuente apta para el horno. Riégalos con un chorrito de aceite y sálalos. Ásalos en el horno a 180 ºC durante 30-40 minutos. Pélalos y córtalos en tiras. Bate en un bol 1 dedo del agua resultante de asar los pi",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,63 @@
+{
+  "id": "rec_06bf49f3c6dced",
+  "slug": "carpaccio-de-pina-con-helado-de-vainilla",
+  "titulo": "Carpaccio De Piña Con Helado De Vainilla",
+  "resumen": "Pela la piña y córtala en lonchas finas. Distribúyelas en una fuente. Pon el azúcar en un colador y espolvorea con él las lonchas de piña. Con ayuda de un soplete, quémalas por la parte superior hasta conseguir una lámina fina de caramelo. ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "piña natural"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "helado de vainilla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "avellanas picadas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Pela la piña y córtala en lonchas finas. Distribúyelas en una fuente. Pon el azúcar en un colador y espolvorea con él las lonchas de piña. Con ayuda de un soplete, quémalas por la parte superior hasta conseguir una lámina fina de caramelo. Espolvorea todo con las avellanas y la menta picada. Coloca el helado de vainilla en el centro de la fuente. Decora con una hoja de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Carpaccio De Piña Con Helado De Vainilla",
+    "meta_description": "Pela la piña y córtala en lonchas finas. Distribúyelas en una fuente. Pon el azúcar en un colador y espolvorea con él las lonchas de piña. Con ayuda de un soplete, quémalas por la parte superior hasta conseguir una lámina fina de caramelo. ",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

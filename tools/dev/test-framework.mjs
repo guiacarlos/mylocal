@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Tests del framework spa/src/app/.
+ * Tests del framework templates/hosteleria/src/app/.
  * Cubre: validateManifest (config.ts), getIcon (icons.ts) y
  *        validateConfig (config-loader.ts).
  *
@@ -45,7 +45,7 @@ async function loadModule(srcRel) {
 
 // ── validateManifest ────────────────────────────────────────────
 console.log('\n[validateManifest]');
-const cfg = await loadModule('spa/src/app/config.ts');
+const cfg = await loadModule('templates/hosteleria/src/app/config.ts');
 
 // Manifest minimo valido.
 ok('manifest minimo valido pasa', (() => {
@@ -138,7 +138,7 @@ writeFileSync(join(TMP, 'lucide-react-mock.js'),
 );
 // icons-stubbed.ts vive en TMP/ junto al mock, asi que el import es relativo.
 writeFileSync(join(TMP, 'icons-stubbed.ts'),
-    (await import('node:fs')).readFileSync('spa/src/app/icons.ts', 'utf-8')
+    (await import('node:fs')).readFileSync('templates/hosteleria/src/app/icons.ts', 'utf-8')
         .replace(/from 'lucide-react'/, "from './lucide-react-mock.js'")
 );
 await build({
@@ -176,7 +176,7 @@ console.warn = origWarn;
 
 // ── validateConfig (config-loader.ts) ──────────────────────────
 console.log('\n[validateConfig]');
-const loader = await loadModule('spa/src/app/config-loader.ts');
+const loader = await loadModule('templates/hosteleria/src/app/config-loader.ts');
 
 ok('config minima valida pasa', (() => {
     try { loader.validateConfig({ modulo: 'hosteleria', nombre: 'X', slug: 'x' }); return true; }

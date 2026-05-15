@@ -1,0 +1,93 @@
+{
+  "id": "rec_b2557562669b8d",
+  "slug": "patatas-rellenas-de-champinones-y-pavo-con-salsa-de-queso",
+  "titulo": "Patatas Rellenas De Champiñones Y Pavo Con Salsa De Queso",
+  "resumen": "Pela los dientes de ajo, pícalos y colócalos en el mortero. Añade un poco de sal gruesa y májalos. Agrega el perejil picado, el jengibre y un buen chorro de aceite. Mezcla bien. Lava las patatas, córtalas por la mitad y colócalas en un bol.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "pechuga de pavo cocida"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "queso cheddar"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "jengibre en polvo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal (fina y gruesa)"
+    }
+  ],
+  "pasos": [
+    "Pela los dientes de ajo, pícalos y colócalos en el mortero. Añade un poco de sal gruesa y májalos. Agrega el perejil picado, el jengibre y un buen chorro de aceite. Mezcla bien. Lava las patatas, córtalas por la mitad y colócalas en un bol. Vierte el majado encima y embadúrnalas bien. Hornéalas a 190 ºC durante 30 minutos. Pela la cebolleta, pícala finamente y ponla a pochar en una sartén con un chorrito de aceite. Lava los champiñones, lamínalos y añádelos. Sazona y rehógalos bien. Retira la sartén del fuego. Corta el pavo en dados y resérvalo. Trocea el queso y ponlo en una cazuela. Añade el vino y ponlo a calentar hasta que el queso se funda. Cubre las patatas con los champiñones y coloca encima la pechuga de pavo. Nápalas con la salsa de queso y adorna con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas Rellenas De Champiñones Y Pavo Con Salsa De Queso",
+    "meta_description": "Pela los dientes de ajo, pícalos y colócalos en el mortero. Añade un poco de sal gruesa y májalos. Agrega el perejil picado, el jengibre y un buen chorro de aceite. Mezcla bien. Lava las patatas, córtalas por la mitad y colócalas en un bol.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

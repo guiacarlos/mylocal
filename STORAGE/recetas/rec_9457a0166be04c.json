@@ -1,0 +1,98 @@
+{
+  "id": "rec_9457a0166be04c",
+  "slug": "pochas-con-conejo",
+  "titulo": "Pochas Con Conejo",
+  "resumen": "Trocea el conejo y salpimiéntalo. Dóralo en una tartera con un chorrito de aceite. Resérvalo. Pela el puerro, la zanahoria, la cebolleta y el tomate y córtalos en daditos. Pon todo a pochar en una cazuela con un chorrito de aceite y una piz",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "pochas (desgranadas)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el conejo y salpimiéntalo. Dóralo en una tartera con un chorrito de aceite. Resérvalo. Pela el puerro, la zanahoria, la cebolleta y el tomate y córtalos en daditos. Pon todo a pochar en una cazuela con un chorrito de aceite y una pizca de sal. Una vez pochado, añade el conejo. Agrega también el pimentón y la hoja de laurel. Rehoga brevemente e incorpora las pochas. Cubre con agua, pon a punto de sal, tapa y cuece todo durante 25-30 minutos. Espolvorea con perejil picado. Sirve en plato hondo y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pochas Con Conejo",
+    "meta_description": "Trocea el conejo y salpimiéntalo. Dóralo en una tartera con un chorrito de aceite. Resérvalo. Pela el puerro, la zanahoria, la cebolleta y el tomate y córtalos en daditos. Pon todo a pochar en una cazuela con un chorrito de aceite y una piz",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

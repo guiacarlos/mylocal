@@ -1,0 +1,91 @@
+{
+  "id": "rec_fb68fedfd2515b",
+  "slug": "ensalada-con-queso-y-membrillo",
+  "titulo": "Ensalada Con Queso Y Membrillo",
+  "resumen": "Cuece los huevos en una cazuela con abundante agua. A los 10 minutos, sácalos, pélalos y córtalos en cuartos. Reserva. Suelta las hojas de lechuga. Lávalas, sécalas, córtalas y extiéndelas en una fuente grande. Tuesta los piñones en una sar",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "lechugas variadas (escarola, lollo, hoja de roble)"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "queso del Roncal"
+    },
+    {
+      "cantidad": "130",
+      "unidad": "g",
+      "nombre": "dulce de membrillo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "beicon"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Cuece los huevos en una cazuela con abundante agua. A los 10 minutos, sácalos, pélalos y córtalos en cuartos. Reserva. Suelta las hojas de lechuga. Lávalas, sécalas, córtalas y extiéndelas en una fuente grande. Tuesta los piñones en una sartén sin aceite. Quita la corteza al beicon, córtalo en taquitos y fríelos brevemente sin nada de aceite. Corta el queso en bastones y el dulce de membrillo en daditos. Agrega a la fuente de las lechugas el beicon, los piñones, las frambuesas, los huevos, el queso y el membrillo. Aliña con aceite, vinagre y sal. Sirve. ENSALADA DE AGUACATE Y REMOLACHA Ingredientes (4 p.)",
+    "1 lechuga de hoja de roble 1 aguacate 1 remolacha (cruda) 1 diente de ajo aceite de oliva virgen extra vinagre sal",
+    "Elaboración",
+    "Limpia las hojas de lechuga y lávalas. Sécalas bien, trocéalas y colócalas en una fuente. Pela el aguacate, córtalo en dados y ponlos encima de la lechuga. Pela el diente de ajo, pícalo finamente y agrégalo. Ralla la remolacha y añádela. Aliña la ensalada con aceite, vinagre y sal."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada Con Queso Y Membrillo",
+    "meta_description": "Cuece los huevos en una cazuela con abundante agua. A los 10 minutos, sácalos, pélalos y córtalos en cuartos. Reserva. Suelta las hojas de lechuga. Lávalas, sécalas, córtalas y extiéndelas en una fuente grande. Tuesta los piñones en una sar",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

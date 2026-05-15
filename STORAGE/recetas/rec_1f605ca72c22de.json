@@ -1,0 +1,141 @@
+{
+  "id": "rec_1f605ca72c22de",
+  "slug": "lubina-rellena-con-salsa-americana",
+  "titulo": "Lubina Rellena Con Salsa Americana",
+  "resumen": "Retira las cabezas de los langostinos y pélalos. Córtalos por la mitad a lo largo y resérvalos. Reserva también las cáscaras y las cabezas.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "ubinas (de ración)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puñados de arroz salvaje"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa americana:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nécora"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cabezas y cáscaras de los langostinos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "copita",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de pescado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "ramita",
+      "nombre": "estragón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira las cabezas de los langostinos y pélalos. Córtalos por la mitad a lo largo y resérvalos. Reserva también las cáscaras y las cabezas.",
+    "Para hacer la salsa americana, pela y lamina los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pela la cebolleta y las chalotas, pícalas y añádelas a la cazuela. Sazona y rehoga el conjunto. Agrega los tomates pelados y troceados. Incorpora el estragón y la harina. Rehoga bien y añade la nécora troceada y las cabezas y cáscaras de los langostinos. Rehoga a fuego fuerte. Vierte el brandy y flambea. Añade el caldo de pescado, tapa la cazuela y cocina todo durante 20 minutos. Pasado este tiempo, tritura todo con la batidora eléctrica y cuela el resultado. Pasa la salsa a otra cazuela y cocínala durante 10 minutos más para que reduzca un poco y se concentre el sabor. Prueba y pon a punto de sal.",
+    "Saca los lomos a las lubinas y salpimiéntalos. Coloca sobre uno de los lomos 4 mitades de langostino y cúbrelos con el otro lomo. Átalos con una cuerda de cocina para que no se desmonten. Haz lo mismo con el resto de los lomos y de los langostinos. Coloca las lubinas rellenas en una bandeja apta para el horno y hornéalas a 220 ºC durante 10-12 minutos. Déjalas templar y retírales las cuerdas.",
+    "Fríe el arroz salvaje (en pequeñas cantidades) en una sartén con aceite bien caliente hasta que se infle (en unos pocos segundos). Retíralo a un plato cubierto con papel absorbente. Sazona. Pon la salsa americana en el fondo del plato y coloca encima la lubina rellena. Acompáñalas con el arroz salvaje y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lubina Rellena Con Salsa Americana",
+    "meta_description": "Retira las cabezas de los langostinos y pélalos. Córtalos por la mitad a lo largo y resérvalos. Reserva también las cáscaras y las cabezas.",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,110 @@
+{
+  "id": "rec_e97398692e504c",
+  "slug": "canelones-rellenos-de-calabaza-y-queso",
+  "titulo": "Canelones Rellenos De Calabaza Y Queso",
+  "resumen": "Pon abundante agua a calentar en una cazuela. Agrega una pizca de sal y una rama de romero. Cuando empiece a hervir, añade los canelones y cuécelos el tiempo que indique el paquete. Escúrrelos y extiéndelos sobre un paño de cocina limpio y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "20",
+      "unidad": "l",
+      "nombre": "áminas de canelón"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "queso ricota"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "ramas",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a calentar en una cazuela. Agrega una pizca de sal y una rama de romero. Cuando empiece a hervir, añade los canelones y cuécelos el tiempo que indique el paquete. Escúrrelos y extiéndelos sobre un paño de cocina limpio y seco. Pica la cebolleta finamente y ponla a pochar en una sartén con aceite. Cuando coja un poco de color, pica la calabaza (sin piel) y el calabacín, añádelos y sazona. Cuando las hortalizas empiecen a deshacerse, pásalas a un bol. Deja que se templen y mézclalas con las pasas remojadas y el queso ricota. Rellena los canelones con la farsa y colócalos en una fuente grande apta para el horno.",
+    "Pela los tomates y colócalos en una jarra. Agrega los dientes de ajo y el vino. Tritura y pasa la mezcla a una sartén con aceite. Cocina la salsa a fuego suave durante 15 minutos. Tritura 3 cucharadas de aceite con la otra rama de romero. Cuélalo sobre la salsa y mezcla bien.",
+    "Cubre los canelones con la salsa, ralla encima el queso parmesano y gratínalos en el horno. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Canelones Rellenos De Calabaza Y Queso",
+    "meta_description": "Pon abundante agua a calentar en una cazuela. Agrega una pizca de sal y una rama de romero. Cuando empiece a hervir, añade los canelones y cuécelos el tiempo que indique el paquete. Escúrrelos y extiéndelos sobre un paño de cocina limpio y ",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

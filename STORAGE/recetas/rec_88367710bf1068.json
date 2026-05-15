@@ -1,0 +1,97 @@
+{
+  "id": "rec_88367710bf1068",
+  "slug": "fabes-con-almejas",
+  "titulo": "Fabes Con Almejas",
+  "resumen": "Pon las fabes a remojo la víspera en un bol grande con agua. Pon agua limpia en la olla rápida y añade las fabes. Coloca dentro de una red para legumbres el puerro, la zanahoria y la cebolleta troceados, 2 dientes de ajo y una hoja de laure",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "½",
+      "unidad": "kg",
+      "nombre": "fabes"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "kg",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las fabes a remojo la víspera en un bol grande con agua. Pon agua limpia en la olla rápida y añade las fabes. Coloca dentro de una red para legumbres el puerro, la zanahoria y la cebolleta troceados, 2 dientes de ajo y una hoja de laurel, y agrégala a la cazuela. Sazona, tapa la olla y cuece todo durante 15 minutos. Cuando ya estén cocidas, si tuvieran mucho caldo, quita un poco. Retira la red con las verduras y resérvalas. Corta en daditos los otros dos dientes de ajo y ponlos a freír (sin que se doren) en una sartén con un poco de aceite. Agrega el tomate pelado y cortado en daditos. Saltéalo brevemente y agrega las almejas. Tapa la sartén y mantenla al fuego hasta que se abran las almejas. Tritura las verduras y añade el puré a la sartén con las almejas. Mezcla bien, espolvorea con perejil picado y vierte todo sobre las fabes. Sirve.",
+    "POTAJE CANARIO Ingredientes (4 p.)",
+    "250 g de alubias blancas 200 g de calabaza 1 calabacín 1 tomate 1 cebolleta 100 g de beicon 100 g de maíz cocido 2 dientes de ajo aceite de oliva virgen extra sal",
+    "Elaboración",
+    "Pon a remojo las alubias la víspera. Corta el beicon en dados. Pela y lamina los ajos. Pela la cebolleta y córtala en daditos. Pela el tomate y córtalo en dados. Rehoga el beicon en una cazuela con un poco de aceite. Incorpora el ajo y la cebolleta. Cuando estén dorados, añade el tomate. Rehoga todo durante 10 minutos. Incorpora las alubias, cúbrelas con agua y cuécelas durante 45 minutos. Corta la calabaza (pelada) y el calabacín en dados y rehógalos en una sartén con un chorrito de aceite. Cuando estén hechos, sazona e incorpora el maíz. Saltea todo brevemente y vierte el salteado sobre las alubias. Remueve la cazuela para que se mezclen los ingredientes y cocina todo junto a fuego suave durante 10 minutos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Fabes Con Almejas",
+    "meta_description": "Pon las fabes a remojo la víspera en un bol grande con agua. Pon agua limpia en la olla rápida y añade las fabes. Coloca dentro de una red para legumbres el puerro, la zanahoria y la cebolleta troceados, 2 dientes de ajo y una hoja de laure",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "rec_6f161ff1b7e235",
+  "slug": "berenjenas-rellenas-de-cuscus-y-pavo",
+  "titulo": "Berenjenas Rellenas De Cuscús Y Pavo",
+  "resumen": "Corta las berenjenas por la mitad (a lo largo) y vacíalas con cuidado. Pica la carne finamente y resérvala. Pon las cáscaras a cocer en una cazuela con agua, sal y una hoja de laurel durante 5 minutos. Escurre sobre papel absorbente y reser",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "berenjenas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "pechuga de pavo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "cuscús"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta las berenjenas por la mitad (a lo largo) y vacíalas con cuidado. Pica la carne finamente y resérvala. Pon las cáscaras a cocer en una cazuela con agua, sal y una hoja de laurel durante 5 minutos. Escurre sobre papel absorbente y reserva. Pica las cebolletas finamente y ponlas a pochar en una cazuela con un poco de aceite. Agrega la carne de las berenjenas, salpimienta y rehógala durante 15 minutos. Corta el pavo en trocitos y añádelos. Saltea brevemente. Pon el cuscús en un bol. Añade el tomillo. Vierte por encima agua (200 ml) hirviendo, sazona y tapa el bol con film transparente. Déjalo reposando hasta que el cuscús absorba toda el agua. Agrega la mezcla de cebolleta, berenjena y pavo y remueve. Rellena las berenjenas con la mezcla anterior, ralla encima el queso y gratínalas durante 3-4 minutos. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Berenjenas Rellenas De Cuscús Y Pavo",
+    "meta_description": "Corta las berenjenas por la mitad (a lo largo) y vacíalas con cuidado. Pica la carne finamente y resérvala. Pon las cáscaras a cocer en una cazuela con agua, sal y una hoja de laurel durante 5 minutos. Escurre sobre papel absorbente y reser",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,92 @@
+{
+  "id": "rec_6cdd59b073eddd",
+  "slug": "brownie-de-chocolate",
+  "titulo": "Brownie De Chocolate",
+  "resumen": "Pon los huevos en un bol, bátelos con la varilla e incorpora el azúcar poco a poco. Trocea el chocolate y la mantequilla, ponlos en un bol y deja que se fundan al baño maría removiendo con cuidado. Una vez fundidos, añade al bol de los huev",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 10,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "chocolate negro para postres"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para decorar:"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "chocolate negro para postres"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "grageas de chocolate de colores"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Pon los huevos en un bol, bátelos con la varilla e incorpora el azúcar poco a poco. Trocea el chocolate y la mantequilla, ponlos en un bol y deja que se fundan al baño maría removiendo con cuidado. Una vez fundidos, añade al bol de los huevos y remueve bien. Mezcla la harina con las nueces peladas y troceadas y añade a la mezcla de huevos y chocolate. Remueve bien y coloca todo en un recipiente apto para horno untado de mantequilla y harina. Hornea a 180 ºC durante 40 minutos. Deja templar para desmoldar. Funde el resto del chocolate y añade unos hilitos por encima del brownie. Acompaña con las grageas de chocolate y decora con una hojita de menta. Sirve.",
+    "FRUTAS GRATINADAS CON LECHE CONDENSADA Ingredientes (4 p.)",
+    "200 ml de leche condensada 1 mango ½ piña 2 plátanos 2 kiwis aceite de oliva virgen extra hojas de menta (para decorar)",
+    "Elaboración",
+    "Pela las frutas, córtalas en lonchas y cocínalas a la plancha en una sartén con un chorrito de aceite. Añade una cucharadita de leche condensada para que las frutas suelten mejor el agua. Extiende las frutas en una fuente, añade el resto de la leche condensada y espolvorea con menta picadita. Gratina en el horno durante 4-5 minutos. Sirve y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Brownie De Chocolate",
+    "meta_description": "Pon los huevos en un bol, bátelos con la varilla e incorpora el azúcar poco a poco. Trocea el chocolate y la mantequilla, ponlos en un bol y deja que se fundan al baño maría removiendo con cuidado. Una vez fundidos, añade al bol de los huev",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

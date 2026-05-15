@@ -1,0 +1,78 @@
+{
+  "id": "rec_33ae01eba7d20c",
+  "slug": "mousse-de-turron",
+  "titulo": "Mousse De Turrón",
+  "resumen": "Trocea el barquillo en triángulos. Resérvalos. Trocea la tableta de turrón y colócala en un vaso batidor. Coloca las yemas en un bol, agrega la leche y bate bien con una varilla. Pon la mezcla a calentar en un cazo removiendo constantemente",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "turrón blando"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yemas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cl",
+      "nombre": "aras"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "barquillos de corte"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "frutos rojos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Trocea el barquillo en triángulos. Resérvalos. Trocea la tableta de turrón y colócala en un vaso batidor. Coloca las yemas en un bol, agrega la leche y bate bien con una varilla. Pon la mezcla a calentar en un cazo removiendo constantemente y teniendo cuidado de que no hierva. Añádela al vaso batidor y tritura. En un bol, monta las claras con la batidora de varillas eléctrica. Agrega el azúcar y sigue montándolas un poco más. Incorpora una porción de las claras montadas al vaso batidor, mezcla bien y vierte todo en el bol de las claras. Con ayuda de una cuchara de madera, mezcla los ingredientes hasta que queden perfectamente integrados. Coloca la mousse en un bol y acompáñala con los barquillos y los frutos rojos. Decora con una hojita de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mousse De Turrón",
+    "meta_description": "Trocea el barquillo en triángulos. Resérvalos. Trocea la tableta de turrón y colócala en un vaso batidor. Coloca las yemas en un bol, agrega la leche y bate bien con una varilla. Pon la mezcla a calentar en un cazo removiendo constantemente",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

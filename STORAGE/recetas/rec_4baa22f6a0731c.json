@@ -1,0 +1,93 @@
+{
+  "id": "rec_4baa22f6a0731c",
+  "slug": "jamon-con-noquis-de-patata-en-salsa-roquefort",
+  "titulo": "Jamón Con Ñoquis De Patata En Salsa Roquefort",
+  "resumen": "Mezcla en un cazo la nata con el vino y el queso. Cocina a fuego fuerte hasta que hierva y deja que reduzca un poco. Reserva. Pon las patatas (con piel) en la olla rápida con agua y una pizca de sal. Cierra la olla y cuécelas (según tamaño)",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de jamón cocido (gruesas)"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso roquefort"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "nata líquida"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Mezcla en un cazo la nata con el vino y el queso. Cocina a fuego fuerte hasta que hierva y deja que reduzca un poco. Reserva. Pon las patatas (con piel) en la olla rápida con agua y una pizca de sal. Cierra la olla y cuécelas (según tamaño) durante 10-15 minutos. Abre, escurre y deja atemperar. Pélalas, trocéalas y pásalas por el pasapurés. Añade las yemas y mézclalas bien. Ralla un poco de nuez moscada por encima, agrega la harina tamizada y mezcla bien hasta obtener una masa homogénea. Deja que repose durante 10 minutos e introdúcela en una manga pastelera. Con la ayuda de unas tijeras, corta la masa en forma de ñoquis. Calienta una cazuela con abundante agua, sazona y, cuando empiece a hervir, agrega los ñoquis. Cuécelos durante 3 minutos. Escurre los ñoquis y ponlos en una sartén. Agrega la salsa roquefort y cocínalos a fuego suave un par de minutos. Espolvoréalos con perejil picado. Corta las lonchas de jamón cocido por la mitad y dóralas en la sartén con un chorrito de aceite. Sirve los ñoquis y media loncha de jamón cocido en cada plato. Adórnalos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Jamón Con Ñoquis De Patata En Salsa Roquefort",
+    "meta_description": "Mezcla en un cazo la nata con el vino y el queso. Cocina a fuego fuerte hasta que hierva y deja que reduzca un poco. Reserva. Pon las patatas (con piel) en la olla rápida con agua y una pizca de sal. Cierra la olla y cuécelas (según tamaño)",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

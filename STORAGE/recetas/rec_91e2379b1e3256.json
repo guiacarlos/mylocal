@@ -1,0 +1,94 @@
+{
+  "id": "rec_91e2379b1e3256",
+  "slug": "verdel-con-setas-y-boniato",
+  "titulo": "Verdel Con Setas Y Boniato",
+  "resumen": "Pela los boniatos, córtalos al bies en rodajas de 2 centímetros de grosor y cuécelas durante 12-15 minutos en una cazuela con agua. Escúrrelas y sécalas. Corta en juliana fina la cebolleta y las chalotas y ponlas a pochar en una sartén con ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "verdeles"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "boniatos"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "setas de cultivo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los boniatos, córtalos al bies en rodajas de 2 centímetros de grosor y cuécelas durante 12-15 minutos en una cazuela con agua. Escúrrelas y sécalas. Corta en juliana fina la cebolleta y las chalotas y ponlas a pochar en una sartén con un chorrito de aceite. Corta las setas de la misma manera y añádelas. Sazona y cocínalas durante 4-5 minutos. Limpia los verdeles y saca los lomos (retira las espinas). Salpimiéntalos y pásalos por la harina. Calienta una sartén con aceite y añade los ajos con piel y los lomos. Fríelos durante 30 segundos por cada lado y escúrrelos sobre un plato cubierto con papel absorbente.",
+    "Sirve los verdeles con las setas y los boniatos (dales brillo con un poco de aceite). Espolvorea los platos con un poco de perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Verdel Con Setas Y Boniato",
+    "meta_description": "Pela los boniatos, córtalos al bies en rodajas de 2 centímetros de grosor y cuécelas durante 12-15 minutos en una cazuela con agua. Escúrrelas y sécalas. Corta en juliana fina la cebolleta y las chalotas y ponlas a pochar en una sartén con ",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

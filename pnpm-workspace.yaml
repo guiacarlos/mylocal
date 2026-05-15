@@ -1,3 +1,6 @@
 packages:
   - 'sdk'
   - 'templates/*'
+allowBuilds:
+  # Vite usa esbuild como bundler interno y necesita su binario nativo.
+  esbuild: true

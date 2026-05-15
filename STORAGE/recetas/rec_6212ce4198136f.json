@@ -1,0 +1,88 @@
+{
+  "id": "rec_6212ce4198136f",
+  "slug": "arroz-tailandes-con-brochetas-de-langostinos-y-melon",
+  "titulo": "Arroz Tailandés Con Brochetas De Langostinos Y Melón",
+  "resumen": "Enjuaga el arroz dos o tres veces. Pon a calentar una cazuela con abundante agua y una pizca de sal. Agrega el arroz y cuécelo durante 11 minutos. Escúrrelo y refréscalo. Pela el pimiento rojo. Corta los pimientos (rojo y verde) y la ceboll",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz tailandés (jazmín)"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "melón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de jengibre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Enjuaga el arroz dos o tres veces. Pon a calentar una cazuela con abundante agua y una pizca de sal. Agrega el arroz y cuécelo durante 11 minutos. Escúrrelo y refréscalo. Pela el pimiento rojo. Corta los pimientos (rojo y verde) y la cebolleta en juliana fina. Calienta el wok con un poco de aceite y añade las verduras. Sazónalas y ralla encima un poco de jengibre. Cocínalas a fuego fuerte durante 8 minutos aproximadamente. Añade el arroz al wok y saltea el conjunto durante un par de minutos. Corta el melón y saca 16 dados. Pela los langostinos. Monta las brochetas alternando, en cada una, 3 langostinos y 2 dados de melón. Sazónalas y cocínalas a la plancha. Sirve el arroz en el fondo de los platos y coloca encima las brochetas. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Tailandés Con Brochetas De Langostinos Y Melón",
+    "meta_description": "Enjuaga el arroz dos o tres veces. Pon a calentar una cazuela con abundante agua y una pizca de sal. Agrega el arroz y cuécelo durante 11 minutos. Escúrrelo y refréscalo. Pela el pimiento rojo. Corta los pimientos (rojo y verde) y la ceboll",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

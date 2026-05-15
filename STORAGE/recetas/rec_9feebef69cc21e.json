@@ -1,0 +1,78 @@
+{
+  "id": "rec_9feebef69cc21e",
+  "slug": "lenguado-al-cava",
+  "titulo": "Lenguado Al Cava",
+  "resumen": "Pon 1 vaso de cava y la nata en una cazuelita y reduce a fuego suave durante 20 minutos. Abre las ostras y añade su carne a la salsa de nata y cava. Cocínalas durante 1 minuto. Limpia los champiñones, lamínalos y saltéalos en una sartén con",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "filetes de lenguado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "vasos",
+      "nombre": "cava"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "nata liquida"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "ostras"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon 1 vaso de cava y la nata en una cazuelita y reduce a fuego suave durante 20 minutos. Abre las ostras y añade su carne a la salsa de nata y cava. Cocínalas durante 1 minuto. Limpia los champiñones, lamínalos y saltéalos en una sartén con un chorrito de aceite. Sazona los filetes de lenguado y colócalos, doblados por la mitad, sobre una placa de horno. Rocíalos con un poco de aceite y el resto del cava. Hornéalos a 200 ºC durante 5 minutos. Retira los filetes de lenguado del horno, sírvelos en 4 platos y rocíalos con la salsa. Acompáñalos con los champiñones salteados. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lenguado Al Cava",
+    "meta_description": "Pon 1 vaso de cava y la nata en una cazuelita y reduce a fuego suave durante 20 minutos. Abre las ostras y añade su carne a la salsa de nata y cava. Cocínalas durante 1 minuto. Limpia los champiñones, lamínalos y saltéalos en una sartén con",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

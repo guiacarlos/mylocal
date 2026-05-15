@@ -1,0 +1,106 @@
+{
+  "id": "rec_be7f78ee9fb308",
+  "slug": "minipinchos-de-pollo-con-verduras-gratinadas",
+  "titulo": "Minipinchos De Pollo Con Verduras Gratinadas",
+  "resumen": "Pela y pica la cebolleta y 2 dientes de ajo y ponlos a pochar en una cazuela con un chorrito de aceite. Trocea la carcasa de pollo y añádela. Rehógala hasta que se dore bien. Vierte el vino y dale un hervor. Añade un poco de agua, salpimien",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "minipinchos de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "carcasa de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica la cebolleta y 2 dientes de ajo y ponlos a pochar en una cazuela con un chorrito de aceite. Trocea la carcasa de pollo y añádela. Rehógala hasta que se dore bien. Vierte el vino y dale un hervor. Añade un poco de agua, salpimienta y deja que reduzca. Cuela la salsa y lígala con la harina de maíz diluida en agua fría. Espolvoréala con un poco de perejil picado. En el momento de servir, caliéntala.",
+    "Lava el calabacín y la berenjena. Córtalos en rodajas gruesas y cocínalos a la plancha (con un chorrito de aceite) durante 3 minutos por cada lado. Sazona y coloca todo sobre la placa del horno.",
+    "Aplasta el otro ajo (con piel) y dóralo en una sartén con un chorrito de aceite. Retira el ajo antes de que se dore, cuela el aceite y pásalo a un bol. Agrega la canela al bol y mezcla bien. Unta las rodajas de calabacín y berenjena con el aceite de ajo y canela. Hornéalas durante 5 minutos a 180 ºC. Salpimienta los pinchos de pollo, riégalos con un chorrito de aceite y cocínalos a la plancha hasta que se hagan.",
+    "Sirve los minipinchos, salséalos y acompáñalos con las hortalizas a la canela. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Minipinchos De Pollo Con Verduras Gratinadas",
+    "meta_description": "Pela y pica la cebolleta y 2 dientes de ajo y ponlos a pochar en una cazuela con un chorrito de aceite. Trocea la carcasa de pollo y añádela. Rehógala hasta que se dore bien. Vierte el vino y dale un hervor. Añade un poco de agua, salpimien",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

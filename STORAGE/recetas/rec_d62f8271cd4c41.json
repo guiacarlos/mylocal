@@ -1,0 +1,93 @@
+{
+  "id": "rec_d62f8271cd4c41",
+  "slug": "pote-de-patatas",
+  "titulo": "Pote De Patatas",
+  "resumen": "Pon el bacalao a remojo la víspera. Pon agua en una cazuela grande. Pela las patatas, cáscalas y colócalas en la cazuela. Pela la cebolla, pícala y añádela. Pica el pimiento e incorpóralo. Agrega el tomate triturado y el bacalao escurrido y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "bacalao seco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "cominos"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "tomate triturado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon el bacalao a remojo la víspera. Pon agua en una cazuela grande. Pela las patatas, cáscalas y colócalas en la cazuela. Pela la cebolla, pícala y añádela. Pica el pimiento e incorpóralo. Agrega el tomate triturado y el bacalao escurrido y troceado. Vierte un buen chorro de aceite y cuece todo a fuego suave durante 25 minutos.",
+    "Pela los dientes de ajo, lamínalos y colócalos en el mortero junto con los cominos. Maja todo bien y agrega el majado a la cazuela. Deja que cueza todo junto durante 10 minutos más. Pon a punto de sal y espolvorea con perejil picado.",
+    "Sirve y adorna con unas hojas de perejil. CARDO CON ALMEJAS Y ALMENDRAS Ingredientes (4 p.)",
+    "1 cardo pequeño 500 g de almejas 50 g de almendras fileteadas 1 cebolleta 1 tomate grande ½ limón harina y huevo batido (para rebozar) aceite de oliva virgen extra pimentón sal",
+    "Elaboración",
+    "Limpia el cardo y corta los tallos en trozos de 6 centímetros. Ponlo a cocer en una cazuela con agua hirviendo, un chorrito de zumo de limón y una pizca de sal. Cuécelo durante 15 minutos. Retira los trozos de cardo y reserva el caldo. Reboza los trozos de cardo con harina y huevo y fríelos en una sartén con aceite. Retíralos y escúrrelos sobre una fuente cubierta con papel absorbente. Corta la cebolleta en daditos y ponla a pochar en una tartera (cazuela amplia y baja). Cuando empiece a transparentar, añade el tomate pelado y sin pepitas. Cocina durante 6 minutos, incorpora el pimentón y 1 cucharada de harina. Rehoga un poco y vierte un poco del caldo de cocción del cardo. Incorpora los trozos de cardo y las almejas. Tapa la tartera y espera a que las almejas se abran. Sirve en una fuente grande. Tuesta las almendras en una sartén y espolvorea con ellas el cardo con almejas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pote De Patatas",
+    "meta_description": "Pon el bacalao a remojo la víspera. Pon agua en una cazuela grande. Pela las patatas, cáscalas y colócalas en la cazuela. Pela la cebolla, pícala y añádela. Pica el pimiento e incorpóralo. Agrega el tomate triturado y el bacalao escurrido y",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

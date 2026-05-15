@@ -1,0 +1,101 @@
+{
+  "id": "rec_eabd6358483c56",
+  "slug": "vieiras-con-salsa-holandesa",
+  "titulo": "Vieiras Con Salsa Holandesa",
+  "resumen": "Abre las vieiras y separa la carne de las conchas. Retira las partes grises y las telillas que rodean los callos y los corales y enjuágalos bien. Resérvalos. Limpia bien las 8 conchas hondas y resérvalas. Calienta un poco de aceite en una s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "general",
+  "tags": [
+    "general",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "vieiras"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas finas de tocino ibérico"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa holandesa:"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "yemas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "zumo de limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Abre las vieiras y separa la carne de las conchas. Retira las partes grises y las telillas que rodean los callos y los corales y enjuágalos bien. Resérvalos. Limpia bien las 8 conchas hondas y resérvalas. Calienta un poco de aceite en una sartén, salpimienta las vieras (callos y corales) y cocínalas brevemente en una sartén. Coloca, en cada concha, un callo y un coral.",
+    "Corta las lonchas de tocino por la mitad y pon una mitad encima de cada vieira. Para que las vieiras estén más estables, coloca las conchas sobre una bandeja de horno cubierta de sal gorda.",
+    "Para la salsa holandesa, pon la mantequilla en una cazuela y fúndela. Coloca las yemas en un bol y añade el vino y una pizca de sal. Monta las yemas con la batidora de varillas eléctrica. Vierte, poco a poco, la mantequilla en el bol (sin echar el suero) y sigue montando. Vierte el zumo de limón y mezcla bien.",
+    "Napa las vieiras con la salsa holandesa y gratínalas en el horno. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Vieiras Con Salsa Holandesa",
+    "meta_description": "Abre las vieiras y separa la carne de las conchas. Retira las partes grises y las telillas que rodean los callos y los corales y enjuágalos bien. Resérvalos. Limpia bien las 8 conchas hondas y resérvalas. Calienta un poco de aceite en una s",
+    "meta_keywords": "general, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

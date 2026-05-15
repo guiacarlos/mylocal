@@ -1,0 +1,98 @@
+{
+  "id": "rec_30023270803931",
+  "slug": "habas-a-la-catalana",
+  "titulo": "Habas A La Catalana",
+  "resumen": "Calienta una tartera con un chorrito de aceite de oliva. Corta las lonchas de panceta por la mitad y agrégalas a la tartera. Dóralas por los dos lados y resérvalas en un plato. Corta los ajos frescos en trocitos de 2 centímetros. Pela las c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "habas tiernas (peladas)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de panceta fresca (150 g)"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "butifarra negra"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "ramas",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Calienta una tartera con un chorrito de aceite de oliva. Corta las lonchas de panceta por la mitad y agrégalas a la tartera. Dóralas por los dos lados y resérvalas en un plato. Corta los ajos frescos en trocitos de 2 centímetros. Pela las cebolletas y córtalas en dados grandes. Pela las alcachofas y córtalas en octavos. Lava el puerro y córtalo en cilindros grandes. Coloca las verduras en la misma tartera donde has dorado la panceta, sazona y deja que se pochen bien. Agrega las habas (si son grandes, puedes añadir un poco de agua), vierte el vino y dale un hervor. Incorpora las ramas de tomillo y sazona. Tapa la tartera y cocina durante 15 minutos. Corta la butifarra en rodajas de 1 centímetro y agrégalas. Incorpora la panceta. Añade la menta picadita y cocina todo junto durante unos 4 minutos más. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Habas A La Catalana",
+    "meta_description": "Calienta una tartera con un chorrito de aceite de oliva. Corta las lonchas de panceta por la mitad y agrégalas a la tartera. Dóralas por los dos lados y resérvalas en un plato. Corta los ajos frescos en trocitos de 2 centímetros. Pela las c",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

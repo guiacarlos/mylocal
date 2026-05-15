@@ -1,0 +1,93 @@
+{
+  "id": "rec_f7781f623a9eea",
+  "slug": "pulpo-con-pure-de-patata-y-vinagreta-de-kiwi",
+  "titulo": "Pulpo Con Puré De Patata Y Vinagreta De Kiwi",
+  "resumen": "Pela las patatas, cáscalas y ponlas a cocer en una cazuela con agua, una pizca de sal y una hoja de laurel durante 12-15 minutos aproximadamente. Retíralas, escúrrelas bien y pásalas por el pasapurés. Coloca el puré en un bol, agrega las ac",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pulpo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceitunas verdes"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "kiwi"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, cáscalas y ponlas a cocer en una cazuela con agua, una pizca de sal y una hoja de laurel durante 12-15 minutos aproximadamente. Retíralas, escúrrelas bien y pásalas por el pasapurés. Coloca el puré en un bol, agrega las aceitunas picaditas, riégalas con un chorrito de aceite, sazona y mezcla bien. Reserva el puré. Pon el pulpo en la olla rápida sin nada de agua y sin nada de sal. Pela la cebolla y añádela. Coloca la tapa y cuécelo (10 minutos por cada kilo de pulpo). Pasado este tiempo, retíralo y deja que se temple. Córtalo con unas tijeras. Para la vinagreta de kiwi, pela el kiwi, trocéalo y colócalo en el vaso batidor. Agrega un chorrito de vinagre y tritura. Añade una buena cantidad de aceite y mezcla bien. Sirve el puré y espolvoréalo con un poco de perejil picado. Coloca encima los trozos de pulpo y adereza con la vinagreta de kiwi. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pulpo Con Puré De Patata Y Vinagreta De Kiwi",
+    "meta_description": "Pela las patatas, cáscalas y ponlas a cocer en una cazuela con agua, una pizca de sal y una hoja de laurel durante 12-15 minutos aproximadamente. Retíralas, escúrrelas bien y pásalas por el pasapurés. Coloca el puré en un bol, agrega las ac",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

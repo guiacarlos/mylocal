@@ -1,0 +1,73 @@
+{
+  "id": "rec_683810c67f0f4d",
+  "slug": "frutas-con-sabayon-de-vino-dulce",
+  "titulo": "Frutas Con Sabayón De Vino Dulce",
+  "resumen": "Para hacer el sabayón, coloca las yemas y el azúcar en un bol y bate con la batidora de varillas hasta que las yemas estén bien montadas. Agrega el vino dulce poco a poco sin dejar de batir hasta que se liguen las yemas con el vino. Pela la",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "rodajas de piña"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "naranjas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "mandarinas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino dulce"
+    }
+  ],
+  "pasos": [
+    "Para hacer el sabayón, coloca las yemas y el azúcar en un bol y bate con la batidora de varillas hasta que las yemas estén bien montadas. Agrega el vino dulce poco a poco sin dejar de batir hasta que se liguen las yemas con el vino. Pela las naranjas y las mandarinas y sácales los gajos. Pela las rodajas de piña y córtalas en gajos. Extiende las frutas sobre una fuente apta para el horno, nápalas con el sabayón y gratínalas en el horno. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Frutas Con Sabayón De Vino Dulce",
+    "meta_description": "Para hacer el sabayón, coloca las yemas y el azúcar en un bol y bate con la batidora de varillas hasta que las yemas estén bien montadas. Agrega el vino dulce poco a poco sin dejar de batir hasta que se liguen las yemas con el vino. Pela la",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

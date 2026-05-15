@@ -1,10 +1,34 @@
+/**
+ * SynaxisCore — orquestador del motor de datos.
+ *
+ * Dispatcher de acciones (`execute`) + CRUD basico contra IndexedDB,
+ * delegando versioning y oplog a modulos auxiliares (SynaxisVersioning,
+ * SynaxisOplog) y primitivas puras a SynaxisCoreHelpers.
+ *
+ * Reglas:
+ *   - Las colecciones master (users/roles/projects/system_logs) viven en
+ *     la DB <namespace>__master, compartida entre proyectos.
+ *   - El resto va en la DB scoped <namespace>__<project>.
+ *   - Cada write incrementa _version, refresca _updatedAt y guarda
+ *     snapshot del doc PREVIO.
+ *   - El oplog es append-only y best-effort.
+ */
+
 import { SynaxisStorage } from './SynaxisStorage';
 import { runQuery } from './SynaxisQuery';
 import type { QueryParams, SynaxisDoc, SynaxisRequest, SynaxisResponse } from './types';
-
-const MASTER_COLLECTIONS = new Set(['users', 'roles', 'projects', 'system_logs']);
-const MAX_VERSIONS = 5;
-const OPLOG_COLLECTION = '__oplog__';
+import {
+    MASTER_COLLECTIONS,
+    OPLOG_COLLECTION,
+    fail,
+    genId,
+    nowIso,
+    ok,
+    type OpLogEntry,
+} from './SynaxisCoreHelpers';
+import { listVersions as listVersionsImpl, snapshotVersion } from './SynaxisVersioning';
+import { appendOp, clearOplog as clearOplogImpl, drainOplog as drainOplogImpl } from './SynaxisOplog';
+import { normalizeRequest } from './SynaxisRequestNormalize';
 
 export interface SynaxisCoreOptions {
     namespace?: string;
@@ -12,28 +36,7 @@ export interface SynaxisCoreOptions {
     writeOplog?: boolean;
 }
 
-type OpType = 'put' | 'delete';
-
-interface OpLogEntry extends SynaxisDoc {
-    op: OpType;
-    collection: string;
-    targetId: string;
-    version: number;
-    ts: string;
-}
-
-const nowIso = (): string => new Date().toISOString();
-
-export const genId = (prefix = 'doc'): string =>
-    `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
-
-function ok<T>(data: T): SynaxisResponse<T> {
-    return { success: true, data, error: null };
-}
-function fail(error: unknown): SynaxisResponse<null> {
-    const msg = error instanceof Error ? error.message : String(error);
-    return { success: false, data: null, error: msg };
-}
+export { genId };
 
 export class SynaxisCore {
     readonly namespace: string;
@@ -58,43 +61,12 @@ export class SynaxisCore {
         return MASTER_COLLECTIONS.has(collection) ? this.global : this.scoped;
     }
 
-    private normalize(req: SynaxisRequest): {
-        action: string;
-        collection: string | null;
-        id: string | null;
-        params: QueryParams;
-        payload: Record<string, unknown>;
-    } {
-        const action = req.action;
-        const inner = (req.data && typeof req.data === 'object' ? (req.data as Record<string, unknown>) : {}) as Record<string, unknown>;
-        const collection = (req.collection as string) ?? (inner.collection as string) ?? null;
-        const id = (req.id as string) ?? (inner.id as string) ?? null;
-        const params = (req.params as QueryParams) ?? (inner.params as QueryParams) ?? {};
-
-        let payload: Record<string, unknown>;
-        if (inner && typeof inner.data === 'object' && inner.data !== null) {
-            payload = { ...(inner.data as Record<string, unknown>) };
-        } else if (req.data && typeof req.data === 'object') {
-            payload = { ...(req.data as Record<string, unknown>) };
-            delete payload.collection;
-            delete payload.id;
-            delete payload.params;
-        } else {
-            payload = { ...(req as Record<string, unknown>) };
-            delete payload.action;
-            delete payload.collection;
-            delete payload.id;
-            delete payload.params;
-        }
-        return { action, collection, id, params, payload };
-    }
-
     async execute<T = unknown>(request: SynaxisRequest): Promise<SynaxisResponse<T>> {
         await this.ready;
         if (!request || !request.action) {
             return fail('action is required') as SynaxisResponse<T>;
         }
-        const { action, collection, id, params, payload } = this.normalize(request);
+        const { action, collection, id, params, payload } = normalizeRequest(request);
 
         try {
             switch (action) {
@@ -160,69 +132,29 @@ export class SynaxisCore {
         merged._version = (existing && typeof existing._version === 'number' ? existing._version : 0) + 1;
         if (!merged._createdAt) merged._createdAt = existing?._createdAt ?? nowIso();
 
-        if (existing) await this.snapshotVersion(collection, existing);
+        if (existing) await snapshotVersion(storage, collection, existing);
         const final = await storage.put(collection, merged as unknown as T);
-        if (this.writeOplog) await this.appendOp('put', collection, effectiveId, final);
+        if (this.writeOplog) await appendOp(this.scoped, 'put', collection, effectiveId, final);
         return final;
     }
 
     async delete(collection: string, id: string): Promise<boolean> {
         if (!collection || !id) throw new Error('delete requiere collection e id');
         const res = await this.storageFor(collection).remove(collection, id);
-        if (this.writeOplog && res) await this.appendOp('delete', collection, id, null);
+        if (this.writeOplog && res) await appendOp(this.scoped, 'delete', collection, id, null);
         return res;
     }
 
-    private async snapshotVersion(collection: string, doc: SynaxisDoc): Promise<void> {
-        if (!doc?.id) return;
-        const storage = this.storageFor(collection);
-        const vCol = `${collection}__versions`;
-        const snap = { ...doc, id: `${doc.id}@${doc._version ?? 0}` };
-        try {
-            await storage.put(vCol, snap as SynaxisDoc);
-            const all = await storage.all<SynaxisDoc>(vCol);
-            const mine = all
-                .filter((v) => String(v.id).startsWith(`${doc.id}@`))
-                .sort((a, b) => (String(a._updatedAt) < String(b._updatedAt) ? -1 : 1));
-            const excess = mine.length - MAX_VERSIONS;
-            for (let i = 0; i < excess; i++) {
-                await storage.remove(vCol, mine[i].id);
-            }
-        } catch { /* best-effort */ }
+    listVersions(collection: string, id: string): Promise<SynaxisDoc[]> {
+        return listVersionsImpl(this.storageFor(collection), collection, id);
     }
 
-    async listVersions(collection: string, id: string): Promise<SynaxisDoc[]> {
-        const storage = this.storageFor(collection);
-        const vCol = `${collection}__versions`;
-        const all = await storage.all<SynaxisDoc>(vCol);
-        return all
-            .filter((v) => String(v.id).startsWith(`${id}@`))
-            .sort((a, b) => (Number(a._version) > Number(b._version) ? 1 : -1));
+    drainOplog(limit = 100): Promise<OpLogEntry[]> {
+        return drainOplogImpl(this.scoped, limit);
     }
 
-    private async appendOp(op: OpType, collection: string, targetId: string, payload: unknown): Promise<void> {
-        try {
-            const entry: OpLogEntry = {
-                id: genId('op'),
-                op,
-                collection,
-                targetId,
-                version: 1,
-                ts: nowIso(),
-                payload: payload as unknown as never,
-            };
-            await this.scoped.put(OPLOG_COLLECTION, entry);
-        } catch { /* non-blocking */ }
-    }
-
-    async drainOplog(limit = 100): Promise<OpLogEntry[]> {
-        const all = await this.scoped.all<OpLogEntry>(OPLOG_COLLECTION);
-        all.sort((a, b) => (a.ts < b.ts ? -1 : 1));
-        return all.slice(0, limit);
-    }
-
-    async clearOplog(ids: string[]): Promise<void> {
-        for (const id of ids) await this.scoped.remove(OPLOG_COLLECTION, id);
+    clearOplog(ids: string[]): Promise<void> {
+        return clearOplogImpl(this.scoped, ids);
     }
 
     async reset(): Promise<void> {

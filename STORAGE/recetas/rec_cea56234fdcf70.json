@@ -1,0 +1,98 @@
+{
+  "id": "rec_cea56234fdcf70",
+  "slug": "galletas-de-avena",
+  "titulo": "Galletas De Avena",
+  "resumen": "Pela las manzanas, descorazónalas y trocéalas. Ponlas a cocer en una cazuela con un vaso de agua, una cucharada de azúcar y la rama de canela. Tapa la cazuela y cuece las manzanas a fuego suave durante 20 minutos. Retira la canela y aplásta",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 20,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "tazas",
+      "nombre": "copos de avena"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "taza",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "taza",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "taza",
+      "nombre": "melaza de arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "tazas",
+      "nombre": "harina integral"
+    },
+    {
+      "cantidad": "¾",
+      "unidad": "",
+      "nombre": "taza de aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "menta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la compota:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "manzanas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    }
+  ],
+  "pasos": [
+    "Pela las manzanas, descorazónalas y trocéalas. Ponlas a cocer en una cazuela con un vaso de agua, una cucharada de azúcar y la rama de canela. Tapa la cazuela y cuece las manzanas a fuego suave durante 20 minutos. Retira la canela y aplástalas hasta conseguir un puré. Para hacer las galletas, pon el puré de manzana en un bol y agrega las pasas, la avena, el aceite, la melaza y la harina. Mezcla hasta hacer una pasta. Forra una bandeja de horno con papel de hornear. Con una cuchara, forma montoncitos de masa y disponlos sobre la bandeja dejando espacio entre ellos. Esparce las nueces encima de la masa. Hornea las galletas a 180 ºC, durante 20 minutos. Retira del horno y deja enfriar. Espolvorea con azúcar glas y decora con una hojita de menta antes de servir."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Galletas De Avena",
+    "meta_description": "Pela las manzanas, descorazónalas y trocéalas. Ponlas a cocer en una cazuela con un vaso de agua, una cucharada de azúcar y la rama de canela. Tapa la cazuela y cuece las manzanas a fuego suave durante 20 minutos. Retira la canela y aplásta",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

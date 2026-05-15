@@ -1,0 +1,96 @@
+{
+  "id": "rec_070eeb34ead470",
+  "slug": "huevos-flor-con-setas-en-escabeche",
+  "titulo": "Huevos Flor Con Setas En Escabeche",
+  "resumen": "Pela los ajos y déjalos enteros. Corta las cebolletas en cilindros. Pon todo a rehogar en una cazuela con abundante aceite. Agrega la hoja de laurel y deja que las hortalizas cojan un poco de color. Vierte el vinagre y añade las setas limpi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "setas de temporada"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vinagre de Jerez"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra en grano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos y déjalos enteros. Corta las cebolletas en cilindros. Pon todo a rehogar en una cazuela con abundante aceite. Agrega la hoja de laurel y deja que las hortalizas cojan un poco de color. Vierte el vinagre y añade las setas limpias y troceadas. Incorpora los granos de pimienta y sazona. Cocina todo junto durante 6-8 minutos. Espolvorea con perejil picado.",
+    "Corta 4 trozos grandes de film transparente y colócalos dentro de 4 recipientes (tipo taza). Añade un par de gotas de aceite dentro de cada uno y extiéndelas con un pincel. Sazona. Casca 1 huevo dentro de cada uno. Ciérralos y átalos con una cuerda de cocina.",
+    "Pon abundante agua a calentar en una cazuela. Cuando empiece a hervir, añade los huevos y cuécelos durante 3-4 minutos. Sácalos y retírales el film.",
+    "Sirve las setas en el fondo de los platos y coloca los huevos encima. Sazona. Mezcla un poco de escabeche con pimentón y rocía los platos con él. Decora con una hoja de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevos Flor Con Setas En Escabeche",
+    "meta_description": "Pela los ajos y déjalos enteros. Corta las cebolletas en cilindros. Pon todo a rehogar en una cazuela con abundante aceite. Agrega la hoja de laurel y deja que las hortalizas cojan un poco de color. Vierte el vinagre y añade las setas limpi",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

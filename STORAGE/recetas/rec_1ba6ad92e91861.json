@@ -1,0 +1,103 @@
+{
+  "id": "rec_1ba6ad92e91861",
+  "slug": "patatas-en-salsa-verde-con-huevos-al-plato",
+  "titulo": "Patatas En Salsa Verde Con Huevos Al Plato",
+  "resumen": "Pon a calentar una cazuela con un poco de agua. Limpia y trocea el puerro y la parte verde de la cebolleta y añádelos a la cazuela. Agrega la cabeza y las espinas de la pescadilla y unas ramas de perejil. Sazona y cuece todo durante 10 minu",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cabeza y espinas de pescadilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "guisantes (desgranados)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar una cazuela con un poco de agua. Limpia y trocea el puerro y la parte verde de la cebolleta y añádelos a la cazuela. Agrega la cabeza y las espinas de la pescadilla y unas ramas de perejil. Sazona y cuece todo durante 10 minutos. Pela las patatas, córtalas en rodajas de medio centímetro y cuécelas durante 12 minutos en una tartera grande con abundante agua y una pizca de sal. Pica finamente la cebolleta y los ajos. Ponlos a pochar en una tartera grande con un chorrito de aceite. Cuando empiecen a ponerse blandos, añade los guisantes. Agrega la harina y rehógala bien. Vierte el vino y dale un hervor fuerte para que se evapore el alcohol. Añade el caldo, espolvorea con perejil picado e introduce las patatas. Trocea la guindilla y añádela. Guisa todo junto durante 5 minutos y pon a punto de sal. Casca los huevos en la tartera y sazónalos. Espolvorea con perejil picado y coloca la tapa. Cocina los huevos durante 3 minutos más. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas En Salsa Verde Con Huevos Al Plato",
+    "meta_description": "Pon a calentar una cazuela con un poco de agua. Limpia y trocea el puerro y la parte verde de la cebolleta y añádelos a la cazuela. Agrega la cabeza y las espinas de la pescadilla y unas ramas de perejil. Sazona y cuece todo durante 10 minu",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

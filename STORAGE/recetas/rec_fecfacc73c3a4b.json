@@ -1,0 +1,103 @@
+{
+  "id": "rec_fecfacc73c3a4b",
+  "slug": "mojarra-con-cestas-de-berenjena-y-tomate",
+  "titulo": "Mojarra Con Cestas De Berenjena Y Tomate",
+  "resumen": "Extiende las hojas de pasta brick sobre una superficie lisa, coloca un plato de postre encima y recorta 8 redondeles del tamaño del plato. Unta una con huevo batido, coloca encima otra y píntala también con huevo batido. Colócalas en un taz",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "mojarra (800 g en limpio)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "tomates pera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "hojas",
+      "nombre": "pasta brick"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Extiende las hojas de pasta brick sobre una superficie lisa, coloca un plato de postre encima y recorta 8 redondeles del tamaño del plato. Unta una con huevo batido, coloca encima otra y píntala también con huevo batido. Colócalas en un tazón a modo de cesta (dejando espacio en la base para rellenar con la berenjena y el tomate). Repite el mismo proceso con el resto de las hojas de pasta brick hasta conseguir 4 cestas. Hornéalas a 200 ºC durante 10-12 minutos. Retíralas, deja que se enfríen y desmóldalas con mucho cuidado.",
+    "Lava la berenjena, córtala en dados y colócalos en un bol. Sazónalos y deja que reposen durante 20 minutos para que suelten parte de su agua. Escúrrelos y sécalos bien.",
+    "Pon agua a calentar en una cazuela. Lava los tomates y retírales el pedúnculo. Hazles un corte superficial en forma de cruz por la parte inferior y añádelos a la cazuela. Escáldalos durante un par de minutos. Pélalos y córtalos en dados.",
+    "Pon un poco de aceite en una sartén y agrega los dados de tomate y los dados de berenjena. Añade el tomillo, una pizca de sal y otra de azúcar. Cocínalos durante 10 minutos. Pela y maja los dientes de ajo, añádelos a la sartén y cocina todo junto durante 5 minutos más. Escurre el tomate con la berenjena y, en el momento de servir, rellena con ellos las cestas de pasta brick.",
+    "Limpia la mojarra, retirándole la cabeza y la espina central. Saca los dos lomos y córtalos a la mitad. Salpimiéntalos y colócalos sobre una placa de horno untada con un poco de aceite. Riégalos con un chorrito más de aceite y hornéalos a 220 ºC durante 10 minutos.",
+    "Sirve la mojarra y acompáñala con las cestas de berenjena y tomate. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mojarra Con Cestas De Berenjena Y Tomate",
+    "meta_description": "Extiende las hojas de pasta brick sobre una superficie lisa, coloca un plato de postre encima y recorta 8 redondeles del tamaño del plato. Unta una con huevo batido, coloca encima otra y píntala también con huevo batido. Colócalas en un taz",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

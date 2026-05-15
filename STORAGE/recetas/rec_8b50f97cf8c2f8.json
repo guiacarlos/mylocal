@@ -1,0 +1,77 @@
+{
+  "id": "rec_8b50f97cf8c2f8",
+  "slug": "brochetas-de-queso-fresco-y-kiwi",
+  "titulo": "Brochetas De Queso Fresco Y Kiwi",
+  "resumen": "Corta el queso en trozos de bocado. Pela los kiwis y córtalos en trozos de bocado. Ensarta, alternando, el queso fresco y el kiwi en palitos de brocheta. Ralla el tomate, ponlo en un bol y sazónalo. Agrega aceite, vinagre y sal. Mezcla bien",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "kiwis"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "lechugas variadas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta el queso en trozos de bocado. Pela los kiwis y córtalos en trozos de bocado. Ensarta, alternando, el queso fresco y el kiwi en palitos de brocheta. Ralla el tomate, ponlo en un bol y sazónalo. Agrega aceite, vinagre y sal. Mezcla bien. Lava las lechugas, sécalas, córtalas en juliana fina y ponlas en el fondo de una fuente. Coloca encima las brochetas y alíñalas con la vinagreta de tomate. PUERROS EN VINAGRETA Ingredientes (4 p.)",
+    "20 puerros 1 pepino sal",
+    "Para la vinagreta: ½ tomate 1 huevo cocido 1 cebolleta aceite de oliva virgen extra vinagre sal",
+    "Elaboración",
+    "Limpia bien los puerros, retirando las barbas y la parte verde. Pásalos por agua y elimina cualquier resto de tierra que puedan tener. Ponlos a cocer en la olla rápida con agua y una pizca de sal. Cierra la olla y cuécelos durante 2-3 minutos. Retíralos, escúrrelos y colócalos en una fuente. Para hacer la vinagreta, limpia y pela el tomate, retírale las pepitas, córtalo en daditos y colócalo en un bol. Pica el huevo y la cebolleta e incorpóralos. Vierte un buen chorro de aceite, vinagre y una pizca de sal. Mezcla suavemente y deja macerar durante 6-7 minutos. En el último momento, pela el pepino, córtalo en rodajas finas y ponlas alrededor de la fuente de los puerros, decorando. Salsea con la vinagreta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Brochetas De Queso Fresco Y Kiwi",
+    "meta_description": "Corta el queso en trozos de bocado. Pela los kiwis y córtalos en trozos de bocado. Ensarta, alternando, el queso fresco y el kiwi en palitos de brocheta. Ralla el tomate, ponlo en un bol y sazónalo. Agrega aceite, vinagre y sal. Mezcla bien",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

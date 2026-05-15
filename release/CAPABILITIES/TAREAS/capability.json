@@ -1,0 +1,10 @@
+{
+  "id": "TAREAS",
+  "version": "1.0.0",
+  "description": "Gestión de tareas en tablero kanban (pendiente / en_curso / hecho) para cualquier vertical.",
+  "depends_on": ["LOGIN", "OPTIONS"],
+  "collections": ["tareas"],
+  "actions": [
+    "tarea_create", "tarea_list", "tarea_update", "tarea_delete"
+  ]
+}

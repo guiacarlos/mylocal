@@ -1,0 +1,117 @@
+{
+  "id": "rec_74455e1ec83332",
+  "slug": "rabo-de-ternera-con-alcachofas",
+  "titulo": "Rabo De Ternera Con Alcachofas",
+  "resumen": "Salpimienta los trozos de rabo, pásalos por harina y fríelos en una sartén con aceite.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.600",
+      "unidad": "g",
+      "nombre": "rabo de ternera"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra en grano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Salpimienta los trozos de rabo, pásalos por harina y fríelos en una sartén con aceite.",
+    "Pela las cebollas, las zanahorias, la manzana y los dientes de ajo y pícalos finamente. Ponlos a pochar en la olla rápida hasta que se doren. Añade la hoja de laurel y unos granos de pimienta. Sazona.",
+    "Vierte el vino en la olla y dale un hervor. Vierte la misma cantidad de agua (500 ml) e introduce los trozos de rabo. Pon a punto de sal. Coloca la tapa y cuece todo durante 30 minutos.",
+    "Abre la olla, desgrasa y liga la salsa en caliente añadiendo una cucharada de harina de maíz diluida en agua fría. Desmiga el rabo y espolvoréalo con un poco de perejil picado.",
+    "Pela las alcachofas retirándoles las hojas externas (las duras) y la parte superior. Corta cada una en 6 trozos y fríelas en una sartén con un chorrito de aceite. Sazónalas. Sirve el rabo y acompáñalo con las alcachofas fritas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rabo De Ternera Con Alcachofas",
+    "meta_description": "Salpimienta los trozos de rabo, pásalos por harina y fríelos en una sartén con aceite.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

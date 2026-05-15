@@ -1,0 +1,101 @@
+{
+  "id": "rec_32968671100d5c",
+  "slug": "magret-de-pato-mechado-con-frutas-y-arroz-salvaje",
+  "titulo": "Magret De Pato Mechado Con Frutas Y Arroz Salvaje",
+  "resumen": "Cuece el arroz en una cazuela con abundante agua y una pizca de sal durante 20-25 minutos. Escurre y reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pechugas de pato (magret)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "arroz salvaje"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de panceta fresca (de 0,5 cm de grosor)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "kiwi"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "ranada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Cuece el arroz en una cazuela con abundante agua y una pizca de sal durante 20-25 minutos. Escurre y reserva.",
+    "Vierte el vino en un cazo y deja que reduzca. Agrega la harina de maíz diluida en agua fría y remueve hasta que espese. Pon a punto de sal y reserva.",
+    "Cocina a la plancha las lonchas de panceta hasta que estén doradas. Deja que se templen y corta cada una en 3 tiras largas. Colócalas en el mechador e introdúcelas en la carne de las pechugas de pato. Salpimienta las pechugas, hazles unos cortes en forma de rombo por la parte de la grasa y dóralas en una sartén sin nada de aceite. Pásalas a una bandeja apta para horno y hornéalas a 200 ºC durante 7 minutos. En el momento de servir, filetea la carne.",
+    "Pela el kiwi y córtalo en dados. Corta la granada por la mitad y golpéala por la parte de la cáscara hasta que salgan los granos. Pon un poco de aceite en el wok o la sartén. Agrega el kiwi y los granos de granada. Añade el cebollino picado y saltea todo. Incorpora el arroz y mezcla bien. Sirve la carne, salséala y acompáñala con el arroz con frutas. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Magret De Pato Mechado Con Frutas Y Arroz Salvaje",
+    "meta_description": "Cuece el arroz en una cazuela con abundante agua y una pizca de sal durante 20-25 minutos. Escurre y reserva.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

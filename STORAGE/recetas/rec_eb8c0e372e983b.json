@@ -1,0 +1,111 @@
+{
+  "id": "rec_eb8c0e372e983b",
+  "slug": "curry-de-pollo",
+  "titulo": "Curry De Pollo",
+  "resumen": "Trocea el pollo, salpimiéntalo y dóralo en una cazuela grande con un chorrito de aceite. Retíralo a un plato y resérvalo.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pollo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de jengibre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Trocea el pollo, salpimiéntalo y dóralo en una cazuela grande con un chorrito de aceite. Retíralo a un plato y resérvalo.",
+    "Pela las cebollas, córtalas en dados grandes y ponlas a pochar en la cazuela donde se rehogó el pollo. Sazona. Cuando se doren, pica los tomates y agrégalos. Rehoga todo bien durante 10 minutos aproximadamente. Agrega un poco de agua y tritura.",
+    "Agrega el curry y la rama de canela. Ralla dos dientes de ajo y el trozo de jengibre y añádelos. Incorpora el pollo con su jugo y la leche evaporada. Coloca la tapa y deja cocinar a fuego suave 25 minutos.",
+    "Dora el otro diente de ajo con piel en un cazo con aceite. Agrega el arroz y rehoga un poco. Añade agua (el doble de agua que de arroz), sazona y cuece durante 20 minutos. Sirve el pollo, salséalo y espolvoréalo con unas semillas de sésamo. Acompáñalo con el arroz y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Curry De Pollo",
+    "meta_description": "Trocea el pollo, salpimiéntalo y dóralo en una cazuela grande con un chorrito de aceite. Retíralo a un plato y resérvalo.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

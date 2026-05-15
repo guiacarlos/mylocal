@@ -1,0 +1,83 @@
+{
+  "id": "rec_79b5e97ac67612",
+  "slug": "revuelto-de-esparragos-y-beicon",
+  "titulo": "Revuelto De Espárragos Y Beicon",
+  "resumen": "Retira la parte inferior del tallo de los espárragos, lávalos y cuécelos durante 15 minutos en una cazuela con agua y una pizca de sal. Escúrrelos y córtalos en trozos de 3 centímetros. Pela la cebolleta y córtala en daditos. Pela los ajos ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "beicon (adobado)"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Retira la parte inferior del tallo de los espárragos, lávalos y cuécelos durante 15 minutos en una cazuela con agua y una pizca de sal. Escúrrelos y córtalos en trozos de 3 centímetros. Pela la cebolleta y córtala en daditos. Pela los ajos y lamínalos. Rehógalos durante 5-6 minutos en una sartén con un chorrito de aceite. Retira la parte inferior de los champiñones, lávalos, lamínalos y agrégalos a la sartén. Saltéalos brevemente. Corta el beicon en dados, añádelo y dóralo un poco. Incorpora los espárragos y saltéalos brevemente. Agrega los huevos, sazona y remueve hasta que cuajen. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Revuelto De Espárragos Y Beicon",
+    "meta_description": "Retira la parte inferior del tallo de los espárragos, lávalos y cuécelos durante 15 minutos en una cazuela con agua y una pizca de sal. Escúrrelos y córtalos en trozos de 3 centímetros. Pela la cebolleta y córtala en daditos. Pela los ajos ",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

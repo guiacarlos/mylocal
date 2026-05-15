@@ -1,0 +1,123 @@
+{
+  "id": "rec_32415bf9aa714f",
+  "slug": "carnes-y-aves-chuleta-rellena-con-mermelada-de-cebolla",
+  "titulo": "Carnes Y Aves Chuleta Rellena Con Mermelada De Cebolla",
+  "resumen": "Para hacer la mermelada de cebolla, corta las cebollas en juliana fina y póchalas a fuego medio en una cacerola con un chorrito de aceite. Sazona. Cuando la cebolla esté blandita, añade la mantequilla, un poco de tomillo, el vino blanco, el",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "chuletas de ternera (de ración)"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de panceta"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "tomatitos cherry"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mermelada de cebolla:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer la mermelada de cebolla, corta las cebollas en juliana fina y póchalas a fuego medio en una cacerola con un chorrito de aceite. Sazona. Cuando la cebolla esté blandita, añade la mantequilla, un poco de tomillo, el vino blanco, el vinagre y el azúcar. Cocina la mermelada hasta que se evapore el líquido. Remueve de vez en cuando. Resérvala. Para hacer el relleno, pica la panceta y dórala en una sartén con un chorrito de aceite. Cuando esté bien dorada, agrega los champiñones limpios y laminados. Sazona y cocina el conjunto. Escurre el exceso de aceite y reserva el relleno. Abre las chuletas hasta el hueso (a modo de libro), salpimiéntalas y rellénalas con la panceta y los champiñones. Cierra las chuletas, rocíalas con una gotita de aceite y dóralas por los dos lados en una plancha. Colócalas en una bandeja apta para el horno y hornéalas a 220 ºC durante 4-5 minutos. Saltea los tomatitos en una sartén con un chorrito de aceite y perejil picado. Sirve las chuletas, acompáñalas con un poco de mermelada y con los tomatitos. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Carnes Y Aves Chuleta Rellena Con Mermelada De Cebolla",
+    "meta_description": "Para hacer la mermelada de cebolla, corta las cebollas en juliana fina y póchalas a fuego medio en una cacerola con un chorrito de aceite. Sazona. Cuando la cebolla esté blandita, añade la mantequilla, un poco de tomillo, el vino blanco, el",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

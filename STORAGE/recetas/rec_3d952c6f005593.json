@@ -1,0 +1,89 @@
+{
+  "id": "rec_3d952c6f005593",
+  "slug": "huevos-con-guacamole-y-langostinos",
+  "titulo": "Huevos Con Guacamole Y Langostinos",
+  "resumen": "Cuece los huevos en una cacerola con agua hirviendo y sal durante 10 minutos. Déjalos enfriar, pélalos y córtalos por la mitad. Coloca los medios huevos en una fuente y resérvalos. Pela los langostinos, dejando la puntita de la cola sin pel",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aguacate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de ½ limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cilantro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Cuece los huevos en una cacerola con agua hirviendo y sal durante 10 minutos. Déjalos enfriar, pélalos y córtalos por la mitad. Coloca los medios huevos en una fuente y resérvalos. Pela los langostinos, dejando la puntita de la cola sin pelar, y cuécelos en una cacerola con agua hirviendo y abundante sal durante 2 minutos. Escurre y deja que se enfríen. Resérvalos. Para hacer el guacamole, retira la piel y el hueso del aguacate, pica la carne y colócala en un cuenco. Con ayuda de un tenedor, aplástala un poco hasta que quede una especie de puré. Corta en daditos el pimiento verde y la cebolleta y añádelos al cuenco. Pela el tomate y córtalo de la misma manera. Agrégalo al cuenco. Añade un poco de cilantro picado y el zumo de limón. Sazona y mezcla bien.",
+    "Introduce el guacamole en una manga pastelera y pon un poco encima de cada trozo de huevo. Coloca un langostino sobre el guacamole y sirve los huevos decorados con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevos Con Guacamole Y Langostinos",
+    "meta_description": "Cuece los huevos en una cacerola con agua hirviendo y sal durante 10 minutos. Déjalos enfriar, pélalos y córtalos por la mitad. Coloca los medios huevos en una fuente y resérvalos. Pela los langostinos, dejando la puntita de la cola sin pel",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

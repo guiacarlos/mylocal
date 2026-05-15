@@ -1,0 +1,105 @@
+{
+  "id": "rec_ee8a0176b77be7",
+  "slug": "alubias-con-bunuelos-de-berza-y-cordero",
+  "titulo": "Alubias Con Buñuelos De Berza Y Cordero",
+  "resumen": "Pon las alubias a remojo la víspera. Pela y pica finamente los ajos. Pica la berza finamente. Pon a calentar una sartén con un chorrito de aceite y saltea los ajos y la berza a fuego fuerte. Sazona. Pela la cebolla y la zanahoria y colócala",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "alubias blancas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cuellos de cordero"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "berza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon las alubias a remojo la víspera. Pela y pica finamente los ajos. Pica la berza finamente. Pon a calentar una sartén con un chorrito de aceite y saltea los ajos y la berza a fuego fuerte. Sazona. Pela la cebolla y la zanahoria y colócalas en una olla rápida. Agrega las alubias escurridas y los cuellos de cordero. Cubre con agua, sazona y tapa la olla. Cuece todo durante 20 minutos. Pasado este tiempo, pasa la cebolla y la zanahoria a un vaso batidor. Tritura y vierte la mezcla sobre las alubias. Retira los cuellos, desmenúzalos y añade la mitad de la carne a la olla y la otra mitad a la sartén de la berza. Bate los huevos en un bol con una pizca de sal y añade poco a poco la leche sin dejar de batir con una varilla. Incorpora la harina y la levadura y sigue batiendo la mezcla. Añade la berza con el cuello desmigado y mezcla.",
+    "Calienta un poco de aceite en una sartén, echa pequeñas porciones de la masa y fríelas. Escúrrelas sobre un plato cubierto con papel absorbente.",
+    "Sirve las alubias, espolvoréalas con perejil picado y acompáñalas con los buñuelos de berza y cordero. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Alubias Con Buñuelos De Berza Y Cordero",
+    "meta_description": "Pon las alubias a remojo la víspera. Pela y pica finamente los ajos. Pica la berza finamente. Pon a calentar una sartén con un chorrito de aceite y saltea los ajos y la berza a fuego fuerte. Sazona. Pela la cebolla y la zanahoria y colócala",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

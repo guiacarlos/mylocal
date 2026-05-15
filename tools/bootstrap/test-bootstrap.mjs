@@ -113,59 +113,65 @@ const helpRes = runCli(['--help']);
 ok('--help imprime USAGE y sale 0', helpRes.code === 0 && helpRes.stdout.includes('AppBootstrap'));
 
 const noArgs = runCli([]);
-ok('sin argumentos: exit !=0 + sugiere --preset', noArgs.code !== 0 && /--preset/.test(noArgs.stderr));
+ok('sin argumentos: exit !=0 + sugiere --template',
+    noArgs.code !== 0 && /--template/.test(noArgs.stderr));
 
-const noSlug = runCli(['--preset=hosteleria', '--nombre=X', '--out=./tmp']);
+const noSlug = runCli(['--template=hosteleria', '--nombre=X', '--out=./tmp']);
 ok('--slug ausente: exit !=0 + mensaje claro', noSlug.code !== 0 && /--slug/.test(noSlug.stderr));
 
-const noNombre = runCli(['--preset=hosteleria', '--slug=t', '--out=./tmp']);
+const noNombre = runCli(['--template=hosteleria', '--slug=t', '--out=./tmp']);
 ok('--nombre ausente: exit !=0 + mensaje claro', noNombre.code !== 0 && /--nombre/.test(noNombre.stderr));
 
-const noOut = runCli(['--preset=hosteleria', '--slug=t', '--nombre=X']);
+const noOut = runCli(['--template=hosteleria', '--slug=t', '--nombre=X']);
 ok('--out ausente: exit !=0 + mensaje claro', noOut.code !== 0 && /--out/.test(noOut.stderr));
 
-// ─── CLI: presets que no existen o son invalidos ────────────────
-console.log('\n[CLI presets]');
+// --preset es alias deprecado de --template
+const presetAlias = runCli(['--preset=hosteleria', '--slug=t', '--nombre=X', '--out=./tmp-preset-alias-test', '--skip-test']);
+// Aceptamos cualquier salida con cero o no-cero porque depende de si
+// pnpm/npm estan disponibles; lo que validamos es el warning de deprecacion.
+ok('--preset emite aviso de deprecacion antes de procesar',
+    /preset esta deprecado/.test(presetAlias.stderr));
 
-const badPreset = runCli(['--preset=nada-que-existe', '--slug=t', '--nombre=X', '--out=./tmp-x']);
-ok('preset inexistente: exit !=0 + lista disponibles', badPreset.code !== 0
-    && /no existe/.test(badPreset.stderr)
-    && /Disponibles/.test(badPreset.stderr));
+// ─── CLI: templates que no existen o son invalidos ──────────────
+console.log('\n[CLI templates]');
 
-// preset=clinica deberia existir como archivo PERO el modulo clinica no
-// existe en spa/src/modules/ todavia (Ola F). Validamos que el CLI lo
-// detecta sin generar basura. Para ello primero creamos el preset.
-import { writeFileSync, rmSync, existsSync } from 'node:fs';
-const fakePresetPath = join(SELF_DIR, 'presets', 'clinica.json');
-writeFileSync(fakePresetPath, JSON.stringify({
-    module: 'clinica',
-    capabilities: ['LOGIN', 'OPTIONS', 'AI'],
-    default_role: 'admin',
-    default_user: { email: null, password: null },
-}, null, 2), 'utf-8');
+import { writeFileSync, rmSync, existsSync, mkdirSync } from 'node:fs';
 
-const noModule = runCli(['--preset=clinica', '--slug=t', '--nombre=X', '--out=./tmp-clinica-test']);
-ok('preset citando modulo sin implementar: aborta limpio', noModule.code !== 0
-    && /Modulo SPA "clinica"/.test(noModule.stderr)
-    && !existsSync(join(REPO_ROOT, 'tmp-clinica-test')));
+const badTemplate = runCli(['--template=ferreteria-no-existe', '--slug=t', '--nombre=X', '--out=./tmp-bad-template-test']);
+ok('template inexistente: exit !=0 + lista disponibles', badTemplate.code !== 0
+    && /no existe en templates/.test(badTemplate.stderr)
+    && /Disponibles/.test(badTemplate.stderr));
+ok('template inexistente: NO crea outDir', !existsSync(join(REPO_ROOT, 'tmp-bad-template-test')));
 
-// Capabilities inexistentes
-const fakeCapPresetPath = join(SELF_DIR, 'presets', '_bad-cap.json');
-writeFileSync(fakeCapPresetPath, JSON.stringify({
-    module: 'hosteleria',
-    capabilities: ['LOGIN', 'OPTIONS', 'XX_NO_EXISTE'],
-    default_role: 'admin',
-    default_user: { email: null, password: null },
-}, null, 2), 'utf-8');
+// Template carpeta sin manifest.json
+const fakeTplDir = join(REPO_ROOT, 'templates', '__test_sin_manifest');
+mkdirSync(fakeTplDir, { recursive: true });
+const noManifest = runCli(['--template=__test_sin_manifest', '--slug=t', '--nombre=X', '--out=./tmp-no-manifest-test']);
+ok('template sin manifest.json: aborta con mensaje claro', noManifest.code !== 0
+    && /no tiene manifest\.json/.test(noManifest.stderr));
 
-const badCap = runCli(['--preset=_bad-cap', '--slug=t', '--nombre=X', '--out=./tmp-bad-cap-test']);
+// Template con manifest.json sin LOGIN (AUTH_LOCK)
+writeFileSync(join(fakeTplDir, 'manifest.json'), JSON.stringify({
+    id: '__test_sin_manifest',
+    capabilities: ['OPTIONS'],
+}, null, 2));
+const noLogin = runCli(['--template=__test_sin_manifest', '--slug=t', '--nombre=X', '--out=./tmp-no-login-test']);
+ok('manifest sin LOGIN: aborta con cita AUTH_LOCK', noLogin.code !== 0
+    && /LOGIN/.test(noLogin.stderr)
+    && /AUTH_LOCK/.test(noLogin.stderr));
+
+// Template con manifest.json citando capability inexistente
+writeFileSync(join(fakeTplDir, 'manifest.json'), JSON.stringify({
+    id: '__test_sin_manifest',
+    capabilities: ['LOGIN', 'OPTIONS', 'XX_NO_EXISTE_JAMAS'],
+}, null, 2));
+const badCap = runCli(['--template=__test_sin_manifest', '--slug=t', '--nombre=X', '--out=./tmp-bad-cap-test']);
 ok('capability inexistente: aborta limpio', badCap.code !== 0
-    && /XX_NO_EXISTE/.test(badCap.stderr)
+    && /XX_NO_EXISTE_JAMAS/.test(badCap.stderr)
     && !existsSync(join(REPO_ROOT, 'tmp-bad-cap-test')));
 
-// Cleanup de presets de prueba
-rmSync(fakePresetPath, { force: true });
-rmSync(fakeCapPresetPath, { force: true });
+// Cleanup del template falso
+rmSync(fakeTplDir, { recursive: true, force: true });
 
 console.log(`\n=== ${passed} PASS / ${failed} FAIL ===`);
 process.exit(failed > 0 ? 1 : 0);

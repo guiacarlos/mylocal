@@ -1,0 +1,101 @@
+{
+  "id": "rec_f2ab064ac936f3",
+  "slug": "volovanes-con-verduras-y-salsa-de-calabacin",
+  "titulo": "Volovanes Con Verduras Y Salsa De Calabacín",
+  "resumen": "Corta 8 circunferencias de hojaldre de 13 centímetros de diámetro. Coloca 4 sobre la placa de horno forrada con papel de hornear. Saca 4 aros de las otras 4 circunferencias y colócalos encima de las bases de 13 centímetros. Pon también las ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "áminas de hojaldre"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de tocino ibérico"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo batido"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta 8 circunferencias de hojaldre de 13 centímetros de diámetro. Coloca 4 sobre la placa de horno forrada con papel de hornear. Saca 4 aros de las otras 4 circunferencias y colócalos encima de las bases de 13 centímetros. Pon también las circunferencias pequeñas sobre la placa. Pincela todo con huevo batido y hornea a 180 ºC durante 15 minutos.",
+    "Corta el calabacín en dados y colócalos en el vaso de la batidora. Añade el agua, 2 cucharadas de aceite y una pizca de sal. Tritura, pasa la salsa a una cazuelita y caliéntala. Lígala con un poco de harina de maíz refinada diluida en agua. Reserva.",
+    "Corta los ajos frescos por la mitad, las judías en rombos y las zanahorias en bastones. Corta los espárragos en cilindros dejando las puntas de 5 centímetros. Sazona y cocina las verduras en una sartén (o wok) con un chorrito de aceite.",
+    "Rellena los volovanes con las verduras a la plancha, cúbrelos con las lonchas de tocino (cortadas por la mitad) y gratínalos en el horno. Salsea los platos y coloca encima los volovanes. Adorna cada ración con 2 puntas de espárrago y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Volovanes Con Verduras Y Salsa De Calabacín",
+    "meta_description": "Corta 8 circunferencias de hojaldre de 13 centímetros de diámetro. Coloca 4 sobre la placa de horno forrada con papel de hornear. Saca 4 aros de las otras 4 circunferencias y colócalos encima de las bases de 13 centímetros. Pon también las ",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

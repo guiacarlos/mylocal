@@ -1,0 +1,15 @@
+{
+    "id": "AI",
+    "version": "1.1.0",
+    "description": "Motor IA: cliente OpenAI-compatible local + conector OpenClaude (Anthropic) + EventBus transversal",
+    "depends_on": ["LOGIN", "OPTIONS"],
+    "collections": [],
+    "actions": [
+        "chat", "vision", "ocr_extract", "ocr_parse",
+        "openclaude_status", "openclaude_complete"
+    ],
+    "config_keys": [
+        "ai.local_endpoint", "ai.local_api_key", "ai.local_model",
+        "openclaude.api_key", "openclaude.model", "openclaude.timeout"
+    ]
+}

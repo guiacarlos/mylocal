@@ -1,0 +1,127 @@
+{
+  "id": "rec_27c858f42c9c31",
+  "slug": "carrilleras-de-cerdo-al-vino-tinto",
+  "titulo": "Carrilleras De Cerdo Al Vino Tinto",
+  "resumen": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos aproximadamente, retíralas, pélalas y pásalas por el pasapurés. En el momento de servir, salpimienta y agrega un chorrito de aceite y u",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "carrilleras de cerdo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "castañas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "ciruelas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento choricero"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo para guisos de carne"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos aproximadamente, retíralas, pélalas y pásalas por el pasapurés. En el momento de servir, salpimienta y agrega un chorrito de aceite y un poco de perejil picado. Mezcla bien.",
+    "Cuece las castañas durante 30 minutos en un cazo con agua. Deja que se templen y pélalas.",
+    "Retira el tallo y las pepitas del pimiento choricero y ponlo a remojar.",
+    "Confita las chalotas en un cazo con aceite durante 20 minutos. Añade las castañas y confítalas conjuntamente durante 10 minutos más.",
+    "Limpia las carrilleras, retirándoles las pieles que las cubren. Salpimienta las carrilleras, pásalas por la harina de maíz y fríelas en una sartén. Retíralas y resérvalas. Pica la cebolla, la zanahoria (pelada), la berenjena y los ajos (pelados) y póchalos en la misma sartén. Coloca las verduras en la olla rápida y añade las carrilleras, las ciruelas, el vino, un buen vaso de agua, la carne del pimiento choricero y la pastilla de caldo desmenuzada. Cierra la olla y deja cocinar durante 20 minutos. Retira las carrilleras a una cazuela. Tritura las verduras y vierte la salsa en la cazuela. Sirve el puré de patatas en el fondo y encima las carrilleras con la salsa. Acompáñalas con las chalotas y las castañas.Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Carrilleras De Cerdo Al Vino Tinto",
+    "meta_description": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos aproximadamente, retíralas, pélalas y pásalas por el pasapurés. En el momento de servir, salpimienta y agrega un chorrito de aceite y u",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

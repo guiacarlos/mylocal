@@ -1,0 +1,13 @@
+{
+    "name": "auto-pre-batch-20260427-114646-0aaee8",
+    "type": "full",
+    "ts": "2026-04-27T11:46:46+00:00",
+    "base_snapshot": null,
+    "collections": [
+        "notas"
+    ],
+    "counts": {
+        "notas": 3
+    },
+    "axidb_version": "v1.0-dev"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "rec_276fe5984300f8",
+  "slug": "gallos-con-chips-de-nabo-y-lingotes-de-jamon",
+  "titulo": "Gallos Con Chips De Nabo Y Lingotes De Jamón",
+  "resumen": "Corta el melón en rectángulos, ponlos en un bol y riégalos con el vino dulce. Deja que maceren durante 15 minutos. Escúrrelos. Pasa el vino a un cazo, mézclalo con un poco de aceite y ponlo a reducir. Envuelve los rectángulos de melón con e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "allos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "nabos"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "melón"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino dulce"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "mostaza de miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta el melón en rectángulos, ponlos en un bol y riégalos con el vino dulce. Deja que maceren durante 15 minutos. Escúrrelos. Pasa el vino a un cazo, mézclalo con un poco de aceite y ponlo a reducir. Envuelve los rectángulos de melón con el jamón y, en el momento de servir, cocínalos a la plancha. Pela los nabos y, con ayuda de un pelador, córtalos en láminas finas. Fríelas en una sartén con aceite y escúrrelas sobre un plato cubierto con papel absorbente. Sazona. Limpia los gallos, saca los filetes y salpimiéntalos. Úntalos con un poco de mostaza y enróscalos sobre sí mismos. Colócalos en una fuente apta para horno, riégalos con un buen chorro de aceite y hornéalos a 200 ºC durante 10 minutos. Sirve los gallos con los chips de nabo y los lingotes de melón con jamón. Salpica el plato con la mezcla de aceite y vino dulce. Espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gallos Con Chips De Nabo Y Lingotes De Jamón",
+    "meta_description": "Corta el melón en rectángulos, ponlos en un bol y riégalos con el vino dulce. Deja que maceren durante 15 minutos. Escúrrelos. Pasa el vino a un cazo, mézclalo con un poco de aceite y ponlo a reducir. Envuelve los rectángulos de melón con e",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

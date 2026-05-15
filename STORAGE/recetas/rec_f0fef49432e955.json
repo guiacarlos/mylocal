@@ -1,0 +1,103 @@
+{
+  "id": "rec_f0fef49432e955",
+  "slug": "espaldilla-asada-con-pimientos-y-cebolleta",
+  "titulo": "Espaldilla Asada Con Pimientos Y Cebolleta",
+  "resumen": "Salpimienta la espaldilla. Hazle 3 cortes longitudinales e introduce las lonchas de beicon y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocíala con aceite, vierte el vino y un poco de agua y espol",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "espaldilla de ternera (1.300 g)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "l",
+      "nombre": "onchas de beicon (finitas)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino de Jerez seco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Salpimienta la espaldilla. Hazle 3 cortes longitudinales e introduce las lonchas de beicon y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocíala con aceite, vierte el vino y un poco de agua y espolvorea con el tomillo y el orégano. Hornéala a 200 ºC durante 30 minutos. A los 20 minutos, añade un poco más de agua. Pasa el jugo de la bandeja a una cazuelita, dale un hervor y lígala con un poco de harina de maíz diluida en agua fría. Espolvorea con perejil. Pela los pimientos morrones, córtalos en trozos y saltéalos en la sartén con un poco de aceite. Corta la cebolleta en juliana gruesa y añádela. Sazona y saltea todo. Sirve la carne (sin la cuerda), salséala y acompáñala con los pimientos y la cebolleta. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Espaldilla Asada Con Pimientos Y Cebolleta",
+    "meta_description": "Salpimienta la espaldilla. Hazle 3 cortes longitudinales e introduce las lonchas de beicon y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocíala con aceite, vierte el vino y un poco de agua y espol",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

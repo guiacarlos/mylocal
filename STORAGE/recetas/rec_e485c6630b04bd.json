@@ -1,0 +1,118 @@
+{
+  "id": "rec_e485c6630b04bd",
+  "slug": "sanjacobos-de-pollo-jamon-y-queso",
+  "titulo": "Sanjacobos De Pollo, Jamón Y Queso",
+  "resumen": "Pela el pimiento rojo y córtalo en trozos. Lava los pimientos verdes y córtalos de la misma manera. Pon a calentar una sartén con aceite. Pela 3 dientes de ajo, lamínalos y añádelos a la sartén. Agrega los pimientos, sazónalos y cocínalos d",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "filetes de pollo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas finas de jamón serrano"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de queso"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "aceitunas verdes"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos, harina y pan rallado (para empanar)"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela el pimiento rojo y córtalo en trozos. Lava los pimientos verdes y córtalos de la misma manera. Pon a calentar una sartén con aceite. Pela 3 dientes de ajo, lamínalos y añádelos a la sartén. Agrega los pimientos, sazónalos y cocínalos durante 15-20 minutos. Incorpora las aceitunas. Rehoga todo junto durante 3 minutos más.",
+    "Extiende la mitad de los filetes de pollo sobre una superficie lisa. Encima de cada uno, coloca una loncha de jamón y media loncha de queso. Cúbrelos con los otros filetes de pollo. Salpimiéntalos.",
+    "Pasa los sanjacobos por harina y huevo batido (con una pizca de sal). Mezcla el pan rallado con el sésamo y pasa los sanjacobos por la mezcla. Márcalos superficialmente con la parte sin filo del cuchillo.",
+    "Pon a calentar una sartén con aceite y añade el otro diente de ajo (aplastado y con piel). Cuando se caliente el aceite, añade los sanjacobos y fríelos durante minuto y medio por cada lado. Escúrrelos sobre una fuente cubierta con papel absorbente de cocina.",
+    "Pon a calentar una sartén sin aceite. Agrega los piñones y tuéstalos.",
+    "Sirve los sanjacobos y acompáñalos con los pimientos. Salpica los pimientos con los piñones. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sanjacobos De Pollo, Jamón Y Queso",
+    "meta_description": "Pela el pimiento rojo y córtalo en trozos. Lava los pimientos verdes y córtalos de la misma manera. Pon a calentar una sartén con aceite. Pela 3 dientes de ajo, lamínalos y añádelos a la sartén. Agrega los pimientos, sazónalos y cocínalos d",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

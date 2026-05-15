@@ -1,0 +1,98 @@
+{
+  "id": "rec_4475faa28a4da7",
+  "slug": "merluza-con-guisantes-y-esparragos",
+  "titulo": "Merluza Con Guisantes Y Espárragos",
+  "resumen": "Pela los espárragos y cuécelos en una cazuela con agua y una pizca de sal durante 15 minutos. Retíralos y resérvalos. Cuece los guisantes en un cazo con agua y una pizca de sal durante 10 minutos. Escúrrelos y resérvalos. Reserva también el",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "700",
+      "unidad": "g",
+      "nombre": "merluza (limpia)"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "guisantes (desgranados)"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos blancos frescos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y 2 huevos (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los espárragos y cuécelos en una cazuela con agua y una pizca de sal durante 15 minutos. Retíralos y resérvalos. Cuece los guisantes en un cazo con agua y una pizca de sal durante 10 minutos. Escúrrelos y resérvalos. Reserva también el caldo de cocción. Cuece 2 huevos en un cazo con agua y una pizca de sal. Refréscalos, pélalos y córtalos en gajos. Resérvalos. Pela la cebolleta y los dientes de ajo y córtalos en daditos. Ponlos a rehogar en una tartera con un chorrito de aceite. Antes de que cojan color, agrega una cucharadita de harina y rehógala bien. Vierte el txakoli y dale un hervor. Añade el caldo de cocción de los guisantes y remueve bien. Espolvorea con perejil picado y pon a punto de sal. Incorpora los guisantes, los espárragos y los gajos de huevo. Corta la merluza en filetes. Sazónalos y rebózalos con harina y huevo batido. Fríelos brevemente en una sartén con aceite. Escúrrelos sobre un plato cubierto con papel absorbente e introdúcelos en la tartera. Cocínalos a fuego suave durante 2 minutos para que se mezclen todos los sabores. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Merluza Con Guisantes Y Espárragos",
+    "meta_description": "Pela los espárragos y cuécelos en una cazuela con agua y una pizca de sal durante 15 minutos. Retíralos y resérvalos. Cuece los guisantes en un cazo con agua y una pizca de sal durante 10 minutos. Escúrrelos y resérvalos. Reserva también el",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

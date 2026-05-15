@@ -1,0 +1,87 @@
+{
+  "id": "rec_9de3d193931cde",
+  "slug": "saquitos-de-morcilla-y-pera-con-salsa-de-col",
+  "titulo": "Saquitos De Morcilla Y Pera Con Salsa De Col",
+  "resumen": "Corta la col en juliana fina. Saltéala en una cazuela con un chorrito de aceite. Vierte la nata. Sazona y cocina durante 15 minutos. Tritura y reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "hojas",
+      "nombre": "pasta brick"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "morcilla de verduras (350 g)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pera"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "col"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta la col en juliana fina. Saltéala en una cazuela con un chorrito de aceite. Vierte la nata. Sazona y cocina durante 15 minutos. Tritura y reserva.",
+    "Corta en daditos las cebolletas y ponlas a pochar en una sartén con aceite. Sazona. Pela la pera, córtala en daditos y añádela. Cocina brevemente.",
+    "Cuece la morcilla a fuego suave en una cazuela con abundante agua. A los 10 minutos, sácala y retírale la piel. Mézclala con el pochado de cebolleta y pera. Cocina el conjunto durante 3 minutos y deja templar.",
+    "Extiende las hojas de pasta brick sobre una superficie lisa. Rellénalas con la farsa de cebolleta, pera y morcilla. Ciérralas con cuerda de cocina como si fueran saquitos. Hornéalos a 190 ºC durante 8-10 minutos.",
+    "Sirve los saquitos y acompáñalos con la salsa de col. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Saquitos De Morcilla Y Pera Con Salsa De Col",
+    "meta_description": "Corta la col en juliana fina. Saltéala en una cazuela con un chorrito de aceite. Vierte la nata. Sazona y cocina durante 15 minutos. Tritura y reserva.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

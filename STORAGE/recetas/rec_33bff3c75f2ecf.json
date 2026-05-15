@@ -1,0 +1,103 @@
+{
+  "id": "rec_33bff3c75f2ecf",
+  "slug": "garbanzos-con-verduras-y-salsa-de-tomate",
+  "titulo": "Garbanzos Con Verduras Y Salsa De Tomate",
+  "resumen": "Pon los garbanzos a remojo la víspera. Calienta abundante agua en la olla rápida y añade los garbanzos escurridos. Agrega el hueso de jamón, los clavos y una pizca de sal. Pela la cebolla, córtala en cuartos y añádela. Agrega también la pas",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "hueso de jamón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo para legumbres"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cl",
+      "nombre": "avos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Calienta abundante agua en la olla rápida y añade los garbanzos escurridos. Agrega el hueso de jamón, los clavos y una pizca de sal. Pela la cebolla, córtala en cuartos y añádela. Agrega también la pastilla de caldo. Cierra la olla y cuece los garbanzos durante 20 minutos. Escurre los garbanzos y resérvalos. Reserva también el caldo. Pela los dientes de ajo y lamínalos. Corta el calabacín y la berenjena en cuartos de luna. Pela el pimiento rojo y córtalo en dados. Pon un poco de aceite en una tartera, agrega los ajos y dóralos un poco. Agrega el resto de las verduras, sazónalas y rehógalas. Añade los garbanzos y la salsa de tomate a la tartera de las verduras. Mezcla bien y cocina todo junto a fuego suave durante 2-3 minutos para que se mezclen todos los sabores. Pon a punto de sal y sirve. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Garbanzos Con Verduras Y Salsa De Tomate",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Calienta abundante agua en la olla rápida y añade los garbanzos escurridos. Agrega el hueso de jamón, los clavos y una pizca de sal. Pela la cebolla, córtala en cuartos y añádela. Agrega también la pas",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

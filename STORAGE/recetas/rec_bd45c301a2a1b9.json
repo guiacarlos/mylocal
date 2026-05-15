@@ -1,0 +1,103 @@
+{
+  "id": "rec_bd45c301a2a1b9",
+  "slug": "perlon-cocido-con-vinagreta",
+  "titulo": "Perlón Cocido Con Vinagreta",
+  "resumen": "Limpia los perlones retirándoles las cabezas, las vísceras y las espinas centrales. Sácales los lomos. Pela la cebolla y la zanahoria y córtalas en juliana fina. Ponlas a cocer en una cazuela con agua, una pizca de sal y unas hojas de perej",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "perlones (de ración)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta:"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla roja"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia los perlones retirándoles las cabezas, las vísceras y las espinas centrales. Sácales los lomos. Pela la cebolla y la zanahoria y córtalas en juliana fina. Ponlas a cocer en una cazuela con agua, una pizca de sal y unas hojas de perejil. A los 10 minutos, agrega los lomos de los perlones y cuécelos durante un par de minutos. Para hacer la vinagreta, pela el pimiento rojo, la cebolla y el diente de ajo y córtalos en daditos. Corta también en daditos el pimiento verde. Pon todo en un bol, agrega aceite y vinagre (a tu gusto), sazona y mezcla bien. Sirve los perlones y aderézalos con la vinagreta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Perlón Cocido Con Vinagreta",
+    "meta_description": "Limpia los perlones retirándoles las cabezas, las vísceras y las espinas centrales. Sácales los lomos. Pela la cebolla y la zanahoria y córtalas en juliana fina. Ponlas a cocer en una cazuela con agua, una pizca de sal y unas hojas de perej",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

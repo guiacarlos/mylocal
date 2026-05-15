@@ -1,0 +1,118 @@
+{
+  "id": "rec_2b500887b07595",
+  "slug": "ensalada-de-manchones-y-judias-verdes",
+  "titulo": "Ensalada De Manchones Y Judías Verdes",
+  "resumen": "Pon un poco de agua a calentar en un cazo, agrega los huevos y cuécelos durante 4-5 minutos. Pélalos, córtalos por la mitad y resérvalos. Corta el pan en daditos y fríelos en una sartén con aceite. Escúrrelos sobre un plato cubierto con pap",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "manchones de pato confitados"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos de codorniz"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "pistachos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta de tomate y albahaca:"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "tomates deshidratados en aceite"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "g",
+      "nombre": "hojas de albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon un poco de agua a calentar en un cazo, agrega los huevos y cuécelos durante 4-5 minutos. Pélalos, córtalos por la mitad y resérvalos. Corta el pan en daditos y fríelos en una sartén con aceite. Escúrrelos sobre un plato cubierto con papel absorbente. Reserva. Para la vinagreta, coloca los tomates en el vaso de la batidora, agrega las hojas de albahaca, un chorrito de vinagre y un buen chorro de aceite de oliva. Añade un poco de perejil picado y una pizca de sal. Tritura y reserva. Quita las puntas de las judías y córtalas en bastones. Pela las zanahorias y córtalas en bastones. Cocina las verduras a la plancha con un poco de aceite y sal. Coloca los manchones sobre una placa de horno y caliéntalos en el horno a 180 ºC durante 10 minutos. Monta la ensalada (incluyendo los pistachos), alíñala y decórala con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Manchones Y Judías Verdes",
+    "meta_description": "Pon un poco de agua a calentar en un cazo, agrega los huevos y cuécelos durante 4-5 minutos. Pélalos, córtalos por la mitad y resérvalos. Corta el pan en daditos y fríelos en una sartén con aceite. Escúrrelos sobre un plato cubierto con pap",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

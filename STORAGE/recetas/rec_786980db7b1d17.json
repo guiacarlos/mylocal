@@ -1,0 +1,98 @@
+{
+  "id": "rec_786980db7b1d17",
+  "slug": "pescadillas-especiadas-con-espinacas-salteadas",
+  "titulo": "Pescadillas Especiadas Con Espinacas Salteadas",
+  "resumen": "Limpia las pescadillas retirándoles las vísceras, la espina central y las cabezas (guárdalas para hacer un caldo). Coloca los lomos en un plato y salpimiéntalos. Calienta un poco de aceite en una sartén, agrega el maíz (en dos tandas) y táp",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pescadillas (de ración)"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "maíz para hacer palomitas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de 1 limón"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "hojas de cilantro"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "comino en polvo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia las pescadillas retirándoles las vísceras, la espina central y las cabezas (guárdalas para hacer un caldo). Coloca los lomos en un plato y salpimiéntalos. Calienta un poco de aceite en una sartén, agrega el maíz (en dos tandas) y tápalo. A medida que se vayan friendo, los granos de maíz se convertirán en palomitas. Retíralas a un plato y tritúralas con un molinillo hasta que queden reducidas a polvo. Reserva. Mezcla en un bol el cilantro y el comino. Agrega el zumo de limón y un chorrito de aceite. Introduce los filetes de pescadilla y deja que marinen durante 15 minutos. Escurre los filetes y pásalos por harina, huevo batido y polvo de palomitas. Fríelos en una sartén con aceite y escúrrelos sobre un plato cubierto con papel absorbente. Reserva. Para el salteado, tuesta los piñones en una sartén grande (sin aceite) y pásalos a un plato. Pon un poco de aceite en la sartén y agrega las espinacas. Sazona y saltéalas brevemente. Agrégales los piñones y mezcla bien. Sirve los filetes de pescadilla y acompáñalos con el salteado de espinacas y piñones. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pescadillas Especiadas Con Espinacas Salteadas",
+    "meta_description": "Limpia las pescadillas retirándoles las vísceras, la espina central y las cabezas (guárdalas para hacer un caldo). Coloca los lomos en un plato y salpimiéntalos. Calienta un poco de aceite en una sartén, agrega el maíz (en dos tandas) y táp",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

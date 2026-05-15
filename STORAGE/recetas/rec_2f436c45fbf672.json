@@ -1,0 +1,93 @@
+{
+  "id": "rec_2f436c45fbf672",
+  "slug": "huevo-frito-con-quinoa-y-verduras",
+  "titulo": "Huevo Frito Con Quinoa Y Verduras",
+  "resumen": "Coloca la quinoa en un colador grande y lávala bajo el grifo con agua fría. Escúrrela y rehógala en una cazuela con un chorrito de aceite durante 1 minuto (de esta manera aparecerá su aroma de nuez). Vierte el doble de agua que de quinoa, s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "quinoa"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "setas shitake"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca la quinoa en un colador grande y lávala bajo el grifo con agua fría. Escúrrela y rehógala en una cazuela con un chorrito de aceite durante 1 minuto (de esta manera aparecerá su aroma de nuez). Vierte el doble de agua que de quinoa, sazona y cocínala con la tapa puesta durante 15 minutos. Retírala del fuego y deja que repose durante 5 minutos. Limpia el puerro y pela la calabaza y el pimiento. Corta la calabaza en dados, el puerro en cilindros y el pimiento en dados. Saltéalos en un wok o una sartén con un poco de aceite. Sazona. Limpia las setas y filetéalas. Corta los ajos en láminas y dóralos en una sartén con un chorrito de aceite. Agrega las setas y saltéalas. Sazona. Mezcla la quinoa con las verduras, las setas, las nueces picaditas (reserva 2) y un poco de perejil picado. Pon aceite a calentar en una sartén. Cuando esté caliente, añade un huevo y fríelo. Sazona. Repite el proceso con el resto de los huevos. Reparte la quinoa en 4 platos y coloca un huevo encima de cada uno. Decora con las nueces reservadas y unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevo Frito Con Quinoa Y Verduras",
+    "meta_description": "Coloca la quinoa en un colador grande y lávala bajo el grifo con agua fría. Escúrrela y rehógala en una cazuela con un chorrito de aceite durante 1 minuto (de esta manera aparecerá su aroma de nuez). Vierte el doble de agua que de quinoa, s",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

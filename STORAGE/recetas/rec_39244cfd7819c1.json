@@ -1,0 +1,98 @@
+{
+  "id": "rec_39244cfd7819c1",
+  "slug": "canelones-de-calabacin-y-queso-de-cabra",
+  "titulo": "Canelones De Calabacín Y Queso De Cabra",
+  "resumen": "En una cazuela, pon abundante agua a calentar con una pizca de sal. Cuando el agua empiece a hervir, añade los canelones y cuécelos durante el tiempo que indique el paquete. Escúrrelos y colócalos sobre un paño de cocina limpio. Pica las ce",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "20",
+      "unidad": "l",
+      "nombre": "áminas de canelón"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "calabacines"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso de cabra curado (rallado)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "375",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "375",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hierbas provenzales"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "En una cazuela, pon abundante agua a calentar con una pizca de sal. Cuando el agua empiece a hervir, añade los canelones y cuécelos durante el tiempo que indique el paquete. Escúrrelos y colócalos sobre un paño de cocina limpio. Pica las cebolletas finamente y ponlas a pochar en una sartén con un buen chorro de aceite. Corta los calabacines en daditos y agrégalos. Sazona, añade las hierbas provenzales y las aceitunas picaditas. Mezcla bien y reserva. Para hacer la bechamel, pon un poco de aceite en una cazuela. Añade la harina y rehógala bien. Vierte las leches poco a poco y remueve bien hasta que queden perfectamente integradas. Sazona, incorpora la mitad del queso rallado y mezcla bien. Agrega la mitad de la salsa bechamel a la sartén de los calabacines y mezcla bien. Deja enfriar, rellena los canelones con la farsa y colócalos en una bandeja apta para horno. Cúbrelos con el resto de la bechamel y espolvoréalos con el resto del queso. Hornéalos a 180 ºC durante 5 minutos. Sirve y decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Canelones De Calabacín Y Queso De Cabra",
+    "meta_description": "En una cazuela, pon abundante agua a calentar con una pizca de sal. Cuando el agua empiece a hervir, añade los canelones y cuécelos durante el tiempo que indique el paquete. Escúrrelos y colócalos sobre un paño de cocina limpio. Pica las ce",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

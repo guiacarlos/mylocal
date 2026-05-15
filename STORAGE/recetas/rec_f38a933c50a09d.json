@@ -1,0 +1,118 @@
+{
+  "id": "rec_f38a933c50a09d",
+  "slug": "arroz-con-pichones-y-setas",
+  "titulo": "Arroz Con Pichones Y Setas",
+  "resumen": "Deshuesa la liebre y reserva la carne y los huesos. Corta los pichones en 4 trozos, separando los cuellos y los espinazos. Para hacer el caldo, coloca los huesos de la liebre en una cacerola con agua hirviendo. Añade el romero, una ramita d",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "arroz bomba"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pichones"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "iebre"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "setas variadas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "carne de pimiento choricero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de ½ limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "ramitas",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra (polvo y grano)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Deshuesa la liebre y reserva la carne y los huesos. Corta los pichones en 4 trozos, separando los cuellos y los espinazos. Para hacer el caldo, coloca los huesos de la liebre en una cacerola con agua hirviendo. Añade el romero, una ramita de perejil, una pizca de sal, los granos de pimienta negra, los cuellos y los espinazos de los pichones. Coloca la tapa y cuece todo durante 20 minutos. Desespuma, cuela el caldo y añade el zumo de limón. Resérvalo. Corta la carne de liebre en daditos, salpimiéntala y rehógala en una cazuela con un chorrito de aceite. Reserva la carne en un plato. Salpimienta los pichones troceados y rehógalos en la misma cazuela donde has rehogado la liebre. Resérvalos en un plato. Pica la cebolla, el puerro, la zanahoria, el pimiento y las judías (sin hilos). Rehoga las verduras en la misma cazuela. Sazona. Limpia bien las setas, pícalas, añádelas a la cazuela y rehoga el conjunto. Incorpora la carne de pimiento choricero y mezcla bien. Añade el arroz y rehógalo. Agrega las carnes (liebre y pichón) y el triple de caldo que de arroz. Cocínalo durante 10 minutos a fuego fuerte y 8 minutos más a fuego suave. Deja que repose durante 5 minutos tapado con un paño limpio de cocina. Sirve y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Pichones Y Setas",
+    "meta_description": "Deshuesa la liebre y reserva la carne y los huesos. Corta los pichones en 4 trozos, separando los cuellos y los espinazos. Para hacer el caldo, coloca los huesos de la liebre en una cacerola con agua hirviendo. Añade el romero, una ramita d",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "rec_6611a94da398cc",
+  "slug": "pasta-fresca-con-jamon-calabacin-y-queso",
+  "titulo": "Pasta Fresca Con Jamón, Calabacín Y Queso",
+  "resumen": "Lava el calabacín, córtalo en cuartos de luna y saltéalo en el wok (o en una sartén) con un chorrito de aceite. Sazona y ralla el tomate encima. Rehógalo brevemente. Corta el jamón en daditos y agrégalos. Espolvorea con orégano y mezcla bie",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "jamón cocido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la pasta:"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava el calabacín, córtalo en cuartos de luna y saltéalo en el wok (o en una sartén) con un chorrito de aceite. Sazona y ralla el tomate encima. Rehógalo brevemente. Corta el jamón en daditos y agrégalos. Espolvorea con orégano y mezcla bien. Reserva la salsa. Para hacer la pasta fresca, mezcla en un bol la harina, los huevos, una pizca de sal y el aceite. Mezcla primero con la varilla y luego amasa con las manos hasta conseguir una masa homogénea. (Si queda pegajosa, añade un poco más de harina hasta conseguir la consistencia deseada.) Déjala reposar durante 30 minutos en el frigorífico envuelta en film transparente. Enharina y corta la masa en porciones. Redondéalas y estíralas con la máquina hasta que quede muy fina. Seguidamente, pásala por el cortador de tallarines y ponla a secar durante 10 minutos. Pon a hervir abundante agua en una cazuela grande, sazona y cuece la pasta durante 2 minutos. Escúrrela y colócala en una fuente. Añade la salsa y mezcla bien. Espolvorea con el queso rallado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pasta Fresca Con Jamón, Calabacín Y Queso",
+    "meta_description": "Lava el calabacín, córtalo en cuartos de luna y saltéalo en el wok (o en una sartén) con un chorrito de aceite. Sazona y ralla el tomate encima. Rehógalo brevemente. Corta el jamón en daditos y agrégalos. Espolvorea con orégano y mezcla bie",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

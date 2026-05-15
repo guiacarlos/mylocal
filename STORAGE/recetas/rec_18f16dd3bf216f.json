@@ -1,0 +1,88 @@
+{
+  "id": "rec_18f16dd3bf216f",
+  "slug": "sopa-de-calabaza-con-verduras",
+  "titulo": "Sopa De Calabaza Con Verduras",
+  "resumen": "Pela y pica las cebolletas. Pela y trocea la calabaza. Rehoga todo en una cazuela con un chorrito de aceite. Sazona y ralla encima un poco de nuez moscada. Cubre con agua y cuece durante 20 minutos. Tritura con la batidora eléctrica. Pela l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nabo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "queso emmental rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica las cebolletas. Pela y trocea la calabaza. Rehoga todo en una cazuela con un chorrito de aceite. Sazona y ralla encima un poco de nuez moscada. Cubre con agua y cuece durante 20 minutos. Tritura con la batidora eléctrica. Pela la patata y el nabo. Corta el calabacín, la patata y el nabo en daditos y añádelos a la cazuela de la crema de calabaza. Cuece durante 10 minutos. Retira la espuma con un cacillo. Coloca las rebanadas de pan sobre la placa del horno, espolvoréalas con el queso rallado y gratínalas. Sirve la sopa y acompáñala con el pan con queso."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Calabaza Con Verduras",
+    "meta_description": "Pela y pica las cebolletas. Pela y trocea la calabaza. Rehoga todo en una cazuela con un chorrito de aceite. Sazona y ralla encima un poco de nuez moscada. Cubre con agua y cuece durante 20 minutos. Tritura con la batidora eléctrica. Pela l",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

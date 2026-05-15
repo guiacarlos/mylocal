@@ -1,0 +1,103 @@
+{
+  "id": "rec_2b20bbf16d84e6",
+  "slug": "revuelto-de-pisto",
+  "titulo": "Revuelto De Pisto",
+  "resumen": "Pon a calentar un poco de aceite en una sartén. Añade los pimientos del piquillo y cocínalos a fuego lento durante 10 minutos. Resérvalos. Lamina los ajos y corta en dados la cebolla, el pimiento morrón (pelado), el pimiento verde, el calab",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla roja"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento morrón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "judías verdes cocidas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar un poco de aceite en una sartén. Añade los pimientos del piquillo y cocínalos a fuego lento durante 10 minutos. Resérvalos. Lamina los ajos y corta en dados la cebolla, el pimiento morrón (pelado), el pimiento verde, el calabacín y la berenjena. Pon todo a pochar en una sartén grande con un chorrito de aceite. Sazona. Escalda los tomates en una cazuela con agua hirviendo. Sácalos y refréscalos. Pélalos, quítales las pepitas, trocéalos y agrégalos a la sartén. Rehoga el conjunto durante 6-8 minutos. Incorpora las judías verdes y los huevos. Sazona y espolvorea con un poco de perejil picado. Revuelve bien hasta que los huevos cuajen. Sirve el revuelto y acompáñalo con los pimientos del piquillo."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Revuelto De Pisto",
+    "meta_description": "Pon a calentar un poco de aceite en una sartén. Añade los pimientos del piquillo y cocínalos a fuego lento durante 10 minutos. Resérvalos. Lamina los ajos y corta en dados la cebolla, el pimiento morrón (pelado), el pimiento verde, el calab",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

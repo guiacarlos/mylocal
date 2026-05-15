@@ -38,10 +38,11 @@ timeout /t 1 /nobreak > nul
 :: 2. Frontend Vite (abre el navegador automaticamente)
 echo  [2/2] Iniciando Frontend React en puerto %FRONTEND_PORT%...
 set TEMPLATE_DIR=%~dp0templates\%TEMPLATE%
-if exist "%TEMPLATE_DIR%\" (
-    cd /d "%TEMPLATE_DIR%"
-    call pnpm dev
-) else (
-    cd /d %~dp0spa
-    call npm run dev
+if not exist "%TEMPLATE_DIR%\" (
+    echo  ERROR: templates\%TEMPLATE% no existe.
+    echo  Plantillas disponibles:
+    dir /b "%~dp0templates"
+    exit /b 1
 )
+cd /d "%TEMPLATE_DIR%"
+call pnpm dev

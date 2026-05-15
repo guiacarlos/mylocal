@@ -1,0 +1,137 @@
+{
+  "id": "rec_01d5e263e85592",
+  "slug": "rape-a-la-americana",
+  "titulo": "Rape A La Americana",
+  "resumen": "Pela la cebolleta, la zanahoria, las chalotas y los dientes de ajo, córtalos en dados y rehógalos durante 10 minutos en una cazuela con un chorrito de aceite. Sazona y añade la hoja de laurel, el estragón, la nécora y las cabezas y cáscaras",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "colas de rape (1.600 gramos)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "750",
+      "unidad": "ml",
+      "nombre": "fumet de pescado"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "cáscaras y cabezas de gambas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nécora"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "estragón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la cebolleta, la zanahoria, las chalotas y los dientes de ajo, córtalos en dados y rehógalos durante 10 minutos en una cazuela con un chorrito de aceite. Sazona y añade la hoja de laurel, el estragón, la nécora y las cabezas y cáscaras de gambas. Rehoga bien.",
+    "Vierte el brandy y flambea. Añade una cucharada de harina y rehógala un poco. Vierte el vino blanco y dale un hervor. Incorpora el tomate y el fumet y cocina el conjunto a fuego suave durante 35-40 minutos.",
+    "Retira la nécora y tritura el resto con la batidora eléctrica. Cuela el resultado con un chino y pon la salsa a calentar en una tartera.",
+    "Salpimienta las colas de rape, pásalas por harina y huevo batido y fríelas brevemente en una sartén con aceite de oliva.",
+    "Pásalas a la tartera donde está la salsa y cocina el rape 3-5 minutos a fuego suave. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rape A La Americana",
+    "meta_description": "Pela la cebolleta, la zanahoria, las chalotas y los dientes de ajo, córtalos en dados y rehógalos durante 10 minutos en una cazuela con un chorrito de aceite. Sazona y añade la hoja de laurel, el estragón, la nécora y las cabezas y cáscaras",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

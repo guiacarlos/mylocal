@@ -1,0 +1,93 @@
+{
+  "id": "rec_329400f687c78b",
+  "slug": "tomates-rellenos-de-frutos-de-mar",
+  "titulo": "Tomates Rellenos De Frutos De Mar",
+  "resumen": "Cuece la patata en una cazuela con agua durante 25-30 minutos. Pélala y aplástala con un tenedor. Reserva el puré. Lava los tomates y córtales la parte superior (la del pedúnculo). Vacíalos. Reserva los 4 tomates vacíos. Escurre la pulpa, p",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "mejillones"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "berberechos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aguacate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Cuece la patata en una cazuela con agua durante 25-30 minutos. Pélala y aplástala con un tenedor. Reserva el puré. Lava los tomates y córtales la parte superior (la del pedúnculo). Vacíalos. Reserva los 4 tomates vacíos. Escurre la pulpa, pícala un poco y colócala en un bol. Añade el puré de patata. Coloca los berberechos y los mejillones en una sartén al fuego. Añade el vino, coloca la tapa y espera a que se abran. Retira las cáscaras de los mejillones, pícalos y añádelos al bol. Retira la cáscara de los berberechos y agrégalos al bol. Pela las gambas y sazónalas. Pon a calentar un poco de aceite en una sartén y saltea brevemente las gambas. Pícalas un poco y añádelas al bol. Corta el aguacate por la mitad, pélalo, corta la pulpa en dados e incorpórala al bol. Sazona y adereza con el zumo de medio limón y un chorrito de aceite. Mezcla bien. Rellena los tomates con la mezcla. Sirve y adorna con la otra mitad del limón y unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tomates Rellenos De Frutos De Mar",
+    "meta_description": "Cuece la patata en una cazuela con agua durante 25-30 minutos. Pélala y aplástala con un tenedor. Reserva el puré. Lava los tomates y córtales la parte superior (la del pedúnculo). Vacíalos. Reserva los 4 tomates vacíos. Escurre la pulpa, p",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

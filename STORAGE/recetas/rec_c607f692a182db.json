@@ -1,0 +1,97 @@
+{
+  "id": "rec_c607f692a182db",
+  "slug": "pochas-con-almejas",
+  "titulo": "Pochas Con Almejas",
+  "resumen": "Vierte el txakoli en una tartera y ponlo a calentar. Enjuaga las almejas y agrégalas. Tapa y espera a que se abran. Reserva las almejas y el caldo por separado. Pon las pochas en una cazuela, cúbrelas con agua, sazónalas y cuécelas junto co",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "pochas (desgranadas)"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "kg",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de guindilla"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Vierte el txakoli en una tartera y ponlo a calentar. Enjuaga las almejas y agrégalas. Tapa y espera a que se abran. Reserva las almejas y el caldo por separado. Pon las pochas en una cazuela, cúbrelas con agua, sazónalas y cuécelas junto con la guindilla durante unos 30 minutos. Pela y pica los dientes de ajo y ponlos a rehogar en una sartén con un chorrito de aceite. Pica la cebolleta y el pimiento y añádelos. Sazona. Cuando se pochen bien, pela el tomate, pícalo y añádelo. Cocina todo junto durante 10 minutos. Pasa las verduras al vaso batidor, vierte el líquido resultante de abrir las almejas y tritura con la batidora eléctrica. Añade todo a la cazuela de las pochas y cuece todo junto a fuego suave durante 15 minutos más. Espolvorea con perejil picado. Agrega las almejas y dale un breve hervor. Sirve y decora con unas hojas de perejil.",
+    "ALUBIAS ROJAS A MI MANERA Ingredientes (4 p.)",
+    "300 g de alubias rojas 2 puerros 1 nabo ½ repollo 4 dientes de ajo 1 morcilla de verdura aceite de oliva virgen extra sal 1 cucharadita de pimentón",
+    "Elaboración",
+    "Pon las alubias a remojo la víspera. Pela los puerros y el nabo, pícalos finamente y rehógalos en la olla rápida con un chorrito de aceite. Agrega las alubias y cúbrelas con agua. Pon a punto de sal. Coloca la tapa y cuécelas a fuego suave durante 10 minutos. Quita la tapa y cuécelas 5 minutos más a fuego suave para que espese la salsa. Resérvalas. Corta el repollo en juliana y ponlo a cocer a fuego suave en una cazuela con agua. Pincha la morcilla e introdúcela en la cazuela. Sazona y cuece todo junto durante 20 minutos. Retira la morcilla y escurre la berza. Reserva. Pela los dientes de ajo y córtalos en láminas. Dóralos en una sartén con un chorro de aceite y agrega el pimentón. Retira la olla del fuego (para que no se queme el pimentón) y agrega la berza. Mezcla bien. Sirve las alubias y acompáñalas con la berza y la morcilla."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pochas Con Almejas",
+    "meta_description": "Vierte el txakoli en una tartera y ponlo a calentar. Enjuaga las almejas y agrégalas. Tapa y espera a que se abran. Reserva las almejas y el caldo por separado. Pon las pochas en una cazuela, cúbrelas con agua, sazónalas y cuécelas junto co",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

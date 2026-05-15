@@ -1,0 +1,111 @@
+{
+  "id": "rec_aa5b9b5695073f",
+  "slug": "arroz-en-perol",
+  "titulo": "Arroz En Perol",
+  "resumen": "Lava los boniatos, colócalos en la bandeja del horno y ásalos a 180 ºC durante 50 minutos. En el momento de servir, pélalos y trocéalos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "costilla de ternera"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manita de cerdo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "muslo de pato"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "hueso de espinazo de cerdo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "morcillas pequeñas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "penca de cardo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "acelgas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nabo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "boniatos"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "alubias blancas (remojadas)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Lava los boniatos, colócalos en la bandeja del horno y ásalos a 180 ºC durante 50 minutos. En el momento de servir, pélalos y trocéalos.",
+    "Pon abundante agua en la olla rápida. Pela y trocea el nabo. Trocea la costilla y la manita de cerdo y añádelas a la olla junto con el hueso de espinazo, el muslo de pato, las alubias y el nabo. Coloca la tapa y cuece todo durante 30 minutos. Pasado este tiempo, abre la olla y, con ayuda de un cazo, retira el exceso de grasa.",
+    "Retira los hilos de la penca de cardo y de las acelgas, trocéalas y añádelas a la olla. Pica las hojas de acelga e incorpóralas junto con el arroz y el azafrán. Pon a punto de sal. Coloca de nuevo la tapa y cocina el conjunto durante 8 minutos. Añade las morcillas y cuécelas durante 4 minutos más.",
+    "Sirve el guiso y acompáñalo con los boniatos. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz En Perol",
+    "meta_description": "Lava los boniatos, colócalos en la bandeja del horno y ásalos a 180 ºC durante 50 minutos. En el momento de servir, pélalos y trocéalos.",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

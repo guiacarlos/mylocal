@@ -1,0 +1,98 @@
+{
+  "id": "rec_3668706d61e785",
+  "slug": "raviolis-de-calabaza-jamon-y-ricota",
+  "titulo": "Raviolis De Calabaza, Jamón Y Ricota",
+  "resumen": "Pela la calabaza, córtala en dados y saltéala en una sartén con un poco de aceite, sazónala, tápala, baja el fuego y cocínala hasta que se ablande. Aplástala con un tenedor y resérvala. Pica las lonchas de jamón finamente y fríelas en una s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "24",
+      "unidad": "l",
+      "nombre": "áminas de pasta wonton para raviolis"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "lonchas finas de jamón serrano"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "queso ricota"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la calabaza, córtala en dados y saltéala en una sartén con un poco de aceite, sazónala, tápala, baja el fuego y cocínala hasta que se ablande. Aplástala con un tenedor y resérvala. Pica las lonchas de jamón finamente y fríelas en una sartén con un chorrito de aceite. Escurre y reserva. Pela las nueces y tuéstalas en una sartén sin aceite. Retíralas y machácalas un poco en el mortero. Mezcla en un bol la calabaza con el jamón, las nueces, el queso ricota y un poco de pimienta. Extiende 12 láminas de wonton y coloca una pequeña porción de calabaza y nueces en el centro de cada una. Unta los bordes con un poco de agua, coloca encima otra lámina de wonton y ciérralas presionando los bordes con los dedos. Pon abundante agua a calentar en una tartera grande. Cuando empiece a hervir, sazónala y agrega los raviolis. Cuécelos durante 2-3 minutos. Cuando estén cocidos, subirán a la superficie. Retíralos a una fuente. Calienta un chorrito de aceite en una sartén a fuego suave. Pela y pica el diente de ajo y añádelo junto con las hojas de orégano picaditas. Vierte el aceite sobre los raviolis y espolvoréalos con el queso parmesano. Decora con una ramita de perejil y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Raviolis De Calabaza, Jamón Y Ricota",
+    "meta_description": "Pela la calabaza, córtala en dados y saltéala en una sartén con un poco de aceite, sazónala, tápala, baja el fuego y cocínala hasta que se ablande. Aplástala con un tenedor y resérvala. Pica las lonchas de jamón finamente y fríelas en una s",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

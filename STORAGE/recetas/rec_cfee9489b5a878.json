@@ -1,0 +1,104 @@
+{
+  "id": "rec_cfee9489b5a878",
+  "slug": "jarullos",
+  "titulo": "Jarullos",
+  "resumen": "Retira el rabito y las pepitas a las ñoras, córtalas en cuatro trozos y dóralas en una tartera con aceite. Retíralas a un plato y resérvalas.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "ñoras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "bacalao seco desalado"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "comino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira el rabito y las pepitas a las ñoras, córtalas en cuatro trozos y dóralas en una tartera con aceite. Retíralas a un plato y resérvalas.",
+    "Pica la cebolla y añádela a la tartera. Pela las patatas, córtalas en rodajas gruesas e incorpóralas. Añade las hojas de laurel y rehoga el conjunto. Incorpora el bacalao desmigado. Vierte el agua y agrega la harina tamizada. Remueve bien y cocina todo durante 20 minutos.",
+    "Añade las ñoras, el pimentón y el comino y cocina durante 10 minutos más a fuego suave. Pon a punto de sal y espolvorea con perejil picado.",
+    "Sirve y adorna con unas hojas de perejil. ZORONGOLLO EXTREMEÑO Ingredientes (4 p.)",
+    "3 pimientos rojos (grandes) 1 tomate 1 cebolleta 2 huevos 2 dientes de ajo aceite de oliva virgen extra vinagre perejil sal",
+    "Elaboración",
+    "Pon los huevos a cocer en una cazuela con agua. Cuando lleven hirviendo 10 minutos, retíralos y refréscalos. Pélalos, pícalos en daditos y resérvalos. Lava los pimientos, colócalos en una bandeja de horno, riégalos con un chorro de aceite y sazónalos. Coloca el tomate sobre un trozo de papel de aluminio, riégalo con un chorrito de aceite y sazónalo. Envuelve el tomate con el papel de aluminio y colócalo al lado de los pimientos. Introduce la bandeja en el horno y asa los pimientos y el tomate a 190 ºC durante 35-40 minutos. Retira los pimientos, pélalos, córtalos en tiras y ponlos en un bol. Retira el papel de aluminio al tomate. Pélalo y colócalo en un vaso batidor. Añade 1 diente de ajo pelado y tritura con la batidora eléctrica. Vierte el puré sobre los pimientos. Agrega un buen chorro de aceite y un chorrito de vinagre. Añade el otro diente de ajo picadito y la cebolleta cortada en juliana fina. Sazona y mezcla bien. Deja que repose durante media hora. Reparte los huevos picados por encima y sirve. Espolvorea con un poco de perejil picado"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Jarullos",
+    "meta_description": "Retira el rabito y las pepitas a las ñoras, córtalas en cuatro trozos y dóralas en una tartera con aceite. Retíralas a un plato y resérvalas.",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,155 @@
+{
+    "key": "gestasai-default",
+    "name": "GestasAI Default",
+    "version": "1.0.0",
+    "description": "Tema por defecto de Marco CMS - Diseño moderno y espectacular enfocado en IA",
+    "author": "GestasAI Team",
+    "screenshot": "/themes/gestasai-default/screenshot.png",
+    "tags": [
+        "modern",
+        "ai",
+        "responsive",
+        "multipurpose"
+    ],
+    "features": {
+        "fullSiteEditing": true,
+        "blockEditor": true,
+        "customColors": true,
+        "customFonts": true,
+        "responsive": true,
+        "darkMode": false,
+        "rtl": false
+    },
+    "templates": [
+        {
+            "name": "home",
+            "title": "Inicio",
+            "description": "Plantilla para la página de inicio"
+        },
+        {
+            "name": "page",
+            "title": "Página",
+            "description": "Plantilla para páginas estáticas"
+        },
+        {
+            "name": "post",
+            "title": "Entrada",
+            "description": "Plantilla para entradas de blog"
+        },
+        {
+            "name": "archive",
+            "title": "Archivo",
+            "description": "Plantilla para listados"
+        }
+    ],
+    "sections": [
+        {
+            "name": "hero",
+            "title": "Hero",
+            "description": "Sección hero de altura completa con gradiente",
+            "category": "header"
+        },
+        {
+            "name": "features",
+            "title": "Características",
+            "description": "Grid de características con iconos",
+            "category": "content"
+        },
+        {
+            "name": "latest-news",
+            "title": "Últimas Noticias",
+            "description": "Grid de últimas noticias de IA",
+            "category": "content"
+        },
+        {
+            "name": "testimonials",
+            "title": "Testimonios",
+            "description": "Slider de testimonios",
+            "category": "content"
+        },
+        {
+            "name": "cta",
+            "title": "Llamada a la Acción",
+            "description": "Sección CTA con botón destacado",
+            "category": "conversion"
+        }
+    ],
+    "blocks": [
+        "heading",
+        "paragraph",
+        "image",
+        "button",
+        "container",
+        "grid",
+        "columns",
+        "spacer",
+        "divider"
+    ],
+    "customization": {
+        "colors": {
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#3B82F6"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#8B5CF6"
+                },
+                {
+                    "name": "Accent",
+                    "slug": "accent",
+                    "color": "#10B981"
+                },
+                {
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "name": "Text",
+                    "slug": "text",
+                    "color": "#1F2937"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "name": "Inter",
+                    "slug": "inter",
+                    "fontFamily": "'Inter', sans-serif"
+                },
+                {
+                    "name": "Outfit",
+                    "slug": "outfit",
+                    "fontFamily": "'Outfit', sans-serif"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "slug": "small",
+                    "size": "0.875rem"
+                },
+                {
+                    "name": "Medium",
+                    "slug": "medium",
+                    "size": "1rem"
+                },
+                {
+                    "name": "Large",
+                    "slug": "large",
+                    "size": "1.25rem"
+                },
+                {
+                    "name": "Extra Large",
+                    "slug": "extra-large",
+                    "size": "2.25rem"
+                }
+            ]
+        }
+    }
+}

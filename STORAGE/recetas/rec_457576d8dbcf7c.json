@@ -1,0 +1,108 @@
+{
+  "id": "rec_457576d8dbcf7c",
+  "slug": "merluza-con-panaderas-y-piquillos",
+  "titulo": "Merluza Con Panaderas Y Piquillos",
+  "resumen": "Para hacer el caldo, pon las pieles y las espinas de la merluza en una cazuela. Cubre con agua y agrega un manojo de perejil y una pizca de sal. Cuece todo durante 15-20 minutos. Cuela el caldo y resérvalo. Corta la merluza en 4 raciones y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "700",
+      "unidad": "g",
+      "nombre": "merluza"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 patatas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "espinas y pieles de merluza"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de guindilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer el caldo, pon las pieles y las espinas de la merluza en una cazuela. Cubre con agua y agrega un manojo de perejil y una pizca de sal. Cuece todo durante 15-20 minutos. Cuela el caldo y resérvalo. Corta la merluza en 4 raciones y resérvalas. Pela la cebolla, córtala en juliana y dórala en una sartén con aceite. Corta los pimientos verdes en juliana y añádelos. Pela las patatas, córtalas en rodajas (de 0,5 cm) y agrégalas a la sartén. Sazona y cocina hasta que se hagan las patatas. Escurre el exceso de aceite y resérvalo. Coloca las patatas con los pimientos y la cebolla en una fuente apta para horno, moja con un par de cacitos de caldo y hornea a 220 ºC durante 10 minutos. Pasado este tiempo, salpimienta los lomos de merluza y colócalos encima de las patatas. Vierte el resto del caldo de pescado por encima y hornéalos a 220 ºC durante 8 minutos. Coloca los pimientos del piquillo en una sartén con un chorrito del aceite reservado. Condimenta con una pizca de sal y otra de azúcar y cocínalos a fuego suave por los dos lados durante 10 minutos. Para hacer el refrito, lamina los dientes de ajo y dóralos en una sartén con un chorrito de aceite. Añade el trocito de guindilla y, cuando el ajo esté dorado, vierte una gotita de vinagre y un poco de perejil picado. Agrega el refrito a la bandeja de la merluza. Sirve la merluza con las patatas y los pimientos del piquillo. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Merluza Con Panaderas Y Piquillos",
+    "meta_description": "Para hacer el caldo, pon las pieles y las espinas de la merluza en una cazuela. Cubre con agua y agrega un manojo de perejil y una pizca de sal. Cuece todo durante 15-20 minutos. Cuela el caldo y resérvalo. Corta la merluza en 4 raciones y ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

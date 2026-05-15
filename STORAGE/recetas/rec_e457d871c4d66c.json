@@ -1,0 +1,83 @@
+{
+  "id": "rec_e457d871c4d66c",
+  "slug": "borraja-con-berberechos-y-jamon",
+  "titulo": "Borraja Con Berberechos Y Jamón",
+  "resumen": "Retira las hojas verdes y la parte inferior del tallo de las borrajas. Corta las borrajas en trozos de 3 centímetros y lávalas bien. Pon agua a calentar en una cazuela y, cuando empiece a hervir, agrega la borraja, sazónala y cuécela durant",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "900",
+      "unidad": "g",
+      "nombre": "borraja"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "berberechos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de jamón"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira las hojas verdes y la parte inferior del tallo de las borrajas. Corta las borrajas en trozos de 3 centímetros y lávalas bien. Pon agua a calentar en una cazuela y, cuando empiece a hervir, agrega la borraja, sazónala y cuécela durante 15 minutos. Extiende las lonchas de jamón sobre una bandeja de horno forrada con un trozo de papel de hornear. Cúbrelas con otro trozo de papel y hornéalas a 200 ºC durante 10-12 minutos. Retira, deja que se enfríen, pícalo y resérvalo. Enjuaga los berberechos y déjalos a remojo en un bol con agua. Pon a calentar el txakoli en una tartera, agrega los berberechos escurridos, tapa y espera a que se abran. Reserva los berberechos. Cuela el jugo que hayan soltado y resérvalo. Pela y pica los ajos. Rehógalos brevemente en una tartera y, antes de que se doren, añade la harina y rehógala. Agrega el caldo de los berberechos y un poco de perejil picado y dale un hervor. Escurre la borraja e incorpórala junto con un poco del caldo de cocción. Remueve bien, agrega los berberechos y espolvorea todo con el polvo de jamón."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Borraja Con Berberechos Y Jamón",
+    "meta_description": "Retira las hojas verdes y la parte inferior del tallo de las borrajas. Corta las borrajas en trozos de 3 centímetros y lávalas bien. Pon agua a calentar en una cazuela y, cuando empiece a hervir, agrega la borraja, sazónala y cuécela durant",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

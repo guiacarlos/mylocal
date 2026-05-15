@@ -1,0 +1,93 @@
+{
+  "id": "rec_97e948a26e9493",
+  "slug": "pastel-de-pescado-y-algas",
+  "titulo": "Pastel De Pescado Y Algas",
+  "resumen": "Pon las algas a remojo en un bol con agua. Limpia el perlón, retirando la cabeza y las espinas. Sácale los lomos y ponlos a cocer durante 5 minutos en una cazuela con agua, una pizca de sal y una rama de perejil. En un bol grande, pon los h",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "perlón grande"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "algas hijiki"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "nata líquida"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "cucharadas",
+      "nombre": "mayonesa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "mantequilla y pan rallado (para el molde)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las algas a remojo en un bol con agua. Limpia el perlón, retirando la cabeza y las espinas. Sácale los lomos y ponlos a cocer durante 5 minutos en una cazuela con agua, una pizca de sal y una rama de perejil. En un bol grande, pon los huevos, salpimiéntalos, bátelos bien y añade la salsa de tomate y la nata. Desmenuza el pescado e incorpóralo. Pela 8 langostinos, quítales las cabezas y trocéalos. Agrega al bol las colas de los 8 langostinos y las algas. Mezcla suavemente y pasa todo a un molde alargado, previamente untado con mantequilla y espolvoreado con pan rallado. Introdúcelo en el horno al baño maría a 180 ºC durante 40 minutos. Cuando esté frío, desmolda el pastel y córtalo en rodajas. Pela los otros 8 langostinos, dejándoles la parte final de la cola sin pelar. Córtalos por la mitad a lo largo y cuécelos brevemente en una cazuela con agua hirviendo. Sirve una rodaja de pastel en cada plato y acompáñala con una cucharada de mayonesa y un langostino. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pastel De Pescado Y Algas",
+    "meta_description": "Pon las algas a remojo en un bol con agua. Limpia el perlón, retirando la cabeza y las espinas. Sácale los lomos y ponlos a cocer durante 5 minutos en una cazuela con agua, una pizca de sal y una rama de perejil. En un bol grande, pon los h",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,105 @@
+{
+  "id": "rec_e22f02027ef8be",
+  "slug": "pimientos-rellenos-de-pollo-y-huevo",
+  "titulo": "Pimientos Rellenos De Pollo Y Huevo",
+  "resumen": "Pon agua a calentar en un cazo. Agrega los huevos y cuécelos durante 10 minutos (contados desde el momento en que empiece a hervir el agua). Retíralos, refréscalos, pélalos y pícalos. Resérvalos. Calienta una sartén con un chorrito de aceit",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pechuga de pollo (200 g)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en un cazo. Agrega los huevos y cuécelos durante 10 minutos (contados desde el momento en que empiece a hervir el agua). Retíralos, refréscalos, pélalos y pícalos. Resérvalos. Calienta una sartén con un chorrito de aceite. Corta la pechuga de pollo en dos filetes, salpimiéntalos y fríelos por los dos lados. Pícalos finamente y resérvalos. Pica finamente los ajos frescos y la cebolleta y ponlos a rehogar en una cazuela con un chorrito de aceite. Sazona. Agrega la harina y rehógala un poco. Vierte la leche poco a poco y remueve con ayuda de una varilla manual. Agrega los huevos y la pechuga y cocina la salsa bechamel a fuego suave durante 4-5 minutos aproximadamente. Pasa la farsa a un recipiente y deja que se enfríe. Rocía una placa de horno con aceite y coloca encima los pimientos del piquillo. Sazónalos. Hornéalos a 200 ºC durante 4-5 minutos. Retíralos y deja que se enfríen.",
+    "Rellena los pimientos con la farsa, pásalos por harina y huevo batido (con una pizca de sal) y fríelos por los dos lados en una sartén con aceite. Escúrrelos sobre un plato forrado con papel absorbente de cocina.",
+    "Calienta la salsa de tomate, sírvela en una fuente y coloca encima los pimientos. Decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pimientos Rellenos De Pollo Y Huevo",
+    "meta_description": "Pon agua a calentar en un cazo. Agrega los huevos y cuécelos durante 10 minutos (contados desde el momento en que empiece a hervir el agua). Retíralos, refréscalos, pélalos y pícalos. Resérvalos. Calienta una sartén con un chorrito de aceit",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

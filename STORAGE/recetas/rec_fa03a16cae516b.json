@@ -1,0 +1,78 @@
+{
+  "id": "rec_fa03a16cae516b",
+  "slug": "acelgas-con-refrito-de-jamon",
+  "titulo": "Acelgas Con Refrito De Jamón",
+  "resumen": "Limpia bien las acelgas, retira los hilos de las pencas y pica tanto las pencas como las hojas. Pon agua a calentar en una cazuela grande y, cuando empiece a hervir, agrega las acelgas y una pizca de sal. Pela las patatas, cáscalas e incorp",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "acelgas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo cocido"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia bien las acelgas, retira los hilos de las pencas y pica tanto las pencas como las hojas. Pon agua a calentar en una cazuela grande y, cuando empiece a hervir, agrega las acelgas y una pizca de sal. Pela las patatas, cáscalas e incorpóralas. Añade un chorrito de aceite y cuece todo durante 20-25 minutos. Escurre y pon todo en una fuente grande. Calienta un poco de aceite en una sartén. Pela los dientes de ajo, lamínalos y añádelos. Pica el jamón y agrégalo. Rehoga brevemente, separa la sartén del fuego y agrega el pimentón. Remueve bien y añade el refrito a la verdura. Pon a punto de sal y decora la fuente con el huevo cocido picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Acelgas Con Refrito De Jamón",
+    "meta_description": "Limpia bien las acelgas, retira los hilos de las pencas y pica tanto las pencas como las hojas. Pon agua a calentar en una cazuela grande y, cuando empiece a hervir, agrega las acelgas y una pizca de sal. Pela las patatas, cáscalas e incorp",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_b754fea0f298c5",
+  "slug": "arroz-verde-con-langostinos",
+  "titulo": "Arroz Verde Con Langostinos",
+  "resumen": "Pon el agua a hervir, incorpora las espinacas y escáldalas durante 30 segundos. Tritura todo con la batidora eléctrica y reserva el caldo. Rehoga el arroz en una cazuela con un chorrito de aceite, vierte todo el caldo, pon a punto de sal y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz redondo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1.200",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon el agua a hervir, incorpora las espinacas y escáldalas durante 30 segundos. Tritura todo con la batidora eléctrica y reserva el caldo. Rehoga el arroz en una cazuela con un chorrito de aceite, vierte todo el caldo, pon a punto de sal y cocínalo durante unos 20 minutos. Corta las cebolletas por la mitad y cocínalas a la plancha. Sazónalas y resérvalas. Retira la parte inferior del tallo de los espárragos y cocínalos en una sartén con una gotita de aceite y una pizca de sal. Resérvalos. Pela los langostinos y fríe las cabezas en una sartén con un chorrito de aceite. Aplástalas bien y cuela el jugo resultante. Añade la misma cantidad de aceite, mezcla y resérvalo. En el último momento, sazona los langostinos y cocínalos en la plancha con un chorrito de aceite (también puedes usar una sartén). Sirve el arroz (puedes utilizar un cortapastas para darle forma) y reparte encima los espárragos y los langostinos. Acompáñalo con las cebolletas y rocía todo con el jugo de los langostinos con aceite. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Verde Con Langostinos",
+    "meta_description": "Pon el agua a hervir, incorpora las espinacas y escáldalas durante 30 segundos. Tritura todo con la batidora eléctrica y reserva el caldo. Rehoga el arroz en una cazuela con un chorrito de aceite, vierte todo el caldo, pon a punto de sal y ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,112 @@
+{
+  "id": "rec_5bd4c2d71b3b6e",
+  "slug": "capon-asado-al-txakoli-con-patatas",
+  "titulo": "Capón Asado Al Txakoli Con Patatas",
+  "resumen": "Salpimienta el capón (echa una buena cantidad de sal en el interior) y colócalo en una bandeja de horno. Corta el limón por la mitad, riega el capón con el zumo e introduce el limón en su interior. Rocíalo con un chorrito de aceite y ásalo ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "capón"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cabeza de ajos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "375",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimienta negra molida"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "romero molido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "tomillo molido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Salpimienta el capón (echa una buena cantidad de sal en el interior) y colócalo en una bandeja de horno. Corta el limón por la mitad, riega el capón con el zumo e introduce el limón en su interior. Rocíalo con un chorrito de aceite y ásalo en el horno a 170 ºC durante 45 minutos.",
+    "Corta las cebolletas en trozos y espárcelos sobre el capón. Aplasta los dientes de ajo (con piel) y agrégalos. Riega todo con el txakoli, introduce de nuevo el capón en el horno y sigue asándolo a 170 ºC durante otros 45 minutos.",
+    "Mezcla en un bol una pizca de sal, la pimienta negra molida, el tomillo, el romero, el pimentón y un chorrito de aceite.",
+    "Extiende la mezcla en una fuente apta para el horno. Lava las patatas, córtalas por la mitad, hazles unos cortes superficiales en forma de rombo por la parte interior y colócalas apoyando esta parte sobre la fuente de las hierbas y especias. Rocíalas con un chorrito de aceite y hornéalas a 170 ºC durante 45 minutos. Pasado este tiempo, pela los ajos y colócalos en un vaso batidor. Agrega los trozos de cebolleta y el jugo de la placa. Tritura con la batidora eléctrica. Pasa la salsa a un cazo y caliéntala. (Si hiciera falta, puedes ligarla con un poco de harina de maíz refinada diluida en agua fría.)",
+    "Trincha el capón, sirve y acompáñalo con las patatas y la salsa. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Capón Asado Al Txakoli Con Patatas",
+    "meta_description": "Salpimienta el capón (echa una buena cantidad de sal en el interior) y colócalo en una bandeja de horno. Corta el limón por la mitad, riega el capón con el zumo e introduce el limón en su interior. Rocíalo con un chorrito de aceite y ásalo ",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,113 @@
+{
+  "id": "rec_0c4262026e56a9",
+  "slug": "pizza-con-huevo-frito-y-rucula",
+  "titulo": "Pizza Con Huevo Frito Y Rúcula",
+  "resumen": "Pela y pica los tomates y ponlos a escurrir en un colador. Reserva el caldo resultante. Pela y pica los dientes de ajo y rehógalos en una sartén con un chorrito de aceite. Antes de que cojan color, agrega los tomates picados. Añade una pizc",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso mozzarella"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "rúcula"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "tomates en rama"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "harina + 50 g para estirar"
+    },
+    {
+      "cantidad": "180",
+      "unidad": "ml",
+      "nombre": "líquido (caldo del tomate + agua)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "pizca",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica los tomates y ponlos a escurrir en un colador. Reserva el caldo resultante. Pela y pica los dientes de ajo y rehógalos en una sartén con un chorrito de aceite. Antes de que cojan color, agrega los tomates picados. Añade una pizca de sal y una pizca de azúcar y cocínalos durante unos 20 minutos. Pasa los tomates por el pasapurés y reserva la salsa. Para hacer la base de las pizzas, mezcla el caldo del tomate con agua (180 ml de líquido) y colócalo en un bol, añade 400 gramos de harina y la sal. Incorpora el aceite y amasa bien hasta obtener una masa homogénea y compacta. Deja que repose durante 15 minutos. Enharina una superficie plana con un poco de harina, divide la masa de pizza en 4 porciones y estíralas con un rodillo hasta dejarlas finitas (para que salgan todas iguales, puedes utilizar un plato como molde y cortar con un cuchillo el sobrante). Colócalas sobre una placa de horno cubierta con papel de hornear. Cúbrelas con la salsa de tomate, coloca encima unos trocitos de mozzarella y hornéalas a 200 ºC durante 12-15 minutos. Fríe los huevos y colócalos sobre las pizzas. Sazona. Lava bien la rúcula y colócala en un bol. Alíñala con aceite, vinagre y sal. Sirve las pizzas y acompáñalas con la rúcula. Espolvorea la yema del huevo con perejil picado o decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pizza Con Huevo Frito Y Rúcula",
+    "meta_description": "Pela y pica los tomates y ponlos a escurrir en un colador. Reserva el caldo resultante. Pela y pica los dientes de ajo y rehógalos en una sartén con un chorrito de aceite. Antes de que cojan color, agrega los tomates picados. Añade una pizc",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

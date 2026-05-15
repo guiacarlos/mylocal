@@ -1,0 +1,116 @@
+{
+  "id": "rec_0d0bacbc12a51d",
+  "slug": "salmon-con-salsa-de-berros-y-aros-de-cebolla",
+  "titulo": "Salmón Con Salsa De Berros Y Aros De Cebolla",
+  "resumen": "Retira la piel del salmón y córtalo en dados grandes. Salpimiéntalos y colócalos en un bol. Cúbrelos con el vermut y déjalos macerando durante 10 minutos aproximadamente. Retira el pescado y resérvalo. Pon el vermut a calentar y deja que re",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "700",
+      "unidad": "g",
+      "nombre": "salmón"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "vermut"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "huevo y pan rallado (para empanar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cristales de sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de berros:"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "berros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira la piel del salmón y córtalo en dados grandes. Salpimiéntalos y colócalos en un bol. Cúbrelos con el vermut y déjalos macerando durante 10 minutos aproximadamente. Retira el pescado y resérvalo. Pon el vermut a calentar y deja que reduzca hasta que espese. Retira la parte inferior (pelos) y la superior (la verde) del puerro y quítale la primera capa. Corta la parte blanca en daditos y ponlos a pochar en una cazuelita con un chorrito de aceite. Agrega los berros y mezcla bien. Añade la nata y cocina la salsa a fuego medio durante 10 minutos. Tritura, sazona y reserva la salsa.",
+    "Pela las cebolletas, córtalas en aros y suéltalos. Pásalos por el pan rallado, luego por el huevo batido y otra vez por el pan rallado. Fríelos en una sartén con aceite y escúrrelos sobre un plato cubierto con papel absorbente.",
+    "Calienta el wok, vierte un poco de aceite, agrega los dados de salmón y saltéalos brevemente.",
+    "Sirve la salsa de berros en el fondo de los platos, pon encima los dados de salmón y salpícalos con la reducción de vermut. Agrega los aros de cebolla y sazona todo con las escamas de sal. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmón Con Salsa De Berros Y Aros De Cebolla",
+    "meta_description": "Retira la piel del salmón y córtalo en dados grandes. Salpimiéntalos y colócalos en un bol. Cúbrelos con el vermut y déjalos macerando durante 10 minutos aproximadamente. Retira el pescado y resérvalo. Pon el vermut a calentar y deja que re",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,61 @@
+{
+  "id": "rec_1ea5d9721c325a",
+  "slug": "tostas-de-aguacate",
+  "titulo": "Tostas De Aguacate",
+  "resumen": "Tuesta las 4 rebanadas de pan. Pela los aguacates, córtalos en lonchas finas y cubre con ellas las tostas de pan. Pon 2 filetes de anchoa sobre cada una. Esparce por encima los germinados de cebolla y sirve. ALBÓNDIGAS DE PATATA Ingrediente",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "aguacates"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "anchoas en aceite"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "germinados de cebolla"
+    }
+  ],
+  "pasos": [
+    "Tuesta las 4 rebanadas de pan. Pela los aguacates, córtalos en lonchas finas y cubre con ellas las tostas de pan. Pon 2 filetes de anchoa sobre cada una. Esparce por encima los germinados de cebolla y sirve. ALBÓNDIGAS DE PATATA Ingredientes (4 p.)",
+    "2 patatas (500 g) 150 g de jamón serrano 2 yemas de huevo 3 cucharadas de queso rallado 200 ml de salsa de tomate harina, huevo batido y pan rallado (para rebozar) aceite de oliva virgen extra nuez moscada pimienta sal",
+    "Elaboración",
+    "Cuece las patatas durante 25 minutos en una cazuela con abundante agua y una pizca de sal. Pélalas y pásalas por el pasapurés. Agrega el jamón bien picado, las yemas de huevo, el queso rallado, una pizca de nuez moscada, una pizca de sal y otra de pimienta. Mezcla bien, coge pequeñas porciones y forma unas bolitas. Pásalas por harina, huevo y pan rallado y fríelas en una sartén o cazuelita con abundante aceite. Escurre y sirve. Acompáñalas con la salsa de tomate caliente."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tostas De Aguacate",
+    "meta_description": "Tuesta las 4 rebanadas de pan. Pela los aguacates, córtalos en lonchas finas y cubre con ellas las tostas de pan. Pon 2 filetes de anchoa sobre cada una. Esparce por encima los germinados de cebolla y sirve. ALBÓNDIGAS DE PATATA Ingrediente",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

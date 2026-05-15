@@ -1,0 +1,83 @@
+{
+  "id": "rec_f9cc0d8240a3bb",
+  "slug": "raya-con-salsa-de-nueces",
+  "titulo": "Raya Con Salsa De Nueces",
+  "resumen": "Pon la nata a calentar en una cazuela. Agrega las nueces majadas y el diente de ajo pelado bien picadito. Deja reducir hasta que espese y coja el sabor de las nueces. Trocea la raya, salpimiéntala y colócala en una placa de horno untada con",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "aletas de raya"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "nueces (peladas)"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon la nata a calentar en una cazuela. Agrega las nueces majadas y el diente de ajo pelado bien picadito. Deja reducir hasta que espese y coja el sabor de las nueces. Trocea la raya, salpimiéntala y colócala en una placa de horno untada con aceite. Riégala con un chorrito de aceite y hornéala a 220 ºC durante 8 minutos. Retira la parte inferior y superior del puerro. Córtalo en juliana fina y fríelo en una sartén con aceite. Escúrrelo sobre un plato cubierto con papel absorbente. Sazona. Sirve la raya, salséala y acompáñala con el puerro. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Raya Con Salsa De Nueces",
+    "meta_description": "Pon la nata a calentar en una cazuela. Agrega las nueces majadas y el diente de ajo pelado bien picadito. Deja reducir hasta que espese y coja el sabor de las nueces. Trocea la raya, salpimiéntala y colócala en una placa de horno untada con",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

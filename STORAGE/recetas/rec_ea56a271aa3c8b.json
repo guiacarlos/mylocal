@@ -1,0 +1,83 @@
+{
+  "id": "rec_ea56a271aa3c8b",
+  "slug": "gelatina-de-chocolate",
+  "titulo": "Gelatina De Chocolate",
+  "resumen": "Lava las fresas, retírales los tallos y pícalas en daditos pequeños (del tamaño de un garbanzo). Ponlas en un bol, vierte el ron y 25 gramos de azúcar. Mezcla bien y deja que maceren un ratito. Pon agua fría en un bol, agrega las hojas de g",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "180",
+      "unidad": "g",
+      "nombre": "chocolate negro"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "hojas",
+      "nombre": "gelatina (8 g)"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "ron"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cigarrillos de barquillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Lava las fresas, retírales los tallos y pícalas en daditos pequeños (del tamaño de un garbanzo). Ponlas en un bol, vierte el ron y 25 gramos de azúcar. Mezcla bien y deja que maceren un ratito. Pon agua fría en un bol, agrega las hojas de gelatina y espera a que se hidraten. Vierte la leche en una cazuela y añade los otros 25 gramos de azúcar y la mantequilla. Pon la cazuela al fuego y calienta sin dejar de remover hasta que empiece a hervir y todos los ingredientes queden bien integrados. Apaga el fuego. Escurre la gelatina y agrégala a la mezcla de leche, azúcar y mantequilla. Disuélvela bien. Pica el chocolate y colócalo en un bol. Vierte la mezcla anterior sobre el chocolate y remueve bien con una varilla hasta que el chocolate se disuelva. Déjalo templar. Reparte la mezcla en 4 vasitos y deja que reposen en el frigorífico hasta que se solidifiquen (2-3 horas aproximadamente). Retira los vasitos del frigorífico y reparte los daditos de fresa por encima. Coloca en cada uno un cigarrillo de barquillo y decóralos con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gelatina De Chocolate",
+    "meta_description": "Lava las fresas, retírales los tallos y pícalas en daditos pequeños (del tamaño de un garbanzo). Ponlas en un bol, vierte el ron y 25 gramos de azúcar. Mezcla bien y deja que maceren un ratito. Pon agua fría en un bol, agrega las hojas de g",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

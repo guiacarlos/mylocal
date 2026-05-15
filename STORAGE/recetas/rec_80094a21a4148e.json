@@ -1,0 +1,138 @@
+{
+  "id": "rec_80094a21a4148e",
+  "slug": "albondigas-en-salsa-de-manzana-y-arroz-integral",
+  "titulo": "Albóndigas En Salsa De Manzana Y Arroz Integral",
+  "resumen": "Para la salsa, pica la cebolla y ponla a pochar en una cazuela con un chorrito de aceite. Pela las manzanas, retírales el corazón, trocéalas y añádelas a la cazuela junto con la rama de vainilla. Rehoga un poco. Agrega la harina, rehógala y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "arroz integral"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "carne de ternera picada"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "carne de cerdo picada"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "miga de pan"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "menta picada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de manzana:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "manzanas reinetas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trocito de rama de vainilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, pica la cebolla y ponla a pochar en una cazuela con un chorrito de aceite. Pela las manzanas, retírales el corazón, trocéalas y añádelas a la cazuela junto con la rama de vainilla. Rehoga un poco. Agrega la harina, rehógala y vierte el caldo de pollo. Sazona. Cocina a fuego suave durante 15- 20 minutos. Retira la vainilla, pasa la salsa por el pasapurés y resérvala en una cazuela. Para hacer las albóndigas, remoja la miga de pan en leche y escúrrela. Colócala en un bol, añade la carne picada, el huevo, una pizca de sal, una pizca de pimienta y un poco de menta picada. Mezcla bien y forma las albóndigas. Pásalas por harina y fríelas en una sartén con aceite. Pásalas a la salsa y dales un breve hervor. Espolvorea con perejil picado. Para la guarnición, rehoga el arroz en una cazuela con un chorrito de aceite. Agrega el agua (lo que indique el paquete), pon a punto de sal y cocínalo durante 20 minutos. Sirve las albóndigas y acompáñalas con el arroz. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Albóndigas En Salsa De Manzana Y Arroz Integral",
+    "meta_description": "Para la salsa, pica la cebolla y ponla a pochar en una cazuela con un chorrito de aceite. Pela las manzanas, retírales el corazón, trocéalas y añádelas a la cazuela junto con la rama de vainilla. Rehoga un poco. Agrega la harina, rehógala y",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

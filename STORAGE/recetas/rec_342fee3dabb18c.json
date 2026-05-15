@@ -1,0 +1,103 @@
+{
+  "id": "rec_342fee3dabb18c",
+  "slug": "tortitas-de-manzana",
+  "titulo": "Tortitas De Manzana",
+  "resumen": "Lava las manzanas, descorazónalas (sin pelarlas) y córtalas primero en rodajas finas y después por la mitad.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "manzanas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yema"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yogur natural"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "45",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "mermelada de albaricoque"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Lava las manzanas, descorazónalas (sin pelarlas) y córtalas primero en rodajas finas y después por la mitad.",
+    "Pon a calentar en un cazo un vaso de agua con la vaina de vainilla abierta y 2 cucharadas de azúcar. Agrega las láminas de manzana, tapa y cuece durante 2-3 minutos. Retíralas de la cazuela y resérvalas. Reserva también el jugo que hayan soltado.",
+    "Tritura en un vaso batidor el huevo, la leche, la harina, una cucharada de azúcar, 30 gramos de mantequilla fundida y una pizca de sal. Calienta una sartén, úntala con un poco con mantequilla y cuaja 4 tortitas.",
+    "Unta una placa de horno con el resto de la mantequilla y coloca encima las tortitas. Espolvoréalas con un poco de azúcar y reparte encima las manzanas dándoles forma de flor.",
+    "Bate la yema de huevo con un poco del jugo que soltaron las manzanas. Pincela las manzanas con la mezcla. Espolvoréalas con otro poco de azúcar y hornéalas a 200 ºC durante 20 minutos.",
+    "Mezcla el yogur con una cucharada de mermelada y un poco de menta picada. Decora 4 platos con la mezcla y pon una tortilla de manzana en cada uno. Pinta las manzanas con el resto de la mermelada. Adorna los platos con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tortitas De Manzana",
+    "meta_description": "Lava las manzanas, descorazónalas (sin pelarlas) y córtalas primero en rodajas finas y después por la mitad.",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

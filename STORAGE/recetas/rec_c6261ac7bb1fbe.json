@@ -1,0 +1,118 @@
+{
+  "id": "rec_c6261ac7bb1fbe",
+  "slug": "ensalada-de-arroz-con-pavo-y-cacahuetes",
+  "titulo": "Ensalada De Arroz Con Pavo Y Cacahuetes",
+  "resumen": "Pon agua a calentar en un cazo, sazona y añade el arroz. Cuécelo el tiempo que indique el paquete. Refresca, escurre y deja que se enfríe en un bol. Pon en un bol el zumo de lima. Agrega un buen chorro de aceite, la mostaza y una pizca de s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz basmati"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "pechuga de pavo cocida en lonchas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "cacahuetes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "rabanitos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "habas (repeladas)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de 1 lima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en un cazo, sazona y añade el arroz. Cuécelo el tiempo que indique el paquete. Refresca, escurre y deja que se enfríe en un bol. Pon en un bol el zumo de lima. Agrega un buen chorro de aceite, la mostaza y una pizca de sal. Añade perejil picado y mezcla bien. Reserva. Lava los rabanitos y córtalos en láminas. Pela las zanahorias y rállalas. Pela los cacahuetes. Corta las lonchas de pavo en dados. Corta los espárragos en cilindros y saltéalos junto con las habas en una sartén con un chorrito de aceite. Agrega al bol del arroz las zanahorias, los rabanitos, los cacahuetes, el pavo, los espárragos y las habas. Sazona. Pica el cebollino e incorpóralo. Añade la vinagreta, mezcla bien y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Arroz Con Pavo Y Cacahuetes",
+    "meta_description": "Pon agua a calentar en un cazo, sazona y añade el arroz. Cuécelo el tiempo que indique el paquete. Refresca, escurre y deja que se enfríe en un bol. Pon en un bol el zumo de lima. Agrega un buen chorro de aceite, la mostaza y una pizca de s",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

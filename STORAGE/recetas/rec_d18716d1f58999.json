@@ -1,0 +1,128 @@
+{
+  "id": "rec_d18716d1f58999",
+  "slug": "zarzuela-de-pescados-y-mariscos",
+  "titulo": "Zarzuela De Pescados Y Mariscos",
+  "resumen": "Limpia los salmonetes y trocéalos. Trocea también la pescadilla, corta el calamar en tiras y el rape en rodajas. Sazona. Corta los ajos y la cebolleta en daditos y ponlos a rehogar en una cazuela con un chorrito de aceite. Añade el calamar ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "rape limpio"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "salmonetes"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "pescadilla"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "colas de langostinos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calamar"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "carabineros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "unas hebras de azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia los salmonetes y trocéalos. Trocea también la pescadilla, corta el calamar en tiras y el rape en rodajas. Sazona. Corta los ajos y la cebolleta en daditos y ponlos a rehogar en una cazuela con un chorrito de aceite. Añade el calamar y el rape y saltéalos. Incorpora la harina y rehógala un poco. Agrega los salmonetes, las colas de langostinos y los carabineros pelados. Incorpora las almejas y la pescadilla. Rehoga.",
+    "Una vez que esté todo bien rehogado, agrega la salsa de tomate, el vino, el agua, el azafrán y un poco de perejil picado.",
+    "Cocina todo a fuego suave durante 6-8 minutos removiendo la cazuela de vez en cuando (si queda seco, puedes añadir un poco más de agua). Sirve. POSTRES CANUTILLOS CON YOGUR Y FRUTAS Ingredientes (4 p.)",
+    "1 lámina de hojaldre 1 yogur natural 1 plátano 1 kiwi 1 melocotón 1 huevo hojas de menta (para decorar)",
+    "Elaboración",
+    "Para hacer los canutillos, estira la lámina de hojaldre con ayuda de un rodillo y corta 8 tiras de unos 4-5 centímetros de ancho. Envuelve cada molde de canutillo con una tira de hojaldre con el fin de darles la forma de cono. Bate un huevo y pinta el hojaldre con él para darle brillo. Coloca un papel de hornear en una bandeja apta para el horno y pon encima los moldes forrados y pintados. Hornea a 200 ºC durante 10-12 minutos. Retira del horno y deja enfriar. Desmolda los canutillos y coloca un poco de yogur en el fondo de cada uno. Añade las frutas picaditas y termina de rellenar el canutillo con yogur. Por último, coloca unas frutas encima del yogur para que queden a la vista. Decora con una hojita de menta y sirve los canutillos metidos en vasos de chupito o copas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Zarzuela De Pescados Y Mariscos",
+    "meta_description": "Limpia los salmonetes y trocéalos. Trocea también la pescadilla, corta el calamar en tiras y el rape en rodajas. Sazona. Corta los ajos y la cebolleta en daditos y ponlos a rehogar en una cazuela con un chorrito de aceite. Añade el calamar ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

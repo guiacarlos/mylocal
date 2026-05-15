@@ -1,0 +1,118 @@
+{
+  "id": "rec_ee0cab54a30539",
+  "slug": "fideos-con-costilla-y-mayonesa-de-ajo-negro",
+  "titulo": "Fideos Con Costilla Y Mayonesa De Ajo Negro",
+  "resumen": "Corta la costilla en trozos y ponla a cocer en la olla rápida con agua y una pizca de sal. Pela 2 dientes de ajo, aplástalos con el cuchillo y agrégalos. Coloca la tapa y cuece la costilla durante 6-8 minutos. Retira la costilla y resérvala",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "fideos gruesos"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "costilla de cerdo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo negro:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo negro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta la costilla en trozos y ponla a cocer en la olla rápida con agua y una pizca de sal. Pela 2 dientes de ajo, aplástalos con el cuchillo y agrégalos. Coloca la tapa y cuece la costilla durante 6-8 minutos. Retira la costilla y resérvala. Pela y aplasta otros 2 dientes de ajo y ponlos en una cazuela con agua y una pizca de sal. Corta el tallo de la cebolleta, trocéalo y agrégalo. Sazona y cuece los ingredientes durante 10 minutos. Cuela el caldo y resérvalo. Pela los otros dos dientes de ajo, la cebolleta y la zanahoria. Corta en daditos los ajos, la cebolleta, el pimiento y la zanahoria y pon todo a pochar en una tartera con un chorrito de aceite. Cuando la verdura esté pochada, agrega la costilla para que se dore un poco. Añade el orégano y mezcla. Tuesta los fideos en una sartén sin nada de aceite y agrégalos a la tartera. Cubre con el caldo y pon a punto de sal. Cocina durante 7-8 minutos. Para la mayonesa, pon el aceite en un vaso batidor, agrega el huevo, los ajos negros, el vinagre y una pizca de sal. Tritura con la batidora eléctrica hasta que ligue. Sirve los fideos con la costilla y acompáñalos con la mayonesa de ajo negro. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Fideos Con Costilla Y Mayonesa De Ajo Negro",
+    "meta_description": "Corta la costilla en trozos y ponla a cocer en la olla rápida con agua y una pizca de sal. Pela 2 dientes de ajo, aplástalos con el cuchillo y agrégalos. Coloca la tapa y cuece la costilla durante 6-8 minutos. Retira la costilla y resérvala",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

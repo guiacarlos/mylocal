@@ -1,0 +1,138 @@
+{
+  "id": "rec_9f1a2e65f680bf",
+  "slug": "espaldilla-con-salsa-espanola-y-patatas",
+  "titulo": "Espaldilla Con Salsa Española Y Patatas",
+  "resumen": "Para preparar la salsa, pela los dientes de ajo, las cebollas y las zanahorias, pícalos y ponlos a pochar en una sartén con un chorrito de aceite. Pica el pimiento verde y agrégalo. Sazona y pocha todo bien. Pica la carne de contra en troci",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "filetes de espaldilla de ternera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa española:"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "carne de contra de ternera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de carne"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para preparar la salsa, pela los dientes de ajo, las cebollas y las zanahorias, pícalos y ponlos a pochar en una sartén con un chorrito de aceite. Pica el pimiento verde y agrégalo. Sazona y pocha todo bien. Pica la carne de contra en trocitos pequeños e incorpóralos a la verdura. Rehoga la carne con las verduras y agrega la harina. Cocínala bien. Añade la salsa de tomate, el vino blanco y el caldo de carne. Deja reducir durante 20-25 minutos y pasa la salsa por el pasapurés. Resérvala caliente. Pela las patatas, córtalas en dados e introdúcelas en un bol con agua. Escúrrelas bien y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente. Sazónalas y espolvoréalas con perejil picado. Pica 2 dientes de ajo finamente y mézclalos con el perejil picado y el pan rallado. Salpimienta los filetes, empánalos y fríelos brevemente en una sartén con aceite. Sirve la carne y acompáñala con la salsa española y las patatas. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Espaldilla Con Salsa Española Y Patatas",
+    "meta_description": "Para preparar la salsa, pela los dientes de ajo, las cebollas y las zanahorias, pícalos y ponlos a pochar en una sartén con un chorrito de aceite. Pica el pimiento verde y agrégalo. Sazona y pocha todo bien. Pica la carne de contra en troci",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

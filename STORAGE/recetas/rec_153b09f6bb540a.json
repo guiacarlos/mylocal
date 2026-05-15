@@ -1,0 +1,78 @@
+{
+  "id": "rec_153b09f6bb540a",
+  "slug": "panacota-con-fresas-y-fruta-de-la-pasion",
+  "titulo": "Panacota Con Fresas Y Fruta De La Pasión",
+  "resumen": "Pon las hojas de gelatina en un bol, cúbrelas con agua fría y espera a que se ablanden. Pon a calentar la nata y la leche en un cazo. Abre la vaina de vainilla, raspa el interior y añádelo junto con la vaina. Agrega también 3 cucharadas de ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "375",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cuchadas de azúcar glas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "fruta de la pasión"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon las hojas de gelatina en un bol, cúbrelas con agua fría y espera a que se ablanden. Pon a calentar la nata y la leche en un cazo. Abre la vaina de vainilla, raspa el interior y añádelo junto con la vaina. Agrega también 3 cucharadas de azúcar glas (reserva 1 cucharada). Mezcla bien y, cuando empiece a burbujear, apágalo. Escurre bien la gelatina y añádela a la mezcla de leche, nata y azúcar glas. Remueve hasta que se disuelva. Retira la vaina de vainilla y reparte la mezcla en 4 copas. Deja templar e introduce en el frigorífico hasta que se enfríen. Lava las fresas, retírales el pedúnculo y pícalas en trocitos. Abre la fruta de la pasión y saca la pulpa. Coloca las frutas en un bol, añade el azúcar glas reservado anteriormente y mezcla bien. Retira las copas del frigorífico, pon la fruta encima de la panacota y decora con unas hojitas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Panacota Con Fresas Y Fruta De La Pasión",
+    "meta_description": "Pon las hojas de gelatina en un bol, cúbrelas con agua fría y espera a que se ablanden. Pon a calentar la nata y la leche en un cazo. Abre la vaina de vainilla, raspa el interior y añádelo junto con la vaina. Agrega también 3 cucharadas de ",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

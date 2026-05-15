@@ -1,0 +1,103 @@
+{
+  "id": "rec_c9f26c3b2e31ba",
+  "slug": "huevo-frito-con-polenta-de-champinones-al-curry",
+  "titulo": "Huevo Frito Con Polenta De Champiñones Al Curry",
+  "resumen": "Pela 2 dientes de ajo y la cebolleta, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Cuando se doren un poco, escurre los champiñones, pícalos y añádelos. Sazona, agrega el curry y rehógalos un poco. Pon el agua a hervi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "polenta"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "champiñones (en conserva)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "pan rallado (para rebozar)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela 2 dientes de ajo y la cebolleta, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Cuando se doren un poco, escurre los champiñones, pícalos y añádelos. Sazona, agrega el curry y rehógalos un poco. Pon el agua a hervir, añade la polenta en forma de lluvia y mezcla bien. Añade los champiñones rehogados y cocina la polenta durante unos minutos (los que indique el paquete) sin dejar de remover. Agrega un poco de perejil picado, pon a punto de sal y mezcla bien. Extiende la polenta en una fuente y deja que se enfríe. Mezcla el pan rallado con las semillas de sésamo, corta la masa de polenta en 4 u 8 trozos y pásalos por la mezcla. Fríelos en una sartén con aceite y escúrrelos sobre un plato forrado con papel absorbente. Lava el tomate, pélalo y córtalo en gajos. Añádele un diente de ajo picadito y alíñalo con aceite y sal. Aplasta los otros 4 dientes de ajo con piel. Fríe los huevos de uno en uno con 1 diente de ajo. Sálalos. Sirve los huevos fritos con la polenta de champiñones al curry y acompáñalos con el tomate. Decora con los ajos fritos y perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevo Frito Con Polenta De Champiñones Al Curry",
+    "meta_description": "Pela 2 dientes de ajo y la cebolleta, pícalos y ponlos a pochar en una cazuela con un chorrito de aceite. Cuando se doren un poco, escurre los champiñones, pícalos y añádelos. Sazona, agrega el curry y rehógalos un poco. Pon el agua a hervi",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,133 @@
+{
+  "id": "rec_2b036bb67c7d4c",
+  "slug": "urta-a-la-rotena",
+  "titulo": "Urta A La Roteña",
+  "resumen": "Retira la cabeza de la urta y, con ayuda de un cuchillo, separa las espinas de los lomos. Reserva los lomos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "urta (de 2 kg)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "vino de Jerez seco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el caldo:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "la cabeza y las espinas de la urta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "apio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira la cabeza de la urta y, con ayuda de un cuchillo, separa las espinas de los lomos. Reserva los lomos.",
+    "Para el caldo, introduce en una cazuela la cabeza y las espinas de la urta, la zanahoria pelada y troceada, la cebolla y el apio troceados, el laurel y una pizca de sal, cubre con agua y cuece a fuego medio durante 20 minutos. Cuela y reserva el caldo.",
+    "Pela los ajos y córtalos en láminas. Corta en juliana las cebollas y los pimientos y pon todo a pochar en una sartén con un chorrito de aceite. Añade la hoja de laurel y sazona.",
+    "Haz un corte en cruz por la parte inferior de los tomates. Pon a calentar una cazuela con agua. Cuando empiece a hervir, añade los tomates y escáldalos durante un par de minutos. Pélalos, pícalos y añádelos a la fritada. Agrega el vino y un vaso de caldo. Cocina todo a fuego medio durante 12-15 minutos.",
+    "Cubre una placa de horno con la roteña (el sofrito de ajo, cebolla, pimiento, tomate, vino y caldo). Salpimienta los lomos de urta y colócalos encima del sofrito dejando la parte de la piel hacia abajo. Rocía con aceite y cocina a 220 ºC durante 15 minutos.",
+    "Sirve en el fondo del plato la roteña y, sobre ella, la urta. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Urta A La Roteña",
+    "meta_description": "Retira la cabeza de la urta y, con ayuda de un cuchillo, separa las espinas de los lomos. Reserva los lomos.",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

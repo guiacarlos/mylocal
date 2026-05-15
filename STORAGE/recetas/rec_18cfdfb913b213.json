@@ -1,0 +1,108 @@
+{
+  "id": "rec_18cfdfb913b213",
+  "slug": "hamburguesas-rellenas",
+  "titulo": "Hamburguesas Rellenas",
+  "resumen": "Pela los ajos y la cebolleta, córtalos en dados y rehógalos en una cazuela con un chorro de aceite. Cuando se hayan pochado un poco, agrega los tomates cortados en 4. Añade una pizca de sal, una de azúcar y otra de orégano seco. Cocina dura",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "carne picada"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates secos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "uindillas en vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "mozzarella"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano seco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos y la cebolleta, córtalos en dados y rehógalos en una cazuela con un chorro de aceite. Cuando se hayan pochado un poco, agrega los tomates cortados en 4. Añade una pizca de sal, una de azúcar y otra de orégano seco. Cocina durante 30 minutos. Pasa por el pasapurés y reserva la salsa. Pon los tomates secos en un bol, cúbrelos con agua y déjalos a remojo hasta que se ablanden (1 hora aproximadamente). Retíralos y sécalos. Córtalos en dados pequeños y colócalos en un bol. Añade la carne al bol. Corta el queso en dados y añádelos. Corta en daditos las aceitunas y las guindillas e incorpóralas al bol. Salpimienta y mezcla bien. Amasa la carne con el resto de los ingredientes. Coge pequeñas porciones de carne y dales forma de hamburguesa. Cocínalas a la plancha. Sirve las hamburguesas con la salsa de tomate y adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hamburguesas Rellenas",
+    "meta_description": "Pela los ajos y la cebolleta, córtalos en dados y rehógalos en una cazuela con un chorro de aceite. Cuando se hayan pochado un poco, agrega los tomates cortados en 4. Añade una pizca de sal, una de azúcar y otra de orégano seco. Cocina dura",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

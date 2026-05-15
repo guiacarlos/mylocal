@@ -1,0 +1,93 @@
+{
+  "id": "rec_6723ff0652a234",
+  "slug": "crepes-de-queso-fresco-con-naranja-y-nueces",
+  "titulo": "Crepes De Queso Fresco Con Naranja Y Nueces",
+  "resumen": "Para hacer la crema de crepes, casca los 3 huevos en un vaso batidor. Añade la harina, una pizca de azúcar, la leche y un chorrito de aceite. Bate con la batidora eléctrica hasta obtener una crema sin grumos. Reserva. Pela la naranja y sáca",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "naranja"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "l",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "nuez de mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Para hacer la crema de crepes, casca los 3 huevos en un vaso batidor. Añade la harina, una pizca de azúcar, la leche y un chorrito de aceite. Bate con la batidora eléctrica hasta obtener una crema sin grumos. Reserva. Pela la naranja y sácale los gajos. Resérvalos. Pon a derretir la mantequilla en una sartén. Añade un cacito de crema, extiéndela bien, deja que se cuaje y repite la operación por el otro lado. (El primer crepe siempre se desecha.) Haz 8 crepes de esta manera. Coloca encima de cada crepe un poco de queso y un par de gajos de naranja. Envuélvelos, ciérralos bien y fríelos por los dos lados en una sartén con aceite. Retíralos a un plato cubierto con papel absorbente para eliminar el exceso de aceite. Sirve los crepes en un plato y acompaña con unas nueces peladas. Salsea con unos hilos de miel y decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes De Queso Fresco Con Naranja Y Nueces",
+    "meta_description": "Para hacer la crema de crepes, casca los 3 huevos en un vaso batidor. Añade la harina, una pizca de azúcar, la leche y un chorrito de aceite. Bate con la batidora eléctrica hasta obtener una crema sin grumos. Reserva. Pela la naranja y sáca",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

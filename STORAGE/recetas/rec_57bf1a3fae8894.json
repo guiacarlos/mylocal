@@ -1,0 +1,103 @@
+{
+  "id": "rec_57bf1a3fae8894",
+  "slug": "sardinas-a-mi-manera",
+  "titulo": "Sardinas A Mi Manera",
+  "resumen": "Limpia las sardinas y saca los lomos. Pon una capa de sal gruesa en un recipiente hondo. Coloca encima los filetes de sardina (con la piel hacia arriba) y cúbrelos con más sal. Déjalos macerar durante 1 hora. Retira la sal de los filetes, e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "sardinas"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pan de chapata"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "hojas de rúcula"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal gruesa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta (pequeña)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia las sardinas y saca los lomos. Pon una capa de sal gruesa en un recipiente hondo. Coloca encima los filetes de sardina (con la piel hacia arriba) y cúbrelos con más sal. Déjalos macerar durante 1 hora. Retira la sal de los filetes, enjuágalos, sécalos y pásalos a un recipiente hondo. Corta en daditos muy pequeños los pimientos (el rojo pelado) y ponlos en un bol. Pica finamente la cebolleta y añádela. Agrega aceite, vinagre y sal, mezcla bien y adereza las sardinas con la vinagreta. Corta 12 rebanadas de pan y tuéstalas en el horno. Pela el diente de ajo y unta con él las rebanadas de pan. Corta los tomates en 4 trozos y unta con ellos las rebanadas de pan. Pon encima de cada rebanada unas hojas de rúcula y 2 lomos de sardina con vinagreta. Sirve. Decora el plato con más hojas de rúcula."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sardinas A Mi Manera",
+    "meta_description": "Limpia las sardinas y saca los lomos. Pon una capa de sal gruesa en un recipiente hondo. Coloca encima los filetes de sardina (con la piel hacia arriba) y cúbrelos con más sal. Déjalos macerar durante 1 hora. Retira la sal de los filetes, e",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

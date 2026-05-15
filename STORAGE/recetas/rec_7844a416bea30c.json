@@ -1,0 +1,108 @@
+{
+  "id": "rec_7844a416bea30c",
+  "slug": "bacalao-ajoarriero",
+  "titulo": "Bacalao Ajoarriero",
+  "resumen": "Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega las tajadas de bacalao y dales un breve hervor. Retira el bacalao, deja que se temple y sepáralo en lascas. Cuece los huevos durante 10 minutos en una cazuela con agua y un",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tajadas de bacalao desalado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos choriceros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos del piquillo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega las tajadas de bacalao y dales un breve hervor. Retira el bacalao, deja que se temple y sepáralo en lascas. Cuece los huevos durante 10 minutos en una cazuela con agua y una pizca de sal. Pélalos y córtalos en 4 gajos. Cuece los pimientos choriceros durante 6-8 minutos. Ábrelos, retírales la carne y resérvala. Corta los pimientos del piquillo en tiras finas y resérvalas. Pela los ajos, la cebolla y el pimiento rojo y córtalos en dados. Corta también en dados los pimientos verdes (sin pelar). Pon todo a pochar en una cazuela con un chorrito de aceite. Pela la patata, córtala en lasquitas y agrégala a la cazuela. Sazona. Rehoga todo bien. Añade la guindilla, la carne de los pimientos choriceros y la salsa de tomate. Mezcla. Agrega el bacalao. Mezcla bien y cocina todo durante 5 minutos para que se mezclen los sabores. Sirve y adorna con los gajos de huevo y las tiras de pimiento del piquillo. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Ajoarriero",
+    "meta_description": "Pon agua a calentar en una cazuela. Cuando empiece a hervir, agrega las tajadas de bacalao y dales un breve hervor. Retira el bacalao, deja que se temple y sepáralo en lascas. Cuece los huevos durante 10 minutos en una cazuela con agua y un",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

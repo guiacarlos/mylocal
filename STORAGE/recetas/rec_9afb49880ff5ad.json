@@ -1,0 +1,96 @@
+{
+  "id": "rec_9afb49880ff5ad",
+  "slug": "espaguetis-con-pimientos-asados-y-queso-de-cabra",
+  "titulo": "Espaguetis Con Pimientos Asados Y Queso De Cabra",
+  "resumen": "Coloca los pimientos sobre una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 180 ºC durante 35 minutos. Déjalos templar, pélalos y córtalos en tiras. Reserva.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "espaguetis"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones rojos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos morrones amarillos"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "rulo de queso de cabra"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de guindilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Coloca los pimientos sobre una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 180 ºC durante 35 minutos. Déjalos templar, pélalos y córtalos en tiras. Reserva.",
+    "Pon abundante agua en una cazuela y ponla a calentar. Cuando empiece a hervir, sazona y añade los espaguetis. Cuécelos durante 6 minutos. Escúrrelos y resérvalos.",
+    "Pela los dientes de ajo, lamínalos y colócalos en una tartera con aceite. Agrega la guindilla y, cuando se doren un poco, añade los pimientos. Sazona, mezcla bien e incorpora los espaguetis. Saltéalos brevemente y repártelos en 4 platos.",
+    "Corta 4 lonchas (de 1 cm) de queso y pon una en cada plato. Espolvoréalas con un poco de azúcar y dóralas con el soplete. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Espaguetis Con Pimientos Asados Y Queso De Cabra",
+    "meta_description": "Coloca los pimientos sobre una placa de horno, riégalos con un chorrito de aceite y sálalos. Ásalos a 180 ºC durante 35 minutos. Déjalos templar, pélalos y córtalos en tiras. Reserva.",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

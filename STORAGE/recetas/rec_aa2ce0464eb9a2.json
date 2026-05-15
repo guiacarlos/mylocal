@@ -1,0 +1,78 @@
+{
+  "id": "rec_aa2ce0464eb9a2",
+  "slug": "anchoas-al-limon",
+  "titulo": "Anchoas Al Limón",
+  "resumen": "Corta 12 rebanadas de pan y tuéstalas en el horno. Pela el diente de ajo y unta con él las tostadas. Retira las cabezas y las vísceras de las anchoas. Ábrelas como un libro y elimínales las espinas centrales. Vierte un chorrito de aceite en",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "anchoas frescas (boquerones)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "barra de pan"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "imones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta 12 rebanadas de pan y tuéstalas en el horno. Pela el diente de ajo y unta con él las tostadas. Retira las cabezas y las vísceras de las anchoas. Ábrelas como un libro y elimínales las espinas centrales. Vierte un chorrito de aceite en una tartera. Extiende encima una capa de anchoas (dejando la parte de la piel hacia arriba). Salpimiéntalas y espolvoréalas con un poco de perejil picado. Coloca encima otra capa, salpimienta de nuevo y espolvorea con perejil picado. Repite el proceso hasta colocar todas las anchoas. Corta 1 limón por la mitad y exprímelo. Vierte el zumo sobre las anchoas. Riégalas con un chorrito de aceite, coloca la tapa y cocínalas a fuego suave durante 5-6 minutos. Corta el otro limón en rodajas y colócalas bordeando la parte interior de la tartera. Sirve las anchoas con las tostadas de pan y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Anchoas Al Limón",
+    "meta_description": "Corta 12 rebanadas de pan y tuéstalas en el horno. Pela el diente de ajo y unta con él las tostadas. Retira las cabezas y las vísceras de las anchoas. Ábrelas como un libro y elimínales las espinas centrales. Vierte un chorrito de aceite en",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

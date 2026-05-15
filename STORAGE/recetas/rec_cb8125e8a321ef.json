@@ -1,0 +1,108 @@
+{
+  "id": "rec_cb8125e8a321ef",
+  "slug": "conejo-en-salsa-agridulce",
+  "titulo": "Conejo En Salsa Agridulce",
+  "resumen": "Trocea el conejo, salpimiéntalo y dóralo en una cazuela con un chorrito de aceite. Retíralo y resérvalo. Lamina los ajos, pica la cebolleta finamente y ponlos a pochar en la misma cazuela donde has dorado el conejo. Pela el tomate, pícalo e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "arroz basmati"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "naranjas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el conejo, salpimiéntalo y dóralo en una cazuela con un chorrito de aceite. Retíralo y resérvalo. Lamina los ajos, pica la cebolleta finamente y ponlos a pochar en la misma cazuela donde has dorado el conejo. Pela el tomate, pícalo e incorpóralo. Sazona. Rehoga todo durante 5 minutos. Añade la salsa de soja, la miel, el vinagre y el azúcar. Remueve bien y agrega el conejo. Exprime las naranjas y vierte el zumo encima. Tápalo y cocínalo a fuego medio durante 20 minutos. Pon agua a calentar en un cazo y sazónala. Cuando empiece a hervir, añade el arroz y cuécelo durante 10-12 minutos. Sirve el conejo y acompáñalo con el arroz blanco. Espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Conejo En Salsa Agridulce",
+    "meta_description": "Trocea el conejo, salpimiéntalo y dóralo en una cazuela con un chorrito de aceite. Retíralo y resérvalo. Lamina los ajos, pica la cebolleta finamente y ponlos a pochar en la misma cazuela donde has dorado el conejo. Pela el tomate, pícalo e",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

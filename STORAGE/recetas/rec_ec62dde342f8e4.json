@@ -1,0 +1,103 @@
+{
+  "id": "rec_ec62dde342f8e4",
+  "slug": "achicoria-con-bechamel",
+  "titulo": "Achicoria Con Bechamel",
+  "resumen": "Pon las pasas a remojo en un bol con agua. Limpia la achicoria y trocéala. Pon abundante agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la achicoria y cuécela durante 15-20 minutos. Escurre las pasas y saltéalas ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "general",
+  "tags": [
+    "general",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "achicoria"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "queso emmental (rallado)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa bechamel:"
+    },
+    {
+      "cantidad": "14",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las pasas a remojo en un bol con agua. Limpia la achicoria y trocéala. Pon abundante agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la achicoria y cuécela durante 15-20 minutos. Escurre las pasas y saltéalas en una sartén con un chorrito de aceite. Añade la achicoria y saltéala. Pásala a una fuente apta para el horno. Pica los ajos frescos en cilindros y rehógalos brevemente en una cazuela con un chorrito de aceite. Agrega la harina y rehógala un poco. Vierte la leche y remueve bien. Sazona y cocina la bechamel durante 5 minutos. Cubre la achicoria con la bechamel y espolvoréala con el queso rallado y la nuez moscada. Gratina en el horno hasta que la superficie quede dorada. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Achicoria Con Bechamel",
+    "meta_description": "Pon las pasas a remojo en un bol con agua. Limpia la achicoria y trocéala. Pon abundante agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la achicoria y cuécela durante 15-20 minutos. Escurre las pasas y saltéalas ",
+    "meta_keywords": "general, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

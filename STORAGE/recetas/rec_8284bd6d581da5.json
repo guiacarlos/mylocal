@@ -1,0 +1,113 @@
+{
+  "id": "rec_8284bd6d581da5",
+  "slug": "relampagos-salados",
+  "titulo": "Relámpagos Salados",
+  "resumen": "Para preparar la masa, mezcla el agua y la mantequilla en una cazuelita y ponla a calentar hasta que se funda la mantequilla. Sazona. Cuando se haya fundido, tamiza la harina con la ayuda de un colador y añádela. Retira la cazuela del fuego",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "onchas de jamón"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pencas de apio"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "crema de queso azul"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "semillas de amapola"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "-4 huevos"
+    },
+    {
+      "cantidad": "90",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para preparar la masa, mezcla el agua y la mantequilla en una cazuelita y ponla a calentar hasta que se funda la mantequilla. Sazona. Cuando se haya fundido, tamiza la harina con la ayuda de un colador y añádela. Retira la cazuela del fuego y mezcla con una varilla. Sin dejar de remover, incorpora los huevos de uno en uno. Trabaja bien la masa. Introdúcela en una manga pastelera. Coloca un trozo de papel de hornear sobre una bandeja para horno y extiende la masa formando 12 buñuelos alargados. Esparce por encima de 4 de ellos las semillas de sésamo, y por encima de otros 4 las semillas de amapola. Hornéalos a 220 ºC durante 20-25 minutos. Déjalos atemperar y resérvalos. Pela las cebollas, córtalas en juliana fina y ponlas a pochar en una sartén con un chorrito de aceite. Sazona. Cuando se hayan dorado, escurre el exceso de aceite y resérvalas. Pica bien el jamón y resérvalo. Quita los hilos al apio, córtalo en juliana y resérvalo. Abre los relámpagos por la mitad. Extiende la cebolla pochada en 4 de ellos, el jamón picado en otros 4 y el apio en los restantes. Rocíalos con el queso azul y tápalos con las otras mitades. Sirve 3 relámpagos (uno de cada variedad) por ración y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Relámpagos Salados",
+    "meta_description": "Para preparar la masa, mezcla el agua y la mantequilla en una cazuelita y ponla a calentar hasta que se funda la mantequilla. Sazona. Cuando se haya fundido, tamiza la harina con la ayuda de un colador y añádela. Retira la cazuela del fuego",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

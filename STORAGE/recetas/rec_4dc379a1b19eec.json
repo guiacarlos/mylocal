@@ -1,0 +1,103 @@
+{
+  "id": "rec_4dc379a1b19eec",
+  "slug": "pollo-guisado",
+  "titulo": "Pollo Guisado",
+  "resumen": "Lava las patatas y ponlas en un bol. Añade el romero deshojado y un chorro de aceite. Sazona y mezcla bien. Coloca las patatas en la placa del horno y ásalas en el horno a 180 ºC durante 30 minutos. Retira la grasa del jamón, córtalo en taq",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pollo troceado"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "patatitas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y ponlas en un bol. Añade el romero deshojado y un chorro de aceite. Sazona y mezcla bien. Coloca las patatas en la placa del horno y ásalas en el horno a 180 ºC durante 30 minutos. Retira la grasa del jamón, córtalo en taquitos y dóralos en una cazuela grande con un chorrito de aceite. Retíralo y resérvalo en un plato. Retira la grasa del pollo y colócalo en un bol. Salpimiéntalo y añade 2 dientes de ajo majados. Mezcla bien y agrégalo a la cazuela donde has dorado el jamón. Fríelo un poco. Pela las zanahorias, córtalas en rodajas y añádelas a la cazuela junto con el pimiento verde cortado en daditos. Rehoga todo un poco. Incorpora el jamón. Corta los tomates por la mitad, rállalos y agrégalos a la cazuela. Rehoga todo durante 6-8 minutos. Vierte el vino y un chorrito de agua en la cazuela. Añade los otros dos dientes de ajo majados y la pastilla de caldo de pollo desmenuzada. Tapa la cazuela y cocina el pollo durante 25-30 minutos. Sirve el pollo con las patatas y adorna los platos con unas ramas de romero."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pollo Guisado",
+    "meta_description": "Lava las patatas y ponlas en un bol. Añade el romero deshojado y un chorro de aceite. Sazona y mezcla bien. Coloca las patatas en la placa del horno y ásalas en el horno a 180 ºC durante 30 minutos. Retira la grasa del jamón, córtalo en taq",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

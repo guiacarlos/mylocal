@@ -1,0 +1,89 @@
+{
+  "id": "rec_4f03575619d932",
+  "slug": "cochinillo-segoviano",
+  "titulo": "Cochinillo Segoviano",
+  "resumen": "Precalienta el horno a 150 ºC. Coloca una bandeja de horno con un dedo de agua y las hojas de laurel y coloca encima la rejilla del horno. Cubre las orejas del cochinillo y el rabo con papel de aluminio. Sazónalo bien por dentro y por fuera",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 10,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cochinillo (4,5 kg) abierto por la mitad y limpio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "escarola grande"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "manteca de cerdo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada (opcional)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Precalienta el horno a 150 ºC. Coloca una bandeja de horno con un dedo de agua y las hojas de laurel y coloca encima la rejilla del horno. Cubre las orejas del cochinillo y el rabo con papel de aluminio. Sazónalo bien por dentro y por fuera. Coloca el cochinillo sobre la rejilla y hornéalo a 150 ºC durante 1 hora. Retíralo y dale la vuelta. Con ayuda de una brocha, úntalo con la manteca de cerdo fundida. Introdúcelo de nuevo en horno y hornéalo a 180 ºC durante 1 hora y media más. Cada 20-30 minutos, úntalo de nuevo con la manteca de cerdo. Suelta las hojas de escarola y lávalas bien bajo el grifo de agua fría. Sécalas, trocéalas y resérvalas. Pela un diente de ajo, córtalo por la mitad, unta con él una ensaladera y agrega la mitad de la escarola. Pon el resto de la escarola en otro bol, pela el otro diente de ajo, pícalo finamente y agrégalo. En el momento de servir, aliña las dos ensaladas con aceite, vinagre y sal. Retira el cochinillo del horno y quítale el papel de aluminio de las orejas y del rabo. Sirve el cochinillo y acompáñalo con la escarola. Decora con unas hojas de perejil.",
+    "Si quieres, puedes pasar la salsa de la bandeja del horno a una sartén, darle un hervor y ligarla con un poco de harina de maíz diluida en agua fría. No la eches sobre la piel crujiente del cochinillo, porque se ablandaría. La salsa es para mojar pan o para mezclar con la carne."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cochinillo Segoviano",
+    "meta_description": "Precalienta el horno a 150 ºC. Coloca una bandeja de horno con un dedo de agua y las hojas de laurel y coloca encima la rejilla del horno. Cubre las orejas del cochinillo y el rabo con papel de aluminio. Sazónalo bien por dentro y por fuera",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

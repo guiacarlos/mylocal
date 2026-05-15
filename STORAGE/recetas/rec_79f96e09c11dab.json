@@ -1,0 +1,88 @@
+{
+  "id": "rec_79f96e09c11dab",
+  "slug": "anchoas-y-boquerones-con-papas-alinas",
+  "titulo": "Anchoas Y Boquerones Con Papas Aliñás",
+  "resumen": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos, retíralas y deja que se enfríen. Pela las patatas, córtalas en trozos grandes y colócalas en un bol. Sazónalas, agrega la cebolleta fi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "48",
+      "unidad": "",
+      "nombre": "anchoas frescas (boquerones)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina (especial para freír pescado)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos, retíralas y deja que se enfríen. Pela las patatas, córtalas en trozos grandes y colócalas en un bol. Sazónalas, agrega la cebolleta finamente picada y perejil picado. Riega todo con un chorrito de vinagre y un buen chorro de aceite de oliva. Mezcla bien. Limpia las anchoas. Sazona la mitad, pásalas por harina y fríelas brevemente en una sartén con abundante aceite caliente. Retira y escúrrelas sobre un plato forrado con papel absorbente. Pela y pica los ajos y ponlos a freír en una sartén con aceite. Agrega un par de trozos de guindilla. Sazona el resto de las anchoas, añádelas a la sartén y fríelas brevemente. Retíralas a un plato. Sirve las patatas en el centro de la fuente, coloca a un lado las anchoas fritas y al otro los boquerones. Adorna con los ajos fritos y con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Anchoas Y Boquerones Con Papas Aliñás",
+    "meta_description": "Lava las patatas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. A los 30 minutos, retíralas y deja que se enfríen. Pela las patatas, córtalas en trozos grandes y colócalas en un bol. Sazónalas, agrega la cebolleta fi",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,111 @@
+{
+  "id": "rec_30b026c658b326",
+  "slug": "patatas-rellenas-de-picadillo-picante",
+  "titulo": "Patatas Rellenas De Picadillo Picante",
+  "resumen": "Para la vinagreta, pela el tomate, córtalo en daditos y colócalo en un bol. Pica finamente 1 cebolleta y añádela al bol. Sazona, vierte un chorrito de vinagre y otro de aceite. Espolvorea con perejil picado y deja macerar.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "5",
+      "unidad": "",
+      "nombre": "patatas (grandes)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "carne picada de ternera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina, huevo y pan rallado (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "comino"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la vinagreta, pela el tomate, córtalo en daditos y colócalo en un bol. Pica finamente 1 cebolleta y añádela al bol. Sazona, vierte un chorrito de vinagre y otro de aceite. Espolvorea con perejil picado y deja macerar.",
+    "Pon agua a calentar en una cazuela grande. Agrega las patatas (con piel) y cuécelas durante 30 minutos aproximadamente. Retíralas del agua, deja que se templen y pélalas. Trocéalas y pásalas por el pasapurés a un bol. Salpimienta y mezcla bien.",
+    "Para el relleno, pela los ajos y la otra cebolleta y córtalos en daditos. Pon todo a pochar en una sartén con un chorrito de aceite. Sazona. Cuando la cebolleta esté bien pochada, agrega el comino, la guindilla y la salsa de tomate. Deja que reduzca a fuego suave hasta que quede bien concentrado. Pásalo a un bol. Añade la carne picada, salpimienta y mezcla bien.",
+    "Reparte el puré en 18 porciones. Redondea y aplasta cada porción y coloca una cucharada del relleno en el centro de cada una. Envuelve el relleno con el puré y forma unas bolas. Pásalas por harina, huevo batido y pan rallado y fríelas en una sartén con abundante aceite. Escúrrelas sobre un plato cubierto con papel absorbente. Sirve y acompáñalas con la vinagreta. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas Rellenas De Picadillo Picante",
+    "meta_description": "Para la vinagreta, pela el tomate, córtalo en daditos y colócalo en un bol. Pica finamente 1 cebolleta y añádela al bol. Sazona, vierte un chorrito de vinagre y otro de aceite. Espolvorea con perejil picado y deja macerar.",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

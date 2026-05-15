@@ -1,0 +1,83 @@
+{
+  "id": "rec_d98f144e6c96b3",
+  "slug": "atadito-de-pollo-al-oporto",
+  "titulo": "Atadito De Pollo Al Oporto",
+  "resumen": "Pela las chalotas y cocínalas a fuego suave en una cazuela con aceite durante 15 minutos. Salpimienta. Pela las peras, córtalas en gajos y saltéalas. Salpimienta. Dora el atadito en una sartén con aceite y pásalo a una fuente apta para el h",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "atadito de carne de pollo"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "peras"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino de Oporto"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las chalotas y cocínalas a fuego suave en una cazuela con aceite durante 15 minutos. Salpimienta. Pela las peras, córtalas en gajos y saltéalas. Salpimienta. Dora el atadito en una sartén con aceite y pásalo a una fuente apta para el horno. Riégalo con el vino y un poco de agua y hornéalo a 180 ºC durante 40 minutos. Pasado este tiempo, añade las peras y las chalotas y hornéalas a 160 ºC durante 20-25 minutos. Pasa la salsa que ha soltado la carne a un cazo y, cuando hierva, lígala con un poco de harina de maíz diluida en agua fría. Mezcla bien y añade perejil picado. Sirve la carne fileteada, acompáñala con la guarnición y salsea. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Atadito De Pollo Al Oporto",
+    "meta_description": "Pela las chalotas y cocínalas a fuego suave en una cazuela con aceite durante 15 minutos. Salpimienta. Pela las peras, córtalas en gajos y saltéalas. Salpimienta. Dora el atadito en una sartén con aceite y pásalo a una fuente apta para el h",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

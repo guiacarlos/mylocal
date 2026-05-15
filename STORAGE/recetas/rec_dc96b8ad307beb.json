@@ -1,0 +1,88 @@
+{
+  "id": "rec_dc96b8ad307beb",
+  "slug": "alcachofas-con-patatas-y-berberechos",
+  "titulo": "Alcachofas Con Patatas Y Berberechos",
+  "resumen": "Pela las patatas, córtalas en rodajas gruesas y ponlas a cocer en una cazuela con agua y sal. Escúrrelas y resérvalas. Limpia las alcachofas y ponlas a cocer en una cazuela con abundante agua hirviendo, unas ramitas de perejil y sal. A los ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "berberechos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 cucharadas de harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, córtalas en rodajas gruesas y ponlas a cocer en una cazuela con agua y sal. Escúrrelas y resérvalas. Limpia las alcachofas y ponlas a cocer en una cazuela con abundante agua hirviendo, unas ramitas de perejil y sal. A los 20 minutos, retíralas a un plato, córtalas por la mitad y resérvalas. Para abrir los berberechos, vierte el vino blanco en una cazuelita. Agrega los berberechos, tapa y cuécelos a fuego medio hasta que se abran. Cuela el caldo y resérvalo. Deja atemperar los berberechos y retira la carne de las conchas. Reserva. Pela y lamina los ajos y dóralos en una sartén con un chorrito de aceite. Pela y pica la cebolla y añádela. Sazona y cocina a fuego suave hasta que empiecen a coger un poco de color. Añade la harina y rehógala un poco. Vierte el caldo de los berberechos y el vino blanco. Incorpora las alcachofas y las patatas. Cocina todo junto a fuego lento durante 5-6 minutos. Sirve 3 alcachofas por ración con dos rodajas de patata. Salsea y reparte los berberechos por encima. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Alcachofas Con Patatas Y Berberechos",
+    "meta_description": "Pela las patatas, córtalas en rodajas gruesas y ponlas a cocer en una cazuela con agua y sal. Escúrrelas y resérvalas. Limpia las alcachofas y ponlas a cocer en una cazuela con abundante agua hirviendo, unas ramitas de perejil y sal. A los ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rec_c512d12c403e05",
+  "slug": "garbanzos-con-gambas",
+  "titulo": "Garbanzos Con Gambas",
+  "resumen": "Pon los garbanzos a remojo la víspera. Limpia y pica el puerro y colócalo en la olla rápida con agua. Añade los garbanzos escurridos y la pastilla de caldo. Coloca la tapa y cocínalos durante 25 minutos. Retira los garbanzos a una fuente y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo para legumbres"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hebras de azafrán"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Limpia y pica el puerro y colócalo en la olla rápida con agua. Añade los garbanzos escurridos y la pastilla de caldo. Coloca la tapa y cocínalos durante 25 minutos. Retira los garbanzos a una fuente y resérvalos. Pela los dientes de ajo, lamínalos y fríelos en una cazuela grande con un chorrito de aceite. Corta el pimiento en trozos y agrégalo. Añade las cabezas y cáscaras de las gambas y las hojas de laurel. Rehoga el conjunto. Vierte el brandy y flambea. Trocea los tomates y añádelos. Sazona, incorpora el azafrán y cocina todo a fuego suave durante 20-25 minutos. Tritura y cuela la salsa a una tartera. Añade los garbanzos y mezcla todo. Cocínalos en la salsa durante 10 minutos. Sazona las gambas y saltéalas en una sartén con un chorrito de aceite. Espolvoréalas con un poco de perejil picado y añádelas a la cazuela. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Garbanzos Con Gambas",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Limpia y pica el puerro y colócalo en la olla rápida con agua. Añade los garbanzos escurridos y la pastilla de caldo. Coloca la tapa y cocínalos durante 25 minutos. Retira los garbanzos a una fuente y ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

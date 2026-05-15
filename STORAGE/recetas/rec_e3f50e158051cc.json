@@ -1,0 +1,63 @@
+{
+  "id": "rec_e3f50e158051cc",
+  "slug": "merengues-de-lima-al-horno",
+  "titulo": "Merengues De Lima Al Horno",
+  "resumen": "Coloca tres claras en un bol y bátelas con una batidora de varillas eléctrica hasta que espumen un poco. Añade el azúcar poco a poco y sigue montándolas (hay que añadir el azúcar poco a poco para dar tiempo a que los cristales se disuelvan)",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cl",
+      "nombre": "aras de huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ima"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "onza de chocolate negro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca tres claras en un bol y bátelas con una batidora de varillas eléctrica hasta que espumen un poco. Añade el azúcar poco a poco y sigue montándolas (hay que añadir el azúcar poco a poco para dar tiempo a que los cristales se disuelvan). Cuando las claras estén muy bien montadas (densas), agrega la ralladura de la lima y mezcla bien. Introduce el merengue en una manga pastelera con boquilla rizada y forma los merengues sobre una bandeja de horno cubierta con papel de hornear. Hornéalos a 90 ºC durante 2-3 horas (no se tienen que dorar, solo secarse). Ralla el chocolate por encima de 4 merengues y deja el resto sin nada. Sirve en una fuente y decora con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Merengues De Lima Al Horno",
+    "meta_description": "Coloca tres claras en un bol y bátelas con una batidora de varillas eléctrica hasta que espumen un poco. Añade el azúcar poco a poco y sigue montándolas (hay que añadir el azúcar poco a poco para dar tiempo a que los cristales se disuelvan)",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "rec_5efabccfaf8963",
+  "slug": "crepes-rellenos",
+  "titulo": "Crepes Rellenos",
+  "resumen": "Para hacer la masa de los crepes, casca los huevos en un vaso batidor y añade la leche, la harina, el aceite y una pizca de sal. Bate con la batidora eléctrica hasta que quede una masa homogénea sin grumos. Unta con mantequilla una sartén c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "l",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cacao en polvo y hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el relleno:"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "nata para montar"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "chocolate negro para postres"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "café soluble"
+    }
+  ],
+  "pasos": [
+    "Para hacer la masa de los crepes, casca los huevos en un vaso batidor y añade la leche, la harina, el aceite y una pizca de sal. Bate con la batidora eléctrica hasta que quede una masa homogénea sin grumos. Unta con mantequilla una sartén caliente, vierte un cacillo de masa, extiéndela bien y, cuando se cuaje, dale la vuelta y cocina durante 1 minuto. Retira a un plato y repite el proceso hasta hacer 8 crepes. (El primer crepe siempre se desecha.) Resérvalos. Funde el chocolate. Monta la nata en un bol, añade el chocolate fundido, el café soluble y 100 gramos de leche condensada (reserva el resto). Mezcla bien y deja reposar la crema en el frigorífico durante unos 15 minutos. Rellena los crepes con la crema (si lo deseas, puedes reservar un poco para la decoración) y ciérralos como un pañuelo. Decora con unas hojas de menta, la leche condensada sobrante y el cacao (y con crema de chocolate si se reservó previamente)."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes Rellenos",
+    "meta_description": "Para hacer la masa de los crepes, casca los huevos en un vaso batidor y añade la leche, la harina, el aceite y una pizca de sal. Bate con la batidora eléctrica hasta que quede una masa homogénea sin grumos. Unta con mantequilla una sartén c",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

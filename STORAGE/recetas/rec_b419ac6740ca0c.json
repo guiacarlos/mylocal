@@ -1,0 +1,83 @@
+{
+  "id": "rec_b419ac6740ca0c",
+  "slug": "sopa-fria-de-melon-con-jamon",
+  "titulo": "Sopa Fría De Melón Con Jamón",
+  "resumen": "Coloca las lonchas de jamón en una placa de horno forrada con papel de hornear. Cúbrelas con otro papel de hornear y hornéalas a 180º C durante 10- 12 minutos. Resérvalas. Corta el melón de piel de sapo por la mitad, retírale las pepitas y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "melón de piel de sapo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "melón cantalupo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón serrano"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "pistachos (pelados)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca las lonchas de jamón en una placa de horno forrada con papel de hornear. Cúbrelas con otro papel de hornear y hornéalas a 180º C durante 10- 12 minutos. Resérvalas. Corta el melón de piel de sapo por la mitad, retírale las pepitas y pásalas a un colador. Cuela las pepitas y reserva el jugo. Corta el melón en rodajas, pélalas, trocéalas y ponlas en la jarra batidora. Salpimienta, vierte un chorro de aceite y el jugo de las pepitas y tritura. Enfría la sopa en el frigorífico. Pon a calentar una cucharada de aceite en una sartén. Agrega las frambuesas y saltéalas. Pásalas a un colador y aplástalas para que suelten el jugo. Resérvalo. Corta el melón cantalupo y retírale las pepitas. Con ayuda de una cuchara sacabolas, saca bolitas, ponlas en un bol y resérvalas. Pica el cebollino finamente. Aplasta los pistachos con un cuchillo. Sirve la sopa de melón en platos hondos, añade las bolas de melón cantalupo y espolvorea con el pistacho y el cebollino. Salpica los platos con la salsa de frambuesas y pon una loncha de jamón crujiente en cada uno."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Fría De Melón Con Jamón",
+    "meta_description": "Coloca las lonchas de jamón en una placa de horno forrada con papel de hornear. Cúbrelas con otro papel de hornear y hornéalas a 180º C durante 10- 12 minutos. Resérvalas. Corta el melón de piel de sapo por la mitad, retírale las pepitas y ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

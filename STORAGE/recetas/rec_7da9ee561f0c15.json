@@ -1,0 +1,93 @@
+{
+  "id": "rec_7da9ee561f0c15",
+  "slug": "rancho-aragones",
+  "titulo": "Rancho Aragonés",
+  "resumen": "Salpimienta los trozos de cuello de cordero y dóralos en una cazuela con un chorrito de aceite. Una vez dorados, retíralos a un plato. Pela 4 dientes de ajo y dóralos (enteros) en la misma cazuela donde has rehogado el cuello. Salpimienta l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tiras de costilla de cerdo"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cuello de cordero (troceado)"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "chorizo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Salpimienta los trozos de cuello de cordero y dóralos en una cazuela con un chorrito de aceite. Una vez dorados, retíralos a un plato. Pela 4 dientes de ajo y dóralos (enteros) en la misma cazuela donde has rehogado el cuello. Salpimienta la costilla y el conejo y agrégalos a la cazuela. Dora todo bien. Incorpora el chorizo cortado en rodajas y el cuello. Pela las patatas, cáscalas e incorpóralas a la cazuela. Cubre con abundante agua y pon a punto de sal. Tapa y cocina durante 30 minutos a fuego suave. Pasado este tiempo, desgrasa el guiso con ayuda de un cacillo. Agrega el arroz. Maja 2 dientes de ajo con un poco de perejil e incorpóralos. Cocina el rancho durante 18-20 minutos más, espolvorea con perejil picado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rancho Aragonés",
+    "meta_description": "Salpimienta los trozos de cuello de cordero y dóralos en una cazuela con un chorrito de aceite. Una vez dorados, retíralos a un plato. Pela 4 dientes de ajo y dóralos (enteros) en la misma cazuela donde has rehogado el cuello. Salpimienta l",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

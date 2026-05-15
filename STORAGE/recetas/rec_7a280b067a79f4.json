@@ -1,0 +1,78 @@
+{
+  "id": "rec_7a280b067a79f4",
+  "slug": "rocas-de-arroz-inflado",
+  "titulo": "Rocas De Arroz Inflado",
+  "resumen": "Trocea el chocolate y colócalo en un bol. Agrega la mantequilla y fúndelo al baño maría sin dejar de remover. Añade un trocito de peladura de mandarina bien picadita. Incorpora la nata, el azúcar, el caramelo líquido y el arroz. Mezcla hast",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "chocolate negro"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "nata para montar"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "arroz inflado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar avainillado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "caramelo líquido"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "mandarina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Trocea el chocolate y colócalo en un bol. Agrega la mantequilla y fúndelo al baño maría sin dejar de remover. Añade un trocito de peladura de mandarina bien picadita. Incorpora la nata, el azúcar, el caramelo líquido y el arroz. Mezcla hasta conseguir una masa compacta y bien ligada. Con ayuda de dos cucharas, distribuye pequeñas porciones sobre una placa forrada con papel de hornear. Deja enfriar hasta que endurezca. Adorna con unas hojas de menta y sírvelas"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Rocas De Arroz Inflado",
+    "meta_description": "Trocea el chocolate y colócalo en un bol. Agrega la mantequilla y fúndelo al baño maría sin dejar de remover. Añade un trocito de peladura de mandarina bien picadita. Incorpora la nata, el azúcar, el caramelo líquido y el arroz. Mezcla hast",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

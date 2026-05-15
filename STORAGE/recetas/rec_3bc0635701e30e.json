@@ -1,0 +1,123 @@
+{
+  "id": "rec_3bc0635701e30e",
+  "slug": "huevos-huevos-rotos-con-foie-y-salsa-perigourdine",
+  "titulo": "Huevos Huevos Rotos Con Foie Y Salsa Périgourdine",
+  "resumen": "Para hacer la salsa, lava y pica finamente los champiñones y rehógalos en una cazuela con un chorrito de aceite. Sazónalos. Añade la trufa picada y el paté. Vierte el caldo y el vino, remueve bien y deja que reduzca a fuego suave. Para que ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de foie fresco"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trufa pequeña (en conserva)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa:"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trufa pequeña (en conserva)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "paté"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "vasos",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "vasos",
+      "nombre": "caldo de carne"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para hacer la salsa, lava y pica finamente los champiñones y rehógalos en una cazuela con un chorrito de aceite. Sazónalos. Añade la trufa picada y el paté. Vierte el caldo y el vino, remueve bien y deja que reduzca a fuego suave. Para que ligue la salsa, diluye la harina de maíz en un poco de agua fría y añádela a la cazuela. Mezcla bien y resérvala. Para hacer las tortas de patata, pela las patatas y córtalas en tiras finas, tipo paja o cerilla (también se puede utilizar una mandolina). Sazónalas y fríelas en diferentes tandas con aceite bien caliente. Deja que las patatas se peguen entre sí formando una torta. Fríelas por los dos lados y mantenlas calientes en el horno. Calienta agua en una cazuela y, cuando esté a punto de hervir, casca los huevos y escálfalos durante 3-4 minutos. Escúrrelos y resérvalos en un plato. Salpimienta las lonchas de foie por los dos lados y dóralas vuelta y vuelta en una sartén bien caliente sin nada de aceite. Sirve en cada plato una torta de patata y coloca encima un huevo escalfado y una loncha de foie. Salsea y adorna los platos con unas láminas de trufa. Decora con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Huevos Huevos Rotos Con Foie Y Salsa Périgourdine",
+    "meta_description": "Para hacer la salsa, lava y pica finamente los champiñones y rehógalos en una cazuela con un chorrito de aceite. Sazónalos. Añade la trufa picada y el paté. Vierte el caldo y el vino, remueve bien y deja que reduzca a fuego suave. Para que ",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

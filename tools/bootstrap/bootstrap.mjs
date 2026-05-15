@@ -1,41 +1,47 @@
 #!/usr/bin/env node
 /**
- * AppBootstrap CLI - ensambla un release/ por tenant en un comando.
+ * AppBootstrap CLI v2 — ensambla un release/ por tenant para la
+ * arquitectura de templates independientes (post Ola G).
  *
- * Uso:
+ * Uso (forma preferida):
  *   node tools/bootstrap/bootstrap.mjs \
- *     --preset=hosteleria \
+ *     --template=hosteleria \
  *     --slug=demo-hosteleria \
  *     --nombre="MyLocal Demo" \
  *     --color=#C8A96E \
  *     --logo=/MEDIA/Iogo.png \
+ *     --plan=demo \
  *     --out=./builds/demo-hosteleria
  *
- * Lo que hace, paso a paso:
- *   1. Parsea + valida argumentos.
- *   2. Lee y valida tools/bootstrap/presets/<preset>.json.
- *   3. Comprueba que spa/src/modules/<module>/ existe.
- *   4. Comprueba que CADA capability declarada existe como dir en CAPABILITIES/.
- *   5. Escribe spa/public/config.json con los flags del CLI.
- *   6. Lanza `npm run build` desde spa/ con VITE_OUT_DIR + VITE_MODULO.
- *      Vite genera el bundle SPA directamente en el out_dir.
- *   7. Copia CORE/, axidb/, fonts/, MEDIA/, seed/, .htaccess, gateway.php,
- *      router.php, favicons, spa/server, manifest.json, robots.txt, schema.json.
- *   8. Copia SOLO las CAPABILITIES declaradas en el preset.
- *   9. Materializa spa/server/config/*.json.example -> *.json.
- *  10. Limpia archivos de debug (preserva tests/).
- *  11. Si NO se paso --skip-test: ejecuta test_login.php como gate AUTH_LOCK.
- *  12. Crea STORAGE/.gitkeep para que el servidor pueda escribir datos.
- *  13. Imprime resumen verificable.
+ * --preset=<id> sigue funcionando como alias deprecado de --template=<id>.
  *
- * Idempotente: ejecutar dos veces produce el mismo arbol (modulo hashes
- * de bundle Vite, que dependen del contenido fuente).
+ * Fuentes de verdad:
+ *   templates/<id>/manifest.json   → capabilities que ese template usa.
+ *   tools/bootstrap/presets/<id>.json (opcional) → default_role/default_user.
  *
- * Cero datos ficticios: si el preset declara default_user con email null,
- * el operador edita STORAGE/.vault tras desplegar.
+ * Pasos:
+ *   1. Parse + validar argumentos.
+ *   2. Verificar templates/<id>/ (carpeta + manifest.json con capabilities).
+ *   3. Cargar preset opcional (solo extras, NO capabilities).
+ *   4. Comprobar que cada capability existe en CAPABILITIES/.
+ *   5. Preparar config.json del tenant (en memoria; NO muta arbol fuente).
+ *   6. Build via `pnpm -F <id> build` con VITE_OUT_DIR + VITE_MODULO.
+ *      Vite emite el bundle SPA directamente en outDir.
+ *      Sobrescribimos outDir/config.json con la config del tenant.
+ *   7. Copiar CORE/, axidb/, fonts/, MEDIA/, seed/, .htaccess,
+ *      gateway.php, router.php, favicons, spa/server, manifest.json,
+ *      robots.txt, schema.json.
+ *   8. Copiar SOLO las CAPABILITIES declaradas en el manifest del template.
+ *   9. Materializar spa/server/config/*.json.example -> *.json.
+ *  10. Limpiar archivos de debug (preserva tests/).
+ *  11. Sin --skip-test: ejecutar test_login.php + capability tests como gate.
+ *  12. Crear STORAGE/.gitkeep.
+ *  13. Imprimir resumen.
+ *
+ * Idempotente con --skip-test. Cero mutacion del arbol fuente.
  */
 
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import {
     cpSync,
     existsSync,
@@ -51,31 +57,32 @@ import { fileURLToPath } from 'node:url';
 
 import { PresetError, validatePreset } from './types.mjs';
 
-// ─── Localizar el repo root sin depender del cwd ────────────────
+// ─── Localizar el repo root ─────────────────────────────────────
 const SELF_DIR = fileURLToPath(new URL('.', import.meta.url));
 const REPO_ROOT = resolve(SELF_DIR, '..', '..');
-const SPA_DIR = join(REPO_ROOT, 'spa');
+const TEMPLATES_DIR = join(REPO_ROOT, 'templates');
 const PRESETS_DIR = join(SELF_DIR, 'presets');
 
 // ─── CLI helpers ────────────────────────────────────────────────
 const USAGE = `
-AppBootstrap - genera un release/ por tenant.
+AppBootstrap v2 - genera un release/ por tenant.
 
 Uso:
   node tools/bootstrap/bootstrap.mjs \\
-    --preset=<id>          (obligatorio) preset en tools/bootstrap/presets/<id>.json
+    --template=<id>        (obligatorio) id del template en templates/<id>/
     --slug=<slug>          (obligatorio) identificador url-friendly del tenant
     --nombre="<texto>"     (obligatorio) nombre humano del tenant
     --color=<hex>          (opcional)   color de acento CSS (#C8A96E por defecto)
     --logo=<path>          (opcional)   ruta del logo servido (p.ej. /MEDIA/Iogo.png)
     --plan=<plan>          (opcional)   demo|pro_monthly|pro_annual (default: demo)
     --out=<dir>            (obligatorio) carpeta de salida (se crea/limpia)
-    --skip-test            (opcional)   omite test_login.php (uso solo dev)
+    --skip-test            (opcional)   omite test_login + capabilities (solo dev)
     --test-port=<n>        (opcional)   puerto del test gate (default: 8766)
+
+Alias deprecado: --preset=<id> equivale a --template=<id>.
 `.trim();
 
 function parseArgs(argv) {
-    /** @type {Record<string, string|boolean>} */
     const out = {};
     for (const arg of argv) {
         if (!arg.startsWith('--')) continue;
@@ -98,53 +105,91 @@ function abort(msg, code = 1) {
     process.exit(code);
 }
 
-function info(msg) { process.stdout.write(`  ${msg}\n`); }
+function info(msg)  { process.stdout.write(`  ${msg}\n`); }
 function step(n, total, label) { process.stdout.write(`[${n}/${total}] ${label}\n`); }
 
-// ─── Validacion + carga ─────────────────────────────────────────
-function loadPreset(presetId) {
-    const path = join(PRESETS_DIR, `${presetId}.json`);
-    if (!existsSync(path)) {
-        const available = readdirSync(PRESETS_DIR)
-            .filter(f => f.endsWith('.json'))
-            .map(f => f.replace(/\.json$/, ''))
-            .join(', ') || '(ninguno)';
+function requireArg(args, name, examples) {
+    const v = args[name];
+    if (typeof v !== 'string' || !v.trim()) {
+        throw new BootstrapError(`Falta --${name}. Ejemplo: --${name}=${examples}`);
+    }
+    return v.trim();
+}
+
+// ─── Resolver template + preset opcional ────────────────────────
+function loadTemplateManifest(templateId) {
+    const tplDir = join(TEMPLATES_DIR, templateId);
+    if (!existsSync(tplDir) || !statSync(tplDir).isDirectory()) {
+        const available = existsSync(TEMPLATES_DIR)
+            ? readdirSync(TEMPLATES_DIR)
+                .filter(d => statSync(join(TEMPLATES_DIR, d)).isDirectory())
+                .join(', ')
+            : '(templates/ no existe)';
         throw new BootstrapError(
-            `Preset "${presetId}" no existe en ${relative(REPO_ROOT, PRESETS_DIR)}. ` +
-            `Disponibles: ${available}.`,
+            `Template "${templateId}" no existe en templates/. Disponibles: ${available || '(ninguno)'}.`,
+        );
+    }
+    const manifestPath = join(tplDir, 'manifest.json');
+    if (!existsSync(manifestPath)) {
+        throw new BootstrapError(
+            `Template "${templateId}" no tiene manifest.json. Esperado en ${relative(REPO_ROOT, manifestPath)}.`,
         );
     }
     let raw;
-    try { raw = JSON.parse(readFileSync(path, 'utf-8')); }
-    catch (e) { throw new BootstrapError(`Preset ${presetId}.json es JSON invalido: ${e.message}`); }
-    try { return validatePreset(raw, `preset ${presetId}.json`); }
-    catch (e) { throw e instanceof PresetError ? new BootstrapError(e.message) : e; }
-}
-
-function assertModuleExists(moduleId) {
-    const path = join(SPA_DIR, 'src', 'modules', moduleId);
-    if (!existsSync(path) || !statSync(path).isDirectory()) {
-        const available = readdirSync(join(SPA_DIR, 'src', 'modules'))
-            .filter(d => !d.startsWith('.') && d !== '_shared')
-            .join(', ') || '(ninguno)';
+    try { raw = JSON.parse(readFileSync(manifestPath, 'utf-8')); }
+    catch (e) { throw new BootstrapError(`manifest.json del template "${templateId}" es JSON invalido: ${e.message}`); }
+    if (typeof raw !== 'object' || raw === null || !Array.isArray(raw.capabilities)) {
         throw new BootstrapError(
-            `Modulo SPA "${moduleId}" no existe en spa/src/modules/. ` +
-            `Disponibles: ${available}. ` +
-            `Crealo (con su manifest.json + routes.tsx) antes de bootstrapear este preset.`,
+            `manifest.json del template "${templateId}" debe ser objeto con "capabilities": string[].`,
         );
     }
-    // Tambien debe estar registrado en modules-registry.ts para que el runtime lo cargue.
-    // En TS un objeto literal usa la key sin comillas (`hosteleria:`) salvo
-    // que la key tenga caracteres no validos como identificador (entonces
-    // si lleva comillas: `'_shared':`). Cubrimos ambas formas.
-    const registry = readFileSync(join(SPA_DIR, 'src', 'app', 'modules-registry.ts'), 'utf-8');
-    const idEscaped = moduleId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp(`(^|[\\s,{])'?${idEscaped}'?\\s*:`, 'm');
-    if (!re.test(registry)) {
-        throw new BootstrapError(
-            `Modulo "${moduleId}" existe pero no esta registrado en ` +
-            `spa/src/app/modules-registry.ts (anade su entry en SECTOR_MODULES).`,
-        );
+    if (raw.capabilities.length === 0) {
+        throw new BootstrapError(`manifest.json del template "${templateId}": "capabilities" no puede estar vacio.`);
+    }
+    for (const c of raw.capabilities) {
+        if (typeof c !== 'string' || !c.trim()) {
+            throw new BootstrapError(`manifest.json del template "${templateId}": cada capability debe ser string.`);
+        }
+    }
+    for (const required of ['LOGIN', 'OPTIONS']) {
+        if (!raw.capabilities.includes(required)) {
+            throw new BootstrapError(
+                `manifest.json del template "${templateId}": falta capability obligatoria "${required}" (AUTH_LOCK).`,
+            );
+        }
+    }
+    return {
+        id: templateId,
+        dir: tplDir,
+        manifest: raw,
+        capabilities: raw.capabilities,
+    };
+}
+
+function loadPresetExtras(templateId) {
+    const path = join(PRESETS_DIR, `${templateId}.json`);
+    if (!existsSync(path)) {
+        // Sin preset: defaults razonables.
+        return { default_role: 'admin', default_user: { email: null, password: null } };
+    }
+    let raw;
+    try { raw = JSON.parse(readFileSync(path, 'utf-8')); }
+    catch (e) { throw new BootstrapError(`Preset ${templateId}.json es JSON invalido: ${e.message}`); }
+    try {
+        // El preset puede declarar `module` distinto al template_id por
+        // legacy — lo ignoramos. Capabilities tambien las ignoramos: la
+        // fuente de verdad es el manifest del template.
+        if (typeof raw === 'object' && raw !== null) {
+            if (!raw.module) raw.module = templateId;
+            if (!Array.isArray(raw.capabilities) || raw.capabilities.length === 0) {
+                raw.capabilities = ['LOGIN', 'OPTIONS'];
+            }
+        }
+        const p = validatePreset(raw, `preset ${templateId}.json`);
+        return { default_role: p.default_role, default_user: p.default_user };
+    } catch (e) {
+        if (e instanceof PresetError) throw new BootstrapError(e.message);
+        throw e;
     }
 }
 
@@ -156,19 +201,10 @@ function assertCapabilitiesExist(capabilities) {
     const missing = capabilities.filter(c => !present.has(c));
     if (missing.length) {
         throw new BootstrapError(
-            `Las siguientes capabilities declaradas no existen en CAPABILITIES/: ` +
-            `${missing.join(', ')}. ` +
-            `Implementalas o edita el preset.`,
+            `Capabilities declaradas en el manifest NO existen en CAPABILITIES/: ${missing.join(', ')}. ` +
+            `Implementalas o edita templates/<id>/manifest.json.`,
         );
     }
-}
-
-function requireArg(args, name, examples) {
-    const v = args[name];
-    if (typeof v !== 'string' || !v.trim()) {
-        throw new BootstrapError(`Falta --${name}. Ejemplo: --${name}=${examples}`);
-    }
-    return v.trim();
 }
 
 // ─── Operaciones de filesystem ──────────────────────────────────
@@ -235,6 +271,54 @@ function runTestGate(releaseRoot, port) {
     }
 }
 
+/** Filtra los tests de capability segun lo que el template incluye.
+ *  test_openclaude y test_openclaw son del FRAMEWORK (siempre que sus
+ *  CAPABILITIES esten copiadas); test_login solo aplica a hosteleria. */
+function runCapabilityTests(releaseRoot, capabilities) {
+    const capMap = [
+        { cap: 'CITAS',          test: 'test_citas' },
+        { cap: 'CRM',            test: 'test_crm' },
+        { cap: 'NOTIFICACIONES', test: 'test_notif' },
+        { cap: 'DELIVERY',       test: 'test_delivery' },
+        { cap: 'TAREAS',         test: 'test_tareas' },
+    ];
+    const toRun = capMap
+        .filter(m => capabilities.includes(m.cap))
+        .map(m => m.test);
+    // OPENCLAW: solo si la capability esta copiada al tenant. AI: siempre.
+    if (capabilities.includes('AI'))       toRun.push('test_openclaude');
+    if (capabilities.includes('OPENCLAW')) toRun.push('test_openclaw');
+
+    if (toRun.length === 0) {
+        info('  (este template no incluye capabilities con tests, skipping)');
+        return;
+    }
+    for (const t of toRun) {
+        const script = join(releaseRoot, 'spa', 'server', 'tests', `${t}.php`);
+        if (!existsSync(script)) {
+            info(`  ${t.padEnd(20)} no presente, saltando`);
+            continue;
+        }
+        const res = spawnSync('php', [script], { encoding: 'utf-8' });
+        const out = (res.stdout ?? '') + (res.stderr ?? '');
+        if (res.status !== 0) {
+            throw new BootstrapError(
+                `Test de capability ${t} fallo (exit=${res.status}). Salida:\n${out}`,
+            );
+        }
+        const linea = out.split('\n').reverse().find(l => l.includes('Resultado:')) ?? '(sin resumen)';
+        info(`  ${t.padEnd(20)} ${linea.trim()}`);
+    }
+}
+
+/** test_login.php fue disenado contra hosteleria: ejercita create_zonas_preset
+ *  + list_productos. Solo lo ejecutamos si el template lleva esas capabilities. */
+function shouldRunLoginGate(capabilities) {
+    return capabilities.includes('CARTA')
+        && capabilities.includes('QR')
+        && capabilities.includes('TPV');
+}
+
 function dirSizeMB(dir) {
     let total = 0;
     const stack = [dir];
@@ -258,34 +342,39 @@ async function main(rawArgs) {
         return 0;
     }
 
-    let preset, slug, nombre, presetId, outDir;
+    let templateId, slug, nombre, outDir, tpl, extras;
     try {
-        presetId = requireArg(args, 'preset', 'hosteleria');
-        slug     = requireArg(args, 'slug',   'demo-hosteleria');
-        nombre   = requireArg(args, 'nombre', '"Mi Restaurante"');
-        outDir   = resolve(REPO_ROOT, requireArg(args, 'out', './builds/<slug>'));
+        // --template= preferido, --preset= alias deprecado.
+        templateId = (typeof args.template === 'string' && args.template.trim())
+            ? args.template.trim()
+            : (typeof args.preset === 'string' && args.preset.trim())
+                ? (process.stderr.write('AVISO: --preset esta deprecado, usa --template\n'), args.preset.trim())
+                : (() => { throw new BootstrapError('Falta --template (o el alias deprecado --preset).'); })();
 
-        preset = loadPreset(presetId);
-        assertModuleExists(preset.module);
-        assertCapabilitiesExist(preset.capabilities);
+        slug    = requireArg(args, 'slug',   'demo-hosteleria');
+        nombre  = requireArg(args, 'nombre', '"Mi Restaurante"');
+        outDir  = resolve(REPO_ROOT, requireArg(args, 'out', './builds/<slug>'));
+
+        tpl    = loadTemplateManifest(templateId);
+        extras = loadPresetExtras(templateId);
+        assertCapabilitiesExist(tpl.capabilities);
     } catch (e) {
-        if (e instanceof BootstrapError) {
-            abort(e.message + '\n\n' + USAGE);
-        }
+        if (e instanceof BootstrapError) abort(e.message + '\n\n' + USAGE);
         throw e;
     }
 
-    const color   = (args.color   && typeof args.color   === 'string') ? args.color   : '#C8A96E';
-    const logo    = (args.logo    && typeof args.logo    === 'string') ? args.logo    : '/MEDIA/Iogo.png';
-    const plan    = (args.plan    && typeof args.plan    === 'string') ? args.plan    : 'demo';
+    const color   = (typeof args.color === 'string' && args.color) ? args.color : '#C8A96E';
+    const logo    = (typeof args.logo  === 'string' && args.logo)  ? args.logo  : '/MEDIA/Iogo.png';
+    const plan    = (typeof args.plan  === 'string' && args.plan)  ? args.plan  : 'demo';
     const skipTest = args['skip-test'] === true;
-    const testPort = (args['test-port'] && typeof args['test-port'] === 'string')
+    const testPort = (typeof args['test-port'] === 'string')
         ? parseInt(args['test-port'], 10) : 8766;
 
-    process.stdout.write(`=== AppBootstrap: ${slug} ===\n`);
-    process.stdout.write(`Preset: ${presetId} (modulo=${preset.module})\n`);
-    process.stdout.write(`Capabilities: ${preset.capabilities.length}\n`);
-    process.stdout.write(`Salida: ${relative(REPO_ROOT, outDir)}\n\n`);
+    process.stdout.write(`=== AppBootstrap v2: ${slug} ===\n`);
+    process.stdout.write(`Template:     ${templateId}\n`);
+    process.stdout.write(`Capabilities: ${tpl.capabilities.length} (${tpl.capabilities.join(', ')})\n`);
+    process.stdout.write(`Salida:       ${relative(REPO_ROOT, outDir)}\n`);
+    process.stdout.write(`Default user: ${extras.default_user.email ?? '(sin definir)'}\n\n`);
 
     // 1. Limpiar y crear out
     step(1, 6, 'Preparando carpeta de salida');
@@ -293,12 +382,8 @@ async function main(rawArgs) {
     mkdirSync(outDir, { recursive: true });
     info(`OK -> ${outDir}`);
 
-    // 2. Preparar config.json del tenant (se ESCRIBE en outDir DESPUES de Vite
-    //    para no mutar spa/public/config.json del arbol fuente).
-    step(2, 6, 'Preparando config.json del tenant (no muta spa/public/)');
-    // MSYS Bash en Windows traduce paths que empiezan por '/' a paths Windows.
-    // Si detectamos un drive letter en logo, asumimos mangling y nos quedamos
-    // con el sufijo desde "/MEDIA/" si existe.
+    // 2. Preparar config.json (NO muta el arbol fuente)
+    step(2, 6, 'Preparando config.json del tenant (no muta templates/)');
     let logoFinal = logo;
     if (/^[A-Za-z]:[\\/]/.test(logo)) {
         const m = logo.match(/[\\/]MEDIA[\\/].+$/i);
@@ -307,11 +392,11 @@ async function main(rawArgs) {
             info(`AVISO: --logo parecia mangled por MSYS ("${logo}"). Recuperado: "${recovered}".`);
             logoFinal = recovered;
         } else {
-            info(`AVISO: --logo no parece una URL absoluta ("${logo}"). Lo dejo tal cual.`);
+            info(`AVISO: --logo no parece URL absoluta ("${logo}"). Lo dejo tal cual.`);
         }
     }
     const tenantConfig = {
-        modulo: preset.module,
+        modulo: templateId,
         nombre,
         slug,
         color_acento: color,
@@ -320,34 +405,32 @@ async function main(rawArgs) {
     };
     info(`OK -> config.json se escribira en ${join(relative(REPO_ROOT, outDir), 'config.json')}`);
 
-    // 3. Build de Vite -> outDir
-    step(3, 6, 'Compilando SPA con Vite');
+    // 3. Build de Vite via pnpm workspaces
+    step(3, 6, `Compilando template ${templateId} con pnpm -F ${templateId} build`);
     try {
-        execFileSync('npm', ['run', 'build', '--silent'], {
-            cwd: SPA_DIR,
+        execFileSync('pnpm', ['-F', templateId, 'build'], {
+            cwd: REPO_ROOT,
             stdio: ['ignore', 'inherit', 'inherit'],
             env: {
                 ...process.env,
                 VITE_OUT_DIR: outDir,
-                VITE_MODULO: preset.module,
+                VITE_MODULO: templateId,
             },
             shell: process.platform === 'win32',
         });
     } catch (e) {
-        abort(`npm run build fallo (exit=${e.status}). Revisa la salida de Vite arriba.`);
+        abort(`pnpm -F ${templateId} build fallo (exit=${e.status}). Revisa Vite arriba.`);
     }
-    info('OK -> SPA compilada en outDir');
+    info('OK -> template compilado en outDir');
 
-    // Sobrescribir el config.json del tenant en outDir (Vite copio el dev
-    // default desde spa/public/; lo reemplazamos con la identidad del tenant).
     writeFileSync(
         join(outDir, 'config.json'),
         JSON.stringify(tenantConfig, null, 4) + '\n',
         'utf-8',
     );
-    info(`OK -> config.json del tenant escrito en outDir`);
+    info(`OK -> config.json del tenant escrito`);
 
-    // 4. Copiar backend PHP y assets
+    // 4. Copiar backend PHP y assets + CAPABILITIES filtradas
     step(4, 6, 'Copiando backend PHP y CAPABILITIES filtradas');
     const staticTrees = ['CORE', 'axidb', 'fonts', 'MEDIA', 'seed', 'spa/server'];
     for (const tree of staticTrees) {
@@ -364,18 +447,17 @@ async function main(rawArgs) {
             info(`OK  ${f}`);
         }
     }
-    // CAPABILITIES filtradas por preset
     mkdirSync(join(outDir, 'CAPABILITIES'), { recursive: true });
-    for (const cap of preset.capabilities) {
+    for (const cap of tpl.capabilities) {
         copyTreeIfExists(
             join(REPO_ROOT, 'CAPABILITIES', cap),
             join(outDir, 'CAPABILITIES', cap),
         );
     }
-    info(`OK  CAPABILITIES/  (${preset.capabilities.length} modulos: ${preset.capabilities.join(', ')})`);
+    info(`OK  CAPABILITIES/  (${tpl.capabilities.length} modulos del template)`);
 
-    // 5. Materializar configs + cleanup + STORAGE/.gitkeep + test gate
-    step(5, 6, 'Materializando configs y ejecutando AUTH_LOCK gate');
+    // 5. Materializar configs + cleanup + STORAGE/.gitkeep + tests
+    step(5, 6, 'Materializando configs y ejecutando AUTH_LOCK + capability gates');
     const materialized = materializeConfigExamples(outDir);
     if (materialized.length) info(`config examples -> ${materialized.join(', ')}`);
     const cleaned = cleanDebugFiles(outDir);
@@ -385,11 +467,24 @@ async function main(rawArgs) {
     mkdirSync(storageDir, { recursive: true });
     writeFileSync(join(storageDir, '.gitkeep'), '', 'utf-8');
 
+    // Limpiar rate-limit residual del directorio fuente. Sin esto el
+    // test_login arranca con contador a 5/min y devuelve 429.
+    const rlDir = join(outDir, 'spa', 'server', 'data', '_rl');
+    if (existsSync(rlDir)) rmSync(rlDir, { recursive: true, force: true });
+
     if (skipTest) {
-        info('SKIP test_login.php (--skip-test). NO usar en produccion.');
+        info('SKIP test_login.php + capability tests (--skip-test). NO usar en produccion.');
     } else {
-        try { runTestGate(outDir, testPort); info('OK -> test_login.php pasa'); }
-        catch (e) {
+        try {
+            if (shouldRunLoginGate(tpl.capabilities)) {
+                runTestGate(outDir, testPort);
+                info('OK -> test_login.php pasa');
+            } else {
+                info('SKIP test_login.php: el template no lleva CARTA+QR+TPV (no aplica).');
+            }
+            runCapabilityTests(outDir, tpl.capabilities);
+            info('OK -> tests de capabilities aplicables verdes');
+        } catch (e) {
             if (e instanceof BootstrapError) abort(e.message);
             throw e;
         }
@@ -400,10 +495,10 @@ async function main(rawArgs) {
     const sizeMB = dirSizeMB(outDir);
     process.stdout.write(`\n=== BOOTSTRAP OK ===\n`);
     process.stdout.write(`Tenant:     ${slug}\n`);
-    process.stdout.write(`Preset:     ${presetId} (modulo=${preset.module})\n`);
+    process.stdout.write(`Template:   ${templateId}\n`);
     process.stdout.write(`Tamano:     ${sizeMB} MB\n`);
     process.stdout.write(`Salida:     ${outDir}\n`);
-    process.stdout.write(`Caps:       ${preset.capabilities.length}\n`);
+    process.stdout.write(`Caps:       ${tpl.capabilities.length}\n`);
     process.stdout.write(`\nPara desplegar: sube el contenido de ${relative(REPO_ROOT, outDir)} al servidor Apache+PHP.\n`);
     return 0;
 }

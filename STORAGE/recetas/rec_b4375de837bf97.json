@@ -1,0 +1,88 @@
+{
+  "id": "rec_b4375de837bf97",
+  "slug": "sopa-de-verduras-y-trigo-sarraceno",
+  "titulo": "Sopa De Verduras Y Trigo Sarraceno",
+  "resumen": "Pon a cocer en una cazuela con agua las partes verdes de las cebolletas, de las zanahorias y de los puerros (bien limpios). Sazona, añade unas ramas de perejil y cuece durante 15 minutos. Cuela y reserva el caldo. Pela las cebolletas, las z",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "trigo sarraceno"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "lentejas rojas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "-8 hojas de menta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon a cocer en una cazuela con agua las partes verdes de las cebolletas, de las zanahorias y de los puerros (bien limpios). Sazona, añade unas ramas de perejil y cuece durante 15 minutos. Cuela y reserva el caldo. Pela las cebolletas, las zanahorias y los puerros y pícalos finamente. Ponlos a pochar en una cazuela con un chorrito de aceite. Lava los champiñones, córtalos en cuartos y lamínalos. Añádelos y rehógalos. Agrega las lentejas rojas, enjuaga el trigo sarraceno e incorpóralo. Cubre con el caldo y cuece todo durante unos 20 minutos a fuego suave. Pon a punto de sal. Desgrasa con ayuda de un cacillo. Pica las hojas de menta, salpica la sopa con ellas y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Verduras Y Trigo Sarraceno",
+    "meta_description": "Pon a cocer en una cazuela con agua las partes verdes de las cebolletas, de las zanahorias y de los puerros (bien limpios). Sazona, añade unas ramas de perejil y cuece durante 15 minutos. Cuela y reserva el caldo. Pela las cebolletas, las z",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

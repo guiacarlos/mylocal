@@ -1,0 +1,128 @@
+{
+  "id": "rec_1c16d23d72ada5",
+  "slug": "cocido-completo",
+  "titulo": "Cocido Completo",
+  "resumen": "Pon los garbanzos a remojo la víspera. Escurre los garbanzos y ponlos en la olla rápida con abundante agua hirviendo y sal. Pela la cebolla y la zanahoria, córtalas en daditos y añádelas. Limpia y corta el puerro de la misma manera y agréga",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "320",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chorizos pequeños (150 g)"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "jamón curado"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "carrilleras de ternera"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "zancarrón (morcillo)"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "tocino ibérico"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huesos de cañada"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "oreja de cerdo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el salteado de repollo:"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "repollo cocido"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Escurre los garbanzos y ponlos en la olla rápida con abundante agua hirviendo y sal. Pela la cebolla y la zanahoria, córtalas en daditos y añádelas. Limpia y corta el puerro de la misma manera y agrégalo. Retira la grasa al jamón y añádelo a la olla. Incorpora el zancarrón, la carrillera, el tocino, los chorizos, la oreja y los huesos. Sazona, tapa y cuece todo durante 25-30 minutos. Retira por un lado las carnes; por otro, los garbanzos con las verduras, y por otro, el caldo. Para preparar el salteado de repollo, pela y lamina los ajos y dóralos en una sartén con aceite. A continuación, agrega el repollo, sazónalo y saltéalo durante unos 5 minutos. Sirve los garbanzos con la carne y el salteado de berza. Puedes aprovechar el caldo para hacer una sopa."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cocido Completo",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Escurre los garbanzos y ponlos en la olla rápida con abundante agua hirviendo y sal. Pela la cebolla y la zanahoria, córtalas en daditos y añádelas. Limpia y corta el puerro de la misma manera y agréga",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

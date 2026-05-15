@@ -1,0 +1,113 @@
+{
+  "id": "rec_7f4798d22ee48a",
+  "slug": "arroz-con-champinones",
+  "titulo": "Arroz Con Champiñones",
+  "resumen": "Limpia los champiñones y separa los sombreros de los tallos. Corta en daditos el puerro, la cebolleta y los ajos. Pon todo a pochar en una cazuela amplia con 3-4 cucharadas de aceite. Pica los tallos de los champiñones y añádelos. Agrega el",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones grandes"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "huevos de codorniz"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "ml",
+      "nombre": "caldo de verduras"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el pan rallado a la provenzal:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un poco de perejil picado"
+    }
+  ],
+  "pasos": [
+    "Limpia los champiñones y separa los sombreros de los tallos. Corta en daditos el puerro, la cebolleta y los ajos. Pon todo a pochar en una cazuela amplia con 3-4 cucharadas de aceite. Pica los tallos de los champiñones y añádelos. Agrega el arroz y el caldo (el doble y un poco más). Sazona y cocina a fuego suave durante 15 minutos. Retira la parte inferior del tallo de los espárragos, pica el resto en cilindros, incorpóralos, mezcla y cocina todo junto durante 5 minutos más. Pon abundante agua a calentar en una cazuela y, cuando empiece a hervir, añade los sombreros de los champiñones y cuécelos durante 3 minutos. Retíralos, escúrrelos y colócalos en una placa de horno. Casca sobre cada champiñón un huevo de codorniz y sazónalos. Mezcla en un cuenco los ingredientes del pan rallado a la provenzal, espolvorea con él los champiñones de forma que la yema quede limpia y gratínalos en el horno durante 2-3 minutos. Sirve 4 porciones de arroz (para darle forma, puedes introducirlo en 4 tazas y después desmoldarlo) en una fuente. Coloca también los sombreros de champiñón y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Champiñones",
+    "meta_description": "Limpia los champiñones y separa los sombreros de los tallos. Corta en daditos el puerro, la cebolleta y los ajos. Pon todo a pochar en una cazuela amplia con 3-4 cucharadas de aceite. Pica los tallos de los champiñones y añádelos. Agrega el",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

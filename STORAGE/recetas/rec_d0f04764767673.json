@@ -1,0 +1,88 @@
+{
+  "id": "rec_d0f04764767673",
+  "slug": "verdel-asado-con-patatas",
+  "titulo": "Verdel Asado Con Patatas",
+  "resumen": "Pela las patatas, córtalas en rodajas de medio centímetro de grosor y colócalas en una bandeja de horno untada con un poco de aceite. Corta en juliana la cebolleta y el pimiento verde y ponlos encima de las patatas. Sazona, riega con aceite",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "verdeles grandes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de pescado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas, córtalas en rodajas de medio centímetro de grosor y colócalas en una bandeja de horno untada con un poco de aceite. Corta en juliana la cebolleta y el pimiento verde y ponlos encima de las patatas. Sazona, riega con aceite y vierte encima el caldo de pescado. Introduce la bandeja en el horno y hornea las hortalizas a 200 ºC durante 35 minutos. Limpia los verdeles, retírales las cabezas, las colas y las espinas centrales. Sazona los lomos y resérvalos. Retira la placa con las hortalizas del horno, quita todo el caldo y ponlo a reducir en una cazuela. Agrega un poco de harina de maíz refinada diluida en agua fría y remueve bien hasta que espese la salsa. Coloca los verdeles encima de las hortalizas. Machaca los ajos en un mortero, añade aceite y unta los lomos de verdel. Introdúcelos en el horno a 200 ºC durante 6-8 minutos. Sirve el pescado con las hortalizas y salsea. Espolvorea con perejil picado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Verdel Asado Con Patatas",
+    "meta_description": "Pela las patatas, córtalas en rodajas de medio centímetro de grosor y colócalas en una bandeja de horno untada con un poco de aceite. Corta en juliana la cebolleta y el pimiento verde y ponlos encima de las patatas. Sazona, riega con aceite",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

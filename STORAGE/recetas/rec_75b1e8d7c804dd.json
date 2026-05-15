@@ -1,0 +1,88 @@
+{
+  "id": "rec_75b1e8d7c804dd",
+  "slug": "pastel-de-bacalao-y-patatas",
+  "titulo": "Pastel De Bacalao Y Patatas",
+  "resumen": "Corta las cebolletas y los pimientos en daditos. Ponlos a pochar en una sartén con un poco de aceite. Sazona. Cocínalos hasta que queden bien dorados. Escalda el bacalao durante 2-3 minutos en una cazuela con agua hirviendo. Retira la piel ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "bacalao desalado"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta las cebolletas y los pimientos en daditos. Ponlos a pochar en una sartén con un poco de aceite. Sazona. Cocínalos hasta que queden bien dorados. Escalda el bacalao durante 2-3 minutos en una cazuela con agua hirviendo. Retira la piel y desmígalo. Añádelo a la sartén de las verduras y mezcla bien. Saltea brevemente y pasa la mezcla a un recipiente apto para el horno. Pela las patatas, cáscalas y ponlas a cocer en una cazuela con abundante agua. Sazona y cuécelas durante 10-15 minutos. Escúrrelas y pásalas por el pasapurés. Adereza el puré con aceite, sal, pimienta y un poco de pimentón. Cubre el bacalao con el puré de patatas. Bate el huevo, espolvoréalo con perejil picado y pinta con él el puré. Hornea el pastel a 190 ºC durante unos 5 minutos. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pastel De Bacalao Y Patatas",
+    "meta_description": "Corta las cebolletas y los pimientos en daditos. Ponlos a pochar en una sartén con un poco de aceite. Sazona. Cocínalos hasta que queden bien dorados. Escalda el bacalao durante 2-3 minutos en una cazuela con agua hirviendo. Retira la piel ",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

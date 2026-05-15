@@ -1,0 +1,68 @@
+{
+  "id": "rec_c60cd01dae26ab",
+  "slug": "brochetas-de-melon-con-salsa-de-caramelo",
+  "titulo": "Brochetas De Melón Con Salsa De Caramelo",
+  "resumen": "Con ayuda de un sacabolas, saca bolitas de los melones. Ensarta 4 bolitas en cada palito de brocheta alternando los colores (2 blancas del melón piel de sapo-2 naranjas del melón francés). Pon el azúcar a calentar en una cazuela hasta que s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "melón piel de sapo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "melón francés"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yogur natural"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Con ayuda de un sacabolas, saca bolitas de los melones. Ensarta 4 bolitas en cada palito de brocheta alternando los colores (2 blancas del melón piel de sapo-2 naranjas del melón francés). Pon el azúcar a calentar en una cazuela hasta que se funda y consigas un bonito caramelo tostado. Agrega la nata y remueve hasta que el caramelo y la nata queden perfectamente integrados. Reserva el tofe. Coloca el yogur en un bol y remueve bien. Añade el tofe y mezcla bien. Distribuye la crema en 4 recipientes y coloca encima las brochetas (2-3 por ración). Adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Brochetas De Melón Con Salsa De Caramelo",
+    "meta_description": "Con ayuda de un sacabolas, saca bolitas de los melones. Ensarta 4 bolitas en cada palito de brocheta alternando los colores (2 blancas del melón piel de sapo-2 naranjas del melón francés). Pon el azúcar a calentar en una cazuela hasta que s",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

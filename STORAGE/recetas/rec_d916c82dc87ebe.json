@@ -1,0 +1,97 @@
+{
+  "id": "rec_d916c82dc87ebe",
+  "slug": "sopa-marinera-con-tapioca",
+  "titulo": "Sopa Marinera Con Tapioca",
+  "resumen": "Coloca los berberechos en una cazuela pequeña, vierte el vino blanco, tapa y cocínalos a fuego moderado hasta que se abran. Cuela el caldo con una estameña y separa la carne de las conchas. Reserva por separado la carne de los berberechos y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "rape pequeño"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "berberechos"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "tapioca"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca los berberechos en una cazuela pequeña, vierte el vino blanco, tapa y cocínalos a fuego moderado hasta que se abran. Cuela el caldo con una estameña y separa la carne de las conchas. Reserva por separado la carne de los berberechos y el caldo.",
+    "Limpia bien el rape y saca 2 lomos limpios. Resérvalos.",
+    "Para hacer el fumet, coloca la cabeza, la espina central, las pieles y la cola del rape en una cazuela con agua hirviendo. Añade un manojo de perejil y la parte verde del puerro. Sazona y cuece todo durante 20 minutos. Cuela el caldo y resérvalo.",
+    "Pica finamente las zanahorias, el pimiento verde y el puerro y rehógalos en una cazuela con un chorrito de aceite. Añade el azafrán y mezcla bien. Vierte el caldo de los berberechos y el fumet y espera a que se caliente. Incorpora la tapioca poco a poco y cuécela durante 10-15 minutos (el tiempo que indique el paquete).",
+    "Corta el rape en dados de bocado, sazona e incorpóralos a la sopa. Añade los berberechos, pon la sopa a punto de sal y apaga el fuego. Sirve la sopa inmediatamente y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Marinera Con Tapioca",
+    "meta_description": "Coloca los berberechos en una cazuela pequeña, vierte el vino blanco, tapa y cocínalos a fuego moderado hasta que se abran. Cuela el caldo con una estameña y separa la carne de las conchas. Reserva por separado la carne de los berberechos y",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

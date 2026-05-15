@@ -1,0 +1,98 @@
+{
+  "id": "rec_2b12dd0a54274d",
+  "slug": "popietas-de-gallo-al-azafran",
+  "titulo": "Popietas De Gallo Al Azafrán",
+  "resumen": "Lava las patatas y cuécelas en una cazuela con abundante agua durante 20 minutos. Resérvalas. Retira las cabezas de los gallos y saca los filetes. Salpimiéntalos, pon tres gambas en un extremo de cada filete y enróscalos dejando la parte de",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "allos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "patatas (pequeñas)"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "g",
+      "nombre": "ambas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hebras de azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas y cuécelas en una cazuela con abundante agua durante 20 minutos. Resérvalas. Retira las cabezas de los gallos y saca los filetes. Salpimiéntalos, pon tres gambas en un extremo de cada filete y enróscalos dejando la parte de la piel hacia dentro. Coloca las popietas sobre un recipiente apto para el horno y riégalas con el txakoli y un chorrito de aceite. Ásalas en el horno a 200 ºC durante 10-12 minutos. Pon en una sartén la nata y la misma cantidad de agua. Añade las hebras de azafrán y una pizca de sal y pon a reducir a fuego suave. Agrega el jugo que ha soltado el pescado, mezcla bien y dale un hervor. Liga la salsa con la harina de maíz diluida en agua fría. Pon a punto de sal. Corta las patatas por la mitad, sazónalas, riégalas con un poco de aceite y espolvoréalas con perejil picado. Sirve las popietas, nápalas con la salsa y acompáñalas con las patatas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Popietas De Gallo Al Azafrán",
+    "meta_description": "Lava las patatas y cuécelas en una cazuela con abundante agua durante 20 minutos. Resérvalas. Retira las cabezas de los gallos y saca los filetes. Salpimiéntalos, pon tres gambas en un extremo de cada filete y enróscalos dejando la parte de",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

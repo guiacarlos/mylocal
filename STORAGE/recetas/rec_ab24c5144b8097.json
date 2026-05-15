@@ -1,0 +1,96 @@
+{
+  "id": "rec_ab24c5144b8097",
+  "slug": "paella-de-bull",
+  "titulo": "Paella De Bull",
+  "resumen": "Pon agua fría en un bol, introduce el estómago del atún y déjalo a remojo durante 4 o 5 horas. Tira el agua del remojo y pon agua nueva. Cuécelo en una cazuela con abundante agua (2 l aproximadamente) durante 1 minuto desde el momento en qu",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "estómago de atún en salazón (bull)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hebras de azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon agua fría en un bol, introduce el estómago del atún y déjalo a remojo durante 4 o 5 horas. Tira el agua del remojo y pon agua nueva. Cuécelo en una cazuela con abundante agua (2 l aproximadamente) durante 1 minuto desde el momento en que el agua empiece a hervir.",
+    "Retira el bull de atún, deja que se temple un poco y córtalo en trozos de unos 2 o 3 centímetros.",
+    "Pela y pica las cebollas y los ajos y ponlos a rehogar en una paella con un poco de aceite. Cuando estén bien pochados, agrega el tomate pelado y picado. Rehógalo e incorpora el bull, el pimentón, el azafrán y el arroz. Rehoga un poco. Vierte agua (1,2 ml) y cocina el arroz durante 18 minutos a fuego medio. Pon a punto de sal y añade un poco de perejil picado.",
+    "Decora con el limón y con unas hojas de perejil. Cubre con un paño limpio de cocina y déjalo reposar unos 5 minutos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Paella De Bull",
+    "meta_description": "Pon agua fría en un bol, introduce el estómago del atún y déjalo a remojo durante 4 o 5 horas. Tira el agua del remojo y pon agua nueva. Cuécelo en una cazuela con abundante agua (2 l aproximadamente) durante 1 minuto desde el momento en qu",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

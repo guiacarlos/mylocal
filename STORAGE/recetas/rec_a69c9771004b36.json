@@ -1,0 +1,158 @@
+{
+  "id": "rec_a69c9771004b36",
+  "slug": "conejo-con-arroz-verde-cremoso",
+  "titulo": "Conejo Con Arroz Verde Cremoso",
+  "resumen": "Trocea el conejo, salpimiéntalo, pasa los trozos ligeramente por harina y dóralos en una olla rápida con un chorrito de aceite. Cuando el conejo esté bien dorado, agrega las cebollas y los dientes de ajo finamente picados. Añade la zanahori",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "conejo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas rojas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino tinto"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "caldo de carne"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "menta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el arroz verde:"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "espinacas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "vino de Jerez"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de verduras"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "nata líquida"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Trocea el conejo, salpimiéntalo, pasa los trozos ligeramente por harina y dóralos en una olla rápida con un chorrito de aceite. Cuando el conejo esté bien dorado, agrega las cebollas y los dientes de ajo finamente picados. Añade la zanahoria, el puerro y el pimiento verde bien picados y sazona. Rehoga durante unos minutos y moja con el vino tinto. Deja que hierva unos minutos hasta que se evapore el alcohol. Agrega el caldo, la salsa de tomate y la menta y mezcla bien. Cierra la olla y cocínalo durante 6-8 minutos. Retira la carne a una cazuela y tritura las verduras con la batidora eléctrica. Agrega esta salsa colada al conejo y resérvalo caliente. Para el arroz verde, pica las chalotas y ponlas a pochar en una cazuela con un chorrito de aceite (no deben dorarse). Cuando tomen un poco de color, agrega el arroz, rehógalo ligeramente y añade el vino. Deja que hierva hasta que se evapore el alcohol. Sazona y vete incorporando el caldo de verduras poco a poco. Cocínalo durante 15-18 minutos sin dejar de remover. Haz un licuado con las espinacas. Cuando el arroz esté a punto, retíralo del fuego y añade el licuado. Mezcla hasta que se quede bien verde e incorpora la nata. Deja que el arroz repose durante un minuto. Sirve el conejo en un plato, salsea y acompáñalo con un poco de arroz. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Conejo Con Arroz Verde Cremoso",
+    "meta_description": "Trocea el conejo, salpimiéntalo, pasa los trozos ligeramente por harina y dóralos en una olla rápida con un chorrito de aceite. Cuando el conejo esté bien dorado, agrega las cebollas y los dientes de ajo finamente picados. Añade la zanahori",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

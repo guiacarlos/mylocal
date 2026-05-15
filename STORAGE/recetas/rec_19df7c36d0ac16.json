@@ -1,0 +1,102 @@
+{
+  "id": "rec_19df7c36d0ac16",
+  "slug": "sopa-de-arroz-con-pollo",
+  "titulo": "Sopa De Arroz Con Pollo",
+  "resumen": "Coloca los muslos en la olla rápida. Pela y trocea la cebolleta y agrégala. Cubre con abundante agua y añade la pastilla de caldo de pollo. Coloca la tapa y cuece todo durante 10-12 minutos. Retira los muslos de pollo y resérvalos. Tritura ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "muslos de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "mazorcas de maíz cocidas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ramas de cilantro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca los muslos en la olla rápida. Pela y trocea la cebolleta y agrégala. Cubre con abundante agua y añade la pastilla de caldo de pollo. Coloca la tapa y cuece todo durante 10-12 minutos. Retira los muslos de pollo y resérvalos. Tritura el caldo con la cebolleta con la batidora eléctrica y resérvalo.",
+    "Limpia los puerros, retirándoles la parte superior e inferior. Córtalos en daditos pequeños. Pela la calabaza y córtala en daditos. Haz lo mismo con la patata. Rehoga todo en una cazuela grande con un chorrito de aceite.",
+    "Incorpora el arroz y rehógalo un poco. Con un cuchillo, separa suavemente los granos de maíz de la mazorca y pícalos un poco. Añádelos a la cazuela y vierte el caldo. Cocina la sopa durante 15 minutos y pon a punto de sal.",
+    "Retira la piel y los huesos del pollo, desmígalo y añádelo.",
+    "Pela el ajo y májalo en el mortero. Agrega el cilantro y sigue majando bien. Añádelo a la sopa y mezcla bien. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Arroz Con Pollo",
+    "meta_description": "Coloca los muslos en la olla rápida. Pela y trocea la cebolleta y agrégala. Cubre con abundante agua y añade la pastilla de caldo de pollo. Coloca la tapa y cuece todo durante 10-12 minutos. Retira los muslos de pollo y resérvalos. Tritura ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

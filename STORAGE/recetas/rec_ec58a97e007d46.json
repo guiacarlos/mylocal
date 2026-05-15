@@ -1,0 +1,130 @@
+{
+  "id": "rec_ec58a97e007d46",
+  "slug": "pescadilla-rebozada-con-morrones-y-salsa-tartara",
+  "titulo": "Pescadilla Rebozada Con Morrones Y Salsa Tártara",
+  "resumen": "Lava los pimientos, colócalos en una bandeja apta para el horno, riégalos con un chorro de aceite y sazónalos. Hornéalos a 190 ºC durante 30-35 minutos. Deja que se templen, pélalos y córtalos en tiras.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pescadilla (de unos 1.400 g)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pimientos rojos morrones"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "hojas",
+      "nombre": "lechuga"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa tártara:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "-3 pepinillos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "alcaparras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava los pimientos, colócalos en una bandeja apta para el horno, riégalos con un chorro de aceite y sazónalos. Hornéalos a 190 ºC durante 30-35 minutos. Deja que se templen, pélalos y córtalos en tiras.",
+    "Pela y lamina 2 dientes de ajo y dóralos en una sartén con un chorrito de aceite. Añade las tiras de pimientos y confítalas a fuego medio. Reserva los pimientos confitados.",
+    "Para la salsa tártara, cuece un huevo durante 10 minutos. Pélalo, pícalo y colócalo en un bol. Pica las alcaparras, la cebolleta y los pepinillos e incorpóralos al bol.",
+    "Pon el otro huevo en un vaso batidor, agrega una pizca de sal y unas gotas de vinagre.",
+    "Incorpora 150 ml de aceite y tritura con la batidora eléctrica hasta que ligue.",
+    "Vierte la mayonesa en el bol, espolvorea con un poco de perejil picado y mezcla bien. Reserva la salsa tártara.",
+    "Limpia la pescadilla separando la cabeza y las espinas. Trocéala a tu gusto. Sazona los trozos de pescadilla y pásalos por la harina y por el huevo batido. Fríelos en una sartén con aceite y los otros 2 dientes de ajo (con piel).",
+    "Sirve los pimientos en el fondo de los platos. Coloca encima los trozos de pescadilla y pon al lado las hojas de lechuga con un poco de salsa tártara. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pescadilla Rebozada Con Morrones Y Salsa Tártara",
+    "meta_description": "Lava los pimientos, colócalos en una bandeja apta para el horno, riégalos con un chorro de aceite y sazónalos. Hornéalos a 190 ºC durante 30-35 minutos. Deja que se templen, pélalos y córtalos en tiras.",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,93 @@
+{
+  "id": "rec_5770e9f021f746",
+  "slug": "bacalao-al-estilo-de-viana-do-castelo",
+  "titulo": "Bacalao Al Estilo De Viana Do Castelo",
+  "resumen": "Corta la cebolla en aros y ponla a confitar en una sartén con abundante aceite. Corta el bacalao en lomos y agrégalos junto con el pimentón. Confita el bacalao durante 10 minutos. Pela las patatas, córtalas en rodajas y cuécelas en una cazu",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "bacalao (desalado)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "col"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "barra de pan de maíz"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "aceitunas negras"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta la cebolla en aros y ponla a confitar en una sartén con abundante aceite. Corta el bacalao en lomos y agrégalos junto con el pimentón. Confita el bacalao durante 10 minutos. Pela las patatas, córtalas en rodajas y cuécelas en una cazuela con abundante agua y una pizca de sal durante 15 minutos. Escúrrelas y sécalas un poco. Pela y lamina los dientes de ajo y ponlos a dorar en una sartén con un chorrito de aceite. Lava las hojas de col, córtalas en juliana fina y añádelas a la sartén. Sazona y saltéalas brevemente. Corta 4 rebanadas finas de pan y tuéstalas en el horno. Sirve el bacalao con la cebolla, la col, las patatas, el pan tostado y las aceitunas. Rocía el plato con el aceite resultante de confitar el bacalao. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Al Estilo De Viana Do Castelo",
+    "meta_description": "Corta la cebolla en aros y ponla a confitar en una sartén con abundante aceite. Corta el bacalao en lomos y agrégalos junto con el pimentón. Confita el bacalao durante 10 minutos. Pela las patatas, córtalas en rodajas y cuécelas en una cazu",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

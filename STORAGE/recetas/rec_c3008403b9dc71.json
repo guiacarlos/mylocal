@@ -1,0 +1,96 @@
+{
+  "id": "rec_c3008403b9dc71",
+  "slug": "gallo-al-jengibre-con-cuscus",
+  "titulo": "Gallo Al Jengibre Con Cuscús",
+  "resumen": "Limpia los gallos, saca los filetes y colócalos en un plato. Exprime el limón y reserva un trozo de cáscara. Mezcla en un bol el zumo de limón, los dientes de ajo pelados y picaditos, un poco de jengibre rallado y un buen chorro de aceite. ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "g",
+      "nombre": "allos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "cuscús"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "tomates cherry"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trocito de jengibre fresco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia los gallos, saca los filetes y colócalos en un plato. Exprime el limón y reserva un trozo de cáscara. Mezcla en un bol el zumo de limón, los dientes de ajo pelados y picaditos, un poco de jengibre rallado y un buen chorro de aceite. Riega los filetes de gallo con la marinada y déjalos macerando durante 15 minutos. Tuesta los piñones en una sartén sin aceite. Resérvalos. Pon agua a calentar en un cazo con una pizca de sal. Cuando empiece a hervir, añade los tomates cherry y escáldalos. Refréscalos, pélalos y resérvalos.",
+    "Pon el cuscús en un bol. Pon el agua a calentar (la misma cantidad de agua que de cuscús) con un poco de sal y la cáscara de limón reservada. Vierte el agua sobre el cuscús, tápalo con film transparente y espera hasta que absorba toda el agua. Mezcla el cuscús con los piñones y reserva.",
+    "Coloca los filetes de gallo sobre la bandeja de horno, riégalos con la marinada y agrega los tomates cherry pelados. Salpimienta el conjunto y hornea a 200 ºC durante 5 minutos.",
+    "Sirve el gallo con los tomates cherry. Rocíalo con el jugo que ha soltado en la bandeja del horno y espolvoréalo con un poco de perejil picado. Acompáñalo con el cuscús y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gallo Al Jengibre Con Cuscús",
+    "meta_description": "Limpia los gallos, saca los filetes y colócalos en un plato. Exprime el limón y reserva un trozo de cáscara. Mezcla en un bol el zumo de limón, los dientes de ajo pelados y picaditos, un poco de jengibre rallado y un buen chorro de aceite. ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

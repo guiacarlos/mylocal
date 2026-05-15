@@ -1,0 +1,98 @@
+{
+  "id": "rec_30ee93d69bd4b2",
+  "slug": "kokotxas-en-tempura-con-salsa-verde",
+  "titulo": "Kokotxas En Tempura Con Salsa Verde",
+  "resumen": "Pela los ajos y la cebolleta y pícalos. Ponlos a pochar a fuego suave en un cazo con un chorrito de aceite. Sazona. Añade una cucharada de harina y cocínala un poco. Vierte el txakoli, dale un hervor y agrega un chorrito de agua. Añade pere",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "kokotxas de merluza"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "kokotxas de bacalao"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la tempura:"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "275",
+      "unidad": "ml",
+      "nombre": "agua fría"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos y la cebolleta y pícalos. Ponlos a pochar a fuego suave en un cazo con un chorrito de aceite. Sazona. Añade una cucharada de harina y cocínala un poco. Vierte el txakoli, dale un hervor y agrega un chorrito de agua. Añade perejil picado y deja que reduzca. Tritura y reserva la salsa verde caliente. Para hacer la tempura, mezcla en un bol la harina con el agua fría hasta que quede una masa homogénea y ligera. Retira las puntas de piel de las kokotxas de merluza y déjalas enteras. Retira la piel de las kokotxas de bacalao y córtalas por la mitad. Sazónalas e introdúcelas en la masa de tempura. Fríelas en una sartén con aceite y escúrrelas sobre un plato cubierto con papel absorbente. Sirve las kokotxas y acompáñalas con la salsa verde. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Kokotxas En Tempura Con Salsa Verde",
+    "meta_description": "Pela los ajos y la cebolleta y pícalos. Ponlos a pochar a fuego suave en un cazo con un chorrito de aceite. Sazona. Añade una cucharada de harina y cocínala un poco. Vierte el txakoli, dale un hervor y agrega un chorrito de agua. Añade pere",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

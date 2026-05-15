@@ -1,0 +1,106 @@
+{
+  "id": "rec_70b204064128f9",
+  "slug": "crema-de-mejillones-con-hojaldre",
+  "titulo": "Crema De Mejillones Con Hojaldre",
+  "resumen": "Retira las barbas de los mejillones y colócalos en una cazuela. Añade el vino blanco y 2 vasos de agua y coloca la tapa. Deja cocer los mejillones hasta que se abran. Retira los mejillones y saca la carne de las conchas. Cuela el caldo y re",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "kg",
+      "nombre": "mejillones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "-2 láminas de hojaldre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "",
+      "nombre": "barra de pan"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "copa",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "estragón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Retira las barbas de los mejillones y colócalos en una cazuela. Añade el vino blanco y 2 vasos de agua y coloca la tapa. Deja cocer los mejillones hasta que se abran. Retira los mejillones y saca la carne de las conchas. Cuela el caldo y resérvalo.",
+    "Corta el pan en rebanadas, colócalas en una bandeja apta para horno y tuéstalas bien por los dos lados. Trocéalo y resérvalo.",
+    "Pela y pica la cebolla, las zanahorias y los puerros y ponlos a pochar en una cazuela con un chorro de aceite. Sazona. Cuando la verdura coja un poco de color, añade el pan tostado. Incorpora la salsa de tomate, una pizca de estragón, ½ copa de brandy, el caldo y 2/3 de los mejillones (reserva el resto). Cuece todo junto a fuego lento durante 20 minutos. Tritura con la batidora eléctrica, desespuma, cuela y reserva la crema.",
+    "Saltea el resto de los mejillones en una sartén con una gotita de aceite, añade la otra ½ copa de brandy y flambea. Incorpora los mejillones a la crema, mezcla bien y espera a que se temple. Llena unos cuencos aptos para horno con la crema y tápalos con unos círculos de hojaldre (tienen que ser un poco más grandes que la boca de los cuencos). Aprieta el hojaldre contra los bordes de manera que queden bien sellados. Hornéalos a 180 ºC durante 15 minutos. Sirve y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Mejillones Con Hojaldre",
+    "meta_description": "Retira las barbas de los mejillones y colócalos en una cazuela. Añade el vino blanco y 2 vasos de agua y coloca la tapa. Deja cocer los mejillones hasta que se abran. Retira los mejillones y saca la carne de las conchas. Cuela el caldo y re",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

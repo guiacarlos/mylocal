@@ -1,0 +1,93 @@
+{
+  "id": "rec_79ab73dbbb8e50",
+  "slug": "redondo-rebozado-con-brocheta-de-platano",
+  "titulo": "Redondo Rebozado Con Brocheta De Plátano",
+  "resumen": "Para las brochetas, pela los plátanos y córtalos en cilindros (saca 4 trozos de cada plátano). Colócalos en un bol y riégalos con el zumo del limón. Pon el cardamomo en el mortero, májalo y añádelo al bol. Agrega también el comino, una pizc",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "filetes de redondo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "plátanos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo batido (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "",
+      "nombre": "semillas de cardamomo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "comino"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Para las brochetas, pela los plátanos y córtalos en cilindros (saca 4 trozos de cada plátano). Colócalos en un bol y riégalos con el zumo del limón. Pon el cardamomo en el mortero, májalo y añádelo al bol. Agrega también el comino, una pizca de sal y otra de azúcar. Mezcla bien y deja que marinen durante 10-15 minutos. Ensarta los trozos en 4 palos de brocheta y cocínalos a la plancha. Extiende los filetes de redondo y retira las telillas que pudieran tener. Salpimiéntalos y pásalos por harina y huevo batido. Fríelos en una sartén con aceite. Retíralos a una fuente cubierta con papel absorbente. Sirve los filetes y acompáñalos con las brochetas de plátano. Decora con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Redondo Rebozado Con Brocheta De Plátano",
+    "meta_description": "Para las brochetas, pela los plátanos y córtalos en cilindros (saca 4 trozos de cada plátano). Colócalos en un bol y riégalos con el zumo del limón. Pon el cardamomo en el mortero, májalo y añádelo al bol. Agrega también el comino, una pizc",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,88 @@
+{
+  "id": "rec_d843d02c508432",
+  "slug": "pechuga-de-pavo-con-cebolla-caramelizada",
+  "titulo": "Pechuga De Pavo Con Cebolla Caramelizada",
+  "resumen": "Pela y pica los dientes de ajo y colócalos en el mortero. Agrega un poco de pimienta en grano y maja todo muy bien. Con una puntilla, haz 4 cortes en la pechuga e introduce un poco de majado en cada corte. Salpimienta la carne, enróllala y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "pechuga de pavo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "ml",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta (en grano y molida)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela y pica los dientes de ajo y colócalos en el mortero. Agrega un poco de pimienta en grano y maja todo muy bien. Con una puntilla, haz 4 cortes en la pechuga e introduce un poco de majado en cada corte. Salpimienta la carne, enróllala y átala con una cuerda de cocina. Dórala en una sartén con un chorrito de aceite. Pon el brandy en una cazuela y dale un hervor. Carga una jeringuilla con el brandy e inyéctalo en diferentes puntos de la pechuga. Coloca la pechuga en un recipiente apto para horno y hornéala a 190 ºC durante 20 minutos. Pela y pica las cebollas y ponlas a pochar en una sartén con aceite. Sazona. Cuando empiecen a caramelizarse, agrega el vinagre y la miel. Cocina el conjunto durante 20 minutos. Corta la pechuga de pavo en filetes y acompáñala con la cebolla caramelizada. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pechuga De Pavo Con Cebolla Caramelizada",
+    "meta_description": "Pela y pica los dientes de ajo y colócalos en el mortero. Agrega un poco de pimienta en grano y maja todo muy bien. Con una puntilla, haz 4 cortes en la pechuga e introduce un poco de majado en cada corte. Salpimienta la carne, enróllala y ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

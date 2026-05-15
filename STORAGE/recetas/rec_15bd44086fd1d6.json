@@ -1,0 +1,102 @@
+{
+  "id": "rec_15bd44086fd1d6",
+  "slug": "nigiris-variados",
+  "titulo": "Nigiris Variados",
+  "resumen": "Lava el arroz con abundante agua para quitarle el almidón. Repite el proceso hasta que el agua salga clara. Coloca el arroz en una cazuela y añádele agua (360 ml).",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz para sushi"
+    },
+    {
+      "cantidad": "360",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "bonito fresco"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "huevas de trucha"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "paquete",
+      "nombre": "alga nori"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vinagre de arroz"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "wasabi"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "jengibre encurtido"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava el arroz con abundante agua para quitarle el almidón. Repite el proceso hasta que el agua salga clara. Coloca el arroz en una cazuela y añádele agua (360 ml).",
+    "Pon a calentar el arroz con el agua y una pizca de sal. Cuando empiece a hervir, coloca un trozo de papel de aluminio sobre la cazuela y pon la tapa para que no salga nada de vapor. Baja el fuego, cuécelo durante 10 minutos (durante la cocción no se puede destapar la cazuela) y déjalo reposar (sin destapar) durante otros 10 minutos más.",
+    "Mezcla el azúcar con el vinagre hasta que se disuelva el azúcar. Extiende el arroz sobre una bandeja, añádele la mitad de la mezcla de azúcar y vinagre (reserva el resto) y remueve hasta que los ingredientes queden bien integrados. Abanícalo para que se enfríe. Humedécete las manos y coge pequeñas porciones de arroz, forma 24 bolitas y colócalas sobre una superficie lisa.",
+    "Pela los langostinos y ábrelos por la mitad a lo largo de manera que queden 8 mitades. Resérvalos.",
+    "Corta el bonito en 8 lonchitas finas. Resérvalas. Corta 16 tiras de alga nori (8 de 15 cm x 2 cm y 8 de 15 cm x 3,5 cm). Para montar los nigiris de atún, coloca las 8 lonchitas de atún encima de 8 bolitas de arroz. Para hacer los nigiris de langostinos, cocina los langostinos a la plancha. Extiende las tiras de alga (de 15 cm x 2 cm) sobre una superficie lisa. Con la ayuda de un pincel, humedécelas con la mezcla de azúcar y vinagre. Pon encima una bolita de arroz y un langostino. Coge los extremos del alga y júntalos alrededor del arroz y del langostino utilizando un grano de arroz como «pegamento». Para hacer los nigiris de huevas de trucha, envuelve las otras bolitas de arroz con las tiras de alga nori humedecidas en la mezcla de azúcar y vinagre (de 15 cm x 3,5 cm) ponlas en sentido vertical y coloca sobre el arroz las huevas de trucha. Pasa los nigiris a una fuente amplia y acompáñalos con la salsa de soja, un poco de wasabi y el jengibre encurtido. Si lo deseas, decora con unos palillos chinos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Nigiris Variados",
+    "meta_description": "Lava el arroz con abundante agua para quitarle el almidón. Repite el proceso hasta que el agua salga clara. Coloca el arroz en una cazuela y añádele agua (360 ml).",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

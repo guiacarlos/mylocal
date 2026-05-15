@@ -1,0 +1,118 @@
+{
+  "id": "rec_d62ef4047cf19a",
+  "slug": "arroz-integral-con-verduras-asadas",
+  "titulo": "Arroz Integral Con Verduras Asadas",
+  "resumen": "Coloca el pimiento, la berenjena, las cebolletas y los tomates en una placa de horno. Riégalos con un chorro de aceite y sazona todo. Asa las hortalizas en el horno a 180 ºC durante 35 minutos. Deja templar, pela el pimiento y trocea las ve",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz integral"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca el pimiento, la berenjena, las cebolletas y los tomates en una placa de horno. Riégalos con un chorro de aceite y sazona todo. Asa las hortalizas en el horno a 180 ºC durante 35 minutos. Deja templar, pela el pimiento y trocea las verduras. Reserva. Retira las capas externas de los puerros. Pícalos finamente y ponlos a rehogar en una cazuela (amplia y plana) con un chorrito de aceite. Pela los 2 ajos, pícalos finamente y añádelos. Rehoga todo durante 5 minutos. Agrega el arroz y remuévelo un poco para que se mezcle bien con las verduras. Vierte el agua (1,5 l), sazona y cocina durante 30 minutos. Espolvorea con perejil picado. Pon el huevo en el vaso batidor, agrega una pizca de sal, un chorrito de vinagre, 1 diente de ajo picadito y una buena cantidad de aceite. Introduce la batidora y tritura hasta que ligue. Sirve el arroz con las hortalizas. Acompáñalo con la mayonesa de ajo. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Integral Con Verduras Asadas",
+    "meta_description": "Coloca el pimiento, la berenjena, las cebolletas y los tomates en una placa de horno. Riégalos con un chorro de aceite y sazona todo. Asa las hortalizas en el horno a 180 ºC durante 35 minutos. Deja templar, pela el pimiento y trocea las ve",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

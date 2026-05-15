@@ -1,0 +1,93 @@
+{
+  "id": "rec_b27cf35bd44b42",
+  "slug": "redondo-mechado-a-la-cerveza",
+  "titulo": "Redondo Mechado A La Cerveza",
+  "resumen": "Pon agua a calentar en una cazuelita. Lava las patatas, agrégalas y cuécelas durante 25 minutos. Sazona. Corta el tocino en tiras y mecha el redondo. Salpimienta la carne y séllala a fuego fuerte en una tartera con un poco de aceite. Baja e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "redondo de ternera"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "tocino ibérico"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "peras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "cerveza"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "patatas pequeñas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon agua a calentar en una cazuelita. Lava las patatas, agrégalas y cuécelas durante 25 minutos. Sazona. Corta el tocino en tiras y mecha el redondo. Salpimienta la carne y séllala a fuego fuerte en una tartera con un poco de aceite. Baja el fuego, tapa la tartera y cocina la carne (dándole vueltas de vez en cuando) durante 25 minutos. Pela la cebolleta, limpia el puerro y pícalos. Ponlos a pochar en una cazuela con un chorrito de aceite. Sazona. Cuando las verduras estén pochadas, pela las peras, trocéalas e incorpóralas. Vierte la cerveza y cocina todo durante 20 minutos. Pon a punto de sal, tritura y espolvorea con un poco de perejil picado. Corta el redondo en filetes finos y sírvelo. Acompáñalo con la salsa y las patatas abiertas por la mitad. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Redondo Mechado A La Cerveza",
+    "meta_description": "Pon agua a calentar en una cazuelita. Lava las patatas, agrégalas y cuécelas durante 25 minutos. Sazona. Corta el tocino en tiras y mecha el redondo. Salpimienta la carne y séllala a fuego fuerte en una tartera con un poco de aceite. Baja e",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

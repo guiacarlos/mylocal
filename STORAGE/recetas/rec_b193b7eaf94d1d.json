@@ -1,0 +1,113 @@
+{
+  "id": "rec_b193b7eaf94d1d",
+  "slug": "berlinesas",
+  "titulo": "Berlinesas",
+  "resumen": "Vierte la mitad de la leche en un bol. Añade la levadura y el azúcar y mezcla bien. Agrega el resto de la leche y la esencia de vainilla. Remueve bien, incorpora los huevos de uno en uno y sigue mezclando. Mezcla la sal con la harina y añád",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 36,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "harina de fuerza"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "g",
+      "nombre": "levadura deshidratada de panadero"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "pizca",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nata montada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para espolvorear:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar en grano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "canela en polvo"
+    }
+  ],
+  "pasos": [
+    "Vierte la mitad de la leche en un bol. Añade la levadura y el azúcar y mezcla bien. Agrega el resto de la leche y la esencia de vainilla. Remueve bien, incorpora los huevos de uno en uno y sigue mezclando. Mezcla la sal con la harina y añádelas al bol poco a poco, sin dejar de mezclar con la mano (es importante hacerlo siempre hacia el mismo lado). Pasa la masa a una superficie lisa (encimera) e incorpora la mantequilla a temperatura ambiente. Sigue amasando hasta que todos los ingredientes estén bien incorporados. Deja fermentar hasta que la masa doble su volumen (mínimo 2 horas). Enharina la masa y estírala con un rodillo hasta dejarla con un grosor de unos 2 centímetros. Con un molde redondo, corta círculos de masa, colócalos sobre una bandeja cubierta con papel de hornear y déjalos reposar durante 1 hora hasta que doblen su volumen. Pasado este tiempo, fríelos en una cazuela con aceite no muy caliente. Escúrrelos sobre papel absorbente. Mezcla el azúcar glas, la canela y el azúcar en grano y pasa las bolitas de masa por la mezcla. Corta cada bolita por la mitad y rellénalas con la nata montada. Sirve y decora con una ramita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Berlinesas",
+    "meta_description": "Vierte la mitad de la leche en un bol. Añade la levadura y el azúcar y mezcla bien. Agrega el resto de la leche y la esencia de vainilla. Remueve bien, incorpora los huevos de uno en uno y sigue mezclando. Mezcla la sal con la harina y añád",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

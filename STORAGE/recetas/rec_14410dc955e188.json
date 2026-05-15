@@ -1,0 +1,83 @@
+{
+  "id": "rec_14410dc955e188",
+  "slug": "salmon-encebollado-con-tomate",
+  "titulo": "Salmón Encebollado Con Tomate",
+  "resumen": "Pela las cebollas, córtalas en juliana fina y ponlas a pochar en un sartén con aceite hasta que queden bien caramelizadas. Sazona. Fríe las hojas de espinaca en una sartén con aceite templado hasta que queden crujientes. Escúrrelas sobre un",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "rodajas de salmón"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "hojas",
+      "nombre": "espinaca"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "vino dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela las cebollas, córtalas en juliana fina y ponlas a pochar en un sartén con aceite hasta que queden bien caramelizadas. Sazona. Fríe las hojas de espinaca en una sartén con aceite templado hasta que queden crujientes. Escúrrelas sobre un plato cubierto con papel absorbente. Sazona. Pela los tomates y córtalos en daditos. Fríelos brevemente a fuego fuerte en una sartén con aceite. Sazona. Vierte el vino y deja que reduzca. Salpimienta las rodajas de salmón y cocínalas a la plancha durante 2 minutos por cada lado. Sirve el salmón y acompáñalo con la cebolla, las hojas de espinaca y los dados de tomate. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmón Encebollado Con Tomate",
+    "meta_description": "Pela las cebollas, córtalas en juliana fina y ponlas a pochar en un sartén con aceite hasta que queden bien caramelizadas. Sazona. Fríe las hojas de espinaca en una sartén con aceite templado hasta que queden crujientes. Escúrrelas sobre un",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

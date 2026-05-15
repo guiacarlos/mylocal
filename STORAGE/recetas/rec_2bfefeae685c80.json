@@ -1,0 +1,83 @@
+{
+  "id": "rec_2bfefeae685c80",
+  "slug": "vasitos-de-mascarpone-y-dulce-de-manzana",
+  "titulo": "Vasitos De Mascarpone Y Dulce De Manzana",
+  "resumen": "Trocea las galletas y aplástalas un poco. Repártelas entre los 4 recipientes. Corta el dulce de manzana en daditos y repártelo en los recipientes. Pela el kiwi, córtalo en daditos, ponlos en un bol y ralla encima el jengibre. Agrega las fra",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "queso mascarpone"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "dulce de manzana"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "caramelo líquido"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "g",
+      "nombre": "alletas tostadas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "kiwi"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de jengibre"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "confetis de azúcar multicolores"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Trocea las galletas y aplástalas un poco. Repártelas entre los 4 recipientes. Corta el dulce de manzana en daditos y repártelo en los recipientes. Pela el kiwi, córtalo en daditos, ponlos en un bol y ralla encima el jengibre. Agrega las frambuesas (reserva 4) y mezcla. Coloca el queso en un bol y remueve con una varilla. Añade un poco de caramelo y sigue mezclando. Mezcla ligeramente el queso con la fruta (la idea es que quede un queso veteado) y pon una porción en cada recipiente. Riégalos con el caramelo líquido y adórnalos con los confetis de colores. Decora con las frambuesas reservadas y unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Vasitos De Mascarpone Y Dulce De Manzana",
+    "meta_description": "Trocea las galletas y aplástalas un poco. Repártelas entre los 4 recipientes. Corta el dulce de manzana en daditos y repártelo en los recipientes. Pela el kiwi, córtalo en daditos, ponlos en un bol y ralla encima el jengibre. Agrega las fra",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

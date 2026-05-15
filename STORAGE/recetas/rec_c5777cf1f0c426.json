@@ -1,0 +1,98 @@
+{
+  "id": "rec_c5777cf1f0c426",
+  "slug": "pate-de-campana",
+  "titulo": "Paté De Campaña",
+  "resumen": "Pela y pica las cebollas y ponlas a pochar en una sartén con un chorrito de aceite. Cocínalas a fuego suave durante unos 15 minutos. Pon la carne picada en un bol, añade los tomates picados y el foie mi-cuit cortado en dados. Añade la mezcl",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "entrantes",
+  "tags": [
+    "entrantes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "carne picada de ternera"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "foie mi-cuit"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "7",
+      "unidad": "",
+      "nombre": "tomates deshidratados en aceite"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "vino de Oporto"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hogaza",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "-25 granos de pimienta verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "mezcla de 4 especias (pimienta negra, clavo, jengibre y"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica las cebollas y ponlas a pochar en una sartén con un chorrito de aceite. Cocínalas a fuego suave durante unos 15 minutos. Pon la carne picada en un bol, añade los tomates picados y el foie mi-cuit cortado en dados. Añade la mezcla de 4 especias, los granos de pimienta, el vino y el brandy. Incorpora la cebolla pochada, sazona y mezcla bien con las manos limpias. Rellena unos botes de cristal con la mezcla y tápalos. Tienen que quedar herméticamente cerrados. Introduce los tarros en la olla rápida y cúbrelos con agua. Coloca la tapa y cocínalos durante 35 minutos. Corta el pan en rebanadas y tuéstalas en el horno. Sirve el paté de campaña y acompáñalo con el pan tostado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Paté De Campaña",
+    "meta_description": "Pela y pica las cebollas y ponlas a pochar en una sartén con un chorrito de aceite. Cocínalas a fuego suave durante unos 15 minutos. Pon la carne picada en un bol, añade los tomates picados y el foie mi-cuit cortado en dados. Añade la mezcl",
+    "meta_keywords": "entrantes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

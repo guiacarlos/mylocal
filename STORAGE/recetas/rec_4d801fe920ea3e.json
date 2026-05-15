@@ -1,0 +1,106 @@
+{
+  "id": "rec_4d801fe920ea3e",
+  "slug": "aleta-rellena-de-jamon-y-peras-con-boletus",
+  "titulo": "Aleta Rellena De Jamón Y Peras Con Boletus",
+  "resumen": "Pela la pera, córtala en gajos y saltéalos en una sartén con aceite. Pela la cebolla y la zanahoria. Corta la cebolla en dados grandes y la zanahoria en medias lunas. Saltéalas en otra sartén con un chorrito de aceite. Sazona.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "aleta de ternera (abierta)"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "jamón serrano"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "boletus"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela la pera, córtala en gajos y saltéalos en una sartén con aceite. Pela la cebolla y la zanahoria. Corta la cebolla en dados grandes y la zanahoria en medias lunas. Saltéalas en otra sartén con un chorrito de aceite. Sazona.",
+    "Extiende la aleta y salpimiéntala. Rellénala con el jamón, los gajos de pera y las hortalizas. Enrolla la pieza como si fuese un brazo de gitano y átala con ayuda de una cuerda de cocina. Salpimienta y dora la carne en una tartera con un chorrito de aceite durante 3-4 minutos.",
+    "Una vez dorada, colócala sobre una bandeja de horno. Vierte el vino y la misma cantidad de agua. Hornéala a 200 ºC durante 40-45 minutos. Retira la carne y deja que se temple antes de filetearla. Pasa la salsa a un cazo, ponla al fuego y lígala añadiendo un poco de harina de maíz diluida en agua fría.",
+    "Pela los ajos, aplástalos un poco y dóralos en una sartén con un chorrito de aceite. Retira la parte inferior del tallo de los boletus, lamínalos y añádelos. Saltéalos a tu gusto. Sazónalos y espolvoréalos con un poco de perejil picado. Sirve la carne, salséala y acompáñala con los boletus. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Aleta Rellena De Jamón Y Peras Con Boletus",
+    "meta_description": "Pela la pera, córtala en gajos y saltéalos en una sartén con aceite. Pela la cebolla y la zanahoria. Corta la cebolla en dados grandes y la zanahoria en medias lunas. Saltéalas en otra sartén con un chorrito de aceite. Sazona.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

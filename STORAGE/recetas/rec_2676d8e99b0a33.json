@@ -1,0 +1,122 @@
+{
+  "id": "rec_2676d8e99b0a33",
+  "slug": "ensalada-de-garbanzos-y-rucula",
+  "titulo": "Ensalada De Garbanzos Y Rúcula",
+  "resumen": "Pon los garbanzos a remojo la víspera. Calienta agua en una olla y, cuando empiece a hervir, agrega los garbanzos y una pizca de sal. Limpia el puerro, córtalo por la mitad y añádelo. Tapa la olla y cuece los garbanzos durante 20 minutos. C",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "rúcula"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "sésamo (sin tostar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "comino en polvo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón en polvo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta de rabanito y tomate:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "rabanitos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate (pequeño)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Calienta agua en una olla y, cuando empiece a hervir, agrega los garbanzos y una pizca de sal. Limpia el puerro, córtalo por la mitad y añádelo. Tapa la olla y cuece los garbanzos durante 20 minutos. Coloca los garbanzos escurridos en un bol. Espolvorea el conjunto con el pimentón y el comino. Vierte un chorrito de aceite y sazona. Agrega las aceitunas y el queso cortado en dados. Mezcla bien. Deja que repose durante 10 minutos.",
+    "Corta los rabanitos en daditos y colócalos en un bol. Pela el tomate, córtalo en daditos y añádelo al bol de los rabanitos. Vierte un chorrito de aceite, otro de vinagre y una pizca de sal.",
+    "Tuesta el sésamo en una sartén sin nada de aceite.",
+    "Pon la rúcula en el fondo de los platos, sazona y coloca encima la mezcla de garbanzos, aceitunas y queso.",
+    "Pon alrededor la vinagreta de rabanito y tomate y espolvorea el conjunto con el sésamo tostado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Garbanzos Y Rúcula",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Calienta agua en una olla y, cuando empiece a hervir, agrega los garbanzos y una pizca de sal. Limpia el puerro, córtalo por la mitad y añádelo. Tapa la olla y cuece los garbanzos durante 20 minutos. C",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_f1c04105038347",
+  "slug": "sopa-castellana",
+  "titulo": "Sopa Castellana",
+  "resumen": "Pela los ajos, lamínalos y rehógalos en una cazuela grande con un chorrito de aceite. Retira la piel del chorizo, córtalo en rodajas y después en cuartos. Añádelos. Corta el jamón en dados y agrégalos. Con ayuda de un cuchillo de sierra, co",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "pan español (de la víspera)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "jamón"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "chorizo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos, lamínalos y rehógalos en una cazuela grande con un chorrito de aceite. Retira la piel del chorizo, córtalo en rodajas y después en cuartos. Añádelos. Corta el jamón en dados y agrégalos. Con ayuda de un cuchillo de sierra, corta el pan e incorpóralo. Rehoga todo bien. Añade el pimentón y remueve todo un poco. Cubre con 2 litros de agua y cuece durante 20 minutos. Pon a punto de sal. Reparte la sopa en 4 cuencos soperos de barro. Casca 1 huevo en cada uno y colócalos en una placa de horno. Introduce los cuencos en el horno y hornéalos a 180 ºC durante unos 10 minutos. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa Castellana",
+    "meta_description": "Pela los ajos, lamínalos y rehógalos en una cazuela grande con un chorrito de aceite. Retira la piel del chorizo, córtalo en rodajas y después en cuartos. Añádelos. Corta el jamón en dados y agrégalos. Con ayuda de un cuchillo de sierra, co",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

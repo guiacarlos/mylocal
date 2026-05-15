@@ -1,0 +1,19 @@
+{
+    "module": "asesoria",
+    "capabilities": [
+        "LOGIN",
+        "OPTIONS",
+        "CRM",
+        "CITAS",
+        "NOTIFICACIONES",
+        "OCR",
+        "FISCAL",
+        "TAREAS",
+        "AI"
+    ],
+    "default_role": "admin",
+    "default_user": {
+        "email": null,
+        "password": null
+    }
+}

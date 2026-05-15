@@ -1,0 +1,118 @@
+{
+  "id": "rec_5a2f764be15ab7",
+  "slug": "gratinado-de-calabacin-al-romero",
+  "titulo": "Gratinado De Calabacín Al Romero",
+  "resumen": "Pela las cebolletas, córtalas en dados y colócalas en una sartén con aceite. Corta los calabacines (con piel) en cuartos de luna y añádelos a la sartén. Sazona, añade el romero y pocha todo bien. Escurre y coloca todo en una bandeja apta pa",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "calabacines"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "queso Idiazábal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pereji"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la bechamel:"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón serrano"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nuez moscada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las cebolletas, córtalas en dados y colócalas en una sartén con aceite. Corta los calabacines (con piel) en cuartos de luna y añádelos a la sartén. Sazona, añade el romero y pocha todo bien. Escurre y coloca todo en una bandeja apta para horno. Para la bechamel, corta el jamón en daditos pequeños y rehógalos brevemente en una cazuela con aceite. Agrega la harina y rehógala bien. Vierte las leches (normal y evaporada), salpimienta, ralla encima un poco de nuez moscada, añade perejil picado y cocina a fuego suave durante 5-6 minutos. Cubre el pochado de calabacín con la bechamel. Ralla el queso encima y gratina. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gratinado De Calabacín Al Romero",
+    "meta_description": "Pela las cebolletas, córtalas en dados y colócalas en una sartén con aceite. Corta los calabacines (con piel) en cuartos de luna y añádelos a la sartén. Sazona, añade el romero y pocha todo bien. Escurre y coloca todo en una bandeja apta pa",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

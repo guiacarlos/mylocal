@@ -1,0 +1,100 @@
+{
+  "id": "rec_dced733b91ea32",
+  "slug": "sopa-de-patata",
+  "titulo": "Sopa De Patata",
+  "resumen": "Pon abundante agua a calentar. Agrega los dientes de ajo (sin pelar), el puerro, la parte verde de la cebolleta y unas ramas de perejil. Sazona y cuece durante 15-20 minutos. Cuela el caldo y resérvalo. Corta el beicon en tiras y dóralo en ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 5,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "apio"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de beicon"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche evaporada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon abundante agua a calentar. Agrega los dientes de ajo (sin pelar), el puerro, la parte verde de la cebolleta y unas ramas de perejil. Sazona y cuece durante 15-20 minutos. Cuela el caldo y resérvalo. Corta el beicon en tiras y dóralo en una cazuela con un chorrito de aceite. Retíralo a un plato forrado con papel absorbente y resérvalo. Pica finamente la cebolleta, el apio y las zanahorias y ponlos a rehogar en la misma cazuela donde has dorado el beicon. Pela las patatas, córtalas en dados y añádelas. Sazona, agrega el caldo de verduras y la leche. Cocina todo durante 10-15 minutos. Con la ayuda de una espumadera, retira a un plato un par de cacitos de las verduras y resérvalos. Tritura el resto de los ingredientes. Agrega los cacitos de verduras y mezcla bien. Sirve la sopa en platos hondos y salpícalos con el beicon y un poco de perejil picado.",
+    "SOPA DE ARROZ CON VERDURAS Y GAMBAS Ingredientes (4 p.)",
+    "100 g de arroz 30 gambas 2 puerros 2 zanahorias 1 calabacín 2 dientes de ajo aceite de oliva virgen extra perejil pimienta sal",
+    "Elaboración",
+    "Para hacer el fumet, pon abundante agua a calentar en una cazuela. Añade la parte verde de los puerros. Pela las gambas (resérvalas) y agrega a la cazuela las cabezas y las cáscaras. Sazona. Cuece todo durante 10-15 minutos. Retira la espuma, cuela y reserva el fumet.",
+    "Corta los puerros en cilindros, y en cuartos de luna las zanahorias (sin piel) y el calabacín. Pon todo a rehogar en una cazuela con un chorrito de aceite. Sazona.",
+    "Añade el arroz, rehógalo un poco y vierte el fumet. Prueba de sal y pon a punto. Cuece todo durante 20 minutos aproximadamente.",
+    "Pica los dientes de ajo finamente. Salpimienta las gambas. Vierte un chorrito de aceite en una sartén y añade el ajo. Antes de que el ajo tome color, saltea las gambas. Añádelas a la sopa. Espolvorea con perejil picado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Patata",
+    "meta_description": "Pon abundante agua a calentar. Agrega los dientes de ajo (sin pelar), el puerro, la parte verde de la cebolleta y unas ramas de perejil. Sazona y cuece durante 15-20 minutos. Cuela el caldo y resérvalo. Corta el beicon en tiras y dóralo en ",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

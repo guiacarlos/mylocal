@@ -1,0 +1,78 @@
+{
+  "id": "rec_a0a2cfbf7158b0",
+  "slug": "tarta-de-chocolate-blanco-y-queso",
+  "titulo": "Tarta De Chocolate Blanco Y Queso",
+  "resumen": "Trocea el chocolate y colócalo en un bol. Fúndelo al baño maría. Añade el queso de untar a temperatura ambiente y mezcla bien. Aplasta las galletas y agrégalas. Casca los huevos y colócalos en un bol. Móntalos con ayuda de la batidora eléct",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "180",
+      "unidad": "g",
+      "nombre": "chocolate blanco"
+    },
+    {
+      "cantidad": "160",
+      "unidad": "g",
+      "nombre": "queso de untar"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "g",
+      "nombre": "alletas de avena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para decorar:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "grosellas y frambuesas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Trocea el chocolate y colócalo en un bol. Fúndelo al baño maría. Añade el queso de untar a temperatura ambiente y mezcla bien. Aplasta las galletas y agrégalas. Casca los huevos y colócalos en un bol. Móntalos con ayuda de la batidora eléctrica de varillas. Incorpora un poco de huevo montado al bol anterior, mezcla bien y junta las dos elaboraciones. Mezcla bien. Forra 4 moldes con papel de hornear y colócalos en una bandeja para horno. Reparte la crema con ayuda de un cacillo y hornea a 220 ºC durante unos 15 minutos. Espolvoréalos con azúcar glas y adórnalos con los frutos rojos, unas virutas de chocolate blanco y unas hojas de menta. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Chocolate Blanco Y Queso",
+    "meta_description": "Trocea el chocolate y colócalo en un bol. Fúndelo al baño maría. Añade el queso de untar a temperatura ambiente y mezcla bien. Aplasta las galletas y agrégalas. Casca los huevos y colócalos en un bol. Móntalos con ayuda de la batidora eléct",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

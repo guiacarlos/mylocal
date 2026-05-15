@@ -1,0 +1,78 @@
+{
+  "id": "rec_799db7050d3985",
+  "slug": "cazon-rebozado-con-alcachofas-salteadas",
+  "titulo": "Cazón Rebozado Con Alcachofas Salteadas",
+  "resumen": "Pela los dientes de ajo, córtalos en láminas y ponlos a dorar en una sartén con un poco de aceite. Limpia las alcachofas, retirando las hojas exteriores, las puntas y los tallos. Córtalas en rodajas finas, añádelas a la sartén y saltéalas a",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "rodajas de cazón"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina, 2 huevos y pan rallado (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los dientes de ajo, córtalos en láminas y ponlos a dorar en una sartén con un poco de aceite. Limpia las alcachofas, retirando las hojas exteriores, las puntas y los tallos. Córtalas en rodajas finas, añádelas a la sartén y saltéalas a fuego medio durante 5-7 minutos. Salpimienta las rodajas de cazón. Bate los huevos, sazónalos y agrégales un poco de perejil picado. Mezcla bien. Pasa 4 rodajas por harina y huevo y las otras 4 por pan rallado. Fríelas brevemente por los dos lados en una sartén con aceite. Sirve el cazón con las alcachofas salteadas y decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cazón Rebozado Con Alcachofas Salteadas",
+    "meta_description": "Pela los dientes de ajo, córtalos en láminas y ponlos a dorar en una sartén con un poco de aceite. Limpia las alcachofas, retirando las hojas exteriores, las puntas y los tallos. Córtalas en rodajas finas, añádelas a la sartén y saltéalas a",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

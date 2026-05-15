@@ -1,0 +1,83 @@
+{
+  "id": "rec_8ba9006c635d94",
+  "slug": "crema-de-alubias-con-rejilla-de-patatas",
+  "titulo": "Crema De Alubias Con Rejilla De Patatas",
+  "resumen": "Pon las alubias a remojo la víspera. Pica la zanahoria, una cebolla, el pimiento y el tomate (pelado) y rehógalos brevemente en la olla rápida con un chorrito de aceite. Antes de que cojan color, agrega las alubias escurridas y cúbrelas con",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "alubias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon las alubias a remojo la víspera. Pica la zanahoria, una cebolla, el pimiento y el tomate (pelado) y rehógalos brevemente en la olla rápida con un chorrito de aceite. Antes de que cojan color, agrega las alubias escurridas y cúbrelas con una buena cantidad de agua. Sazona y coloca la tapa. Cuécelas durante 20 minutos. Tritúralas y, si hiciera falta, cuélalas. Reparte la crema en 6 recipientes aptos para horno. Reserva. Corta la otra cebolla en juliana fina y ponla a pochar en una sartén con aceite. Pela las patatas, córtalas en medias lunas (como para hacer una tortilla de patatas), añádelas y deja que se doren un poco. Sazona. Cúbrelas con agua y cuécelas durante 15 minutos aproximadamente. Si tuvieran algo de líquido, retíralo y tritura las patatas con la batidora eléctrica. Deja que se templen. Introduce la mezcla en una manga pastelera y forma una rejilla sobre la crema de alubias. Introduce los recipientes en el horno y gratínalos. Sirve y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Alubias Con Rejilla De Patatas",
+    "meta_description": "Pon las alubias a remojo la víspera. Pica la zanahoria, una cebolla, el pimiento y el tomate (pelado) y rehógalos brevemente en la olla rápida con un chorrito de aceite. Antes de que cojan color, agrega las alubias escurridas y cúbrelas con",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

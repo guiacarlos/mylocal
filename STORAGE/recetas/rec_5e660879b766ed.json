@@ -1,0 +1,83 @@
+{
+  "id": "rec_5e660879b766ed",
+  "slug": "sabiron-langostino-y-panceta",
+  "titulo": "Sabirón, Langostino Y Panceta",
+  "resumen": "Corta las cabezas de los sabirones y sácales los filetes. Pela los langostinos y resérvalos. Rehoga las cabezas y las espinas de los sabirones y las cabezas y las cáscaras de los langostinos en una cazuela con un chorrito de aceite. Cúbrela",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "sabirones"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "l",
+      "nombre": "onchas de panceta adobada"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollino picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta las cabezas de los sabirones y sácales los filetes. Pela los langostinos y resérvalos. Rehoga las cabezas y las espinas de los sabirones y las cabezas y las cáscaras de los langostinos en una cazuela con un chorrito de aceite. Cúbrelas con agua, sazona y cuécelas durante 6-8 minutos. Cuela y reserva el caldo. Pon el txakoli a reducir en otra cazuela. Cuando reduzca a la mitad, vierte 350 mililitros del caldo y la nata. Cocina durante 10-15 minutos. Salpimienta los filetes de sabirón y coloca en el centro de cada uno un langostino. Enróllalos y envuelve cada rollito con una loncha de panceta. Pínchalos con un palillo para que no se deshagan. Colócalos sobre la placa del horno y ásalos a 210 ºC durante 5-6 minutos. Sirve la salsa en el fondo de los platos, espolvoréala con el cebollino picado y coloca encima los rollitos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sabirón, Langostino Y Panceta",
+    "meta_description": "Corta las cabezas de los sabirones y sácales los filetes. Pela los langostinos y resérvalos. Rehoga las cabezas y las espinas de los sabirones y las cabezas y las cáscaras de los langostinos en una cazuela con un chorrito de aceite. Cúbrela",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

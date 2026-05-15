@@ -1,0 +1,103 @@
+{
+  "id": "rec_a97103bec1003a",
+  "slug": "arroz-con-verduras-de-primavera-al-graten",
+  "titulo": "Arroz Con Verduras De Primavera Al Gratén",
+  "resumen": "Pica finamente la cebolleta y los ajos frescos y ponlos a pochar en una cazuela con un chorrito de aceite. Pela la zanahoria, pícala y añádela. Incorpora los guisantes y las habas y cocina todo durante unos 5 minutos. Sazona. Añade agua (3 ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz redondo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "guisantes"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "habas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "setas de primavera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pica finamente la cebolleta y los ajos frescos y ponlos a pochar en una cazuela con un chorrito de aceite. Pela la zanahoria, pícala y añádela. Incorpora los guisantes y las habas y cocina todo durante unos 5 minutos. Sazona. Añade agua (3 partes por cada parte de arroz) y agrega el arroz. Pon a punto de sal y cocínalo durante 18 minutos. Deja que repose durante 3 minutos más tapado con un paño limpio de cocina. Pela los dientes de ajo, pícalos y dóralos en una sartén con aceite. Añade las setas de primavera, saltéalas y sazona. Espolvoréalas con un poco de perejil picado. Reparte el arroz en 4 recipientes, distribuye encima las setas y espolvorea los recipientes con un poco de pan rallado. Gratínalos en el horno durante 3-4 minutos. Tritura las hojas de albahaca con un buen chorro de aceite y cuela. Rocía los recipientes con el aceite de albahaca y decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Verduras De Primavera Al Gratén",
+    "meta_description": "Pica finamente la cebolleta y los ajos frescos y ponlos a pochar en una cazuela con un chorrito de aceite. Pela la zanahoria, pícala y añádela. Incorpora los guisantes y las habas y cocina todo durante unos 5 minutos. Sazona. Añade agua (3 ",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,78 @@
+{
+  "id": "rec_4a1aa9d5d5d9c8",
+  "slug": "flan-de-melocoton",
+  "titulo": "Flan De Melocotón",
+  "resumen": "Pon a calentar el azúcar y un poco de zumo de limón en una sartén. Cuando se funda el azúcar, repártelo en 4 moldes. Pela los melocotones y pícalos en daditos. Reparte la mitad del melocotón picado sobre el caramelo. Coloca la otra mitad en",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "melocotones"
+    },
+    {
+      "cantidad": "370",
+      "unidad": "g",
+      "nombre": "leche condensada"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche de avena"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el caramelo:"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar el azúcar y un poco de zumo de limón en una sartén. Cuando se funda el azúcar, repártelo en 4 moldes. Pela los melocotones y pícalos en daditos. Reparte la mitad del melocotón picado sobre el caramelo. Coloca la otra mitad en el vaso batidor, añade los huevos, la leche de avena y la leche condensada y tritura con la batidora eléctrica. Reparte la preparación en los moldes y cuájalos en el horno al baño maría a 180 ºC durante 25-30 minutos. Si lo vas a desmoldar, deja que se enfríe. Adorna con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Flan De Melocotón",
+    "meta_description": "Pon a calentar el azúcar y un poco de zumo de limón en una sartén. Cuando se funda el azúcar, repártelo en 4 moldes. Pela los melocotones y pícalos en daditos. Reparte la mitad del melocotón picado sobre el caramelo. Coloca la otra mitad en",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

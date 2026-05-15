@@ -1,0 +1,78 @@
+{
+  "id": "rec_75fd36ac1fa687",
+  "slug": "sopa-de-brocoli-con-almejas",
+  "titulo": "Sopa De Brócoli Con Almejas",
+  "resumen": "Pela la patata, córtala en daditos y rehógala en una cazuela con un chorrito de aceite. Separa el brócoli en ramilletes y añádelos. Deja pochar y sazona. Cubre con agua, sazona y cuece el conjunto durante 15 minutos a fuego suave. Pela y pi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "brócoli"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela la patata, córtala en daditos y rehógala en una cazuela con un chorrito de aceite. Separa el brócoli en ramilletes y añádelos. Deja pochar y sazona. Cubre con agua, sazona y cuece el conjunto durante 15 minutos a fuego suave. Pela y pica los dientes de ajo finamente. Rehógalos en una sartén con un chorrito de aceite. Agrega las almejas, remuévelas un poco y vierte el txakoli. Cocínalas hasta que se abran. Incorpora las almejas a la sopa y espolvorea con perejil picado. Mezcla bien. Prueba y pon a punto de sal. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Brócoli Con Almejas",
+    "meta_description": "Pela la patata, córtala en daditos y rehógala en una cazuela con un chorrito de aceite. Separa el brócoli en ramilletes y añádelos. Deja pochar y sazona. Cubre con agua, sazona y cuece el conjunto durante 15 minutos a fuego suave. Pela y pi",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

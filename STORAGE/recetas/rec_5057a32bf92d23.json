@@ -1,0 +1,128 @@
+{
+  "id": "rec_5057a32bf92d23",
+  "slug": "taco-de-ternera-verduras-y-queso-con-salsa-picante",
+  "titulo": "Taco De Ternera, Verduras Y Queso Con Salsa Picante",
+  "resumen": "Para la salsa, haz un corte en cruz en la parte inferior de los tomates. Escáldalos en una cazuela con agua hirviendo durante 15-20 segundos. Deja templar, pélalos, córtalos en trozos y colócalos en un vaso batidor. Tritúralos con la batido",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "tortillas de harina de maíz"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "espaldilla de ternera"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "crema de queso azul"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos rojos morrones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa picante:"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "tomates maduros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de cilantro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, haz un corte en cruz en la parte inferior de los tomates. Escáldalos en una cazuela con agua hirviendo durante 15-20 segundos. Deja templar, pélalos, córtalos en trozos y colócalos en un vaso batidor. Tritúralos con la batidora eléctrica. Reserva. Pela y lamina 2 dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Añade también la guindilla. Cuando se doren un poco, agrega el tomate triturado. Sazona y cocina la salsa a fuego medio durante 8-10 minutos. Añade un poco de cilantro picado y reserva. Lava los pimientos rojos (pélalos) y verdes. Córtalos en tiras y ponlos a pochar en una sartén junto con 2 dientes de ajo pelados y laminados. Añade las cebolletas cortadas en juliana fina. Sazona. Pocha las verduras y resérvalas. Pela, lamina y dora los otros 2 dientes de ajo en una sartén con un chorrito de aceite. Corta la carne en tiritas, salpimiéntalas y saltéalas brevemente. Reserva. Calienta las tortillas, de una en una, en una sartén sin nada de aceite. Unta las tortillas con la salsa picante y rellénalas con la carne, los pimientos y las cebolletas. Añade un buen chorro de crema de queso por encima, dóblalas y sirve. Decora con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Taco De Ternera, Verduras Y Queso Con Salsa Picante",
+    "meta_description": "Para la salsa, haz un corte en cruz en la parte inferior de los tomates. Escáldalos en una cazuela con agua hirviendo durante 15-20 segundos. Deja templar, pélalos, córtalos en trozos y colócalos en un vaso batidor. Tritúralos con la batido",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

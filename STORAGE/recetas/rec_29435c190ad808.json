@@ -1,0 +1,102 @@
+{
+  "id": "rec_29435c190ad808",
+  "slug": "tarta-de-almejas-y-calabaza",
+  "titulo": "Tarta De Almejas Y Calabaza",
+  "resumen": "Pela la calabaza, córtala en dados y extiéndelos sobre la placa del horno. Ralla encima un poco de jengibre. Sazona y rocía con un chorrito de aceite. Hornea a 190 ºC durante 25 minutos. Reserva. Forra un molde con la pasta brisa y retira l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 7,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "ámina de pasta brisa"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "jengibre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela la calabaza, córtala en dados y extiéndelos sobre la placa del horno. Ralla encima un poco de jengibre. Sazona y rocía con un chorrito de aceite. Hornea a 190 ºC durante 25 minutos. Reserva. Forra un molde con la pasta brisa y retira los sobrantes. Coloca un papel de hornear sobre la pasta y rellénala de garbanzos para que no suba. Hornea a 190 ºC durante 25 minutos. Retira los garbanzos y el papel de hornear y reserva la pasta brisa en el molde.",
+    "Abre las almejas al vapor. Reserva el jugo que hayan soltado. Pica la carne y resérvala.",
+    "Para hacer la bechamel, pica finamente la cebolleta y los dientes de ajo y ponlos a pochar en una cazuela con un chorrito de aceite. Agrega la carne de las almejas y saltea. Incorpora la harina y rehógala. Vierte el jugo de las almejas y la leche poco a poco. Sazona, agrega un poco de perejil picado y cocina todo durante 5 minutos sin dejar de remover con una varilla. Rellena la base de pasta brisa.",
+    "Coloca la calabaza y los huevos en un vaso batidor y tritúralos con la batidora eléctrica.",
+    "Vierte la calabaza con los huevos sobre la bechamel e introduce la tarta en el horno. Hornea a 200 ºC durante 15 minutos. Deja que se temple, desmóldala y córtala en porciones. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Almejas Y Calabaza",
+    "meta_description": "Pela la calabaza, córtala en dados y extiéndelos sobre la placa del horno. Ralla encima un poco de jengibre. Sazona y rocía con un chorrito de aceite. Hornea a 190 ºC durante 25 minutos. Reserva. Forra un molde con la pasta brisa y retira l",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

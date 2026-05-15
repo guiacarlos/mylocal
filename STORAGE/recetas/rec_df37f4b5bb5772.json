@@ -1,0 +1,103 @@
+{
+  "id": "rec_df37f4b5bb5772",
+  "slug": "salmon-a-la-sal-con-salteado-de-melon-y-sandia",
+  "titulo": "Salmón A La Sal Con Salteado De Melón Y Sandía",
+  "resumen": "Limpia el salmón de espinas y córtalo en 4 porciones. Corta 4 trozos de papel de aluminio y salpimiéntalos. Coloca, encima de cada uno, una porción de salmón, dejando la parte de la piel hacia arriba. Dobla los bordes hacia arriba de manera",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "700",
+      "unidad": "g",
+      "nombre": "salmón"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "melón"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "sandía"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal gruesa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de fresas:"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia el salmón de espinas y córtalo en 4 porciones. Corta 4 trozos de papel de aluminio y salpimiéntalos. Coloca, encima de cada uno, una porción de salmón, dejando la parte de la piel hacia arriba. Dobla los bordes hacia arriba de manera que el pescado quede como en una cajita abierta. Coloca los paquetitos sobre una placa de horno y pon 2 cucharadas de sal gruesa encima de cada trozo. Hornéalos a 200 ºC durante 10 minutos. Retira la sal y la piel al salmón. Retira el papel de aluminio y reserva el salmón. Para la salsa, pica las fresas y colócalas en un cazo. Añade el azúcar, la sal y el vinagre. Cocínalas a fuego suave durante 10 minutos. Cuela y reserva la salsa. Retira la piel a la sandía y al melón y corta las frutas en rectángulos. Cocínalas a la plancha con una cucharada de aceite. Salpimienta la fruta. Sirve el salmón con la fruta y salsea con la salsa de fresas. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmón A La Sal Con Salteado De Melón Y Sandía",
+    "meta_description": "Limpia el salmón de espinas y córtalo en 4 porciones. Corta 4 trozos de papel de aluminio y salpimiéntalos. Coloca, encima de cada uno, una porción de salmón, dejando la parte de la piel hacia arriba. Dobla los bordes hacia arriba de manera",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

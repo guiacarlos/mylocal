@@ -1,0 +1,107 @@
+{
+  "id": "rec_d7ed671ec4510d",
+  "slug": "tortilla-de-ropa-vieja",
+  "titulo": "Tortilla De Ropa Vieja",
+  "resumen": "Pon agua en la olla rápida. Añade la carne. Limpia el puerro, pela la zanahoria, trocéalos e incorpóralos junto con 1 cebolleta troceada, unas ramas de perejil y una pizca de sal. Tapa la olla y cuece todo durante 20 minutos. Retira la carn",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "zancarrón de ternera"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos del piquillo (en conserva)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon agua en la olla rápida. Añade la carne. Limpia el puerro, pela la zanahoria, trocéalos e incorpóralos junto con 1 cebolleta troceada, unas ramas de perejil y una pizca de sal. Tapa la olla y cuece todo durante 20 minutos. Retira la carne y pícala.",
+    "Pon un poco de aceite en una sartén y añade los dientes de ajo cortados en láminas. Cuando empiecen a dorarse, agrega las otras 3 cebolletas y el pimiento verde cortados en juliana fina. Sazona y deja que se pochen muy bien. Cuando estén bien pochados, agrega los pimientos del piquillo cortados en tiras y la carne. Rehoga todo junto durante 5 minutos.",
+    "Coloca los huevos en un bol, sazónalos y espolvoréalos con un poco de perejil picado. Bátelos, añade la carne con la fritada y bate nuevamente.",
+    "Vierte la mezcla en una sartén bien caliente y cuaja la tortilla. Sirve y decora con una rama de perejil.",
+    "Pela los tomates, córtalos en rodajas gruesas y colócalas en un plato. Alíñalas con aceite, vinagre y una pizca de sal."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tortilla De Ropa Vieja",
+    "meta_description": "Pon agua en la olla rápida. Añade la carne. Limpia el puerro, pela la zanahoria, trocéalos e incorpóralos junto con 1 cebolleta troceada, unas ramas de perejil y una pizca de sal. Tapa la olla y cuece todo durante 20 minutos. Retira la carn",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

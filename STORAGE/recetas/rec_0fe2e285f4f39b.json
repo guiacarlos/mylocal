@@ -1,0 +1,96 @@
+{
+  "id": "rec_0fe2e285f4f39b",
+  "slug": "alcachofas-con-huevo-escalfado-y-parmentier-de-jamon",
+  "titulo": "Alcachofas Con Huevo Escalfado Y Parmentier De Jamón",
+  "resumen": "Retira las hojas externas de las alcachofas, córtales el tallo y la punta y ponlas a cocer con unas ramas de perejil. Cuécelas durante 20 minutos en una cazuela con agua hirviendo. Mantenlas en la cazuela hasta el momento de consumirlas. Es",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "jamón cocido"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "romero"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira las hojas externas de las alcachofas, córtales el tallo y la punta y ponlas a cocer con unas ramas de perejil. Cuécelas durante 20 minutos en una cazuela con agua hirviendo. Mantenlas en la cazuela hasta el momento de consumirlas. Escúrrelas y córtalas por la mitad.",
+    "Pela las patatas, trocéalas y ponlas a cocer con un poco de agua, el romero y sal. Cuécelas durante 20-30 minutos (según tamaño), retíralas del fuego, escúrrelas y pásalas a un bol. Aplasta las patatas con un tenedor.",
+    "Corta el jamón en dados. Fríelos en una sartén con un chorrito de aceite y los dientes de ajo pelados y cortados por la mitad. Retira los ajos y añade los dados de jamón al puré de patatas. Mezcla bien, vierte la leche, añade perejil picado y mezcla hasta conseguir la textura deseada.",
+    "Pon abundante agua y un chorrito de vinagre a calentar en una tartera amplia. Cuando empiece a hervir, baja un poco el fuego, casca los huevos y agrégalos. Cuécelos durante 2-3 minutos. Sirve el puré en el fondo de los platos, coloca encima el huevo escalfado y, alrededor, las alcachofas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Alcachofas Con Huevo Escalfado Y Parmentier De Jamón",
+    "meta_description": "Retira las hojas externas de las alcachofas, córtales el tallo y la punta y ponlas a cocer con unas ramas de perejil. Cuécelas durante 20 minutos en una cazuela con agua hirviendo. Mantenlas en la cazuela hasta el momento de consumirlas. Es",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

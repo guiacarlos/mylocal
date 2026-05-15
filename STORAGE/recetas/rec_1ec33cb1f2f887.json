@@ -1,0 +1,104 @@
+{
+  "id": "rec_1ec33cb1f2f887",
+  "slug": "ensalada-de-remolacha-y-queso-con-pesto-de-pistachos",
+  "titulo": "Ensalada De Remolacha Y Queso Con Pesto De Pistachos",
+  "resumen": "Pon las remolachas a cocer durante 1 hora en una cazuela con agua y sal. Deja que se templen, pélalas y córtalas en lonchas. Resérvalas.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "remolachas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "queso tierno"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "pistachos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un manojo de albahaca"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para los costrones:"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "ámina de pasta brisa"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un puñado de semillas de sésamo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "orégano en polvo"
+    }
+  ],
+  "pasos": [
+    "Pon las remolachas a cocer durante 1 hora en una cazuela con agua y sal. Deja que se templen, pélalas y córtalas en lonchas. Resérvalas.",
+    "Limpia las judías, córtalas en rombos y cuécelas durante 5 minutos con una pizca de sal. Escurre y reserva.",
+    "Para el aceite de albahaca, pon unas hojas de albahaca (reserva el resto) en un vaso batidor con un buen chorro de aceite de oliva y tritúralas con la batidora eléctrica. Reserva.",
+    "Para los costrones, extiende la pasta brisa sobre la placa de horno (forrada con papel de hornear), pincela con el aceite de albahaca y espolvorea con un poco de orégano en polvo y las semillas de sésamo. Corta la masa en cuadrados y hornéalos a 180 ºC durante 20 minutos. Resérvalos.",
+    "Corta el queso en 9 porciones. Reserva.",
+    "Para el pesto de pistachos, pon en un vaso batidor el resto de las hojas de albahaca, el diente de ajo pelado y laminado, una porción de queso, los pistachos pelados y un buen chorro de aceite. Tritura con la batidora eléctrica.",
+    "Para montar los platos, pon unas láminas de remolacha en el fondo, distribuye encima las judías verdes, el queso y los costrones. Salsea todo con el pesto de pistachos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Remolacha Y Queso Con Pesto De Pistachos",
+    "meta_description": "Pon las remolachas a cocer durante 1 hora en una cazuela con agua y sal. Deja que se templen, pélalas y córtalas en lonchas. Resérvalas.",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

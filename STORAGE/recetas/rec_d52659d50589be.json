@@ -1,0 +1,93 @@
+{
+  "id": "rec_d52659d50589be",
+  "slug": "chipirones-al-brandy",
+  "titulo": "Chipirones Al Brandy",
+  "resumen": "Pela las cebollas, córtalas en daditos y ponlos a pochar en una tartera grande con un chorro de aceite. Cocínalos hasta que se doren bien. Limpia los chipirones, rellénalos con sus patas, sazónalos y fríelos brevemente en una sartén con los",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "chipirones"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "gambas peladas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "puntas de espárrago (en conserva)"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "copita",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "caldo de pescado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las cebollas, córtalas en daditos y ponlos a pochar en una tartera grande con un chorro de aceite. Cocínalos hasta que se doren bien. Limpia los chipirones, rellénalos con sus patas, sazónalos y fríelos brevemente en una sartén con los dientes de ajo (pelados y enteros). Pasa los chipirones a la tartera y saltéalos. Añade el brandy y flambea. Cuando se haya consumido el alcohol, agrega la harina y rehógala. Vierte el caldo de pescado y cocina a fuego suave durante 30 minutos. Incorpora las gambas y las puntas de espárragos y cocina todo un par de minutos más para que se mezclen los sabores. Espolvorea con un poco de perejil picado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Chipirones Al Brandy",
+    "meta_description": "Pela las cebollas, córtalas en daditos y ponlos a pochar en una tartera grande con un chorro de aceite. Cocínalos hasta que se doren bien. Limpia los chipirones, rellénalos con sus patas, sazónalos y fríelos brevemente en una sartén con los",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

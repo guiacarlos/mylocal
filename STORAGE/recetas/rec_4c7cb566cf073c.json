@@ -1,0 +1,100 @@
+{
+  "id": "rec_4c7cb566cf073c",
+  "slug": "cazuela-de-verdel-verduras-y-tapioca",
+  "titulo": "Cazuela De Verdel, Verduras Y Tapioca",
+  "resumen": "Corta las cabezas de los verdeles y ponlas en una cazuela. Saca los lomos y resérvalos. Agrega las espinas a la cazuela. Añade el tallo de la cebolleta y la parte verde del puerro. Vierte abundante agua (aproximadamente 1.500 ml), sazona y ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "verdeles"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "tapioca"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta las cabezas de los verdeles y ponlas en una cazuela. Saca los lomos y resérvalos. Agrega las espinas a la cazuela. Añade el tallo de la cebolleta y la parte verde del puerro. Vierte abundante agua (aproximadamente 1.500 ml), sazona y cuece todo durante 10 minutos. Cuela y reserva el caldo.",
+    "Limpia bien el puerro. Pela los ajos y la cebolleta. Corta todo en daditos y rehógalos bien en una tartera con un poco de aceite. Corta el tomate por la mitad, rállalo y agrégalo. Rehógalo un poco y añade el laurel. Lava el calabacín, córtalo en cuartos de luna e incorpóralos. Agrega la tapioca, cubre todo con el caldo y pon a punto de sal. Cuece durante 10 minutos. Espolvorea con perejil picado.",
+    "Corta los lomos de verdel por la mitad a lo largo y retírales las espinas que tienen en la parte central. Salpimiéntalos, añádelos a la tartera, cocínalos durante 3 minutos y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Cazuela De Verdel, Verduras Y Tapioca",
+    "meta_description": "Corta las cabezas de los verdeles y ponlas en una cazuela. Saca los lomos y resérvalos. Agrega las espinas a la cazuela. Añade el tallo de la cebolleta y la parte verde del puerro. Vierte abundante agua (aproximadamente 1.500 ml), sazona y ",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

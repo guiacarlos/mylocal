@@ -1,0 +1,78 @@
+{
+  "id": "rec_5e91c1607ab8e9",
+  "slug": "sopa-de-fresa-y-kiwi",
+  "titulo": "Sopa De Fresa Y Kiwi",
+  "resumen": "Pon a calentar una cazuela con el azúcar y el agua. Deja que reduzca durante unos 10 minutos hasta conseguir un jarabe espeso. Deja enfriar. Extiende la media lámina de hojaldre, pincélala con el huevo batido y espolvorea la mitad con las s",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "kiwis"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "ámina de hojaldre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "semillas de sésamo y de amapola"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar una cazuela con el azúcar y el agua. Deja que reduzca durante unos 10 minutos hasta conseguir un jarabe espeso. Deja enfriar. Extiende la media lámina de hojaldre, pincélala con el huevo batido y espolvorea la mitad con las semillas de amapola y sésamo. Tápala con la otra mitad y aplástala un poco con un rodillo. Corta 6 tiras y gíralas formando espirales. Colócalas sobre una fuente (apta para el horno) cubierta con papel de hornear y hornéalas a 180 ºC durante 20 minutos. Limpia las fresas y retírales las hojas. Pícalas, colócalas en un vaso batidor y vierte la mitad del jarabe. Tritura bien hasta conseguir una sopa y reserva. Pela y trocea los kiwis. Colócalos en otro vaso batidor y vierte el resto del jarabe. Tritura y reserva. Reparte en 4 cuencos las dos sopas, vertiéndolas a la vez. Acompáñalos con las espirales de hojaldre y decora con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Fresa Y Kiwi",
+    "meta_description": "Pon a calentar una cazuela con el azúcar y el agua. Deja que reduzca durante unos 10 minutos hasta conseguir un jarabe espeso. Deja enfriar. Extiende la media lámina de hojaldre, pincélala con el huevo batido y espolvorea la mitad con las s",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

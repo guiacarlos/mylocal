@@ -1,0 +1,83 @@
+{
+  "id": "rec_82c6d9c1195df0",
+  "slug": "pina-salteada-con-merengue-de-lima",
+  "titulo": "Piña Salteada Con Merengue De Lima",
+  "resumen": "Corta la piña por la mitad y vacíala. Retira la parte dura del centro de la pulpa y corta el resto en trozos de bocado. Saltéalos con la mantequilla y colócalos de nuevo dentro de la piña. Vierte el agua en una cazuela, agrega 50 gramos de ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "piña"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cl",
+      "nombre": "aras de huevo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "ron"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 1 lima"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar dorado y hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Corta la piña por la mitad y vacíala. Retira la parte dura del centro de la pulpa y corta el resto en trozos de bocado. Saltéalos con la mantequilla y colócalos de nuevo dentro de la piña. Vierte el agua en una cazuela, agrega 50 gramos de azúcar y pon a calentar hasta conseguir un jarabe. Añade las hojas de gelatina (previamente remojadas en agua fría) y disuélvelas. Deja templar en un bol. Cuando se enfríe, vierte el ron y mezcla bien. Riega la piña con el jarabe. Pon las claras en un bol limpio y seco. Agrega la ralladura de lima y bate con la batidora de varillas eléctrica. Añade poco a poco 100 gramos de azúcar y sigue batiendo hasta que las claras queden perfectamente montadas. Cubre la piña con el merengue y espolvorea con el resto del azúcar. Quema la superficie con un soplete de cocina. Espolvorea con el azúcar dorado, adorna con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Piña Salteada Con Merengue De Lima",
+    "meta_description": "Corta la piña por la mitad y vacíala. Retira la parte dura del centro de la pulpa y corta el resto en trozos de bocado. Saltéalos con la mantequilla y colócalos de nuevo dentro de la piña. Vierte el agua en una cazuela, agrega 50 gramos de ",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

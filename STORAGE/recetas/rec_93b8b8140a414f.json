@@ -1,0 +1,87 @@
+{
+  "id": "rec_93b8b8140a414f",
+  "slug": "mojarra-en-hojaldre",
+  "titulo": "Mojarra En Hojaldre",
+  "resumen": "Retira la cabeza y la cola de la mojarra y sácale los lomos. Salpimiéntalos y resérvalos. Pela las cebollas, córtalas en aros y ponlas a rehogar en una sartén con un chorrito de aceite. Estira el hojaldre y córtalo en dos piezas dándole for",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "mojarra (1.500 g)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "-2 láminas de hojaldre (según tamaño)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "huevo batido"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Retira la cabeza y la cola de la mojarra y sácale los lomos. Salpimiéntalos y resérvalos. Pela las cebollas, córtalas en aros y ponlas a rehogar en una sartén con un chorrito de aceite. Estira el hojaldre y córtalo en dos piezas dándole forma de pez. Cubre una placa de horno con un trozo de papel de hornear, coloca encima un pez de hojaldre y pon encima la cebolla y los lomos de la mojarra. Pinta los bordes del hojaldre con el huevo batido y cubre la mojarra con el otro pez de hojaldre. Estira los recortes y adorna la superficie del hojaldre haciendo las escamas, la agalla y el ojo. Pinta todo con huevo batido y hornéalo a 180 ºC durante 30 minutos. Calienta la salsa de tomate con el laurel. Sirve el pescado y acompáñalo con la salsa de tomate.",
+    "MERO AL PAPILLOTE Ingredientes (4 p.)",
+    "4 rodajas de mero (200 g cada una) 1 calabacín 2 zanahorias 2 cebolletas 2 puerros 8 champiñones pequeños aceite de oliva virgen extra pimienta sal perejil",
+    "Elaboración",
+    "Corta la parte inferior y superior de los puerros y de las cebolletas y retírales la primera capa. Pela las zanahorias. Corta todo en juliana fina. Corta un trozo grande de papel de aluminio (del doble del tamaño que la bandeja del horno) y colócalo sobre la placa del horno. Pon encima las verduras y sazónalas. Lava el calabacín, córtalo en rodajas y ponlas sobre las verduras. Salpimienta las rodajas de mero y colócalas sobre las hortalizas. Limpia los champiñones y agrégalos. Riega con un chorrito de aceite y cierra el papel (tapando las hortalizas y el pescado) presionando los bordes de manera que quede un paquete herméticamente cerrado. Mételo al horno a 200 ºC durante 15 o 20 minutos, hasta que se hinche el papel. Sirve las hortalizas con el mero y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mojarra En Hojaldre",
+    "meta_description": "Retira la cabeza y la cola de la mojarra y sácale los lomos. Salpimiéntalos y resérvalos. Pela las cebollas, córtalas en aros y ponlas a rehogar en una sartén con un chorrito de aceite. Estira el hojaldre y córtalo en dos piezas dándole for",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

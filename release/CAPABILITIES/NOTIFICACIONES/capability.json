@@ -1,0 +1,8 @@
+{
+  "id": "NOTIFICACIONES",
+  "version": "1.0.0",
+  "description": "Envío de notificaciones (email, WhatsApp, SMS) con drivers intercambiables y plantillas.",
+  "depends_on": ["LOGIN", "OPTIONS"],
+  "collections": ["notif_log"],
+  "actions": ["notif_send", "notif_list", "notif_template_list"]
+}

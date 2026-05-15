@@ -1,0 +1,123 @@
+{
+  "id": "rec_deec1e3f34f3bf",
+  "slug": "crepes-rellenos-de-berenjena-queso-y-pavo",
+  "titulo": "Crepes Rellenos De Berenjena, Queso Y Pavo",
+  "resumen": "Pela el tomate, pícalo finamente y colócalo en un bol. Pica finamente las aceitunas y la cebolleta y agrégalas. Sazona y adereza con aceite y vinagre. Deja que macere. Coloca en un bol los huevos, la harina, la leche, 2 cucharadas de aceite",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de queso"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas de pavo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "aceitunas verdes (sin hueso)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la masa:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil picado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela el tomate, pícalo finamente y colócalo en un bol. Pica finamente las aceitunas y la cebolleta y agrégalas. Sazona y adereza con aceite y vinagre. Deja que macere. Coloca en un bol los huevos, la harina, la leche, 2 cucharadas de aceite y una pizca de sal. Tritura con la batidora eléctrica hasta que quede una masa homogénea. Añade un poco de perejil picado. Calienta una sartén con unas gotas de aceite, vierte un cacillo de masa, extiéndela bien y, cuando se cuaje, dale la vuelta y cocínala durante 1 minuto. Repite el proceso hasta terminar toda la masa. (El primer crepe se desecha.) Reserva los crepes. Corta la berenjena por la mitad (a lo largo) y cada mitad en lonchas de 1 centímetro de grosor. Sálalas y deja que suden. Sécalas con papel absorbente y cocínalas durante 4 minutos (2 por cada lado) en una sartén con un poco de aceite. Rellena cada crepe con una loncha de pavo, otra de queso y otra de berenjena. Enróllalos y colócalos sobre la placa del horno untada con un poco de aceite. Hornéalos a 200 ºC durante 10 minutos. Sirve 2 crepes por ración y acompáñalos con la vinagreta. Adorna con unas hojas de perejil"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes Rellenos De Berenjena, Queso Y Pavo",
+    "meta_description": "Pela el tomate, pícalo finamente y colócalo en un bol. Pica finamente las aceitunas y la cebolleta y agrégalas. Sazona y adereza con aceite y vinagre. Deja que macere. Coloca en un bol los huevos, la harina, la leche, 2 cucharadas de aceite",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

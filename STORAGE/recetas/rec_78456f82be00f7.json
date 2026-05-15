@@ -1,0 +1,108 @@
+{
+  "id": "rec_78456f82be00f7",
+  "slug": "pollo-rustido-con-ciruelas",
+  "titulo": "Pollo Rustido Con Ciruelas",
+  "resumen": "Pela las cebollas y los ajos. Corta en juliana las cebollas y lamina los ajos. Ponlos a pochar a fuego suave en una cazuela grande con un chorrito de aceite hasta que se doren. Ralla los tomates, agrégalos y cocínalos un poco. Sazona y rese",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pollo (troceado)"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ciruelas pasas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "brandy"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "rama",
+      "nombre": "canela"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela las cebollas y los ajos. Corta en juliana las cebollas y lamina los ajos. Ponlos a pochar a fuego suave en una cazuela grande con un chorrito de aceite hasta que se doren. Ralla los tomates, agrégalos y cocínalos un poco. Sazona y reserva. Retira la piel del pollo. Salpimiéntalo y dóralo en una sartén con un chorrito de aceite. Retira y reserva. Añade las ciruelas y los piñones a la sartén y rehógalos. Vierte el brandy y flambéalo. Vierte también el vino y mezcla bien. Añade todo a la cazuela de las cebollas y el tomate. Incorpora el pollo y un poco de agua. Introduce la rama de canela y el laurel. Cocina el pollo a fuego suave durante 30 minutos aproximadamente. Pon a punto de sal. Sirve y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pollo Rustido Con Ciruelas",
+    "meta_description": "Pela las cebollas y los ajos. Corta en juliana las cebollas y lamina los ajos. Ponlos a pochar a fuego suave en una cazuela grande con un chorrito de aceite hasta que se doren. Ralla los tomates, agrégalos y cocínalos un poco. Sazona y rese",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,113 @@
+{
+  "id": "rec_e709cb7f636e0b",
+  "slug": "perdices-en-escabeche",
+  "titulo": "Perdices En Escabeche",
+  "resumen": "Limpia bien las perdices y átalas con una cuerda de cocina. Salpimiéntalas y dóralas en una sartén con un chorrito de aceite. Retíralas y resérvalas. Vierte el vinagre, el vino y 250 mililitros de aceite en una cazuela. Añade los dientes de",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "perdices"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "cebollitas gallegas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "vinagre de vino de Jerez"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta (molida y en grano)"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "ramas",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia bien las perdices y átalas con una cuerda de cocina. Salpimiéntalas y dóralas en una sartén con un chorrito de aceite. Retíralas y resérvalas. Vierte el vinagre, el vino y 250 mililitros de aceite en una cazuela. Añade los dientes de ajo (enteros y con piel), los granos de pimienta y la cebolla (cortada en juliana gruesa). Agrega el tomillo, el laurel y las perdices. Tapa y cocínalas a fuego medio durante 40 minutos. Pasado este tiempo, incorpora las zanahorias torneadas y las cebollitas gallegas (peladas y enteras). Tapa de nuevo y cocina todo junto durante 15-20 minutos más. Pela las patatas, córtalas en dados y fríelas en una sartén con aceite. Añade unas ramitas de perejil. Escúrrelas sobre un plato cubierto con papel absorbente. Sazónalas y espolvoréalas con el pimentón dulce. Sirve las perdices con el escabeche y las patatas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Perdices En Escabeche",
+    "meta_description": "Limpia bien las perdices y átalas con una cuerda de cocina. Salpimiéntalas y dóralas en una sartén con un chorrito de aceite. Retíralas y resérvalas. Vierte el vinagre, el vino y 250 mililitros de aceite en una cazuela. Añade los dientes de",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

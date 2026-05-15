@@ -1,0 +1,118 @@
+{
+  "id": "rec_c25c835ce60271",
+  "slug": "goxua",
+  "titulo": "Goxua",
+  "resumen": "Corta los bizcochos por la mitad y repártelos en 8 copas. Mezcla el almíbar con el ron y repártelo en las copas. Deja reposar un poco para que los bizcochos se emborrachen bien. En un bol, coloca la harina de maíz refinada, el azúcar y 100 ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "yemas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "melocotones en almíbar"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "nata montada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para emborrachar el bizcocho:"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "bizcochos de soletilla"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "ron"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "almíbar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para decorar:"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta"
+    }
+  ],
+  "pasos": [
+    "Corta los bizcochos por la mitad y repártelos en 8 copas. Mezcla el almíbar con el ron y repártelo en las copas. Deja reposar un poco para que los bizcochos se emborrachen bien. En un bol, coloca la harina de maíz refinada, el azúcar y 100 mililitros de leche fría. Mezcla bien hasta que la harina quede totalmente disuelta en la leche. Añade el huevo y las yemas. Mezcla bien y reserva. Pon a hervir la nata con el resto de la leche y la vainilla. Cuando hierva, vierte sobre ella la mezcla anterior y remueve hasta que vuelva a hervir. Retira la crema pastelera a un bol y deja que se enfríe. Retira la vaina de vainilla y, con una varilla, remueve la crema. Añade la nata montada y los melocotones picados. Mezcla todo bien y rellena las copas. Espolvoréalas con un poco de azúcar y quema la superficie con un soplete. Sirve y decora con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Goxua",
+    "meta_description": "Corta los bizcochos por la mitad y repártelos en 8 copas. Mezcla el almíbar con el ron y repártelo en las copas. Deja reposar un poco para que los bizcochos se emborrachen bien. En un bol, coloca la harina de maíz refinada, el azúcar y 100 ",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

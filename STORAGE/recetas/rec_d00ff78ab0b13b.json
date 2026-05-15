@@ -1,0 +1,106 @@
+{
+  "id": "rec_d00ff78ab0b13b",
+  "slug": "hamburguesa-en-hojaldre",
+  "titulo": "Hamburguesa En Hojaldre",
+  "resumen": "Mezcla en un bol la yema de huevo y 2 cucharadas de aceite. Extiende las láminas de hojaldre y corta 8 círculos del tamaño de las hamburguesas. Extiende 4 sobre una placa de horno (forrada con papel de hornear), pincélalas con la mezcla de ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "hamburguesas de angus"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "áminas de hojaldre"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "queso de untar"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "tapenade"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "yema de huevo"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "semillas de sésamo"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "semillas de amapola"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Mezcla en un bol la yema de huevo y 2 cucharadas de aceite. Extiende las láminas de hojaldre y corta 8 círculos del tamaño de las hamburguesas. Extiende 4 sobre una placa de horno (forrada con papel de hornear), pincélalas con la mezcla de yema y aceite y cúbrelas con otro papel. Pon encima la otra placa, cúbrela con papel de hornear y pon encima los otros 4 círculos de hojaldre. Pincélalos con la mezcla de yema y aceite y espolvoréalos con las semillas de sésamo y de amapola. Hornea a 180 ºC durante 20 minutos aproximadamente.",
+    "Mezcla ligeramente en un bol el queso de untar y la tapenade. Reserva.",
+    "Corta los tomates por la mitad, salpimiéntalos y cocínalos a la plancha. Retira la piel. Corta el calabacín en 8 rodajas gruesas, salpimiéntalas y cocínalas a la plancha. Espolvorea con perejil picado.",
+    "Calienta la plancha y cocina las hamburguesas con un poco de aceite durante 3 minutos por cada lado. Salpimienta. Para montar, unta las bases de hojaldre con la mezcla de queso y tapenade, pon encima los tomates, las hamburguesas y las tapas de hojaldre. Coloca al lado los trozos de calabacín y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hamburguesa En Hojaldre",
+    "meta_description": "Mezcla en un bol la yema de huevo y 2 cucharadas de aceite. Extiende las láminas de hojaldre y corta 8 círculos del tamaño de las hamburguesas. Extiende 4 sobre una placa de horno (forrada con papel de hornear), pincélalas con la mezcla de ",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "id": "rec_120d6775ce4253",
+  "slug": "compota-de-pina",
+  "titulo": "Compota De Piña",
+  "resumen": "Ralla la corteza de una lima y resérvala. Pon medio litro de agua en un cazo. Añade el azúcar, el cardamomo, las uvas pasas y el zumo de la otra lima. Deja que reduzca hasta conseguir 8 cucharadas soperas de jarabe denso. Pela la piña, córt",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "piña"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "uvas pasas"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "g",
+      "nombre": "ranos de cardamomo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "l",
+      "nombre": "imas"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "queso fresco"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "g",
+      "nombre": "alletas"
+    }
+  ],
+  "pasos": [
+    "Ralla la corteza de una lima y resérvala. Pon medio litro de agua en un cazo. Añade el azúcar, el cardamomo, las uvas pasas y el zumo de la otra lima. Deja que reduzca hasta conseguir 8 cucharadas soperas de jarabe denso. Pela la piña, córtala en tacos y colócalos en un bol. Báñalos con el jarabe caliente. Cuando se temple, tapa el bol con film transparente e introdúcelo en el frigorífico. Corta el queso en daditos y maja un poco las galletas. Sirve la compota con el queso en taquitos. Espolvorea con la ralladura de lima y con las galletas machacaditas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Compota De Piña",
+    "meta_description": "Ralla la corteza de una lima y resérvala. Pon medio litro de agua en un cazo. Añade el azúcar, el cardamomo, las uvas pasas y el zumo de la otra lima. Deja que reduzca hasta conseguir 8 cucharadas soperas de jarabe denso. Pela la piña, córt",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "rec_ee0c59d43e0e0b",
+  "slug": "pasta-con-morcilla-salsa-de-maiz-y-huevo-escalfado",
+  "titulo": "Pasta Con Morcilla, Salsa De Maíz Y Huevo Escalfado",
+  "resumen": "Para la salsa de maíz, hierve la nata con la leche y el maíz dulce durante 5 minutos. Tritura, cuela, sazona y reserva. Coloca la morcilla en un recipiente apto para el horno, riégala con un chorrito de aceite y hornéala a 190 ºC durante 20",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "pasta fresca (tagliatelle)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "morcilla de verduras"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "40",
+      "unidad": "g",
+      "nombre": "maíz tostado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa de maíz:"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "maíz dulce"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa de maíz, hierve la nata con la leche y el maíz dulce durante 5 minutos. Tritura, cuela, sazona y reserva. Coloca la morcilla en un recipiente apto para el horno, riégala con un chorrito de aceite y hornéala a 190 ºC durante 20 minutos. Retírale la piel y deshaz su interior. Pasa la carne a una cazuela amplia y plana. Agrega la salsa de maíz y mezcla bien. Calienta abundante agua con una cucharadita de sal en una cazuela grande. Cuando empiece a hervir, agrega los tagliatelle. Cuécelos durante 2-4 minutos. Escúrrelos y añádelos a la cazuela de la salsa (morcilla y maíz). Mezcla bien. Salpimienta y añade un poco de perejil picado. Corta 4 trozos grandes de film transparente y extiéndelos sobre 4 recipientes marcando bien el interior. Úntalos con aceite y casca un huevo encima de cada uno. Átalos con una cuerda de cocina. Cuécelos durante 3-4 minutos en una cazuela con abundante agua. Retira los films. Sirve la pasta con los huevos y sazónalos. Salpica los platos con un poco de maíz tostado machacado. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pasta Con Morcilla, Salsa De Maíz Y Huevo Escalfado",
+    "meta_description": "Para la salsa de maíz, hierve la nata con la leche y el maíz dulce durante 5 minutos. Tritura, cuela, sazona y reserva. Coloca la morcilla en un recipiente apto para el horno, riégala con un chorrito de aceite y hornéala a 190 ºC durante 20",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

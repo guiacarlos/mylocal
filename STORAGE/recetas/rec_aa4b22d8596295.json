@@ -1,0 +1,88 @@
+{
+  "id": "rec_aa4b22d8596295",
+  "slug": "clafoutis-de-uvas-negras",
+  "titulo": "Clafoutis De Uvas Negras",
+  "resumen": "Unta 4 moldes con un poco de mantequilla y colócalos sobre una bandeja de horno. Lava las uvas, córtalas por la mitad (retira las pepitas) y repártelas en los moldes. Coloca las harinas con el azúcar en un bol. Incorpora la leche y la nata ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "g",
+      "nombre": "uvas negras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "g",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "15",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "mantequilla (para untar los moldes)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Unta 4 moldes con un poco de mantequilla y colócalos sobre una bandeja de horno. Lava las uvas, córtalas por la mitad (retira las pepitas) y repártelas en los moldes. Coloca las harinas con el azúcar en un bol. Incorpora la leche y la nata poco a poco mientras remueves. Agrega el huevo y la esencia de vainilla. Mezcla bien. Vierte la crema sobre las uvas. Introduce la bandeja en el horno a 220 ºC durante 10 minutos. Deja atemperar y sirve. Decora con una hojita de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Clafoutis De Uvas Negras",
+    "meta_description": "Unta 4 moldes con un poco de mantequilla y colócalos sobre una bandeja de horno. Lava las uvas, córtalas por la mitad (retira las pepitas) y repártelas en los moldes. Coloca las harinas con el azúcar en un bol. Incorpora la leche y la nata ",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_dec8f646bcbc0d",
+  "slug": "verduras-de-temporada-con-salsa-holandesa",
+  "titulo": "Verduras De Temporada Con Salsa Holandesa",
+  "resumen": "Pela las alcachofas y córtales la parte superior. Cuécelas durante unos 20 minutos en una cazuela con agua y una pizca de sal. Escúrrelas y córtalas por la mitad. Resérvalas. Limpia las borrajas, córtalas en trozos de 5-6 centímetros y cuéc",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "borraja"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "espárragos blancos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa holandesa:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "yemas de huevo"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un chorrito de txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las alcachofas y córtales la parte superior. Cuécelas durante unos 20 minutos en una cazuela con agua y una pizca de sal. Escúrrelas y córtalas por la mitad. Resérvalas. Limpia las borrajas, córtalas en trozos de 5-6 centímetros y cuécelas en una cazuela con agua hirviendo y sal durante 6-8 minutos. Escurre y reserva. Corta la parte inferior del tallo de los espárragos, pélalos y cuécelos en una cazuela con agua y sal durante 12-15 minutos (según tamaño). Escúrrelos y resérvalos. Para la salsa holandesa, coloca un cuenco al baño maría, pon las yemas en el bol y móntalas con la varilla (manual o eléctrica). Funde la mantequilla en una cazuela (retira la espuma) e incorpórala, poco a poco, a las yemas sin dejar de batir (evita echar el suero del fondo). Pon a punto de sal, vierte el txakoli y mezcla bien. En el momento de servir, reparte las verduras en 4 fuentes aptas para horno: primero la borraja, luego los espárragos y encima las alcachofas. Nápalas con la salsa holandesa y gratínalas en el horno durante 3 minutos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Verduras De Temporada Con Salsa Holandesa",
+    "meta_description": "Pela las alcachofas y córtales la parte superior. Cuécelas durante unos 20 minutos en una cazuela con agua y una pizca de sal. Escúrrelas y córtalas por la mitad. Resérvalas. Limpia las borrajas, córtalas en trozos de 5-6 centímetros y cuéc",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

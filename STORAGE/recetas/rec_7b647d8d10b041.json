@@ -1,0 +1,113 @@
+{
+  "id": "rec_7b647d8d10b041",
+  "slug": "ensaladilla-de-langostinos-calabacin-y-patata",
+  "titulo": "Ensaladilla De Langostinos, Calabacín Y Patata",
+  "resumen": "Pon la patata y 2 huevos en una cazuelita. Cúbrelos con agua y cuece los huevos durante 10 minutos y la patata durante 30. Pela los huevos y las patatas, córtalos en dados y ponlos en un bol. Calienta un poco de aceite en una sartén, salpim",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "langostinos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "calabacines"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "aceitunas verdes rellenas"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "barra de pan"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "",
+      "nombre": "-200 ml de aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon la patata y 2 huevos en una cazuelita. Cúbrelos con agua y cuece los huevos durante 10 minutos y la patata durante 30. Pela los huevos y las patatas, córtalos en dados y ponlos en un bol. Calienta un poco de aceite en una sartén, salpimienta los langostinos y saltéalos brevemente. Deja que se templen y pélalos. Córtalos en daditos y agrégalos al bol. Pasa las cabezas al mortero y aplástalas un poco. Cuela el jugo resultante y resérvalo. Pica las aceitunas y añádelas al bol. Lava los calabacines y córtalos en daditos (con piel). Ponlos en el accesorio para cocer al vapor, sazona, tapa y cuece durante unos 5 minutos. Deja templar y añádelos al bol. Pon el otro huevo, una pizca de sal, un chorrito de zumo de limón y el aceite en el vaso batidor. Bate con la batidora hasta conseguir una mayonesa. Añade la mayonesa al bol y mezcla. Sirve la ensaladilla, acompáñala con rebanadas de pan y rocíala con el jugo de los langostinos. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensaladilla De Langostinos, Calabacín Y Patata",
+    "meta_description": "Pon la patata y 2 huevos en una cazuelita. Cúbrelos con agua y cuece los huevos durante 10 minutos y la patata durante 30. Pela los huevos y las patatas, córtalos en dados y ponlos en un bol. Calienta un poco de aceite en una sartén, salpim",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,71 @@
+{
+  "id": "rec_b33293d926bbae",
+  "slug": "ensalada-de-champinones-y-naranja",
+  "titulo": "Ensalada De Champiñones Y Naranja",
+  "resumen": "Lava la lechuga, sécala y trocéala. Colócala en un bol. Pela las naranjas y saca los gajos en vivo. Lamina los champiñones y saltéalos en una sartén con aceite. Incorpóralos a la ensalada. Aliña los ingredientes con aceite, vinagre y sal. V",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "echuga lollo rojo"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "naranjas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Lava la lechuga, sécala y trocéala. Colócala en un bol. Pela las naranjas y saca los gajos en vivo. Lamina los champiñones y saltéalos en una sartén con aceite. Incorpóralos a la ensalada. Aliña los ingredientes con aceite, vinagre y sal. VERDURAS, HORTALIZAS Y SETAS COLES DE BRUSELAS EN SALSA VIZCAÍNA Ingredientes (4 p.)",
+    "800 g de coles de Bruselas 100 g de bacalao ahumado 2 dientes de ajo 2 cebollas rojas 20 g de miga de pan 5 pimientos choriceros 400 ml de caldo de verdura 1 copa de vino blanco aceite de oliva virgen extra sal perejil",
+    "Elaboración",
+    "Pon a remojar los pimientos choriceros en agua caliente durante unos 20-30 minutos y sácales la carne. Resérvala. Pela los dientes de ajo, lamínalos y ponlos a dorar en una cazuela con un poco de aceite. Pela las cebollas, córtalas en juliana y agrégalas. Sazona y rehógalas bien (15-20 minutos). Trocea la miga de pan y el bacalao e incorpóralos. Sazona y vierte el vino blanco y el caldo. Añade la carne de los pimientos choriceros picadita y cocina todo durante 15 minutos a fuego suave. Pasa por el pasapurés, pon a punto de sal y reserva la salsa. Retira las hojas externas de las coles de Bruselas y ponlas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas durante 15 minutos aproximadamente. Escurre. Para servir, pon la salsa en el fondo de los platos, distribuye encima las coles de Bruselas y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada De Champiñones Y Naranja",
+    "meta_description": "Lava la lechuga, sécala y trocéala. Colócala en un bol. Pela las naranjas y saca los gajos en vivo. Lamina los champiñones y saltéalos en una sartén con aceite. Incorpóralos a la ensalada. Aliña los ingredientes con aceite, vinagre y sal. V",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

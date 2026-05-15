@@ -1,0 +1,114 @@
+{
+  "id": "rec_04010fbda0d17a",
+  "slug": "salmonetes-con-setas-y-tomates",
+  "titulo": "Salmonetes Con Setas Y Tomates",
+  "resumen": "Pela las cebolletas y córtalas en juliana fina. Corta los ajos frescos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Agrega la hoja de laurel troceada y sazona. Cocina las verduras hasta que cojan un poco de color",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "salmonetes"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "setas de cultivo"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "tomates deshidratados en aceite"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "pan rallado"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "ml",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela las cebolletas y córtalas en juliana fina. Corta los ajos frescos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Agrega la hoja de laurel troceada y sazona. Cocina las verduras hasta que cojan un poco de color.",
+    "Corta las setas en juliana y añádelas. Sube el fuego y saltéalas bien. Vierte el vino blanco y dale un hervor. Corta los tomates deshidratados en cuartos y agrégalos. Saltea brevemente.",
+    "Pon el vinagre a calentar en un cazo hasta que reduzca. Añádelo a las setas y mezcla bien. Resérvalas calientes.",
+    "Para hacer la provenzal, pela los dientes de ajo y córtalos en daditos. Colócalos en un bol y agrega el pan rallado y un poco de perejil picado. Mezcla bien.",
+    "Limpia los salmonetes, retirándoles las cabezas y las tripas. Con ayuda de un cuchillo, saca los lomos y retira la espina central.",
+    "Salpimienta los salmonetes y extiéndelos sobre una fuente apta para el horno. Espolvoréalos con la provenzal y hornéalos a 220 ºC durante 6 minutos.",
+    "Sirve los salmonetes y acompáñalos de las setas. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmonetes Con Setas Y Tomates",
+    "meta_description": "Pela las cebolletas y córtalas en juliana fina. Corta los ajos frescos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Agrega la hoja de laurel troceada y sazona. Cocina las verduras hasta que cojan un poco de color",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

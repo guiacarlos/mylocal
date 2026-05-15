@@ -1,0 +1,78 @@
+{
+  "id": "rec_dd7976304c1108",
+  "slug": "galletas-de-cereales-y-pinones",
+  "titulo": "Galletas De Cereales Y Piñones",
+  "resumen": "Bate el huevo en un bol y agrega el azúcar, la levadura y los copos de cereales. Ralla la cáscara del limón y añádela. Mezcla bien. Pon la mantequilla en un bol, fúndela en el microondas e incorpórala a la mezcla anterior. Añade los piñones",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 12,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "copos de cereales variados (avena, espelta, cebada)"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "120",
+      "unidad": "g",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "11",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Bate el huevo en un bol y agrega el azúcar, la levadura y los copos de cereales. Ralla la cáscara del limón y añádela. Mezcla bien. Pon la mantequilla en un bol, fúndela en el microondas e incorpórala a la mezcla anterior. Añade los piñones y remueve suavemente. Distribuye pequeñas porciones de masa en los moldes. Cocina las galletas en el horno a 180 ºC durante 20-25 minutos aproximadamente. Retira del horno y deja que se enfríen. Decora con menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Galletas De Cereales Y Piñones",
+    "meta_description": "Bate el huevo en un bol y agrega el azúcar, la levadura y los copos de cereales. Ralla la cáscara del limón y añádela. Mezcla bien. Pon la mantequilla en un bol, fúndela en el microondas e incorpórala a la mezcla anterior. Añade los piñones",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

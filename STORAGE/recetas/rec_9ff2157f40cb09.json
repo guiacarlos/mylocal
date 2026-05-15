@@ -1,0 +1,78 @@
+{
+  "id": "rec_9ff2157f40cb09",
+  "slug": "macedonia-al-hibisco-con-helado",
+  "titulo": "Macedonia Al Hibisco Con Helado",
+  "resumen": "Pon a calentar en un cazo un vaso de agua con el azúcar. Cuando empiece a hervir, añade las flores de hibisco, apaga el fuego y tapa el cazo. Deja enfriar y cuela.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pera"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "rodaja de piña"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "flor de hibisco"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "bolas de helado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar en un cazo un vaso de agua con el azúcar. Cuando empiece a hervir, añade las flores de hibisco, apaga el fuego y tapa el cazo. Deja enfriar y cuela.",
+    "Pela las frutas y córtalas en trozos de bocado. Colócalas en un bol y riega con la infusión.",
+    "Reparte las frutas en 4 copas y agrega una bola de helado en cada una. Adorna con unas hojas de menta y sirve. MANZANAS EN VASO Ingredientes (4 p.)",
+    "4 manzanas 2 yogures naturales 2 cucharadas de miel 2 cucharadas de azúcar moreno 50 g de almendras picadas 50 g de perlitas de chocolate negro 100 ml de ron unas hebras de azafrán hojas de menta (para decorar)",
+    "Elaboración",
+    "Con ayuda de un pelador, pela las manzanas dejándoles los rabitos y los corazones. Introduce las manzanas en una cazuela. Añádeles el ron, el azúcar y las hebras de azafrán. Agrega agua suficiente para que las manzanas queden cubiertas hasta la mitad. Pon a calentar y, cuando coja fuerza, baja el fuego al mínimo. Cuécelas con la tapa puesta durante 30-40 minutos (dependiendo del tamaño). Vierte los yogures en un bol. Añade la miel y mezcla bien. Agrega las perlitas de chocolate y mezcla suavemente. Tuesta las almendras en una sartén sin aceite. Sirve en el fondo de los vasos la mezcla de yogur, miel y chocolate. Pon encima las manzanas y espolvoréalas con las almendras. Adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Macedonia Al Hibisco Con Helado",
+    "meta_description": "Pon a calentar en un cazo un vaso de agua con el azúcar. Cuando empiece a hervir, añade las flores de hibisco, apaga el fuego y tapa el cazo. Deja enfriar y cuela.",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

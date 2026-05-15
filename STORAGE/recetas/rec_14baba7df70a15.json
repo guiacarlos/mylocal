@@ -1,0 +1,93 @@
+{
+  "id": "rec_14baba7df70a15",
+  "slug": "esparragos-con-vinagreta-de-frambuesa",
+  "titulo": "Espárragos Con Vinagreta De Frambuesa",
+  "resumen": "Con ayuda de un pelador, pela los espárragos y córtales la parte inferior. Pon abundante agua a calentar en una cazuela y sazónala. Agrega los espárragos y cuécelos durante 15 minutos. Resérvalos calientes. Limpia el puerro, saca 1 hoja y c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "24",
+      "unidad": "",
+      "nombre": "espárragos blancos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "flores de romero (opcional)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la vinagreta de frambuesa:"
+    },
+    {
+      "cantidad": "55",
+      "unidad": "g",
+      "nombre": "frambuesas"
+    },
+    {
+      "cantidad": "45",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "ml",
+      "nombre": "vinagre balsámico"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de ½ limón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Con ayuda de un pelador, pela los espárragos y córtales la parte inferior. Pon abundante agua a calentar en una cazuela y sazónala. Agrega los espárragos y cuécelos durante 15 minutos. Resérvalos calientes. Limpia el puerro, saca 1 hoja y córtala en 4 tiras finas. Escáldalas unos segundos en una cazuela con agua hirviendo. Retíralas y sécalas bien. Resérvalas. Para hacer la vinagreta, pon a calentar el aceite en una sartén. Agrega las frambuesas y aplástalas un poco. Vierte el vinagre y el zumo de limón. Deja reducir 3-4 minutos. Sazona, cuela la salsa y resérvala. Escurre los espárragos, júntalos de 6 en 6 y átalos con las tiras de puerro. Acompáñalos con la vinagreta de frambuesas y sirve. Decora con una ramita de perejil y unas flores de romero."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Espárragos Con Vinagreta De Frambuesa",
+    "meta_description": "Con ayuda de un pelador, pela los espárragos y córtales la parte inferior. Pon abundante agua a calentar en una cazuela y sazónala. Agrega los espárragos y cuécelos durante 15 minutos. Resérvalos calientes. Limpia el puerro, saca 1 hoja y c",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

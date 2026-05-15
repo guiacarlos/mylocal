@@ -1,0 +1,111 @@
+{
+  "id": "rec_2a9a20e6f09144",
+  "slug": "hojas-de-col-rellenas",
+  "titulo": "Hojas De Col Rellenas",
+  "resumen": "Pon la patata en una cazuelita, cúbrela con agua, sazónala y cuécela durante 30 minutos. Pélala y resérvala.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "hojas",
+      "nombre": "col"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "carne picada de ternera y de cerdo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "cerveza"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "pasas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "nueces"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon la patata en una cazuelita, cúbrela con agua, sazónala y cuécela durante 30 minutos. Pélala y resérvala.",
+    "Pon las pasas en un bol, cúbrelas con agua y espera a que se hidraten. Cuélalas y resérvalas.",
+    "Retira las hojas externas de la col. Lava 8 hojas y escáldalas durante 5-7 minutos en una cazuela con agua hirviendo. Retíralas, refréscalas y sécalas bien.",
+    "Pela y pica los ajos. Pela la cebolleta y córtala en daditos. Ponlos a pochar en una sartén con un chorrito de aceite. Salpimienta la carne e incorpórala. Rehógala un poco y añade la cerveza. Dale un hervor e incorpora las pasas y 300 mililitros de salsa de tomate (reserva 100 ml). Cocina el conjunto durante 8-10 minutos a fuego suave. Espolvorea con perejil picado y pasa la mezcla a un bol. Añade la patata cocida machacada y las nueces peladas y picaditas. Mezcla bien. Extiende las hojas de col y retírales el nervio central. Rellénalas con la farsa de carne y envuélvelas formando unos paquetitos. Colócalos sobre la placa de horno, úntalos con un poco de aceite y hornéalos a 200 ºC durante 10 minutos. Calienta el resto de la salsa de tomate. Lígala agregándole un poco de harina de maíz diluida en agua fría. Sirve en cada plato un par de paquetitos de col y carne. Decora los platos con un poco de salsa de tomate y una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Hojas De Col Rellenas",
+    "meta_description": "Pon la patata en una cazuelita, cúbrela con agua, sazónala y cuécela durante 30 minutos. Pélala y resérvala.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

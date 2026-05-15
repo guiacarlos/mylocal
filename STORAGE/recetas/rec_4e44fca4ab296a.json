@@ -1,0 +1,295 @@
+{
+  "id": "rec_4e44fca4ab296a",
+  "slug": "achicoria-con-patatas-y-calabaza",
+  "titulo": "Achicoria Con Patatas Y Calabaza",
+  "resumen": "Para la salsa, pela las cebolletas, córtalas en dados, ponlas a pochar en una cazuela con un chorrito de aceite y sazónalas. Cuando las cebolletas estén doradas, agrega la salsa inglesa, la mostaza, la miel y el agua. Deja que reduzca duran",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "achicoria"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Elaboración"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Lava bien la achicoria y córtala en trozos de 3 centímetros. Pela las patatas,"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "córtalas en dados grandes y resérvalos. Pela la calabaza y córtala en dados."
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Pon agua a calentar en una cazuela. Cuando empiece a hervir, sazónala y"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "agrega la achicoria, las patatas y la calabaza. Cuece todo junto durante 20"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "minutos. En el momento de servir, escurre bien y pasa todo a una fuente"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "grande."
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo, pela los dientes de ajo, lamínalos y dóralos un poco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "en una sartén con el aceite. Una vez dorados, retira la sartén del fuego y deja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "enfriar. Coloca el huevo, una pizca de sal y un chorrito de vinagre en un vaso"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "batidor. Cuela encima el aceite del refrito y tritura todo con la batidora hasta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "que ligue."
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Adereza la verdura con la mayonesa de ajo."
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ALBÓNDIGAS DE VERDURAS"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Ingredientes (4 p.)"
+    },
+    {
+      "cantidad": "450",
+      "unidad": "g",
+      "nombre": "coliflor"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "setas de cultivo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "80",
+      "unidad": "g",
+      "nombre": "queso rallado"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa:"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "ml",
+      "nombre": "salsa inglesa"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "mostaza"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, pela las cebolletas, córtalas en dados, ponlas a pochar en una cazuela con un chorrito de aceite y sazónalas. Cuando las cebolletas estén doradas, agrega la salsa inglesa, la mostaza, la miel y el agua. Deja que reduzca durante 10 minutos. Tritura y, en el momento de servir, calienta la salsa.",
+    "Pon agua a calentar en otra cazuela y sazónala. Cuando empiece a hervir, agrega el arroz y cuécelo durante 25 minutos. Escúrrelo y resérvalo.",
+    "Ralla la coliflor y las zanahorias. Pela la cebolla y córtala en daditos. Corta también en daditos las setas. Pon un poco de aceite en una sartén, agrega las verduras, sazónalas y póchalas durante 10 minutos aproximadamente. Deja que se templen y colócalas en un bol. Agrega al bol el arroz cocido, el queso rallado, el huevo y un diente de ajo picadito. Mezcla los ingredientes y amásalos. Coge pequeñas porciones y redondéalas. Pásalas por harina y fríelas en una sartén con aceite. Escúrrelas en un plato cubierto con papel absorbente.",
+    "Sirve las albóndigas y acompáñalas con la salsa. Adorna los platos con unas hojas de perejil. PIZZA DE PATATAS A LA RIOJANA Ingredientes (4-6 p.)",
+    "3 patatas 2 cebolletas 1 pimiento rojo 3 dientes de ajo 250 g de chorizo 150 g de queso 1 huevo 2 cucharadas de harina aceite de oliva virgen extra 1 hoja de laurel orégano sal perejil",
+    "Elaboración",
+    "Pela los ajos, las cebolletas y el pimiento, pícalos finamente y rehógalos en una cazuela con un chorrito de aceite. Sazona e incorpora la hoja de laurel. Agrega el chorizo y fríelo brevemente. Pela las patatas, cáscalas e incorpóralas a la cazuela. Rehógalas un poco y cubre todo con agua. Pon a punto de sal y cocina durante 20-25 minutos a fuego no muy fuerte. Retira el chorizo, córtalo en rodajitas y resérvalo. Retira la hoja de laurel.",
+    "Escurre el líquido y pasa las patatas por el pasapurés hasta conseguir un puré espeso. Añade el huevo y la harina y mezcla bien. Corta 4 círculos de papel de horno, colócalos sobre 2 placas de horno y reparte encima la masa de patatas a la riojana.",
+    "Coloca encima de cada pizza unos trozos de chorizo. Corta el queso en triángulos y coloca 3 triángulos en cada pizza. Espolvorea las pizzas con un poco de orégano e introdúcelas en el horno durante 8-10 minutos a 200 ºC.",
+    "Decora con una ramita de perejil y sirve.",
+    "LASAÑA DE JAMÓN Y PATATA CON QUESO Ingredientes (4 p.)",
+    "6 lonchas de jamón serrano 3-4 patatas 1 cebolla 8 espárragos verdes 150 g de crema de queso 2 yemas de huevo 1 vaso de salsa de tomate aceite de oliva virgen extra pimienta negra sal perejil",
+    "Elaboración",
+    "Corta las lonchas de jamón por la mitad y colócalas sobre una placa de horno cubierta con papel de hornear. Cubre las lonchas con otro papel de hornear y hornéalas a 180 ºC durante 10-12 minutos. Retíralas y deja que se enfríen.",
+    "Pela las patatas, cáscalas y ponlas en una cazuela con abundante agua hirviendo y sal. Tapa y cuécelas durante 15-20 minutos. Escúrrelas y pásalas por el pasapurés. Salpimienta y añade las yemas de huevo. Mezcla. Introduce el puré en una manga pastelera y resérvalo.",
+    "Pela la cebolla, córtala en juliana y ponla a pochar en una sartén con un chorrito de aceite. Sazona. Cuando esté pochada, corta en juliana los espárragos verdes y añádelos. Cocínalos durante unos 4-5 minutos más.",
+    "Presenta los 4 montaditos de lasaña de la siguiente manera: una loncha de jamón crujiente, una capa de puré de patata y otra de verduritas pochadas, una cucharada de salsa de tomate y un poco de queso crema; tapa con otro crujiente de jamón, otra capa de puré de patata y otra de verduras, otra cucharada de salsa de tomate y un poco de queso. Coloca encima la última loncha de jamón crujiente, cubre con una capa de puré de patata y culmina con un poco más de queso cremoso. Gratínalos en el horno.",
+    "Sirve y decora con una ramita de perejil.",
+    "PASTELES DE SETAS, JAMÓN Y QUESO Ingredientes (4 p.)",
+    "600 g de setas de cardo 2 lonchas gruesas de jamón cocido (200 g) 300 g de queso 8 chalotas 2 dientes de ajo 6 patatas 100 ml de salsa de tomate aceite de oliva virgen extra perejil pimienta sal",
+    "Elaboración",
+    "Pon a calentar una cazuela con abundante agua, agrega las patatas y una pizca de sal y cuécelas durante 30-35 minutos. Pela las patatas, trocéalas y pásalas por el pasapurés. Coloca el puré en un bol, agrega un chorrito de aceite y la salsa de tomate. Salpimienta, espolvorea con perejil picado y mezcla. Resérvalo. Pela las chalotas y los dientes de ajo y córtalos en daditos. Pon todo a rehogar en una sartén con un chorrito de aceite. Pica las setas y añádelas. Rehógalas durante 5 minutos. Coloca las setas en un bol. Corta en dados el jamón y 200 gramos de queso y añádelos. Mezcla bien. Prepara 4 recipientes individuales aptos para el horno. Extiende en la base de los recipientes un poco de puré de patata, reparte encima la mezcla de setas, jamón y queso, y cúbrelos con el resto del puré. Ralla encima el resto del queso, introduce los recipientes en el horno y hornéalos a 200 ºC durante 10 minutos. Sirve y adorna con unas hojas de perejil.",
+    "ENDIBIAS RELLENAS DE JUDÍAS VERDES Y BACALAO Ingredientes (4 p.)",
+    "24 hojas de endibia 400 g de judías verdes 250 g de bacalao ahumado 1 patata 1 puerro 1 tomate aceite de oliva virgen extra 1 cucharada de mostaza zumo de 1 limón sal perejil",
+    "Elaboración",
+    "Corta la parte inferior y superior del puerro. Suelta un par de hojas, córtalas en tiras largas y escáldalas durante 2-3 minutos. Escúrrelas y resérvalas.",
+    "Suelta y lava las hojas de endibia. Sécalas y resérvalas.",
+    "Pon la patata a cocer en una cazuela con agua y una pizca de sal. A los 25-30 minutos, retírala, refréscala, pélala y aplástala con un tenedor.",
+    "Limpia las judías, retírales las puntas y córtalas en trocitos pequeños. Pon agua a calentar en una cazuela con agua. Cuando empiece a hervir, sazona y agrega las judías. Cuécelas durante 10-12 minutos. Escúrrelas y resérvalas.",
+    "Corta el bacalao ahumado en daditos.",
+    "Mezcla las judías con la patata y el bacalao. Agrega una pizca de sal, la mostaza y 4 cucharadas de aceite. Mezcla bien y rellena las hojas de endibia. Junta las hojas de endibia de dos en dos (a modo de bocadillo, dejando las hojas de endibia por fuera y el relleno por dentro) y enróllales alrededor una tira de puerro. Colócalas sobre una fuente.",
+    "Para hacer la vinagreta, pon el limón, un buen chorro de aceite y una pizca de sal en un bol. Pela el tomate, córtalo en daditos y agrégalos. Mezcla bien.",
+    "Aliña las endibias con la vinagreta y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Achicoria Con Patatas Y Calabaza",
+    "meta_description": "Para la salsa, pela las cebolletas, córtalas en dados, ponlas a pochar en una cazuela con un chorrito de aceite y sazónalas. Cuando las cebolletas estén doradas, agrega la salsa inglesa, la mostaza, la miel y el agua. Deja que reduzca duran",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

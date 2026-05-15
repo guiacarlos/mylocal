@@ -28,31 +28,21 @@ Write-Host "=== MyLocal Build (template: $Template) ===" -ForegroundColor Cyan
 # se cuelga indefinidamente esperando a su servidor.
 & (Join-Path $ROOT "tools\dev\free-ports.ps1") -Quiet
 
-# 1. Compilar SPA React
+# 1. Compilar template via pnpm workspaces
 Write-Host "[1/3] Compilando template '$Template'..." -ForegroundColor Yellow
 
 $templateDir = Join-Path $ROOT "templates\$Template"
-if (Test-Path $templateDir) {
-    # Nuevo sistema: templates/ con pnpm workspaces
-    try {
-        cmd /c "pnpm -F $Template build"
-    } catch {
-        Write-Host "ERROR: pnpm build fallo para template '$Template'" -ForegroundColor Red
-        exit 1
-    }
-} else {
-    # Fallback legacy: spa/ con npm
-    Set-Location $SPA
-    try {
-        cmd /c "npm run build --silent"
-    } catch {
-        Write-Host "ERROR: El proceso de build falló" -ForegroundColor Red
-        Set-Location $ROOT
-        exit 1
-    }
-    Set-Location $ROOT
+if (-not (Test-Path $templateDir)) {
+    Write-Host "ERROR: templates\$Template no existe. Plantillas disponibles:" -ForegroundColor Red
+    Get-ChildItem (Join-Path $ROOT "templates") -Directory | ForEach-Object { Write-Host "  $($_.Name)" -ForegroundColor Yellow }
+    exit 1
 }
-
+try {
+    cmd /c "pnpm -F $Template build"
+} catch {
+    Write-Host "ERROR: pnpm -F $Template build fallo" -ForegroundColor Red
+    exit 1
+}
 if ($LASTEXITCODE -ne 0) {
     Write-Host "ERROR: build fallo (exit $LASTEXITCODE)" -ForegroundColor Red
     exit 1
@@ -158,6 +148,43 @@ if (Test-Path $testScript) {
 } else {
     Write-Host "AVISO: test_login.php no encontrado en release. Saltando gate." -ForegroundColor Yellow
 }
+
+# 2.4 GATES DE CAPABILITIES: tests directos (sin HTTP) que validan que
+# CITAS, CRM, NOTIF, DELIVERY, TAREAS, OpenClaude/EventBus y OPENCLAW
+# siguen sanos. Si CUALQUIERA falla, build aborta.
+Write-Host "      Ejecutando tests de capabilities..." -ForegroundColor Gray
+$capabilityTests = @(
+    @{ Name = 'CITAS';       Script = 'spa\server\tests\test_citas.php' }
+    @{ Name = 'CRM';         Script = 'spa\server\tests\test_crm.php' }
+    @{ Name = 'NOTIF';       Script = 'spa\server\tests\test_notif.php' }
+    @{ Name = 'DELIVERY';    Script = 'spa\server\tests\test_delivery.php' }
+    @{ Name = 'TAREAS';      Script = 'spa\server\tests\test_tareas.php' }
+    @{ Name = 'OPENCLAUDE';  Script = 'spa\server\tests\test_openclaude.php' }
+    @{ Name = 'OPENCLAW';    Script = 'spa\server\tests\test_openclaw.php' }
+)
+foreach ($t in $capabilityTests) {
+    $scriptPath = Join-Path $RELEASE $t.Script
+    if (-not (Test-Path $scriptPath)) {
+        Write-Host "        $($t.Name.PadRight(11)) no presente, saltando" -ForegroundColor DarkGray
+        continue
+    }
+    # Aislamos via cmd /c porque PowerShell 5.1 trata stderr (error_log
+    # de PHP) como NativeCommandError aunque el exit code sea 0.
+    $tmpOut = [System.IO.Path]::GetTempFileName()
+    cmd /c "php `"$scriptPath`" > `"$tmpOut`" 2>&1"
+    $exit = $LASTEXITCODE
+    $out  = Get-Content $tmpOut -ErrorAction SilentlyContinue
+    Remove-Item $tmpOut -ErrorAction SilentlyContinue
+    if ($exit -ne 0) {
+        Write-Host ""
+        Write-Host "ERROR: test de capability $($t.Name) fallo. La build NO continua." -ForegroundColor Red
+        $out | ForEach-Object { Write-Host "  $_" }
+        exit 1
+    }
+    $resumen = ($out | Where-Object { $_ -match 'Resultado:' } | Select-Object -Last 1)
+    Write-Host "        $($t.Name.PadRight(11)) $resumen" -ForegroundColor DarkGray
+}
+Write-Host "      OK -> 7 capabilities con tests verdes" -ForegroundColor Green
 
 # 3. Crear STORAGE/ vacio con .gitkeep para que Apache pueda escribir datos
 Write-Host "[3/3] Preparando estructura de datos vacia..." -ForegroundColor Yellow

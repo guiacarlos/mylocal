@@ -1,0 +1,95 @@
+{
+  "id": "rec_a35da188c32d5a",
+  "slug": "risotto-de-champinones",
+  "titulo": "Risotto De Champiñones",
+  "resumen": "Coloca la carcasa de pollo en la olla rápida. Trocea las setas shitake y añádelas. Incorpora la cabeza de ajos y la parte verde del puerro y de la cebolleta. Añade unas ramas de perejil, cubre con abundante agua, sazona y cuece todo durante",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "setas shitake"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "carcasa de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cabeza de ajos"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "queso parmesano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca la carcasa de pollo en la olla rápida. Trocea las setas shitake y añádelas. Incorpora la cabeza de ajos y la parte verde del puerro y de la cebolleta. Añade unas ramas de perejil, cubre con abundante agua, sazona y cuece todo durante unos 15 minutos. Cuela el caldo (1 ½ l ) y resérvalo.",
+    "Corta la cebolleta en daditos y ponla a rehogar en una cazuela con un chorrito de aceite. Limpia el puerro, pícalo finamente y añádelo. Cuando la verdura empiece a ablandarse, limpia bien los champiñones, lamínalos y agrégalos. Sazona. Agrega el arroz, rehógalo un poco y vierte un poco de caldo. Cocínalo removiéndolo a menudo. A medida que el líquido se vaya evaporando, vierte más caldo y sigue cocinándolo sin dejar de remover. Repite el mismo proceso hasta terminar con todo el caldo (aproximadamente, 16-18 minutos).",
+    "Ralla encima el queso y cocínalo durante 4-5 minutos sin dejar de remover. Espolvorea con perejil picado. Sirve y decora con una ramita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Risotto De Champiñones",
+    "meta_description": "Coloca la carcasa de pollo en la olla rápida. Trocea las setas shitake y añádelas. Incorpora la cabeza de ajos y la parte verde del puerro y de la cebolleta. Añade unas ramas de perejil, cubre con abundante agua, sazona y cuece todo durante",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_d9e83004d56260",
+  "slug": "pescadilla-a-la-papillote",
+  "titulo": "Pescadilla A La Papillote",
+  "resumen": "Limpia el calabacín, los puerros y los ajos frescos, pela las zanahorias y corta todo en juliana fina. Reserva. Extiende 4 trozos grandes de papel de aluminio. Reparte encima (a un lado del papel) las verduras cortadas en juliana, salpimién",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "omos de pescadilla (600 g aprox.)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manojo de ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín pequeño"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "copita",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Limpia el calabacín, los puerros y los ajos frescos, pela las zanahorias y corta todo en juliana fina. Reserva. Extiende 4 trozos grandes de papel de aluminio. Reparte encima (a un lado del papel) las verduras cortadas en juliana, salpimiéntalas y rocíalas con un chorrito de aceite. Coloca los lomos de pescadilla encima, salpimiéntalos y rocíalos con un chorrito de aceite y otro de vino blanco. Dobla el papel de aluminio tapando el pescado y las verduras y ciérralos herméticamente presionando los bordes. Coloca los paquetitos en la placa del horno y hornéalos a 220 ºC durante 10 minutos. Pon cada paquetito sobre un plato y, con unas tijeras, hazles una cruz para abrirlos (ten cuidado de no quemarte con el vapor). Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pescadilla A La Papillote",
+    "meta_description": "Limpia el calabacín, los puerros y los ajos frescos, pela las zanahorias y corta todo en juliana fina. Reserva. Extiende 4 trozos grandes de papel de aluminio. Reparte encima (a un lado del papel) las verduras cortadas en juliana, salpimién",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

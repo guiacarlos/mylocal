@@ -1,0 +1,136 @@
+{
+  "id": "rec_fdb531327dbf14",
+  "slug": "pollo-asado-con-pisto-de-champinones-y-cuscus",
+  "titulo": "Pollo Asado Con Pisto De Champiñones Y Cuscús",
+  "resumen": "Corta los muslos de pollo en dos (muslo y contramuslo). Salpimiéntalos y colócalos en una bandeja apta para el horno. Rocíalos con un chorrito de aceite y espolvoréalos con el romero. Hornéalos a 220 ºC durante 20 minutos. Pasado este tiemp",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "muslos de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "cuscús"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "caldo de verduras"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "romero seco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el pisto de champiñones:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento morrón rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "tomates"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta los muslos de pollo en dos (muslo y contramuslo). Salpimiéntalos y colócalos en una bandeja apta para el horno. Rocíalos con un chorrito de aceite y espolvoréalos con el romero. Hornéalos a 220 ºC durante 20 minutos. Pasado este tiempo, mójalos con un chorrito de vinagre y hornéalos durante 8 minutos más a 220 ºC. Resérvalos.",
+    "Para hacer el pisto, pela los dientes de ajo, lamínalos y dóralos en una cazuela con un chorrito de aceite. Pela la cebolla y lava los pimientos y el calabacín. Corta en dados la cebolla, el pimiento rojo (pelado), el pimiento verde y el calabacín (con piel) e incorpóralos a la cazuela. Sazona y cocina las verduras durante 15 minutos a fuego medio.",
+    "Pela los tomates, trocéalos y añádelos. Retira la parte inferior de los champiñones, enjuágalos, sécalos, lamínalos e incorpóralos. Mezcla y cocina el conjunto durante 10 minutos más. Reserva.",
+    "Calienta el caldo de verduras en una cazuelita. Coloca el cuscús en un bol y vierte encima el caldo caliente. Tapa el bol con un trozo de film transparente y espera a que el cuscús absorba el caldo. Pon en cada plato una porción de cuscús, 2 trozos de muslo de pollo y un poco de pisto. Salsea los platos con el jugo de la bandeja del horno y decóralos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pollo Asado Con Pisto De Champiñones Y Cuscús",
+    "meta_description": "Corta los muslos de pollo en dos (muslo y contramuslo). Salpimiéntalos y colócalos en una bandeja apta para el horno. Rocíalos con un chorrito de aceite y espolvoréalos con el romero. Hornéalos a 220 ºC durante 20 minutos. Pasado este tiemp",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

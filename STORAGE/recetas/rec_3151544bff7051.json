@@ -1,0 +1,98 @@
+{
+  "id": "rec_3151544bff7051",
+  "slug": "lengua-de-cerdo-en-salsa-de-tomate",
+  "titulo": "Lengua De Cerdo En Salsa De Tomate",
+  "resumen": "Pon las lenguas en la olla rápida, añade la hoja de laurel, unas ramas de perejil y una pizca de sal. Cúbrelas con agua, coloca la tapa y cuécelas durante 40 minutos. Retira las lenguas, deja que se templen, pélalas y córtalas en filetes fi",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "lengua de cerdo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "tomate (maduro)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "pimientos verdes"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "alegrías riojanas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las lenguas en la olla rápida, añade la hoja de laurel, unas ramas de perejil y una pizca de sal. Cúbrelas con agua, coloca la tapa y cuécelas durante 40 minutos. Retira las lenguas, deja que se templen, pélalas y córtalas en filetes finos. Resérvalos.",
+    "Pela y lamina dos dientes de ajo. Pela la cebolla y córtala en dados. Corta también en dados 1 pimiento. Ponlos a pochar en una tartera con un chorrito de aceite y sazona.",
+    "Pica el tomate y añádelo. Pon a punto de sal. Cocina a fuego medio durante media hora. Pasa el tomate por el pasapurés y reserva la salsa.",
+    "Pela y pica los otros dos dientes de ajo y dóralos en una tartera con un chorrito de aceite. Pica finamente el otro pimiento verde y la cebolleta, añádelos y rehógalos bien. Agrega la salsa de tomate y los filetes de lengua. Cocina todo conjuntamente durante 5 minutos.",
+    "Pica finamente las alegrías riojanas y ponlas en un bol. Cúbrelas con aceite, sazona y mezcla bien.",
+    "Sirve la lengua con la salsa de tomate y acompáñala con las alegrías. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Lengua De Cerdo En Salsa De Tomate",
+    "meta_description": "Pon las lenguas en la olla rápida, añade la hoja de laurel, unas ramas de perejil y una pizca de sal. Cúbrelas con agua, coloca la tapa y cuécelas durante 40 minutos. Retira las lenguas, deja que se templen, pélalas y córtalas en filetes fi",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

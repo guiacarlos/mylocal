@@ -1,0 +1,83 @@
+{
+  "id": "rec_1084650dedd141",
+  "slug": "enrolladitos-variados",
+  "titulo": "Enrolladitos Variados",
+  "resumen": "Extiende las rebanadas de pan de molde sobre una superficie lisa (encimera) y pásales por encima el rodillo hasta que queden bien finas. Unta 2 rebanadas con la mermelada, otras 2 con la crema de cacao y avellanas y las últimas con el queso",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "6",
+      "unidad": "rebanadas",
+      "nombre": "pan de molde (alargado)"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "mermelada de fresa"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "crema de cacao y avellanas"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "queso mascarpone"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cacao en polvo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "fideos de colores"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "fideos de chocolate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Extiende las rebanadas de pan de molde sobre una superficie lisa (encimera) y pásales por encima el rodillo hasta que queden bien finas. Unta 2 rebanadas con la mermelada, otras 2 con la crema de cacao y avellanas y las últimas con el queso mascarpone mezclado con el azúcar glas. Enróllalas como si fueras a hacer una caracola larga. Enfríalos en el frigorífico durante 1 hora para que queden más compactos. Unta 4 con mermelada y adórnalos con los fideos de colores y de chocolate. Espolvorea los otros dos con un poco de cacao en polvo. Retírales las esquinas y corta cada rollito en cuatro trozos. Adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Enrolladitos Variados",
+    "meta_description": "Extiende las rebanadas de pan de molde sobre una superficie lisa (encimera) y pásales por encima el rodillo hasta que queden bien finas. Unta 2 rebanadas con la mermelada, otras 2 con la crema de cacao y avellanas y las últimas con el queso",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "id": "rec_96ef1053271780",
+  "slug": "trucha-con-judias-verdes-salteadas",
+  "titulo": "Trucha Con Judías Verdes Salteadas",
+  "resumen": "Abre las truchas por la mitad y quítales la espina central. Introduce, dentro de cada una, una loncha de jamón. Salpimiéntalas. Coloca las truchas sobre la placa del horno, rocíalas con un chorrito de aceite y hornéalas a 220 ºC durante 10 ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "truchas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de jamón serrano"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Abre las truchas por la mitad y quítales la espina central. Introduce, dentro de cada una, una loncha de jamón. Salpimiéntalas. Coloca las truchas sobre la placa del horno, rocíalas con un chorrito de aceite y hornéalas a 220 ºC durante 10 minutos. Retira las puntas de las judías, córtalas por la mitad a lo largo y después en trozos de 3-4 centímetros. Pon el wok a calentar con un chorrito de aceite. Agrega las judías y la cayena. Saltéalas un poco y sazona. Pela los ajos, pícalos finamente y añádelos al wok. Saltea todo junto durante unos 8-10 minutos más. Sirve en cada plato una trucha y una porción de judías verdes. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Trucha Con Judías Verdes Salteadas",
+    "meta_description": "Abre las truchas por la mitad y quítales la espina central. Introduce, dentro de cada una, una loncha de jamón. Salpimiéntalas. Coloca las truchas sobre la placa del horno, rocíalas con un chorrito de aceite y hornéalas a 220 ºC durante 10 ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

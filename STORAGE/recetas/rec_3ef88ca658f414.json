@@ -1,0 +1,93 @@
+{
+  "id": "rec_3ef88ca658f414",
+  "slug": "gazpacho",
+  "titulo": "Gazpacho",
+  "resumen": "Reserva 1 tomate, ½ cebolleta, ½ pimiento y ½ pepino (pelado) para la guarnición. Pica el resto de las verduras (tomates, cebolleta, pimiento, pepino y ajo) y ponlas en una jarra. Pica la miga de pan e incorpórala. Sazona y vierte un chorri",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1.200",
+      "unidad": "g",
+      "nombre": "tomates pera"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pepino"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "miga de pan"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Reserva 1 tomate, ½ cebolleta, ½ pimiento y ½ pepino (pelado) para la guarnición. Pica el resto de las verduras (tomates, cebolleta, pimiento, pepino y ajo) y ponlas en una jarra. Pica la miga de pan e incorpórala. Sazona y vierte un chorrito de vinagre y 100 mililitros de aceite de oliva. Tritura con la batidora eléctrica y cuela la mezcla. Reserva el gazpacho en el frigorífico. Corta el pan en daditos y fríelos en una sartén con aceite. Cuando se doren, sácalos a un plato cubierto con papel absorbente. Sirve el gazpacho, riégalo con un chorrito de aceite y acompáñalo con el pan frito y la guarnición de verduras. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Gazpacho",
+    "meta_description": "Reserva 1 tomate, ½ cebolleta, ½ pimiento y ½ pepino (pelado) para la guarnición. Pica el resto de las verduras (tomates, cebolleta, pimiento, pepino y ajo) y ponlas en una jarra. Pica la miga de pan e incorpórala. Sazona y vierte un chorri",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

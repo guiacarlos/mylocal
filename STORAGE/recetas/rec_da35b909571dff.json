@@ -1,0 +1,95 @@
+{
+  "id": "rec_da35b909571dff",
+  "slug": "empanadillas-de-bonito",
+  "titulo": "Empanadillas De Bonito",
+  "resumen": "Pela la cebolleta y córtala en daditos. Limpia los ajos frescos y córtalos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Pela el pimiento rojo, pícalo finamente y añádelo. Sazona y rehoga todo bien. Pasa por agua ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "obleas para empanadillas"
+    },
+    {
+      "cantidad": "125",
+      "unidad": "g",
+      "nombre": "bonito en aceite"
+    },
+    {
+      "cantidad": "6",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "⅓",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "",
+      "nombre": "aceitunas negras (sin hueso)"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "ml",
+      "nombre": "salsa de tomate"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la cebolleta y córtala en daditos. Limpia los ajos frescos y córtalos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Pela el pimiento rojo, pícalo finamente y añádelo. Sazona y rehoga todo bien. Pasa por agua las aceitunas, pícalas y añádelas. Incorpora el bonito desmenuzado y mezcla bien. Coloca todo en un bol, añade 3-4 cucharadas de salsa de tomate y mezcla todo bien.",
+    "Extiende las obleas sobre una superficie lisa y rellénalas. Ciérralas y presiona los bordes con un tenedor. Colócalas en una bandeja de horno forrada con papel de hornear y pincélalas con huevo batido. Hornéalas a 200 ºC durante 12-15 minutos.",
+    "Calienta el resto de la salsa de tomate. Sirve las empanadillas y acompáñalas con la salsa de tomate caliente. Decora con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Empanadillas De Bonito",
+    "meta_description": "Pela la cebolleta y córtala en daditos. Limpia los ajos frescos y córtalos en cilindros. Pon todo a pochar en una sartén con un chorrito de aceite. Pela el pimiento rojo, pícalo finamente y añádelo. Sazona y rehoga todo bien. Pasa por agua ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

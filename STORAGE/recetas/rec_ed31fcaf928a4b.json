@@ -1,0 +1,88 @@
+{
+  "id": "rec_ed31fcaf928a4b",
+  "slug": "judias-verdes-a-la-gallega",
+  "titulo": "Judías Verdes A La Gallega",
+  "resumen": "Pon a calentar una cazuela con abundante agua y una pizca de sal. Corta la cebolleta y el puerro en juliana fina y mételos en una red especial para cocer legumbres. Introduce la red en la cazuela. Pela las patatas, córtalas en rodajas de 2-",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "hojas",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "pimentón dulce"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar una cazuela con abundante agua y una pizca de sal. Corta la cebolleta y el puerro en juliana fina y mételos en una red especial para cocer legumbres. Introduce la red en la cazuela. Pela las patatas, córtalas en rodajas de 2-3 centímetros y agrégalas a la cazuela. Añade las hojas de laurel y cuece todo junto durante unos 6-8 minutos. Retira las puntas y los hilos de las judías y córtalas en trozos de 3 centímetros. Añádelas a la cazuela, sazona y cuece todo durante 12 minutos más. Retira la red y el laurel y escurre las patatas y las judías verdes. Resérvalas en una fuente. Pela los dientes de ajo, córtalos en láminas y rehógalos en una sartén con un chorrito de aceite. Retira la sartén del fuego y agrega el pimentón. Sirve las patatas en la base de la fuente, pon encima las judías y riégalas con el vinagre. Añade el refrito de ajos y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Judías Verdes A La Gallega",
+    "meta_description": "Pon a calentar una cazuela con abundante agua y una pizca de sal. Corta la cebolleta y el puerro en juliana fina y mételos en una red especial para cocer legumbres. Introduce la red en la cazuela. Pela las patatas, córtalas en rodajas de 2-",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

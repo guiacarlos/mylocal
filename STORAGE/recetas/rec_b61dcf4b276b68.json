@@ -1,0 +1,98 @@
+{
+  "id": "rec_b61dcf4b276b68",
+  "slug": "mejillones-escabechados-con-patatas-panadera",
+  "titulo": "Mejillones Escabechados Con Patatas Panadera",
+  "resumen": "Limpia los mejillones, retirándoles cualquier suciedad que puedan tener adherida a las conchas. Retírales también las barbas. Pon a calentar 200 mililitros de aceite, el vinagre y el vermut en una tartera. Añade un poco de pimienta y el pim",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "mejillones"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vermut"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Limpia los mejillones, retirándoles cualquier suciedad que puedan tener adherida a las conchas. Retírales también las barbas. Pon a calentar 200 mililitros de aceite, el vinagre y el vermut en una tartera. Añade un poco de pimienta y el pimentón. Cuando empiece a hervir, introduce los mejillones. Tapa la tartera y espera a que se abran. Retira las conchas y vuelve a meterlos en la tartera. Déjalos macerando hasta el momento de servir. Pela los ajos y las cebolletas. Lamina los ajos, corta en juliana las cebolletas y pon todo a pochar en una sartén con aceite. Corta también en dados el pimiento y agrégalo. Pela las patatas, córtalas en rodajas finas y añádelas. Sazona. Cocina las patatas durante unos 15-20 minutos. Escurre bien el aceite y coloca las patatas en una fuente. Pon por encima los mejillones y decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Mejillones Escabechados Con Patatas Panadera",
+    "meta_description": "Limpia los mejillones, retirándoles cualquier suciedad que puedan tener adherida a las conchas. Retírales también las barbas. Pon a calentar 200 mililitros de aceite, el vinagre y el vermut en una tartera. Añade un poco de pimienta y el pim",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

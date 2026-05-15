@@ -1,0 +1,103 @@
+{
+  "id": "rec_f1082a429c8a59",
+  "slug": "sopa-de-fideos-con-palomitas-al-curry",
+  "titulo": "Sopa De Fideos Con Palomitas Al Curry",
+  "resumen": "Corta los tallos de las cebolletas en trozos y colócalos en una cazuela con abundante agua. Sazona y añade los dientes de ajo (aplastados y sin pelar) y la hoja de laurel. Cuece todo durante 15 minutos. Pela las zanahorias y córtalas a tu g",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "fideos"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "maíz para hacer palomitas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "cilantro picado"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "cucharadita",
+      "nombre": "curry"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta los tallos de las cebolletas en trozos y colócalos en una cazuela con abundante agua. Sazona y añade los dientes de ajo (aplastados y sin pelar) y la hoja de laurel. Cuece todo durante 15 minutos. Pela las zanahorias y córtalas a tu gusto. Haz lo mismo con las cebolletas, las judías, el pimiento y el calabacín. Rehoga todo durante unos 10 minutos en una tartera grande con un chorrito de aceite. Sazona. Tuesta los fideos en otra sartén sin gota de aceite y añádelos a la cazuela de las verduras. Cuela el caldo encima, pon a punto de sal y cuece el conjunto durante 5 minutos. Agrega el cilantro y mezcla. Pon un poco de aceite a calentar en una sartén. Mezcla los granos de maíz con el curry y añádelos a la sartén. Tapa y espera a que los granos de maíz exploten. Pásalos a un recipiente y sálalos. Sirve la sopa y acompáñala con las palomitas al curry."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Fideos Con Palomitas Al Curry",
+    "meta_description": "Corta los tallos de las cebolletas en trozos y colócalos en una cazuela con abundante agua. Sazona y añade los dientes de ajo (aplastados y sin pelar) y la hoja de laurel. Cuece todo durante 15 minutos. Pela las zanahorias y córtalas a tu g",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

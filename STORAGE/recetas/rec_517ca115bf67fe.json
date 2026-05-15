@@ -1,0 +1,103 @@
+{
+  "id": "rec_517ca115bf67fe",
+  "slug": "paella-de-pescado-y-marisco",
+  "titulo": "Paella De Pescado Y Marisco",
+  "resumen": "Pon a calentar un poco de aceite en una paella. Pela las gambas, sazónalas y agrégalas a la paella. Saltéalas y retíralas a un plato. Corta el rape en dados, sazónalos y rehógalos en la paella. Retíralos a un plato. Limpia bien los mejillon",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "caldo para paella"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "gambas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "rape"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "mejillones"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "pimiento rojo (pelado)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pon a calentar un poco de aceite en una paella. Pela las gambas, sazónalas y agrégalas a la paella. Saltéalas y retíralas a un plato. Corta el rape en dados, sazónalos y rehógalos en la paella. Retíralos a un plato. Limpia bien los mejillones y colócalos al fuego en una cazuela con agua. Tápalos y espera a que se abran. Resérvalos. Pela y pica los ajos y añádelos a la paella donde has rehogado el rape y las gambas. Corta los pimientos en daditos, agrégalos y espera a que se rehoguen bien. Añade las hebras de azafrán y el tomate rallado. Incorpora el arroz, rehógalo un poco y vierte el caldo. Cocínalo durante 18 minutos. Apaga el fuego, agrega el rape, las gambas y los mejillones, tápalo y deja que repose durante un par de minutos. Decora con una hojita de perejil y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Paella De Pescado Y Marisco",
+    "meta_description": "Pon a calentar un poco de aceite en una paella. Pela las gambas, sazónalas y agrégalas a la paella. Saltéalas y retíralas a un plato. Corta el rape en dados, sazónalos y rehógalos en la paella. Retíralos a un plato. Limpia bien los mejillon",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

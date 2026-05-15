@@ -1,0 +1,88 @@
+{
+  "id": "rec_b7dcef6c611070",
+  "slug": "filloas-de-carnaval",
+  "titulo": "Filloas De Carnaval",
+  "resumen": "Con ayuda de una varilla, mezcla en un bol el huevo, una pizca de sal y el azúcar. Vierte la leche y el agua sin dejar de batir. Incorpora la harina poco a poco y sigue batiendo hasta conseguir una masa homogénea y sin grumos. Deja que repo",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "135",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de tocino magro (para untar)"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "nata (para montar)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Con ayuda de una varilla, mezcla en un bol el huevo, una pizca de sal y el azúcar. Vierte la leche y el agua sin dejar de batir. Incorpora la harina poco a poco y sigue batiendo hasta conseguir una masa homogénea y sin grumos. Deja que repose durante 1 hora en un sitio fresco. (Es importante cumplir este reposo para que la masa adquiera su textura final.) Calienta una sartén y úntala con el tocino. Cuando la sartén esté bien caliente, vierte un cacillo de masa y espárcela bien. Debe quedar una capa muy fina. Cuando los bordes empiecen a soltarse, dale la vuelta y espera a que se haga por el otro lado. Repite el proceso con el resto de la masa. Pon la nata en un bol y móntala con una batidora de varillas eléctrica. Agrega la miel y sigue batiendo hasta que esté montada la nata. Extiende las filloas sobre una superficie lisa, pon en el centro un poco de nata con miel y ciérralas como si fueran un pañuelo. Para que queden más bonitas, corta los bordes con un cortapastas. Sirve 2 por ración y adórnalas con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Filloas De Carnaval",
+    "meta_description": "Con ayuda de una varilla, mezcla en un bol el huevo, una pizca de sal y el azúcar. Vierte la leche y el agua sin dejar de batir. Incorpora la harina poco a poco y sigue batiendo hasta conseguir una masa homogénea y sin grumos. Deja que repo",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

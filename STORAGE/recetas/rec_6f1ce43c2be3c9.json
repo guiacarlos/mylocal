@@ -1,0 +1,98 @@
+{
+  "id": "rec_6f1ce43c2be3c9",
+  "slug": "patatas-rellenas-de-huevo-pavo-y-queso",
+  "titulo": "Patatas Rellenas De Huevo, Pavo Y Queso",
+  "resumen": "Lava las patatas, riégalas con un poco de aceite y envuélvelas con papel de aluminio. Ásalas en el horno a 180 ºC durante 40 minutos. Desenvuelve las patatas (conserva el papel de aluminio en la base para que asienten mejor) y córtales la p",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "800",
+      "unidad": "g",
+      "nombre": "tomates en conserva"
+    },
+    {
+      "cantidad": "175",
+      "unidad": "g",
+      "nombre": "pavo cocido"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "queso emmental"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Lava las patatas, riégalas con un poco de aceite y envuélvelas con papel de aluminio. Ásalas en el horno a 180 ºC durante 40 minutos. Desenvuelve las patatas (conserva el papel de aluminio en la base para que asienten mejor) y córtales la parte superior como si les quitaras la tapa. Vacíalas con cuidado y deja suficiente espacio para introducir un huevo. Lamina los ajos y rehógalos en una cazuela con aceite. Pica la cebolleta y agrégala. Pela el pimiento, pícalo y añádelo. Rehoga todo bien e incorpora los tomates. Sazona y añade un poco de azúcar. Cocina todo durante 30 minutos y pásalo por el pasapurés. Corta el pavo en dados y saltéalo en una sartén con un chorrito de aceite. Casca un huevo en el centro de cada patata. Reparte el pavo por encima y espolvoréalas con el queso rallado. Hornéalas a 190 ºC durante 5-10 minutos. Sirve la salsa de tomate y coloca encima las patatas rellenas. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Patatas Rellenas De Huevo, Pavo Y Queso",
+    "meta_description": "Lava las patatas, riégalas con un poco de aceite y envuélvelas con papel de aluminio. Ásalas en el horno a 180 ºC durante 40 minutos. Desenvuelve las patatas (conserva el papel de aluminio en la base para que asienten mejor) y córtales la p",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

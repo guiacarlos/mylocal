@@ -1,0 +1,121 @@
+{
+  "id": "rec_b6c5d4a1f78f94",
+  "slug": "sopa-de-pescado",
+  "titulo": "Sopa De Pescado",
+  "resumen": "Pon las cabezas, los huesos y las espinas de los pescados en una cazuela grande. Pela los langostinos y agrega a la cazuela las cabezas y las cáscaras. Cubre con abundante agua, pon a punto de sal y cuece todo durante 20-25 minutos. Cuela e",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 8,
+  "dificultad": "media",
+  "categoria": "sopas",
+  "tags": [
+    "sopas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "10",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "almejas"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "merluza"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "cabracho"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cabeza, espinas y huesos de rape y merluza"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "pan de sopa"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las cabezas, los huesos y las espinas de los pescados en una cazuela grande. Pela los langostinos y agrega a la cazuela las cabezas y las cáscaras. Cubre con abundante agua, pon a punto de sal y cuece todo durante 20-25 minutos. Cuela el caldo y resérvalo.",
+    "Pela y pica 2 dientes de ajo, los puerros, la cebolleta, el pimiento y la calabaza y pocha todo en una cazuela con un chorrito de aceite. Pela el tomate, pícalo y añádelo. Sazona y rehoga bien. Vierte el caldo, mezcla y cuece todo durante 20 minutos a fuego suave. Espolvorea con perejil picado.",
+    "Corta la merluza y el cabracho en dados. Salpimienta los langostinos y el pescado y añádelos a la sopa.",
+    "En una sartén con un chorrito de aceite, saltea las almejas hasta que se abran. Añádelas a la sopa. Corta el pan de sopa por la mitad a lo largo, tuéstalo, úntalo con el otro diente de ajo pelado y rállalo sobre los platos. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Pescado",
+    "meta_description": "Pon las cabezas, los huesos y las espinas de los pescados en una cazuela grande. Pela los langostinos y agrega a la cazuela las cabezas y las cáscaras. Cubre con abundante agua, pon a punto de sal y cuece todo durante 20-25 minutos. Cuela e",
+    "meta_keywords": "sopas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

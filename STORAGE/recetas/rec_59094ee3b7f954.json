@@ -1,0 +1,93 @@
+{
+  "id": "rec_59094ee3b7f954",
+  "slug": "crepes-de-chocolate-y-platano",
+  "titulo": "Crepes De Chocolate Y Plátano",
+  "resumen": "Coloca los huevos, la harina, la leche, la mitad del azúcar, una pizca de sal, el aceite y el aroma de vainilla en un vaso batidor. Tritura con una batidora hasta que todo quede perfectamente integrado. Calienta una sartén con una nuez de m",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "plátanos"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "¼",
+      "unidad": "l",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharaditas",
+      "nombre": "aroma de vainilla"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "cucharadas",
+      "nombre": "sirope de chocolate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca los huevos, la harina, la leche, la mitad del azúcar, una pizca de sal, el aceite y el aroma de vainilla en un vaso batidor. Tritura con una batidora hasta que todo quede perfectamente integrado. Calienta una sartén con una nuez de mantequilla. Vierte una porción de masa, extiéndela bien por toda la sartén y deja que cuaje. Dale la vuelta y deja que cuaje por el otro lado. Repite el proceso hasta terminar toda la masa. Reserva los crepes en un plato. (El primer crepe siempre se desecha.) Pon una cucharada de mantequilla a fundir en una sartén. Pela los plátanos, córtalos en trozos y añádelos a la sartén. Incorpora la otra mitad del azúcar y dora los plátanos. Extiende los crepes y úntalos con el sirope de chocolate. Coloca encima los trozos de plátano. Adorna con menta cortada en juliana."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crepes De Chocolate Y Plátano",
+    "meta_description": "Coloca los huevos, la harina, la leche, la mitad del azúcar, una pizca de sal, el aceite y el aroma de vainilla en un vaso batidor. Tritura con una batidora hasta que todo quede perfectamente integrado. Calienta una sartén con una nuez de m",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

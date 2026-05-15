@@ -1,0 +1,367 @@
+{
+    "contents": [
+        {
+            "role": "model",
+            "parts": [
+                {
+                    "text": "¡Hola! Soy tu asistente ACIDE. Puedo ayudarte a crear, editar, mover y eliminar elementos del canvas. ¿Qué quieres hacer?"
+                }
+            ]
+        },
+        {
+            "role": "user",
+            "parts": [
+                {
+                    "text": "hola"
+                }
+            ]
+        },
+        {
+            "role": "model",
+            "parts": [
+                {
+                    "text": "¡Hola! ¿En qué puedo ayudarte hoy con la página?"
+                }
+            ]
+        },
+        {
+            "role": "user",
+            "parts": [
+                {
+                    "text": "en que estamos trabajando y qeu puedes hacer para ayudarme cuales son tus habilidaddes"
+                }
+            ]
+        }
+    ],
+    "generation_config": {
+        "temperature": 0.7,
+        "max_output_tokens": 8192,
+        "top_p": 0.95,
+        "top_k": 40
+    },
+    "system_instruction": {
+        "parts": [
+            {
+                "text": "Eres el asistente de edición visual del FSE de ACIDE. Tienes ACCESO COMPLETO al canvas de la página.\r\nPuedes crear, modificar, mover, duplicar y eliminar cualquier elemento del lienzo.\r\nResponde SIEMPRE en español. Sé conciso (máx. 2-3 frases) y después incluye la acción JSON.\r\n\r\n═══════════════════════════════════════\r\nESTADO ACTUAL DE LA PÁGINA\r\n═══════════════════════════════════════\r\nResumen de secciones: [{\"id\":\"carta-header\",\"class\":\"page-header\",\"childCount\":1},{\"id\":\"carta-cafes\",\"class\":\"menu-section\",\"childCount\":1},{\"id\":\"carta-bakery\",\"class\":\"menu-section\",\"childCount\":1}]\r\n\r\nDatos completos de la página:\r\n{\n    \"theme\": \"gestasai-default\",\n    \"sections\": [\n        {\n            \"section\": \"content\",\n            \"id\": \"carta-header\",\n            \"class\": \"page-header\",\n            \"content\": [\n                {\n                    \"element\": \"container\",\n                    \"id\": \"carta-h-cont\",\n                    \"class\": \"container text-center\",\n                    \"customStyles\": {\n                        \"padding\": \"40px 20px 20px\"\n                    },\n                    \"content\": [\n                        {\n                            \"element\": \"heading\",\n                            \"id\": \"carta-h1\",\n                            \"tag\": \"h1\",\n                            \"class\": \"heading-1\",\n                            \"text\": \"Nuestra Carta\",\n                            \"customStyles\": []\n                        },\n                        {\n                            \"element\": \"text\",\n                            \"id\": \"carta-sub\",\n                            \"tag\": \"p\",\n                            \"text\": \"Productos artesanales elaborados con ingredientes de primera calidad.\",\n                            \"customStyles\": []\n                        }\n                    ]\n                }\n            ],\n            \"customStyles\": []\n        },\n        {\n            \"section\": \"content\",\n            \"id\": \"carta-cafes\",\n            \"class\": \"menu-section\",\n            \"content\": [\n                {\n                    \"element\": \"container\",\n                    \"id\": \"cafes-cont\",\n                    \"class\": \"container\",\n                    \"customStyles\": {\n                        \"padding\": \"40px 20px\"\n                    },\n                    \"content\": [\n                        {\n                            \"element\": \"heading\",\n                            \"id\": \"cafes-h\",\n                            \"tag\": \"h2\",\n                            \"class\": \"heading-2\",\n                            \"text\": \"Cafés\",\n                            \"customStyles\": []\n                        },\n                        {\n                            \"element\": \"grid\",\n                            \"id\": \"cafes-grid\",\n                            \"class\": \"grid grid-2\",\n                            \"customStyles\": {\n                                \"marginTop\": \"24px\",\n                                \"gap\": \"16px\"\n                            },\n                            \"content\": [\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-espresso\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"esp-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Espresso\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"esp-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Café solo de extracción perfecta. Intenso y equilibrado.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"esp-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"1,50 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                },\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-cortado\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"cor-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Cortado\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"cor-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Espresso con un toque de leche vaporizada. El equilibrio perfecto.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"cor-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"1,80 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                },\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-latte\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"lat-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Café con Leche\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"lat-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Espresso doble con leche vaporizada artesanalmente. Cremoso y suave.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"lat-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"2,20 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                },\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-matcha\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"mat-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Matcha Latte\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"mat-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Té matcha ceremonial con leche de avena. Energizante y saludable.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"mat-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"3,50 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ],\n            \"customStyles\": []\n        },\n        {\n            \"section\": \"content\",\n            \"id\": \"carta-bakery\",\n            \"class\": \"menu-section\",\n            \"content\": [\n                {\n                    \"element\": \"container\",\n                    \"id\": \"bakery-cont\",\n                    \"class\": \"container\",\n                    \"customStyles\": {\n                        \"padding\": \"0 20px 40px\"\n                    },\n                    \"content\": [\n                        {\n                            \"element\": \"heading\",\n                            \"id\": \"bak-h\",\n                            \"tag\": \"h2\",\n                            \"class\": \"heading-2\",\n                            \"text\": \"Repostería\",\n                            \"customStyles\": []\n                        },\n                        {\n                            \"element\": \"grid\",\n                            \"id\": \"bakery-grid\",\n                            \"class\": \"grid grid-2\",\n                            \"customStyles\": {\n                                \"marginTop\": \"24px\",\n                                \"gap\": \"16px\"\n                            },\n                            \"content\": [\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-croissant\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"cro-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Croissant de Mantequilla\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"cro-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Elaborado con mantequilla AOC francesa. Hojaldrado, crujiente por fuera y tierno por dentro.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"cro-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"2,80 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                },\n                                {\n                                    \"element\": \"card\",\n                                    \"id\": \"item-tostada\",\n                                    \"class\": \"card menu-item\",\n                                    \"content\": [\n                                        {\n                                            \"element\": \"heading\",\n                                            \"id\": \"tos-h\",\n                                            \"tag\": \"h3\",\n                                            \"text\": \"Tostada Artesanal\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"tos-p\",\n                                            \"tag\": \"p\",\n                                            \"text\": \"Pan de masa madre con aceite virgen extra y tomate. Desayuno saludable y delicioso.\",\n                                            \"customStyles\": []\n                                        },\n                                        {\n                                            \"element\": \"text\",\n                                            \"id\": \"tos-price\",\n                                            \"tag\": \"strong\",\n                                            \"text\": \"3,20 €\",\n                                            \"customStyles\": []\n                                        }\n                                    ],\n                                    \"customStyles\": []\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ],\n            \"customStyles\": []\n        }\n    ]\n}\r\n\r\nElemento seleccionado: null\r\n\r\n═══════════════════════════════════════\r\nACCIONES DISPONIBLES — formato: <action>{JSON}<\/action>\r\n═══════════════════════════════════════\r\n\r\n1. Añadir elemento dentro de la sección activa:\r\n<action>{\"type\":\"add_block\",\"preview\":\"descripción\",\"block\":{ ESQUEMA }}<\/action>\r\n\r\n2. Añadir sección completa al canvas:\r\n<action>{\"type\":\"add_section\",\"preview\":\"descripción\",\"section\":{ ESQUEMA_SECCIÓN }}<\/action>\r\n\r\n3. Cambiar texto de un elemento:\r\n<action>{\"type\":\"set_text\",\"preview\":\"Cambiar texto\",\"targetId\":\"ID\",\"value\":\"nuevo texto\"}<\/action>\r\n\r\n4. Cambiar clases CSS de un elemento:\r\n<action>{\"type\":\"set_class\",\"preview\":\"Cambiar estilo\",\"targetId\":\"ID\",\"value\":\"nuevas-clases\"}<\/action>\r\n\r\n5. Actualizar estilos CSS inline:\r\n<action>{\"type\":\"update_style\",\"preview\":\"descripción\",\"targetId\":\"ID\",\"styles\":{\"background\":\"#3b82f6\",\"color\":\"#fff\",\"padding\":\"20px\"}}<\/action>\r\n\r\n6. Actualizar múltiples campos a la vez:\r\n<action>{\"type\":\"update_multiple\",\"preview\":\"descripción\",\"targetId\":\"ID\",\"fields\":{\"text\":\"nuevo\",\"class\":\"heading-1\",\"tag\":\"h1\"}}<\/action>\r\n\r\n7. Eliminar un elemento o sección:\r\n<action>{\"type\":\"delete_block\",\"preview\":\"Eliminar elemento\",\"targetId\":\"ID\"}<\/action>\r\n\r\n8. Mover elemento hacia arriba:\r\n<action>{\"type\":\"move_up\",\"preview\":\"Subir elemento\",\"targetId\":\"ID\"}<\/action>\r\n\r\n9. Mover elemento hacia abajo:\r\n<action>{\"type\":\"move_down\",\"preview\":\"Bajar elemento\",\"targetId\":\"ID\"}<\/action>\r\n\r\n10. Duplicar un elemento:\r\n<action>{\"type\":\"duplicate_block\",\"preview\":\"Duplicar elemento\",\"targetId\":\"ID\"}<\/action>\r\n\r\n═══════════════════════════════════════\r\nESQUEMAS DE BLOQUES\r\n═══════════════════════════════════════\r\n\r\nHeading:   {\"element\":\"heading\",\"tag\":\"h1|h2|h3\",\"text\":\"Texto\",\"class\":\"heading-1\",\"id\":\"mc-h-xxxxx\",\"style\":{}}\r\nPárrafo:   {\"element\":\"text\",\"tag\":\"p\",\"text\":\"Contenido\",\"class\":\"text-base\",\"id\":\"mc-t-xxxxx\",\"style\":{}}\r\nBotón:     {\"element\":\"button\",\"text\":\"Etiqueta\",\"href\":\"#\",\"class\":\"btn btn-primary\",\"id\":\"mc-btn-xxxxx\"}\r\nImagen:    {\"element\":\"image\",\"src\":\"https:\/\/placehold.co\/800x400\",\"alt\":\"alt\",\"class\":\"w-full\",\"id\":\"mc-img-xxxxx\"}\r\nVídeo:     {\"element\":\"video\",\"src\":\"\",\"controls\":true,\"class\":\"w-full\",\"id\":\"mc-v-xxxxx\"}\r\nContainer: {\"element\":\"container\",\"class\":\"mc-container|flex-center|grid-2|grid-3\",\"id\":\"mc-c-xxxxx\",\"style\":{},\"content\":[]}\r\nSección:   {\"element\":\"section\",\"section\":\"content\",\"class\":\"section mc-section\",\"id\":\"mc-s-xxxxx\",\"style\":{\"padding\":\"60px 40px\",\"background\":\"#ffffff\"},\"content\":[]}\r\nHTML libre:{\"element\":\"html\",\"html\":\"<div>...<\/div>\",\"class\":\"\",\"id\":\"mc-html-xxxxx\"}\r\n\r\n═══════════════════════════════════════\r\nCLASES UTILITARIAS\r\n═══════════════════════════════════════\r\nLayout:     container, flex-center, grid-2, grid-3\r\nTipografía: heading-1 a heading-6, text-sm, text-base, text-lg\r\nBotones:    btn, btn-primary, btn-secondary, btn-outline\r\nSecciones:  section, section-dark, hero, mc-section\r\n\r\n═══════════════════════════════════════\r\nREGLAS\r\n═══════════════════════════════════════\r\n- Secciones de nivel superior: incluye \"section\":\"content\" en el JSON.\r\n- Elementos dentro de sección: NO incluyas \"section\" en el JSON.\r\n- Genera IDs únicos: \"mc-{tipo}-{5chars_aleatorios}\".\r\n- Solo UNA etiqueta <action> por respuesta.\r\n- Si no hay cambio que proponer, NO incluyas <action>.\r\n- Para cambios complejos, aplica el más importante y avisa al usuario."
+            }
+        ]
+    },
+    "tools": [
+        {
+            "function_declarations": [
+                {
+                    "name": "list_files",
+                    "description": "Lista el contenido del búnker objetivo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "path": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "read_file",
+                    "description": "Lee el contenido atómico de un archivo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "file_path"
+                        ]
+                    }
+                },
+                {
+                    "name": "write_file",
+                    "description": "Escribe o sobreescribe un archivo en el búnker.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "file_path",
+                            "content"
+                        ]
+                    }
+                },
+                {
+                    "name": "patch_file",
+                    "description": "Edición quirúrgica. Reemplaza texto específico sin reescribir todo el archivo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string"
+                            },
+                            "search": {
+                                "type": "string"
+                            },
+                            "replace": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "file_path",
+                            "search",
+                            "replace"
+                        ]
+                    }
+                },
+                {
+                    "name": "create_directory",
+                    "description": "Crea un directorio recursivamente.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "path": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "path"
+                        ]
+                    }
+                },
+                {
+                    "name": "search_code",
+                    "description": "Búsqueda global de texto en todos los archivos del búnker.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "query"
+                        ]
+                    }
+                },
+                {
+                    "name": "search",
+                    "description": "Alias de búsqueda global.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "query"
+                        ]
+                    }
+                },
+                {
+                    "name": "patch",
+                    "description": "Alias de edición quirúrgica.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string"
+                            },
+                            "search": {
+                                "type": "string"
+                            },
+                            "replace": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "file_path",
+                            "search",
+                            "replace"
+                        ]
+                    }
+                },
+                {
+                    "name": "health_check",
+                    "description": "Diagnóstico térmico y de integridad del núcleo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                },
+                {
+                    "name": "build_static_site",
+                    "description": "Activa la forja para reconstruir el sitio estático completo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                },
+                {
+                    "name": "git_status",
+                    "description": "Muestra el estado del repositorio táctico.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {}
+                    }
+                },
+                {
+                    "name": "git_log",
+                    "description": "Muestra el historial de commits recientes.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "limit": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "execute_command",
+                    "description": "Ejecuta un comando de sistema en la raíz del búnker. Úsalo para tareas complejas de shell.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "command": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "command"
+                        ]
+                    }
+                },
+                {
+                    "name": "create_course",
+                    "description": "Crea un nuevo curso en la academia.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "title": {
+                                "type": "string",
+                                "description": "Título del curso"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "Descripción breve"
+                            },
+                            "modules": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "title"
+                        ]
+                    }
+                },
+                {
+                    "name": "create_lesson",
+                    "description": "Crea una nueva lección y la vincula a un curso y módulo.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "course_id": {
+                                "type": "string"
+                            },
+                            "module_id": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "summary": {
+                                "type": "string"
+                            },
+                            "video_description": {
+                                "type": "string"
+                            },
+                            "knowledge_base": {
+                                "type": "string",
+                                "description": "Texto base para el tutor de IA"
+                            }
+                        },
+                        "required": [
+                            "course_id",
+                            "module_id",
+                            "title"
+                        ]
+                    }
+                },
+                {
+                    "name": "search_menu",
+                    "description": "Busca productos en la carta del restaurante por nombre o categoría.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string",
+                                "description": "Término de búsqueda o ingrediente"
+                            },
+                            "category": {
+                                "type": "string",
+                                "enum": [
+                                    "CAFÉ",
+                                    "DULCE",
+                                    "SALADO"
+                                ],
+                                "description": "Filtro opcional por categoría"
+                            }
+                        },
+                        "required": [
+                            "query"
+                        ]
+                    }
+                },
+                {
+                    "name": "get_item_details",
+                    "description": "Obtiene la ficha técnica completa de un producto (ingredientes, alérgenos, maridaje).",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "ID del producto (ej: socola-café-4)"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                },
+                {
+                    "name": "search_vault",
+                    "description": "Búsqueda semántica en la bóveda de conocimiento experto del Maître.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "question": {
+                                "type": "string",
+                                "description": "Duda o pregunta del cliente"
+                            }
+                        },
+                        "required": [
+                            "question"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

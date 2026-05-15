@@ -1,0 +1,88 @@
+{
+  "id": "rec_6f5e21dd07d720",
+  "slug": "truchas-a-la-cazuela",
+  "titulo": "Truchas A La Cazuela",
+  "resumen": "Pela los ajos, córtalos en láminas y dóralos en una sartén con un chorro de aceite. Pásalos a una cazuela. Pela las patatas, córtalas en medias lunas y fríelas en la misma sartén donde has dorado los ajos. Cuando estén a punto, pásalas a la",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "truchas"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "unas hebras de azafrán"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela los ajos, córtalos en láminas y dóralos en una sartén con un chorro de aceite. Pásalos a una cazuela. Pela las patatas, córtalas en medias lunas y fríelas en la misma sartén donde has dorado los ajos. Cuando estén a punto, pásalas a la cazuela. Pela la cebolla, córtala en dados y fríelos en la misma sartén. Agrega la cebolla a la cazuela y añade el azafrán y el laurel. Corta las truchas en rodajas y fríelas en la misma sartén donde has frito todos los demás ingredientes. Incorpóralas a la cazuela y riega todo con el vino. Cocina durante 5 minutos. Pon a punto de sal, espolvorea con perejil picado y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Truchas A La Cazuela",
+    "meta_description": "Pela los ajos, córtalos en láminas y dóralos en una sartén con un chorro de aceite. Pásalos a una cazuela. Pela las patatas, córtalas en medias lunas y fríelas en la misma sartén donde has dorado los ajos. Cuando estén a punto, pásalas a la",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

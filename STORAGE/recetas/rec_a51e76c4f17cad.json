@@ -1,0 +1,87 @@
+{
+  "id": "rec_a51e76c4f17cad",
+  "slug": "compota-de-moras-con-yogur",
+  "titulo": "Compota De Moras Con Yogur",
+  "resumen": "Pon las moras en una cazuela. Pela la manzana, córtala en tiras y añádelas. Agrega también un poco de ralladura de limón, el zumo de naranja y el azúcar. Tápalo y déjalo cocer a fuego lento durante 15 minutos, removiendo de vez en cuando, h",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "moras"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manzana"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de limón"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "zumo de naranja"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharada",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "g",
+      "nombre": "gelatina"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "yogures"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cl",
+      "nombre": "aras de huevo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pon las moras en una cazuela. Pela la manzana, córtala en tiras y añádelas. Agrega también un poco de ralladura de limón, el zumo de naranja y el azúcar. Tápalo y déjalo cocer a fuego lento durante 15 minutos, removiendo de vez en cuando, hasta que las frutas estén tiernas.",
+    "Remoja la gelatina en agua fría hasta que se ablande. Escúrrela bien y añádela al bol de frutas antes de que pierdan calor. De esta manera, la gelatina se disolverá. Reserva la compota.",
+    "Monta las claras a punto de nieve con la batidora de varillas. Reserva el merengue.",
+    "Pon los yogures en un bol y bátelos bien. Para montar el plato, coloca pequeñas porciones de yogur, de compota y de merengue.",
+    "Adorna con unas hojas de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Compota De Moras Con Yogur",
+    "meta_description": "Pon las moras en una cazuela. Pela la manzana, córtala en tiras y añádelas. Agrega también un poco de ralladura de limón, el zumo de naranja y el azúcar. Tápalo y déjalo cocer a fuego lento durante 15 minutos, removiendo de vez en cuando, h",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

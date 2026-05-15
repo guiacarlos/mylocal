@@ -1,0 +1,88 @@
+{
+  "id": "rec_b8dfc41c38b4c9",
+  "slug": "crema-de-calabaza-con-puerros-y-picatostes-de-pan-y-bacalao",
+  "titulo": "Crema De Calabaza Con Puerros Y Picatostes De Pan Y Bacalao",
+  "resumen": "Pela la patata y córtala cascándola. Pela la calabaza y córtala en dados grandes. Pon agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la patata y la calabaza y cuécelas durante 15 minutos. Escurre la patata y la c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "20",
+      "unidad": "",
+      "nombre": "puerros (finos)"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "bacalao"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "patata"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "rebanadas",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela la patata y córtala cascándola. Pela la calabaza y córtala en dados grandes. Pon agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la patata y la calabaza y cuécelas durante 15 minutos. Escurre la patata y la calabaza y pásalas al vaso batidor. Pela los dientes de ajo, lamínalos y fríelos en una sartén con 6 cucharadas de aceite. Vierte el sofrito en el vaso y tritura todo bien. Reserva. Limpia los puerros retirándoles la parte inferior y la parte superior. Pon a calentar un poco de aceite en una plancha, coloca los puerros y cocínalos durante 8-10 minutos. Sazónalos. Corta las rebanadas de pan en dados y fríelos en una sartén con aceite. Escúrrelos sobre un plato cubierto con papel absorbente. Corta el bacalao en tacos del mismo tamaño que el pan. Pásalos por harina, fríelos en una sartén con aceite y escúrrelos. Sirve la crema y acompáñala con los puerros, los dados de bacalao y el pan frito. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Crema De Calabaza Con Puerros Y Picatostes De Pan Y Bacalao",
+    "meta_description": "Pela la patata y córtala cascándola. Pela la calabaza y córtala en dados grandes. Pon agua a calentar en una cazuela y sazónala. Cuando empiece a hervir, agrega la patata y la calabaza y cuécelas durante 15 minutos. Escurre la patata y la c",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,93 @@
+{
+  "id": "rec_422b05b77b7488",
+  "slug": "bacalao-fresco-con-salsa-tartara",
+  "titulo": "Bacalao Fresco Con Salsa Tártara",
+  "resumen": "Para preparar la salsa tártara, corta la cebolleta, los pepinillos y las alcaparras en daditos muy pequeños. Colócalos en un bol y agrega la mayonesa. Mezcla bien y resérvala. Salpimienta los filetes de bacalao y cocínalos al vapor durante ",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "filetes de bacalao fresco"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "medias rodajas de limón"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "pepinillos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa tártara:"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "ml",
+      "nombre": "mayonesa"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "alcaparras"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "pepinillos en vinagre"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    }
+  ],
+  "pasos": [
+    "Para preparar la salsa tártara, corta la cebolleta, los pepinillos y las alcaparras en daditos muy pequeños. Colócalos en un bol y agrega la mayonesa. Mezcla bien y resérvala. Salpimienta los filetes de bacalao y cocínalos al vapor durante 8-10 minutos. Sirve un filete de bacalao en cada plato y acompáñalo con un poco de salsa tártara. Adorna los platos con una rodaja de limón, un pepinillo cortado en abanico y unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Bacalao Fresco Con Salsa Tártara",
+    "meta_description": "Para preparar la salsa tártara, corta la cebolleta, los pepinillos y las alcaparras en daditos muy pequeños. Colócalos en un bol y agrega la mayonesa. Mezcla bien y resérvala. Salpimienta los filetes de bacalao y cocínalos al vapor durante ",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

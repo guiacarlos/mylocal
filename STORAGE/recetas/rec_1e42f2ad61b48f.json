@@ -1,0 +1,98 @@
+{
+  "id": "rec_1e42f2ad61b48f",
+  "slug": "salmonetes-en-salsa-roja",
+  "titulo": "Salmonetes En Salsa Roja",
+  "resumen": "Pela las patatas y, con un sacabolas, saca bolitas. Pon aceite a calentar en una sartén, agrega las bolitas y fríelas hasta que se doren. Escúrrelas sobre un plato cubierto con papel absorbente. Pela la cebolla, el pimiento y el tomate y có",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "salmonetes de ración"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "patatas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento rojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "zumo de ½ limón"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "vaso",
+      "nombre": "caldo de pescado"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "cebollitas en vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Pela las patatas y, con un sacabolas, saca bolitas. Pon aceite a calentar en una sartén, agrega las bolitas y fríelas hasta que se doren. Escúrrelas sobre un plato cubierto con papel absorbente. Pela la cebolla, el pimiento y el tomate y córtalos en dados. En una tartera con un chorrito de aceite pon a pochar la cebolla y el pimiento. A los 10 minutos, incorpora el tomate. Cocina todo junto durante 10 minutos más. Saca los lomos de los salmonetes y salpimiéntalos. Incorpóralos a la tartera y agrega el zumo de limón y el caldo de pescado. Cocina los salmonetes durante 3-4 minutos. Acompaña los salmonetes con bolitas de patata y cebollitas en vinagre. Sirve y adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Salmonetes En Salsa Roja",
+    "meta_description": "Pela las patatas y, con un sacabolas, saca bolitas. Pon aceite a calentar en una sartén, agrega las bolitas y fríelas hasta que se doren. Escúrrelas sobre un plato cubierto con papel absorbente. Pela la cebolla, el pimiento y el tomate y có",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

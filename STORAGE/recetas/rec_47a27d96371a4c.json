@@ -1,0 +1,100 @@
+{
+  "id": "rec_47a27d96371a4c",
+  "slug": "arroz-con-cerdo-al-jerez",
+  "titulo": "Arroz Con Cerdo Al Jerez",
+  "resumen": "Corta los ajos frescos en cilindros y las chalotas en daditos y colócalos en un bol. Corta la carne de cerdo en trozos de bocado y añádelos al bol. Corta los champiñones en 4 y añádelos al bol. Sazona, agrega el pimentón y riega el conjunto",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz bomba"
+    },
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "carne de cerdo"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "l",
+      "nombre": "onchas de tocino ibérico (finas)"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vasito de jerez seco"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "imón (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Corta los ajos frescos en cilindros y las chalotas en daditos y colócalos en un bol. Corta la carne de cerdo en trozos de bocado y añádelos al bol. Corta los champiñones en 4 y añádelos al bol. Sazona, agrega el pimentón y riega el conjunto con un chorrito de aceite. Mezcla bien y deja macerar durante 1 hora.",
+    "Sofríe las verduras y el cerdo en una tartera grande. Vierte el jerez y dale un hervor para que se evapore el alcohol. Incorpora el arroz y el agua (el doble y un poco más que de arroz). Pon a punto de sal y mezcla bien. Cocínalo durante 18 minutos.",
+    "Corta el tocino ibérico en trozos de 5 centímetros. Distribúyelos sobre el arroz formando un círculo. Deja que repose durante 3-4 minutos y sirve. Adorna con unas hojas de perejil y medio limón (si lo deseas, puedes acompañar la receta con una mayonesa de ajo)."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Cerdo Al Jerez",
+    "meta_description": "Corta los ajos frescos en cilindros y las chalotas en daditos y colócalos en un bol. Corta la carne de cerdo en trozos de bocado y añádelos al bol. Corta los champiñones en 4 y añádelos al bol. Sazona, agrega el pimentón y riega el conjunto",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

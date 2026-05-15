@@ -1,0 +1,106 @@
+{
+  "id": "rec_3b2864138e7c9c",
+  "slug": "conejo-al-limon",
+  "titulo": "Conejo Al Limón",
+  "resumen": "Salpimienta los trozos de conejo y dóralos en una cazuela con un chorrito de aceite. Cuando se doren, retíralos a un plato y resérvalos.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "muslos y 4 paletillas de conejo"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "cuscús"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebollas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "hinojo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "l",
+      "nombre": "imón"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "aceitunas verdes"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pastilla de caldo de pollo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azafrán"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Salpimienta los trozos de conejo y dóralos en una cazuela con un chorrito de aceite. Cuando se doren, retíralos a un plato y resérvalos.",
+    "Pela las cebollas, los ajos y el hinojo, córtalos en daditos y ponlos a rehogar (en la cazuela donde has rehogado los muslos) hasta que se doren bien. Incorpora el azafrán, el limón cortado en trozos y las aceitunas. Cubre con agua y añade la pastilla de caldo desmenuzada. Coloca la tapa y cocina durante 25-30 minutos.",
+    "Pon el cuscús en un bol. Calienta 200 mililitros de agua con una pizca de sal en una cazuela. Cuando hierva, viértela sobre el cuscús, cubre con film transparente y espera hasta que el cuscús absorba el agua.",
+    "Sirve el conejo, salséalo y acompáñalo con el cuscús (puedes ayudarte de un molde). Adorna con una hojita de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Conejo Al Limón",
+    "meta_description": "Salpimienta los trozos de conejo y dóralos en una cazuela con un chorrito de aceite. Cuando se doren, retíralos a un plato y resérvalos.",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

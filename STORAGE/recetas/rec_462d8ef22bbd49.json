@@ -1,0 +1,123 @@
+{
+  "id": "rec_462d8ef22bbd49",
+  "slug": "arroz-con-langostinos-y-alioli-de-perejil",
+  "titulo": "Arroz Con Langostinos Y Alioli De Perejil",
+  "resumen": "Corta el puerro y una cebolleta en trozos. Pela 3 ajos y pícalos. Dora todo a fuego fuerte en una cazuela con un chorrito de aceite. Agrega 4 langostinos (con cáscara y cabeza) troceados y rehógalos brevemente. Cubre todo con agua, sazona y",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "14",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "g",
+      "nombre": "guisantes (frescos desgranados)"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "puerro"
+    },
+    {
+      "cantidad": "5",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "l",
+      "nombre": "imón (para decorar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para el alioli de perejil:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta el puerro y una cebolleta en trozos. Pela 3 ajos y pícalos. Dora todo a fuego fuerte en una cazuela con un chorrito de aceite. Agrega 4 langostinos (con cáscara y cabeza) troceados y rehógalos brevemente. Cubre todo con agua, sazona y cuece durante 30 minutos. Cuela y reserva el caldo. Pela y pica 1 diente de ajo finamente y ponlo en el vaso batidor. Agrega el huevo, una pizca de sal, un chorrito de vinagre y unas hojas de perejil. Vierte una buena cantidad de aceite y tritura los ingredientes con una batidora eléctrica hasta que liguen. Pela y pica la otra cebolleta y 2 dientes de ajo finamente y ponlos a pochar en una paella. Agrega el arroz, rehógalo un poco y vierte el caldo. Pon a punto de sal. Cocínalo durante 10 minutos, añade los guisantes y cocina durante 5 minutos más. Coloca encima el resto de los langostinos y cocina el conjunto durante 4-5 minutos más. Tapa y deja que repose durante un par de minutos. Decora con el limón y con una ramita de perejil. Sirve y aderézalo con el alioli de perejil"
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Langostinos Y Alioli De Perejil",
+    "meta_description": "Corta el puerro y una cebolleta en trozos. Pela 3 ajos y pícalos. Dora todo a fuego fuerte en una cazuela con un chorrito de aceite. Agrega 4 langostinos (con cáscara y cabeza) troceados y rehógalos brevemente. Cubre todo con agua, sazona y",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

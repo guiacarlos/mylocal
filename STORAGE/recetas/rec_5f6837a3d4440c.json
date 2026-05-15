@@ -1,0 +1,105 @@
+{
+  "id": "rec_5f6837a3d4440c",
+  "slug": "garbanzos-con-alcachofas-y-huevo-cocido",
+  "titulo": "Garbanzos Con Alcachofas Y Huevo Cocido",
+  "resumen": "Pon los garbanzos a remojo la víspera. Cuece los huevos en un cazo con agua durante 10 minutos desde el momento en que empiece a hervir el agua. Pélalos y pícalos a tu gusto. Resérvalos. Pon agua a calentar en la olla. Cuando empiece a herv",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "legumbres",
+  "tags": [
+    "legumbres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "alcachofas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "almendra molida"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina y huevo (para rebozar)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hoja",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimentón"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Cuece los huevos en un cazo con agua durante 10 minutos desde el momento en que empiece a hervir el agua. Pélalos y pícalos a tu gusto. Resérvalos. Pon agua a calentar en la olla. Cuando empiece a hervir, agrega los garbanzos escurridos y la hoja de laurel. Pela la zanahoria y córtala por la mitad. Pela la cebolleta y trocéala. Pela 1 diente de ajo. Introduce las verduras en una red para cocer legumbres, ciérrala y métela en la olla. Sazona, coloca la tapa y cuece todo durante 20-25 minutos. Una vez pasado este tiempo, abre la olla y pasa las verduras de la red al vaso batidor, vierte un poco del caldo de cocer los garbanzos y tritúralas bien. Reserva el puré. Pela los otros 3 dientes de ajo, córtalos en daditos y rehógalos un poco en una tartera. Agrega la almendra molida y el pimentón y rehógalos un poco. Añade la verdura triturada y los garbanzos. Mezcla bien, añade un poco de caldo de cocer los garbanzos, pon a punto de sal y cocina todo junto durante 5-6 minutos. Espolvorea con perejil picado.",
+    "Retira las hojas externas de las alcachofas, córtalas en 4 y cuécelas durante 15 minutos. Escúrrelas y sécalas bien. Rebózalas con harina y huevo batido y fríelas en una sartén con aceite. Escúrrelas sobre un plato cubierto con papel absorbente.",
+    "Sirve los garbanzos en platos hondos. Añade unos trocitos de huevo y acompáñalos con las alcachofas rebozadas."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Garbanzos Con Alcachofas Y Huevo Cocido",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Cuece los huevos en un cazo con agua durante 10 minutos desde el momento en que empiece a hervir el agua. Pélalos y pícalos a tu gusto. Resérvalos. Pon agua a calentar en la olla. Cuando empiece a herv",
+    "meta_keywords": "legumbres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

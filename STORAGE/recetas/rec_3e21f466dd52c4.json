@@ -1,0 +1,98 @@
+{
+  "id": "rec_3e21f466dd52c4",
+  "slug": "tarta-de-manzana",
+  "titulo": "Tarta De Manzana",
+  "resumen": "Casca los huevos, colócalos en un bol y móntalos con la batidora de varillas eléctrica. Agrega el azúcar y sigue batiendo. Añade 20 gramos de mantequilla fundida y la ralladura de lima, y sigue batiendo hasta que los ingredientes queden bie",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "manzanas reinetas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "70",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "azúcar moreno"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "mantequilla"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "g",
+      "nombre": "levadura"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de lima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar glas"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Casca los huevos, colócalos en un bol y móntalos con la batidora de varillas eléctrica. Agrega el azúcar y sigue batiendo. Añade 20 gramos de mantequilla fundida y la ralladura de lima, y sigue batiendo hasta que los ingredientes queden bien incorporados. Vierte la leche poco a poco y sigue batiendo durante unos segundos más. Tamiza la harina con la levadura y una pizca de sal e incorpóralas a la mezcla anterior. Pela y descorazona las manzanas. Córtalas en rodajas finas y añádelas a la masa. Mézclalas con cuidado para que no se rompan. Unta los moldes con el resto de la mantequilla y fórralos con papel de hornear. Vierte la masa y hornéalos a 180 ºC durante 25-30 minutos. Deja que se enfríen, desmóldalos y espolvoréalos con un poco de azúcar glas. Sirve y adórnalos con unos hilos de miel y unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tarta De Manzana",
+    "meta_description": "Casca los huevos, colócalos en un bol y móntalos con la batidora de varillas eléctrica. Agrega el azúcar y sigue batiendo. Añade 20 gramos de mantequilla fundida y la ralladura de lima, y sigue batiendo hasta que los ingredientes queden bie",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

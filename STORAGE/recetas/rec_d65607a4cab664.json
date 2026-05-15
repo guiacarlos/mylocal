@@ -1,0 +1,78 @@
+{
+  "id": "rec_d65607a4cab664",
+  "slug": "pez-de-san-pedro-con-salteado-de-esparragos-y-rabanitos",
+  "titulo": "Pez De San Pedro Con Salteado De Espárragos Y Rabanitos",
+  "resumen": "Pon un poco de aceite en una sartén. Añade las cortezas de cerdo y fríelas. Retíralas y escúrrelas sobre un plato cubierto con papel absorbente. Resérvalas. Limpia el pescado, saca los lomos y salpimiéntalos. Unta una bandeja de horno con u",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "hortalizas",
+  "tags": [
+    "hortalizas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pez de San Pedro (1.200 g)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "manojo de espárragos verdes"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "rabanitos"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas finas de tocino ibérico"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "cortezas de cerdo (para freír)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon un poco de aceite en una sartén. Añade las cortezas de cerdo y fríelas. Retíralas y escúrrelas sobre un plato cubierto con papel absorbente. Resérvalas. Limpia el pescado, saca los lomos y salpimiéntalos. Unta una bandeja de horno con un poco de aceite, coloca encima los lomos y hornéalos a 200 ºC durante 6-7 minutos. Saca los lomos y coloca encima de cada uno una loncha de tocino. Deja que se deshagan con el calor del pescado. Retira la parte inferior de los espárragos y corta el resto en trozos de unos 5 centímetros. Saltéalos en el wok (o en la sartén). Limpia los rabanitos, hazles unos cortes para que queden como una flor y añádelos al wok. Sazona y saltéalos. Sirve el pescado, adorna con las cortezas de cerdo y acompáñalo con el salteado de hortalizas (si lo deseas, decora con perejil picado)."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Pez De San Pedro Con Salteado De Espárragos Y Rabanitos",
+    "meta_description": "Pon un poco de aceite en una sartén. Añade las cortezas de cerdo y fríelas. Retíralas y escúrrelas sobre un plato cubierto con papel absorbente. Resérvalas. Limpia el pescado, saca los lomos y salpimiéntalos. Unta una bandeja de horno con u",
+    "meta_keywords": "hortalizas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

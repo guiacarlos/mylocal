@@ -1,0 +1,78 @@
+{
+  "id": "rec_682b63425d7ff7",
+  "slug": "flan-de-nata",
+  "titulo": "Flan De Nata",
+  "resumen": "Coloca las galletas en el mortero y machácalas a tu gusto (puedes dejarlas reducidas a polvo o en trozos un poco más grandes e irregulares). Reserva en una fuente amplia.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "500",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "16",
+      "unidad": "g",
+      "nombre": "alletas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "fresas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca las galletas en el mortero y machácalas a tu gusto (puedes dejarlas reducidas a polvo o en trozos un poco más grandes e irregulares). Reserva en una fuente amplia.",
+    "Casca los huevos en un bol. Agrega 60 gramos de azúcar y bate con una varilla. Vierte la nata poco a poco sin dejar de remover con la varilla.",
+    "Pasa la mezcla a una flanera rectangular y cuece en el horno al baño maría a 130 ºC durante 1 hora.",
+    "Deja que el flan se enfríe, córtalo en tacos (retirándoles la base) y rebózalos con la galleta.",
+    "Pica las fresas y el plátano y ponlos en un bol. Añade el resto del azúcar y mezcla bien.",
+    "Sirve un taco de flan y un poco de macedonia en cada plato. Adorna con unas hojas de menta."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Flan De Nata",
+    "meta_description": "Coloca las galletas en el mortero y machácalas a tu gusto (puedes dejarlas reducidas a polvo o en trozos un poco más grandes e irregulares). Reserva en una fuente amplia.",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

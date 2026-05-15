@@ -1,0 +1,97 @@
+{
+  "id": "rec_0d3983dff7baca",
+  "slug": "atadito-de-pollo-relleno-de-jamon-y-queso-con-pure-de-castanas",
+  "titulo": "Atadito De Pollo Relleno De Jamón Y Queso Con Puré De Castañas",
+  "resumen": "Coloca el atadito en un recipiente apto para el horno. Riégalo con un chorrito de aceite y con el vino blanco. Hornéalo a 180 ºC durante 40 minutos. Baja la temperatura del horno a 160 ºC y hornéalo durante 20 minutos más. Limpia bien las c",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "atadito de pollo relleno de jamón y queso"
+    },
+    {
+      "cantidad": "500",
+      "unidad": "g",
+      "nombre": "castañas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "-2 calabacines"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de beicon"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "vino blanco"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "trozo de vaina de vainilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Coloca el atadito en un recipiente apto para el horno. Riégalo con un chorrito de aceite y con el vino blanco. Hornéalo a 180 ºC durante 40 minutos. Baja la temperatura del horno a 160 ºC y hornéalo durante 20 minutos más. Limpia bien las castañas y, con un cuchillo, haz una pequeña muesca en la piel de cada una de ellas. Cuécelas en agua hirviendo durante 15 minutos. Déjalas templar y pélalas. Reserva también el caldo resultante de cocer las castañas.",
+    "Calienta en una cazuela 250 mililitros del caldo resultante de cocer las castañas con la leche, un trocito de vainilla y una pizca de sal. Agrega las castañas peladas y cuécelas durante 10-15 minutos más. Pasa las castañas por el pasapurés. Reserva el puré.",
+    "Corta el beicon en tiritas y saltéalas brevemente en una sartén. Retíralas y escúrrelas. Mezcla el beicon con el puré de castañas. Corta 8 láminas (finas y largas) de calabacín y cocínalas en la plancha con una gota de aceite. Sazona. Colócalas en cruz (de dos en dos), pon en el centro una porción de puré de castañas y ciérralas formando unos paquetitos. Colócalos en una placa de horno y caliéntalos.",
+    "Pasa el jugo que haya soltado la carne a una cazuelita y dale un hervor. Añade un poco de harina de maíz diluida en agua y liga la salsa. Espolvoréala con un poco de perejil picado.",
+    "Sirve el atadito de pollo fileteado (sin las cuerdas), salsea y acompáñalo con los paquetes de calabacín y castaña. Adorna los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Atadito De Pollo Relleno De Jamón Y Queso Con Puré De Castañas",
+    "meta_description": "Coloca el atadito en un recipiente apto para el horno. Riégalo con un chorrito de aceite y con el vino blanco. Hornéalo a 180 ºC durante 40 minutos. Baja la temperatura del horno a 160 ºC y hornéalo durante 20 minutos más. Limpia bien las c",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

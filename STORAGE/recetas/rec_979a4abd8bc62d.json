@@ -1,0 +1,88 @@
+{
+  "id": "rec_979a4abd8bc62d",
+  "slug": "arroz-con-pisto",
+  "titulo": "Arroz Con Pisto",
+  "resumen": "Pela la cebolla, la berenjena y la calabaza y córtalas en daditos. Ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga durante 12 minutos. Retira la parte inferior del tallo de los champiñones (la que tiene tierra), en",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "arroz",
+  "tags": [
+    "arroz",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "berenjena"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "calabaza"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "l",
+      "nombre": "onchas de queso (de fundir)"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "naranja (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Pela la cebolla, la berenjena y la calabaza y córtalas en daditos. Ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga durante 12 minutos. Retira la parte inferior del tallo de los champiñones (la que tiene tierra), enjuágalos, lamínalos y añádelos. Agrega el arroz y rehógalo brevemente. Añade agua (el doble y un poco más que de arroz) y cocina a fuego medio durante 18 minutos. Pon encima las lonchas de queso, introduce la cazuela en el horno y gratina hasta que se fundan. Decora con unas rodajas de naranja y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroz Con Pisto",
+    "meta_description": "Pela la cebolla, la berenjena y la calabaza y córtalas en daditos. Ponlos a pochar en una cazuela con un chorrito de aceite. Sazona y rehoga durante 12 minutos. Retira la parte inferior del tallo de los champiñones (la que tiene tierra), en",
+    "meta_keywords": "arroz, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

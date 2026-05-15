@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Role Schema",
+    "description": "Esquema de roles y permisos para ACIDE",
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "permissions"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Identificador único del rol"
+        },
+        "name": {
+            "type": "string",
+            "enum": [
+                "superadmin",
+                "admin",
+                "editor",
+                "viewer"
+            ],
+            "description": "Nombre del rol"
+        },
+        "label": {
+            "type": "string",
+            "description": "Etiqueta legible del rol"
+        },
+        "description": {
+            "type": "string",
+            "description": "Descripción del rol"
+        },
+        "permissions": {
+            "type": "object",
+            "description": "Permisos del rol",
+            "properties": {
+                "users": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        },
+                        "read": {
+                            "type": "boolean"
+                        },
+                        "update": {
+                            "type": "boolean"
+                        },
+                        "delete": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "content": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        },
+                        "read": {
+                            "type": "boolean"
+                        },
+                        "update": {
+                            "type": "boolean"
+                        },
+                        "delete": {
+                            "type": "boolean"
+                        },
+                        "publish": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "settings": {
+                    "type": "object",
+                    "properties": {
+                        "read": {
+                            "type": "boolean"
+                        },
+                        "update": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "system": {
+                    "type": "object",
+                    "properties": {
+                        "access_console": {
+                            "type": "boolean"
+                        },
+                        "manage_plugins": {
+                            "type": "boolean"
+                        },
+                        "view_logs": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

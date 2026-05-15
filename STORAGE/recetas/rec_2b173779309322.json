@@ -1,0 +1,98 @@
+{
+  "id": "rec_2b173779309322",
+  "slug": "ensalada-templada-de-lentejas-y-langostinos",
+  "titulo": "Ensalada Templada De Lentejas Y Langostinos",
+  "resumen": "Pon las lentejas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas a fuego suave durante 25-30 minutos. Es importante cocerlas poco, de manera que queden al dente y no se rompan. Una vez cocidas, escúrrelas y resérvalas",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensaladas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "lentejas"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos frescos"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "espárragos verdes"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "ramilletes de hojas de zanahoria o de perejil"
+    },
+    {
+      "cantidad": "10",
+      "unidad": "ramas",
+      "nombre": "borraja"
+    },
+    {
+      "cantidad": "75",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre de Módena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "agua fría"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon las lentejas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas a fuego suave durante 25-30 minutos. Es importante cocerlas poco, de manera que queden al dente y no se rompan. Una vez cocidas, escúrrelas y resérvalas en una ensaladera. Separa las puntas de los espárragos. Corta el resto de los espárragos y los ajos en cilindros. Corta las zanahorias y las borrajas en bastones. Cuece todo en una cazuela con agua y sal durante 4-5 minutos. Reserva las puntas de los espárragos y agrega el resto de las verduras a la ensaladera de las lentejas. Pela los langostinos y resérvalos. Para hacer la vinagreta, saltea las cáscaras y las cabezas de los langostinos en una sartén con un poco de aceite. Ponlas en un colador y aplástalas para sacarles todo el jugo. Coloca el jugo en un bol, vierte un poco de aceite y un chorrito de vinagre y mezcla bien. Reserva. Corta los langostinos por la mitad a lo largo. Mezcla la harina con agua fría (a tu gusto) e introduce los langostinos en la mezcla de manera que queden bien embadurnados. Fríe los langostinos en una sartén con abundante aceite caliente y escúrrelos sobre un plato cubierto con papel absorbente. Haz lo mismo con los ramilletes de las hojas de zanahoria (embadurnar, freír y escurrir). Aliña la ensalada de lentejas con la vinagreta de langostinos. Sirve la ensalada con los langostinos, los ramilletes rebozados y las puntas de espárragos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Ensalada Templada De Lentejas Y Langostinos",
+    "meta_description": "Pon las lentejas a cocer en una cazuela con abundante agua y una pizca de sal. Cuécelas a fuego suave durante 25-30 minutos. Es importante cocerlas poco, de manera que queden al dente y no se rompan. Una vez cocidas, escúrrelas y resérvalas",
+    "meta_keywords": "ensaladas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "id": "rec_4f3b04c1c90ebf",
+  "slug": "chipirones-rellenos-en-salsa",
+  "titulo": "Chipirones Rellenos En Salsa",
+  "resumen": "Para la salsa, pica los dientes de ajo, las cebolletas y las chalotas y pon todo a rehogar en una cazuela con aceite. Pela y pica la zanahoria y agrégala. Rehoga todo bien. Agrega el txakoli y dale un hervor. Pica los tomates y añádelos. Sa",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "16",
+      "unidad": "",
+      "nombre": "chipirones"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "gambas (peladas)"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "arroz"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la salsa:"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "chalotas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "zanahoria"
+    },
+    {
+      "cantidad": "150",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "600",
+      "unidad": "g",
+      "nombre": "tomates pera"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Para la salsa, pica los dientes de ajo, las cebolletas y las chalotas y pon todo a rehogar en una cazuela con aceite. Pela y pica la zanahoria y agrégala. Rehoga todo bien. Agrega el txakoli y dale un hervor. Pica los tomates y añádelos. Sazona. Cocina durante 20 minutos. Pasa por el pasapurés y reserva la salsa.",
+    "Limpia los chipirones, retirándoles la cabeza, las tripas y la pluma. Enjuágalos bien y resérvalos.",
+    "Trocea las gambas y salpimiéntalas. Saltéalas con los tentáculos y las corbatas de los chipirones. Agrega el arroz y mezcla bien. Espolvorea con perejil picado. Saltea y deja que se temple. Rellena los chipirones y ciérralos con un palillo.",
+    "Dora los chipirones en una sartén con aceite. Introdúcelos en la salsa y cocínalos hasta que se hagan (30 minutos aproximadamente). Sirve los chipirones y salséalos. Adorna con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Chipirones Rellenos En Salsa",
+    "meta_description": "Para la salsa, pica los dientes de ajo, las cebolletas y las chalotas y pon todo a rehogar en una cazuela con aceite. Pela y pica la zanahoria y agrégala. Rehoga todo bien. Agrega el txakoli y dale un hervor. Pica los tomates y añádelos. Sa",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

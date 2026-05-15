@@ -1,0 +1,107 @@
+{
+  "id": "rec_f7bdd9f83650f9",
+  "slug": "magras-con-tomate-y-huevo-frito",
+  "titulo": "Magras Con Tomate Y Huevo Frito",
+  "resumen": "Pela y pica 5 dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pica la cebolleta y el pimiento verde y añádelos a la cazuela. Sazona. Cocínalos hasta que se doren.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "huevos",
+  "tags": [
+    "huevos",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "8",
+      "unidad": "l",
+      "nombre": "onchas gruesas de jamón serrano"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "tomate"
+    },
+    {
+      "cantidad": "9",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "leche"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "huevos"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "tomillo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "laurel"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pela y pica 5 dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pica la cebolleta y el pimiento verde y añádelos a la cazuela. Sazona. Cocínalos hasta que se doren.",
+    "Retira el pedúnculo de los tomates, trocéalos e incorpóralos. Haz un atadito con tomillo, laurel y perejil y agrégalo. Añade una pizca de sal y la misma cantidad de azúcar y cocina todo durante 40 minutos a fuego suave. Retira el atadito y pasa el tomate por el pasapurés. Colócalo en una tartera.",
+    "Pon las lonchas de jamón en un bol, vierte la leche y déjalo remojando durante 30 minutos. Retira el jamón y sécalo bien. Fríe las lonchas brevemente en una sartén con un chorrito de aceite e incorpóralas a la tartera.",
+    "Fríe el resto de los dientes de ajo (enteros y con piel) en una sartén con abundante aceite. Agrega los huevos y fríelos.",
+    "Añade los huevos a la tartera, sazona y sirve. Decora con perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Magras Con Tomate Y Huevo Frito",
+    "meta_description": "Pela y pica 5 dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Pica la cebolleta y el pimiento verde y añádelos a la cazuela. Sazona. Cocínalos hasta que se doren.",
+    "meta_keywords": "huevos, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

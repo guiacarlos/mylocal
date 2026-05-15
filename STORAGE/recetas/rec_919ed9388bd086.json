@@ -1,0 +1,88 @@
+{
+  "id": "rec_919ed9388bd086",
+  "slug": "vasitos-de-yogur-y-fruta",
+  "titulo": "Vasitos De Yogur Y Fruta",
+  "resumen": "Haz un té y pon las pasas a remojar hasta que se hidraten. Escurre y resérvalas. Pon los yogures, la miel y el plátano en el vaso batidor. Coloca la mitad del mango (pelado y picado) en un bol y añade la ralladura de la lima. Agrégalo al va",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "yogures naturales"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "mango"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "plátano"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "magdalenas"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "cucharadas",
+      "nombre": "miel"
+    },
+    {
+      "cantidad": "25",
+      "unidad": "g",
+      "nombre": "uvas pasas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "bolsa de té"
+    },
+    {
+      "cantidad": "30",
+      "unidad": "g",
+      "nombre": "piñones"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "ralladura de 1 lima"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Haz un té y pon las pasas a remojar hasta que se hidraten. Escurre y resérvalas. Pon los yogures, la miel y el plátano en el vaso batidor. Coloca la mitad del mango (pelado y picado) en un bol y añade la ralladura de la lima. Agrégalo al vaso batidor y tritura todo bien. Pica el resto del mango y las magdalenas en taquitos, colócalo en un bol y añade las pasas. Reparte la mitad de esta mezcla en el fondo de los vasos y rellénalos con la mezcla del vaso batidor. Decora con el resto de la mezcla de mango y magdalenas. Adorna con una ramita de menta y sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Vasitos De Yogur Y Fruta",
+    "meta_description": "Haz un té y pon las pasas a remojar hasta que se hidraten. Escurre y resérvalas. Pon los yogures, la miel y el plátano en el vaso batidor. Coloca la mitad del mango (pelado y picado) en un bol y añade la ralladura de la lima. Agrégalo al va",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

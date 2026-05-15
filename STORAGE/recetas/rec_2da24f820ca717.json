@@ -1,0 +1,118 @@
+{
+  "id": "rec_2da24f820ca717",
+  "slug": "arroces-salteado-de-arroz-con-pollo-y-langostinos",
+  "titulo": "Arroces Salteado De Arroz Con Pollo Y Langostinos",
+  "resumen": "Corta la pechuga de pollo en dados, salpimiéntalos y dóralos a fuego fuerte en una sartén con un chorrito de aceite. Cuando esté dorado, retira el pollo de la sartén y resérvalo. Pela los langostinos, sazónalos y saltéalos a fuego vivo en l",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "150",
+      "unidad": "g",
+      "nombre": "arroz basmati"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pechuga de pollo"
+    },
+    {
+      "cantidad": "24",
+      "unidad": "l",
+      "nombre": "angostinos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "8",
+      "unidad": "",
+      "nombre": "champiñones"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "vaso",
+      "nombre": "caldo de ave"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "cucharadita",
+      "nombre": "harina de maíz"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "cucharadas",
+      "nombre": "salsa de soja"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla cayena"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta negra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta la pechuga de pollo en dados, salpimiéntalos y dóralos a fuego fuerte en una sartén con un chorrito de aceite. Cuando esté dorado, retira el pollo de la sartén y resérvalo. Pela los langostinos, sazónalos y saltéalos a fuego vivo en la misma sartén donde has salteado el pollo. Reserva. Agrega un chorrito de aceite a la misma sartén. Pela la cebolla y las zanahorias y limpia el pimiento. Corta las verduras en juliana fina, añádelas a la sartén, sazónalas y dóralas un poco. Limpia los champiñones, córtalos en cuartos y agrégalos a la sartén. Mezcla, coloca la tapa y rehoga brevemente. Añade la guindilla, la salsa de soja, el caldo, el pollo y los langostinos. Cocina el conjunto durante 5-6 minutos. Diluye la harina de maíz en agua fría y añádela a la sartén. Dale un hervor y remueve hasta que ligue la salsa. Espolvorea con perejil picado y reserva. Pela los dientes de ajo y dóralos en una cazuela con un chorrito de aceite. Añade el arroz y cúbrelo con la misma cantidad de agua. Sazona, coloca la tapa y deja cocinar el arroz durante unos 8-10 minutos. Retira los dientes de ajo y sirve el arroz con el salteado de pollo y langostinos. Decora con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Arroces Salteado De Arroz Con Pollo Y Langostinos",
+    "meta_description": "Corta la pechuga de pollo en dados, salpimiéntalos y dóralos a fuego fuerte en una sartén con un chorrito de aceite. Cuando esté dorado, retira el pollo de la sartén y resérvalo. Pela los langostinos, sazónalos y saltéalos a fuego vivo en l",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

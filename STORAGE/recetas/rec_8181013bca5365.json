@@ -1,0 +1,68 @@
+{
+  "id": "rec_8181013bca5365",
+  "slug": "dulce-de-membrillo-con-frutos-secos",
+  "titulo": "Dulce De Membrillo Con Frutos Secos",
+  "resumen": "Lava los membrillos, córtalos en trozos (dejando la piel y las semillas) y ponlos en la olla rápida. Abre la vaina de vainilla, saca las semillas con una puntilla y añádelas a la olla. Vierte el agua, tapa la olla y cuece el membrillo duran",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "2",
+      "unidad": "kg",
+      "nombre": "membrillos"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "vaina de vainilla"
+    },
+    {
+      "cantidad": "400",
+      "unidad": "ml",
+      "nombre": "agua"
+    },
+    {
+      "cantidad": "1.800",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "quesos variados"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "nueces, avellanas y almendras"
+    }
+  ],
+  "pasos": [
+    "Lava los membrillos, córtalos en trozos (dejando la piel y las semillas) y ponlos en la olla rápida. Abre la vaina de vainilla, saca las semillas con una puntilla y añádelas a la olla. Vierte el agua, tapa la olla y cuece el membrillo durante 20-25 minutos. Escurre el membrillo y pásalo por el pasapurés. Pesa el membrillo para calcular la cantidad de azúcar que emplearemos (tiene que ser la misma cantidad de membrillo que de azúcar). Pásalo a una cazuela y agrega el azúcar. Mezcla bien y cocínalo a fuego suave durante 1 hora y media. Pásalo a un recipiente y déjalo reposar. Sirve el membrillo con los quesos y los frutos secos."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Dulce De Membrillo Con Frutos Secos",
+    "meta_description": "Lava los membrillos, córtalos en trozos (dejando la piel y las semillas) y ponlos en la olla rápida. Abre la vaina de vainilla, saca las semillas con una puntilla y añádelas a la olla. Vierte el agua, tapa la olla y cuece el membrillo duran",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

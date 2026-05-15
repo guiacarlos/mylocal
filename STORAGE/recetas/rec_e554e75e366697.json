@@ -1,0 +1,132 @@
+{
+  "id": "rec_e554e75e366697",
+  "slug": "tallarines-con-verduras-y-mayonesa-de-ajo-y-soja",
+  "titulo": "Tallarines Con Verduras Y Mayonesa De Ajo Y Soja",
+  "resumen": "Corta el pimiento verde y la cebolleta en juliana fina. Ponlos a pochar en una sartén con un chorrito de aceite durante unos 6-8 minutos aproximadamente. Sazona y reserva en la sartén caliente.",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pastas",
+  "tags": [
+    "pastas",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "300",
+      "unidad": "g",
+      "nombre": "tallarines"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "judías verdes"
+    },
+    {
+      "cantidad": "12",
+      "unidad": "",
+      "nombre": "ajos tiernos"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolleta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "Para la mayonesa de ajo y soja:"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "huevo"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "un chorrito de salsa de soja"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "vinagre"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Corta el pimiento verde y la cebolleta en juliana fina. Ponlos a pochar en una sartén con un chorrito de aceite durante unos 6-8 minutos aproximadamente. Sazona y reserva en la sartén caliente.",
+    "Limpia las judías verdes y córtalas en juliana fina. Corta los ajos tiernos en juliana fina. Con ayuda de un pelador, saca cintas del calabacín. Pela las zanahorias y saca más cintas. Escalda todo durante 2 minutos en una cazuela con agua hirviendo y una pizca de sal. Retira las verduras y escúrrelas.",
+    "Pon a calentar la cazuela con el agua resultante de escaldar las verduras. Agrega los tallarines y cuécelos durante el tiempo que indique el paquete. Escúrrelos y añádelos a la sartén de la verdura pochada. Cocina unos instantes para que se mezclen los sabores. Apaga el fuego y salpimienta. Reserva.",
+    "Para la mayonesa, pica el ajo pelado y colócalo en el vaso batidor. Añade el huevo, un chorrito de vinagre, el aceite, una pizca de sal y la soja. Introduce el brazo de la batidora eléctrica hasta el fondo y tritura. Cuando empiece a ligar, mueve la batidora, poco a poco, de arriba abajo.",
+    "Sirve los tallarines y acompáñalos con las verduras escaldadas y con la mayonesa de ajo y soja. Decora los platos con unas hojas de perejil."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Tallarines Con Verduras Y Mayonesa De Ajo Y Soja",
+    "meta_description": "Corta el pimiento verde y la cebolleta en juliana fina. Ponlos a pochar en una sartén con un chorrito de aceite durante unos 6-8 minutos aproximadamente. Sazona y reserva en la sartén caliente.",
+    "meta_keywords": "pastas, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

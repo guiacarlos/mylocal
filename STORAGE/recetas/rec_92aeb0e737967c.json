@@ -1,0 +1,73 @@
+{
+  "id": "rec_92aeb0e737967c",
+  "slug": "galletas-de-nata",
+  "titulo": "Galletas De Nata",
+  "resumen": "Coloca en un bol 200 gramos de harina, 150 gramos de azúcar y una pizca de sal. Mezcla bien, primero con una cuchara y después a mano. Vete echando la nata poco a poco mientras mezclas con la mano. Cuando consigas una masa homogénea, envuél",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 24,
+  "dificultad": "media",
+  "categoria": "postres",
+  "tags": [
+    "postres",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "250",
+      "unidad": "g",
+      "nombre": "harina"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "ml",
+      "nombre": "nata"
+    },
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "azúcar"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "chocolate blanco"
+    },
+    {
+      "cantidad": "60",
+      "unidad": "g",
+      "nombre": "chocolate negro"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "hojas de menta (para decorar)"
+    }
+  ],
+  "pasos": [
+    "Coloca en un bol 200 gramos de harina, 150 gramos de azúcar y una pizca de sal. Mezcla bien, primero con una cuchara y después a mano. Vete echando la nata poco a poco mientras mezclas con la mano. Cuando consigas una masa homogénea, envuélvela con film transparente e introdúcela en el frigorífico. Déjala reposar como mínimo durante 30 minutos. Espolvorea la encimera con un poco de harina, coloca la masa encima y espolvoréala con otro poco de harina. Estírala con un rodillo y corta las galletas utilizando un cortapastas. Colócalas sobre una placa de horno forrada con papel de hornear. Espolvorea 8 galletas con el resto del azúcar. Hornea a 200 ºC durante 10-15 minutos. Retíralas del horno y deja que se enfríen. Funde los chocolates por separado. Elabora dos cucuruchos con papel de hornear e introduce en ellos los chocolates (uno en cada uno). Corta la punta de los cucuruchos de papel y decora las galletas que no se espolvorearon con azúcar con unos hilos de chocolate blanco y unos hilos de chocolate negro. Adorna con unas hojas de menta. Sirve."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Galletas De Nata",
+    "meta_description": "Coloca en un bol 200 gramos de harina, 150 gramos de azúcar y una pizca de sal. Mezcla bien, primero con una cuchara y después a mano. Vete echando la nata poco a poco mientras mezclas con la mano. Cuando consigas una masa homogénea, envuél",
+    "meta_keywords": "postres, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

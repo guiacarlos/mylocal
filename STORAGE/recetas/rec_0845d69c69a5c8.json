@@ -1,0 +1,88 @@
+{
+  "id": "rec_0845d69c69a5c8",
+  "slug": "anchoas-a-la-cazuela",
+  "titulo": "Anchoas A La Cazuela",
+  "resumen": "Con un cuchillo de sierra, corta 4 rebanadas de pan. Colócalas en la placa del horno y tuéstalas en el horno. Resérvalas. Pela y lamina los ajos. Corta las cebolletas en dados. Corta en dados el pimiento. Pon todo a pochar en una tartera gr",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 4,
+  "dificultad": "media",
+  "categoria": "pescados",
+  "tags": [
+    "pescados",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "1",
+      "unidad": "kg",
+      "nombre": "anchoas frescas (boquerones)"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "hogaza",
+      "nombre": "pan"
+    },
+    {
+      "cantidad": "3",
+      "unidad": "dientes",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "4",
+      "unidad": "",
+      "nombre": "cebolletas"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "pimiento verde"
+    },
+    {
+      "cantidad": "100",
+      "unidad": "ml",
+      "nombre": "txakoli"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "g",
+      "nombre": "uindilla"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    }
+  ],
+  "pasos": [
+    "Con un cuchillo de sierra, corta 4 rebanadas de pan. Colócalas en la placa del horno y tuéstalas en el horno. Resérvalas. Pela y lamina los ajos. Corta las cebolletas en dados. Corta en dados el pimiento. Pon todo a pochar en una tartera grande con un chorrito de aceite. Corta la guindilla en aros y agrégalos. Sazona. Cuando se rehogue todo bien, vierte el txakoli y dale un hervor. Limpia las anchoas, retirándoles las cabezas, las vísceras y las espinas centrales. Coloca las anchoas sobre las verduras, sazónalas, tápalas y cocínalas durante 3-4 minutos. Sirve las anchoas, decora con unas hojas de perejil y acompáñalas con el pan tostado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Anchoas A La Cazuela",
+    "meta_description": "Con un cuchillo de sierra, corta 4 rebanadas de pan. Colócalas en la placa del horno y tuéstalas en el horno. Resérvalas. Pela y lamina los ajos. Corta las cebolletas en dados. Corta en dados el pimiento. Pon todo a pochar en una tartera gr",
+    "meta_keywords": "pescados, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}

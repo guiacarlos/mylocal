@@ -1,0 +1,113 @@
+{
+  "id": "rec_83f70b1db37051",
+  "slug": "sopa-de-pollo-y-tapioca",
+  "titulo": "Sopa De Pollo Y Tapioca",
+  "resumen": "Pon los garbanzos a remojo la víspera. Escúrrelos, colócalos en una red y mételos en la olla rápida. Agrega las carcasas de pollo, la cebolla pelada y cortada por la mitad, las zanahorias peladas y los puerros troceados. Pon a punto de sal,",
+  "imagen_principal": "",
+  "video_url": "",
+  "tiempo_preparacion_min": 0,
+  "tiempo_coccion_min": 0,
+  "raciones": 6,
+  "dificultad": "media",
+  "categoria": "carnes",
+  "tags": [
+    "carnes",
+    "arguinano",
+    "cocina-espanola"
+  ],
+  "ingredientes": [
+    {
+      "cantidad": "200",
+      "unidad": "g",
+      "nombre": "garbanzos"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "carcasas de pollo"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "",
+      "nombre": "cebolla"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "zanahorias"
+    },
+    {
+      "cantidad": "2",
+      "unidad": "",
+      "nombre": "puerros"
+    },
+    {
+      "cantidad": "350",
+      "unidad": "g",
+      "nombre": "carne de pollo picada"
+    },
+    {
+      "cantidad": "1",
+      "unidad": "diente",
+      "nombre": "ajo"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "harina de maíz refinada"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "tapioca"
+    },
+    {
+      "cantidad": "½",
+      "unidad": "",
+      "nombre": "calabacín"
+    },
+    {
+      "cantidad": "50",
+      "unidad": "g",
+      "nombre": "maíz frito"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "aceite de oliva virgen extra"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "perejil"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "pimienta"
+    },
+    {
+      "cantidad": "",
+      "unidad": "",
+      "nombre": "sal"
+    }
+  ],
+  "pasos": [
+    "Pon los garbanzos a remojo la víspera. Escúrrelos, colócalos en una red y mételos en la olla rápida. Agrega las carcasas de pollo, la cebolla pelada y cortada por la mitad, las zanahorias peladas y los puerros troceados. Pon a punto de sal, cierra la olla y cuece todo durante 20 minutos. Retira los garbanzos y resérvalos. Cuela el caldo en una cazuela grande y resérvalo. Coloca la carne picada en un bol. Agrega el ajo pelado y picadito, un poco de perejil picado, una pizca de sal y otra de pimienta. Mezcla todo bien. Forma bolitas, pásalas por la harina de maíz y fríelas. Escúrrelas en una fuente cubierta con papel absorbente. Añade la tapioca al caldo y cuécela durante unos 10 minutos. Incorpora las albóndigas y el calabacín rallado. Saltea los garbanzos en una sartén con un poco de aceite y un poco de perejil picado. Añádelos a la sopa y espolvoréala con el maíz frito machado."
+  ],
+  "origen_url": "",
+  "origen_nombre": "1000 recetas de oro - Karlos Arguinano (Planeta)",
+  "autor": "Karlos Arguinano",
+  "idioma": "es",
+  "seo": {
+    "meta_title": "Sopa De Pollo Y Tapioca",
+    "meta_description": "Pon los garbanzos a remojo la víspera. Escúrrelos, colócalos en una red y mételos en la olla rápida. Agrega las carcasas de pollo, la cebolla pelada y cortada por la mitad, las zanahorias peladas y los puerros troceados. Pon a punto de sal,",
+    "meta_keywords": "carnes, receta, cocina espanola"
+  },
+  "publicado": true,
+  "created_at": "2026-05-15T00:00:00+00:00",
+  "updated_at": "2026-05-15T00:00:00+00:00",
+  "_createdAt": "2026-05-15T00:00:00+00:00",
+  "_updatedAt": "2026-05-15T00:00:00+00:00",
+  "_version": 1
+}
