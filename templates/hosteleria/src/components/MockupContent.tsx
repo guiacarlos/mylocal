@@ -65,20 +65,20 @@ function ModernaView({ landscape }: { landscape: boolean }) {
           className="flex-1 overflow-hidden flex flex-col divide-y divide-gray-50 bg-white"
         >
           {shown.map(p => (
-            <div key={p.name} className="flex items-center gap-2.5 px-3 py-2.5">
+            <div key={p.name} className="flex items-center gap-2 px-3 py-2">
               <img src={p.image} alt={p.name}
-                className="w-11 h-11 rounded-xl object-cover flex-shrink-0" />
+                className="w-9 h-9 rounded-lg object-cover flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-semibold text-gray-800 leading-tight truncate">{p.name}</p>
+                <p className="text-[9px] font-semibold text-gray-800 leading-tight">{p.name}</p>
                 {p.allergens.length > 0 && (
                   <div className="flex gap-1 mt-0.5 flex-wrap">
                     {p.allergens.map(a => (
-                      <span key={a} className="text-[8px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">{a}</span>
+                      <span key={a} className="text-[7px] bg-gray-100 text-gray-500 px-1 py-0.5 rounded-full">{a}</span>
                     ))}
                   </div>
                 )}
               </div>
-              <span className="text-[11px] font-mono text-amber-600 font-medium flex-shrink-0">{p.price}</span>
+              <span className="text-[9px] font-mono text-amber-600 font-medium flex-shrink-0">{p.price}</span>
             </div>
           ))}
         </motion.div>
@@ -98,14 +98,14 @@ function MinimalView() {
       <div className="flex-1 overflow-hidden flex flex-col px-5 pt-3">
         {PRODUCTS.map((p, i) => (
           <div key={p.name}
-            className={cn('flex items-baseline justify-between py-3', i < PRODUCTS.length - 1 && 'border-b border-gray-50')}>
-            <div className="flex-1 min-w-0 pr-3">
-              <p className="text-[11px] font-light text-gray-800 truncate">{p.name}</p>
+            className={cn('flex items-baseline justify-between py-2', i < PRODUCTS.length - 1 && 'border-b border-gray-50')}>
+            <div className="flex-1 min-w-0 pr-2">
+              <p className="text-[9px] font-light text-gray-800 leading-tight">{p.name}</p>
               {p.allergens.length > 0 && (
-                <p className="text-[8px] text-gray-400 font-mono mt-0.5">{p.allergens.join(' · ')}</p>
+                <p className="text-[7px] text-gray-400 font-mono mt-0.5">{p.allergens.join(' · ')}</p>
               )}
             </div>
-            <span className="text-[10px] font-mono text-gray-500 tabular-nums">{p.price.replace('€', '')}</span>
+            <span className="text-[9px] font-mono text-gray-500 tabular-nums flex-shrink-0">{p.price.replace('€', '')}</span>
           </div>
         ))}
       </div>

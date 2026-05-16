@@ -16,17 +16,6 @@ const PASTEL_COLORS = [
   { name: 'Niebla',  bg: '#E9EEF5', card: '#D5DCEC' },
 ];
 
-const DEVICE_SIZE: Record<DeviceLayout, string> = {
-  desktop: 'w-[680px] h-[440px]',
-  tablet:  'w-[360px] h-[490px]',
-  mobile:  'w-[220px] h-[450px]',
-};
-
-const DEVICE_RADIUS: Record<DeviceLayout, string> = {
-  desktop: 'rounded-2xl',
-  tablet:  'rounded-[2.5rem]',
-  mobile:  'rounded-[2.5rem]',
-};
 
 export default function WebPreviewSection() {
   const [mode,        setMode]       = useState<ThemeMode>('light');
@@ -38,12 +27,12 @@ export default function WebPreviewSection() {
     : THEMES[mode];
 
   return (
-    <section id="web" className="h-screen pt-16 flex items-center overflow-hidden bg-[#F9F9F7]">
-      <div className="w-full h-full max-w-7xl mx-auto px-6 flex items-center gap-10 py-10">
+    <section id="web" className="min-h-screen lg:h-screen pt-16 flex items-center overflow-hidden bg-[#F9F9F7]">
+      <div className="w-full lg:h-full max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-8 lg:gap-10 py-10">
 
         {/* ── Left — Editorial + controles ─────────────────────────── */}
         <motion.div
-          className="w-80 flex-shrink-0 flex flex-col gap-6"
+          className="w-full lg:w-80 lg:flex-shrink-0 flex flex-col gap-6 text-center lg:text-left"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -123,7 +112,7 @@ export default function WebPreviewSection() {
         </motion.div>
 
         {/* ── Right — Mockup grande + selector dispositivo ──────────── */}
-        <div className="flex-1 flex flex-col items-center justify-center gap-5 h-full">
+        <div className="flex-1 w-full flex flex-col items-center justify-center gap-5 lg:h-full">
 
           <div className="flex-1 flex items-center justify-center w-full">
             <AnimatePresence mode="wait">
@@ -135,8 +124,12 @@ export default function WebPreviewSection() {
                 transition={{ type: 'spring', stiffness: 120, damping: 20 }}
                 className={cn(
                   'shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-gray-100/80 overflow-hidden flex-shrink-0 flex flex-col',
-                  DEVICE_SIZE[device],
-                  DEVICE_RADIUS[device],
+                  // móvil: siempre tamaño mobile
+                  'w-[220px] h-[400px] rounded-[2.5rem]',
+                  // desktop: tamaño según dispositivo seleccionado
+                  device === 'desktop' && 'lg:w-[680px] lg:h-[440px] lg:rounded-2xl',
+                  device === 'tablet'  && 'lg:w-[360px] lg:h-[490px] lg:rounded-[2.5rem]',
+                  device === 'mobile'  && 'lg:w-[220px] lg:h-[450px] lg:rounded-[2.5rem]',
                 )}
               >
                 {/* Browser chrome (desktop only) */}
@@ -159,8 +152,8 @@ export default function WebPreviewSection() {
             </AnimatePresence>
           </div>
 
-          {/* Device selector */}
-          <div className="flex gap-1 bg-white border border-gray-100 shadow-sm p-1.5 rounded-full flex-shrink-0">
+          {/* Device selector — oculto en móvil */}
+          <div className="hidden lg:flex gap-1 bg-white border border-gray-100 shadow-sm p-1.5 rounded-full flex-shrink-0">
             {(['desktop', 'tablet', 'mobile'] as DeviceLayout[]).map(d => (
               <button
                 key={d}

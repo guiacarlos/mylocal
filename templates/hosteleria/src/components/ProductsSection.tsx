@@ -34,8 +34,8 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section id="productos" className="h-screen pt-16 flex items-center bg-white overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-6">
+    <section id="productos" className="min-h-screen lg:h-screen pt-16 flex items-center bg-white overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 py-10 lg:py-0">
 
         {/* ── Editorial header ───────────────────────────────────────── */}
         <div className="text-center mb-8">
@@ -51,7 +51,7 @@ export default function ProductsSection() {
         </div>
 
         {/* ── 4-column cards ─────────────────────────────────────────── */}
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5">
           {products.map((p, idx) => (
             <motion.div
               key={p.name}

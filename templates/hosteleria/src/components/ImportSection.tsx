@@ -3,13 +3,13 @@ import { Camera, Upload, Scan } from 'lucide-react';
 
 export default function ImportSection() {
   return (
-    <section id="importar" className="h-screen pt-16 flex items-center bg-black text-white relative overflow-hidden">
+    <section id="importar" className="min-h-screen lg:h-screen pt-16 flex items-center bg-black text-white relative overflow-hidden">
 
       {/* Ambient glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/8 rounded-full blur-[140px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/6 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4 pointer-events-none" />
 
-      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center py-10 lg:py-0">
 
         {/* ── Left — Editorial ──────────────────────────────────────── */}
         <motion.div
@@ -17,6 +17,7 @@ export default function ImportSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="text-center lg:text-left"
         >
           <span className="text-[11px] font-mono text-white/35 uppercase tracking-[0.22em] mb-4 block">
             Magia en un click
@@ -26,7 +27,7 @@ export default function ImportSection() {
             a digital,<br />
             <span className="text-white/40">al instante.</span>
           </h2>
-          <p className="text-[13px] text-white/50 mb-6 max-w-sm leading-relaxed">
+          <p className="text-[13px] text-white/50 mb-6 max-w-sm leading-relaxed mx-auto lg:mx-0">
             Sube una foto de tu carta y la IA digitaliza cada plato, descripción y precio al instante.
           </p>
 

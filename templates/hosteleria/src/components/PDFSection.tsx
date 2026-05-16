@@ -10,8 +10,8 @@ const CARTA = [
 
 export default function PDFSection() {
   return (
-    <section id="pdf" className="h-screen pt-16 flex items-center bg-[#F9F9F7] overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section id="pdf" className="min-h-screen lg:h-screen pt-16 flex items-center bg-[#F9F9F7] overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center py-10 lg:py-0">
 
         {/* ── Left — PDF mockup ──────────────────────────────────────── */}
         <motion.div
@@ -19,7 +19,7 @@ export default function PDFSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative max-w-[300px] mx-auto w-full"
+          className="relative max-w-[300px] mx-auto w-full order-2 lg:order-1"
         >
           {/* Floating download chip */}
           <div className="absolute -top-4 -right-4 bg-black text-white px-4 py-2.5 rounded-2xl shadow-xl z-10 flex items-center gap-2">
@@ -77,6 +77,7 @@ export default function PDFSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center lg:text-left order-1 lg:order-2"
         >
           <span className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.22em] mb-4 block">
             Formato Físico
@@ -86,11 +87,11 @@ export default function PDFSection() {
             en papel,<br />
             <span className="text-gray-400">sin esperas.</span>
           </h2>
-          <p className="text-[13px] text-gray-500 mb-8 max-w-sm leading-relaxed">
+          <p className="text-[13px] text-gray-500 mb-8 max-w-sm leading-relaxed mx-auto lg:mx-0">
             ¿Necesitas cartas físicas? Generamos un PDF optimizado para impresión con diseño elegante y minimalista que respeta tu marca.
           </p>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-center lg:justify-start">
             <button className="flex items-center gap-2.5 px-5 py-3 rounded-2xl border border-gray-200 bg-white hover:bg-black hover:text-white hover:border-black transition-all group text-sm font-medium">
               <Printer className="w-4 h-4 group-hover:scale-110 transition-transform" />
               Imprimir

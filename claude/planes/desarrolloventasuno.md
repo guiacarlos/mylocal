@@ -1,419 +1,648 @@
-# Plan de Desarrollo: MyLocal — Fase 1 MVP
-**Documento:** `claude/planes/desarrolloventasuno.md`  
-**Última revisión:** 2026-05-15  
+# Plan de Desarrollo: MyLocal — MVP Fase 1
+**Documento:** `claude/planes/desarrolloventasuno.md`
+**Última revisión:** 2026-05-16
 **Estado:** En ejecución — framework completo, MVP en construcción
 
 ---
 
-## 0. Contexto: lo que existe vs lo que falta
+## 0. Contexto: lo que existe y lo que falta
 
 ### Lo que está construido y funciona (no reabrir)
 
 | Bloque | Estado | Notas |
 |--------|--------|-------|
 | Framework multi-sector (olas 0–L) | Completo | SDK, templates, CAPABILITIES, build.ps1 |
-| `@mylocal/sdk` workspaces pnpm | Completo | SynaxisProvider, login, useSynaxisClient |
+| `@mylocal/sdk` pnpm workspaces | Completo | SynaxisProvider, login, useSynaxisClient |
 | Templates: hosteleria, clinica, logistica, asesoria | Completos como apps Vite | hosteleria = landing page + SDK integrado |
 | CAPABILITIES: LOGIN, OPTIONS, CARTA, QR, OCR, PDFGEN, TPV, AI, DELIVERY, CITAS, CRM, NOTIFICACIONES, TAREAS, OPENCLAW | Completos | 208 tests PASS |
-| Auth (bearer-only, sin cookies, sin CSRF) | Blindado | AUTH_LOCK.md |
+| Auth (bearer-only, sin cookies, sin CSRF) | Blindado | `claude/AUTH_LOCK.md` |
 | OCR pipeline: Tesseract → Gemma 4 → Gemini | Completo | cascade multi-engine |
-| JobQueue / Worker cron | Completo | async OCR |
+| PAYMENT: Cash, Bizum, Stripe (pagos de mesa) | Completo | Para el TPV del hostelero |
+| TakeRateManager (comisión transaccional) | Completo | Registro por local y mes |
+| PDFGEN (3 plantillas carta + QR sheet + table tents) | Completo | |
 | Blog recetas + scraper | Completo | |
 | Legales + wiki | Completo | 6 páginas legales, 10 artículos |
-| PDFGEN (3 plantillas carta + QR sheet + table tents) | Completo | |
-| Dashboard SPA hostelería (spa/) | Completo (legacy) | carta, mesas, sala, QR, importación OCR |
-| Carta pública (/carta, /carta/:zona/:mesa) | Completo (legacy) | BrowserRouter, rutas amigables |
-| Integración de templates externos (skill) | Nuevo | `.claude/commands/integrar-template.md` |
+| Dashboard SPA hostelería (spa/) | Completo legacy | carta, mesas, sala, QR, importación OCR |
+| Carta pública (/carta, /carta/:zona/:mesa) | Completo legacy | BrowserRouter, rutas amigables |
+| Landing page hostelería (`templates/hosteleria/`) | Completo | 7 secciones, responsive, splash screen |
 
-### Lo que NO existía en el plan anterior y existe ahora
+### Separación crítica de pagos (no confundir)
 
-1. **SDK compartido `@mylocal/sdk`** — no contemplado en el plan original. Cambia cómo los templates se conectan al backend.
-2. **Arquitectura de templates independientes** — cada vertical es una SPA Vite autocontenida, no un módulo dentro de una SPA monolítica.
-3. **Landing page de hostelería** (`templates/hosteleria/`) — traída de Google AI Studio, integrada con el SDK. Es la cara pública de MyLocal para captación.
-4. **Skill de integración** — proceso documentado y automatizable para traer cualquier template externo al framework.
-5. **pnpm workspaces** — gestión unificada de dependencias en monorepo; `framer-motion` como dependencia directa requerida cuando se usa `motion/react`.
+Existen dos flujos de pago completamente distintos:
+
+| Flujo | Quién paga | A quién | Método | Estado |
+|-------|-----------|---------|--------|--------|
+| Pago en mesa (TPV) | Cliente final | Al hostelero | Cash / Bizum / Stripe | Implementado en CAPABILITIES/PAYMENT |
+| Suscripción MyLocal | Hostelero | A MyLocal | **Revolut + Google Pay** | Cuenta y credenciales confirmadas, driver pendiente |
+
+El `StripeDriver.php` existente es exclusivamente para cobros de mesa. Las suscripciones (27€/mes o 260€/año) van por **Revolut**. No se usa Stripe para suscripciones.
+
+### El producto que vendemos en Fase 1 (per ventas.md)
+
+No es solo un QR. Ofrecer únicamente QR en 2026 tiene tanta fricción como ofrecer webs estáticas. El mercado ya tiene eso. El producto completo de Fase 1 es:
+
+- **Carta digital QR** — la puerta de entrada, no el producto final
+- **Presencia web del local** — subdominio propio, visible en búsquedas
+- **Local Vivo** — el dueño publica fotos/videos del día (Micro-Timeline)
+- **Reseñas con SEO** — clientes dejan estrellas y comentarios (Schema.org)
+- **IA invisible** — genera descripciones de platos, traduce, sugiere categorías
+- **Legales automáticos** — RGPD/LSSI generados al registrarse
+- **Agente-ready** — reservas vía asistentes IA (Siri, Gemini, ChatGPT)
+
+El argumento comercial principal no es el QR. Es:
+> "Tu negocio tiene presencia digital real, reputación y se conecta con los asistentes IA que usan tus clientes. Todo desde un panel, sin instalar nada."
 
 ### La brecha crítica para el MVP
 
-El framework está completo. El producto no está desplegado. Las piezas existen pero no están unidas en un flujo de usuario de extremo a extremo:
+El framework está completo. El flujo de usuario de extremo a extremo no existe todavía:
 
 ```
-Usuario llega → Landing mylocal.es → Se registra → Onboarding → Dashboard
-→ Configura carta → Genera QR → Cliente escanea QR → Ve carta → VENTA HECHA
+Landing mylocal.es → Se registra → Onboarding 10 pasos → Dashboard
+→ Configura carta → Publica timeline → Carta online → QR → Cliente escanea
+→ Ve carta + reseñas + local vivo → Hostelero cobra suscripción con Revolut
 ```
-
-Cada flecha de ese flujo tiene trabajo pendiente.
 
 ---
 
-## 1. Arquitectura objetivo del MVP
+## 1. Principios de ejecución (no negociables)
+
+1. **Todo el desarrollo es local.** El entorno de desarrollo arranca con `run.bat hosteleria`. La app funciona sin subdominios, sin hosting, sin Cloudflare. Los subdominios se simulan con el header `X-Local-Id` durante el desarrollo. El despliegue real va al final de todo.
+2. **Agnóstico al entorno.** Ningún componente asume que está en `mylocal.es`. Toda URL, slug, configuración viene de variables de entorno o del seed de arranque.
+3. **Atómico.** Un archivo, una responsabilidad. Sin commits WIP. Cada ola termina con su gate verde antes de abrir la siguiente.
+4. **≤ 250 LOC por archivo.** Si se acerca al límite, se parte.
+5. **Sin datos ficticios.** Empty states con CTA. Nunca Lorem Ipsum en producción.
+6. **AUTH_LOCK intacto.** Antes de tocar auth, login, /acide, SynaxisClient o el fetch: leer `claude/AUTH_LOCK.md` completo.
+7. **El framework no se modifica para el template.** El template se adapta al framework.
+8. **No se despliega hasta que todo funciona localmente.** El despliegue no es una forma de probar. Es la confirmación de que funciona.
+
+---
+
+## 2. Arquitectura objetivo del MVP
 
 ### Una sola SPA, tres experiencias
 
 ```
 templates/hosteleria/src/
-  App.tsx                     ← Router raíz
+  App.tsx                         ← Router raíz (BrowserRouter)
   pages/
-    LandingPage.tsx           ← / (marketing, captación)
-    RegisterPage.tsx          ← /registro (alta de nuevo local)
-    DashboardPage.tsx         ← /dashboard/* (hostelero autenticado)
-    CartaPublicaPage.tsx      ← /carta, /carta/:zona/:mesa (QR clientes)
-    LoginPage.tsx             ← /acceder (opcional, el modal sirve en landing)
+    LandingPage.tsx               ← / (marketing, captación — ya existe)
+    RegisterPage.tsx              ← /registro
+    DashboardPage.tsx             ← /dashboard/* (auth requerida)
+    CartaPublicaPage.tsx          ← /carta, /carta/:zona/:mesa
 ```
 
-### Despliegue único
+### Multi-tenancy local (desarrollo sin subdominios)
+
+Durante el desarrollo, el subdominio se simula con un header:
 
 ```
-build.ps1 → release/ → Hostinger public_html
-                          ↓
-            mylocal.es → SPA (Landing + Dashboard + Carta)
-            *.mylocal.es → misma SPA; PHP detecta el subdominio y carga el local
+X-Local-Id: elbar
 ```
 
-### Cómo se carga el contexto del local
+El `SubdomainManager.php` lee primero ese header y cae al dominio solo si no existe. Esto permite desarrollar y probar multi-tenancy completo en local sin tocar DNS.
 
 ```
-Router → PHP extrae HOST → define CURRENT_LOCAL_SLUG
-       → Carga STORAGE/locales/<slug>.json
-       → SynaxisProvider recibe local_id via seed/bootstrap.json del subdominio
-       → Todos los componentes usan useSynaxisClient() ya contextualizado
+run.bat hosteleria          → PHP en 8091 (X-Local-Id configurable)
+                            → Vite HMR en 5173
+```
+
+### Cobro de suscripciones
+
+```
+Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
+                            ← webhook Revolut → actualiza plan en AxiDB
 ```
 
 ---
 
-## 2. Definición exacta del MVP
+## 3. Definición del MVP
 
-**MVP = primer hostelero puede pagar y usar el producto de manera autónoma.**
+**MVP = primer hostelero paga y usa el producto de forma autónoma, sin intervención manual.**
 
-No es necesario que todo funcione. Sí es necesario que esto funcione sin intervención manual:
-
-| Función | Obligatorio para MVP |
-|---------|---------------------|
-| Landing mylocal.es con propuesta de valor clara | Sí |
-| Registro de nuevo local (slug, email, contraseña) | Sí |
-| Login y acceso al dashboard | Sí |
-| Gestión de carta (categorías, platos, precios, fotos) | Sí |
-| Carta pública accesible via QR | Sí |
-| Generación de QR descargable | Sí |
-| Configuración básica del local (nombre, logo, tema) | Sí |
-| Pago con tarjeta (Stripe — al menos sandbox) | Sí |
-| Despliegue en Hostinger + Cloudflare (subdominios) | Sí |
-| OCR de carta (PDF/foto) | Deseable — no bloqueante |
-| Micro-Timeline (Publicar estado/foto del local) | Sí (Nuevo Estándar) |
-| Sistema de Reseñas internas (Schema.org) | Sí (Nuevo Estándar) |
-| Generación automática de Legales (Privacidad/Cookies) | Sí (Incluido) |
-| Agente IA (OpenClaude/OpenClaw) | No (Fase 2) |
-| TPV completo (pedidos, pagos en mesa) | No (Fase 2) |
-| Multi-local por usuario | No (Fase 2) |
-
----
-
-## 3. Principios de ejecución (no negociables)
-
-1. **Atómico.** Cada archivo nuevo se valida por sí solo. No existe el commit "WIP".
-2. **≤ 250 LOC.** Si un archivo va a superarlo, se parte antes.
-3. **Sin hardcodeos.** Todo configurable via OPTIONS, config.json o AxiDB.
-4. **Sin datos ficticios.** Empty states con CTA. Nunca Lorem Ipsum.
-5. **Sin funciones a medias.** Existe completa o no existe.
-6. **AUTH_LOCK intacto.** Cualquier cambio que toque auth, login, fetch, /acide, SynaxisClient: leer AUTH_LOCK.md primero.
-7. **Test antes de marcar hecho.** Sin verde no se cierra.
-8. **El framework no se modifica para el template.** El template se adapta al framework.
+| Función | Obligatorio MVP |
+|---------|----------------|
+| Landing mylocal.es con propuesta de valor completa | Sí |
+| Registro (slug, email, contraseña) < 30 segundos | Sí |
+| Onboarding 10 pasos guiados (per ventas.md) | Sí |
+| Carta digital (categorías, platos, precios, fotos) | Sí |
+| Carta pública accesible via QR + subdominio | Sí |
+| Generación y descarga de QR (PNG + PDF) | Sí |
+| Configuración del local (nombre, logo, tema visual) | Sí |
+| Micro-Timeline: el dueño publica fotos/posts del día | Sí |
+| Reseñas de clientes con Schema.org (SEO) | Sí |
+| Legales automáticos (RGPD/LSSI) al registrarse | Sí |
+| Plan Demo 21 días (sin tarjeta) | Sí |
+| Suscripción con Revolut + Google Pay (27€/mes o 260€/año) | Sí |
+| Despliegue en Hostinger + Cloudflare (subdominios) | Sí (último paso) |
+| IA de descripciones de platos | Sí (usa OpenClaude existente) |
+| Multiidioma ES/EN/FR/DE | Deseable, no bloqueante |
+| OCR de carta (foto/PDF) | Deseable, no bloqueante |
+| Agente IA de reservas (Agent-Ready Interface) | No (Fase 2) |
+| TPV completo (pedidos y pagos en mesa) | No (Fase 2) |
+| Verifactu / TicketBAI | No (Fase 3) |
+| Multi-local por usuario | No (Fase 4) |
 
 ---
 
-## 4. Olas MVP (lo que queda por hacer)
-
-### Ola M1 — Routing y estructura SPA completa
-
-**Objetivo:** `templates/hosteleria/` maneja las tres experiencias (landing, dashboard, carta pública) con react-router-dom. La landing actual queda como la ruta `/`.
-
-**Estado:** Pendiente
-
-**M1.1 — Routing principal**
-- [ ] `src/App.tsx` → añadir `BrowserRouter` + `Routes`
-- [ ] Ruta `/` → `LandingPage` (componentes actuales del template de Google AI Studio)
-- [ ] Ruta `/acceder` → `LoginPage` (o modal sobre la landing)
-- [ ] Ruta `/registro` → `RegisterPage`
-- [ ] Ruta `/dashboard/*` → `DashboardPage` (requiere auth, redirect a /acceder si no)
-- [ ] Ruta `/carta` → `CartaPublicaPage`
-- [ ] Ruta `/carta/:zona/:mesa` → `CartaPublicaPage` con contexto de mesa
-- [ ] Guard de autenticación: HOC `<RequireAuth>` que lee `getCachedUser()` del SDK
-- [ ] La landing actual (`HeroSection`, `QRSection`, etc.) se mueve a `pages/LandingPage.tsx`
-
-**M1.2 — Layout de dashboard**
-- [ ] `src/pages/dashboard/DashboardLayout.tsx` — sidebar + header, envuelve todas las sub-rutas
-- [ ] Sidebar: Carta / Mesas / Configuración / Facturación / Cuenta
-- [ ] Header: nombre del local + botón "Ver mi carta pública" + avatar usuario
-- [ ] Indicador de plan (Demo X días / Pro)
-- [ ] Mobile: sidebar hamburguesa
-
-**M1.3 — Migración del dashboard legacy**
-El dashboard completo existe en `spa/src/`. La estrategia es portarlo a `templates/hosteleria/src/pages/dashboard/` conectando vía SDK.
-
-- [ ] `pages/dashboard/CartaPage.tsx` — gestión de carta (migrado de spa/src/)
-- [ ] `pages/dashboard/MesasPage.tsx` — gestión de sala y QR
-- [ ] `pages/dashboard/ConfigPage.tsx` — datos del local, logo, tema visual
-- [ ] `pages/dashboard/FacturacionPage.tsx` — plan, facturas, métodos de pago
-- [ ] `pages/dashboard/CuentaPage.tsx` — perfil, contraseña, sesiones
-
-**Gate M1:** `npx tsc --noEmit` pasa; Vite arranca; ruta `/dashboard` redirige a `/acceder` si no hay sesión; ruta `/carta` muestra carta pública.
+## 4. Olas MVP — Ordenadas de menor a mayor dificultad
 
 ---
 
-### Ola M2 — Registro y onboarding
+### Ola M1 — Routing SPA (solo frontend, sin nuevo backend)
 
-**Objetivo:** un usuario nuevo puede crear su cuenta y tener su carta online en < 10 minutos de forma autónoma.
+**Dificultad: baja.** Es wiring puro. El componente más difícil (la landing) ya existe y funciona.
 
-**Estado:** Pendiente
+**Objetivo:** `templates/hosteleria/src/App.tsx` maneja las tres experiencias con react-router-dom.
 
-**M2.1 — Backend: registro de nuevos locales**
-- [ ] `CAPABILITIES/LOGIN/LoginRegister.php` — flujo de alta: valida email, slug, crea usuario, crea local en STORAGE/locales/<slug>.json, bootstrap de carta vacía
-- [ ] Validador de slug: regex `^[a-z][a-z0-9-]{2,30}$` + lista palabras reservadas (`admin`, `dashboard`, `api`, `www`, `mail`, `ftp`, `cdn`, `static`, `acide`, `mylocal`, `demo`, `test`, `staging`, `dev`, `panel`, `support`, `help`, `docs`, `blog`, `shop`)
-- [ ] Acción `validate_slug` — `{available: bool, reason: string}` — sin auth requerida
-- [ ] Acción `register_local` — crea cuenta + local + bootstraps → devuelve token de sesión
-- [ ] Añadir ambas a `ALLOWED_ACTIONS` del dispatcher
+**M1.1 — Router raíz**
+- [ ] Instalar `react-router-dom` en `templates/hosteleria/`
+- [ ] `App.tsx` → `BrowserRouter` + `Routes`
+- [ ] Ruta `/` → `LandingPage` (mueve los componentes actuales de App.tsx)
+- [ ] Ruta `/registro` → `RegisterPage` (componente stub por ahora)
+- [ ] Ruta `/acceder` → `LoginPage` (o modal reutilizado de la landing)
+- [ ] Ruta `/dashboard/*` → `DashboardPage` con guard de auth
+- [ ] Ruta `/carta` → `CartaPublicaPage` (stub)
+- [ ] Ruta `/carta/:zona/:mesa` → misma `CartaPublicaPage` con params
+- [ ] `<RequireAuth>` — HOC que lee `getCachedUser()` del SDK; redirige a `/acceder` si no hay sesión
 
-**M2.2 — Frontend: RegisterPage**
-- [ ] `src/pages/RegisterPage.tsx` — form: nombre del negocio, slug (con validación en vivo), email, contraseña
-- [ ] Feedback visual slug: verde/rojo mientras escribe, preview URL `<slug>.mylocal.es`
-- [ ] Al registrar: llama a `register_local` → si success, guarda token, redirige a `/dashboard?onboarding=1`
-- [ ] Sin verificación de email en MVP (añadir en Fase 2)
+**M1.2 — Vite SPA routing**
+- [ ] `vite.config.js` → confirmar que el servidor de desarrollo sirve `index.html` para todas las rutas (ya debería estar)
+- [ ] `.htaccess` en `release/` → `RewriteRule ^ /index.html [L]` (ya existe, verificar)
 
-**M2.3 — Onboarding post-registro**
-- [ ] `src/components/OnboardingBanner.tsx` — banner contextual en el dashboard los primeros 7 días
-- [ ] Checklist: ① Sube tu logo ② Añade tu primer plato ③ Configura tus mesas ④ Descarga tu QR
-- [ ] Cada item se marca automáticamente cuando se completa (polling del estado del local)
-- [ ] El banner se oculta cuando el checklist está al 100% o el usuario lo cierra
-
-**Gate M2:** usuario nuevo en una URL fresca puede registrarse, ver el dashboard vacío con el onboarding, añadir un plato y tener su carta online en `<slug>.mylocal.es/carta`.
+**Gate M1:** `npx tsc --noEmit` pasa. `run.bat hosteleria` arranca. La landing carga en `/`. Navegar a `/dashboard` sin sesión redirige a `/acceder`. La URL `/carta` no da 404.
 
 ---
 
-### Ola M3 — Multi-tenancy: subdominios en producción
+### Ola M2 — Dashboard layout y navegación (frontend, sin lógica de negocio)
 
-**Objetivo:** cada hostelero tiene su propio subdominio. El backend carga su contexto automáticamente.
+**Dificultad: baja-media.** Estructura visual sin datos reales todavía.
 
-**Estado:** Diseñado, pendiente de implementar
+**Objetivo:** El hostelero autenticado entra al dashboard y ve la navegación completa del producto.
 
-**M3.1 — Backend: detección de subdominio**
-- [ ] `CORE/SubdomainManager.php` (existe en notas, verificar si está implementado)
-  - Lee `$_SERVER['HTTP_HOST']`
-  - Extrae slug: `preg_match('/^([a-z0-9\-]+)\.mylocal\.es$/i', $host, $m)`
-  - Define `CURRENT_LOCAL_SLUG = $m[1]`
-  - Si es `www` o raíz → `CURRENT_LOCAL_SLUG = 'mylocal'` (landing corporativa)
-- [ ] `router.php` llama a `SubdomainManager::detect()` al inicio de cada request
-- [ ] `spa/server/index.php` igual
-- [ ] Función global `get_current_local_id()` → combina subdominio + header `X-Local-Id` (override para dashboard admin)
+**M2.1 — Layout del dashboard**
+- [ ] `src/pages/dashboard/DashboardLayout.tsx` — sidebar + topbar, envuelve sub-rutas
+- [ ] Sidebar items: Inicio / Carta / Diseño / QR / Publicar / Reseñas / Ajustes / Facturación
+- [ ] Topbar: nombre del local + avatar + botón "Ver mi carta pública" (abre subdominio en nueva pestaña)
+- [ ] Indicador de plan: banner "Demo — X días restantes" cuando aplica
+- [ ] Móvil: sidebar como sheet lateral (hamburguesa)
 
-**M3.2 — Seed por subdominio**
-- [ ] `public/seed/bootstrap.json` se genera dinámicamente por PHP con el local_id del subdominio
-- [ ] El endpoint `/seed/bootstrap.json` devuelve `{ "local_id": "<slug>", "plan": "demo" }`
-- [ ] `SynaxisProvider` recibe este seed y lo inyecta en todas las llamadas al SDK
+**M2.2 — Páginas stub con empty states reales**
+- [ ] `InicioPage.tsx` — métricas: visitas hoy, escaneos QR, plato más visto (datos vacíos con CTA)
+- [ ] `CartaPage.tsx` — stub con CTA "Añade tu primer plato"
+- [ ] `PublicarPage.tsx` — stub con CTA "Publica tu primera foto"
+- [ ] `ReseñasPage.tsx` — stub con CTA "Comparte el enlace para recibir reseñas"
+- [ ] `QRPage.tsx` — stub con preview de QR
+- [ ] `AjustesPage.tsx` — stub con nombre del local y logo
+- [ ] `FacturacionPage.tsx` — stub con plan actual
 
-**M3.3 — Aislamiento de datos**
-- [ ] Todos los modelos en CAPABILITIES filtran por `local_id` en lecturas
-- [ ] `get_current_local_id()` disponible en todos los handlers
-- [ ] Verificar: usuario de local A no puede leer/escribir datos de local B (test de aislamiento)
-
-**M3.4 — Test de subdominio**
-- [ ] `spa/server/tests/test_subdomain.php` — 10+ assertions
-- [ ] `curl -H "Host: elbar.mylocal.es" http://localhost:8091/seed/bootstrap.json` → `{"local_id":"elbar"}`
-- [ ] Añadir al gate de `build.ps1`
-
-**Gate M3:** con el release desplegado en Hostinger, `elbar.mylocal.es` carga el dashboard del local "elbar" y `otra.mylocal.es` carga el de "otra", sin que haya colisión de datos.
+**Gate M2:** Iniciar sesión con credenciales de prueba locales accede al dashboard. La navegación entre todas las páginas funciona. En móvil (375px) no hay scroll horizontal.
 
 ---
 
-### Ola M4 — Pago (Stripe)
+### Ola M3 — Backend: multi-tenancy y registro (backend PHP, testeable local)
 
-**Objetivo:** el hostelero puede introducir su tarjeta y activar el plan Pro.
+**Dificultad: media.** PHP puro, sin nueva dependencia externa. Testeable 100% en local con header `X-Local-Id`.
 
-**Estado:** Diseñado (mock), pendiente conexión real
+**Objetivo:** el backend sabe en todo momento qué local sirve y puede crear nuevos locales.
 
-**M4.1 — Backend Stripe**
-- [ ] `CAPABILITIES/PAYMENT/StripeAdapter.php` — cliente HTTP contra la API de Stripe (sin SDK de Stripe, peticiones `curl` directas)
-- [ ] Acciones: `create_checkout_session`, `stripe_webhook` (verifica firma), `get_subscription_status`, `cancel_subscription`
-- [ ] Persistencia en `STORAGE/billing/<local_id>/subscription.json`, `invoices/<id>.json`
-- [ ] Webhook: en `payment_intent.succeeded` → actualiza plan a Pro, genera factura
-- [ ] En `customer.subscription.deleted` → downgrade a Demo, notificación al hostelero
-- [ ] Registrar en `ALLOWED_ACTIONS` (webhook sin auth, resto con auth)
+**M3.1 — SubdomainManager**
+- [ ] `CORE/SubdomainManager.php`
+  - Lee `$_SERVER['HTTP_X_LOCAL_ID']` primero (desarrollo local y override de admin)
+  - Si no existe, extrae slug de `HTTP_HOST`: `preg_match('/^([a-z0-9\-]+)\.mylocal\.es$/i', $host, $m)`
+  - Si es `www` o dominio raíz → slug `mylocal` (landing corporativa)
+  - Define la constante global `CURRENT_LOCAL_SLUG`
+- [ ] `router.php` → llama a `SubdomainManager::detect()` al inicio de cada request
+- [ ] `spa/server/index.php` → igual
+- [ ] Función global `get_current_local_id()` disponible en todos los handlers
 
-**M4.2 — Frontend: FacturacionPage**
+**M3.2 — Seed dinámico por local**
+- [ ] El endpoint `/seed/bootstrap.json` devuelve JSON dinámico: `{"local_id":"<slug>","plan":"demo","demo_days_left":21}`
+- [ ] `SynaxisProvider` en el SDK ya consume este endpoint; verificar que funciona con datos dinámicos
+
+**M3.3 — Backend: registro de nuevos locales**
+- [ ] `CAPABILITIES/LOGIN/LoginRegister.php`
+  - Acción `validate_slug` — sin auth — devuelve `{available: bool, reason: string}`
+  - Regex: `^[a-z][a-z0-9-]{2,30}$`
+  - Lista de slugs reservados: `admin, dashboard, api, www, mail, ftp, cdn, acide, mylocal, demo, test, staging, panel, support, help, docs, blog, shop, carta, registro, acceder`
+  - Acción `register_local` — crea usuario + local + STORAGE inicial → devuelve token de sesión
+  - Al registrar: genera legales automáticos para el local (privacidad, cookies, aviso legal) a partir de templates con datos del local
+- [ ] Añadir `validate_slug` y `register_local` a `ALLOWED_ACTIONS` del dispatcher
+
+**M3.4 — Límites del plan Demo (desde el primer día, no después)**
+- [ ] Backend verifica el plan antes de writes: si Demo → máximo 20 platos, 1 zona, 5 mesas
+- [ ] Si supera límite → `{"success":false,"error":"PLAN_LIMIT","upgrade_url":"/dashboard/facturacion"}`
+- [ ] Función reutilizable `check_plan_limit($localId, $resource, $count)` en CORE
+
+**M3.5 — Test de multi-tenancy local**
+- [ ] `spa/server/tests/test_multitenant.php` — 15+ assertions
+- [ ] `curl -H "X-Local-Id: elbar" http://localhost:8091/seed/bootstrap.json` → `{"local_id":"elbar"}`
+- [ ] Usuario de local A no puede leer datos de local B
+- [ ] Registro de un local nuevo crea STORAGE aislado y devuelve token válido
+
+**Gate M3:** `test_multitenant.php` pasa. Con `X-Local-Id: elbar` en las peticiones, el sistema sirve el contexto de "elbar". Un registro nuevo crea el local y hace login automático.
+
+---
+
+### Ola M4 — Registro y onboarding (frontend + integración M3)
+
+**Dificultad: media.** Depende de M3 para el backend. El flujo de 10 pasos es el corazón del producto.
+
+**Objetivo:** usuario nuevo puede registrarse y tener su carta online en menos de 10 minutos.
+
+**M4.1 — RegisterPage**
+- [ ] `src/pages/RegisterPage.tsx` — form: tipo de negocio → nombre del local → slug → email → contraseña
+- [ ] Validación de slug en tiempo real: llama a `validate_slug` con debounce 400ms
+- [ ] Feedback visual: punto verde/rojo + preview URL `<slug>.mylocal.es`
+- [ ] Al enviar: llama a `register_local` → guarda token en SDK → redirige a `/dashboard?onboarding=1`
+- [ ] Sin verificación de email en MVP (flujo sin fricción)
+
+**M4.2 — Onboarding 10 pasos (per ventas.md)**
+- [ ] `src/components/OnboardingWizard.tsx` — wizard paso a paso, se activa cuando `?onboarding=1`
+- [ ] Paso 1: Tipo de negocio (Bar / Restaurante / Cafetería / Otro) → personaliza plantillas
+- [ ] Paso 2: Identidad — nombre del local + subida de logo. Preview en vivo
+- [ ] Paso 3: Idiomas — ES por defecto, toggles EN/FR/DE
+- [ ] Paso 4: Categorías — botón "Sugerir automáticamente" (llama a OpenClaude) o manual
+- [ ] Paso 5: Primer plato — nombre, precio, foto, descripción + botón "Generar descripción" (IA)
+- [ ] Paso 6: Diseño — 3 plantillas: Minimal / Elegante / Moderno
+- [ ] Paso 7: Colores — autogenerados desde logo o selección manual
+- [ ] Paso 8: Vista previa — simulación de móvil con scroll real + botón "Ver como cliente"
+- [ ] Paso 9: QR — generar QR general + por mesa si aplica. Descarga PNG y PDF
+- [ ] Paso 10: Momento WOW — "Tu carta ya está online" + enlace + QR grande + CTA "Compartir"
+- [ ] Progreso guardado por paso (si cierra y vuelve, retoma donde dejó)
+
+**M4.3 — OnboardingBanner post-wizard**
+- [ ] Banner contextual en el dashboard los primeros 21 días
+- [ ] Checklist: ① Sube tu logo ② Añade tu primer plato ③ Descarga tu QR ④ Publica tu primera foto ⑤ Comparte el enlace
+- [ ] Cada item se marca automáticamente cuando se completa
+- [ ] Se oculta al 100% o cuando el usuario lo cierra
+
+**Gate M4:** usuario nuevo en `localhost:5173` puede registrarse, completar el wizard y tener su carta accesible en `localhost:8091/carta` con los datos del onboarding.
+
+---
+
+### Ola M5 — Migración del legacy: Carta y QR (frontend + SDK)
+
+**Dificultad: media-alta.** El bloque más denso del MVP. El dashboard legacy existe pero usa patrones distintos al SDK.
+
+**Objetivo:** el hostelero puede gestionar su carta completa desde el nuevo dashboard.
+
+**Estrategia:** copiar componentes de `spa/src/` a `templates/hosteleria/src/pages/dashboard/`, reemplazando cada llamada fetch legacy por `useSynaxisClient()` del SDK. Un componente a la vez, con tests locales tras cada migración.
+
+**M5.1 — CartaPage completa**
+- [ ] Listado de categorías + platos (lee de CAPABILITIES/CARTA)
+- [ ] Añadir / editar / eliminar categoría
+- [ ] Añadir / editar / eliminar plato (nombre, precio, foto, descripción, alérgenos)
+- [ ] Botón "Generar descripción" → OpenClaude → rellena el campo automáticamente
+- [ ] Drag & drop para reordenar platos y categorías
+- [ ] Respeta límites del plan Demo: si llega a 20 platos, muestra CTA de upgrade
+
+**M5.2 — QRPage funcional**
+- [ ] Generación de QR general del local
+- [ ] Generación de QR por mesa/zona
+- [ ] Descarga PNG y PDF (QR sheet con instrucciones — usa PDFGEN existente)
+- [ ] Vista previa del QR antes de descargar
+
+**M5.3 — AjustesPage funcional**
+- [ ] Nombre del local, descripción corta, dirección, teléfono, horario
+- [ ] Subida y recorte de logo
+- [ ] Selector de tema visual (colores del local)
+- [ ] Cambio de email y contraseña
+
+**M5.4 — CartaPublicaPage**
+- [ ] Migrada del legacy: carga la carta del local según `local_id` del contexto
+- [ ] Categorías filtradas, foto por plato, alérgenos, precio
+- [ ] Multiidioma básico: si el local tiene EN activado, botón de cambio
+- [ ] Funciona en `/carta` y `/carta/:zona/:mesa`
+
+**Gate M5:** el hostelero puede añadir, editar y eliminar platos. La carta pública en `/carta` refleja los cambios en tiempo real. El QR descargable apunta a la URL correcta.
+
+---
+
+### Ola M6 — Local Vivo: Timeline y Reseñas (nuevo backend + frontend)
+
+**Dificultad: media.** Dos modelos nuevos en AxiDB + UI en el dashboard + sección en la carta pública.
+
+**Objetivo:** el local tiene presencia viva en la web, no solo una carta estática. Esto es diferenciación directa frente a NordQR y Bakarta.
+
+**M6.1 — Backend: TimelineModel**
+- [ ] `CAPABILITIES/TIMELINE/TimelineModel.php` — AxiDB, colección `timeline/<local_id>/`
+- [ ] Campos: `id`, `tipo` (foto/texto/video), `titulo`, `descripcion`, `media_url`, `publicado_at`
+- [ ] Acciones: `create_post`, `list_posts`, `delete_post`
+- [ ] Subida de imagen a `MEDIA/<local_id>/timeline/`
+- [ ] Máximo 50 posts en Demo, ilimitado en Pro
+
+**M6.2 — Backend: ReviewModel con Schema.org**
+- [ ] `CAPABILITIES/REVIEWS/ReviewModel.php` — AxiDB, colección `reviews/<local_id>/`
+- [ ] Campos: `id`, `autor`, `estrellas` (1-5), `comentario`, `fecha`, `verificado`
+- [ ] Acciones: `create_review` (sin auth — pública), `list_reviews`, `delete_review` (con auth)
+- [ ] Enlace de invitación firmado con token para que el cliente deje reseña
+- [ ] Schema.org `AggregateRating` en la carta pública para SEO
+
+**M6.3 — Dashboard: PublicarPage**
+- [ ] `src/pages/dashboard/PublicarPage.tsx`
+- [ ] Form: subir foto o video corto + título + descripción
+- [ ] Lista de posts publicados con opción de eliminar
+- [ ] Preview de cómo se verá en la carta pública
+
+**M6.4 — Dashboard: ReseñasPage**
+- [ ] `src/pages/dashboard/ReseñasPage.tsx`
+- [ ] Lista de reseñas recibidas con estrellas y comentario
+- [ ] Botón "Generar enlace de invitación" — copia URL al portapapeles
+- [ ] Puntuación media visible + distribución de estrellas
+- [ ] Respuesta del dueño a reseñas (visible en carta pública)
+
+**M6.5 — Carta pública: sección Timeline y Reseñas**
+- [ ] En la carta pública, debajo del menú: sección "Últimas novedades" (timeline)
+- [ ] Sección "Lo que dicen nuestros clientes" (reseñas + Schema.org)
+- [ ] Enlace "Deja tu reseña" → formulario público (no requiere cuenta)
+
+**Gate M6:** el dueño publica una foto desde el dashboard y aparece en la carta pública. Un cliente puede dejar una reseña con 5 estrellas desde la carta pública. La carta pública muestra `AggregateRating` en el HTML (verificable con Google Rich Results Test).
+
+---
+
+### Ola M7 — Legales automáticos e IA de carta (integración con lo existente)
+
+**Dificultad: baja-media.** Usa capacidades ya construidas (OpenClaude, PDFGEN). Solo hay que conectarlas al flujo de registro y al dashboard.
+
+**Objetivo:** al registrarse, el hostelero tiene sus legales listos. El copiloto IA funciona en el dashboard.
+
+**M7.1 — Generación automática de legales al registrar**
+- [ ] `register_local` (M3.3) dispara la generación de legales al finalizar
+- [ ] `CAPABILITIES/LEGAL/LegalGenerator.php` — toma nombre del local, email, slug, dirección → renderiza plantillas
+- [ ] Documentos generados: Política de Privacidad, Aviso Legal, Política de Cookies
+- [ ] Guardados en `STORAGE/<slug>/legal/` como archivos Markdown
+- [ ] Accesibles en la carta pública en `/legal/privacidad`, `/legal/aviso`, `/legal/cookies`
+- [ ] En los ajustes: página "Mis Legales" con botón de regenerar si cambian los datos
+
+**M7.2 — Copiloto IA en CartaPage**
+- [ ] Botón "Generar descripción" en el form de edición de plato
+- [ ] Llama a `CAPABILITIES/AI` (OpenClaude) con nombre + ingredientes → devuelve descripción en < 5s
+- [ ] Botón "Sugerir categorías" en el setup inicial → devuelve lista según tipo de negocio
+- [ ] Botón "Traducir carta" (deseable, no bloqueante para el gate)
+
+**Gate M7:** registrar un local nuevo crea automáticamente los 3 documentos legales. En la carta de un plato, el botón "Generar descripción" rellena el campo. Los legales son accesibles públicamente en las URLs correctas.
+
+---
+
+### Ola M8 — Suscripción con Revolut + Google Pay (billing)
+
+**Dificultad: media-alta.** Primera integración con Revolut Business API. Credenciales confirmadas de proyectos anteriores.
+
+**Objetivo:** el hostelero puede pagar su suscripción de forma autónoma con Revolut o Google Pay.
+
+**M8.1 — RevolutDriver para suscripciones**
+- [ ] `CAPABILITIES/PAYMENT/drivers/RevolutDriver.php`
+- [ ] Peticiones HTTP directas a Revolut Business API (sin SDK externo, `curl` nativo)
+- [ ] Acciones: `create_order` (genera checkout URL), `check_order_status`, `webhook_revolut`
+- [ ] Google Pay: se activa en el checkout de Revolut sin código adicional (Revolut lo gestiona)
+- [ ] Persistencia: `STORAGE/billing/<slug>/subscription.json`, `invoices/<id>.json`
+
+**M8.2 — Gestión de suscripciones**
+- [ ] `CAPABILITIES/BILLING/BillingManager.php`
+- [ ] Webhook de Revolut: en `ORDER_COMPLETED` → actualiza plan en AxiDB, extiende días, elimina límites Demo
+- [ ] En cancelación → downgrade a Demo con 0 días, activa bloqueo suave
+- [ ] Acción `get_subscription_status` → devuelve plan actual, fecha próximo cobro, facturas
+- [ ] Añadir acciones a `ALLOWED_ACTIONS`
+
+**M8.3 — FacturacionPage funcional**
 - [ ] `src/pages/dashboard/FacturacionPage.tsx`
-- [ ] Card "Tu plan": Demo (X días restantes) / Pro Mensual (27€/mes) / Pro Anual (260€/año)
-- [ ] Botón "Activar Pro" → llama a `create_checkout_session` → redirect a Stripe hosted checkout
-- [ ] Regreso desde Stripe → URL de éxito `/dashboard/facturacion?success=1`
-- [ ] Histórico de facturas: tabla con fecha, importe, botón descarga PDF
-- [ ] Comparativa Mensual vs Anual con ahorro calculado (20%)
+- [ ] Card "Tu plan": Demo (X días) / Pro Mensual (27€/mes) / Pro Anual (260€/año)
+- [ ] Botón "Activar Pro" → `create_order` → redirect a Revolut hosted checkout
+- [ ] Regreso desde Revolut → `/dashboard/facturacion?success=1` → feedback de éxito
+- [ ] Comparativa mensual vs anual: ahorro calculado en tiempo real (−20%)
+- [ ] Histórico de facturas: tabla con fecha, importe, descarga PDF
 
-**M4.3 — Plan Demo con límites**
-- [ ] Demo dura 14 días desde el registro
-- [ ] Demo permite: máximo 20 platos, 1 zona, 5 mesas
-- [ ] Dashboard muestra cuenta atrás y CTA de upgrade siempre visible en Demo
-- [ ] Límites verificados en backend: si está en Demo y supera el límite → error con `error: "PLAN_LIMIT"` + enlace a upgrade
+**M8.4 — Flujo de conversión Demo → Pro**
+- [ ] Día 7: informe automático "Así ha ido tu primera semana" (email transaccional o notificación interna)
+- [ ] Día 14: aviso "te quedan 7 días" con CTA de upgrade
+- [ ] Día 18: informe final "has recibido X visitas"
+- [ ] Día 21: bloqueo suave del panel — overlay con "Tu período de prueba ha terminado" + botón upgrade
 
-**Gate M4:** en sandbox de Stripe, el hostelero puede pagar 27€ con la tarjeta de test `4242 4242 4242 4242`, recibe confirmación, su plan pasa a Pro y los límites se eliminan.
+**Gate M8:** en sandbox de Revolut, el hostelero puede completar el pago de 27€, el webhook actualiza el plan a Pro, los límites de Demo desaparecen y aparece la factura en el histórico.
 
 ---
 
-### Ola M5 — Despliegue en producción
+### Ola M9 — SEO, rendimiento y calidad (transversal)
 
-**Objetivo:** el sistema funciona en `mylocal.es` con todos los subdominios operativos.
+**Dificultad: baja.** Todo técnico puro. Sin dependencias de negocio nuevas.
 
-**Estado:** Parcialmente documentado, pendiente ejecución
+**Objetivo:** el producto no solo funciona, convence y posiciona.
 
-**M5.1 — Cloudflare (una sola vez)**
+**M9.1 — SEO en la carta pública**
+- [ ] `<title>` dinámico: "Carta de [Nombre del Local] — MyLocal"
+- [ ] `<meta name="description">` con descripción del local
+- [ ] Schema.org `Restaurant` + `Menu` + `MenuItem` generados en el servidor PHP
+- [ ] Schema.org `AggregateRating` (desde M6)
+- [ ] Open Graph tags para compartir en redes (foto del local + nombre)
+- [ ] `robots.txt`: permite `/carta/*`, bloquea `/dashboard/*`, `/acide/*`
+
+**M9.2 — Rendimiento**
+- [ ] Carta pública carga en < 2s en 4G (Lighthouse Mobile ≥ 90)
+- [ ] Imágenes de platos en formato WebP o AVIF con lazy loading
+- [ ] Assets JS/CSS con hash (ya lo hace Vite) — cache 1 año
+
+**M9.3 — UX del dashboard**
+- [ ] Ningún botón dice "Submit", "OK" o "Guardar" genérico — verbo + objeto ("Guardar carta", "Publicar foto", "Descargar QR")
+- [ ] Errores en castellano humano: "No se pudo guardar el plato. Comprueba la conexión." — nunca "Error 500"
+- [ ] Skeleton screens en listas (no spinners genéricos)
+- [ ] Mensajes de éxito breves: "Plato añadido", "Foto publicada", "QR descargado"
+
+**M9.4 — Landing page textos reales**
+- [ ] H1: "Tu negocio en la nube en 10 minutos. Sin instalar nada."
+- [ ] Propuesta de valor completa vs NordQR y Bakarta (carta + presencia + reputación + IA)
+- [ ] CTA principal: "Empieza gratis — 21 días, sin tarjeta" → `/registro`
+- [ ] Precios reales en PricingSection: Demo (0€) / Pro mensual (27€+IVA) / Pro anual (260€+IVA)
+- [ ] Datos fiscales reales de MyLocal Technologies en el Footer
+
+**Gate M9:** Lighthouse Mobile ≥ 90 en la carta pública de un local de prueba. Ningún texto de placeholder visible. 3 personas no técnicas hacen el onboarding completo en < 10 minutos sin ayuda.
+
+---
+
+### Ola M10 — Despliegue: Cloudflare + Hostinger (último paso)
+
+**Dificultad: media (infraestructura, no código).** Se hace una sola vez. Solo se ejecuta cuando M1–M9 están verdes localmente.
+
+**Premisa absoluta:** si no funciona en local, no se despliega. El despliegue no es una forma de depurar.
+
+**M10.1 — Preparación previa (fuera del código)**
+- [ ] Cuenta Revolut Business activa y credenciales de producción disponibles
+- [ ] Datos fiscales reales de MyLocal Technologies reunidos
+- [ ] Fotografías reales del producto para la landing (no mockups)
+- [ ] Dominio `mylocal.es` en posesión
+
+**M10.2 — Cloudflare (una sola vez)**
 - [ ] Añadir `mylocal.es` a Cloudflare como sitio
 - [ ] Cambiar nameservers en el registrador a los de Cloudflare
 - [ ] Esperar propagación DNS (status "Active" en Cloudflare)
-- [ ] Registro `A @` → IP de Hostinger (proxied, naranja)
-- [ ] Registro `A *` → misma IP (proxied, naranja) — cubre todos los subdominios
+- [ ] Registro `A @` → IP de Hostinger (proxied)
+- [ ] Registro `A *` → misma IP (proxied) — cubre todos los subdominios
 - [ ] SSL/TLS → modo **Full (strict)**
-- [ ] Generar Origin Certificate desde Cloudflare → SSL/TLS → Origin Server → instalar en Hostinger
+- [ ] Generar Origin Certificate → instalar en Hostinger
 - [ ] Page Rule: `*.mylocal.es/MEDIA/*` → cache 1 mes
-- [ ] Page Rule: `*.mylocal.es/assets/*` → cache 1 año (assets versionados por hash)
-- [ ] Page Rule: `*.mylocal.es/acide/*` → bypass cache (API siempre al origen)
-- [ ] Page Rule: `*.mylocal.es/seed/*` → bypass cache (seed dinámico por subdominio)
+- [ ] Page Rule: `*.mylocal.es/assets/*` → cache 1 año
+- [ ] Page Rule: `*.mylocal.es/acide/*` → bypass cache
+- [ ] Page Rule: `*.mylocal.es/seed/*` → bypass cache
 
-**M5.2 — Hostinger (una sola vez)**
+**M10.3 — Hostinger (una sola vez)**
+- [ ] `.\build.ps1 -Template hosteleria` → genera `release/` completo
 - [ ] Subir `release/` a `public_html` (FTP o panel)
-- [ ] Instalar el Origin Certificate de Cloudflare en el panel de Hostinger
-- [ ] PHP ≥ 8.2 activo con extensiones: `openssl`, `curl`, `fileinfo`, `gd`, `mbstring`, `intl`
-- [ ] Verificar permisos: `STORAGE/` y `MEDIA/` con 755, propiedad del usuario PHP
+- [ ] Instalar Origin Certificate de Cloudflare en el panel
+- [ ] PHP ≥ 8.2 con extensiones: `openssl`, `curl`, `fileinfo`, `gd`, `mbstring`, `intl`
+- [ ] Permisos: `STORAGE/` y `MEDIA/` en 755
 - [ ] Cron a 1 minuto: `php /home/<user>/public_html/axidb/plugins/jobs/worker_run.php`
-- [ ] Health check: `curl https://mylocal.es/acide/index.php` → `{"success":true,"action":"health_check"}`
+- [ ] Webhook de Revolut: apuntar a `https://mylocal.es/acide/index.php` (acción `webhook_revolut`)
 
-**M5.3 — Build para producción**
-- [ ] `.\build.ps1 -Template hosteleria` genera release/ completo
-- [ ] Verificar que el `index.html` generado tiene base `/` (absoluta, no `./`)
-- [ ] Verificar que `.htaccess` tiene `RewriteRule ^ /index.html [L]` para SPA routing
-- [ ] El PHP backend usa `__DIR__` en todos los includes (no paths absolutos)
+**M10.4 — Verificación post-despliegue**
+- [ ] `https://mylocal.es` → carga landing sin errores de consola
+- [ ] `https://demo.mylocal.es/carta` → carga carta pública del local "demo"
+- [ ] `https://demo.mylocal.es/dashboard` → redirige a `/acceder`
+- [ ] Login → accede al dashboard
+- [ ] Registro de un local nuevo → onboarding → carta online en `<slug>.mylocal.es/carta`
+- [ ] QR generado → escanearlo con un móvil real → abre la carta
+- [ ] Pago de prueba en Revolut sandbox → plan activado
+- [ ] Favicon, fuentes, assets → todos en HTTP 200
+- [ ] Lighthouse Mobile ≥ 90
 
-**M5.4 — Verificación post-despliegue**
-- [ ] `https://mylocal.es` → carga la landing sin errores de consola
-- [ ] `https://demo.mylocal.es/carta` → carga la carta pública del local "demo"
-- [ ] `https://demo.mylocal.es/dashboard` → redirige a `/acceder` (no autenticado)
-- [ ] Login desde `https://demo.mylocal.es` con credenciales → accede al dashboard
-- [ ] Favicon, fuentes, assets → todos en 200
-- [ ] Lighthouse mobile ≥ 90
-
-**Gate M5:** sistema en producción, accesible desde cualquier red. Un hostelero puede registrarse, configurar su carta y tener su QR operativo desde su teléfono.
+**Gate M10 (= Gate MVP):** sistema en producción accesible desde cualquier red. Un hostelero puede registrarse, configurar su carta, publicar una foto, recibir una reseña y tener su QR operativo desde su teléfono. Todo de forma autónoma, sin intervención manual.
 
 ---
 
-### Ola M6 — Calidad y textos para vender
-
-**Objetivo:** el producto no solo funciona, sino que convence. Auditoría de UX y contenidos.
-
-**Estado:** Pendiente
-
-**M6.1 — Landing page pulida**
-La landing de `templates/hosteleria/` tiene el diseño de Google AI Studio. Necesita contenido real.
-
-- [ ] Textos reales en todas las secciones (no placeholder)
-- [ ] H1: "Tu Menú Digital en 2 Minutos — desde una Foto o PDF"
-- [ ] Propuesta de valor clara vs competidores (NordQR, Bakarta): precio, OCR, sin hardware
-- [ ] Precios reales en `PricingSection.tsx`: Demo (gratis 14 días) / Pro Mensual (27€) / Pro Anual (260€, −20%)
-- [ ] CTA principal: "Empieza gratis — sin tarjeta" → `/registro`
-- [ ] Screenshots o video demo del producto real (no mockups)
-- [ ] Footer: datos fiscales reales de MyLocal Technologies
-
-**M6.2 — UX del dashboard**
-- [ ] Auditoría pantalla por pantalla: comparar con Last.app, Qamarero, Honei
-- [ ] Ningún botón dice "Submit", "OK" o "Guardar" genérico — verbo + objeto
-- [ ] Errores en castellano humano (sin "Error 500")
-- [ ] Skeleton screens en listas (no spinners genéricos)
-- [ ] Optimistic updates en CRUD de carta (plato aparece antes de confirmar el server)
-- [ ] Mensajes de éxito: breves y celebrativos
-
-**M6.3 — Responsive**
-- [ ] Dashboard probado en 375px (iPhone SE), 768px (iPad), 1280px (laptop)
-- [ ] Sin scroll horizontal en ningún tamaño
-- [ ] Botones ≥ 44px en móvil
-- [ ] Sidebar como bottom-nav en móvil (o hamburguesa)
-- [ ] Carta pública testeada con 3-4 personas no técnicas escaneando QR real
-
-**M6.4 — SEO básico**
-- [ ] `<title>` dinámico por subdominio: "Carta de [Nombre Local] — MyLocal"
-- [ ] `<meta description>` con descripción del local
-- [ ] Schema.org `Restaurant` + `Menu` en la carta pública
-- [ ] `sitemap.xml` con todos los locales activos
-- [ ] `robots.txt` permite `/carta/*`, bloquea `/dashboard/*`, `/acide/*`
-
-**Gate M6:** 3 personas no técnicas hacen el onboarding completo en < 10 minutos sin ayuda. NPS ≥ 8/10.
-
----
-
-## 5. Orden de ejecución recomendado
+## 5. Orden de ejecución y tiempos estimados
 
 ```
-Semana 1: M1 (routing + dashboard layout) + M3 (subdominios backend)
-Semana 2: M2 (registro + onboarding)
-Semana 3: M5 (despliegue Hostinger + Cloudflare)
-Semana 4: M4 (Stripe sandbox) + M6.1 (textos landing)
-Semana 5: M6 completo (UX, responsive, SEO)
-→ MVP listo para primer cliente real
+Semana 1: M1 (routing) + M2 (dashboard layout)
+          → El esqueleto de la app funciona localmente. La landing sigue en /
+
+Semana 2: M3 (multi-tenancy backend + registro)
+          → El sistema sabe qué local sirve. Registro crea locales reales.
+
+Semana 3: M4 (RegisterPage + onboarding 10 pasos)
+          → El flujo de captación funciona de extremo a extremo en local.
+
+Semana 4: M5 (carta, QR, ajustes, carta pública)
+          → El producto core funciona. El hostelero puede configurar y publicar su carta.
+
+Semana 5: M6 (Timeline + Reseñas)
+          → El local tiene presencia viva. Diferenciación real frente a competidores.
+
+Semana 6: M7 (legales automáticos + IA de carta)
+          → El onboarding está completo y el copiloto IA funciona.
+
+Semana 7: M8 (Revolut + billing)
+          → El negocio puede cobrar. Plan Demo y Pro operativos.
+
+Semana 8: M9 (SEO, rendimiento, UX, textos landing)
+          → El producto convence y posiciona. Listo para mostrarlo.
+
+Semana 9: M10 (despliegue Cloudflare + Hostinger)
+          → Producción. Primer cliente real puede registrarse.
+
+→ MVP LISTO PARA PRIMER CLIENTE
 ```
 
 ---
 
-## 6. Lo que hereda el MVP del trabajo anterior
-
-Estos bloques existen y funcionan. El MVP los usa directamente:
+## 6. Lo que hereda el MVP del trabajo anterior (no reconstruir)
 
 ### Del dashboard legacy (`spa/src/`)
 - Gestión de carta: categorías, productos, precios, fotos, alérgenos
-- Importación OCR (flujo `ocr_import_carta`)
+- Importación OCR (`ocr_import_carta`)
 - Gestión de sala: zonas, mesas, QR tokens
 - Carta pública (BrowserRouter, rutas `/carta/:zona/:mesa`)
-- GeneradorQR y LocalQrPoster (client-side, sin tokens en red)
+- GeneradorQR y LocalQrPoster (client-side)
 
-Estrategia de migración: **copiar componente por componente** de `spa/src/` a `templates/hosteleria/src/pages/dashboard/`, reemplazando las llamadas legacy por `useSynaxisClient()` del SDK donde sea necesario.
+Estrategia: copiar componente por componente, reemplazar fetch legacy por `useSynaxisClient()`.
 
 ### De las CAPABILITIES PHP
-Todos los handlers existen. El MVP llama exactamente a las mismas acciones que ya están en `ALLOWED_ACTIONS`. No hay que tocar el backend PHP excepto para añadir `register_local`, `validate_slug` y el sistema de subdominios.
+Todos los handlers existen. El MVP llama exactamente a las mismas acciones. El backend no se toca excepto para añadir `register_local`, `validate_slug`, `SubdomainManager`, `TimelineModel`, `ReviewModel`, `LegalGenerator` y `RevolutDriver`.
 
 ### Del sistema de autenticación
-AUTH_LOCK está blindado. El login funciona. El MVP añade solo el registro de nuevos usuarios en `LoginRegister.php`, sin tocar los archivos de la capability existente.
+AUTH_LOCK blindado. El MVP añade solo el registro de nuevos usuarios (`LoginRegister.php`) sin tocar los archivos existentes de auth.
 
 ---
 
 ## 7. Lo que NO se hace en el MVP
 
-Para mantener el foco:
-
-- No se construye el agente IA para hosteleros (OpenClaude/OpenClaw) — existe pero no se activa por defecto
-- No se implementa TPV completo (pedidos en mesa, cobro en mesa) — la carta es solo de consulta
-- No se añaden traducciones automáticas
-- No se hace el blog de recetas en producción (existe pero es secundario)
-- No se implementa multi-local por usuario (un usuario = un local en MVP)
-- No se hace verificación de email en registro
-- No se conectan notificaciones push (WhatsApp, email transaccional) — pueden esperar
-- No se implementa el sistema de roles de equipo (editor, camarero, cocina)
+- **No se despliega para probar.** Si algo no funciona en local, se arregla en local.
+- **No se usa Stripe para suscripciones.** Stripe es para pagos de mesa (TPV). Las suscripciones van por Revolut.
+- **No se activa el agente IA de reservas** (OpenClaude/OpenClaw disponible pero no activo por defecto)
+- **No se implementa TPV completo** (pedidos en mesa, cobro en mesa) — la carta es de consulta en MVP
+- **No se implementa Verifactu / TicketBAI** — Fase 3
+- **No se hace multi-local por usuario** — Fase 4
+- **No se añaden traducciones automáticas completas** — deseable, no bloqueante
+- **No se construye el blog en producción** — existe pero es secundario al MVP
+- **No se implementan roles de equipo** (editor, camarero, cocina) — Fase 4
+- **No se hacen integraciones de delivery** (Glovo, Uber Eats) — Fase 6
+- **No se implementa verificación de email al registro** — Fase 2
 
 ---
 
-## 8. Dependencias externas que hay que tener antes del lanzamiento
+## 8. Dependencias externas (no de código)
 
 | Dependencia | Para qué | Estado |
 |------------|----------|--------|
-| Stripe account + API keys live | Cobros | ❌ Pendiente |
-| Dominio `mylocal.es` en Cloudflare | Subdominios | ❌ Pendiente |
-| Hosting Hostinger con PHP ≥ 8.2 | Despliegue | ❌ Pendiente |
-| API key Gemini | OCR avanzado | ❌ Pendiente (sin ella el OCR usa solo Tesseract/local) |
-| Servidor `ai.miaplic.com` activo | Gemma 4 vision | ❌ Pendiente (funciona con Gemini como fallback) |
-| Datos fiscales reales de MyLocal Technologies | Páginas legales | ❌ Pendiente |
-| Fotografías/capturas del producto real | Landing | ❌ Pendiente |
+| Cuenta Revolut Business + API keys | Suscripciones M8 | Confirmada de proyectos anteriores |
+| Google Pay | Via Revolut hosted checkout, sin código extra | Incluido con Revolut |
+| Dominio `mylocal.es` | M10 | Pendiente confirmar |
+| Hosting Hostinger con PHP ≥ 8.2 | M10 | Pendiente contratar |
+| Cloudflare | M10 subdominios + CDN | Pendiente configurar |
+| API key Gemini | OCR avanzado (deseable) | Sin ella usa Tesseract/local |
+| Servidor `ai.miaplic.com` | Gemma 4 vision (deseable) | Funciona con Gemini como fallback |
+| Datos fiscales reales de MyLocal Technologies | Legales + Footer | Pendiente reunir |
+| Fotografías reales del producto | Landing M9 | Pendiente |
 
 ---
 
-## 9. Historial de iteraciones (registro técnico)
+## 9. Checklist de cierre del MVP
+
+```
+[ ] M1  — BrowserRouter + Routes funcionando
+[ ] M1  — Guard RequireAuth redirige a /acceder sin sesión
+[ ] M2  — Dashboard layout con sidebar + topbar
+[ ] M2  — Todas las páginas stub sin errores
+[ ] M3  — SubdomainManager detecta slug por header y por dominio
+[ ] M3  — Seed dinámico devuelve local_id correcto
+[ ] M3  — validate_slug + register_local operativos
+[ ] M3  — Límites Demo en backend desde el primer registro
+[ ] M3  — test_multitenant.php: 15+ assertions PASS
+[ ] M4  — RegisterPage con validación de slug en vivo
+[ ] M4  — Onboarding 10 pasos completo en móvil y desktop
+[ ] M4  — OnboardingBanner con checklist en dashboard
+[ ] M5  — CartaPage: CRUD completo de categorías y platos
+[ ] M5  — QRPage: generación y descarga PNG + PDF
+[ ] M5  — AjustesPage: nombre, logo, tema funcionales
+[ ] M5  — CartaPublicaPage: datos reales del local
+[ ] M6  — TimelineModel + PublicarPage funcionales
+[ ] M6  — ReviewModel + ReseñasPage + formulario público
+[ ] M6  — Carta pública muestra timeline y reseñas
+[ ] M6  — Schema.org AggregateRating en HTML
+[ ] M7  — Legales generados automáticamente al registrar
+[ ] M7  — Botón "Generar descripción" IA en CartaPage
+[ ] M8  — RevolutDriver: checkout + webhook + status
+[ ] M8  — FacturacionPage: plan actual + botón upgrade + facturas
+[ ] M8  — Bloqueo suave al día 21 con CTA de upgrade
+[ ] M9  — Lighthouse Mobile ≥ 90 en carta pública
+[ ] M9  — Textos reales en landing: H1, precios, CTA, datos fiscales
+[ ] M9  — 3 personas no técnicas: onboarding < 10 min sin ayuda
+[ ] M10 — Cloudflare: wildcard DNS + SSL Full strict
+[ ] M10 — Hostinger: release/ subido, PHP ≥ 8.2, cron activo
+[ ] M10 — demo.mylocal.es/carta carga carta pública real
+[ ] M10 — Registro completo desde móvil en red 4G externa
+[ ] M10 — Primer pago Revolut recibido (sandbox o real)
+[ ] --- LANZAMIENTO MVP ---
+[ ] Primer cliente registrado de forma autónoma
+[ ] Primer pago real recibido
+[ ] WhatsApp de soporte operativo en horario comercial
+```
+
+---
+
+## 10. Historial de iteraciones
 
 ### Olas 0–L del framework (2026-01 a 2026-05)
+Framework completo. 208 tests PASS. Ver `claude/planes/estructura.md`.
 
-Framework completo. 208 tests PASS. Ver `claude/planes/estructura.md` para el detalle completo de cada ola.
-
-Acumulado de tests:
+Tests acumulados:
 - `test_login.php` 75/75
 - `test_citas.php` 9/9
 - `test_crm.php` 15/15
@@ -425,66 +654,22 @@ Acumulado de tests:
 - Framework SPA: 24/24
 - Bootstrap CLI: 19/19
 
-### Iteración 2026-05-04: auth bearer-only
-
+### 2026-05-04: auth bearer-only
 Bearer + sessionStorage. Sin cookies. Sin CSRF. Documentado en `claude/AUTH_LOCK.md`.
 
-### Iteración 2026-05-05: login CAPABILITIES/LOGIN + BrowserRouter
+### 2026-05-05: login CAPABILITIES/LOGIN + BrowserRouter
+LOGIN extraído a capability blindada (8 archivos PHP, 64 assertions). HashRouter → BrowserRouter. URLs limpias.
 
-LOGIN extraído a capability blindada (8 archivos PHP, 64 assertions). HashRouter → BrowserRouter. URLs limpias (`/dashboard`, `/carta/:zona/:mesa`).
+### 2026-05-06: OCR multi-engine
+Cascada `Tesseract → Gemma 4 (ai.miaplic.com) → Gemini cloud`. 9/9 platos extraídos en pruebas reales.
 
-### Iteración 2026-05-06: OCR multi-engine
+### 2026-05-15: integración template Google AI Studio
+Landing hostelería integrada en `templates/hosteleria/`. Documentado en `claude/docs/integracion_con_google_ai_studio.md`.
 
-Cascada `Tesseract → Gemma 4 vision (ai.miaplic.com) → Gemini cloud`. Acción unificada `ocr_import_carta`. 9/9 platos extraídos en pruebas reales.
-
-### Iteración 2026-05-07: UX review OCR
-
-Botones de acción en header del paso de revisión (siempre visibles sin scroll). "Importar carta" → "Guardar".
-
-### Iteración 2026-05-15: integración template Google AI Studio
-
-Template de hostelería traído de Google AI Studio integrado en `templates/hosteleria/` con el SDK. Errores y soluciones documentados en `claude/docs/integracion_con_google_ai_studio.md`. Skills creadas: `.claude/commands/integrar-template.md` + `claude/docs/gemini_skill_integracion_templates.md`.
-
-Lecciones clave:
-- `framer-motion` siempre como dependencia directa cuando se usa `motion/react`
-- `public/seed/bootstrap.json` con `{}` para evitar SyntaxError en SynaxisProvider
-- `.vscode/settings.json` → `typescript.tsdk` para que IDE y `tsc` usen el mismo TypeScript
-
----
-
-## 10. Checklist de cierre del MVP
-
-```
-[ ] M1 — Routing SPA completo (landing / dashboard / carta)
-[ ] M1 — Guard de autenticación funcional
-[ ] M1 — Dashboard layout con sidebar y navegación
-[ ] M1 — Carta page migrada del legacy
-[ ] M1 — Mesas page migrada del legacy
-[ ] M1 — Config page (logo, nombre, tema)
-[ ] M2 — Backend: validate_slug + register_local
-[ ] M2 — RegisterPage con validación de slug en vivo
-[ ] M2 — OnboardingBanner con checklist
-[ ] M3 — SubdomainManager en router.php y index.php
-[ ] M3 — Seed dinámico por subdominio
-[ ] M3 — Test de aislamiento multi-tenancy
-[ ] M4 — StripeAdapter (checkout, webhook, status)
-[ ] M4 — FacturacionPage con plan y facturas
-[ ] M4 — Límites del plan Demo (20 platos, 5 mesas)
-[ ] M5 — Cloudflare: wildcard DNS + SSL Full strict
-[ ] M5 — Hostinger: release/ subido, PHP ≥ 8.2, cron
-[ ] M5 — Health check verde en producción
-[ ] M6 — Textos reales en landing (precios, H1, CTA)
-[ ] M6 — Screenshots/video del producto en landing
-[ ] M6 — Dashboard UX auditado vs competidores
-[ ] M6 — Responsive: 375px, 768px, 1280px
-[ ] M6 — Carta pública testeada con QR real en móvil
-[ ] M6 — SEO básico: title, description, schema.org
-[ ] M7 — Ola Reputación y Micro-contenido (Nuevo)
-[ ] M7 — Backend: ReviewModel + TimelineModel (AxiDB)
-[ ] M7 — Dashboard: Sección "Publicar" (Foto + Título)
-[ ] M7 — Landing Pública: Feed de Timeline + Sección Reseñas
-[ ] M7 — Generación automática de Avisos Legales al registrarse
-[ ] --- LANZAMIENTO ---
-[ ] Datos fiscales reales en páginas legales
-[ ] Primer cliente registrado de forma autónoma
-[ ] Primer pago Stripe recibido
+### 2026-05-16: revisión y reescritura del plan MVP
+- Corrección de flujo de pagos: Revolut (suscripciones) vs Stripe (TPV de mesa)
+- Timeline y Reseñas promovidos a MVP (no post-lanzamiento)
+- Desarrollo 100% local hasta M10 (despliegue como último paso)
+- Olas reordenadas de menor a mayor dificultad técnica
+- SubdomainManager testeable en local vía header `X-Local-Id`
+- Límites del plan Demo movidos a M3 (registro), no a M8 (billing)

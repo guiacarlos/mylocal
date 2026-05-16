@@ -34,8 +34,8 @@ interface Props {
 
 export default function PricingSection({ onLoginClick }: Props) {
   return (
-    <section id="planes" className="h-screen pt-16 flex items-center bg-white overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-6 py-8">
+    <section id="planes" className="min-h-screen lg:h-screen pt-16 flex items-center bg-white overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 py-10 lg:py-8">
 
         {/* ── Header ─────────────────────────────────────────────────── */}
         <div className="text-center mb-8">
@@ -49,7 +49,7 @@ export default function PricingSection({ onLoginClick }: Props) {
         </div>
 
         {/* ── Cards ──────────────────────────────────────────────────── */}
-        <div className="grid md:grid-cols-3 gap-5 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
           {plans.map((plan, idx) => (
             <motion.div
               key={plan.name}

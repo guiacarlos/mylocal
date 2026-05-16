@@ -30,8 +30,8 @@ export default function QRSection() {
   };
 
   return (
-    <section id="qr" className="h-screen pt-16 flex items-center bg-white overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section id="qr" className="min-h-screen lg:h-screen pt-16 flex items-center bg-white overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-10 lg:py-0">
 
         {/* ── Left — QR visual ───────────────────────────────────────── */}
         <motion.div
@@ -46,7 +46,7 @@ export default function QRSection() {
               Generador de QR
             </p>
 
-            <div className="flex gap-6 items-start justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start justify-center">
               {/* QR estilo dinámico */}
               <div className="flex flex-col items-center gap-3 group">
                 <div className="p-4 bg-white rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-500">
@@ -117,22 +117,22 @@ export default function QRSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="order-1 lg:order-2"
+          className="order-1 lg:order-2 text-center lg:text-left"
         >
           <span className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.22em] mb-4 block">
             Automatización QR
           </span>
-          <h2 className="text-5xl lg:text-6xl xl:text-[4.5rem] font-display font-bold tracking-tighter leading-[0.9] mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-display font-bold tracking-tighter leading-[0.9] mb-4">
             Tu QR,<br />
             siempre<br />
             <span className="text-gray-400">a punto.</span>
           </h2>
-          <p className="text-[13px] text-gray-500 mb-6 max-w-sm leading-relaxed">
+          <p className="text-[13px] text-gray-500 mb-6 max-w-sm leading-relaxed mx-auto lg:mx-0">
             Genera, personaliza y gestiona todos tus códigos QR desde un solo lugar. Dinámicos, con tu logo y siempre actualizados.
           </p>
 
           <div>
-            <p className="text-[9px] font-mono text-gray-400 uppercase tracking-widest mb-3">
+            <p className="text-[9px] font-mono text-gray-400 uppercase tracking-widest mb-3 text-center lg:text-left">
               Códigos generados
             </p>
             <div className="space-y-2">

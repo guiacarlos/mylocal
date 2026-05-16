@@ -91,18 +91,18 @@ export default function PremiumView({ landscape }: { landscape: boolean }) {
                   <button
                     key={p.name}
                     onClick={() => setRecipe(p)}
-                    className="flex items-center gap-3 px-4 py-3 text-left hover:bg-stone-50 active:bg-stone-100 transition-colors w-full"
+                    className="flex items-center gap-2.5 px-4 py-2.5 text-left hover:bg-stone-50 active:bg-stone-100 transition-colors w-full"
                   >
                     <img src={p.image} alt={p.name}
-                      className="w-12 h-12 rounded-xl object-cover flex-shrink-0 brightness-95" />
+                      className="w-10 h-10 rounded-lg object-cover flex-shrink-0 brightness-95" />
                     <div className="flex-1 min-w-0">
-                      <p className="text-[11px] font-semibold text-stone-800 truncate">{p.name}</p>
+                      <p className="text-[9px] font-semibold text-stone-800 leading-tight">{p.name}</p>
                       {p.allergens.length > 0 && (
-                        <p className="text-[8px] text-stone-400 font-mono mt-0.5">{p.allergens.join(' · ')}</p>
+                        <p className="text-[7px] text-stone-400 font-mono mt-0.5">{p.allergens.join(' · ')}</p>
                       )}
                     </div>
                     <div className="flex items-center gap-1.5 flex-shrink-0">
-                      <span className="text-[11px] font-mono text-stone-500">{p.price}</span>
+                      <span className="text-[9px] font-mono text-stone-500">{p.price}</span>
                       <Plus className="w-3 h-3 text-stone-400" />
                     </div>
                   </button>
