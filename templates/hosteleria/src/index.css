@@ -1,82 +1,33 @@
-@import './styles/sp-styles.css';
-@import './styles/login-legal-wiki.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-@font-face {
-  font-family: 'Inter';
-  src: url('./assets/fonts/Inter-400.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('./assets/fonts/Inter-600.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Outfit';
-  src: url('./assets/fonts/Outfit-500.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-primary: #000000;
+  --color-brand-secondary: #ffffff;
 }
 
-/* 
-   Global legacy overrides (minimizing conflicts)
-*/
-.mt-header { margin-top: 88px; }
-@media (min-width: 768px) {
-  .mt-header { margin-top: 56px; }
-}
-.sc-private-header {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1100;
-}
-
-.sc-private-header__left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.sc-badge {
-  background: var(--accent);
-  color: #000;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.sc-user-name {
-  font-weight: 500;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.sc-private-content {
-  flex-grow: 1;
-  padding: 1.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .sc-private-header {
-    padding: 0 1rem;
+@layer base {
+  body {
+    @apply font-sans bg-[#F9F9F7] text-gray-900;
   }
-  .sc-user-name {
-    display: none; /* Ocultar nombre en móvil para ahorrar espacio */
-  }
+}
+
+.grid-bg {
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

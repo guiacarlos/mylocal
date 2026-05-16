@@ -17,7 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "@mylocal/sdk": ["../../sdk/index.ts"]
     }
   },

@@ -1,52 +1,64 @@
-import { Link } from 'react-router-dom';
+import { Instagram, Twitter, Facebook, ArrowUpRight } from 'lucide-react';
 
-export function Footer() {
-    return (
-        <footer className="sp-footer">
-            <div className="sp-container">
-                <div className="sp-footer__grid">
-                    <div className="sp-footer__brand">
-                        <div className="sp-footer__logo">MyLocal</div>
-                        <p className="sp-body" style={{color: 'var(--sp-text-inverse-soft)', marginBottom: '1.5rem'}}>
-                            Herramientas inteligentes para hostelería. 
-                            Vende más y sin comisiones.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 className="sp-label" style={{color: 'var(--sp-text-inverse)', marginBottom: '1rem'}}>Producto</h4>
-                        <ul className="sp-footer__links">
-                            <li><Link to="/carta">Carta Digital</Link></li>
-                            <li><Link to="/login">Escritorio</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="sp-label" style={{color: 'var(--sp-text-inverse)', marginBottom: '1rem'}}>Soporte</h4>
-                        <ul className="sp-footer__links">
-                            <li><Link to="/wiki">WIKI / Ayuda</Link></li>
-                            <li><Link to="/wiki/contacto">Contacto Técnico</Link></li>
-                            <li><Link to="/wiki/faq">Preguntas Frecuentes</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="sp-label" style={{color: 'var(--sp-text-inverse)', marginBottom: '1rem'}}>Políticas</h4>
-                        <ul className="sp-footer__links">
-                            <li><Link to="/legal">Aviso Legal</Link></li>
-                            <li><Link to="/legal/privacidad">Privacidad</Link></li>
-                            <li><Link to="/legal/cookies">Cookies</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="sp-label" style={{color: 'var(--sp-text-inverse)', marginBottom: '1rem'}}>Contacto</h4>
-                        <p className="sp-body" style={{fontSize: '13px'}}>info@mylocal.es</p>
-                    </div>
-                </div>
-                <div style={{marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', fontSize: '12px'}}>
-                    <p>&copy; {new Date().getFullYear()} MyLocal. 0% Comisiones. Sin Nubes.</p>
-                    <p style={{opacity: 0.6}}>
-                        Hecho por <a href="https://gestasai.com" target="_blank" rel="noopener noreferrer" style={{color: 'var(--sp-accent-alt)', textDecoration: 'none'}}>Gestas AI</a> - Desarrollo de soluciones con Inteligencia Artificial
-                    </p>
-                </div>
-            </div>
-        </footer>
-    );
+export default function Footer() {
+  return (
+    <footer className="py-20 px-6 bg-white border-t border-gray-100">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-[1fr,2fr] gap-20 mb-20">
+           <div>
+              <div className="flex items-center gap-2 mb-8">
+                 <span className="text-2xl font-display font-bold tracking-tighter">My Local</span>
+              </div>
+              <p className="text-sm text-gray-500 mb-8 max-w-xs">
+                 Simplificando la transformación digital de la hostelería con elegancia y eficiencia.
+              </p>
+              <div className="flex gap-4">
+                 <a href="#" className="p-3 bg-gray-50 rounded-full hover:bg-black hover:text-white transition-all"><Instagram className="w-5 h-5" /></a>
+                 <a href="#" className="p-3 bg-gray-50 rounded-full hover:bg-black hover:text-white transition-all"><Twitter className="w-5 h-5" /></a>
+                 <a href="#" className="p-3 bg-gray-50 rounded-full hover:bg-black hover:text-white transition-all"><Facebook className="w-5 h-5" /></a>
+              </div>
+           </div>
+
+           <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+              <div className="space-y-6">
+                 <h4 className="text-xs font-mono text-gray-400 uppercase tracking-widest">PRODUCTO</h4>
+                 <ul className="space-y-4 text-sm font-medium">
+                    <li><a href="#hero" className="hover:text-gray-400 transition-colors">Ver mi carta</a></li>
+                    <li><a href="#qr" className="hover:text-gray-400 transition-colors">Generador QR</a></li>
+                    <li><a href="#web" className="hover:text-gray-400 transition-colors">Web Preview</a></li>
+                    <li><a href="#planes" className="hover:text-gray-400 transition-colors">Precios</a></li>
+                 </ul>
+              </div>
+              <div className="space-y-6">
+                 <h4 className="text-xs font-mono text-gray-400 uppercase tracking-widest">COMPAÑÍA</h4>
+                 <ul className="space-y-4 text-sm font-medium">
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Sobre nosotros</a></li>
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Blog</a></li>
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Contacto</a></li>
+                    <li><a href="#" className="flex items-center gap-1 hover:text-gray-400 transition-colors">Prensa <ArrowUpRight className="w-3 h-3" /></a></li>
+                 </ul>
+              </div>
+              <div className="space-y-6">
+                 <h4 className="text-xs font-mono text-gray-400 uppercase tracking-widest">LEGAL</h4>
+                 <ul className="space-y-4 text-sm font-medium">
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Privacidad</a></li>
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Términos</a></li>
+                    <li><a href="#" className="hover:text-gray-400 transition-colors">Cookies</a></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+
+        <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
+           <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">
+             © 2024 MY LOCAL TECHNOLOGIES. ALL RIGHTS RESERVED.
+           </p>
+           <div className="flex gap-6 text-[10px] font-mono text-gray-400 uppercase tracking-wider">
+              <span>HECHO EN ESPAÑA</span>
+              <span>SOPORTE@MILOCAL.COM</span>
+           </div>
+        </div>
+      </div>
+    </footer>
+  );
 }

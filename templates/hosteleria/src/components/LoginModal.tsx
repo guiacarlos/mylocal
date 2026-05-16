@@ -1,88 +1,106 @@
-import { useEffect, useState, type FormEvent } from 'react';
-import { FiX } from 'react-icons/fi';
-import { useSynaxisClient } from '../hooks/useSynaxis';
-import { login } from '../services/auth.service';
+import { useState } from 'react';
+import { X, Loader2 } from 'lucide-react';
+import { useSynaxisClient, login } from '@mylocal/sdk';
 
 interface Props {
-    open: boolean;
-    onClose: () => void;
+  open: boolean;
+  onClose: () => void;
 }
 
-export function LoginModal({ open, onClose }: Props) {
-    const client = useSynaxisClient();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [busy, setBusy] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+export default function LoginModal({ open, onClose }: Props) {
+  const client = useSynaxisClient();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        if (!open) return;
-        const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-        document.addEventListener('keydown', onKey);
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.removeEventListener('keydown', onKey);
-            document.body.style.overflow = '';
-        };
-    }, [open, onClose]);
+  if (!open) return null;
 
-    if (!open) return null;
-
-    async function onSubmit(e: FormEvent) {
-        e.preventDefault();
-        setBusy(true); setError(null);
-        console.log('[LoginModal] Intentando login...', email);
-        const res = await login(client, email, password);
-        setBusy(false);
-        if (!res.success) {
-            console.error('[LoginModal] Login fallido:', res.error);
-            setError(res.error ?? 'No se pudo iniciar sesion');
-            return;
-        }
-        console.log('[LoginModal] Login exitoso para:', res.user?.email, 'Rol:', res.user?.role);
-        const role = (res.user?.role ?? '').toLowerCase();
-        const target = ['sala', 'cocina', 'camarero'].includes(role) ? '/sistema/tpv' : '/dashboard';
-        console.log('[LoginModal] Redirigiendo a', target);
-        onClose();
-        window.location.assign(target);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+    try {
+      const res = await login(client, email, password);
+      if (res.success) {
+        window.location.href = '/dashboard';
+      } else {
+        setError(res.error ?? 'Credenciales incorrectas');
+      }
+    } catch {
+      setError('Error de conexión. Inténtalo de nuevo.');
+    } finally {
+      setLoading(false);
     }
+  }
 
-    return (
-        <div className="login-modal__overlay" onClick={onClose} role="dialog" aria-modal="true">
-            <div className="login-modal" onClick={(e) => e.stopPropagation()}>
-                <button className="login-modal__close" onClick={onClose} aria-label="Cerrar">
-                    <FiX />
-                </button>
-                <h2 className="login-modal__title">Area cliente</h2>
-                <p className="login-modal__sub">Accede para gestionar tu carta, tu TPV y tus pedidos.</p>
-                <form onSubmit={onSubmit} className="login-modal__form">
-                    <label>
-                        <span>Email</span>
-                        <input
-                            type="email" name="email" value={email} required autoFocus
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="tucorreo@local.es"
-                            autoComplete="username"
-                        />
-                    </label>
-                    <label>
-                        <span>Contrasena</span>
-                        <input
-                            type="password" name="password" value={password} required
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="********"
-                            autoComplete="current-password"
-                        />
-                    </label>
-                    {error && <p className="login-modal__err">{error}</p>}
-                    <button type="submit" className="btn btn-primary" disabled={busy}>
-                        {busy ? 'Entrando...' : 'Entrar'}
-                    </button>
-                </form>
-                <p className="login-modal__foot">
-                    No tienes cuenta? <a href="https://mylocal.es/registro" target="_blank" rel="noopener noreferrer">Empieza tu prueba de 21 dias</a>
-                </p>
-            </div>
-        </div>
-    );
+  return (
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+      <div
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      <div className="relative bg-white rounded-[2rem] p-8 w-full max-w-md shadow-2xl">
+        <button
+          onClick={onClose}
+          className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        <h2 className="text-3xl font-display font-medium tracking-tighter mb-2">
+          Acceder
+        </h2>
+        <p className="text-sm text-gray-500 mb-8">
+          Entra en tu panel de MyLocal
+        </p>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+              autoFocus
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black transition-all text-sm"
+              placeholder="tu@negocio.es"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Contraseña
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black transition-all text-sm"
+              placeholder="••••••••"
+            />
+          </div>
+
+          {error && (
+            <p className="text-sm text-red-600 bg-red-50 px-4 py-2 rounded-xl">
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="mt-2 w-full py-3 bg-black text-white rounded-xl font-medium text-sm hover:bg-gray-800 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          >
+            {loading && <Loader2 className="w-4 h-4 animate-spin" />}
+            {loading ? 'Accediendo...' : 'Entrar'}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }

@@ -14,12 +14,14 @@ MyLocal se convierte en un **framework para agencias**: el backend PHP y el moto
 **El problema que resuelve:**
 
 Sin este framework, montar un proyecto para una clínica supone:
+
 - Copiar el proyecto de hostelería
 - Eliminar todo lo que no aplica
 - Crear lo nuevo desde cero
 - Mantener dos codebases desconectadas
 
 Con el framework:
+
 - El backend (CAPABILITIES) ya existe y funciona
 - El template define el diseño y las páginas
 - `build.ps1 --template=clinica` genera el release listo para subir
@@ -116,27 +118,28 @@ build.ps1 --template=clinica
 
 ## 3. Mapa de olas
 
-| Ola | Nombre | Estado |
-|----:|--------|--------|
-| 0   | Preflight | ✅ Completa |
-| A   | Refactor frontend → `modules/hosteleria` | ✅ Completa |
-| B   | Manifest dinámico (sidebar + rutas) | ✅ Completa |
-| C   | Runtime `app/` + `_shared/` | ✅ Completa |
-| D   | AppBootstrap CLI | ✅ Completa |
-| E   | CAPABILITIES: CITAS + CRM + NOTIFICACIONES | ✅ Completa |
-| F   | Template `clinica/` (dentro de la SPA monolítica) | ✅ Completa (pendiente migrar en G) |
-| **G** | **Migración a arquitectura de templates independientes** | ✅ Completa |
-| H   | Template `logistica/` (primer template drop-in real) | ✅ Completa |
-| **I** | **Template `asesoria/`** | ✅ Completa |
-| **J** | **Integración OpenClaude** | ✅ Completa |
-| K   | Documentación + handover | ✅ Completa |
-| **L** | **Cierre técnico: tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore** | ✅ Completa |
+|         Ola | Nombre                                                                                                        | Estado                              |
+| ----------: | ------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+|           0 | Preflight                                                                                                     | ✅ Completa                         |
+|           A | Refactor frontend →`modules/hosteleria`                                                                    | ✅ Completa                         |
+|           B | Manifest dinámico (sidebar + rutas)                                                                          | ✅ Completa                         |
+|           C | Runtime `app/` + `_shared/`                                                                               | ✅ Completa                         |
+|           D | AppBootstrap CLI                                                                                              | ✅ Completa                         |
+|           E | CAPABILITIES: CITAS + CRM + NOTIFICACIONES                                                                    | ✅ Completa                         |
+|           F | Template `clinica/` (dentro de la SPA monolítica)                                                          | ✅ Completa (pendiente migrar en G) |
+| **G** | **Migración a arquitectura de templates independientes**                                               | ✅ Completa                         |
+|           H | Template `logistica/` (primer template drop-in real)                                                        | ✅ Completa                         |
+| **I** | **Template `asesoria/`**                                                                              | ✅ Completa                         |
+| **J** | **Integración OpenClaude**                                                                             | ✅ Completa                         |
+|           K | Documentación + handover                                                                                     | ✅ Completa                         |
+| **L** | **Cierre técnico: tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore** | ✅ Completa                         |
 
 ---
 
 ## 4–6. Olas 0–C (completas, documentadas por referencia)
 
 Las olas 0–C completaron el refactor del frontend de hostelería:
+
 - `CAPABILITIES/` modular con `capability.json` por módulo
 - `spa/src/modules/hosteleria/` con manifest dinámico
 - Sistema de rutas y sidebar generado desde `manifest.json`
@@ -161,10 +164,10 @@ Uso: `node tools/bootstrap/bootstrap.mjs --preset=hosteleria --slug=demo --nombr
 
 Tres capabilities transversales completas. No se reabren.
 
-| Capability | Archivos | Tests |
-|-----------|---------|-------|
-| CITAS | CitasModel, RecursosModel, CitasEngine, CitasAdminApi, CitasPublicApi | 9/9 ✅ |
-| CRM | ContactoModel, InteraccionModel, SegmentoEngine, CrmAdminApi | 15/15 ✅ |
+| Capability     | Archivos                                                                         | Tests    |
+| -------------- | -------------------------------------------------------------------------------- | -------- |
+| CITAS          | CitasModel, RecursosModel, CitasEngine, CitasAdminApi, CitasPublicApi            | 9/9 ✅   |
+| CRM            | ContactoModel, InteraccionModel, SegmentoEngine, CrmAdminApi                     | 15/15 ✅ |
 | NOTIFICACIONES | drivers/ (Noop, Email, WhatsApp), Template, NotificationEngine, NotificationsApi | 14/14 ✅ |
 
 ---
@@ -183,67 +186,67 @@ Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, Historia
 
 ### G.1 Crear `sdk/` — paquete compartido
 
-- [x] `sdk/package.json` con `"name": "@mylocal/sdk"`, `"version": "1.0.0"`
-- [x] `sdk/src/client.ts` — SynaxisClient extraído de `spa/src/synaxis/`
-- [x] `sdk/src/auth.ts` — login / logout / session extraído de `spa/src/services/auth.service.ts`
-- [x] `sdk/src/hooks.ts` — `useSynaxisClient` y demás hooks de `spa/src/hooks/`
-- [x] `sdk/src/types.ts` — tipos comunes: `LocalInfo`, `UserInfo`, `AppUser`
-- [x] `sdk/index.ts` — re-exporta todo
-- [x] `sdk/tsconfig.json` — configuración de compilación del paquete
+- [X] `sdk/package.json` con `"name": "@mylocal/sdk"`, `"version": "1.0.0"`
+- [X] `sdk/src/client.ts` — SynaxisClient extraído de `spa/src/synaxis/`
+- [X] `sdk/src/auth.ts` — login / logout / session extraído de `spa/src/services/auth.service.ts`
+- [X] `sdk/src/hooks.ts` — `useSynaxisClient` y demás hooks de `spa/src/hooks/`
+- [X] `sdk/src/types.ts` — tipos comunes: `LocalInfo`, `UserInfo`, `AppUser`
+- [X] `sdk/index.ts` — re-exporta todo
+- [X] `sdk/tsconfig.json` — configuración de compilación del paquete
 
 ### G.2 Configurar pnpm workspaces
 
-- [x] `pnpm-workspace.yaml` en la raíz con `packages: ['sdk', 'templates/*']`
-- [x] `package.json` raíz con scripts: `"build:hosteleria"`, `"build:clinica"`, `"dev:hosteleria"`
-- [x] `pnpm install` desde la raíz instala sdk + todos los templates
-- [x] `import { useSynaxisClient } from '@mylocal/sdk'` resuelve correctamente
+- [X] `pnpm-workspace.yaml` en la raíz con `packages: ['sdk', 'templates/*']`
+- [X] `package.json` raíz con scripts: `"build:hosteleria"`, `"build:clinica"`, `"dev:hosteleria"`
+- [X] `pnpm install` desde la raíz instala sdk + todos los templates
+- [X] `import { useSynaxisClient } from '@mylocal/sdk'` resuelve correctamente
 
 ### G.3 Migrar `spa/` → `templates/hosteleria/`
 
-- [x] `templates/hosteleria/` como proyecto Vite completo
-- [x] `spa/src/` → `templates/hosteleria/src/` (excluido `modules/clinica/`, `app/modules-registry.ts`)
-- [x] Stubs de re-exportación en `src/synaxis/`, `src/hooks/useSynaxis.ts`, `src/services/auth.service.ts`
-- [x] `main.tsx` simplificado: imports directos, sin modules-registry
-- [x] `vite.config.ts` ajustado con paths relativos correctos y alias `@mylocal/sdk`
-- [x] `templates/hosteleria/package.json` con `"@mylocal/sdk": "workspace:*"`
-- [x] `templates/hosteleria/manifest.json` — solo capabilities
-- [x] Build verde: `pnpm -F hosteleria build` ✅ (324 kB JS)
+- [X] `templates/hosteleria/` como proyecto Vite completo
+- [X] `spa/src/` → `templates/hosteleria/src/` (excluido `modules/clinica/`, `app/modules-registry.ts`)
+- [X] Stubs de re-exportación en `src/synaxis/`, `src/hooks/useSynaxis.ts`, `src/services/auth.service.ts`
+- [X] `main.tsx` simplificado: imports directos, sin modules-registry
+- [X] `vite.config.ts` ajustado con paths relativos correctos y alias `@mylocal/sdk`
+- [X] `templates/hosteleria/package.json` con `"@mylocal/sdk": "workspace:*"`
+- [X] `templates/hosteleria/manifest.json` — solo capabilities
+- [X] Build verde: `pnpm -F hosteleria build` ✅ (324 kB JS)
 
 ### G.4 Migrar `spa/src/modules/clinica/` → `templates/clinica/`
 
-- [x] `templates/clinica/` — proyecto Vite nuevo (package.json, vite.config.ts, index.html)
-- [x] Páginas: AgendaPage, PacientesPage, HistorialPage, StockPage, RecordatoriosPage
-- [x] `ClinicaContext` — context propio (client + localId)
-- [x] `clinica.service.ts` — imports directos desde `@mylocal/sdk`
-- [x] `App.tsx` — BrowserRouter + sidebar con `cl-*` CSS classes
-- [x] `main.tsx` — SynaxisProvider desde `@mylocal/sdk`
-- [x] `templates/clinica/manifest.json` — `["CITAS","CRM","NOTIFICACIONES"]`
-- [x] Build verde: `pnpm -F clinica build` ✅ (212 kB JS)
+- [X] `templates/clinica/` — proyecto Vite nuevo (package.json, vite.config.ts, index.html)
+- [X] Páginas: AgendaPage, PacientesPage, HistorialPage, StockPage, RecordatoriosPage
+- [X] `ClinicaContext` — context propio (client + localId)
+- [X] `clinica.service.ts` — imports directos desde `@mylocal/sdk`
+- [X] `App.tsx` — BrowserRouter + sidebar con `cl-*` CSS classes
+- [X] `main.tsx` — SynaxisProvider desde `@mylocal/sdk`
+- [X] `templates/clinica/manifest.json` — `["CITAS","CRM","NOTIFICACIONES"]`
+- [X] Build verde: `pnpm -F clinica build` ✅ (212 kB JS)
 
 ### G.5 Actualizar `build.ps1`
 
-- [x] Parámetro `$Template` (default: `"hosteleria"`)
-- [x] `pnpm -F $Template build` cuando existe `templates/$Template/`
-- [x] Fallback legacy: `cd spa && npm run build` si no existe el template
-- [x] Retrocompatibilidad: `build.ps1` sin parámetros = hosteleria
+- [X] Parámetro `$Template` (default: `"hosteleria"`)
+- [X] `pnpm -F $Template build` cuando existe `templates/$Template/`
+- [X] Fallback legacy: `cd spa && npm run build` si no existe el template
+- [X] Retrocompatibilidad: `build.ps1` sin parámetros = hosteleria
 
 ### G.6 Actualizar scripts de desarrollo
 
-- [x] `run.bat [clinica|hosteleria]` arranca el template correspondiente
-- [x] Puerto 5173 para hosteleria, 5174 para clinica
-- [x] `run.bat` sin parámetro = hosteleria (retrocompatible)
+- [X] `run.bat [clinica|hosteleria]` arranca el template correspondiente
+- [X] Puerto 5173 para hosteleria, 5174 para clinica
+- [X] `run.bat` sin parámetro = hosteleria (retrocompatible)
 
 ### G.7 Limpiar código obsoleto
 
-- [x] `modules-registry.ts` eliminado de `templates/hosteleria/` (no existe en el nuevo template)
-- [x] `spa/` conservada: contiene `spa/server/` (backend PHP, necesario para build.ps1)
-- [x] Nota: `spa/src/` es legacy — se puede eliminar en Ola K durante el handover
+- [X] `modules-registry.ts` eliminado de `templates/hosteleria/` (no existe en el nuevo template)
+- [X] `spa/` conservada: contiene `spa/server/` (backend PHP, necesario para build.ps1)
+- [X] Nota: `spa/src/` es legacy — se puede eliminar en Ola K durante el handover
 
 ### G.8 Builds verificados
 
-- [x] `pnpm -F hosteleria build` verde ✅
-- [x] `pnpm -F clinica build` verde ✅
-- [x] `pnpm install` desde la raíz instala todo en un solo comando ✅
+- [X] `pnpm -F hosteleria build` verde ✅
+- [X] `pnpm -F clinica build` verde ✅
+- [X] `pnpm install` desde la raíz instala todo en un solo comando ✅
 
 ---
 
@@ -255,34 +258,34 @@ Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, Historia
 
 ### H.1 Diseño base
 
-- [x] Template creado desde cero con diseño propio (`lg-*` CSS, paleta indigo #6366f1, sidebar oscura #1e1b4b)
-- [x] `templates/logistica/` como proyecto Vite independiente (puerto 5175)
-- [x] `@mylocal/sdk` como única dependencia de datos
+- [X] Template creado desde cero con diseño propio (`lg-*` CSS, paleta indigo #6366f1, sidebar oscura #1e1b4b)
+- [X] `templates/logistica/` como proyecto Vite independiente (puerto 5175)
+- [X] `@mylocal/sdk` como única dependencia de datos
 
 ### H.2 Páginas
 
-- [x] `PedidosPage` — listado con filtro por estado + formulario nuevo pedido
-- [x] `FlotaPage` — vehículos y conductores con toggle activo/inactivo
-- [x] `EntregasPage` — vista del día con nav por fecha + asignación pedido→vehículo
-- [x] `SeguimientoPublicoPage` — ruta pública `/seguimiento/:codigo`, sin login
-- [x] `IncidenciasPage` — registro por tipo con descripción
+- [X] `PedidosPage` — listado con filtro por estado + formulario nuevo pedido
+- [X] `FlotaPage` — vehículos y conductores con toggle activo/inactivo
+- [X] `EntregasPage` — vista del día con nav por fecha + asignación pedido→vehículo
+- [X] `SeguimientoPublicoPage` — ruta pública `/seguimiento/:codigo`, sin login
+- [X] `IncidenciasPage` — registro por tipo con descripción
 
 ### H.3 Backend
 
-- [x] `CAPABILITIES/DELIVERY/` — PedidoModel, VehiculoModel, EntregaModel, IncidenciaModel
-- [x] `DeliveryAdminApi.php` — 10 acciones admin
-- [x] `DeliveryPublicApi.php` — `pedido_seguimiento` sin auth (respuesta reducida, sin datos internos)
-- [x] `spa/server/handlers/delivery.php` + 11 acciones en `ALLOWED_ACTIONS`
-- [x] 11 acciones DELIVERY añadidas al SDK `actions.ts` (scope: server, domain: delivery)
+- [X] `CAPABILITIES/DELIVERY/` — PedidoModel, VehiculoModel, EntregaModel, IncidenciaModel
+- [X] `DeliveryAdminApi.php` — 10 acciones admin
+- [X] `DeliveryPublicApi.php` — `pedido_seguimiento` sin auth (respuesta reducida, sin datos internos)
+- [X] `spa/server/handlers/delivery.php` + 11 acciones en `ALLOWED_ACTIONS`
+- [X] 11 acciones DELIVERY añadidas al SDK `actions.ts` (scope: server, domain: delivery)
 
 ### H.4 Manifest
 
-- [x] `templates/logistica/manifest.json` — `["LOGIN","OPTIONS","CRM","NOTIFICACIONES","DELIVERY"]`
-- [x] `public_routes: ["/seguimiento/:codigo"]` declarado
+- [X] `templates/logistica/manifest.json` — `["LOGIN","OPTIONS","CRM","NOTIFICACIONES","DELIVERY"]`
+- [X] `public_routes: ["/seguimiento/:codigo"]` declarado
 
 ### H.5 Build
 
-- [x] `pnpm -F logistica build` verde ✅ (212 kB JS)
+- [X] `pnpm -F logistica build` verde ✅ (212 kB JS)
 
 ---
 
@@ -294,28 +297,28 @@ Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, Historia
 
 ### I.1 Páginas
 
-- [x] `ClientesPage` — CRM con datos fiscales (NIF, régimen, próximas obligaciones)
-- [x] `DocumentosPage` — subida + OCR + clasificación asistida por IA con fallback gracioso
-- [x] `CalendarioFiscalPage` — vencimientos por cliente (usa CITAS con recurso `r_fiscal`)
-- [x] `TareasPage` — kanban 3 columnas: pendiente / en_curso / hecho con ChevronLeft/Right + Trash2
-- [x] `FacturasPage` — placeholder apuntando a capability FISCAL (Verifactu/TicketBAI)
+- [X] `ClientesPage` — CRM con datos fiscales (NIF, régimen, próximas obligaciones)
+- [X] `DocumentosPage` — subida + OCR + clasificación asistida por IA con fallback gracioso
+- [X] `CalendarioFiscalPage` — vencimientos por cliente (usa CITAS con recurso `r_fiscal`)
+- [X] `TareasPage` — kanban 3 columnas: pendiente / en_curso / hecho con ChevronLeft/Right + Trash2
+- [X] `FacturasPage` — placeholder apuntando a capability FISCAL (Verifactu/TicketBAI)
 
 ### I.2 Backend
 
-- [x] `CAPABILITIES/TAREAS/` — TareaModel.php, TareasApi.php, capability.json (nuevo, transversal)
-- [x] `spa/server/handlers/tareas.php` + 4 acciones en ALLOWED_ACTIONS
-- [x] 4 acciones TAREAS añadidas al SDK `actions.ts` (scope: server, domain: tareas)
-- [x] FISCAL y OCR ya existían — no se duplicaron
+- [X] `CAPABILITIES/TAREAS/` — TareaModel.php, TareasApi.php, capability.json (nuevo, transversal)
+- [X] `spa/server/handlers/tareas.php` + 4 acciones en ALLOWED_ACTIONS
+- [X] 4 acciones TAREAS añadidas al SDK `actions.ts` (scope: server, domain: tareas)
+- [X] FISCAL y OCR ya existían — no se duplicaron
 
 ### I.3 Manifest + CSS
 
-- [x] `templates/asesoria/manifest.json` — `["LOGIN","OPTIONS","CRM","CITAS","NOTIFICACIONES","OCR","FISCAL","TAREAS","AI"]`
-- [x] `src/asesoria.css` — prefijo `as-*`, acento teal #0d9488, sidebar #0f2937
-- [x] `src/services/asesoria.service.ts` con tipos y wrappers tipados
+- [X] `templates/asesoria/manifest.json` — `["LOGIN","OPTIONS","CRM","CITAS","NOTIFICACIONES","OCR","FISCAL","TAREAS","AI"]`
+- [X] `src/asesoria.css` — prefijo `as-*`, acento teal #0d9488, sidebar #0f2937
+- [X] `src/services/asesoria.service.ts` con tipos y wrappers tipados
 
 ### I.4 Build
 
-- [x] `pnpm -F asesoria build` verde ✅ (212 kB JS)
+- [X] `pnpm -F asesoria build` verde ✅ (212 kB JS)
 
 ---
 
@@ -327,42 +330,43 @@ Se construyó `spa/src/modules/clinica/` con AgendaPage, PacientesPage, Historia
 
 ### J.1 Conector PHP
 
-- [x] `CAPABILITIES/AI/OpenClaudeClient.php` — cliente HTTP Anthropic Messages API sin SDK externo
-- [x] Auth por bearer en namespace `openclaude` de OPTIONS (cero hardcoding)
-- [x] Si no configurado → `isEnabled() = false`, handlers responden `enabled: false`
-- [x] `CORE/EventBus.php` ≤ 80 LOC — bus interno de eventos con catch de excepciones
-- [x] Eventos iniciales: `pedido.creado`, `cita.cancelada`, `stock.bajo`
-- [x] `CAPABILITIES/AI/OpenClaudeListeners.php` — listeners por defecto (stock.bajo → notif + AI summary)
-- [x] `CAPABILITIES/AI/OpenClaudeApi.php` — acciones `openclaude_status` y `openclaude_complete`
-- [x] `spa/server/handlers/openclaude.php` — handler que carga todo y registra listeners
-- [x] `spa/server/index.php` — 2 acciones nuevas en ALLOWED_ACTIONS + dispatch cases
-- [x] SDK `actions.ts` — `openclaude_status` y `openclaude_complete` (scope: server, domain: ai)
+- [X] `CAPABILITIES/AI/OpenClaudeClient.php` — cliente HTTP Anthropic Messages API sin SDK externo
+- [X] Auth por bearer en namespace `openclaude` de OPTIONS (cero hardcoding)
+- [X] Si no configurado → `isEnabled() = false`, handlers responden `enabled: false`
+- [X] `CORE/EventBus.php` ≤ 80 LOC — bus interno de eventos con catch de excepciones
+- [X] Eventos iniciales: `pedido.creado`, `cita.cancelada`, `stock.bajo`
+- [X] `CAPABILITIES/AI/OpenClaudeListeners.php` — listeners por defecto (stock.bajo → notif + AI summary)
+- [X] `CAPABILITIES/AI/OpenClaudeApi.php` — acciones `openclaude_status` y `openclaude_complete`
+- [X] `spa/server/handlers/openclaude.php` — handler que carga todo y registra listeners
+- [X] `spa/server/index.php` — 2 acciones nuevas en ALLOWED_ACTIONS + dispatch cases
+- [X] SDK `actions.ts` — `openclaude_status` y `openclaude_complete` (scope: server, domain: ai)
 
 ### J.2 Integración con capabilities existentes
 
-- [x] `DELIVERY/PedidoModel::create()` emite `pedido.creado` si EventBus cargado
-- [x] `CITAS/CitasModel::cancel()` emite `cita.cancelada` si EventBus cargado
-- [x] Caso `stock.bajo` manejado en listener: llama a Claude si enabled; fallback Noop driver siempre
+- [X] `DELIVERY/PedidoModel::create()` emite `pedido.creado` si EventBus cargado
+- [X] `CITAS/CitasModel::cancel()` emite `cita.cancelada` si EventBus cargado
+- [X] Caso `stock.bajo` manejado en listener: llama a Claude si enabled; fallback Noop driver siempre
 
 ### J.3 Build
 
-- [x] `pnpm -F asesoria build` verde ✅ (212 kB JS) — confirma que el SDK con nuevas acciones compila
+- [X] `pnpm -F asesoria build` verde ✅ (212 kB JS) — confirma que el SDK con nuevas acciones compila
 
 ### J.4 Integración OPENCLAW (agente local bidireccional)
 
-- [x] `CAPABILITIES/OPENCLAW/capability.json` — declara 4 acciones + config keys
-- [x] `OpenClawSkillManifest.php` — manifest **dinámico desde OPTIONS** (`openclaw.tools`, `openclaw.app_name`); sin herramientas hardcodeadas; cada despliegue declara lo suyo
-- [x] `OpenClawSkillExecutor.php` — proxy a acciones MyLocal existentes; valida contra `openclaw.allowed_actions` del admin; sin whitelist configurada → nada permitido (fail-safe)
-- [x] `OpenClawPushClient.php` — empuja eventos a OpenClaw vía HTTP (push_url configurable, timeout 2s)
-- [x] `OpenClawListeners.php` — listeners EventBus → push al agente (pedido.creado, cita.cancelada, stock.bajo)
-- [x] `OpenClawApi.php` — handler de 4 acciones (manifest público, call con skill-key, status/push admin)
-- [x] `spa/server/handlers/openclaw_skill.php` — carga capability + registra listeners
-- [x] `spa/server/index.php` — 4 acciones OPENCLAW en ALLOWED_ACTIONS + dispatch cases
-- [x] SDK `actions.ts` — 4 acciones OPENCLAW (scope: server, domain: openclaw)
+- [X] `CAPABILITIES/OPENCLAW/capability.json` — declara 4 acciones + config keys
+- [X] `OpenClawSkillManifest.php` — manifest **dinámico desde OPTIONS** (`openclaw.tools`, `openclaw.app_name`); sin herramientas hardcodeadas; cada despliegue declara lo suyo
+- [X] `OpenClawSkillExecutor.php` — proxy a acciones MyLocal existentes; valida contra `openclaw.allowed_actions` del admin; sin whitelist configurada → nada permitido (fail-safe)
+- [X] `OpenClawPushClient.php` — empuja eventos a OpenClaw vía HTTP (push_url configurable, timeout 2s)
+- [X] `OpenClawListeners.php` — listeners EventBus → push al agente (pedido.creado, cita.cancelada, stock.bajo)
+- [X] `OpenClawApi.php` — handler de 4 acciones (manifest público, call con skill-key, status/push admin)
+- [X] `spa/server/handlers/openclaw_skill.php` — carga capability + registra listeners
+- [X] `spa/server/index.php` — 4 acciones OPENCLAW en ALLOWED_ACTIONS + dispatch cases
+- [X] SDK `actions.ts` — 4 acciones OPENCLAW (scope: server, domain: openclaw)
 
 ### Principio de diseño OPENCLAW
 
 OpenClaw conecta con **la app desplegada**, no con "MyLocal" en abstracto.
+
 - Una asesoria configura `openclaw.allowed_actions = ["tarea_create", "cita_list"]`
 - Una hosteleria configura `["list_productos", "crm_contacto_list"]`
 - Un portfolio puede no configurar nada y el agente no tendrá acceso a datos
@@ -381,12 +385,12 @@ OpenClaw conecta con **la app desplegada**, no con "MyLocal" en abstracto.
 
 **Objetivo:** otro desarrollador entra, lee, y monta un vertical nuevo en ≤ 1 día.
 
-- [x] `docs/FRAMEWORK.md` — arquitectura, flujo de trabajo, cómo añadir template y capability
-- [x] `docs/SDK.md` — API del `@mylocal/sdk`: qué exporta, cómo usarlo desde un template
-- [x] `docs/CAPABILITIES.md` — listado, dependencias, acciones, roles
-- [x] `docs/BOOTSTRAP.md` — `build.ps1 --template=<nombre>`, estructura de manifest.json
-- [x] `templates/<nombre>/README.md` por cada template: páginas, capabilities, datos esperados
-- [x] Actualizar `CLAUDE.md` raíz con puntero a este documento y estado de olas
+- [X] `docs/FRAMEWORK.md` — arquitectura, flujo de trabajo, cómo añadir template y capability
+- [X] `docs/SDK.md` — API del `@mylocal/sdk`: qué exporta, cómo usarlo desde un template
+- [X] `docs/CAPABILITIES.md` — listado, dependencias, acciones, roles
+- [X] `docs/BOOTSTRAP.md` — `build.ps1 --template=<nombre>`, estructura de manifest.json
+- [X] `templates/<nombre>/README.md` por cada template: páginas, capabilities, datos esperados
+- [X] Actualizar `CLAUDE.md` raíz con puntero a este documento y estado de olas
 
 ---
 
@@ -405,31 +409,31 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 
 ## 16. Riesgos y mitigaciones
 
-| Riesgo | Mitigación |
-|--------|-----------|
-| Drop-in de Lovable usa librerías incompatibles con sdk | SDK solo exporta lógica (hooks, client), no componentes UI — máxima compatibilidad |
-| pnpm workspaces complica el CI/CD en hosting compartido | El build.ps1 genera un release/ estático — el hosting solo recibe PHP + assets, nunca Node |
-| Un template rompe el AUTH_LOCK al cambiar rutas | test_login.php es gate del build — si falla, el build aborta independientemente del template |
-| La migración de spa/ rompe hosteleria en producción | La migración ocurre en local; solo se sube cuando test_login + build verde |
-| Dos templates en desarrollo simultáneo generan conflictos | Cada template es carpeta independiente — cero archivos compartidos entre templates |
+| Riesgo                                                     | Mitigación                                                                                   |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Drop-in de Lovable usa librerías incompatibles con sdk    | SDK solo exporta lógica (hooks, client), no componentes UI — máxima compatibilidad         |
+| pnpm workspaces complica el CI/CD en hosting compartido    | El build.ps1 genera un release/ estático — el hosting solo recibe PHP + assets, nunca Node  |
+| Un template rompe el AUTH_LOCK al cambiar rutas            | test_login.php es gate del build — si falla, el build aborta independientemente del template |
+| La migración de spa/ rompe hosteleria en producción      | La migración ocurre en local; solo se sube cuando test_login + build verde                   |
+| Dos templates en desarrollo simultáneo generan conflictos | Cada template es carpeta independiente — cero archivos compartidos entre templates           |
 
 ---
 
 ## 17. Indicador de estado
 
-- [x] Ola 0 — Preflight
-- [x] Ola A — Refactor `modules/hosteleria/`
-- [x] Ola B — Manifest dinámico
-- [x] Ola C — Runtime `app/` + `_shared/`
-- [x] Ola D — AppBootstrap CLI
-- [x] Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES
-- [x] Ola F — Template `clinica/` (en SPA — migrado en G)
-- [x] Ola G — Migración a arquitectura de templates independientes
-- [x] Ola H — Template `logistica/`
-- [x] Ola I — Template `asesoria/`
-- [x] Ola J — Integración OpenClaude
-- [x] Ola K — Documentación + handover
-- [x] Ola L — Cierre técnico (tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore)
+- [X] Ola 0 — Preflight
+- [X] Ola A — Refactor `modules/hosteleria/`
+- [X] Ola B — Manifest dinámico
+- [X] Ola C — Runtime `app/` + `_shared/`
+- [X] Ola D — AppBootstrap CLI
+- [X] Ola E — CAPABILITIES CITAS + CRM + NOTIFICACIONES
+- [X] Ola F — Template `clinica/` (en SPA — migrado en G)
+- [X] Ola G — Migración a arquitectura de templates independientes
+- [X] Ola H — Template `logistica/`
+- [X] Ola I — Template `asesoria/`
+- [X] Ola J — Integración OpenClaude
+- [X] Ola K — Documentación + handover
+- [X] Ola L — Cierre técnico (tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore)
 
 ---
 
@@ -439,19 +443,19 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 
 ### Saldo de la Ola L
 
-| Item | Antes (post Ola K) | Después (Ola L) |
-|------|--------------------|-----------------|
-| Tests AUTH_LOCK para DELIVERY | ausente | `spa/server/tests/test_delivery.php` — 33/33 ✅ |
-| Tests AUTH_LOCK para TAREAS | ausente | `spa/server/tests/test_tareas.php` — 17/17 ✅ |
-| Tests para OpenClaude + EventBus | ausente | `spa/server/tests/test_openclaude.php` — 19/19 ✅ |
-| Tests para OPENCLAW (manifest + fail-safe) | ausente | `spa/server/tests/test_openclaw.php` — 26/26 ✅ |
-| Bug latente OpenClawApi `_oc_call` (ArgumentCountError) | sin detectar | corregido + cubierto por test (regresión documentada) |
-| AppBootstrap CLI | apuntaba a `spa/src/modules/<id>/` (estructura pre-G) | v2: lee `templates/<id>/manifest.json`, `--template=` (alias `--preset=`), 4 presets disponibles |
-| Limpieza `_rl/` en bootstrap | inexistente | bootstrap limpia `data/_rl/` antes del gate |
-| `spa/src/` legacy | duplicaba `templates/hosteleria/src/` | eliminado, `build.ps1` y `run.bat` sin fallbacks legacy |
-| `sdk/src/synaxis/SynaxisCore.ts` 262 LOC | sobre el límite 250 | partido: SynaxisCore 194 + Helpers 48 + Versioning 51 + Oplog 52 + RequestNormalize 49 = 5 archivos ≤ 200 LOC |
-| `build.ps1` ejecuta tests de capabilities | solo `test_login` | 7 gates: CITAS, CRM, NOTIF, DELIVERY, TAREAS, OPENCLAUDE, OPENCLAW |
-| `build.ps1` para 4 templates | solo hosteleria validado | hosteleria + clinica + logistica + asesoria todos verdes |
+| Item                                                      | Antes (post Ola K)                                      | Después (Ola L)                                                                                               |
+| --------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Tests AUTH_LOCK para DELIVERY                             | ausente                                                 | `spa/server/tests/test_delivery.php` — 33/33 ✅                                                             |
+| Tests AUTH_LOCK para TAREAS                               | ausente                                                 | `spa/server/tests/test_tareas.php` — 17/17 ✅                                                               |
+| Tests para OpenClaude + EventBus                          | ausente                                                 | `spa/server/tests/test_openclaude.php` — 19/19 ✅                                                           |
+| Tests para OPENCLAW (manifest + fail-safe)                | ausente                                                 | `spa/server/tests/test_openclaw.php` — 26/26 ✅                                                             |
+| Bug latente OpenClawApi `_oc_call` (ArgumentCountError) | sin detectar                                            | corregido + cubierto por test (regresión documentada)                                                         |
+| AppBootstrap CLI                                          | apuntaba a `spa/src/modules/<id>/` (estructura pre-G) | v2: lee `templates/<id>/manifest.json`, `--template=` (alias `--preset=`), 4 presets disponibles         |
+| Limpieza `_rl/` en bootstrap                            | inexistente                                             | bootstrap limpia `data/_rl/` antes del gate                                                                  |
+| `spa/src/` legacy                                       | duplicaba `templates/hosteleria/src/`                 | eliminado,`build.ps1` y `run.bat` sin fallbacks legacy                                                     |
+| `sdk/src/synaxis/SynaxisCore.ts` 262 LOC                | sobre el límite 250                                    | partido: SynaxisCore 194 + Helpers 48 + Versioning 51 + Oplog 52 + RequestNormalize 49 = 5 archivos ≤ 200 LOC |
+| `build.ps1` ejecuta tests de capabilities               | solo `test_login`                                     | 7 gates: CITAS, CRM, NOTIF, DELIVERY, TAREAS, OPENCLAUDE, OPENCLAW                                             |
+| `build.ps1` para 4 templates                            | solo hosteleria validado                                | hosteleria + clinica + logistica + asesoria todos verdes                                                       |
 
 ### Acumulado de tests verdes
 

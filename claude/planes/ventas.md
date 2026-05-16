@@ -36,6 +36,7 @@ La IA no es una fase final. Es una capa silenciosa que se va revelando:
 - Fase 2: IA visible. Sugiere ventas cruzadas al cliente. La nombramos.
 - Fase 3: IA habladora. Explica los datos en lenguaje natural.
 - Fase 4-5: IA decisora. Predice demanda, optimiza menu, agente de gestion.
+- Fase 6: IA Conectada (A2A). Tu local habla con los asistentes personales de tus clientes.
 
 Error a evitar: vender "IA para hosteleros" como gancho. Vendemos resultado
 (mas dinero, menos trabajo, cero multas). La IA queda por debajo.
@@ -119,6 +120,7 @@ Meta de conversion demo -> pago: 25% en mensual, 12% directo a anual.
 - Programa de fidelizacion sin tarjetas fisicas
 - Predictor de demanda con IA
 - Modo cadena: panel multi-local consolidado
+- Nivel 4: Agent-Ready Interface (Reserva automática vía Siri/Gemini)
 
 ### Bloque 3: Vision MyLocal
 
@@ -161,7 +163,7 @@ simplicidad extrema y precio inferior. Construir base instalada.
 
 - Login en una pantalla
 - Dashboard con tres metricas: visitas, escaneos, plato mas visto
-- Menu lateral: Carta / Diseno / QR / Idiomas / Ajustes
+- Menu lateral: Carta / Diseno / QR / Publicar / Reseñas / Ajustes
 - Boton permanente "Ver como cliente" (preview en vivo)
 
 **IA invisible (Copiloto de Carta):**
@@ -170,6 +172,11 @@ simplicidad extrema y precio inferior. Construir base instalada.
 - Traduccion automatica contextual (ES/EN/FR/DE)
 - Sugerencia de categorias segun tipo de negocio
 - No se promociona como IA. Se presenta como "ayuda automatica".
+
+**Local Vivo (Micro-Timeline & Reputacion):**
+- Seccion "Timeline": el dueño publica fotos/videos cortos del dia.
+- Seccion "Reseñas": clientes dejan estrellas y comentarios (SEO ready).
+- Generacion automatica de textos legales (RGPD/LSSI) al registrarse.
 
 ### Flujo de onboarding (10 pasos guiados)
 
@@ -791,7 +798,7 @@ existentes segun nivel:
 | 3    | Verifactu + TicketBAI + Analista IA | Cero multas                 | Email a gestorias         |
 | 4    | TPV + KDS + Multi-local             | Eficiencia operativa        | Visita comercial          |
 | 5    | Agente IA decisor                   | Optimizacion margen         | LinkedIn/prensa sectorial |
-| 6    | Delivery + Partners                 | Soberania y migracion       | Afiliacion                |
+| 6    | Delivery + Partners + Protocolo A2A | Soberania e Interoperabilidad| Afiliacion y Alianzas IA  |
 
 ---
 

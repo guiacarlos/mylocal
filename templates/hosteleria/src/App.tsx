@@ -1,61 +1,52 @@
-/**
- * App - router raiz. Manifest-driven Y config-driven: cero rutas de un
- * sector concreto cableadas, cero referencias hardcoded a un modulo.
- *
- * Buckets que iteramos por manifest de cada modulo activo (del ConfigProvider):
- *   public_routes   -> envueltas en PublicLayout
- *   private_routes  -> envueltas en PrivateLayout (paths directos)
- *   staff_routes    -> envueltas en PrivateLayout (paths /sistema/*)
- *   raw_routes      -> sin layout, componente decide chrome
- *
- * El dashboard (/dashboard/*) es UN solo Route que delega a Dashboard.tsx,
- * que a su vez itera dashboard_routes y compone los Provider de cada modulo.
- *
- * Anadir un sector nuevo: anadirlo en spa/src/app/modules-registry.ts y
- * elegirlo desde spa/public/config.json. Este fichero no cambia.
- */
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
+import SplashScreen from './components/SplashScreen';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import QRSection from './components/QRSection';
+import WebPreviewSection from './components/WebPreviewSection';
+import ImportSection from './components/ImportSection';
+import ProductsSection from './components/ProductsSection';
+import PDFSection from './components/PDFSection';
+import PricingSection from './components/PricingSection';
+import Footer from './components/Footer';
+import LoginModal from './components/LoginModal';
 
-import { Routes, Route } from 'react-router-dom';
+export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [showLogin, setShowLogin] = useState(false);
 
-import { Dashboard } from './pages/Dashboard';
-import { renderRoutes } from './app/route-builder';
-import { PublicLayout } from './app/layouts/PublicLayout';
-import { PrivateLayout } from './app/layouts/PrivateLayout';
-import { useActiveModules, useComponentRegistry } from './app/ConfigContext';
+  return (
+    <div className="relative">
+      <AnimatePresence>
+        {showSplash && (
+          <SplashScreen onComplete={() => setShowSplash(false)} />
+        )}
+      </AnimatePresence>
 
-export function App() {
-    const modules = useActiveModules();
-    const registry = useComponentRegistry();
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showSplash ? 0 : 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="min-h-screen flex flex-col overflow-x-hidden"
+      >
+        <Header onLoginClick={() => setShowLogin(true)} />
 
-    const publicRoutes  = modules.flatMap(m => m.manifest.public_routes  ?? []);
-    const privateRoutes = modules.flatMap(m => m.manifest.private_routes ?? []);
-    const staffRoutes   = modules.flatMap(m => m.manifest.staff_routes   ?? []);
-    const rawRoutes     = modules.flatMap(m => m.manifest.raw_routes     ?? []);
+        <main className="flex-1">
+          <HeroSection />
+          <QRSection />
+          <WebPreviewSection />
+          <ImportSection />
+          <ProductsSection />
+          <PDFSection />
+          <PricingSection onLoginClick={() => setShowLogin(true)} />
+        </main>
 
-    // Destino del rol staff cuando entra por una zona admin. La primera
-    // staff_route (sin su sufijo "/*") es el aterrizaje natural. Si nadie
-    // declara staff_routes, no hay zona staff -> PrivateLayout no redirige.
-    const staffLanding = staffRoutes[0]?.path?.replace(/\/\*$/, '') ?? null;
+        <Footer />
+        <div className="fixed inset-0 -z-10 bg-[#F9F9F7]" />
+      </motion.div>
 
-    // Catch-all. Usamos el "Home" del registry (lo aporta _shared). Si por
-    // alguna razon un tenant decide no incluirlo, no se monta catch-all.
-    const Catchall = registry.Home;
-
-    return (
-        <Routes>
-            <Route element={<PrivateLayout staffLanding={staffLanding} />}>
-                <Route path="/dashboard/*" element={<Dashboard />} />
-                {renderRoutes(privateRoutes, registry)}
-                {renderRoutes(staffRoutes, registry)}
-            </Route>
-
-            <Route element={<PublicLayout />}>
-                {renderRoutes(publicRoutes, registry)}
-            </Route>
-
-            {renderRoutes(rawRoutes, registry)}
-
-            {Catchall && <Route path="*" element={<Catchall />} />}
-        </Routes>
-    );
+      <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
+    </div>
+  );
 }

@@ -1413,6 +1413,30 @@ Sin hardcodear nombres de plataformas — cada plataforma es un driver.
 
 ---
 
+#### 6.3 Protocolo A2A para Agentes Externos
+
+El sistema debe permitir que asistentes personales (Siri, Gemini, GPT) interactúen directamente con el local.
+
+**Archivos:**
+- CAPABILITIES/API/AgentManifest.php
+  Genera `/.well-known/ai-agent.json` con las herramientas disponibles (reservas, carta).
+  Describe los esquemas de entrada/salida para el Tool-Calling de los LLMs.
+- CAPABILITIES/API/AgentGateway.php
+  Endpoint optimizado para agentes que mapea lenguaje natural (o JSON estructurado) a acciones internas.
+  Acciones: `request_booking`, `query_menu`, `get_local_status`.
+- CAPABILITIES/CITAS/AgentBookingHandler.php
+  Gestiona la creación de citas con el flag `pending_agent_approval`.
+
+**Integracion:**
+  El hostelero recibe una alerta especial: "Reserva solicitada por Agente de IA".
+  Validación humana obligatoria en primera fase para evitar spam.
+
+- [ ] AgentManifest.php: generacion de manifiesto compatible con OpenAI/Anthropic/Gemini.
+- [ ] AgentGateway.php: endpoint semántico para agentes externos.
+- [ ] Documentación técnica para "Agent Interaction" añadida a la wiki.
+
+---
+
 #### 6.2 Programa de canal
 
 El canal no es codigo, es negocio. Pero el sistema debe soportarlo.
