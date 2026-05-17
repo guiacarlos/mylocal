@@ -10,14 +10,14 @@ DirectoryIndex index.html index.php
     RewriteCond %{HTTPS} off
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # 1. API SOBERANA — prioridad absoluta, debe ir ANTES del bloqueo de seguridad
-    # [END] previene que Apache reinicie las reglas con la URL reescrita (CORE/index.php)
-    RewriteRule ^acide/(.*)$ CORE/$1 [END,QSA]
+    # 1. API SOBERANA — prioridad absoluta
+    # [END] previene que Apache reinicie las reglas con la URL reescrita
+    RewriteRule ^acide/ spa/server/index.php [END,QSA]
 
-    # 🛡️ BLOQUEO DE ACCESO DIRECTO A DIRECTORIOS SENSIBLES
+    # BLOQUEO DE ACCESO DIRECTO A DIRECTORIOS SENSIBLES
     # Solo aplica a peticiones externas (REDIRECT_STATUS vacío = petición inicial)
     RewriteCond %{ENV:REDIRECT_STATUS} ^$
-    RewriteRule ^(CORE|STORAGE|CAPABILITIES|STORE)(/.*)?$ - [F,L]
+    RewriteRule ^(CORE|STORAGE|CAPABILITIES|STORE|spa/server/data|spa/server/config|spa/server/handlers)(/.*)?$ - [F,L]
 
     # 1.07 MEDIA — normaliza /media/ (lowercase) → /MEDIA/ (uppercase, Linux case-sensitive)
     RewriteCond %{REQUEST_FILENAME} !-f
