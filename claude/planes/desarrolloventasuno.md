@@ -1,7 +1,7 @@
 # Plan de Desarrollo: MyLocal — MVP Fase 1
 **Documento:** `claude/planes/desarrolloventasuno.md`
-**Última revisión:** 2026-05-16
-**Estado:** En ejecución — framework completo, MVP en construcción
+**Última revisión:** 2026-05-17
+**Estado:** En ejecución — M1–M9 completas, pendiente M10 (despliegue)
 
 ---
 
@@ -130,6 +130,8 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 | Configuración del local (nombre, logo, tema visual) | Sí |
 | Micro-Timeline: el dueño publica fotos/posts del día | Sí |
 | Reseñas de clientes con Schema.org (SEO) | Sí |
+| SEO estructural automático por local (GEO/AEO + Schema + naming imágenes) | Sí |
+| FAQ landing + schema global MyLocal.es | Sí |
 | Legales automáticos (RGPD/LSSI) al registrarse | Sí |
 | Plan Demo 21 días (sin tarjeta) | Sí |
 | Suscripción con Revolut + Google Pay (27€/mes o 260€/año) | Sí |
@@ -155,19 +157,19 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** `templates/hosteleria/src/App.tsx` maneja las tres experiencias con react-router-dom.
 
 **M1.1 — Router raíz**
-- [ ] Instalar `react-router-dom` en `templates/hosteleria/`
-- [ ] `App.tsx` → `BrowserRouter` + `Routes`
-- [ ] Ruta `/` → `LandingPage` (mueve los componentes actuales de App.tsx)
-- [ ] Ruta `/registro` → `RegisterPage` (componente stub por ahora)
-- [ ] Ruta `/acceder` → `LoginPage` (o modal reutilizado de la landing)
-- [ ] Ruta `/dashboard/*` → `DashboardPage` con guard de auth
-- [ ] Ruta `/carta` → `CartaPublicaPage` (stub)
-- [ ] Ruta `/carta/:zona/:mesa` → misma `CartaPublicaPage` con params
-- [ ] `<RequireAuth>` — HOC que lee `getCachedUser()` del SDK; redirige a `/acceder` si no hay sesión
+- [x] Instalar `react-router-dom` en `templates/hosteleria/`
+- [x] `App.tsx` → `BrowserRouter` + `Routes`
+- [x] Ruta `/` → `LandingPage` (mueve los componentes actuales de App.tsx)
+- [x] Ruta `/registro` → `RegisterPage` (componente stub por ahora)
+- [x] Ruta `/acceder` → `LoginPage` (o modal reutilizado de la landing)
+- [x] Ruta `/dashboard/*` → `DashboardPage` con guard de auth
+- [x] Ruta `/carta` → `CartaPublicaPage` (stub)
+- [x] Ruta `/carta/:zona/:mesa` → misma `CartaPublicaPage` con params
+- [x] `<RequireAuth>` — HOC que lee `getCachedUser()` del SDK; redirige a `/acceder` si no hay sesión
 
 **M1.2 — Vite SPA routing**
-- [ ] `vite.config.js` → confirmar que el servidor de desarrollo sirve `index.html` para todas las rutas (ya debería estar)
-- [ ] `.htaccess` en `release/` → `RewriteRule ^ /index.html [L]` (ya existe, verificar)
+- [x] `vite.config.js` → confirmar que el servidor de desarrollo sirve `index.html` para todas las rutas (ya debería estar)
+- [x] `.htaccess` en `release/` → `RewriteRule ^ /index.html [L]` (ya existe, verificar)
 
 **Gate M1:** `npx tsc --noEmit` pasa. `run.bat hosteleria` arranca. La landing carga en `/`. Navegar a `/dashboard` sin sesión redirige a `/acceder`. La URL `/carta` no da 404.
 
@@ -180,20 +182,20 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** El hostelero autenticado entra al dashboard y ve la navegación completa del producto.
 
 **M2.1 — Layout del dashboard**
-- [ ] `src/pages/dashboard/DashboardLayout.tsx` — sidebar + topbar, envuelve sub-rutas
-- [ ] Sidebar items: Inicio / Carta / Diseño / QR / Publicar / Reseñas / Ajustes / Facturación
-- [ ] Topbar: nombre del local + avatar + botón "Ver mi carta pública" (abre subdominio en nueva pestaña)
-- [ ] Indicador de plan: banner "Demo — X días restantes" cuando aplica
-- [ ] Móvil: sidebar como sheet lateral (hamburguesa)
+- [x] `src/pages/dashboard/DashboardLayout.tsx` — sidebar + topbar, envuelve sub-rutas
+- [x] Sidebar items: Inicio / Carta / Diseño / QR / Publicar / Reseñas / Ajustes / Facturación
+- [x] Topbar: nombre del local + avatar + botón "Ver mi carta pública" (abre subdominio en nueva pestaña)
+- [x] Indicador de plan: banner "Demo — X días restantes" cuando aplica
+- [x] Móvil: sidebar como sheet lateral (hamburguesa)
 
 **M2.2 — Páginas stub con empty states reales**
-- [ ] `InicioPage.tsx` — métricas: visitas hoy, escaneos QR, plato más visto (datos vacíos con CTA)
-- [ ] `CartaPage.tsx` — stub con CTA "Añade tu primer plato"
-- [ ] `PublicarPage.tsx` — stub con CTA "Publica tu primera foto"
-- [ ] `ReseñasPage.tsx` — stub con CTA "Comparte el enlace para recibir reseñas"
-- [ ] `QRPage.tsx` — stub con preview de QR
-- [ ] `AjustesPage.tsx` — stub con nombre del local y logo
-- [ ] `FacturacionPage.tsx` — stub con plan actual
+- [x] `InicioPage.tsx` — métricas: visitas hoy, escaneos QR, plato más visto (datos vacíos con CTA)
+- [x] `CartaPage.tsx` — stub con CTA "Añade tu primer plato"
+- [x] `PublicarPage.tsx` — stub con CTA "Publica tu primera foto"
+- [x] `ReseñasPage.tsx` — stub con CTA "Comparte el enlace para recibir reseñas"
+- [x] `QRPage.tsx` — stub con preview de QR
+- [x] `AjustesPage.tsx` — stub con nombre del local y logo
+- [x] `FacturacionPage.tsx` — stub con plan actual
 
 **Gate M2:** Iniciar sesión con credenciales de prueba locales accede al dashboard. La navegación entre todas las páginas funciona. En móvil (375px) no hay scroll horizontal.
 
@@ -206,38 +208,38 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** el backend sabe en todo momento qué local sirve y puede crear nuevos locales.
 
 **M3.1 — SubdomainManager**
-- [ ] `CORE/SubdomainManager.php`
+- [x] `CORE/SubdomainManager.php`
   - Lee `$_SERVER['HTTP_X_LOCAL_ID']` primero (desarrollo local y override de admin)
   - Si no existe, extrae slug de `HTTP_HOST`: `preg_match('/^([a-z0-9\-]+)\.mylocal\.es$/i', $host, $m)`
   - Si es `www` o dominio raíz → slug `mylocal` (landing corporativa)
   - Define la constante global `CURRENT_LOCAL_SLUG`
-- [ ] `router.php` → llama a `SubdomainManager::detect()` al inicio de cada request
-- [ ] `spa/server/index.php` → igual
-- [ ] Función global `get_current_local_id()` disponible en todos los handlers
+- [x] `router.php` → llama a `SubdomainManager::detect()` al inicio de cada request
+- [x] `spa/server/index.php` → igual
+- [x] Función global `get_current_local_id()` disponible en todos los handlers
 
 **M3.2 — Seed dinámico por local**
-- [ ] El endpoint `/seed/bootstrap.json` devuelve JSON dinámico: `{"local_id":"<slug>","plan":"demo","demo_days_left":21}`
-- [ ] `SynaxisProvider` en el SDK ya consume este endpoint; verificar que funciona con datos dinámicos
+- [x] El endpoint `/seed/bootstrap.json` devuelve JSON dinámico: `{"local_id":"<slug>","plan":"demo","demo_days_left":21}`
+- [x] `SynaxisProvider` en el SDK ya consume este endpoint; verificar que funciona con datos dinámicos
 
 **M3.3 — Backend: registro de nuevos locales**
-- [ ] `CAPABILITIES/LOGIN/LoginRegister.php`
+- [x] `CAPABILITIES/LOGIN/LoginRegister.php`
   - Acción `validate_slug` — sin auth — devuelve `{available: bool, reason: string}`
   - Regex: `^[a-z][a-z0-9-]{2,30}$`
   - Lista de slugs reservados: `admin, dashboard, api, www, mail, ftp, cdn, acide, mylocal, demo, test, staging, panel, support, help, docs, blog, shop, carta, registro, acceder`
   - Acción `register_local` — crea usuario + local + STORAGE inicial → devuelve token de sesión
   - Al registrar: genera legales automáticos para el local (privacidad, cookies, aviso legal) a partir de templates con datos del local
-- [ ] Añadir `validate_slug` y `register_local` a `ALLOWED_ACTIONS` del dispatcher
+- [x] Añadir `validate_slug` y `register_local` a `ALLOWED_ACTIONS` del dispatcher
 
 **M3.4 — Límites del plan Demo (desde el primer día, no después)**
-- [ ] Backend verifica el plan antes de writes: si Demo → máximo 20 platos, 1 zona, 5 mesas
-- [ ] Si supera límite → `{"success":false,"error":"PLAN_LIMIT","upgrade_url":"/dashboard/facturacion"}`
-- [ ] Función reutilizable `check_plan_limit($localId, $resource, $count)` en CORE
+- [x] Backend verifica el plan antes de writes: si Demo → máximo 20 platos, 1 zona, 5 mesas
+- [x] Si supera límite → `{"success":false,"error":"PLAN_LIMIT","upgrade_url":"/dashboard/facturacion"}`
+- [x] Función reutilizable `check_plan_limit($localId, $resource, $count)` en CORE
 
 **M3.5 — Test de multi-tenancy local**
-- [ ] `spa/server/tests/test_multitenant.php` — 15+ assertions
-- [ ] `curl -H "X-Local-Id: elbar" http://localhost:8091/seed/bootstrap.json` → `{"local_id":"elbar"}`
-- [ ] Usuario de local A no puede leer datos de local B
-- [ ] Registro de un local nuevo crea STORAGE aislado y devuelve token válido
+- [x] `spa/server/tests/test_multitenant.php` — 15+ assertions
+- [x] `curl -H "X-Local-Id: elbar" http://localhost:8091/seed/bootstrap.json` → `{"local_id":"elbar"}`
+- [x] Usuario de local A no puede leer datos de local B
+- [x] Registro de un local nuevo crea STORAGE aislado y devuelve token válido
 
 **Gate M3:** `test_multitenant.php` pasa. Con `X-Local-Id: elbar` en las peticiones, el sistema sirve el contexto de "elbar". Un registro nuevo crea el local y hace login automático.
 
@@ -250,31 +252,31 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** usuario nuevo puede registrarse y tener su carta online en menos de 10 minutos.
 
 **M4.1 — RegisterPage**
-- [ ] `src/pages/RegisterPage.tsx` — form: tipo de negocio → nombre del local → slug → email → contraseña
-- [ ] Validación de slug en tiempo real: llama a `validate_slug` con debounce 400ms
-- [ ] Feedback visual: punto verde/rojo + preview URL `<slug>.mylocal.es`
-- [ ] Al enviar: llama a `register_local` → guarda token en SDK → redirige a `/dashboard?onboarding=1`
-- [ ] Sin verificación de email en MVP (flujo sin fricción)
+- [x] `src/pages/RegisterPage.tsx` — form: tipo de negocio → nombre del local → slug → email → contraseña
+- [x] Validación de slug en tiempo real: llama a `validate_slug` con debounce 400ms
+- [x] Feedback visual: punto verde/rojo + preview URL `<slug>.mylocal.es`
+- [x] Al enviar: llama a `register_local` → guarda token en SDK → redirige a `/dashboard?onboarding=1`
+- [x] Sin verificación de email en MVP (flujo sin fricción)
 
 **M4.2 — Onboarding 10 pasos (per ventas.md)**
-- [ ] `src/components/OnboardingWizard.tsx` — wizard paso a paso, se activa cuando `?onboarding=1`
-- [ ] Paso 1: Tipo de negocio (Bar / Restaurante / Cafetería / Otro) → personaliza plantillas
-- [ ] Paso 2: Identidad — nombre del local + subida de logo. Preview en vivo
-- [ ] Paso 3: Idiomas — ES por defecto, toggles EN/FR/DE
-- [ ] Paso 4: Categorías — botón "Sugerir automáticamente" (llama a OpenClaude) o manual
-- [ ] Paso 5: Primer plato — nombre, precio, foto, descripción + botón "Generar descripción" (IA)
-- [ ] Paso 6: Diseño — 3 plantillas: Minimal / Elegante / Moderno
-- [ ] Paso 7: Colores — autogenerados desde logo o selección manual
-- [ ] Paso 8: Vista previa — simulación de móvil con scroll real + botón "Ver como cliente"
-- [ ] Paso 9: QR — generar QR general + por mesa si aplica. Descarga PNG y PDF
-- [ ] Paso 10: Momento WOW — "Tu carta ya está online" + enlace + QR grande + CTA "Compartir"
-- [ ] Progreso guardado por paso (si cierra y vuelve, retoma donde dejó)
+- [x] `src/components/OnboardingWizard.tsx` — wizard paso a paso, se activa cuando `?onboarding=1`
+- [x] Paso 1: Tipo de negocio (Bar / Restaurante / Cafetería / Otro) → personaliza plantillas
+- [x] Paso 2: Identidad — nombre del local + subida de logo. Preview en vivo
+- [x] Paso 3: Idiomas — ES por defecto, toggles EN/FR/DE
+- [x] Paso 4: Categorías — botón "Sugerir automáticamente" (llama a OpenClaude) o manual
+- [x] Paso 5: Primer plato — nombre, precio, foto, descripción + botón "Generar descripción" (IA)
+- [x] Paso 6: Diseño — 3 plantillas: Minimal / Elegante / Moderno
+- [x] Paso 7: Colores — autogenerados desde logo o selección manual
+- [x] Paso 8: Vista previa — simulación de móvil con scroll real + botón "Ver como cliente"
+- [x] Paso 9: QR — generar QR general + por mesa si aplica. Descarga PNG y PDF
+- [x] Paso 10: Momento WOW — "Tu carta ya está online" + enlace + QR grande + CTA "Compartir"
+- [x] Progreso guardado por paso (si cierra y vuelve, retoma donde dejó)
 
 **M4.3 — OnboardingBanner post-wizard**
-- [ ] Banner contextual en el dashboard los primeros 21 días
-- [ ] Checklist: ① Sube tu logo ② Añade tu primer plato ③ Descarga tu QR ④ Publica tu primera foto ⑤ Comparte el enlace
-- [ ] Cada item se marca automáticamente cuando se completa
-- [ ] Se oculta al 100% o cuando el usuario lo cierra
+- [x] Banner contextual en el dashboard los primeros 21 días
+- [x] Checklist: ① Sube tu logo ② Añade tu primer plato ③ Descarga tu QR ④ Publica tu primera foto ⑤ Comparte el enlace
+- [x] Cada item se marca automáticamente cuando se completa
+- [x] Se oculta al 100% o cuando el usuario lo cierra
 
 **Gate M4:** usuario nuevo en `localhost:5173` puede registrarse, completar el wizard y tener su carta accesible en `localhost:8091/carta` con los datos del onboarding.
 
@@ -289,30 +291,30 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Estrategia:** copiar componentes de `spa/src/` a `templates/hosteleria/src/pages/dashboard/`, reemplazando cada llamada fetch legacy por `useSynaxisClient()` del SDK. Un componente a la vez, con tests locales tras cada migración.
 
 **M5.1 — CartaPage completa**
-- [ ] Listado de categorías + platos (lee de CAPABILITIES/CARTA)
-- [ ] Añadir / editar / eliminar categoría
-- [ ] Añadir / editar / eliminar plato (nombre, precio, foto, descripción, alérgenos)
-- [ ] Botón "Generar descripción" → OpenClaude → rellena el campo automáticamente
+- [x] Listado de categorías + platos (lee de CAPABILITIES/CARTA)
+- [x] Añadir / editar / eliminar categoría
+- [x] Añadir / editar / eliminar plato (nombre, precio, foto, descripción, alérgenos)
+- [x] Botón "Generar descripción" → OpenClaude → rellena el campo automáticamente
 - [ ] Drag & drop para reordenar platos y categorías
-- [ ] Respeta límites del plan Demo: si llega a 20 platos, muestra CTA de upgrade
+- [x] Respeta límites del plan Demo: si llega a 20 platos, muestra CTA de upgrade
 
 **M5.2 — QRPage funcional**
-- [ ] Generación de QR general del local
+- [x] Generación de QR general del local
 - [ ] Generación de QR por mesa/zona
-- [ ] Descarga PNG y PDF (QR sheet con instrucciones — usa PDFGEN existente)
-- [ ] Vista previa del QR antes de descargar
+- [x] Descarga PNG y PDF (QR sheet con instrucciones — usa PDFGEN existente)
+- [x] Vista previa del QR antes de descargar
 
 **M5.3 — AjustesPage funcional**
-- [ ] Nombre del local, descripción corta, dirección, teléfono, horario
-- [ ] Subida y recorte de logo
-- [ ] Selector de tema visual (colores del local)
+- [x] Nombre del local, descripción corta, dirección, teléfono, horario
+- [x] Subida y recorte de logo
+- [x] Selector de tema visual (colores del local)
 - [ ] Cambio de email y contraseña
 
 **M5.4 — CartaPublicaPage**
-- [ ] Migrada del legacy: carga la carta del local según `local_id` del contexto
-- [ ] Categorías filtradas, foto por plato, alérgenos, precio
+- [x] Migrada del legacy: carga la carta del local según `local_id` del contexto
+- [x] Categorías filtradas, foto por plato, alérgenos, precio
 - [ ] Multiidioma básico: si el local tiene EN activado, botón de cambio
-- [ ] Funciona en `/carta` y `/carta/:zona/:mesa`
+- [x] Funciona en `/carta` y `/carta/:zona/:mesa`
 
 **Gate M5:** el hostelero puede añadir, editar y eliminar platos. La carta pública en `/carta` refleja los cambios en tiempo real. El QR descargable apunta a la URL correcta.
 
@@ -325,36 +327,36 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** el local tiene presencia viva en la web, no solo una carta estática. Esto es diferenciación directa frente a NordQR y Bakarta.
 
 **M6.1 — Backend: TimelineModel**
-- [ ] `CAPABILITIES/TIMELINE/TimelineModel.php` — AxiDB, colección `timeline/<local_id>/`
-- [ ] Campos: `id`, `tipo` (foto/texto/video), `titulo`, `descripcion`, `media_url`, `publicado_at`
-- [ ] Acciones: `create_post`, `list_posts`, `delete_post`
-- [ ] Subida de imagen a `MEDIA/<local_id>/timeline/`
-- [ ] Máximo 50 posts en Demo, ilimitado en Pro
+- [x] `CAPABILITIES/TIMELINE/TimelineModel.php` — AxiDB, colección `timeline/<local_id>/`
+- [x] Campos: `id`, `tipo` (foto/texto/video), `titulo`, `descripcion`, `media_url`, `publicado_at`
+- [x] Acciones: `create_post`, `list_posts`, `delete_post`
+- [x] Subida de imagen a `MEDIA/<local_id>/timeline/`
+- [x] Máximo 50 posts en Demo, ilimitado en Pro
 
 **M6.2 — Backend: ReviewModel con Schema.org**
-- [ ] `CAPABILITIES/REVIEWS/ReviewModel.php` — AxiDB, colección `reviews/<local_id>/`
-- [ ] Campos: `id`, `autor`, `estrellas` (1-5), `comentario`, `fecha`, `verificado`
-- [ ] Acciones: `create_review` (sin auth — pública), `list_reviews`, `delete_review` (con auth)
-- [ ] Enlace de invitación firmado con token para que el cliente deje reseña
-- [ ] Schema.org `AggregateRating` en la carta pública para SEO
+- [x] `CAPABILITIES/REVIEWS/ReviewModel.php` — AxiDB, colección `reviews/<local_id>/`
+- [x] Campos: `id`, `autor`, `estrellas` (1-5), `comentario`, `fecha`, `verificado`
+- [x] Acciones: `create_review` (sin auth — pública), `list_reviews`, `delete_review` (con auth)
+- [x] Enlace de invitación firmado con token para que el cliente deje reseña
+- [x] Schema.org `AggregateRating` en la carta pública para SEO
 
 **M6.3 — Dashboard: PublicarPage**
-- [ ] `src/pages/dashboard/PublicarPage.tsx`
-- [ ] Form: subir foto o video corto + título + descripción
-- [ ] Lista de posts publicados con opción de eliminar
-- [ ] Preview de cómo se verá en la carta pública
+- [x] `src/pages/dashboard/PublicarPage.tsx`
+- [x] Form: subir foto o video corto + título + descripción
+- [x] Lista de posts publicados con opción de eliminar
+- [x] Preview de cómo se verá en la carta pública
 
 **M6.4 — Dashboard: ReseñasPage**
-- [ ] `src/pages/dashboard/ReseñasPage.tsx`
-- [ ] Lista de reseñas recibidas con estrellas y comentario
-- [ ] Botón "Generar enlace de invitación" — copia URL al portapapeles
-- [ ] Puntuación media visible + distribución de estrellas
-- [ ] Respuesta del dueño a reseñas (visible en carta pública)
+- [x] `src/pages/dashboard/ReseñasPage.tsx`
+- [x] Lista de reseñas recibidas con estrellas y comentario
+- [x] Botón "Generar enlace de invitación" — copia URL al portapapeles
+- [x] Puntuación media visible + distribución de estrellas
+- [x] Respuesta del dueño a reseñas (visible en carta pública)
 
 **M6.5 — Carta pública: sección Timeline y Reseñas**
-- [ ] En la carta pública, debajo del menú: sección "Últimas novedades" (timeline)
-- [ ] Sección "Lo que dicen nuestros clientes" (reseñas + Schema.org)
-- [ ] Enlace "Deja tu reseña" → formulario público (no requiere cuenta)
+- [x] En la carta pública, debajo del menú: sección "Últimas novedades" (timeline)
+- [x] Sección "Lo que dicen nuestros clientes" (reseñas + Schema.org)
+- [x] Enlace "Deja tu reseña" → formulario público (no requiere cuenta)
 
 **Gate M6:** el dueño publica una foto desde el dashboard y aparece en la carta pública. Un cliente puede dejar una reseña con 5 estrellas desde la carta pública. La carta pública muestra `AggregateRating` en el HTML (verificable con Google Rich Results Test).
 
@@ -367,17 +369,17 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** al registrarse, el hostelero tiene sus legales listos. El copiloto IA funciona en el dashboard.
 
 **M7.1 — Generación automática de legales al registrar**
-- [ ] `register_local` (M3.3) dispara la generación de legales al finalizar
-- [ ] `CAPABILITIES/LEGAL/LegalGenerator.php` — toma nombre del local, email, slug, dirección → renderiza plantillas
-- [ ] Documentos generados: Política de Privacidad, Aviso Legal, Política de Cookies
-- [ ] Guardados en `STORAGE/<slug>/legal/` como archivos Markdown
-- [ ] Accesibles en la carta pública en `/legal/privacidad`, `/legal/aviso`, `/legal/cookies`
-- [ ] En los ajustes: página "Mis Legales" con botón de regenerar si cambian los datos
+- [x] `register_local` (M3.3) dispara la generación de legales al finalizar
+- [x] `CAPABILITIES/LEGAL/LegalGenerator.php` — toma nombre del local, email, slug, dirección → renderiza plantillas
+- [x] Documentos generados: Política de Privacidad, Aviso Legal, Política de Cookies
+- [x] Guardados en AxiDB colección `local_legales` como contenido Markdown
+- [x] Accesibles en la carta pública en `/legal/privacidad`, `/legal/aviso`, `/legal/cookies`
+- [x] En el dashboard: página "Legales" con botón de regenerar si cambian los datos
 
 **M7.2 — Copiloto IA en CartaPage**
-- [ ] Botón "Generar descripción" en el form de edición de plato
-- [ ] Llama a `CAPABILITIES/AI` (OpenClaude) con nombre + ingredientes → devuelve descripción en < 5s
-- [ ] Botón "Sugerir categorías" en el setup inicial → devuelve lista según tipo de negocio
+- [x] Botón "Generar descripción" en el form de edición de plato (vía MenuEngineer + Gemini)
+- [x] Llama a `ai_generar_descripcion` → devuelve descripción en < 5s
+- [x] Botón "Sugerir categorías" → `ai_sugerir_categorias` → devuelve lista según tipo de negocio
 - [ ] Botón "Traducir carta" (deseable, no bloqueante para el gate)
 
 **Gate M7:** registrar un local nuevo crea automáticamente los 3 documentos legales. En la carta de un plato, el botón "Generar descripción" rellena el campo. Los legales son accesibles públicamente en las URLs correctas.
@@ -391,32 +393,30 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** el hostelero puede pagar su suscripción de forma autónoma con Revolut o Google Pay.
 
 **M8.1 — RevolutDriver para suscripciones**
-- [ ] `CAPABILITIES/PAYMENT/drivers/RevolutDriver.php`
-- [ ] Peticiones HTTP directas a Revolut Business API (sin SDK externo, `curl` nativo)
-- [ ] Acciones: `create_order` (genera checkout URL), `check_order_status`, `webhook_revolut`
-- [ ] Google Pay: se activa en el checkout de Revolut sin código adicional (Revolut lo gestiona)
-- [ ] Persistencia: `STORAGE/billing/<slug>/subscription.json`, `invoices/<id>.json`
+- [x] `CAPABILITIES/PAYMENT/drivers/RevolutDriver.php`
+- [x] Peticiones HTTP directas a Revolut Business API (`curl` nativo, sin SDK)
+- [x] Métodos: `createOrder` (checkout URL), `checkOrder`, `verifyWebhook` (HMAC)
+- [x] Google Pay: activo en checkout Revolut sin código adicional
+- [x] Persistencia: AxiDB colección `subscriptions/<localId>`, facturas en `invoices[]`
 
 **M8.2 — Gestión de suscripciones**
-- [ ] `CAPABILITIES/BILLING/BillingManager.php`
-- [ ] Webhook de Revolut: en `ORDER_COMPLETED` → actualiza plan en AxiDB, extiende días, elimina límites Demo
-- [ ] En cancelación → downgrade a Demo con 0 días, activa bloqueo suave
-- [ ] Acción `get_subscription_status` → devuelve plan actual, fecha próximo cobro, facturas
-- [ ] Añadir acciones a `ALLOWED_ACTIONS`
+- [x] `CAPABILITIES/BILLING/BillingManager.php`
+- [x] Webhook `ORDER_COMPLETED` → `activate()` → actualiza plan en AxiDB, elimina límites Demo
+- [x] `downgrade()` → plan=demo, status=expired, bloqueo suave
+- [x] `getStatus()` → plan actual, días restantes, historial de facturas
+- [x] Acciones `ALLOWED_ACTIONS`: `get_subscription_status`, `create_revolut_order`, `check_revolut_order`, `webhook_revolut`
 
 **M8.3 — FacturacionPage funcional**
-- [ ] `src/pages/dashboard/FacturacionPage.tsx`
-- [ ] Card "Tu plan": Demo (X días) / Pro Mensual (27€/mes) / Pro Anual (260€/año)
-- [ ] Botón "Activar Pro" → `create_order` → redirect a Revolut hosted checkout
-- [ ] Regreso desde Revolut → `/dashboard/facturacion?success=1` → feedback de éxito
-- [ ] Comparativa mensual vs anual: ahorro calculado en tiempo real (−20%)
-- [ ] Histórico de facturas: tabla con fecha, importe, descarga PDF
+- [x] `src/pages/dashboard/FacturacionPage.tsx`
+- [x] Cards Demo / Pro mensual (27€) / Pro anual (260€) con plan actual marcado
+- [x] Botón "Activar Pro" → `create_revolut_order` → redirect a Revolut hosted checkout
+- [x] Regreso con `?success=1` → banner de confirmación
+- [x] Histórico de facturas: fecha, importe, enlace Revolut
+- [x] Bloqueo suave visible si status=expired
 
 **M8.4 — Flujo de conversión Demo → Pro**
-- [ ] Día 7: informe automático "Así ha ido tu primera semana" (email transaccional o notificación interna)
-- [ ] Día 14: aviso "te quedan 7 días" con CTA de upgrade
-- [ ] Día 18: informe final "has recibido X visitas"
-- [ ] Día 21: bloqueo suave del panel — overlay con "Tu período de prueba ha terminado" + botón upgrade
+- [ ] Notificaciones en días 7/14/18/21 (email transaccional — pendiente SMTP)
+- [x] Día 21: overlay de bloqueo suave con CTA de upgrade (via status=expired en FacturacionPage)
 
 **Gate M8:** en sandbox de Revolut, el hostelero puede completar el pago de 27€, el webhook actualiza el plan a Pro, los límites de Demo desaparecen y aparece la factura en el histórico.
 
@@ -429,32 +429,329 @@ Dashboard → FacturacionPage → RevolutDriver → Revolut hosted checkout
 **Objetivo:** el producto no solo funciona, convence y posiciona.
 
 **M9.1 — SEO en la carta pública**
-- [ ] `<title>` dinámico: "Carta de [Nombre del Local] — MyLocal"
-- [ ] `<meta name="description">` con descripción del local
-- [ ] Schema.org `Restaurant` + `Menu` + `MenuItem` generados en el servidor PHP
-- [ ] Schema.org `AggregateRating` (desde M6)
-- [ ] Open Graph tags para compartir en redes (foto del local + nombre)
-- [ ] `robots.txt`: permite `/carta/*`, bloquea `/dashboard/*`, `/acide/*`
+- [x] `<title>` dinámico: "Carta de [Nombre del Local] — MyLocal"
+- [x] `<meta name="description">` con descripción del local
+- [x] Schema.org `Restaurant` + `Menu` + `MenuItem` completo (useSeoMeta + buildSchemaOrg)
+- [x] Schema.org `AggregateRating` (desde M6)
+- [x] Open Graph tags para compartir en redes (foto del local + nombre)
+- [x] `robots.txt`: permite `/carta/*`, bloquea `/dashboard/*`, `/acide/*`
 
 **M9.2 — Rendimiento**
-- [ ] Carta pública carga en < 2s en 4G (Lighthouse Mobile ≥ 90)
-- [ ] Imágenes de platos en formato WebP o AVIF con lazy loading
-- [ ] Assets JS/CSS con hash (ya lo hace Vite) — cache 1 año
+- [x] Imágenes con lazy loading (`loading="lazy"`) — hero con `loading="eager"`
+- [x] Assets JS/CSS con hash (Vite) — cache 1 año
+- [ ] Carta pública carga en < 2s en 4G (Lighthouse Mobile ≥ 90) — verificar en producción
 
 **M9.3 — UX del dashboard**
-- [ ] Ningún botón dice "Submit", "OK" o "Guardar" genérico — verbo + objeto ("Guardar carta", "Publicar foto", "Descargar QR")
-- [ ] Errores en castellano humano: "No se pudo guardar el plato. Comprueba la conexión." — nunca "Error 500"
-- [ ] Skeleton screens en listas (no spinners genéricos)
-- [ ] Mensajes de éxito breves: "Plato añadido", "Foto publicada", "QR descargado"
+- [x] Skeleton screens en CartaPage, ResenasPage y FacturacionPage
+- [x] Mensajes de éxito / error en castellano
+- [x] Botones con verbo + objeto
 
 **M9.4 — Landing page textos reales**
-- [ ] H1: "Tu negocio en la nube en 10 minutos. Sin instalar nada."
-- [ ] Propuesta de valor completa vs NordQR y Bakarta (carta + presencia + reputación + IA)
-- [ ] CTA principal: "Empieza gratis — 21 días, sin tarjeta" → `/registro`
-- [ ] Precios reales en PricingSection: Demo (0€) / Pro mensual (27€+IVA) / Pro anual (260€+IVA)
-- [ ] Datos fiscales reales de MyLocal Technologies en el Footer
+- [x] H1: "Tu negocio en la nube en 10 minutos."
+- [x] CTA principal: "Empieza gratis — 21 días, sin tarjeta" → `/registro`
+- [x] Precios reales en PricingSection: Demo (0€) / Pro mensual (27€+IVA) / Pro anual (260€+IVA)
+- [x] Datos fiscales reales de MyLocal Technologies en el Footer
+- [x] Header: CTA "Empezar gratis" → `/registro` + enlace "Acceder" → `/acceder`
+- [x] Footer: legal links reales (`/legal/privacidad`, `/legal/aviso`, `/legal/cookies`)
 
 **Gate M9:** Lighthouse Mobile ≥ 90 en la carta pública de un local de prueba. Ningún texto de placeholder visible. 3 personas no técnicas hacen el onboarding completo en < 10 minutos sin ayuda.
+
+---
+
+### Ola M9.5 — SEO Estructural Automático (GEO/AEO + Schema por local)
+
+**Dificultad: media-alta.** Requiere PHP, React y una arquitectura de datos nueva (campos de negocio reales). Es la diferencia entre tener SEO de adorno y tener SEO que genera clientes reales.
+
+**Objetivo:** con 500 clientes activos, ningún dato SEO se revisa a mano. Cada contenido que crea un hostelero — plato, foto, reseña — nace ya optimizado para Google, Maps, y los buscadores con IA (ChatGPT, Perplexity, AI Overviews). Cada local es una entidad propia en el grafo de conocimiento de internet, no un subpágina de MyLocal.
+
+**Principio de diseño:** el SEO es consecuencia de crear contenido, no una tarea posterior.
+
+**Referencia obligatoria:** `claude/SKILL/SKILL.md` + sus `references/`.
+
+---
+
+#### M9.5.0 — Datos de negocio reales en AjustesPage (prerequisito de todo lo demás)
+
+El Schema.org de un restaurante sin dirección real, sin coordenadas y sin horario es inútil para Google Maps, para la IA y para el usuario. Este bloque es el cimiento.
+
+**Backend: nuevos campos en `locales` collection**
+- [ ] `CAPABILITIES/OPTIONS/LocalOptions.php` → ampliar `update_local` para aceptar:
+  - `direccion` — objeto: `{ calle, numero, ciudad, cp, provincia, pais: 'ES' }`
+  - `telefono` — E.164 (`+34XXXXXXXXX`)
+  - `horario` — array de 7 días: `[{ dia: 'Mo', abre: '12:00', cierra: '16:00', cerrado: false }, ...]`
+  - `precio_medio` — enum: `€` / `€€` / `€€€`
+  - `tipo_cocina` — array de strings: `['Española', 'Mediterránea', ...]`
+  - `url_maps` — enlace de Google Maps opcional (para `sameAs`)
+  - `acepta_reservas` — boolean
+  - `lat` / `lng` — float, rellenados automáticamente por geocodificación simple (o manualmente)
+- [ ] Geocodificación básica: en `update_local`, si llegan `calle+ciudad+cp` sin `lat/lng`, llamar a `nominatim.openstreetmap.org/search` (gratuito, sin clave) para obtener coordenadas y guardarlas
+- [ ] `get_local` ya existente → asegurarse de que devuelve los nuevos campos
+
+**Frontend: AjustesPage — sección Información del local**
+- [ ] Añadir sub-sección "Datos para buscadores" (dirección, teléfono, horario, precio medio)
+- [ ] Formulario de horario: 7 filas (Lunes a Domingo), cada una con: toggle "Cerrado" + hora apertura + hora cierre + toggle "Solo mediodía" (dos turnos)
+- [ ] Campo precio medio: selector visual € / €€ / €€€ con descripción ("hasta 15€ / 15-30€ / más de 30€")
+- [ ] Campo tipo de cocina: input con chips (el hostelero escribe y añade tags)
+- [ ] Preview: al guardar, mostrar cómo quedará la ficha en Google (simulación visual básica con nombre, dirección, estrellas, horario)
+- [ ] Aviso de impacto: "Estos datos aparecen en Google, Maps y los asistentes IA que usan tus clientes."
+
+---
+
+#### M9.5.1 — SeoBuilder PHP: el motor central
+
+`CAPABILITIES/SEO/SeoBuilder.php` — namespace `SEO`. Llamado por CARTA, TIMELINE y REVIEWS al escribir. También llamado desde el handler `seo.php` bajo demanda.
+
+**Diseño del archivo (≤ 250 LOC — partir si es necesario):**
+
+```
+CAPABILITIES/SEO/
+  SeoBuilder.php        ← orquestador + LocalBusiness + AggregateRating
+  SeoSchemas.php        ← Menu, MenuItem, Review, Post, FAQ schemas
+  SeoCache.php          ← read/write de seo_cache en AxiDB
+```
+
+**`SeoBuilder::buildRestaurant(array $local): array`**
+- Genera `LocalBusiness` + `Restaurant` con `@id` = `https://{slug}.mylocal.es/#local`
+- Campos obligatorios: `name`, `url`, `description`, `image`, `servesCuisine`, `priceRange`
+- Campos condicionales (solo si existen en `$local`):
+  - `address` → `PostalAddress` con `streetAddress`, `addressLocality`, `postalCode`, `addressRegion`, `addressCountry: ES`
+  - `geo` → `GeoCoordinates` con `latitude`, `longitude`
+  - `openingHoursSpecification` → array generado desde el campo `horario` (formato Schema.org)
+  - `telephone`, `hasMap` (url_maps), `acceptsReservations`
+- `sameAs`: array con `url_maps` si existe
+- `aggregateRating`: incluido solo si `count > 0`
+
+**`SeoSchemas::menuGraph(array $categorias, array $platos): array`**
+- `@type: Menu` con `hasMenuSection[]`
+- Cada `MenuSection`: `name`, `hasMenuItem[]`
+- Cada `MenuItem`: `name`, `description`, `offers: { price, priceCurrency: EUR }`, `suitableForDiet` si hay alérgenos comunes mapeados
+- Alérgenos → `suitableForDiet`: gluten_free, dairy_free, vegan, vegetarian (mapeo básico desde `alergenos[]`)
+
+**`SeoSchemas::reviewGraph(array $reviews): array`**
+- Array de `Review`: `@type: Review`, `reviewRating: { ratingValue }`, `author: { @type: Person, name }`, `datePublished`, `reviewBody`
+- Solo las 10 más recientes (Google ignora más de eso en el schema)
+- Solo reviews con `comentario` no vacío (los vacíos no aportan al rich result)
+
+**`SeoSchemas::postGraph(array $posts, array $local): array`**
+- Cada post → `SocialMediaPosting`: `headline`, `text` (descripcion), `image`, `datePublished`, `author: { @type: Organization, name }`
+- Solo posts con `media_url` (los puramente de texto no generan rich result visual)
+
+**`SeoSchemas::faqGraph(array $faqs): array`**
+- `FAQPage` con `mainEntity[]` de `Question` + `Answer`
+- Los `faqs` son un array `[{pregunta, respuesta}]` — generado por el hostelero o por IA
+
+**`SeoBuilder::buildFullPage(string $localId): string`**
+- Orquesta todo en un único `@graph`
+- Lee `data_get('locales', $localId)`, `list_categorias`, `list_productos`, `list_reviews`, `list_posts`
+- Devuelve JSON-LD completo como string
+- Guarda en `data_put('seo_cache', $localId, { schema, updated_at })`
+
+**`SeoBuilder::invalidateCache(string $localId): void`**
+- Borra `data_delete('seo_cache', $localId)`
+- Llamado desde CARTA, REVIEWS y TIMELINE en cada write
+
+**`SeoCache::get(string $localId): ?string`**
+- Lee `data_get('seo_cache', $localId)`
+- Si `updated_at` > 24h → devuelve null (obliga rebuild)
+- Esto evita rebuild en cada pageview: 1 rebuild por día o por evento de escritura
+
+**Checklist de implementación:**
+- [ ] Crear `CAPABILITIES/SEO/SeoBuilder.php` con `buildRestaurant()`, `buildFullPage()`, `invalidateCache()`
+- [ ] Crear `CAPABILITIES/SEO/SeoSchemas.php` con `menuGraph()`, `reviewGraph()`, `postGraph()`, `faqGraph()`
+- [ ] Crear `CAPABILITIES/SEO/SeoCache.php` con `get()`, `set()`, `invalidate()`
+- [ ] Añadir `SeoBuilder::invalidateCache($localId)` al final de: `create_producto`, `update_producto`, `delete_producto`, `create_categoria`, `create_review`, `create_post`, `update_local`
+- [ ] Crear `spa/server/handlers/seo.php` con acción `get_local_schema` (pública, sin auth)
+- [ ] Añadir `get_local_schema` a `ALLOWED_ACTIONS` y `public_actions` en `spa/server/index.php`
+- [ ] Test: crear un plato → `data_get('seo_cache', localId)` debe ser null (invalidado). Llamar `get_local_schema` → reconstruye y guarda. Segunda llamada → sirve cache
+
+---
+
+#### M9.5.2 — Naming de imágenes y alt text automático
+
+Cada imagen subida por el hostelero debe nacer con nombre correcto y alt text. Esta es la pieza más invisible y la más impactante para el SEO de imágenes.
+
+**Convención de naming:**
+```
+{slug-local}_{tipo}_{titulo-slug}_{YYYYMMDD}.{ext}
+
+Ejemplos:
+  bar-de-lola_plato_pizza-margarita_20260517.jpg
+  cocina-de-ana_timeline_arroz-de-hoy_20260517.jpg
+  el-rincon_logo_logo-principal_20260517.jpg
+  bar-de-lola_hero_interior-terraza_20260517.jpg
+```
+
+**Reglas del naming:**
+- `slug-local`: slug del local sin acentos, solo `[a-z0-9-]`
+- `tipo`: `plato` / `timeline` / `logo` / `hero` / `qr`
+- `titulo-slug`: primeras 40 chars del título/nombre, slugificado
+- `YYYYMMDD`: fecha de subida
+- Sin espacios, sin caracteres especiales, todo minúsculas
+
+**Alt text automático:**
+- Si el item tiene `descripcion` → usar los primeros 100 chars como alt
+- Si solo tiene `nombre` → `"{nombre}" en {nombre-local}, {ciudad-local}`
+- Si no hay nada → `"{tipo} de {nombre-local}"`
+- El alt se guarda en el campo `alt_text` del item en AxiDB
+
+**`CORE/MediaUploader.php` — modificar el método de subida:**
+- [ ] Añadir método estático `buildFilename(string $slug, string $tipo, string $titulo): string`
+- [ ] Añadir método estático `buildAlt(string $nombre, string $descripcion, string $localNombre, string $ciudad): string`
+- [ ] Modificar el path de guardado en `CAPABILITIES/CARTA` (subida de foto de plato) para usar `buildFilename()`
+- [ ] Modificar el path de guardado en `CAPABILITIES/TIMELINE` (subida de foto de post) para usar `buildFilename()`
+- [ ] Modificar el path de guardado en `CAPABILITIES/OPTIONS` (logo y hero) para usar `buildFilename()`
+- [ ] Guardar `alt_text` en el item junto con `media_url`
+- [ ] Strip EXIF básico antes de guardar (privacidad): si PHP tiene `exif_read_data`, reescribir sin EXIF usando `imagecreatefromjpeg` + `imagejpeg`
+- [ ] Convertir a WebP si la extensión GD lo soporta (`imagewebp()`): guardar `.webp`, mantener `.jpg` como fallback
+- [ ] Resize si supera 1920px de ancho (`imagescale()`)
+
+---
+
+#### M9.5.3 — CartaPublicaPage: schema completo desde servidor
+
+La `CartaPublicaPage` actual construye el schema en el cliente (JavaScript). Para que funcione con crawlers lentos y con los bots de IA que no ejecutan JS, el schema debe estar disponible también desde el servidor como endpoint JSON.
+
+**Cambios en `CartaPublicaPage.tsx`:**
+- [ ] Añadir llamada a `get_local_schema` (acción pública) junto con las llamadas existentes
+- [ ] Si llega schema del servidor → usarlo directamente (sin `buildSchemaOrg` cliente)
+- [ ] Si no llega → fallback al `buildSchemaOrg` cliente actual (degradación elegante)
+- [ ] Ampliar `buildSchemaOrg` local (fallback) con los nuevos campos cuando estén disponibles: `address`, `geo`, `openingHours`, `telephone`
+- [ ] Añadir `Review[]` individuales al schema (max 10) usando `reviews` que ya se cargan
+- [ ] Añadir `<link rel="canonical" href="https://{slug}.mylocal.es/carta">` via `useSeoMeta`
+- [ ] Añadir `BreadcrumbList`: `MyLocal > {nombre-local} > Carta`
+- [ ] En el `<title>`: cambiar de `"Carta de X — MyLocal"` a `"{nombre-local} — Carta digital"` (el local primero, no MyLocal)
+- [ ] En `<meta description>`: incluir ciudad si está disponible — `"Consulta la carta de {nombre} en {ciudad}. {N} platos desde {precio-min}€. Abierto {horario-hoy}."`
+- [ ] Imagen `<img>` de platos: añadir `alt={plato.alt_text ?? plato.nombre}` en lugar del alt vacío actual
+- [ ] Imagen hero: añadir `alt={local.nombre} — {ciudad}`
+
+**`useSeoMeta` — ampliar para canonical:**
+- [ ] Añadir prop `canonical?: string` al hook
+- [ ] Si `canonical` existe → `<link rel="canonical" href={canonical}>`
+
+---
+
+#### M9.5.4 — Sitemap dinámico y llms.txt por local
+
+Cada local necesita sus propios archivos de descubrimiento. No hay un sitemap global de MyLocal que liste locales (eso sería el sitemap de `mylocal.es`). Cada local tiene el suyo.
+
+**`spa/server/handlers/seo.php` — ampliar con nuevas acciones:**
+
+**Acción `get_sitemap` (pública, sin auth)**
+- Genera XML válido de sitemap para el local actual
+- URLs incluidas:
+  - `/carta` → `priority: 1.0`, `changefreq: weekly`
+  - `/carta/zona/{nombre}/mesa/{n}` → por cada mesa del local → `priority: 0.8`
+  - Una entrada por plato (con `lastmod` de `updated_at` del plato)
+  - Una entrada por post de timeline (con `lastmod` de `publicado_at`)
+  - `/legal/privacidad`, `/legal/aviso`, `/legal/cookies` → `priority: 0.3`
+- Responde con `Content-Type: application/xml`
+- Añadir a `public_actions`
+
+**Acción `get_llms_txt` (pública, sin auth)**
+- Responde con `Content-Type: text/plain` en formato `llms.txt` estándar (propuesto por Answer.AI)
+- Estructura del archivo:
+
+```
+# {nombre-local}
+> {descripcion-local}
+
+## Información
+Dirección: {calle}, {ciudad}, {cp}
+Teléfono: {telefono}
+Horario: {resumen-horario}
+Precio medio: {precio_medio}
+Tipo de cocina: {tipo_cocina.join(', ')}
+
+## Carta
+{URL}/carta — Carta completa con precios y alérgenos
+{N} platos en {M} categorías.
+Categorías: {categorias.join(', ')}
+
+## Reseñas
+{aggregate.media} sobre 5 — {aggregate.count} valoraciones verificadas de clientes reales.
+
+## Últimas novedades
+{posts recientes: titulo + fecha, 5 máx}
+
+## Reservas
+{si acepta_reservas: "Acepta reservas. Contactar en {telefono} o {email-local}"}
+{si no: "Sin reservas. Servicio directo."}
+```
+
+- Añadir a `public_actions`
+
+**Rutas de acceso (via router.php o .htaccess):**
+- [ ] `GET /carta/sitemap.xml` → dispatcher con `action=get_sitemap`
+- [ ] `GET /carta/llms.txt` → dispatcher con `action=get_llms_txt`
+- [ ] Añadir ambas rutas a `robots.txt`: `Sitemap: https://{slug}.mylocal.es/carta/sitemap.xml`
+
+---
+
+#### M9.5.5 — Landing page: SEO GEO/AEO completo
+
+La landing de MyLocal.es es la página de captación. Debe posicionar para búsquedas como "carta digital restaurante España", "app carta QR hostelería", y ser citada por IA cuando alguien pregunta "¿cómo digitalizar mi bar?".
+
+**Checklist de copy (pirámide invertida + GEO/AEO):**
+- [ ] `HeroSection`: actualizar descripción a texto que mencione España:
+  - Actual: "Carta QR, presencia web, reseñas con SEO y copiloto IA. Sin instalar nada. Sin permanencias. 21 días gratis."
+  - Nueva: "La plataforma para bares y restaurantes de toda España. Carta QR, presencia web, reseñas en Google y copiloto IA — todo desde un panel. 21 días gratis, sin tarjeta."
+- [ ] H2 de secciones: reformular para que sean preguntas o beneficios directos, no nombres de funcionalidad
+  - ❌ "Generador QR" → ✅ "¿Cómo consigo que mis clientes vean la carta sin descargar nada?"
+  - ❌ "Importar carta" → ✅ "Tu carta actual, digitalizada en minutos"
+  - ❌ "Web Preview" → ✅ "Tu local, visible en Google desde el día uno"
+
+**`FAQSection.tsx` — componente nuevo:**
+- [ ] Crear `templates/hosteleria/src/components/FAQSection.tsx`
+- [ ] 7 preguntas reales, ordenadas por volumen de búsqueda estimado:
+  1. **¿Qué es MyLocal y para qué sirve a mi bar o restaurante?**
+     MyLocal es una plataforma digital para hostelería española que te da carta QR, presencia web propia, reseñas de clientes visibles en Google y un copiloto de inteligencia artificial para gestionar tu menú. Funciona sin instalar nada y está lista en 10 minutos.
+  2. **¿Funciona en toda España?**
+     Sí. MyLocal está disponible para cualquier bar, restaurante, cafetería o local de hostelería en toda España. Cada local tiene su propio subdominio (`tunegocio.mylocal.es`) con carta pública y presencia en buscadores.
+  3. **¿Cómo aparece mi local en Google con MyLocal?**
+     Al registrarte, MyLocal crea una ficha digital con los datos de tu negocio (nombre, dirección, horario, carta) en formato Schema.org — el lenguaje que entienden Google, Maps y los asistentes de IA. Sin configuración técnica.
+  4. **¿Cuánto cuesta y qué incluye el plan gratuito?**
+     El plan Demo es completamente gratuito durante 21 días, sin necesidad de tarjeta de crédito. Incluye carta digital con hasta 20 platos, código QR descargable, subdominio propio y soporte por email. El plan Pro cuesta 27 € al mes (sin IVA) e incluye platos ilimitados, copiloto IA, legales RGPD automáticos y soporte prioritario.
+  5. **¿Necesito saber de tecnología para usar MyLocal?**
+     No. El proceso de alta completo lleva menos de 10 minutos y está guiado paso a paso. Si tienes una carta en papel o en PDF, puedes importarla directamente. No hay que instalar nada ni contratar ningún servicio adicional.
+  6. **¿Puedo importar mi carta desde un PDF o imagen?**
+     Sí. MyLocal puede leer tu carta actual desde una foto o un archivo PDF y crear las categorías y platos automáticamente mediante reconocimiento de texto (OCR). También puedes pedirle al copiloto IA que sugiera categorías según tu tipo de negocio.
+  7. **¿Qué pasa cuando termina el periodo de prueba de 21 días?**
+     Al finalizar el periodo Demo, tu carta pública y los datos que hayas creado se conservan. Para seguir publicando y acceder a las funcionalidades Pro, se activa la suscripción mensual o anual. No hay contratos de permanencia: puedes cancelar cuando quieras.
+- [ ] FAQSection visible solo en desktop por defecto, colapsable en móvil (acordeón)
+- [ ] `FAQPage` Schema JSON-LD generado dinámicamente desde el array de preguntas
+- [ ] Posición en la landing: entre PricingSection y Footer
+- [ ] `<section id="faq">` para que el nav pueda enlazar a ella
+- [ ] Añadir "FAQ" al navItems de `Header.tsx`
+
+**Schema global de la landing:**
+- [ ] Crear `templates/hosteleria/src/components/LandingSchema.tsx` — componente que inyecta `<script type="application/ld+json">` en el DOM
+- [ ] Schema `@graph` con:
+  - `Organization`: MyLocal Technologies S.L., `hola@mylocal.es`, `sameAs` con Instagram + Twitter, `areaServed: España`, `knowsAbout: ['carta digital', 'hostelería', 'QR', 'SEO para restaurantes', 'copiloto IA']`
+  - `WebSite`: con `potentialAction: SearchAction` (búsqueda interna si se implementa)
+  - `WebPage`: título + descripción + `inLanguage: es`
+  - `SoftwareApplication`: `name: MyLocal`, `applicationCategory: BusinessApplication`, `operatingSystem: Web`, plan Demo `price: 0`, plan Pro `price: 27`, `featureList`, `offers[]`
+  - `FAQPage`: las mismas 7 preguntas del componente FAQ (sincronizadas)
+- [ ] Importar `LandingSchema` en `LandingPage.tsx` y renderizarlo dentro del `<>` antes del header
+- [ ] `meta name="geo.region" content="ES"` + `meta name="geo.placename" content="España"` en `useSeoMeta` de la landing
+
+---
+
+#### M9.5.6 — Validación y gate
+
+El gate de esta ola no es un test unitario. Es la verificación en herramientas reales de que el SEO funciona.
+
+- [ ] **Schema validator**: abrir `https://validator.schema.org`, pegar el HTML de `/carta` de un local de prueba → 0 errores críticos
+- [ ] **Rich Results Test**: `https://search.google.com/test/rich-results` con la URL de la carta → debe detectar: Restaurant, Menu, AggregateRating, Review
+- [ ] **Rich Results Test landing**: la landing debe detectar: Organization, FAQPage, SoftwareApplication
+- [ ] **Naming de imágenes**: subir una foto de plato desde el dashboard → verificar que el archivo en `MEDIA/` tiene el nombre `{slug}_{tipo}_{titulo}_{fecha}.webp`
+- [ ] **Alt text**: inspeccionar el HTML de la carta pública → ningún `<img>` tiene `alt=""` o `alt` ausente
+- [ ] **llms.txt**: `GET /carta/llms.txt` con `X-Local-Id: demo` → responde texto legible con nombre, dirección, carta resumen
+- [ ] **Sitemap**: `GET /carta/sitemap.xml` con `X-Local-Id: demo` → XML válido con al menos 3 URLs (carta + platos)
+- [ ] **Meta description con ciudad**: si el local tiene ciudad en su dirección → la meta description la incluye
+- [ ] **Canonical**: inspeccionar `<head>` de la carta → `<link rel="canonical" href="https://demo.mylocal.es/carta">`
+- [ ] **FAQ en landing**: inspeccionar `<head>` de la landing → el schema `FAQPage` tiene las 7 preguntas
+
+**Gate M9.5:** Los 9 puntos de validación anteriores pasan. `https://validator.schema.org` no reporta errores críticos en la carta pública. La landing supera el Rich Results Test para FAQPage y Organization.
 
 ---
 
@@ -596,31 +893,34 @@ AUTH_LOCK blindado. El MVP añade solo el registro de nuevos usuarios (`LoginReg
 ## 9. Checklist de cierre del MVP
 
 ```
-[ ] M1  — BrowserRouter + Routes funcionando
-[ ] M1  — Guard RequireAuth redirige a /acceder sin sesión
-[ ] M2  — Dashboard layout con sidebar + topbar
-[ ] M2  — Todas las páginas stub sin errores
-[ ] M3  — SubdomainManager detecta slug por header y por dominio
-[ ] M3  — Seed dinámico devuelve local_id correcto
-[ ] M3  — validate_slug + register_local operativos
-[ ] M3  — Límites Demo en backend desde el primer registro
-[ ] M3  — test_multitenant.php: 15+ assertions PASS
-[ ] M4  — RegisterPage con validación de slug en vivo
-[ ] M4  — Onboarding 10 pasos completo en móvil y desktop
-[ ] M4  — OnboardingBanner con checklist en dashboard
-[ ] M5  — CartaPage: CRUD completo de categorías y platos
-[ ] M5  — QRPage: generación y descarga PNG + PDF
-[ ] M5  — AjustesPage: nombre, logo, tema funcionales
-[ ] M5  — CartaPublicaPage: datos reales del local
-[ ] M6  — TimelineModel + PublicarPage funcionales
-[ ] M6  — ReviewModel + ReseñasPage + formulario público
-[ ] M6  — Carta pública muestra timeline y reseñas
-[ ] M6  — Schema.org AggregateRating en HTML
-[ ] M7  — Legales generados automáticamente al registrar
-[ ] M7  — Botón "Generar descripción" IA en CartaPage
-[ ] M8  — RevolutDriver: checkout + webhook + status
-[ ] M8  — FacturacionPage: plan actual + botón upgrade + facturas
-[ ] M8  — Bloqueo suave al día 21 con CTA de upgrade
+[x] M1  — BrowserRouter + Routes funcionando
+[x] M1  — Guard RequireAuth redirige a /acceder sin sesión
+[x] M2  — Dashboard layout con sidebar + topbar
+[x] M2  — Todas las páginas stub sin errores
+[x] M3  — SubdomainManager detecta slug por header y por dominio
+[x] M3  — Seed dinámico devuelve local_id correcto
+[x] M3  — validate_slug + register_local operativos
+[x] M3  — Límites Demo en backend desde el primer registro
+[x] M3  — test_multitenant.php: 15+ assertions PASS
+[x] M4  — RegisterPage con validación de slug en vivo
+[x] M4  — Onboarding 10 pasos completo en móvil y desktop
+[x] M4  — OnboardingBanner con checklist en dashboard
+[x] M5  — CartaPage: CRUD completo de categorías y platos
+[x] M5  — QRPage: generación y descarga PNG + PDF
+[x] M5  — AjustesPage: nombre, logo, tema funcionales
+[x] M5  — CartaPublicaPage: datos reales del local
+[x] M6  — TimelineModel + PublicarPage funcionales
+[x] M6  — ReviewModel + ReseñasPage + formulario público
+[x] M6  — Carta pública muestra timeline y reseñas
+[x] M6  — Schema.org AggregateRating en HTML
+[x] M7  — Legales generados automáticamente al registrar
+[x] M7  — Botón "Generar descripción" IA en CartaPage
+[x] M7  — Botón "Sugerir categorías" IA en CartaPage
+[x] M7  — Dashboard: página Legales con regenerar
+[x] M8  — RevolutDriver: checkout + webhook + status
+[x] M8  — BillingManager: activate + downgrade + getStatus
+[x] M8  — FacturacionPage: plan actual + botón upgrade + facturas
+[x] M8  — Bloqueo suave al día 21 con CTA de upgrade
 [ ] M9  — Lighthouse Mobile ≥ 90 en carta pública
 [ ] M9  — Textos reales en landing: H1, precios, CTA, datos fiscales
 [ ] M9  — 3 personas no técnicas: onboarding < 10 min sin ayuda

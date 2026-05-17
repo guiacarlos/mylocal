@@ -9,8 +9,13 @@ import PDFSection from '../components/PDFSection';
 import PricingSection from '../components/PricingSection';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+import { useSeoMeta } from '../hooks/useSeoMeta';
 
 export default function LandingPage() {
+  useSeoMeta({
+    title:       'MyLocal — Carta digital QR para bares y restaurantes de España',
+    description: 'La plataforma para bares y restaurantes de toda España. Carta digital QR, presencia web, reseñas en Google y copiloto IA. 21 días gratis, sin tarjeta.',
+  });
   return (
     <>
       <LandingSchema />

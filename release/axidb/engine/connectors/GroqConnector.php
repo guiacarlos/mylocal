@@ -1,8 +1,8 @@
-﻿<?php
+<?php
 
 /**
  *  ACIDE SOBERANO - GroqConnector v1.0
- * LibrerÃ­a de referencia para la conexiÃ³n total con la infraestructura de Groq.
+ * Librería de referencia para la conexión total con la infraestructura de Groq.
  * Implementa Chat, Respuestas (Beta), Audio, Modelos y Batches.
  */
 
@@ -96,7 +96,7 @@ class GroqConnector
     }
 
     /**
-     *  NÃšCLEO DE PETICIONES (Engine)
+     *  NÚCLEO DE PETICIONES (Engine)
      */
     private function request($method, $endpoint, $data = null, $isMultipart = false)
     {

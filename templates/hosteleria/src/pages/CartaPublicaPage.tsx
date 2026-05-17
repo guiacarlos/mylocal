@@ -133,6 +133,8 @@ export default function CartaPublicaPage() {
       setLoading(true);
       const localId = await resolveLocalId();
       if (!localId) { setLoading(false); return; }
+      // Registrar visita para analytics (fire-and-forget, sin bloquear la carga)
+      client.execute({ action: 'analytics_record', data: { local_id: localId, type: 'carta_visit' } }).catch(() => {});
       try {
         const [rl, rc, rp, rtl, ra, rrev, rs] = await Promise.all([
           client.execute<LocalInfo>(              { action: 'get_local',            data: { id: localId } }),
@@ -247,6 +249,10 @@ export default function CartaPublicaPage() {
                       </div>
                     )}
                   </div>
+                  {(plato.imagen_url ?? plato.media_url) && (
+                    <img src={plato.imagen_url ?? plato.media_url} alt={plato.alt_text ?? plato.nombre}
+                      loading="lazy" className="w-16 h-16 rounded-xl object-cover flex-shrink-0" />
+                  )}
                   <span className="flex-shrink-0 font-mono font-medium text-sm text-gray-800 mt-0.5">{Number(plato.precio).toFixed(2)} €</span>
                 </div>
               ))}

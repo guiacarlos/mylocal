@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import SplashScreen from './components/SplashScreen';
 import RequireAuth from './components/RequireAuth';
+import RequireSuperAdmin from './components/RequireSuperAdmin';
 import CookieBanner from './components/CookieBanner';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
@@ -10,6 +11,11 @@ import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import CartaPublicaPage from './pages/CartaPublicaPage';
 import LegalPage from './pages/LegalPage';
+import SuperAdminLayout from './pages/superadmin/SuperAdminLayout';
+import SALocalesPage from './pages/superadmin/SALocalesPage';
+import SAPlanesPage from './pages/superadmin/SAPlanesPage';
+import SACuponesPage from './pages/superadmin/SACuponesPage';
+import SAConfigPage from './pages/superadmin/SAConfigPage';
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -47,6 +53,23 @@ export default function App() {
             <Route path="/carta"              element={<CartaPublicaPage />} />
             <Route path="/carta/:zona/:mesa"  element={<CartaPublicaPage />} />
             <Route path="/legal/:doc"         element={<LegalPage />} />
+            {/* SuperAdmin — solo role=superadmin */}
+            <Route path="/superadmin/*" element={
+              <RequireAuth>
+                <RequireSuperAdmin>
+                  <SuperAdminLayout>
+                    <Routes>
+                      <Route index element={<Navigate to="/superadmin/locales" replace />} />
+                      <Route path="locales" element={<SALocalesPage />} />
+                      <Route path="planes"  element={<SAPlanesPage />} />
+                      <Route path="cupones" element={<SACuponesPage />} />
+                      <Route path="config"  element={<SAConfigPage />} />
+                      <Route path="*"       element={<Navigate to="/superadmin/locales" replace />} />
+                    </Routes>
+                  </SuperAdminLayout>
+                </RequireSuperAdmin>
+              </RequireAuth>
+            } />
             {/* Alias legacy: /login → /acceder */}
             <Route path="/login" element={<Navigate to="/acceder" replace />} />
           </Routes>

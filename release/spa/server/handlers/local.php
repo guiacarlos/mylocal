@@ -57,9 +57,48 @@ function handle_local(string $action, array $req, ?array $user, array $files = [
             if (!\Locales\LocalModel::userCanAccess($user, $id)) {
                 throw new RuntimeException('Sin permisos sobre este local');
             }
+            // Geocodificar si hay dirección estructurada pero no coordenadas
+            if (!empty($data['direccion']) && is_array($data['direccion'])
+                && (empty($data['lat']) || empty($data['lng']))) {
+                $geo = local_geocode_nominatim($data['direccion']);
+                if ($geo) {
+                    $data['lat'] = $geo['lat'];
+                    $data['lng'] = $geo['lng'];
+                }
+            }
             $r = \Locales\LocalModel::update($id, $data);
             if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'update_local');
-            return $r['data'] ?? $r;
+            $updated = $r['data'] ?? [];
+
+            // Invalidar caché SEO — el schema del local ha cambiado
+            require_once realpath(__DIR__ . '/../../../CAPABILITIES/SEO/SeoBuilder.php');
+            \SEO\SeoBuilder::invalidateCache($id);
+
+            // Regenerar legales si cambiaron nombre, dirección, teléfono o email
+            $legalFields = ['nombre', 'direccion', 'telefono', 'email'];
+            if (!empty(array_intersect(array_keys($data), $legalFields))) {
+                $legalFile = realpath(__DIR__ . '/../../../CAPABILITIES/LEGAL/LegalGenerator.php');
+                if ($legalFile) {
+                    require_once $legalFile;
+                    $dir = $updated['direccion'] ?? '';
+                    if (is_array($dir)) {
+                        $dir = trim(
+                            ($dir['calle']  ?? '') . ' ' . ($dir['numero'] ?? '') . ', ' .
+                            ($dir['cp']     ?? '') . ' ' . ($dir['ciudad'] ?? '')
+                        );
+                    }
+                    \Legal\LegalGenerator::generateForLocal(
+                        $id,
+                        (string)($updated['nombre']   ?? ''),
+                        (string)($updated['email']    ?? $updated['owner_email'] ?? ''),
+                        (string)($updated['slug']     ?? $id),
+                        (string)$dir,
+                        (string)($updated['telefono'] ?? '')
+                    );
+                }
+            }
+
+            return $updated;
 
         case 'upload_local_image':
             return local_upload_image($req, $files, $user);
@@ -100,27 +139,54 @@ function local_upload_image(array $req, array $files, array $user): array
         throw new RuntimeException("Formato no permitido: $ext (jpg/png/webp)");
     }
 
-    // MEDIA esta en la raiz del proyecto (regla del proyecto, ver CLAUDE.md)
     $mediaRoot = realpath(__DIR__ . '/../../../MEDIA');
     if (!$mediaRoot) {
         $mediaRoot = __DIR__ . '/../../../MEDIA';
         @mkdir($mediaRoot, 0775, true);
     }
-    $localDir = $mediaRoot . '/local/' . preg_replace('/[^a-z0-9_\-]/', '', strtolower($localId));
-    if (!is_dir($localDir)) @mkdir($localDir, 0775, true);
+    $cleanId  = preg_replace('/[^a-z0-9_\-]/', '', strtolower($localId));
+    $localDir = $mediaRoot . '/local/' . $cleanId;
 
-    $filename = 'hero_' . bin2hex(random_bytes(4)) . '.' . $ext;
-    $dest = $localDir . '/' . $filename;
-    if (!move_uploaded_file($f['tmp_name'], $dest)) {
-        throw new RuntimeException('Error guardando imagen');
-    }
+    require_once realpath(__DIR__ . '/../../../CORE/MediaUploader.php');
+    $local    = \Locales\LocalModel::read($localId) ?? [];
+    $nombre   = (string)($local['nombre'] ?? $localId);
+    $filename = \MediaUploader::buildFilename($cleanId, 'hero', $nombre, $ext);
+    $saved    = \MediaUploader::processAndSave($f['tmp_name'], $localDir, $filename);
 
-    // URL publica (servida por router.php / vite serveMediaPlugin)
-    $url = '/MEDIA/local/' . basename($localDir) . '/' . $filename;
-
+    $url = '/MEDIA/local/' . $cleanId . '/' . basename($saved);
     \Locales\LocalModel::update($localId, ['imagen_hero' => $url]);
 
     return ['url' => $url, 'local_id' => $localId];
+}
+
+/**
+ * Geocodifica una dirección estructurada llamando a Nominatim (OSM, gratuito).
+ * Retorna ['lat' => float, 'lng' => float] o null si falla / no hay resultado.
+ */
+function local_geocode_nominatim(array $dir): ?array
+{
+    $q = implode(' ', array_filter([
+        $dir['calle']    ?? '',
+        $dir['numero']   ?? '',
+        $dir['cp']       ?? '',
+        $dir['ciudad']   ?? '',
+        $dir['provincia'] ?? '',
+        $dir['pais']     ?? 'Spain',
+    ]));
+    if (trim($q) === '') return null;
+
+    $url  = 'https://nominatim.openstreetmap.org/search?q=' . urlencode($q)
+          . '&format=json&limit=1&addressdetails=0';
+    $ctx  = stream_context_create(['http' => [
+        'method'  => 'GET',
+        'header'  => "User-Agent: MyLocal/1.0 (infojuancarlosaguirre@gmail.com)\r\n",
+        'timeout' => 5,
+    ]]);
+    $json = @file_get_contents($url, false, $ctx);
+    if (!$json) return null;
+    $data = json_decode($json, true);
+    if (empty($data[0]['lat'])) return null;
+    return ['lat' => (float)$data[0]['lat'], 'lng' => (float)$data[0]['lon']];
 }
 
 /**

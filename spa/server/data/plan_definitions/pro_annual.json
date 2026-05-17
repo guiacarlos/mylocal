@@ -1,0 +1,19 @@
+{
+    "label": "Pro Anual",
+    "price_monthly": null,
+    "price_annual": 27000,
+    "max_platos": 0,
+    "max_mesas": 0,
+    "features": [
+        "carta_qr",
+        "reservas",
+        "ia",
+        "seo",
+        "crm",
+        "delivery"
+    ],
+    "id": "pro_annual",
+    "_updatedAt": "2026-05-17T20:04:34+00:00",
+    "_version": 1,
+    "_createdAt": "2026-05-17T20:04:34+00:00"
+}

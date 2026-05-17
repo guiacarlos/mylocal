@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace OCR;
 
 require_once __DIR__ . '/OCRHeuristicParser.php';

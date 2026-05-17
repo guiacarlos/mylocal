@@ -3,32 +3,32 @@ import { ChevronDown } from 'lucide-react';
 
 const FAQS = [
   {
-    pregunta: '¿Qué es MyLocal y para qué sirve?',
-    respuesta: 'MyLocal es una plataforma digital para bares y restaurantes: carta QR sin app, gestión de pedidos, TPV táctil, generador de PDF para imprenta, reseñas con Schema.org y presencia SEO automática. Todo sin instalar nada en el servidor, solo PHP.',
+    pregunta: '¿Qué es MyLocal y para qué sirve a mi bar o restaurante?',
+    respuesta: 'MyLocal es la plataforma todo en uno para hostelería española: carta digital QR sin app, importador de carta por foto o PDF, generador de PDF para imprenta, gestión de reseñas, TPV táctil y presencia SEO automática con Schema.org. Todo funciona desde el navegador, sin instalar nada.',
   },
   {
-    pregunta: '¿Necesito conocimientos técnicos para ponerlo en marcha?',
-    respuesta: 'No. El proceso de alta completo tarda menos de 5 minutos: introduces el nombre del local, subes o importas tu carta (foto, PDF o texto) y descargas el QR. No hay código, no hay configuración de base de datos.',
+    pregunta: '¿Funciona en toda España?',
+    respuesta: 'Sí. MyLocal está diseñado específicamente para negocios de hostelería en España. Puedes usarlo en cualquier comunidad autónoma: el panel, la carta pública y los documentos legales están en español y cumplen la normativa española vigente (RGPD, Verifactu, TicketBAI).',
   },
   {
-    pregunta: '¿Cómo importo mi carta actual?',
-    respuesta: 'MyLocal incluye un importador por OCR: fotografía la carta en papel o sube el PDF y la IA extrae categorías, platos, descripciones y precios automáticamente. También puedes crear la carta manualmente desde el panel.',
+    pregunta: '¿Cómo aparece mi local en Google con MyLocal?',
+    respuesta: 'Cada local genera automáticamente un sitemap.xml, un schema.org de tipo Restaurant + Menu y un fichero llms.txt. Google indexa los platos con rich results y los modelos de IA como ChatGPT o Perplexity pueden leer la información del restaurante directamente desde tu carta pública.',
   },
   {
-    pregunta: '¿Tiene plan gratuito?',
-    respuesta: 'Sí. El plan Demo incluye hasta 50 platos, carta QR pública, generación de QR, publicación de novedades y reseñas de clientes. Sin tarjeta de crédito. El plan Pro desbloquea platos ilimitados, PDF para imprenta, facturación Verifactu y soporte prioritario.',
+    pregunta: '¿Cuánto cuesta y qué incluye el plan gratuito?',
+    respuesta: 'El plan Demo es gratuito para siempre: carta QR pública, hasta 50 platos, generación de QR, reseñas de clientes y publicación de novedades. Sin tarjeta de crédito. El plan Pro cuesta 27 € al mes e incluye platos ilimitados, PDF para imprenta, copiloto IA, facturación Verifactu y soporte prioritario.',
   },
   {
-    pregunta: '¿Cómo obtengo el código QR de mesa?',
-    respuesta: 'Desde el panel ve a QR → Descargar. Puedes generar un QR único por mesa (para sistemas de pedido directo) o un QR general para la carta pública. El archivo descargado es un PNG de alta resolución listo para imprimir o plastificar.',
+    pregunta: '¿Necesito saber de tecnología para usar MyLocal?',
+    respuesta: 'No. El proceso de alta completo tarda menos de 5 minutos: nombre del local, importar o crear la carta y descargar el QR. No hay código, no hay base de datos que configurar, no hay servidores que mantener. Si algo falla, el soporte responde en menos de 24 horas.',
   },
   {
-    pregunta: '¿MyLocal aparece en Google y en inteligencias artificiales?',
-    respuesta: 'Sí. Cada carta genera automáticamente un schema.org Restaurant + Menu, un sitemap.xml y un llms.txt. Esto permite a Google indexar los platos con rich results, y a modelos como ChatGPT o Perplexity leer la información del local directamente.',
+    pregunta: '¿Puedo importar mi carta desde un PDF o imagen?',
+    respuesta: 'Sí. El importador OCR de MyLocal lee PDFs y fotografías de cartas en papel. La IA extrae categorías, nombres de platos, descripciones y precios automáticamente. Puedes revisar y corregir el resultado antes de publicarlo. También puedes crear la carta desde cero desde el panel.',
   },
   {
-    pregunta: '¿Qué es Verifactu y necesito activarlo?',
-    respuesta: 'Verifactu es el sistema de facturación electrónica obligatorio para negocios españoles a partir de 2025. Si utilizas el TPV de MyLocal para emitir tickets o facturas, el módulo Verifactu los firma y envía a la AEAT automáticamente. Si solo usas la carta QR no es necesario.',
+    pregunta: '¿Qué pasa cuando termina el periodo de prueba de 21 días?',
+    respuesta: 'Nada se borra. Al terminar los 21 días de prueba del plan Pro, el local pasa automáticamente al plan Demo gratuito: la carta QR pública sigue activa, los platos existentes se conservan (hasta el límite de 50) y los datos del negocio permanecen íntegros. Puedes reactivar Pro cuando quieras.',
   },
 ];
 

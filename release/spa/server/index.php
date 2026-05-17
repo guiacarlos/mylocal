@@ -96,6 +96,8 @@ const ALLOWED_ACTIONS = [
     'auth_login', 'auth_logout', 'auth_me', 'auth_refresh_session', 'get_current_user', 'public_register',
     // Recuperación de contraseña (sin sesión — token enviado por soporte)
     'auth_forgot_password', 'auth_reset_password',
+    // Cambio de contraseña (requiere sesión activa)
+    'auth_change_password',
     'csrf_token',
     // Pagos
     'create_payment_intent', 'check_revolut_payment', 'create_revolut_payment', 'revolut_webhook',
@@ -173,6 +175,18 @@ const ALLOWED_ACTIONS = [
     'get_local_schema',
     // Google Calendar OAuth2
     'gcal_oauth_start', 'gcal_status', 'gcal_disconnect',
+    // RGPD — exportación de datos (art. 20 portabilidad)
+    'export_local_data',
+    // Mantenimiento — limpieza de datos caducados
+    'purge_expired_data',
+    // Analytics — contadores de uso por local
+    'analytics_record', 'analytics_get',
+    // SuperAdmin — gestión global del SaaS (solo superadmin)
+    'sa_list_locals', 'sa_get_local', 'sa_update_local',
+    'sa_suspend_local', 'sa_activate_local', 'sa_delete_local', 'sa_override_plan',
+    'sa_list_plan_defs', 'sa_update_plan_def',
+    'sa_list_coupons', 'sa_create_coupon', 'sa_update_coupon', 'sa_delete_coupon',
+    'sa_get_global_config', 'sa_update_global_config',
 ];
 
 // Acciones que NO requieren sesión activa. Fuente de verdad única: aquí.
@@ -213,6 +227,10 @@ const PUBLIC_ACTIONS = [
     'revolut_webhook', 'webhook_revolut',
     // SEO — schema JSON-LD cacheado 24h, accesible sin sesión
     'get_local_schema',
+    // Analytics — registro de visitas sin sesión (la carta pública es pública)
+    'analytics_record',
+    // Precios públicos — landing page los lee sin sesión
+    'get_plan_prices',
 ];
 
 if (!$action) resp(false, null, 'action requerida');
@@ -274,6 +292,11 @@ try {
         case 'auth_reset_password':
             require_once __DIR__ . '/handlers/auth.php';
             resp(true, handle_password_reset($action, $req));
+
+        case 'auth_change_password':
+            require_once __DIR__ . '/handlers/auth.php';
+            if (!$user) { resp(false, null, 'Sesión requerida'); exit; }
+            resp(true, handle_auth_change_password($req, $user));
 
         case 'create_payment_intent':
         case 'check_revolut_payment':
@@ -583,6 +606,79 @@ try {
             require_once __DIR__ . '/handlers/gcal.php';
             require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
             resp(true, \GCalHandler\handle_gcal($action, $req, $user));
+
+        // ── RGPD — exportación de datos (art. 20 portabilidad) ───────────
+        case 'export_local_data':
+            require_once __DIR__ . '/handlers/export.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
+            resp(true, handle_export_local_data($req, $user));
+
+        // ── MANTENIMIENTO — limpieza de datos caducados ──────────────────
+        case 'purge_expired_data':
+            require_once __DIR__ . '/handlers/maintenance.php';
+            require_role($user, ['superadmin']);
+            resp(true, handle_purge_expired($req, $user));
+
+        // ── PRECIOS PÚBLICOS — landing page sin sesión ────────────────────
+        case 'get_plan_prices':
+            $defaults = ['demo' => 0, 'pro_monthly' => 2700, 'pro_annual' => 26000];
+            $prices   = [];
+            foreach ($defaults as $key => $fallback) {
+                $def    = data_get('plan_definitions', $key) ?? [];
+                $amount = $key === 'pro_annual'
+                    ? (int) ($def['price_annual']  ?? $fallback)
+                    : (int) ($def['price_monthly'] ?? $fallback);
+                $prices[$key] = ['amount' => $amount, 'currency' => 'EUR'];
+            }
+            resp(true, $prices);
+
+        // ── ANALYTICS — contadores de uso por local ───────────────────────
+        case 'analytics_record':
+            require_once __DIR__ . '/handlers/analytics.php';
+            resp(true, handle_analytics($action, $req, $user));
+
+        case 'analytics_get':
+            require_once __DIR__ . '/handlers/analytics.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
+            resp(true, handle_analytics($action, $req, $user));
+
+        // ── SUPERADMIN — gestión global del SaaS ─────────────────────────
+        case 'sa_list_locals':
+        case 'sa_get_local':
+        case 'sa_update_local':
+        case 'sa_suspend_local':
+        case 'sa_activate_local':
+        case 'sa_delete_local':
+        case 'sa_override_plan':
+        case 'sa_list_plan_defs':
+        case 'sa_update_plan_def':
+        case 'sa_list_coupons':
+        case 'sa_create_coupon':
+        case 'sa_update_coupon':
+        case 'sa_delete_coupon':
+        case 'sa_get_global_config':
+        case 'sa_update_global_config':
+            require_once __DIR__ . '/handlers/superadmin.php';
+            require_role($user, ['superadmin']);
+            $saData = $req['data'] ?? [];
+            $saResult = match ($action) {
+                'sa_list_locals'          => sa_list_locals(),
+                'sa_get_local'            => sa_get_local($saData),
+                'sa_update_local'         => sa_update_local($saData),
+                'sa_suspend_local'        => sa_suspend_local($saData),
+                'sa_activate_local'       => sa_activate_local($saData),
+                'sa_delete_local'         => sa_delete_local($saData),
+                'sa_override_plan'        => sa_override_plan($saData),
+                'sa_list_plan_defs'       => sa_list_plan_defs(),
+                'sa_update_plan_def'      => sa_update_plan_def($saData),
+                'sa_list_coupons'         => sa_list_coupons(),
+                'sa_create_coupon'        => sa_create_coupon($saData),
+                'sa_update_coupon'        => sa_update_coupon($saData),
+                'sa_delete_coupon'        => sa_delete_coupon($saData),
+                'sa_get_global_config'    => sa_get_global_config(),
+                'sa_update_global_config' => sa_update_global_config($saData),
+            };
+            resp(true, $saResult);
 
         default:
             resp(false, null, "Acción no implementada: $action");

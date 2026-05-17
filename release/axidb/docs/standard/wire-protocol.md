@@ -86,7 +86,7 @@ X-Axi-Op: <nombre del op/action>
 X-Axi-Duration-Ms: <ms>
 ```
 
-Nota: X-Axi-Storage-Root y X-Axi-Project fueron eliminados (exponían rutas del servidor).
+Nota: X-Axi-Storage-Root y X-Axi-Project fueron eliminados en la auditoría de seguridad (exponían rutas del sistema de archivos del servidor).
 
 ---
 

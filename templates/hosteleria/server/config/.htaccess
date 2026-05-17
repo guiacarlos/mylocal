@@ -1,3 +1,0 @@
-# Deny directo a todos los archivos de configuración.
-# Los .json con secretos reales nunca deben servirse por HTTP.
-Require all denied

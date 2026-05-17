@@ -23,10 +23,19 @@ class UserHandler extends BaseHandler
         $currentUser = isset($this->services['auth']) ? $this->services['auth']->validateRequest() : null;
         $currentRole = $currentUser ? $currentUser['role'] : null;
 
-        // Si es una acción protegida, validar permisos básicos (mínimo admin)
-        $protectedActions = ['create_user', 'delete_user', 'list_users'];
-        if (in_array($action, $protectedActions)) {
-            $this->requirePermission($currentRole, array('superadmin', 'admin'));
+        // Todas las acciones de usuario requieren sesión activa excepto public_register
+        if ($action !== 'public_register' && !$currentUser) {
+            throw new \Exception('Autenticación requerida');
+        }
+
+        // Acciones que exigen rol admin o superior
+        $adminActions = ['create_user', 'delete_user', 'list_users', 'update_user', 'read_user'];
+        if (in_array($action, $adminActions)) {
+            $isSelf = in_array($action, ['read_user', 'update_user'])
+                   && ($currentUser['id'] ?? '') === ($args['id'] ?? null);
+            if (!$isSelf) {
+                $this->requirePermission($currentRole, ['superadmin', 'admin']);
+            }
         }
 
         switch ($action) {

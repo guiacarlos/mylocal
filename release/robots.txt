@@ -1,3 +1,10 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
+Disallow: /dashboard/
+Disallow: /acide/
+Disallow: /seed/
+Disallow: /STORAGE/
+Disallow: /MEDIA/
+Disallow: /spa/server/
+
 Sitemap: /sitemap.xml

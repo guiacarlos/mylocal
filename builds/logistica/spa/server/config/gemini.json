@@ -1,0 +1,15 @@
+{
+    "_doc": "Config Gemini / Google Generative AI. Copia a gemini.json y rellena. NUNCA commitees gemini.json con api_key real.",
+    "api_key": "",
+    "default_model": "gemini-1.5-flash",
+    "fallback_model": "gemini-1.5-flash",
+    "allowed_models": [
+        "gemini-1.5-flash",
+        "gemini-1.5-pro",
+        "gemini-2.5-flash"
+    ],
+    "max_history_turns": 20,
+    "default_system_prompt": "Eres un asistente útil, conciso y con conocimiento del contexto que se te proporcione.",
+    "rate_limit_per_minute_per_ip": 30,
+    "timeout_seconds": 30
+}

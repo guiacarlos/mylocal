@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Loader2, ArrowLeft } from 'lucide-react';
-import { useSynaxisClient, login } from '@mylocal/sdk';
+import { useSynaxisClient, login, getCachedUser } from '@mylocal/sdk';
 
 type View = 'login' | 'forgot' | 'reset';
 
@@ -12,6 +12,14 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const from     = (location.state as { from?: Location })?.from?.pathname ?? '/dashboard';
+
+  // Si ya hay sesión activa, redirigir directamente
+  useEffect(() => {
+    const cached = getCachedUser();
+    if (cached) {
+      navigate(cached.role === 'superadmin' ? '/superadmin' : from, { replace: true });
+    }
+  }, []);
 
   const [view,     setView]     = useState<View>('login');
   const [email,    setEmail]    = useState('');
@@ -26,8 +34,12 @@ export default function LoginPage() {
     setError(''); setLoading(true);
     try {
       const res = await login(client, email, password);
-      if (res.success) { navigate(from, { replace: true }); }
-      else             { setError(res.error ?? 'Credenciales incorrectas'); }
+      if (res.success) {
+        const dest = res.user?.role === 'superadmin' ? '/superadmin' : from;
+        navigate(dest, { replace: true });
+      } else {
+        setError(res.error ?? 'Credenciales incorrectas');
+      }
     } catch { setError('Error de conexión. Inténtalo de nuevo.'); }
     setLoading(false);
   }

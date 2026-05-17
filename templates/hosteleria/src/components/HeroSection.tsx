@@ -54,7 +54,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="hidden sm:block text-[14px] text-gray-500 leading-relaxed max-w-xs mx-auto lg:mx-0 mb-6">
-            Carta QR, presencia web, reseñas con SEO y copiloto IA. Sin instalar nada. Sin permanencias. 21 días gratis.
+            La plataforma para bares y restaurantes de toda España. Carta QR, presencia web, reseñas en Google y copiloto IA — todo desde un panel. 21 días gratis, sin tarjeta.
           </p>
 
           <a href="/registro"

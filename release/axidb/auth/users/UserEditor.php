@@ -27,8 +27,8 @@ class UserEditor
         if (!$user)
             return ['success' => false, 'error' => 'No encontrado'];
 
-        // SOBERANÍA: Permitimos cualquier dato excepto campos críticos protegidos
-        $protected = ['id', 'password_hash', 'email', 'created_at', 'last_login'];
+        // Solo estos campos son inmutables desde el exterior — 'role' incluido para prevenir escalación de privilegios
+        $protected = ['id', 'password_hash', 'email', 'created_at', 'last_login', 'role'];
 
         foreach ($updates as $key => $val) {
             if (!in_array($key, $protected)) {

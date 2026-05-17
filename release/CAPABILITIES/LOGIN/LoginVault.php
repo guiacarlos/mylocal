@@ -60,4 +60,10 @@ class LoginVault
         if (!function_exists('data_all')) return [];
         return data_all('users');
     }
+
+    /** Actualiza solo el password_hash sin tocar el resto del perfil. */
+    public static function updateHash(string $id, string $hash): void
+    {
+        self::patch($id, ['password_hash' => $hash]);
+    }
 }

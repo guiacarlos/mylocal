@@ -1,15 +1,15 @@
-﻿<?php
+<?php
 
 namespace AGENTE_RESTAURANTE;
 
 /**
- * ðŸ‘¨â€ðŸ³ Agente_restauranteEngine
+ * 👨‍🍳 Agente_restauranteEngine
  *
- * PATRÃ“N IDÃ‰NTICO AL DE ACADEMIA (chat_gemini.php) â€” probado y funcional:
- *   1. Vault (Levenshtein â‰¥80%) â†’ respuesta instantÃ¡nea
- *   2. BÃºsqueda en catÃ¡logo â†’ si existe, respuesta PHP directa
- *   3. Gemini (curl directo, igual que chat_gemini.php) â†’ contexto de carta
- *   4. Auto-save vault (solo respuestas vÃ¡lidas)
+ * PATRÓN IDÉNTICO AL DE ACADEMIA (chat_gemini.php) — probado y funcional:
+ *   1. Vault (Levenshtein ≥80%) → respuesta instantánea
+ *   2. Búsqueda en catálogo → si existe, respuesta PHP directa
+ *   3. Gemini (curl directo, igual que chat_gemini.php) → contexto de carta
+ *   4. Auto-save vault (solo respuestas válidas)
  */
 class Agente_restauranteEngine
 {
@@ -50,7 +50,7 @@ class Agente_restauranteEngine
 
             case 'update_agent_config':
                 $this->crud->update('agente_restaurante', 'settings', $args);
-                return ['success' => true, 'message' => 'ConfiguraciÃ³n actualizada.'];
+                return ['success' => true, 'message' => 'Configuración actualizada.'];
 
             case 'list_agents':
                 $settings = $this->crud->read('agente_restaurante', 'settings');
@@ -71,21 +71,21 @@ class Agente_restauranteEngine
                 return $this->bootstrap();
 
             default:
-                throw new \Exception("AcciÃ³n de Agente Restaurante no reconocida: $action");
+                throw new \Exception("Acción de Agente Restaurante no reconocida: $action");
         }
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    //  CHAT PRINCIPAL â€” mismo patrÃ³n que chat_gemini.php de Academia
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
+    //  CHAT PRINCIPAL — mismo patrón que chat_gemini.php de Academia
+    // ══════════════════════════════════════════════════════════════════
     private function handleChat($args)
     {
         $query = trim($args['prompt'] ?? $args['query'] ?? '');
         if (empty($query)) {
-            return ['success' => false, 'error' => 'Pregunta vacÃ­a'];
+            return ['success' => false, 'error' => 'Pregunta vacía'];
         }
 
-        // â”€â”€ Cargar catÃ¡logo publicado â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Cargar catálogo publicado ─────────────────────────────────
         $allProducts = $this->crud->list('carta_productos');
         $catalog = [];
         foreach ($allProducts as $p) {
@@ -94,13 +94,13 @@ class Agente_restauranteEngine
             }
         }
 
-        // â”€â”€ PASO 1: VAULT (Levenshtein â‰¥80%, igual que Academia) â”€â”€â”€â”€â”€
+        // ── PASO 1: VAULT (Levenshtein ≥80%, igual que Academia) ─────
         $vault = $this->crud->read('agente_restaurante', 'vault_carta') ?: ['entries' => []];
         $entries = $vault['entries'] ?? [];
 
         $cleanStr = function ($s) {
             $s = mb_strtolower($s, 'UTF-8');
-            $s = str_replace(['?', 'Â¿', '!', 'Â¡', '.', ',', ':', ';'], '', $s);
+            $s = str_replace(['?', '¿', '!', '¡', '.', ',', ':', ';'], '', $s);
             return trim($s);
         };
         $targetQuery = $cleanStr($query);
@@ -122,7 +122,7 @@ class Agente_restauranteEngine
                     'data' => [
                         'content' => $entry['answer'],
                         'product' => $product ? $this->sanitizeProduct($product) : null,
-                        'tiene' => (stripos($entry['answer'], 'sÃ­') !== false || stripos($entry['answer'], 'tenemos') !== false),
+                        'tiene' => (stripos($entry['answer'], 'sí') !== false || stripos($entry['answer'], 'tenemos') !== false),
                         'is_instant' => true,
                         'status' => 'vault_match',
                         'similarity' => round($sim * 100, 2)
@@ -131,8 +131,8 @@ class Agente_restauranteEngine
             }
         }
 
-        // â”€â”€ PASO 2: BÃºsqueda rÃ¡pida en catÃ¡logo (Presencia/Precio) â”€â”€â”€â”€â”€
-        // Solo disparamos respuesta rÃ¡pida si NO parece una pregunta tÃ©cnica compleja
+        // ── PASO 2: Búsqueda rápida en catálogo (Presencia/Precio) ─────
+        // Solo disparamos respuesta rápida si NO parece una pregunta técnica compleja
         $technicalWords = ['lleva', 'tiene', 'alergia', 'vegano', 'gluten', 'como', 'prepara', 'hace', 'que es', 'ingredientes', 'lactosa'];
         $isTechnical = false;
         foreach ($technicalWords as $tw) {
@@ -145,7 +145,7 @@ class Agente_restauranteEngine
         if (!$isTechnical) {
             $found = $this->searchProductInQuery($query, $catalog);
             if ($found) {
-                $ans = "SÃ­, tenemos el {$found['name']}. " . ($found['description'] ?? '') . " â€” " . number_format((float) ($found['price'] ?? 0), 2, ',', '') . " â‚¬.";
+                $ans = "Sí, tenemos el {$found['name']}. " . ($found['description'] ?? '') . " — " . number_format((float) ($found['price'] ?? 0), 2, ',', '') . " €.";
                 $this->saveToVault($query, $ans, $entries, $vault);
                 return [
                     'success' => true,
@@ -159,8 +159,8 @@ class Agente_restauranteEngine
             }
         }
 
-        // â”€â”€ PASO 3: GEMINI directo (con curl, igual que Academia) â”€â”€â”€â”€â”€
-        // Buscar API key en mÃºltiples ubicaciones (multi-tenant)
+        // ── PASO 3: GEMINI directo (con curl, igual que Academia) ─────
+        // Buscar API key en múltiples ubicaciones (multi-tenant)
         $sysConfig = $this->crud->read('system', 'configs') ?: [];
         $apiKey = $sysConfig['google_key'] ?? '';
         $model  = $sysConfig['ai_model'] ?? '';
@@ -178,7 +178,7 @@ class Agente_restauranteEngine
             return [
                 'success' => true,
                 'data' => [
-                    'content' => 'Lo sentimos, el asistente no estÃ¡ configurado correctamente en el bÃºnker. Consulte al administrador.',
+                    'content' => 'Lo sentimos, el asistente no está configurado correctamente en el búnker. Consulte al administrador.',
                     'tiene' => null,
                     'product' => null,
                     'status' => 'no_config'
@@ -186,16 +186,16 @@ class Agente_restauranteEngine
             ];
         }
 
-        // ðŸ•°ï¸ Contexto Temporal (Ofertas y Horarios)
+        // 🕰️ Contexto Temporal (Ofertas y Horarios)
         $hour = (int) date('H');
         $day = date('l');
-        $moment = "MAÃ‘ANA (Desayunos)";
+        $moment = "MAÑANA (Desayunos)";
         if ($hour >= 12 && $hour < 16)
-            $moment = "MEDIODÃA (Comidas/Brunch)";
+            $moment = "MEDIODÍA (Comidas/Brunch)";
         if ($hour >= 16)
             $moment = "TARDE (Meriendas)";
 
-        // ðŸ““ Sugerencias del Dashboard (Sala/Cocina)
+        // 📓 Sugerencias del Dashboard (Sala/Cocina)
         $internalNotes = $this->crud->read('agente_restaurante', 'internal_notes');
         $suggestions = "";
         if (!empty($internalNotes['entries'])) {
@@ -206,16 +206,16 @@ class Agente_restauranteEngine
             }
         }
 
-        // Contexto: carta completa basada en Inteligencia GastronÃ³mica real
+        // Contexto: carta completa basada en Inteligencia Gastronómica real
         $cartaCtx = "";
         foreach (array_slice($catalog, 0, 40) as $p) {
             $cat = $p['category'] ?? 'General';
             $descIA = $p['ai_description'] ?? ($p['description'] ?? '');
             $ingrid = !empty($p['ingredients']) ? "Ingredientes: " . implode(', ', (array) $p['ingredients']) : "";
-            $alerg = !empty($p['allergens']) ? "ALÃ‰RGENOS: " . implode(', ', (array) $p['allergens']) : "";
+            $alerg = !empty($p['allergens']) ? "ALÉRGENOS: " . implode(', ', (array) $p['allergens']) : "";
 
             $cartaCtx .= "- PRODUCTO: {$p['name']} ({$cat})\n";
-            $cartaCtx .= "  Precio: " . number_format((float) ($p['price'] ?? 0), 2, ',', '') . "â‚¬\n";
+            $cartaCtx .= "  Precio: " . number_format((float) ($p['price'] ?? 0), 2, ',', '') . "€\n";
             if ($descIA)
                 $cartaCtx .= "  Info IA: {$descIA}\n";
             if ($ingrid)
@@ -240,11 +240,11 @@ class Agente_restauranteEngine
         $systemPrompt .= "INSTRUCCIONES DIRECTAS DE SALA/COCINA (Prioriza esto):\n" . ($suggestions ?: "Vender normalmente.") . "\n\n";
 
         $systemPrompt .= "OBJETIVOS:\n";
-        $systemPrompt .= "1. Si el cliente pregunta por algo, dÃ¡selo. Si no estÃ¡ en carta, sugiere una alternativa lÃ³gica de la misma categorÃ­a.\n";
-        $systemPrompt .= "2. PERSUASIÃ“N: Usa 'Maridaje Sugerido'. Por ejemplo, si eligen cafÃ©, recomienda un dulce.\n";
-        $systemPrompt .= "3. ALÃ‰RGENOS: Si el cliente menciona alergias o preferencias (vegano, gluten), revisa bien los Tags y la descripciÃ³n.\n";
-        $systemPrompt .= "4. BREVEDAD: MÃ¡ximo 2-3 frases elegantes. Sin markdown.\n\n";
-        $systemPrompt .= "CARTA SOCOLÃ:\n{$cartaCtx}";
+        $systemPrompt .= "1. Si el cliente pregunta por algo, dáselo. Si no está en carta, sugiere una alternativa lógica de la misma categoría.\n";
+        $systemPrompt .= "2. PERSUASIÓN: Usa 'Maridaje Sugerido'. Por ejemplo, si eligen café, recomienda un dulce.\n";
+        $systemPrompt .= "3. ALÉRGENOS: Si el cliente menciona alergias o preferencias (vegano, gluten), revisa bien los Tags y la descripción.\n";
+        $systemPrompt .= "4. BREVEDAD: Máximo 2-3 frases elegantes. Sin markdown.\n\n";
+        $systemPrompt .= "CARTA SOCOLÁ:\n{$cartaCtx}";
 
         // Historial
         $contents = [];
@@ -280,7 +280,7 @@ class Agente_restauranteEngine
         $responseText = trim($responseText);
 
         if ($httpCode !== 200 || empty($responseText)) {
-            $responseText = "Lo sentimos, tenemos un problema de conexiÃ³n con el MaÃ®tre. Pero le sugiero echar un vistazo a nuestro cafÃ© de especialidad.";
+            $responseText = "Lo sentimos, tenemos un problema de conexión con el Maître. Pero le sugiero echar un vistazo a nuestro café de especialidad.";
         }
 
         // Auto-save vault (igual que Academia)
@@ -301,12 +301,12 @@ class Agente_restauranteEngine
         ];
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    //  BÃšSQUEDA DE PRODUCTO EN QUERY
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
+    //  BÚSQUEDA DE PRODUCTO EN QUERY
+    // ══════════════════════════════════════════════════════════════════
 
     /**
-     * Busca si algÃºn producto del catÃ¡logo estÃ¡ mencionado en la pregunta.
+     * Busca si algún producto del catálogo está mencionado en la pregunta.
      * Usa Levenshtein como la Academia, no regex complicados.
      */
     private function searchProductInQuery($query, $catalog)
@@ -328,7 +328,7 @@ class Agente_restauranteEngine
         foreach ($catalog as $p) {
             $nameLower = mb_strtolower($p['name'] ?? '', 'UTF-8');
 
-            // Coincidencia exacta por substring (el mÃ¡s fiable)
+            // Coincidencia exacta por substring (el más fiable)
             if (strpos($queryLower, $nameLower) !== false) {
                 return $p;
             }
@@ -348,8 +348,8 @@ class Agente_restauranteEngine
     }
 
     /**
-     * Busca si algÃºn nombre de producto aparece en un texto libre (respuesta de Gemini).
-     * Ahora es mÃ¡s inteligente: si el producto se llama "Tosta (Vegana)" y el texto dice "Tosta", lo encuentra.
+     * Busca si algún nombre de producto aparece en un texto libre (respuesta de Gemini).
+     * Ahora es más inteligente: si el producto se llama "Tosta (Vegana)" y el texto dice "Tosta", lo encuentra.
      */
     private function findProductInText($text, $catalog)
     {
@@ -365,7 +365,7 @@ class Agente_restauranteEngine
             if (strpos($textUpper, $nameUpper) !== false)
                 return $p;
 
-            // 2. Intento: Nombre limpio (sin lo que haya en parÃ©ntesis, ej: "Tosta Montreal")
+            // 2. Intento: Nombre limpio (sin lo que haya en paréntesis, ej: "Tosta Montreal")
             $cleanName = trim(preg_replace('/\s*\(.*?\)\s*/', ' ', $nameOriginal));
             $cleanUpper = mb_strtoupper($cleanName, 'UTF-8');
             if (strlen($cleanUpper) > 3 && strpos($textUpper, $cleanUpper) !== false) {
@@ -387,22 +387,22 @@ class Agente_restauranteEngine
         ];
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    //  VAULT â€” igual que Academia
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
+    //  VAULT — igual que Academia
+    // ══════════════════════════════════════════════════════════════════
 
     private function saveToVault($question, $answer, $currentEntries, $vaultDoc)
     {
         // No guardar respuestas de error o muy cortas
         if (empty($answer) || strlen($answer) < 20)
             return;
-        $badWords = ['repetir', 'Bienvenido a SocolÃ¡', 'Error', 'no configurado', 'problema de conexiÃ³n', 'lo sentimos'];
+        $badWords = ['repetir', 'Bienvenido a Socolá', 'Error', 'no configurado', 'problema de conexión', 'lo sentimos'];
         foreach ($badWords as $b) {
             if (stripos($answer, $b) !== false)
                 return;
         }
 
-        // No duplicar (Levenshtein â‰¥80%)
+        // No duplicar (Levenshtein ≥80%)
         $cleanStr = mb_strtolower($question, 'UTF-8');
         foreach ($currentEntries as $e) {
             $storedQ = mb_strtolower($e['query'] ?? '', 'UTF-8');
@@ -422,7 +422,7 @@ class Agente_restauranteEngine
             'auto' => true
         ];
 
-        // MÃ¡x 300 entradas FIFO
+        // Máx 300 entradas FIFO
         if (count($currentEntries) > 300) {
             $currentEntries = array_slice($currentEntries, -300);
         }
@@ -446,9 +446,9 @@ class Agente_restauranteEngine
         return ['success' => true];
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    //  MÃ‰TODOS AUXILIARES
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
+    //  MÉTODOS AUXILIARES
+    // ══════════════════════════════════════════════════════════════════
 
     public function searchMenu($query, $category = null)
     {
@@ -500,9 +500,9 @@ class Agente_restauranteEngine
         return $results;
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
     //  BOOTSTRAP
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ══════════════════════════════════════════════════════════════════
     private function bootstrap()
     {
         $settings = $this->crud->read('agente_restaurante', 'settings');
@@ -512,7 +512,7 @@ class Agente_restauranteEngine
                 'agents' => [
                     [
                         'id' => 'default',
-                        'name' => 'MaÃ®tre SocolÃ¡',
+                        'name' => 'Maître Socolá',
                         'category' => 'SALA',
                         'tone' => 'Cordial, elegante y conciso',
                         'context' => 'Eres el asistente del restaurante. Conoces todos los productos a la perfeccion y recomiendas con profesionalidad.'
@@ -525,8 +525,8 @@ class Agente_restauranteEngine
             $this->crud->update('agente_restaurante', 'vault_carta', [
                 'id' => 'vault_carta',
                 'entries' => [
-                    ['id' => 'v0', 'query' => 'quÃ© me recomiendas', 'answer' => 'Nuestro Espresso Blend EcolÃ³gico o las Lotus French Toasts son una elecciÃ³n excelente.', 'auto' => false, 'created_at' => date('c')],
-                    ['id' => 'v1', 'query' => 'hacÃ©is cafÃ© con leche', 'answer' => 'SÃ­, tenemos CafÃ© con Leche con leche cremosa de primera calidad, por 2,00 â‚¬.', 'auto' => false, 'created_at' => date('c')]
+                    ['id' => 'v0', 'query' => 'qué me recomiendas', 'answer' => 'Nuestro Espresso Blend Ecológico o las Lotus French Toasts son una elección excelente.', 'auto' => false, 'created_at' => date('c')],
+                    ['id' => 'v1', 'query' => 'hacéis café con leche', 'answer' => 'Sí, tenemos Café con Leche con leche cremosa de primera calidad, por 2,00 €.', 'auto' => false, 'created_at' => date('c')]
                 ]
             ]);
         }

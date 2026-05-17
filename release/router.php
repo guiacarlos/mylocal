@@ -81,6 +81,13 @@ if ($path === '/carta/sitemap.xml' || $path === '/carta/llms.txt') {
     exit;
 }
 
+// Asistente de primera configuración — solo funciona con STORAGE/ vacío
+if ($path === '/setup') {
+    $setupFile = $root . '/setup.php';
+    if (file_exists($setupFile)) { require $setupFile; } else { http_response_code(404); echo 'setup.php no encontrado'; }
+    exit;
+}
+
 // Google OAuth2 callback — Google redirige aquí tras autorizar Calendar
 if ($path === '/server/gcal_callback.php') {
     $cb = $root . '/spa/server/gcal_callback.php';

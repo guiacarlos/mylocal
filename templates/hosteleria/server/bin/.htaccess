@@ -1,4 +1,0 @@
-# Los scripts CLI (create-admin.php etc.) nunca deben ejecutarse vía HTTP.
-# Además cada script valida `if (PHP_SAPI !== 'cli') exit` como defensa
-# en profundidad.
-Require all denied

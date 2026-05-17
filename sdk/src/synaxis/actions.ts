@@ -183,6 +183,24 @@ export const ACTION_CATALOG: readonly ActionMeta[] = [
     { action: 'openclaw_call',        scope: 'server', domain: 'openclaw' },
     { action: 'openclaw_status',      scope: 'server', domain: 'openclaw' },
     { action: 'openclaw_event_push',  scope: 'server', domain: 'openclaw' },
+    // PRECIOS PÚBLICOS — landing page
+    { action: 'get_plan_prices', scope: 'server', domain: 'billing' },
+    // SUPERADMIN — gestión global SaaS (siempre servidor)
+    { action: 'sa_list_locals',          scope: 'server', domain: 'superadmin' },
+    { action: 'sa_get_local',            scope: 'server', domain: 'superadmin' },
+    { action: 'sa_update_local',         scope: 'server', domain: 'superadmin' },
+    { action: 'sa_suspend_local',        scope: 'server', domain: 'superadmin' },
+    { action: 'sa_activate_local',       scope: 'server', domain: 'superadmin' },
+    { action: 'sa_delete_local',         scope: 'server', domain: 'superadmin' },
+    { action: 'sa_override_plan',        scope: 'server', domain: 'superadmin' },
+    { action: 'sa_list_plan_defs',       scope: 'server', domain: 'superadmin' },
+    { action: 'sa_update_plan_def',      scope: 'server', domain: 'superadmin' },
+    { action: 'sa_list_coupons',         scope: 'server', domain: 'superadmin' },
+    { action: 'sa_create_coupon',        scope: 'server', domain: 'superadmin' },
+    { action: 'sa_update_coupon',        scope: 'server', domain: 'superadmin' },
+    { action: 'sa_delete_coupon',        scope: 'server', domain: 'superadmin' },
+    { action: 'sa_get_global_config',    scope: 'server', domain: 'superadmin' },
+    { action: 'sa_update_global_config', scope: 'server', domain: 'superadmin' },
 ] as const;
 
 export type ActionName = (typeof ACTION_CATALOG)[number]['action'];

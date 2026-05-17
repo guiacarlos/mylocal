@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Loader2, Camera, Plus, X } from 'lucide-react';
 import { useSynaxisClient } from '@mylocal/sdk';
 import GoogleCalendarCard from '../../components/GoogleCalendarCard';
+import ExportDataButton from '../../components/ExportDataButton';
+import CambiarContrasenaCard from '../../components/CambiarContrasenaCard';
 
 function getSession(k: string) { try { return sessionStorage.getItem(k) ?? ''; } catch { return ''; } }
 
@@ -240,6 +242,8 @@ export default function AjustesPage() {
         </div>
       </div>
 
+      <CambiarContrasenaCard />
+      <ExportDataButton />
       <GoogleCalendarCard />
     </div>
   );

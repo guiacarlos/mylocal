@@ -172,6 +172,31 @@ pnpm -F mi-vertical build
 
 ---
 
+## Configurar CORS post-despliegue
+
+Tras el primer deploy, copia el ejemplo y ajusta los orígenes permitidos:
+
+```bash
+cp spa/server/config/cors.json.example spa/server/config/cors.json
+```
+
+Edita `cors.json`:
+
+```json
+{
+    "allowed_origins": ["https://tu-dominio.com"],
+    "allow_credentials": true
+}
+```
+
+- **En desarrollo:** añade `http://localhost:5173` a `allowed_origins`.
+- **En producción:** deja **solo** tu dominio. Nunca `*`.
+- Si el archivo no existe, el servidor cae en un fallback que solo permite `localhost` — en producción el frontend no podrá hacer llamadas API.
+
+Las acciones públicas (carta QR, webhooks…) se definen en `PUBLIC_ACTIONS` dentro de `spa/server/index.php`, no aquí. `cors.json` controla únicamente los orígenes CORS.
+
+---
+
 ## Regla crítica — NUNCA `npm run build` solo
 
 `npm run build` en `spa/` usa `--emptyOutDir` que **borra release/** antes de compilar.

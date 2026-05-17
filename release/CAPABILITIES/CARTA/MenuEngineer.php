@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace CARTA;
 
 require_once __DIR__ . '/../../axidb/plugins/alergenos/AlergenosCatalog.php';
@@ -109,6 +109,21 @@ class MenuEngineer
         if (!$r['success']) return $r;
         $text = trim(preg_replace('/^"|"$/', '', trim($r['text'])));
         return ['success' => true, 'data' => ['promocion' => $text]];
+    }
+
+    public function sugerirCategorias(string $tipoNegocio): array
+    {
+        $cfg = $this->loadConfig();
+        if (empty($cfg['api_key'])) return ['success' => false, 'error' => 'Gemini no configurado'];
+        $prompt = "Eres experto en hostelería española. Para un negocio de tipo '{$tipoNegocio}', "
+            . "sugiere entre 4 y 7 categorías de carta habituales y concretas. "
+            . "Devuelve SOLO un JSON {\"categorias\":[\"Nombre1\",\"Nombre2\",...]} sin texto adicional.";
+        $r = $this->geminiPrompt($cfg, $prompt);
+        if (!$r['success']) return $r;
+        $json = preg_replace('/^```json\s*|\s*```$/s', '', trim($r['text']));
+        $data = json_decode($json, true);
+        $cats = is_array($data['categorias'] ?? null) ? $data['categorias'] : [];
+        return ['success' => true, 'data' => ['categorias' => $cats]];
     }
 
     public function traducir($texto, $idioma)

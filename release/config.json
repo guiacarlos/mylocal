@@ -2,7 +2,6 @@
     "modulo": "hosteleria",
     "nombre": "MyLocal",
     "slug": "mylocal",
-    "color_acento": "#C8A96E",
-    "logo_path": "/MEDIA/Iogo.png",
+    "color_acento": "#000000",
     "plan": "demo"
 }
