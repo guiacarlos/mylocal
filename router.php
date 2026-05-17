@@ -37,6 +37,28 @@ if ($path === '/seed/bootstrap.json') {
     exit;
 }
 
+// Sitemap de la landing corporativa (mylocal.es) — referenciado desde robots.txt
+if ($path === '/sitemap.xml') {
+    $host = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http')
+          . '://' . ($_SERVER['HTTP_HOST'] ?? 'mylocal.es');
+    header('Content-Type: application/xml; charset=UTF-8');
+    header('Cache-Control: public, max-age=86400');
+    $today = date('Y-m-d');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ([
+        ['/', '1.0', 'weekly'],
+        ['/legal/aviso', '0.3', 'monthly'],
+        ['/legal/privacidad', '0.3', 'monthly'],
+        ['/legal/cookies', '0.3', 'monthly'],
+        ['/legal/reembolsos', '0.3', 'monthly'],
+    ] as [$loc, $prio, $freq]) {
+        echo "  <url><loc>$host$loc</loc><lastmod>$today</lastmod><changefreq>$freq</changefreq><priority>$prio</priority></url>\n";
+    }
+    echo '</urlset>';
+    exit;
+}
+
 // SEO: sitemap.xml y llms.txt por local (GET estático, sin sesión)
 if ($path === '/carta/sitemap.xml' || $path === '/carta/llms.txt') {
     require_once $root . '/spa/server/lib.php';

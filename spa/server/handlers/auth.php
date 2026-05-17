@@ -39,6 +39,15 @@ function handle_public_register(array $req): array
    para mantener los scripts CLI sin tener que reescribirlos en este paso.
    bootstrap-users.php se reescribira completo en el paso 6 de la migracion. */
 
+function handle_password_reset(string $action, array $req): array
+{
+    require_once realpath(__DIR__ . '/../../../CAPABILITIES/LOGIN/LoginPasswordReset.php');
+    if ($action === 'auth_forgot_password') {
+        return \Login\LoginPasswordReset::requestReset($req);
+    }
+    return \Login\LoginPasswordReset::resetPassword($req);
+}
+
 function find_user_by_email(string $email): ?array
 {
     return \Login\LoginVault::findByEmail($email);

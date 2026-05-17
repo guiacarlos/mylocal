@@ -81,9 +81,11 @@ $publicActions = [
 if (in_array($actionCors, $publicActions, true) || $actionCors === '') {
     header("Access-Control-Allow-Origin: *");
 } elseif ($origin !== '') {
+    $parsed     = parse_url($origin);
+    $originHost = $parsed['host'] ?? '';
     $serverHost = $_SERVER['HTTP_HOST'] ?? '';
-    $isSameServer = $serverHost !== '' && strpos($origin, $serverHost) !== false;
-    $isLocalhost  = strpos($origin, 'localhost') !== false || strpos($origin, '127.0.0.1') !== false;
+    $isSameServer = $serverHost !== '' && $originHost === $serverHost;
+    $isLocalhost  = in_array($originHost, ['localhost', '127.0.0.1', '[::1]'], true);
     if ($isSameServer || $isLocalhost) {
         header("Access-Control-Allow-Origin: $origin");
         header('Access-Control-Allow-Credentials: true');

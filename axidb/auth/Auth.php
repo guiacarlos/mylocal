@@ -127,6 +127,11 @@ class Auth
      */
     private function verifyTokenLocal($token)
     {
+        // Rechazar cualquier token que no sea exactamente 64 hex — previene path traversal
+        if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
+            return false;
+        }
+
         $sessionFile = $this->sessionDir . '/' . $token . '.json';
 
         if (!file_exists($sessionFile)) {

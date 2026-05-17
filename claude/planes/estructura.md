@@ -2,7 +2,7 @@
 
 **Documento:** `claude/planes/estructura.md`
 **Proyecto:** MyLocal (framework PHP + React para agencias)
-**Estado:** Completado — todas las olas 0–L terminadas, cero deuda
+**Estado:** Olas 0–L completadas · Ola M (pre-lanzamiento) en curso
 **Filosofía:** modular atómico · cada archivo una responsabilidad · ≤ 250 LOC · cero hardcodeos · cero datos ficticios · cero funciones a medio hacer
 
 ---
@@ -33,12 +33,35 @@ Con el framework:
 
 1. **Atómico.** Cada archivo nuevo se valida por sí solo. No existe el commit "WIP".
 2. **≤ 250 LOC.** Si un archivo va a superarlo, se parte antes de seguir escribiendo.
-3. **Sin hardcodeos.** Toda lista, mapa, color, ruta, etiqueta viene de `manifest.json`, `config.json` o AxiDB.
+3. **Sin hardcodeos.** Toda lista, mapa, color, ruta, etiqueta viene de `manifest.json`, `config.json` o AxiDB. Un hardcodeo es trabajo triple: se escribe, se descubre que está mal, se arregla en tres sitios distintos. No se admite en código de producción serio.
 4. **Sin datos ficticios.** Estados vacíos reales con CTA. Los tests usan prefijo `__test_*` y limpian al final.
 5. **Sin funciones a medias.** Una función existe completa o no existe.
 6. **Test antes de check.** Sin verde no se marca el item.
 7. **Cero regresión AUTH_LOCK.** `build.ps1` y `test_login.php` deben pasar antes de cerrar cualquier ola.
 8. **Commit y push** solo cuando el dueño del proyecto lo pide explícitamente.
+
+### 1.1 Mandatos de seguridad (nunca omitir)
+
+Estos mandatos aplican a **cualquier archivo nuevo o modificado** en cualquier ola. No son opcionales en código que va a producción con datos reales de negocio.
+
+| Mandato | Regla concreta |
+|---|---|
+| **Validar todo input externo** | Nunca usar `$_POST['x']` directamente en lógica. Pasar por `LoginSanitize::*` o los helpers `s_id/s_str/s_int` de lib.php. |
+| **Protected fields explícitos** | En cualquier modelo con `update()`, la lista `$protected` debe incluir explícitamente `'role'`, `'id'`, `'password_hash'`. Silenciar un campo es una decisión, no un olvido. |
+| **Auth antes de datos** | Toda acción que lee o escribe datos ajenos debe verificar sesión activa. La excepción (acción pública) se documenta en `PUBLIC_ACTIONS` con comentario de por qué. |
+| **Sin strpos para validar orígenes** | CORS y autorización basada en host usan `parse_url()` + comparación exacta de `host`. `strpos($origin, 'localhost')` valida `attacker-localhost.com`. |
+| **Tokens = hex64 exacto** | Cualquier token que se use como nombre de archivo se valida con `preg_match('/^[a-f0-9]{64}$/', $token)` antes de construir el path. |
+| **Rate limiting en login** | Todo endpoint de autenticación llama a `LoginRateLimit::check()` o `rl_check()` como primera línea. |
+| **Sin hardcodeo de credenciales** | IPs, URLs de API, claves, CIFs, teléfonos propios → `config.json` o `OPTIONS`. En los templates del hostelero solo van los datos del hostelero. |
+
+### 1.2 Por qué los hardcodeos son trabajo triple
+
+Un valor hardcodeado (URL, versión, teléfono, plan, límite) aparece como mínimo en:
+1. El código PHP o TSX donde se escribió
+2. El test que lo valida (si existe) — que ahora también está mal
+3. El deploy donde el cliente tiene un valor distinto
+
+Cuando cambia (y siempre cambia), hay que encontrarlo, cambiarlo en los tres sitios, y verificar que no hay un cuarto. En un framework multi-sector con N templates y M deployments, el coste crece exponencialmente. La regla es: si un valor puede venir de fuera (config, BD, manifest), debe venir de fuera.
 
 ---
 
@@ -133,6 +156,7 @@ build.ps1 --template=clinica
 | **J** | **Integración OpenClaude**                                                                             | ✅ Completa                         |
 |           K | Documentación + handover                                                                                     | ✅ Completa                         |
 | **L** | **Cierre técnico: tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore** | ✅ Completa                         |
+| **M** | **Pre-lanzamiento: seguridad + gaps críticos + fundamentos SaaS**                                      | 🔄 En curso                         |
 
 ---
 
@@ -434,6 +458,7 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 - [X] Ola J — Integración OpenClaude
 - [X] Ola K — Documentación + handover
 - [X] Ola L — Cierre técnico (tests AUTH_LOCK pendientes + AppBootstrap v2 + limpieza legacy + split SynaxisCore)
+- [ ] Ola M — Pre-lanzamiento: seguridad + gaps críticos + fundamentos SaaS
 
 ---
 
@@ -470,6 +495,92 @@ Ninguna ola arranca sin que la anterior haya cumplido **todos** estos gates:
 - **Total: 208 PASS / 0 FAIL**
 - Framework SPA (`test-framework.mjs`): 24/24
 - Bootstrap CLI (`test-bootstrap.mjs`): 19/19
+
+---
+
+## 19. Ola M — Pre-lanzamiento: seguridad + gaps críticos + fundamentos SaaS
+
+**Origen:** Análisis pre-lanzamiento (2026-05-17) que identificó vulnerabilidades activas y gaps funcionales que bloquean o degradan la experiencia en producción real.
+
+**Principio de esta ola:** No se añaden features nuevas. Todo lo que entra resuelve algo que ya existe mal o que falta para que el producto sea usable y seguro con datos reales de clientes.
+
+### Nota sobre email transaccional
+
+Los emails de los hosteleros son datos del cliente, no un canal técnico gestionado por MyLocal. La app almacena el email y genera enlaces `mailto:`. No se implementa SMTP saliente ni plantillas de email — eso es responsabilidad del hostelero con su propio proveedor. Los flujos que en otros SaaS usan email (bienvenida, vencimiento, reset de contraseña) se resuelven en MyLocal con mecanismos alternativos (token visible por soporte, dashboard de estado).
+
+---
+
+### M.1 Vulnerabilidades de seguridad (RESUELTAS)
+
+Cuatro vulnerabilidades documentadas en `docs/info_seguridad.md` parcheadas:
+
+| # | Archivo | Vulnerabilidad | Fix |
+|---|---|---|---|
+| 1 | `axidb/auth/users/UserEditor.php` | Mass assignment: `role` no estaba en `$protected` → cualquier usuario podía darse a sí mismo `superadmin` | Añadido `'role'` a `$protected` |
+| 2 | `axidb/engine/handlers/UserHandler.php` | IDOR: `read_user` y `update_user` no requerían sesión → datos de usuarios expuestos sin auth | Toda acción requiere sesión; `read_user`/`update_user` son admin salvo que sea el propio usuario |
+| 3 | `axidb/api/axi.php` | CORS bypass: `strpos($origin, 'localhost')` validaba `attacker-localhost.com` | Reemplazado por `parse_url()` + comparación exacta de `host` |
+| 4 | `axidb/auth/Auth.php` | Path traversal: token de cookie se usaba directamente en path de archivo sin validar | Añadido `preg_match('/^[a-f0-9]{64}$/', $token)` antes de construir el path |
+
+- [X] M.1.1 — Patch UserEditor.php `$protected` + `role`
+- [X] M.1.2 — Patch UserHandler.php auth en `read_user`/`update_user`
+- [X] M.1.3 — Patch axi.php CORS con `parse_url`
+- [X] M.1.4 — Patch Auth.php token regex
+
+### M.2 Recuperación de contraseña (RESUELTA)
+
+Sin SMTP saliente, el flujo es: token de 6 dígitos generado en servidor → soporte (GestasAI) lo recupera de AxiDB y lo comparte con el hostelero por teléfono/WhatsApp → hostelero lo usa en el formulario.
+
+- [X] `CAPABILITIES/LOGIN/LoginPasswordReset.php` — `requestReset()` + `resetPassword()`
+- [X] `LoginVault::updateHash()` — patch de password_hash sin tocar el perfil
+- [X] Acciones `auth_forgot_password` y `auth_reset_password` en `ALLOWED_ACTIONS` + `PUBLIC_ACTIONS`
+- [X] Handler `handle_password_reset()` en `spa/server/handlers/auth.php`
+- [ ] UI: formulario en `/acceder` con campo "¿Olvidaste tu contraseña?" → `ForgotPasswordForm.tsx`
+- [ ] UI: formulario de introducción de código + nueva contraseña → `ResetPasswordForm.tsx`
+
+### M.3 Métricas reales en el dashboard (RESUELTA)
+
+`InicioPage.tsx` mostraba '—' estático. Ahora carga en paralelo reseñas, productos y estado de suscripción.
+
+- [X] `InicioPage.tsx` — fetch paralelo de `list_reviews` + `list_productos` + `get_subscription_status`
+- [X] Spinner mientras carga, valor real cuando resuelve
+- [ ] Cuando exista sistema de analytics propio (Ola N): añadir visitas a carta y escaneos QR
+
+### M.4 Cookie banner legal (RESUELTA)
+
+El banner existía como JSX suelto sin integrar. Ahora es TSX tipado en el árbol de la app.
+
+- [X] `CookieBanner.tsx` — convertido de JSX legacy, Tailwind nativo, consentimiento granular
+- [X] Integrado en `App.tsx` como hermano del árbol de rutas (aparece en todas las páginas)
+
+### M.5 Sitemap de la landing corporativa (RESUELTA)
+
+`robots.txt` apuntaba a `/sitemap.xml` que no existía. Ahora se genera dinámicamente.
+
+- [X] `router.php` — ruta `/sitemap.xml` genera XML con landing + páginas legales
+
+### M.6 health.php dinámico (RESUELTA)
+
+Versión hardcodeada y sin checks de dependencias. Ahora lee `manifest.json` y verifica escritura en STORAGE.
+
+- [X] `health.php` — versión dinámica desde `manifest.json`, check de escritura en STORAGE, HTTP 503 si degradado
+
+### M.7 Pendientes de Ola M (pre-lanzamiento recomendado)
+
+Estas tareas no bloquean el lanzamiento técnico pero deben cerrarse antes de la primera campaña de adquisición:
+
+- [ ] **UI de recuperación de contraseña** — `ForgotPasswordForm.tsx` + `ResetPasswordForm.tsx` (conectan a los endpoints ya listos de M.2)
+- [ ] **Export de datos del cliente** — endpoint `export_local_data` que empaqueta carta + reseñas + datos del local en JSON descargable (RGPD art. 20 portabilidad)
+- [ ] **cors.json en proceso de deploy** — documentar en `docs/BOOTSTRAP.md` que el primer paso post-subida es configurar `cors.json` con el dominio real. Sin esto la API rechaza peticiones del frontend en producción.
+- [ ] **Retención de logs y sesiones** — tarea periódica (cron o admin action) que elimina sesiones expiradas y logs de rate-limiting de STORAGE. Sin esto el disco se llena en 6–12 meses en hosting compartido.
+
+### M.8 Post-lanzamiento (Ola N — no implementar ahora)
+
+- Analytics propios en AxiDB: contador de visitas a `/carta` y escaneos de QR al abrir `CartaPublicaPage`
+- Sentry / error alerting: integración con un proveedor de errores (Sentry free tier o similar)
+- UI admin para CANAL/Billing (modelo de canal para agencias revendedoras)
+- Tests E2E del flujo completo registro → onboarding → carta → QR → reseña
+
+---
 
 ### Cómo añadir un nuevo vertical ahora mismo
 

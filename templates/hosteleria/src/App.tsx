@@ -1,52 +1,60 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import SplashScreen from './components/SplashScreen';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import QRSection from './components/QRSection';
-import WebPreviewSection from './components/WebPreviewSection';
-import ImportSection from './components/ImportSection';
-import ProductsSection from './components/ProductsSection';
-import PDFSection from './components/PDFSection';
-import PricingSection from './components/PricingSection';
-import Footer from './components/Footer';
-import LoginModal from './components/LoginModal';
+import RequireAuth from './components/RequireAuth';
+import CookieBanner from './components/CookieBanner';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import DashboardPage from './pages/DashboardPage';
+import CartaPublicaPage from './pages/CartaPublicaPage';
+import LegalPage from './pages/LegalPage';
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
-  const [showLogin, setShowLogin] = useState(false);
 
   return (
-    <div className="relative">
-      <AnimatePresence>
-        {showSplash && (
-          <SplashScreen onComplete={() => setShowSplash(false)} />
-        )}
-      </AnimatePresence>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <div className="relative">
+        <AnimatePresence>
+          {showSplash && (
+            <SplashScreen onComplete={() => setShowSplash(false)} />
+          )}
+        </AnimatePresence>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: showSplash ? 0 : 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        className="min-h-screen flex flex-col overflow-x-hidden"
-      >
-        <Header onLoginClick={() => setShowLogin(true)} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: showSplash ? 0 : 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="min-h-screen flex flex-col overflow-x-hidden"
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={<LandingPage />}
+            />
+            <Route path="/acceder"  element={<LoginPage />} />
+            <Route path="/registro" element={<RegisterPage />} />
+            <Route
+              path="/dashboard/*"
+              element={
+                <RequireAuth>
+                  <DashboardPage />
+                </RequireAuth>
+              }
+            />
+            <Route path="/carta"              element={<CartaPublicaPage />} />
+            <Route path="/carta/:zona/:mesa"  element={<CartaPublicaPage />} />
+            <Route path="/legal/:doc"         element={<LegalPage />} />
+            {/* Alias legacy: /login → /acceder */}
+            <Route path="/login" element={<Navigate to="/acceder" replace />} />
+          </Routes>
 
-        <main className="flex-1">
-          <HeroSection />
-          <QRSection />
-          <WebPreviewSection />
-          <ImportSection />
-          <ProductsSection />
-          <PDFSection />
-          <PricingSection onLoginClick={() => setShowLogin(true)} />
-        </main>
-
-        <Footer />
-        <div className="fixed inset-0 -z-10 bg-[#F9F9F7]" />
-      </motion.div>
-
-      <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
-    </div>
+          <div className="fixed inset-0 -z-10 bg-[#F9F9F7]" />
+        </motion.div>
+        <CookieBanner />
+      </div>
+    </BrowserRouter>
   );
 }

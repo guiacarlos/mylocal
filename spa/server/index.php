@@ -94,6 +94,8 @@ if (!$action && !empty($_FILES)) $action = 'upload';
 const ALLOWED_ACTIONS = [
     // Auth / sesión — NUNCA eliminar: son el núcleo del sistema de login
     'auth_login', 'auth_logout', 'auth_me', 'auth_refresh_session', 'get_current_user', 'public_register',
+    // Recuperación de contraseña (sin sesión — token enviado por soporte)
+    'auth_forgot_password', 'auth_reset_password',
     'csrf_token',
     // Pagos
     'create_payment_intent', 'check_revolut_payment', 'create_revolut_payment', 'revolut_webhook',
@@ -180,6 +182,7 @@ const PUBLIC_ACTIONS = [
     // Pre-auth
     'health_check', 'csrf_token',
     'auth_login', 'auth_register', 'public_register',
+    'auth_forgot_password', 'auth_reset_password',
     // Carta digital — cliente sin sesión escanea QR
     'list_cartas', 'list_categorias', 'list_productos',
     // Local — lectura pública (carta pública, web del local)
@@ -264,6 +267,11 @@ try {
         case 'public_register':
             require_once __DIR__ . '/handlers/auth.php';
             resp(true, handle_public_register($req));
+
+        case 'auth_forgot_password':
+        case 'auth_reset_password':
+            require_once __DIR__ . '/handlers/auth.php';
+            resp(true, handle_password_reset($action, $req));
 
         case 'create_payment_intent':
         case 'check_revolut_payment':
