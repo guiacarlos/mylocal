@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 /**
- * 🏛️ MOTOR SOBERANO ACIDE v12.0 - RESTAURACIÓN TOTAL
+ * ðŸ›ï¸ MOTOR SOBERANO ACIDE v12.0 - RESTAURACIÃ“N TOTAL
  * Vault (80%) -> RAG (Cards, Quiz, Summary, Content) -> Gemini -> Atomic Persistence
  */
 
@@ -13,7 +13,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS')
     exit(0);
 
-// 🛡️ Inicialización con rutas estándar de ACIDE
+// ðŸ›¡ï¸ InicializaciÃ³n con rutas estÃ¡ndar de ACIDE
 if (!defined('ACIDE_ROOT'))
     define('ACIDE_ROOT', __DIR__);
 if (!defined('DATA_ROOT'))
@@ -24,7 +24,7 @@ require_once __DIR__ . '/core/Utils.php';
 
 $crud = new CRUDOperations();
 
-// Leer petición
+// Leer peticiÃ³n
 $input = json_decode(file_get_contents('php://input'), true);
 $query = trim($input['query'] ?? '');
 $lessonId = $input['lessonId'] ?? '';
@@ -32,14 +32,14 @@ $chatId = $input['chatId'] ?? null;
 $studentId = $input['studentId'] ?? null;
 
 if (empty($query)) {
-    echo json_encode(['success' => false, 'error' => 'Query vacío']);
+    echo json_encode(['success' => false, 'error' => 'Query vacÃ­o']);
     exit;
 }
 
-// 🛡️ IDENTIDAD SOBERANA
+// ðŸ›¡ï¸ IDENTIDAD SOBERANA
 $chatIdSafe = $chatId ? preg_replace('/[^a-zA-Z0-9_\-]/', '_', $chatId) : null;
 
-// 📜 RECUPERACIÓN DE MEMORIA DEL DISCO
+// ðŸ“œ RECUPERACIÃ“N DE MEMORIA DEL DISCO
 $chatHistory = [];
 if ($chatIdSafe) {
     try {
@@ -51,13 +51,13 @@ if ($chatIdSafe) {
     }
 }
 
-// 🔍 PASO 1: VAULT (Búsqueda por Similitud 80%)
+// ðŸ” PASO 1: VAULT (BÃºsqueda por Similitud 80%)
 if ($lessonId) {
     try {
         $vaultEntries = $crud->list('academy_vault');
         $cleanStr = function ($s) {
             $s = mb_strtolower($s, 'UTF-8');
-            $s = str_replace(['?', '¿', '!', '¡', '.', ',', ':', ';'], '', $s);
+            $s = str_replace(['?', 'Â¿', '!', 'Â¡', '.', ',', ':', ';'], '', $s);
             return trim($s);
         };
         $targetQuery = $cleanStr($query);
@@ -75,7 +75,7 @@ if ($lessonId) {
             if ($sim >= 0.80) {
                 $responseText = $entry['response'];
 
-                // Si hay match, guardamos el rastro en la sesión soberana
+                // Si hay match, guardamos el rastro en la sesiÃ³n soberana
                 if ($chatIdSafe) {
                     $chatHistory[] = ['role' => 'user', 'content' => $query, 'timestamp' => date('c')];
                     $chatHistory[] = ['role' => 'assistant', 'content' => $responseText, 'type' => 'vault_match', 'timestamp' => date('c')];
@@ -95,7 +95,7 @@ if ($lessonId) {
     }
 }
 
-// 🚀 PASO 2: GEMINI (RAG Total)
+// ðŸš€ PASO 2: GEMINI (RAG Total)
 $settings = $crud->read('academy_settings', 'current') ?: [];
 $apiKey = $settings['gemini_api_key'] ?? '';
 $model = $settings['gemini_model'] ?? 'gemini-1.5-flash';
@@ -116,16 +116,16 @@ if ($lessonId) {
             }
             $quiz = "";
             foreach (($lesson['quiz'] ?? []) as $q) {
-                $quiz .= "Q: {$q['question']} (Explicación: {$q['explanation']})\n";
+                $quiz .= "Q: {$q['question']} (ExplicaciÃ³n: {$q['explanation']})\n";
             }
 
-            $lessonContext = "TÍTULO: {$lesson['title']}\nCONTENIDO: {$lesson['content']}\nRESUMEN: {$lesson['summary']}\nKNOWLEDGE: " . ($lesson['ai_config']['knowledge_base'] ?? '') . "\nCARDS:\n$flashcards\nQUIZ:\n$quiz";
+            $lessonContext = "TÃTULO: {$lesson['title']}\nCONTENIDO: {$lesson['content']}\nRESUMEN: {$lesson['summary']}\nKNOWLEDGE: " . ($lesson['ai_config']['knowledge_base'] ?? '') . "\nCARDS:\n$flashcards\nQUIZ:\n$quiz";
         }
     } catch (Exception $e) {
     }
 }
 
-$systemPrompt = "Eres un tutor experto de GestasAI. Usa este contexto académico:\n$lessonContext";
+$systemPrompt = "Eres un tutor experto de GestasAI. Usa este contexto acadÃ©mico:\n$lessonContext";
 
 $contents = [];
 foreach ($chatHistory as $msg) {
@@ -147,7 +147,7 @@ $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);

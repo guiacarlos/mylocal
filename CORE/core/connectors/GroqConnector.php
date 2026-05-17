@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 
 /**
- * ⚡ ACIDE SOBERANO - GroqConnector v1.0
- * Librería de referencia para la conexión total con la infraestructura de Groq.
+ * âš¡ ACIDE SOBERANO - GroqConnector v1.0
+ * LibrerÃ­a de referencia para la conexiÃ³n total con la infraestructura de Groq.
  * Implementa Chat, Respuestas (Beta), Audio, Modelos y Batches.
  */
 
@@ -17,7 +17,7 @@ class GroqConnector
     }
 
     /**
-     * 💬 CHAT COMPLETIONS
+     * ðŸ’¬ CHAT COMPLETIONS
      * POST https://api.groq.com/openai/v1/chat/completions
      */
     public function chatCompletion($params)
@@ -26,7 +26,7 @@ class GroqConnector
     }
 
     /**
-     * 🧠 RESPONSES (BETA)
+     * ðŸ§  RESPONSES (BETA)
      * POST https://api.groq.com/openai/v1/responses
      */
     public function createResponse($params)
@@ -35,7 +35,7 @@ class GroqConnector
     }
 
     /**
-     * 🎙️ AUDIO TRANSCRIPTIONS
+     * ðŸŽ™ï¸ AUDIO TRANSCRIPTIONS
      * POST https://api.groq.com/openai/v1/audio/transcriptions
      */
     public function createTranscription($filePath, $model = 'whisper-large-v3', $extraParams = [])
@@ -49,7 +49,7 @@ class GroqConnector
     }
 
     /**
-     * 🌍 AUDIO TRANSLATIONS
+     * ðŸŒ AUDIO TRANSLATIONS
      * POST https://api.groq.com/openai/v1/audio/translations
      */
     public function createTranslation($filePath, $model = 'whisper-large-v3', $extraParams = [])
@@ -63,7 +63,7 @@ class GroqConnector
     }
 
     /**
-     * 📋 LIST MODELS
+     * ðŸ“‹ LIST MODELS
      * GET https://api.groq.com/openai/v1/models
      */
     public function listModels()
@@ -72,7 +72,7 @@ class GroqConnector
     }
 
     /**
-     * 📦 BATCH OPERATIONS
+     * ðŸ“¦ BATCH OPERATIONS
      */
     public function createBatch($inputFileId, $endpoint = '/v1/chat/completions', $window = '24h')
     {
@@ -84,7 +84,7 @@ class GroqConnector
     }
 
     /**
-     * 📂 FILE OPERATIONS
+     * ðŸ“‚ FILE OPERATIONS
      */
     public function uploadFile($filePath, $purpose = 'batch')
     {
@@ -96,7 +96,7 @@ class GroqConnector
     }
 
     /**
-     * ⚙️ NÚCLEO DE PETICIONES (Engine)
+     * âš™ï¸ NÃšCLEO DE PETICIONES (Engine)
      */
     private function request($method, $endpoint, $data = null, $isMultipart = false)
     {
@@ -124,7 +124,7 @@ class GroqConnector
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 120);
 
         $response = curl_exec($ch);

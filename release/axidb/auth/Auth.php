@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 /**
  * Auth.php
- * Sistema de AutenticaciÃ³n HÃ­brida para ACIDE
+ * Sistema de AutenticaciÃƒÂ³n HÃƒÂ­brida para ACIDE
  * 
- * FilosofÃ­a: "Local-First, Cloud-Sync"
- * - AutenticaciÃ³n local autÃ³noma con UserManager
- * - SincronizaciÃ³n opcional con GestasAI.com
+ * FilosofÃƒÂ­a: "Local-First, Cloud-Sync"
+ * - AutenticaciÃƒÂ³n local autÃƒÂ³noma con UserManager
+ * - SincronizaciÃƒÂ³n opcional con GestasAI.com
  */
 
 require_once __DIR__ . '/UserManager.php';
@@ -32,7 +32,7 @@ class Auth
             mkdir($this->sessionDir, 0755, true);
         }
 
-        // Cargar configuraciÃ³n de ACIDE Soberano
+        // Cargar configuraciÃƒÂ³n de ACIDE Soberano
         $configFile = $globalStorage . '/system/configs.json';
         $baseUrl = '';
 
@@ -45,7 +45,7 @@ class Auth
 
         $this->mothershipUrl = $baseUrl . '/api/universal';
 
-        // Inicializar CRUD (SoberanÃ­a ACIDE)
+        // Inicializar CRUD (SoberanÃƒÂ­a ACIDE)
         $this->crud = new CRUDOperations();
 
         // Inicializar gestores locales con dependencias correctas
@@ -55,15 +55,15 @@ class Auth
     }
 
     /**
-     * Login principal - Sistema autÃ³nomo local
+     * Login principal - Sistema autÃƒÂ³nomo local
      */
     public function login($email, $password)
     {
-        // AutenticaciÃ³n LOCAL (sistema autÃ³nomo)
+        // AutenticaciÃƒÂ³n LOCAL (sistema autÃƒÂ³nomo)
         $result = $this->userManager->verifyPassword($email, $password);
 
         if ($result['success']) {
-            // Crear sesiÃ³n local
+            // Crear sesiÃƒÂ³n local
             $session = $this->createSession($result['user']);
             return [
                 'success' => true,
@@ -76,7 +76,7 @@ class Auth
     }
 
     /**
-     * Crear sesiÃ³n local
+     * Crear sesiÃƒÂ³n local
      */
     private function createSession($user)
     {
@@ -97,7 +97,7 @@ class Auth
     }
 
     /**
-     * Validar token de sesiÃ³n
+     * Validar token de sesiÃƒÂ³n
      */
     public function validateRequest()
     {
@@ -130,17 +130,17 @@ class Auth
         $sessionFile = $this->sessionDir . '/' . $token . '.json';
 
         if (!file_exists($sessionFile)) {
-            error_log("[AUTH] SesiÃ³n no encontrada en disco: $token");
+            error_log("[AUTH] SesiÃƒÂ³n no encontrada en disco: $token");
             return false;
         }
 
         $sessionContent = file_get_contents($sessionFile);
         $session = json_decode($sessionContent, true);
 
-        // Verificar expiraciÃ³n
+        // Verificar expiraciÃƒÂ³n
         if (strtotime($session['expires_at']) < time()) {
-            error_log("[AUTH] SesiÃ³n expirada para usuario: " . ($session['email'] ?? 'desconocido'));
-            unlink($sessionFile); // Eliminar sesiÃ³n expirada
+            error_log("[AUTH] SesiÃƒÂ³n expirada para usuario: " . ($session['email'] ?? 'desconocido'));
+            unlink($sessionFile); // Eliminar sesiÃƒÂ³n expirada
             return false;
         }
 
@@ -176,14 +176,14 @@ class Auth
 
         if (file_exists($sessionFile)) {
             unlink($sessionFile);
-            return ['success' => true, 'message' => 'SesiÃ³n cerrada'];
+            return ['success' => true, 'message' => 'SesiÃƒÂ³n cerrada'];
         }
 
-        return ['success' => false, 'error' => 'SesiÃ³n no encontrada'];
+        return ['success' => false, 'error' => 'SesiÃƒÂ³n no encontrada'];
     }
 
     /**
-     * OPCIONAL: VerificaciÃ³n remota (para sincronizaciÃ³n con nube)
+     * OPCIONAL: VerificaciÃƒÂ³n remota (para sincronizaciÃƒÂ³n con nube)
      */
     public function verifyRemote($email, $password)
     {
@@ -203,7 +203,7 @@ class Auth
             return ['success' => true, 'user' => $user];
         }
 
-        return ['success' => false, 'error' => $response['error'] ?? 'AutenticaciÃ³n remota fallÃ³'];
+        return ['success' => false, 'error' => $response['error'] ?? 'AutenticaciÃƒÂ³n remota fallÃƒÂ³'];
     }
 
     /**
@@ -255,7 +255,7 @@ class Auth
         }
 
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // DEV MODE
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); // DEV MODE
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 
         $response = curl_exec($ch);

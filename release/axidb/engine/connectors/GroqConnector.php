@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 
 /**
  *  ACIDE SOBERANO - GroqConnector v1.0
- * Librería de referencia para la conexión total con la infraestructura de Groq.
+ * LibrerÃ­a de referencia para la conexiÃ³n total con la infraestructura de Groq.
  * Implementa Chat, Respuestas (Beta), Audio, Modelos y Batches.
  */
 
@@ -96,7 +96,7 @@ class GroqConnector
     }
 
     /**
-     *  NÚCLEO DE PETICIONES (Engine)
+     *  NÃšCLEO DE PETICIONES (Engine)
      */
     private function request($method, $endpoint, $data = null, $isMultipart = false)
     {
@@ -124,7 +124,7 @@ class GroqConnector
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 120);
 
         $response = curl_exec($ch);

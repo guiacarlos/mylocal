@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 
 /**
  *  ACIDE SOBERANO - OllamaConnector v1.0
- * Librería de referencia para la conexión programática con Ollama (Local & Cloud).
- * Implementa Chat, Generate, Embeddings y Gestión de Modelos.
+ * LibrerÃ­a de referencia para la conexiÃ³n programÃ¡tica con Ollama (Local & Cloud).
+ * Implementa Chat, Generate, Embeddings y GestiÃ³n de Modelos.
  */
 
 class OllamaConnector
@@ -21,7 +21,7 @@ class OllamaConnector
      */
     public function chat($params)
     {
-        // Forzamos stream false para la integración actual del búnker
+        // Forzamos stream false para la integraciÃ³n actual del bÃºnker
         $params['stream'] = false;
         return $this->request('POST', '/api/chat', $params);
     }
@@ -86,7 +86,7 @@ class OllamaConnector
     }
 
     /**
-     *  NÚCLEO DE PETICIONES (Engine)
+     *  NÃšCLEO DE PETICIONES (Engine)
      */
     private function request($method, $endpoint, $data = null)
     {
@@ -106,7 +106,7 @@ class OllamaConnector
         }
 
         curl_setopt($ch, CURLOPT_TIMEOUT, 300); // Mayor timeout para carga de modelos pesados
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);

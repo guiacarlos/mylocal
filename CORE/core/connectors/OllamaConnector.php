@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 
 /**
- * 🌿 ACIDE SOBERANO - OllamaConnector v1.0
- * Librería de referencia para la conexión programática con Ollama (Local & Cloud).
- * Implementa Chat, Generate, Embeddings y Gestión de Modelos.
+ * ðŸŒ¿ ACIDE SOBERANO - OllamaConnector v1.0
+ * LibrerÃ­a de referencia para la conexiÃ³n programÃ¡tica con Ollama (Local & Cloud).
+ * Implementa Chat, Generate, Embeddings y GestiÃ³n de Modelos.
  */
 
 class OllamaConnector
@@ -16,18 +16,18 @@ class OllamaConnector
     }
 
     /**
-     * 💬 CHAT MESSAGES (Protocolo OpenAI-like con Herramientas)
+     * ðŸ’¬ CHAT MESSAGES (Protocolo OpenAI-like con Herramientas)
      * POST /api/chat
      */
     public function chat($params)
     {
-        // Forzamos stream false para la integración actual del búnker
+        // Forzamos stream false para la integraciÃ³n actual del bÃºnker
         $params['stream'] = false;
         return $this->request('POST', '/api/chat', $params);
     }
 
     /**
-     * 📝 GENERATE RESPONSE (Single Prompt)
+     * ðŸ“ GENERATE RESPONSE (Single Prompt)
      * POST /api/generate
      */
     public function generate($params)
@@ -37,7 +37,7 @@ class OllamaConnector
     }
 
     /**
-     * 🧠 EMBEDDINGS
+     * ðŸ§  EMBEDDINGS
      * POST /api/embed
      */
     public function embed($model, $input, $options = [])
@@ -50,7 +50,7 @@ class OllamaConnector
     }
 
     /**
-     * 📋 LIST MODELS (Tags)
+     * ðŸ“‹ LIST MODELS (Tags)
      * GET /api/tags
      */
     public function listModels()
@@ -59,7 +59,7 @@ class OllamaConnector
     }
 
     /**
-     * 🔍 SHOW MODEL DETAILS
+     * ðŸ” SHOW MODEL DETAILS
      * POST /api/show
      */
     public function showModel($model)
@@ -68,7 +68,7 @@ class OllamaConnector
     }
 
     /**
-     * 🛰️ PULL MODEL (Download)
+     * ðŸ›°ï¸ PULL MODEL (Download)
      * POST /api/pull
      */
     public function pullModel($model, $stream = false)
@@ -77,7 +77,7 @@ class OllamaConnector
     }
 
     /**
-     * 🗑️ DELETE MODEL
+     * ðŸ—‘ï¸ DELETE MODEL
      * DELETE /api/delete
      */
     public function deleteModel($model)
@@ -86,7 +86,7 @@ class OllamaConnector
     }
 
     /**
-     * ⚙️ NÚCLEO DE PETICIONES (Engine)
+     * âš™ï¸ NÃšCLEO DE PETICIONES (Engine)
      */
     private function request($method, $endpoint, $data = null)
     {
@@ -106,7 +106,7 @@ class OllamaConnector
         }
 
         curl_setopt($ch, CURLOPT_TIMEOUT, 300); // Mayor timeout para carga de modelos pesados
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);

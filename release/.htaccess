@@ -26,8 +26,10 @@ DirectoryIndex index.html index.php
     # 4. CARTA PUBLICA — /carta/{slug} y /carta/{slug}/{mesa}
     RewriteRule ^carta/[a-z0-9\-]+(/[a-z0-9\-]+)?$ carta.html [L]
 
-    # 5. FALLBACK Web Publica SPA
-    RewriteBase /mylocal/
+    # 5. Google OAuth2 callback — enrutado antes del fallback SPA
+    RewriteRule ^server/gcal_callback\.php$ spa/server/gcal_callback.php [L]
+
+    # 6. FALLBACK Web Publica SPA — RewriteBase omitido (funciona en raiz y subdirectorio)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.html [L]

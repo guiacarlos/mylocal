@@ -82,11 +82,11 @@ En modo legacy, `code` y `duration_ms` pueden estar ausentes (viejos handlers no
 Content-Type: application/json; charset=UTF-8
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Axi-Storage-Root: <ruta o UNDEFINED>
-X-Axi-Project: <slug o NONE>
+X-Axi-Op: <nombre del op/action>
+X-Axi-Duration-Ms: <ms>
 ```
 
-Los X-Axi-* son informativos (debug); no se debe depender de ellos en clientes.
+Nota: X-Axi-Storage-Root y X-Axi-Project fueron eliminados en la auditoría de seguridad (exponían rutas del sistema de archivos del servidor).
 
 ---
 

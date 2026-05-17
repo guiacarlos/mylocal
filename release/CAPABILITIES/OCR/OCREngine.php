@@ -1,18 +1,18 @@
-<?php
+﻿<?php
 namespace OCR;
 
 /**
- * OCREngine - Extrae texto de imágenes y PDFs de cartas de restaurante.
+ * OCREngine - Extrae texto de imÃ¡genes y PDFs de cartas de restaurante.
  *
  * Cascada de motores (en orden de velocidad):
- *   1. Tesseract OCR (local, ~0.3s/pág) — extracción de texto pura y rápida.
- *      Si extrae ≥ 50 caracteres por imagen, se usa directamente.
- *   2. IA local Gemma 4 vision (llama.cpp, ~25s/pág) — cuando Tesseract
- *      no llega al umbral (tipografía decorativa, fondos complejos).
- *   3. Gemini Vision (fallback en la nube) — si los dos locales fallan.
+ *   1. Tesseract OCR (local, ~0.3s/pÃ¡g) â€” extracciÃ³n de texto pura y rÃ¡pida.
+ *      Si extrae â‰¥ 50 caracteres por imagen, se usa directamente.
+ *   2. IA local Gemma 4 vision (llama.cpp, ~25s/pÃ¡g) â€” cuando Tesseract
+ *      no llega al umbral (tipografÃ­a decorativa, fondos complejos).
+ *   3. Gemini Vision (fallback en la nube) â€” si los dos locales fallan.
  *
- * Para PDFs: convierte páginas a PNG con Imagick|GhostScript|pdftoppm|WSL,
- * luego aplica la misma cascada sobre cada página.
+ * Para PDFs: convierte pÃ¡ginas a PNG con Imagick|GhostScript|pdftoppm|WSL,
+ * luego aplica la misma cascada sobre cada pÃ¡gina.
  *
  * Nunca inventa texto. Siempre devuelve lo que el motor ve.
  */
@@ -43,15 +43,15 @@ class OCREngine
 
     private function extractFromImage($path)
     {
-        // Motor 1: Tesseract (local, rápido, sin GPU).
+        // Motor 1: Tesseract (local, rÃ¡pido, sin GPU).
         $text = $this->runTesseract($path);
         if ($text) return ['success' => true, 'text' => $text, 'engine' => 'tesseract'];
 
         $prompt = 'Eres un lector de cartas de restaurante. Lee TODA la imagen y transcribe '
-            . 'TODOS los textos que aparecen: nombres de platos, precios, categorías y '
-            . 'descripciones, aunque estén entre imágenes decorativas o fondos de color. '
-            . 'Devuelve solo el texto tal como aparece, un elemento por línea. '
-            . 'No omitas ningún plato ni precio.';
+            . 'TODOS los textos que aparecen: nombres de platos, precios, categorÃ­as y '
+            . 'descripciones, aunque estÃ©n entre imÃ¡genes decorativas o fondos de color. '
+            . 'Devuelve solo el texto tal como aparece, un elemento por lÃ­nea. '
+            . 'No omitas ningÃºn plato ni precio.';
 
         // Motor 2: IA local Gemma 4 vision (llama.cpp).
         $localError = null;
@@ -107,14 +107,14 @@ class OCREngine
             return ['success' => false, 'error' => 'PDF demasiado grande (>20 MB). Divide el PDF o subelo como imagen.'];
         }
 
-        // Obtener páginas PNG (compartidas por todos los motores).
+        // Obtener pÃ¡ginas PNG (compartidas por todos los motores).
         $pages = $this->pdfToImages($path);
         if (empty($pages)) {
             $convError = 'no se pudo convertir el PDF a imagenes (instala poppler-utils en el servidor)';
             error_log('[OCREngine] ' . $convError);
         }
 
-        // Motor 1: Tesseract sobre todas las páginas (rápido, sin GPU).
+        // Motor 1: Tesseract sobre todas las pÃ¡ginas (rÃ¡pido, sin GPU).
         if (!empty($pages)) {
             $texts = [];
             foreach ($pages as $i => $imgPath) {
@@ -129,7 +129,7 @@ class OCREngine
             }
         }
 
-        // Motor 2: IA local Gemma 4 vision por página.
+        // Motor 2: IA local Gemma 4 vision por pÃ¡gina.
         $localError = $convError ?? null;
         require_once __DIR__ . '/../AI/AIClient.php';
         if (!empty($pages) && \AI\AIClient::isConfigured()) {
@@ -180,8 +180,8 @@ class OCREngine
     }
 
     /**
-     * Convierte un PDF en imágenes JPEG temporales (una por página).
-     * Prueba Imagick → GhostScript → pdftoppm en ese orden.
+     * Convierte un PDF en imÃ¡genes JPEG temporales (una por pÃ¡gina).
+     * Prueba Imagick â†’ GhostScript â†’ pdftoppm en ese orden.
      * El llamador es responsable de borrar los archivos con unlink().
      */
     private function pdfToImages(string $pdfPath): array
@@ -244,7 +244,7 @@ class OCREngine
     /**
      * Extrae texto de una imagen con Tesseract OCR usando salida TSV para
      * filtrar por confianza por palabra. Si la confianza media es < 70 %
-     * (tipografía decorativa, fondo complejo) devuelve cadena vacía para
+     * (tipografÃ­a decorativa, fondo complejo) devuelve cadena vacÃ­a para
      * que la cascada pase al siguiente motor (vision).
      */
     private function runTesseract(string $imagePath): string
@@ -266,7 +266,7 @@ class OCREngine
             $conf  = (int) $cols[10];
             $word  = rtrim($cols[11] ?? '');
             if ($level !== 5 || $conf < 0 || $word === '') continue;
-            $key = $cols[2] . '-' . $cols[3] . '-' . $cols[4]; // bloque-párrafo-línea
+            $key = $cols[2] . '-' . $cols[3] . '-' . $cols[4]; // bloque-pÃ¡rrafo-lÃ­nea
             $buckets[$key][] = $word;
             $totalConf += $conf;
             $wordCount++;
@@ -361,7 +361,7 @@ class OCREngine
                 CURLOPT_POSTFIELDS => $body,
                 CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
                 CURLOPT_TIMEOUT => 60,
-                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYPEER => true,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);

@@ -27,6 +27,8 @@ ini_set('display_errors', '0');
 ini_set('log_errors', '1');
 
 require_once __DIR__ . '/lib.php';
+require_once __DIR__ . '/../../CORE/SubdomainManager.php';
+SubdomainManager::detect();
 
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
@@ -37,23 +39,11 @@ header_remove('X-Powered-By');
 
 /* ══════════════════════════════ CORS ══════════════════════════════ */
 
-// Fallback con public_actions razonables si cors.json no existe (dev sin
-// configurar). Incluye auth_login y todas las acciones que pre-existen a la
-// sesion. Si esto no estuviera, un primer login en una instancia limpia
-// devolveria 401 antes de poder crear sesion.
+// cors.json controla únicamente orígenes CORS. Las acciones públicas viven
+// en la constante PUBLIC_ACTIONS más abajo — fuente de verdad única.
 $corsCfg = @load_config_optional('cors') ?? [
-    'allowed_origins' => ['http://localhost:5173', 'http://127.0.0.1:5173'],
+    'allowed_origins'   => ['http://localhost:5173', 'http://127.0.0.1:5173'],
     'allow_credentials' => true,
-    'public_actions' => [
-        'health_check', 'csrf_token',
-        'auth_login', 'auth_register', 'public_register',
-        'chat_restaurant', 'validate_coupon',
-        'get_payment_settings', 'get_mesa_settings', 'list_products',
-        'process_external_order', 'get_table_order', 'table_request',
-        'revolut_webhook',
-        // Carta digital publica: el cliente que escanea el QR lee sin sesion
-        'get_local', 'list_cartas', 'list_categorias', 'list_productos',
-    ],
 ];
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowedOrigins = (array) ($corsCfg['allowed_origins'] ?? []);
@@ -104,6 +94,8 @@ if (!$action && !empty($_FILES)) $action = 'upload';
 const ALLOWED_ACTIONS = [
     // Auth / sesión — NUNCA eliminar: son el núcleo del sistema de login
     'auth_login', 'auth_logout', 'auth_me', 'auth_refresh_session', 'get_current_user', 'public_register',
+    // Recuperación de contraseña (sin sesión — token enviado por soporte)
+    'auth_forgot_password', 'auth_reset_password',
     'csrf_token',
     // Pagos
     'create_payment_intent', 'check_revolut_payment', 'create_revolut_payment', 'revolut_webhook',
@@ -136,6 +128,8 @@ const ALLOWED_ACTIONS = [
     'upload_local_image',
     // Suscripciones SaaS
     'create_subscription', 'activate_subscription', 'cancel_subscription', 'get_subscription',
+    // Registro de nuevos locales (público — sin auth)
+    'validate_slug', 'register_local',
     // Sistema
     'upload', 'synaxis_sync', 'health_check',
     // Público (lectura mínima que el cliente puede cachear)
@@ -164,6 +158,61 @@ const ALLOWED_ACTIONS = [
     'openclaude_status', 'openclaude_complete',
     // OPENCLAW (integración con agente OpenClaw local — skill bidireccional)
     'openclaw_manifest', 'openclaw_call', 'openclaw_status', 'openclaw_event_push',
+    // TIMELINE — publicaciones del dueño (Local Vivo)
+    'create_post', 'list_posts', 'delete_post', 'upload_timeline_media',
+    // REVIEWS — reseñas de clientes con Schema.org
+    'create_review', 'list_reviews', 'get_review_aggregate',
+    'delete_review', 'respond_review', 'get_invite_link',
+    // LEGALES — documentos RGPD/LSSI por local
+    'get_legal', 'list_legales', 'regenerate_legales',
+    // IA de carta: sugerir categorías
+    'ai_sugerir_categorias',
+    // BILLING — suscripciones Revolut
+    'get_subscription_status', 'create_revolut_order', 'check_revolut_order', 'webhook_revolut',
+    // SEO — schema JSON-LD por local (público, cacheable 24h)
+    'get_local_schema',
+    // Google Calendar OAuth2
+    'gcal_oauth_start', 'gcal_status', 'gcal_disconnect',
+];
+
+// Acciones que NO requieren sesión activa. Fuente de verdad única: aquí.
+// cors.json sólo controla orígenes CORS — no se usa para auth.
+// Regla: añadir aquí CUALQUIER acción nueva que sea pública (carta QR, legales,
+// reseñas, timeline público, webhooks externos, registro...). Si no está aquí
+// y el cliente no envía Bearer → 401.
+const PUBLIC_ACTIONS = [
+    // Pre-auth
+    'health_check', 'csrf_token',
+    'auth_login', 'auth_register', 'public_register',
+    'auth_forgot_password', 'auth_reset_password',
+    // Carta digital — cliente sin sesión escanea QR
+    'list_cartas', 'list_categorias', 'list_productos',
+    // Local — lectura pública (carta pública, web del local)
+    'get_local',
+    // QR / mesas — cliente anónimo en mesa
+    'process_external_order', 'get_table_order', 'table_request',
+    // Registro de nuevo local
+    'validate_slug', 'register_local',
+    // Lectura pública de configuración
+    'validate_coupon', 'get_payment_settings', 'get_mesa_settings', 'list_products',
+    // IA pública (chatbot del restaurante en carta digital)
+    'chat_restaurant',
+    // Citas públicas (reservas sin login)
+    'cita_publica_crear',
+    // Delivery — seguimiento público de pedido
+    'pedido_seguimiento',
+    // Timeline — posts del local visibles sin sesión
+    'list_posts',
+    // Reviews — lectura y creación anónima
+    'create_review', 'list_reviews', 'get_review_aggregate',
+    // Legales — lectura pública (RGPD, aviso legal, cookies…)
+    'get_legal', 'list_legales',
+    // OpenClaw — manifest y llamadas con clave HMAC interna
+    'openclaw_manifest', 'openclaw_call',
+    // Webhooks externos — autenticados por HMAC interno, no por sesión
+    'revolut_webhook', 'webhook_revolut',
+    // SEO — schema JSON-LD cacheado 24h, accesible sin sesión
+    'get_local_schema',
 ];
 
 if (!$action) resp(false, null, 'action requerida');
@@ -185,8 +234,7 @@ if ($action === 'csrf_token') {
 
 /* ═════════════════════ Autenticación ═════════════════════ */
 
-$publicActions = array_flip((array) ($corsCfg['public_actions'] ?? []));
-$isPublic = isset($publicActions[$action]);
+$isPublic = in_array($action, PUBLIC_ACTIONS, true);
 
 $user = current_user();
 if (!$isPublic && !$user) {
@@ -221,6 +269,11 @@ try {
         case 'public_register':
             require_once __DIR__ . '/handlers/auth.php';
             resp(true, handle_public_register($req));
+
+        case 'auth_forgot_password':
+        case 'auth_reset_password':
+            require_once __DIR__ . '/handlers/auth.php';
+            resp(true, handle_password_reset($action, $req));
 
         case 'create_payment_intent':
         case 'check_revolut_payment':
@@ -447,6 +500,89 @@ try {
             require_once __DIR__ . '/handlers/openclaw_skill.php';
             require_role($user, ['superadmin', 'administrador', 'admin']);
             resp(true, \OpenClaw\handle_openclaw_capability($action, $req, $user, getallheaders() ?: []));
+
+        // ── REGISTRO DE LOCALES ──────────────────────────────────────────
+        case 'validate_slug':
+            require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginRegister.php';
+            $slug = (string) ($req['data']['slug'] ?? $req['slug'] ?? '');
+            resp(true, \Login\LoginRegister::validateSlug($slug));
+
+        case 'register_local':
+            require_once __DIR__ . '/../../CAPABILITIES/LOGIN/LoginRegister.php';
+            resp(true, \Login\LoginRegister::registerLocal($req));
+
+        // ── TIMELINE (Local Vivo) ────────────────────────────────────────
+        case 'list_posts':
+            require_once __DIR__ . '/handlers/timeline.php';
+            resp(true, handle_timeline($action, $req));
+
+        case 'create_post':
+        case 'delete_post':
+            require_once __DIR__ . '/handlers/timeline.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_timeline($action, $req));
+
+        case 'upload_timeline_media':
+            require_once __DIR__ . '/handlers/timeline.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_timeline($action, $req, $_FILES));
+
+        // ── REVIEWS (Reseñas con Schema.org) ────────────────────────────
+        case 'create_review':
+        case 'list_reviews':
+        case 'get_review_aggregate':
+            require_once __DIR__ . '/handlers/reviews.php';
+            resp(true, handle_reviews($action, $req));
+
+        case 'delete_review':
+        case 'respond_review':
+        case 'get_invite_link':
+            require_once __DIR__ . '/handlers/reviews.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_reviews($action, $req));
+
+        // ── LEGALES (documentos RGPD/LSSI por local) ────────────────────
+        case 'get_legal':
+        case 'list_legales':
+            require_once __DIR__ . '/handlers/legales.php';
+            resp(true, handle_legales($action, $req));
+
+        case 'regenerate_legales':
+            require_once __DIR__ . '/handlers/legales.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_legales($action, $req));
+
+        // ── IA CARTA: sugerir categorías ─────────────────────────────────
+        case 'ai_sugerir_categorias':
+            require_once __DIR__ . '/handlers/carta.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'editor', 'hostelero']);
+            resp(true, handle_carta($action, $req));
+
+        // ── BILLING — suscripciones Revolut ──────────────────────────────
+        case 'get_subscription_status':
+        case 'create_revolut_order':
+        case 'check_revolut_order':
+            require_once __DIR__ . '/handlers/billing.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
+            resp(true, handle_billing($action, $req));
+
+        case 'webhook_revolut':
+            require_once __DIR__ . '/handlers/billing.php';
+            // El webhook es llamado por Revolut (sin sesión), verificamos HMAC dentro del handler
+            resp(true, handle_billing($action, $req));
+
+        // ── SEO — schema JSON-LD por local ───────────────────────────────
+        case 'get_local_schema':
+            require_once __DIR__ . '/handlers/seo.php';
+            resp(true, handle_seo($action, $req));
+
+        // ── GOOGLE CALENDAR — OAuth2 + estado ────────────────────────────
+        case 'gcal_oauth_start':
+        case 'gcal_status':
+        case 'gcal_disconnect':
+            require_once __DIR__ . '/handlers/gcal.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
+            resp(true, \GCalHandler\handle_gcal($action, $req, $user));
 
         default:
             resp(false, null, "Acción no implementada: $action");

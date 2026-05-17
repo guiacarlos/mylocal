@@ -2,11 +2,47 @@
     "storage_root": "",
     "media_root": "",
     "app_name": "MyLocal",
-    "app_url": "",
+    "app_url": "https://tu-dominio.com",
     "timezone": "Europe/Madrid",
     "debug": false,
     "session_lifetime": 86400,
-    "cors_origins": [],
+    "cors_origins": ["https://tu-dominio.com"],
+
+    "_comment_ai": "--- IA: al menos una de las tres claves debe configurarse ---",
     "gemini_api_key": "",
-    "gemini_model": "gemini-1.5-flash"
+    "gemini_model": "gemini-2.5-flash",
+    "anthropic_api_key": "",
+    "anthropic_model": "claude-sonnet-4-5-20251001",
+    "groq_api_key": "",
+    "groq_model": "llama3-70b-8192",
+
+    "_comment_gcal": "--- Google Calendar (OAuth2) ---",
+    "gcal_settings": {
+        "client_id": "",
+        "client_secret": "",
+        "redirect_uri": "https://tu-dominio.com/server/gcal_callback.php"
+    },
+
+    "_comment_whatsapp": "--- WhatsApp Business API (Meta) ---",
+    "whatsapp_settings": {
+        "phone_number_id": "",
+        "access_token": ""
+    },
+
+    "_comment_revolut": "--- Revolut Payments ---",
+    "revolut_settings": {
+        "api_key": "",
+        "webhook_secret": "",
+        "sandbox": true
+    },
+
+    "_comment_notes": [
+        "storage_root: ruta absoluta a la carpeta STORAGE/ en el servidor. Si está vacío usa la ruta por defecto.",
+        "media_root: ruta absoluta a la carpeta MEDIA/ en el servidor. Si está vacío usa la ruta por defecto.",
+        "app_url: URL pública de la app — se usa en emails, QR, y callbacks OAuth.",
+        "cors_origins: lista de orígenes permitidos para el backend (normalmente solo tu dominio).",
+        "gcal_settings.redirect_uri: debe coincidir EXACTAMENTE con la URI configurada en Google Cloud Console.",
+        "whatsapp_settings: se usa para el reset de contraseña automático si el usuario tiene teléfono.",
+        "revolut_settings.sandbox: cambiar a false en producción real."
+    ]
 }

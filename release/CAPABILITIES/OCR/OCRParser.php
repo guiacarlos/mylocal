@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 namespace OCR;
 
 require_once __DIR__ . '/OCRHeuristicParser.php';
@@ -131,7 +131,7 @@ class OCRParser
                 CURLOPT_POSTFIELDS => $body,
                 CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
                 CURLOPT_TIMEOUT => 120,
-                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYPEER => true,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);

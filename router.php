@@ -11,13 +11,7 @@
  * Usado por: php -S localhost:8080 -t release release/router.php
  */
 
-// 1. Debug logging para identificar al culpable del bucle
-$uri  = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD'];
-$agent = $_SERVER['HTTP_USER_AGENT'] ?? 'no-agent';
-error_log("REQ: $method $uri (Agent: $agent)");
-
-$path = parse_url($uri, PHP_URL_PATH);
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $root = __DIR__;
 
 // Multi-tenancy: detectar local activo (X-Local-Id header o subdominio)
@@ -29,10 +23,25 @@ if ($path === '/seed/bootstrap.json') {
     $slug = get_current_local_id();
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
+
+    // Calcular días de demo reales desde BillingManager si está disponible
+    $demoDaysLeft = 21;
+    $plan         = 'demo';
+    if ($slug) {
+        $billingFile = $root . '/CAPABILITIES/BILLING/BillingManager.php';
+        if (file_exists($billingFile)) {
+            require_once $billingFile;
+            require_once $root . '/spa/server/lib.php';
+            $sub          = \Billing\BillingManager::getStatus($slug);
+            $plan         = $sub['plan'] ?? 'demo';
+            $demoDaysLeft = (int) ($sub['days_left'] ?? 21);
+        }
+    }
+
     echo json_encode([
         'local_id'       => $slug,
-        'plan'           => 'demo',
-        'demo_days_left' => 21,
+        'plan'           => $plan,
+        'demo_days_left' => $demoDaysLeft,
     ]);
     exit;
 }
@@ -69,6 +78,13 @@ if ($path === '/carta/sitemap.xml' || $path === '/carta/llms.txt') {
     } else {
         \SEO\SeoEndpoints::llmsTxt($localId);
     }
+    exit;
+}
+
+// Google OAuth2 callback — Google redirige aquí tras autorizar Calendar
+if ($path === '/server/gcal_callback.php') {
+    $cb = $root . '/spa/server/gcal_callback.php';
+    if (file_exists($cb)) { require $cb; } else { http_response_code(404); }
     exit;
 }
 

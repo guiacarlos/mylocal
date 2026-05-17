@@ -66,7 +66,7 @@ $contents = \file_get_contents(__DIR__ . '/../api/axi.php');
 check('Gateway carga el motor via axidb/axi.php',           \str_contains($contents, "/../axi.php"));
 check('Gateway rutea por {op} y {action}',                  \str_contains($contents, "\$input['op']") && \str_contains($contents, "\$input['action']"));
 check('Gateway tiene Content-Type JSON',                    \str_contains($contents, 'Content-Type: application/json'));
-check('Gateway tiene X-Axi-Storage-Root header',            \str_contains($contents, 'X-Axi-Storage-Root'));
+check('Gateway no emite X-Axi-Storage-Root (info-leak)',     !\str_contains($contents, 'X-Axi-Storage-Root'));
 check('Gateway tiene X-Axi-Op (auditoria)',                 \str_contains($contents, 'X-Axi-Op'));
 check('Gateway tiene X-Axi-Duration-Ms',                    \str_contains($contents, 'X-Axi-Duration-Ms'));
 check('Gateway soporta OPTIONS CORS',                       \str_contains($contents, "'OPTIONS'"));

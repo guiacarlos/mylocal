@@ -11,14 +11,82 @@
  * Usado por: php -S localhost:8080 -t release release/router.php
  */
 
-// 1. Debug logging para identificar al culpable del bucle
-$uri  = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD'];
-$agent = $_SERVER['HTTP_USER_AGENT'] ?? 'no-agent';
-error_log("REQ: $method $uri (Agent: $agent)");
-
-$path = parse_url($uri, PHP_URL_PATH);
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $root = __DIR__;
+
+// Multi-tenancy: detectar local activo (X-Local-Id header o subdominio)
+require_once $root . '/CORE/SubdomainManager.php';
+SubdomainManager::detect();
+
+// Seed dinámico por local — devuelve contexto del local activo
+if ($path === '/seed/bootstrap.json') {
+    $slug = get_current_local_id();
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+
+    // Calcular días de demo reales desde BillingManager si está disponible
+    $demoDaysLeft = 21;
+    $plan         = 'demo';
+    if ($slug) {
+        $billingFile = $root . '/CAPABILITIES/BILLING/BillingManager.php';
+        if (file_exists($billingFile)) {
+            require_once $billingFile;
+            require_once $root . '/spa/server/lib.php';
+            $sub          = \Billing\BillingManager::getStatus($slug);
+            $plan         = $sub['plan'] ?? 'demo';
+            $demoDaysLeft = (int) ($sub['days_left'] ?? 21);
+        }
+    }
+
+    echo json_encode([
+        'local_id'       => $slug,
+        'plan'           => $plan,
+        'demo_days_left' => $demoDaysLeft,
+    ]);
+    exit;
+}
+
+// Sitemap de la landing corporativa (mylocal.es) — referenciado desde robots.txt
+if ($path === '/sitemap.xml') {
+    $host = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http')
+          . '://' . ($_SERVER['HTTP_HOST'] ?? 'mylocal.es');
+    header('Content-Type: application/xml; charset=UTF-8');
+    header('Cache-Control: public, max-age=86400');
+    $today = date('Y-m-d');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    foreach ([
+        ['/', '1.0', 'weekly'],
+        ['/legal/aviso', '0.3', 'monthly'],
+        ['/legal/privacidad', '0.3', 'monthly'],
+        ['/legal/cookies', '0.3', 'monthly'],
+        ['/legal/reembolsos', '0.3', 'monthly'],
+    ] as [$loc, $prio, $freq]) {
+        echo "  <url><loc>$host$loc</loc><lastmod>$today</lastmod><changefreq>$freq</changefreq><priority>$prio</priority></url>\n";
+    }
+    echo '</urlset>';
+    exit;
+}
+
+// SEO: sitemap.xml y llms.txt por local (GET estático, sin sesión)
+if ($path === '/carta/sitemap.xml' || $path === '/carta/llms.txt') {
+    require_once $root . '/spa/server/lib.php';
+    require_once $root . '/CAPABILITIES/SEO/SeoEndpoints.php';
+    $localId = get_current_local_id();
+    if ($path === '/carta/sitemap.xml') {
+        \SEO\SeoEndpoints::sitemap($localId);
+    } else {
+        \SEO\SeoEndpoints::llmsTxt($localId);
+    }
+    exit;
+}
+
+// Google OAuth2 callback — Google redirige aquí tras autorizar Calendar
+if ($path === '/server/gcal_callback.php') {
+    $cb = $root . '/spa/server/gcal_callback.php';
+    if (file_exists($cb)) { require $cb; } else { http_response_code(404); }
+    exit;
+}
 
 // 1. API soberana — SPA server (spa/server/index.php)
 if (strpos($path, '/acide/') === 0) {

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 namespace CARTA;
 
 require_once __DIR__ . '/../../axidb/plugins/alergenos/AlergenosCatalog.php';
@@ -145,7 +145,7 @@ class MenuEngineer
                 CURLOPT_POSTFIELDS => $body,
                 CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
                 CURLOPT_TIMEOUT => 30,
-                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYPEER => true,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);

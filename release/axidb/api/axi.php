@@ -100,8 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 header("Content-Type: application/json; charset=UTF-8");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: SAMEORIGIN");
-header("X-Axi-Storage-Root: " . (defined('STORAGE_ROOT') ? STORAGE_ROOT : 'UNDEFINED'));
-header("X-Axi-Project: "      . ($activeData['active_project'] ?? 'NONE'));
 
 try {
     // Cargar autoloader + motor AxiDB (maneja Op model, legacy {action}, y delegacion ACIDE).

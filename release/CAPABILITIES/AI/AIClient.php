@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 namespace AI;
 
 /**
@@ -8,9 +8,9 @@ namespace AI;
  * llama.cpp, vLLM, LocalAI, Ollama, etc.
  *
  * Config via OPTIONS (dotted path):
- *   ai.local_endpoint  — URL base, ej: https://ai.miaplic.com/v1
- *   ai.local_api_key   — Bearer token del servidor
- *   ai.local_model     — Nombre del modelo, ej: gemma-4-e2b
+ *   ai.local_endpoint  â€” URL base, ej: https://ai.miaplic.com/v1
+ *   ai.local_api_key   â€” Bearer token del servidor
+ *   ai.local_model     â€” Nombre del modelo, ej: gemma-4-e2b
  */
 class AIClient
 {
@@ -37,7 +37,7 @@ class AIClient
         );
     }
 
-    /** Devuelve true si local_endpoint está configurado en OPTIONS. */
+    /** Devuelve true si local_endpoint estÃ¡ configurado en OPTIONS. */
     public static function isConfigured(): bool
     {
         require_once __DIR__ . '/../OPTIONS/optiosconect.php';
@@ -48,7 +48,7 @@ class AIClient
      * Chat completion de texto puro.
      *
      * @param array $messages  [{role: user|assistant|system, content: string}]
-     * @param int   $maxTokens Límite de tokens en la respuesta
+     * @param int   $maxTokens LÃ­mite de tokens en la respuesta
      * @return array {success: bool, choices?: [...], error?: string}
      */
     public function chat(array $messages, int $maxTokens = 4096): array
@@ -63,12 +63,12 @@ class AIClient
     }
 
     /**
-     * Vision: prompt + imagen → texto.
+     * Vision: prompt + imagen â†’ texto.
      *
-     * Envía la imagen codificada en base64 usando el formato estándar
+     * EnvÃ­a la imagen codificada en base64 usando el formato estÃ¡ndar
      * image_url de OpenAI (compatible con llama.cpp + clip model).
      *
-     * @param string $prompt    Instrucción de texto para el modelo
+     * @param string $prompt    InstrucciÃ³n de texto para el modelo
      * @param string $imagePath Ruta absoluta a la imagen (jpg, png, webp)
      * @return array {success: bool, choices?: [...], error?: string}
      */
@@ -101,7 +101,7 @@ class AIClient
         return $resp['choices'][0]['message']['content'] ?? null;
     }
 
-    /* ─── HTTP ─────────────────────────────────────────────────── */
+    /* â”€â”€â”€ HTTP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
     private function post(string $path, string $body): array
     {
@@ -122,7 +122,7 @@ class AIClient
                 CURLOPT_POSTFIELDS     => $body,
                 CURLOPT_HTTPHEADER     => $headers,
                 CURLOPT_TIMEOUT        => 120,
-                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYPEER => true,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -153,7 +153,7 @@ class AIClient
         }
         $data = json_decode((string) $resp, true);
         if (!is_array($data)) {
-            return ['success' => false, 'error' => 'Respuesta JSON inválida del servidor IA'];
+            return ['success' => false, 'error' => 'Respuesta JSON invÃ¡lida del servidor IA'];
         }
         return array_merge(['success' => true], $data);
     }
