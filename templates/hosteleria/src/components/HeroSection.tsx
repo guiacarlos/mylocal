@@ -44,18 +44,23 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <span className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.22em] mb-4 block">
-            Personalización Infinita
+            Carta digital para hostelería
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-display font-bold tracking-tighter leading-[0.9] mb-5">
-            Tu carta,<br />
-            tu estilo,<br />
-            <span className="text-gray-400">tu marca.</span>
+            Tu negocio<br />
+            en la nube<br />
+            <span className="text-gray-400">en 10 minutos.</span>
           </h1>
 
-          <p className="hidden sm:block text-[14px] text-gray-500 leading-relaxed max-w-xs mx-auto lg:mx-0">
-            Diseña una experiencia digital que enamore a tus clientes. Elige entre diferentes estilos y visualiza el resultado al instante.
+          <p className="hidden sm:block text-[14px] text-gray-500 leading-relaxed max-w-xs mx-auto lg:mx-0 mb-6">
+            Carta QR, presencia web, reseñas con SEO y copiloto IA. Sin instalar nada. Sin permanencias. 21 días gratis.
           </p>
+
+          <a href="/registro"
+            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-all active:scale-95">
+            Empieza gratis — 21 días, sin tarjeta
+          </a>
         </motion.div>
 
         {/* ── Configurador interactivo ───────────────────────────────── */}

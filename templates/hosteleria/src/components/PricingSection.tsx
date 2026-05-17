@@ -4,55 +4,77 @@ import { cn } from '../lib/utils';
 
 const plans = [
   {
-    name: 'Gratis',
-    price: '0€',
-    desc: 'Ideal para empezar tu viaje digital.',
-    features: ['Carta básica', '1 Código QR', 'Presencia web estándar', 'Subida manual'],
-    primary: false,
+    key:      'demo',
+    name:     'Demo',
+    price:    '0€',
+    plus:     '21 días gratis',
+    desc:     'Prueba todo el producto sin compromiso. Sin tarjeta.',
+    features: [
+      'Carta digital QR',
+      'Hasta 20 platos',
+      'Timeline y reseñas',
+      'Subdominio propio',
+      'Soporte por email',
+    ],
+    primary:  false,
+    cta:      'Empezar gratis',
+    href:     '/registro',
   },
   {
-    name: 'Pro',
-    price: '27€',
-    plus: '+ IVA / mes',
-    desc: 'Para negocios que buscan crecimiento.',
-    features: ['Carta premium', 'QR ilimitados', 'Web personalizada', 'Importación IA (10/mes)', 'Soporte prioritario'],
-    primary: true,
+    key:      'pro_monthly',
+    name:     'Pro mensual',
+    price:    '27€',
+    plus:     '+ IVA / mes',
+    desc:     'Para el hostelero que ya sabe que funciona.',
+    features: [
+      'Todo lo del Demo',
+      'Platos ilimitados',
+      'Zonas y mesas ilimitadas',
+      'Copiloto IA de carta',
+      'Legales automáticos RGPD',
+      'Soporte prioritario',
+    ],
+    primary:  true,
+    cta:      'Activar Pro mensual',
+    href:     '/registro',
   },
   {
-    name: 'Premium',
-    price: '264€',
-    plus: '+ IVA / año',
-    desc: 'La solución completa para profesionales.',
-    features: ['Todo en Pro', 'Importación IA ilimitada', 'Multilingüe (5 idiomas)', 'Dominio propio .com', 'Analítica avanzada'],
-    primary: false,
+    key:      'pro_annual',
+    name:     'Pro anual',
+    price:    '260€',
+    plus:     '+ IVA / año',
+    desc:     'Dos meses gratis respecto al mensual. Precio bloqueado.',
+    features: [
+      'Todo lo del Pro mensual',
+      'Ahorro del 20% (2 meses gratis)',
+      'Precio bloqueado durante 1 año',
+      'Acceso prioritario al roadmap',
+    ],
+    primary:  false,
+    cta:      'Activar Pro anual',
+    href:     '/registro',
   },
 ];
 
-interface Props {
-  onLoginClick: () => void;
-}
-
-export default function PricingSection({ onLoginClick }: Props) {
+export default function PricingSection() {
   return (
     <section id="planes" className="min-h-screen lg:h-screen pt-16 flex items-center bg-white overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-6 py-10 lg:py-8">
 
-        {/* ── Header ─────────────────────────────────────────────────── */}
         <div className="text-center mb-8">
           <span className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.22em] mb-3 block">
-            Precios Transparentes
+            Precios transparentes
           </span>
           <h2 className="text-4xl font-display font-bold tracking-tighter leading-[0.9]">
-            Elige el plan que<br />
-            <span className="text-gray-400 italic font-light">mejor se adapte a ti.</span>
+            Sin permanencias.<br />
+            <span className="text-gray-400 italic font-light">Cancela cuando quieras.</span>
           </h2>
         </div>
 
-        {/* ── Cards ──────────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
           {plans.map((plan, idx) => (
             <motion.div
-              key={plan.name}
+              key={plan.key}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,7 +92,6 @@ export default function PricingSection({ onLoginClick }: Props) {
                 </div>
               )}
 
-              {/* Name + desc */}
               <div className="mb-4">
                 <h3 className="text-lg font-display font-semibold mb-1">{plan.name}</h3>
                 <p className={cn('text-[12px] leading-relaxed', plan.primary ? 'text-white/60' : 'text-gray-500')}>
@@ -78,15 +99,11 @@ export default function PricingSection({ onLoginClick }: Props) {
                 </p>
               </div>
 
-              {/* Price */}
               <div className="mb-4 flex items-baseline gap-1">
                 <span className="text-4xl font-display font-bold tracking-tighter">{plan.price}</span>
-                {plan.plus && (
-                  <span className={cn('text-[11px] font-medium opacity-50')}>{plan.plus}</span>
-                )}
+                <span className={cn('text-[11px] font-medium opacity-50')}>{plan.plus}</span>
               </div>
 
-              {/* Features */}
               <ul className="space-y-2 mb-5 flex-1">
                 {plan.features.map(f => (
                   <li key={f} className="flex items-center gap-2.5 text-[12px]">
@@ -101,9 +118,8 @@ export default function PricingSection({ onLoginClick }: Props) {
                 ))}
               </ul>
 
-              {/* CTA */}
-              <button
-                onClick={onLoginClick}
+              <a
+                href={plan.href}
                 className={cn(
                   'w-full py-3 rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all active:scale-95',
                   plan.primary
@@ -111,13 +127,16 @@ export default function PricingSection({ onLoginClick }: Props) {
                     : 'bg-black text-white hover:bg-gray-800'
                 )}
               >
-                Empezar con {plan.name}
+                {plan.cta}
                 <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </motion.div>
           ))}
         </div>
 
+        <p className="text-center text-[11px] text-gray-400 mt-6">
+          Todos los precios son sin IVA. IVA aplicable según legislación española vigente (21%).
+        </p>
       </div>
     </section>
   );

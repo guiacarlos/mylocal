@@ -18,6 +18,10 @@ define('CAP_ROOT',          realpath(__DIR__ . '/../../../CAPABILITIES') ?: '');
 define('STORAGE_ROOT_CARTA', realpath(__DIR__ . '/../../../STORAGE') ?: '');
 define('MEDIA_ROOT_CARTA',  realpath(__DIR__ . '/../../../MEDIA') ?: '');
 
+if (!function_exists('check_plan_limit')) {
+    require_once realpath(__DIR__ . '/../../../CORE/PlanLimits.php') ?: '';
+}
+
 function handle_carta(string $action, array $req, array $files = []): array
 {
     // Las acciones IA llaman a Gemini. Pueden tardar mas de 30s con cartas
@@ -31,6 +35,7 @@ function handle_carta(string $action, array $req, array $files = []): array
         case 'ocr_parse':                 return carta_ocr_parse($req);
         case 'enhance_image_sync':        return carta_enhance_image($req);
         case 'ai_sugerir_alergenos':      return carta_sugerir_alergenos($req);
+        case 'ai_sugerir_categorias':    return carta_sugerir_categorias($req);
         case 'ai_generar_descripcion':    return carta_generar_descripcion($req);
         case 'ai_generar_promocion':      return carta_generar_promocion($req);
         case 'ai_traducir':               return carta_traducir($req);
@@ -62,6 +67,13 @@ function handle_carta(string $action, array $req, array $files = []): array
 require_once CAP_ROOT . '/CARTA/CartaModel.php';
 require_once CAP_ROOT . '/CARTA/CategoriaModel.php';
 require_once CAP_ROOT . '/CARTA/ProductoModel.php';
+
+function carta_seo_invalidate(string $localId): void
+{
+    if ($localId === '') return;
+    require_once CAP_ROOT . '/SEO/SeoBuilder.php';
+    \SEO\SeoBuilder::invalidateCache($localId);
+}
 
 function carta_resolve_local_id(array $req, ?array $user = null): string
 {
@@ -117,6 +129,7 @@ function carta_create_categoria(array $req): array
     $data = $req['data'] ?? $req;
     $r = \Carta\CategoriaModel::create($data);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error create_categoria');
+    carta_seo_invalidate((string)($data['local_id'] ?? ''));
     return $r['data'] ?? $r;
 }
 
@@ -127,6 +140,7 @@ function carta_update_categoria(array $req): array
     if ($id === '') throw new RuntimeException('id requerido');
     $r = \Carta\CategoriaModel::update($id, $data);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error update_categoria');
+    carta_seo_invalidate((string)($data['local_id'] ?? ''));
     return $r['data'] ?? $r;
 }
 
@@ -134,7 +148,10 @@ function carta_delete_categoria(array $req): array
 {
     $id = (string) ($req['id'] ?? $req['data']['id'] ?? '');
     if ($id === '') throw new RuntimeException('id requerido');
+    $cat = \Carta\CategoriaModel::read($id);
+    $localId = (string)(($cat ?? [])['local_id'] ?? '');
     \Carta\CategoriaModel::delete($id);
+    carta_seo_invalidate($localId);
     return ['ok' => true];
 }
 
@@ -154,9 +171,18 @@ function carta_list_productos(array $req): array
 
 function carta_create_producto(array $req): array
 {
-    $data = $req['data'] ?? $req;
+    $data    = $req['data'] ?? $req;
+    $localId = (string) ($data['local_id'] ?? '');
+    if ($localId !== '' && function_exists('check_plan_limit')) {
+        $current   = count(\Carta\ProductoModel::listByLocal($localId));
+        $planError = check_plan_limit($localId, 'platos', $current);
+        if ($planError !== null) {
+            resp(false, $planError, 'PLAN_LIMIT');
+        }
+    }
     $r = \Carta\ProductoModel::create($data);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error create_producto');
+    carta_seo_invalidate($localId);
     return $r['data'] ?? $r;
 }
 
@@ -167,6 +193,7 @@ function carta_update_producto(array $req): array
     if ($id === '') throw new RuntimeException('id requerido');
     $r = \Carta\ProductoModel::update($id, $data);
     if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error update_producto');
+    carta_seo_invalidate((string)($data['local_id'] ?? ''));
     return $r['data'] ?? $r;
 }
 
@@ -174,7 +201,10 @@ function carta_delete_producto(array $req): array
 {
     $id = (string) ($req['id'] ?? $req['data']['id'] ?? '');
     if ($id === '') throw new RuntimeException('id requerido');
+    $p = \Carta\ProductoModel::read($id);
+    $localId = (string)(($p ?? [])['local_id'] ?? '');
     \Carta\ProductoModel::delete($id);
+    carta_seo_invalidate($localId);
     return ['ok' => true];
 }
 
@@ -368,6 +398,16 @@ function carta_sugerir_alergenos(array $req): array
     return $r['data'];
 }
 
+function carta_sugerir_categorias(array $req): array
+{
+    $data        = $req['data'] ?? $req;
+    $tipoNegocio = trim((string) ($data['tipo_negocio'] ?? 'bar'));
+    if ($tipoNegocio === '') $tipoNegocio = 'bar';
+    $r = carta_engineer()->sugerirCategorias($tipoNegocio);
+    if (!($r['success'] ?? false)) throw new RuntimeException($r['error'] ?? 'Error sugerir categorías');
+    return $r['data'];
+}
+
 function carta_generar_descripcion(array $req): array
 {
     $nombre = $req['nombre'] ?? '';
@@ -481,6 +521,7 @@ function carta_importar(array $req): array
     // 3) Actualizar el orden de categorias en la carta
     \Carta\CartaModel::update($cartaId, ['categorias_orden' => $ordenCategorias]);
 
+    carta_seo_invalidate($localId);
     return [
         'carta_id'   => $cartaId,
         'local_id'   => $localId,

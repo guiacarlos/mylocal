@@ -20,6 +20,36 @@ error_log("REQ: $method $uri (Agent: $agent)");
 $path = parse_url($uri, PHP_URL_PATH);
 $root = __DIR__;
 
+// Multi-tenancy: detectar local activo (X-Local-Id header o subdominio)
+require_once $root . '/CORE/SubdomainManager.php';
+SubdomainManager::detect();
+
+// Seed dinámico por local — devuelve contexto del local activo
+if ($path === '/seed/bootstrap.json') {
+    $slug = get_current_local_id();
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    echo json_encode([
+        'local_id'       => $slug,
+        'plan'           => 'demo',
+        'demo_days_left' => 21,
+    ]);
+    exit;
+}
+
+// SEO: sitemap.xml y llms.txt por local (GET estático, sin sesión)
+if ($path === '/carta/sitemap.xml' || $path === '/carta/llms.txt') {
+    require_once $root . '/spa/server/lib.php';
+    require_once $root . '/CAPABILITIES/SEO/SeoEndpoints.php';
+    $localId = get_current_local_id();
+    if ($path === '/carta/sitemap.xml') {
+        \SEO\SeoEndpoints::sitemap($localId);
+    } else {
+        \SEO\SeoEndpoints::llmsTxt($localId);
+    }
+    exit;
+}
+
 // 1. API soberana — SPA server (spa/server/index.php)
 if (strpos($path, '/acide/') === 0) {
     $spaServer = $root . '/spa/server/index.php';

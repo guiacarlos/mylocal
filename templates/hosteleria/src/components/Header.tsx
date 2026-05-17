@@ -12,11 +12,7 @@ const navItems = [
   { name: 'Planes',       href: '#planes' },
 ];
 
-interface Props {
-  onLoginClick: () => void;
-}
-
-export default function Header({ onLoginClick }: Props) {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,13 +35,19 @@ export default function Header({ onLoginClick }: Props) {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <button
-            onClick={onLoginClick}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="/acceder"
+            className="text-sm text-gray-500 hover:text-black transition-colors font-medium px-4 py-2"
+          >
+            Acceder
+          </a>
+          <a
+            href="/registro"
             className="bg-black text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-all active:scale-95"
           >
             Empezar gratis
-          </button>
+          </a>
         </div>
 
         <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -72,12 +74,19 @@ export default function Header({ onLoginClick }: Props) {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={() => { setIsOpen(false); onLoginClick(); }}
-              className="mt-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium w-full"
+            <a
+              href="/acceder"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 text-center text-sm font-medium text-gray-600 hover:text-black transition-colors py-2"
+            >
+              Ya tengo cuenta — Acceder
+            </a>
+            <a
+              href="/registro"
+              className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium w-full text-center"
             >
               Empezar gratis
-            </button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
