@@ -72,7 +72,7 @@ export default function InicioPage() {
         ))}
       </div>
 
-      <OnboardingBanner demoDaysLeft={demoLeft} />
+      <OnboardingBanner demoDaysLeft={demoLeft} productosCount={metrics?.productos} />
     </div>
   );
 }

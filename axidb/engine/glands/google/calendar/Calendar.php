@@ -1,82 +1,95 @@
 <?php
 
+require_once __DIR__ . '/../../../../../CAPABILITIES/GCAL/GoogleOAuthStore.php';
+require_once __DIR__ . '/../../../../../CAPABILITIES/GCAL/GoogleCalendarExecutor.php';
+
 /**
- *  ATOMIC REPO: Google Calendar
- * Responsabilidad: Sincronización bidireccional de eventos y gestión de disponibilidad.
+ * Google Calendar gland — delega en GoogleCalendarExecutor (llamadas HTTP reales).
+ *
+ * El patrón TUNNEL_REQUEST/TUNNEL_CONTRACT fue eliminado: generaba contratos
+ * que el frontend recibía y descartaba en silencio. Ninguna llamada real llegaba
+ * a la Google Calendar API. Este archivo ejecuta directamente.
  */
 class Calendar
 {
     private $services;
-    private $endpoint = '/api/google/calendar';
 
     public function __construct($services)
     {
         $this->services = $services;
     }
 
-    /**
-     * Sincronización proactiva (Diferencial)
-     */
-    public function sync($params = [])
+    /** Sincroniza eventos futuros desde Google Calendar. */
+    public function sync($params = []): array
     {
-        //  ESTRATEGIA SOBERANA: ACIDE pide al túnel los cambios desde el último sync
-        return [
-            'action' => 'TUNNEL_SYNC',
-            'method' => 'GET',
-            'path' => $this->endpoint . '/events',
-            'params' => [
-                'calendarId' => $params['calendarId'] ?? 'primary',
-                'timeMin' => $params['since'] ?? date('c', strtotime('-1 month'))
-            ],
-            'storage_key' => 'calendars:google:events'
-        ];
+        $localId = $params['local_id'] ?? ($this->services['local_id'] ?? '');
+        if (!$localId) return ['success' => false, 'error' => 'local_id requerido'];
+
+        try {
+            $events = \GCal\GoogleCalendarExecutor::listEvents(
+                $localId,
+                $params['since'] ?? ''
+            );
+            return ['success' => true, 'data' => $events];
+        } catch (\Throwable $e) {
+            return ['success' => false, 'error' => $e->getMessage()];
+        }
     }
 
-    /**
-     * Crear evento real
-     */
-    public function createEvent($params)
+    /** Crea un evento real en Google Calendar. */
+    public function createEvent($params): array
     {
-        return [
-            'action' => 'TUNNEL_REQUEST',
-            'method' => 'POST',
-            'path' => $this->endpoint . '/events',
-            'data' => [
-                'summary' => $params['title'],
-                'start' => ['dateTime' => $params['start']],
-                'end' => ['dateTime' => $params['end']],
-                'description' => $params['description'] ?? ''
-            ]
-        ];
+        $localId    = $params['local_id'] ?? ($this->services['local_id'] ?? '');
+        $calendarId = $params['calendar_id'] ?? 'primary';
+
+        if (!$localId) return ['success' => false, 'error' => 'local_id requerido'];
+
+        try {
+            $result = \GCal\GoogleCalendarExecutor::createEvent($localId, $calendarId, $params);
+            return ['success' => true, 'data' => $result];
+        } catch (\Throwable $e) {
+            return ['success' => false, 'error' => $e->getMessage()];
+        }
     }
 
-    /**
-     * Eliminar evento
-     */
-    public function deleteEvent($id, $calendarId = 'primary')
+    /** Elimina un evento de Google Calendar. */
+    public function deleteEvent($gcalEventId, $calendarId = 'primary', $localId = ''): array
     {
-        return [
-            'action' => 'TUNNEL_REQUEST',
-            'method' => 'DELETE',
-            'path' => $this->endpoint . "/events/$id",
-            'params' => ['calendarId' => $calendarId]
-        ];
+        if (!$localId) $localId = $this->services['local_id'] ?? '';
+        if (!$localId) return ['success' => false, 'error' => 'local_id requerido'];
+
+        try {
+            $result = \GCal\GoogleCalendarExecutor::deleteEvent($localId, $calendarId, $gcalEventId);
+            return ['success' => true, 'data' => $result];
+        } catch (\Throwable $e) {
+            return ['success' => false, 'error' => $e->getMessage()];
+        }
     }
 
-    /**
-     * Verificar disponibilidad real
-     */
-    public function checkAvailability($params)
+    /** Consulta disponibilidad (freebusy) en un rango horario. */
+    public function checkAvailability($params): array
     {
-        return [
-            'action' => 'TUNNEL_REQUEST',
-            'method' => 'POST',
-            'path' => $this->endpoint . '/freebusy',
-            'data' => [
-                'timeMin' => $params['start'],
-                'timeMax' => $params['end'],
-                'items' => [['id' => 'primary']]
-            ]
-        ];
+        $localId = $params['local_id'] ?? ($this->services['local_id'] ?? '');
+        if (!$localId) return ['success' => false, 'error' => 'local_id requerido'];
+
+        try {
+            $result = \GCal\GoogleCalendarExecutor::checkAvailability(
+                $localId,
+                $params['start'] ?? '',
+                $params['end']   ?? ''
+            );
+            return ['success' => true, 'data' => $result];
+        } catch (\Throwable $e) {
+            return ['success' => false, 'error' => $e->getMessage()];
+        }
+    }
+
+    /** Estado de conexión OAuth2 para este local. */
+    public function status($params = []): array
+    {
+        $localId = $params['local_id'] ?? ($this->services['local_id'] ?? '');
+        if (!$localId) return ['success' => false, 'error' => 'local_id requerido'];
+
+        return ['success' => true, 'data' => \GCal\GoogleOAuthStore::status($localId)];
     }
 }

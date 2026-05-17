@@ -106,7 +106,7 @@ class OllamaConnector
         }
 
         curl_setopt($ch, CURLOPT_TIMEOUT, 300); // Mayor timeout para carga de modelos pesados
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
         $response = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);

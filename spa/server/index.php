@@ -171,6 +171,8 @@ const ALLOWED_ACTIONS = [
     'get_subscription_status', 'create_revolut_order', 'check_revolut_order', 'webhook_revolut',
     // SEO — schema JSON-LD por local (público, cacheable 24h)
     'get_local_schema',
+    // Google Calendar OAuth2
+    'gcal_oauth_start', 'gcal_status', 'gcal_disconnect',
 ];
 
 // Acciones que NO requieren sesión activa. Fuente de verdad única: aquí.
@@ -573,6 +575,14 @@ try {
         case 'get_local_schema':
             require_once __DIR__ . '/handlers/seo.php';
             resp(true, handle_seo($action, $req));
+
+        // ── GOOGLE CALENDAR — OAuth2 + estado ────────────────────────────
+        case 'gcal_oauth_start':
+        case 'gcal_status':
+        case 'gcal_disconnect':
+            require_once __DIR__ . '/handlers/gcal.php';
+            require_role($user, ['superadmin', 'administrador', 'admin', 'hostelero']);
+            resp(true, \GCalHandler\handle_gcal($action, $req, $user));
 
         default:
             resp(false, null, "Acción no implementada: $action");

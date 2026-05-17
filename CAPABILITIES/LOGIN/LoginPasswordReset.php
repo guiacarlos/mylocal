@@ -45,14 +45,38 @@ class LoginPasswordReset
             ], true);
         }
 
-        // En producción, el admin de GestasAI consulta STORAGE/password_resets/
-        // y comparte el código con el hostelero por teléfono.
-        // En desarrollo, el código se loguea para facilitar pruebas.
+        // Intentar envío automático por WhatsApp si el usuario tiene teléfono
+        // y WhatsApp está configurado en OPTIONS. Fallo silencioso: el flujo de
+        // soporte manual sigue funcionando como fallback.
+        $sentViaWhatsApp = false;
+        $telefono = trim((string)($user['telefono'] ?? ''));
+        if ($telefono !== '') {
+            try {
+                $waDriverFile = dirname(__DIR__) . '/NOTIFICACIONES/drivers/WhatsAppDriver.php';
+                if (file_exists($waDriverFile)) {
+                    require_once $waDriverFile;
+                    $wa = \Notificaciones\Drivers\WhatsAppDriver::fromOptions();
+                    $wa->send(
+                        $telefono,
+                        'Código de recuperación',
+                        "Tu código para restablecer la contraseña de MyLocal es: *$code*\n\nExpira en 1 hora. No lo compartas con nadie."
+                    );
+                    $sentViaWhatsApp = true;
+                }
+            } catch (\Throwable $e) {
+                error_log("[PasswordReset] WhatsApp falló: " . $e->getMessage());
+            }
+        }
+
         if (defined('APP_ENV') && APP_ENV === 'development') {
             error_log("[PasswordReset] Código para $email: $code (expira en 1h)");
         }
 
-        return ['ok' => true, 'message' => 'Código generado. Contacta con soporte para recibirlo.'];
+        $msg = $sentViaWhatsApp
+            ? 'Código enviado a tu WhatsApp. Úsalo para restablecer la contraseña.'
+            : 'Código generado. Contacta con soporte para recibirlo.';
+
+        return ['ok' => true, 'message' => $msg];
     }
 
     public static function resetPassword(array $req): array

@@ -122,7 +122,7 @@ class AIClient
                 CURLOPT_POSTFIELDS     => $body,
                 CURLOPT_HTTPHEADER     => $headers,
                 CURLOPT_TIMEOUT        => 120,
-                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYPEER => true,
             ]);
             $resp = curl_exec($ch);
             $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
